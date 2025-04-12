@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "New Beat Track", menuName = "Beat Track")]
 public class BeatTrack : ScriptableObject
 {
     [SerializeField] private float bpm;

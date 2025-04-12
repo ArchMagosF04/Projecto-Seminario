@@ -9,6 +9,8 @@ public class BeatTester : MonoBehaviour
     [SerializeField] private float gracePeriod;
     private float timer = 0;
 
+    public GameObject testObject;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,18 +22,21 @@ public class BeatTester : MonoBehaviour
     {
         if (isOnBeat)
         {
-            if (timer < gracePeriod) 
+            //print("OnBeat");
+            testObject.SetActive(true);
+            //isOnBeat = false;
+
+            if (timer < gracePeriod)
             {
                 timer += Time.deltaTime;
             }
-            else if (timer > gracePeriod)
-            {
-                timer = 0;
+            else if (timer >= gracePeriod)
+            {                
                 isOnBeat = false;
+                timer = 0;
+                testObject.SetActive(false);
             }
-
-            print("OnBeat");
-        }
+        }        
     }
 
     private void ActivateBeatEffect()

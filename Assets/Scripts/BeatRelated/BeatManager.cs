@@ -7,26 +7,16 @@ using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
 
 public class BeatManager : MonoBehaviour
 {
-    private static BeatManager instance;
-    private BeatManager() { }
+    //private static BeatManager instance;
 
-//--------------SINGLETON --------------------------------------------------------------------------------------------
-    public static BeatManager Instance
-    {
-        get
-        {
-            // If the instance hasn't been created yet, create it
-            if (instance == null)
-            {
-                instance = new BeatManager();
-            }
-            return instance;
-        }
-    }
+    //--------------SINGLETON --------------------------------------------------------------------------------------------
+    public static BeatManager Instance;
 
 //------------------------------------------------------------------------------------------------------------------------
 
     public BeatTrack trackInfo;
+
+    private AudioSource track;
 
     public event Action OnBeat;
     
@@ -34,7 +24,8 @@ public class BeatManager : MonoBehaviour
 
     private void Awake()
     {
-        
+        Instance = this;
+        track = GameObject.Find("BGM").GetComponent<AudioSource>();
     }
 
     // Start is called before the first frame update
@@ -48,7 +39,7 @@ public class BeatManager : MonoBehaviour
     {
         foreach (var step in trackInfo.Steps) // Time elapsed in beats
         {
-            float sampledTime = trackInfo.Track.timeSamples / (trackInfo.Track.clip.frequency * GetIntervalLenght(trackInfo.Bpm, step));
+            float sampledTime = track.timeSamples / (track.clip.frequency * GetIntervalLenght(trackInfo.Bpm, step));
             CheckForNewInterval(sampledTime);
         }
     }

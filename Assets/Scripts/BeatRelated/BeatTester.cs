@@ -14,7 +14,7 @@ public class BeatTester : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        BeatManager.Instance.OnBeat += ActivateBeatEffect;
+        //BeatManager.Instance.OnBeat += ActivateBeatEffect;
     }
 
     // Update is called once per frame
@@ -39,8 +39,8 @@ public class BeatTester : MonoBehaviour
         }        
     }
 
-    private void ActivateBeatEffect()
+    public void ActivateBeatEffect()
     {
-        isOnBeat = true;
+            isOnBeat = true;
     }
 }

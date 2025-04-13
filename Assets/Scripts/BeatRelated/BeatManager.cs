@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
 
 public class BeatManager : MonoBehaviour
@@ -18,9 +19,11 @@ public class BeatManager : MonoBehaviour
 
     private AudioSource track;
 
-    public event Action OnBeat;
+    public event Action<float> OnBeat;
     
     private int lastInterval;
+
+    [SerializeField] Intervals[] intervals;
 
     private void Awake()
     {
@@ -37,24 +40,36 @@ public class BeatManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        foreach (var step in trackInfo.Steps) // Time elapsed in beats
+        foreach (var interval in intervals) // Time elapsed in beats
         {
-            float sampledTime = track.timeSamples / (track.clip.frequency * GetIntervalLenght(trackInfo.Bpm, step));
-            CheckForNewInterval(sampledTime);
+            float sampledTime = track.timeSamples / (track.clip.frequency * interval.GetIntervalLenght(trackInfo.Bpm));
+            interval.CheckForNewInterval(sampledTime);
         }
     }
 
-    private float GetIntervalLenght(float bpm, float steps) // The lenght of the current beat
+    [System.Serializable]
+    public class Intervals
     {
-        return 60 / (bpm * steps);
-    }
+        [SerializeField] private float steps;
+        [SerializeField] private UnityEvent trigger;
+        private int lastInterval;
 
-    private void CheckForNewInterval(float interval)
-    {
-        if(Mathf.FloorToInt(interval)!= lastInterval)
+
+        public float GetIntervalLenght(float bpm) // The lenght of the current beat
         {
-            lastInterval = Mathf.FloorToInt(interval);
-            OnBeat.Invoke();
+            float result = 60 / (bpm * steps);
+            return result;
+        }
+
+        public void CheckForNewInterval(float interval)
+        {
+            if (Mathf.FloorToInt(interval) != lastInterval)
+            {
+                lastInterval = Mathf.FloorToInt(interval);
+                trigger.Invoke();
+                //OnBeat.Invoke();
+            }
         }
     }
+    
 }

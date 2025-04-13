@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Beat Track", menuName = "Beat Track")]
-public class BeatTrack : ScriptableObject
+[CreateAssetMenu(fileName = "New Track Info", menuName = "Track Info")]
+public class TrackInfo : ScriptableObject
 {
+    [SerializeField] private AudioClip musicTrack;
+    public AudioClip MusicTrack {  get { return musicTrack; } }
+
     [SerializeField] private float bpm;
     public float Bpm { get { return bpm; } }
-
-    [SerializeField] private float[] steps;
-    public float[] Steps { get { return steps; } }
 
 }

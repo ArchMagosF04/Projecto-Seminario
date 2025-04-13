@@ -15,7 +15,7 @@ public class BeatManager : MonoBehaviour
 
 //------------------------------------------------------------------------------------------------------------------------
 
-    public BeatTrack trackInfo;
+    public TrackInfo trackInfo;
 
     private AudioSource track;
 
@@ -45,6 +45,15 @@ public class BeatManager : MonoBehaviour
             float sampledTime = track.timeSamples / (track.clip.frequency * interval.GetIntervalLenght(trackInfo.Bpm));
             interval.CheckForNewInterval(sampledTime);
         }
+    }
+
+    public void ChangeTrack(TrackInfo newTrack)
+    {
+        track.Stop();
+        track.clip = newTrack.MusicTrack;
+        trackInfo = newTrack;
+        track.Play();
+        
     }
 
     [System.Serializable]

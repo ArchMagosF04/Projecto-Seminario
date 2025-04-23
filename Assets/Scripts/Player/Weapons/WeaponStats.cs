@@ -7,6 +7,13 @@ public class WeaponStats : ScriptableObject
 {
     [SerializeField]private float damage;
     public float Damage { get { return damage; } }
+
+    [SerializeField]private float specialDmgMultiplier;
+    public float SpecialDmgMultiplier { get { return specialDmgMultiplier; } }
+
+    [SerializeField] private float onBeatDmgMultiplier;
+    public float OnBeatDmgMultiplier { get { return onBeatDmgMultiplier; } }
+
     [SerializeField]private float atkSpeed;
     public float AtkSpeed { get { return atkSpeed; } }
     [SerializeField] private float specialcharge;

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MicrophoneWeapon : WeaponBasicFunctions
 {
-    private BoxCollider2D collider;
+    private BoxCollider2D weaponCollider;
 
     private bool atk1 = false;
     private bool atk2 = false;
@@ -14,6 +14,7 @@ public class MicrophoneWeapon : WeaponBasicFunctions
 
     private float currentDamage;
     private float currentMultiplier = 1;
+    private float beatDmgMultiplier;
 
     private bool onSpecialCooldown = false;
     private float specialCooldownTimer;
@@ -22,10 +23,12 @@ public class MicrophoneWeapon : WeaponBasicFunctions
     {
         gameObject.GetComponent<BeatDetector>().OnBeat += ActivateBeatEffect;
 
-        collider = GetComponent<BoxCollider2D>();
-        collider.enabled = false;
+        weaponCollider = this.GetComponent<BoxCollider2D>();
+        weaponCollider.enabled = false;
 
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
+
+        beatDmgMultiplier = weaponInfo.OnBeatDmgMultiplier;
     }
 
     void Update()
@@ -62,7 +65,7 @@ public class MicrophoneWeapon : WeaponBasicFunctions
         }
         else if (Input.GetKeyDown(KeyCode.Mouse1))
         {
-            Atack2(weaponInfo.Damage, 3.2f, weaponInfo.Atk2Duration);
+            Atack2(weaponInfo.Damage, weaponInfo.Atk2Duration, weaponInfo.SpecialDmgMultiplier);
         }
     }
 
@@ -72,6 +75,7 @@ public class MicrophoneWeapon : WeaponBasicFunctions
         {
             currentDamage = weaponAtk;
             currentMultiplier = 1;
+            if (onBeat) { currentDamage = currentDamage*beatDmgMultiplier; }
             atk1 = true;
             durartionTimer = duration;
             //collider.enabled = true;
@@ -80,12 +84,14 @@ public class MicrophoneWeapon : WeaponBasicFunctions
         }
     }
 
-    public override void Atack2(float weaponAtk, float duration, float dmgMultiplier)
+    public override void Atack2(float weaponAtk, float duration, float dmgMultiplier = 1)
     {
         if (atk1 == false & onCooldown == false & onSpecialCooldown == false)
         {
             currentDamage = weaponAtk;
             currentMultiplier = dmgMultiplier;
+            currentDamage = currentDamage*dmgMultiplier;
+            if (onBeat) { currentDamage = currentDamage * beatDmgMultiplier; }
             atk2 = true;
 
             //collider.enabled = true;
@@ -102,25 +108,28 @@ public class MicrophoneWeapon : WeaponBasicFunctions
 
     private void ActivateBeatEffect(bool activate)
     {
-        onBeat = activate;
+        onBeat = activate;       
     }
 
     private void ToggleCollider(bool active)
     {
-        if (collider != null) 
-        { 
-            collider.enabled = active;
+        if (weaponCollider != null) 
+        {
+            weaponCollider.enabled = active;
             gameObject.GetComponent<SpriteRenderer>().enabled = active;
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
+        //float damage = 0;
         collision.gameObject.TryGetComponent<EnemyBasicFunctions>(out EnemyBasicFunctions enemy);
         if (enemy != null)
         {
-            enemy.TakeDamage(currentDamage * currentMultiplier);
-        }        
+            //damage = currentDamage * currentMultiplier;            
+            enemy.TakeDamage(currentDamage);
+            Debug.Log("WepDamage: "+currentDamage /*+ ", Mult: "+currentMultiplier+", BtMult: "+beatDmgMultiplier*/);
+        }
     }
 
 }

@@ -10,7 +10,7 @@ public abstract class WeaponBasicFunctions : MonoBehaviour
     protected private float coolDownTimer;
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -29,6 +29,7 @@ public abstract class WeaponBasicFunctions : MonoBehaviour
             }
         }
     }
+
 
     public abstract void Atack1(float weaponAtk, float duration);
     public abstract void Atack2(float weaponAtk, float duration, float dmgMultiplier);

@@ -13,7 +13,6 @@ public abstract class WeaponBasicFunctions : MonoBehaviour
 
     }
 
-    // Update is called once per frame
    protected void calculateCoolDown()
     {
         if (onCooldown) 
@@ -33,5 +32,27 @@ public abstract class WeaponBasicFunctions : MonoBehaviour
 
     public abstract void Atack1(float weaponAtk, float duration);
     public abstract void Atack2(float weaponAtk, float duration, float dmgMultiplier);
+
+    public virtual void MakeAttack(int atkType)
+    {
+        switch (atkType) 
+        {
+            case 1: Atack1(weaponInfo.Damage, weaponInfo.Atk1Duration);
+                break;
+
+            case 2: Atack2(weaponInfo.Damage, weaponInfo.Atk2Duration, weaponInfo.SpecialDmgMultiplier);
+                break;
+        }
+    }
+
+    public float getCooldownTime()
+    {
+        return weaponInfo.AtkSpeed;
+    }
+
+    public bool isInCooldown()
+    {
+        return onCooldown;
+    }
 
 }

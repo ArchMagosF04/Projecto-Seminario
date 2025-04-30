@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Microphone
   m_EditorClassIdentifier: 
   damage: 5
+  specialDmgMultiplier: 1.5
+  onBeatDmgMultiplier: 3
   atkSpeed: 3
   specialcharge: 0
-  atk1Duration: 1.5
-  atk2Duration: 3
+  atk1Duration: 1
+  atk2Duration: 2
   specialCooldown: 7

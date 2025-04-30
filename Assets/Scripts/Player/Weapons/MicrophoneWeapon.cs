@@ -59,14 +59,14 @@ public class MicrophoneWeapon : WeaponBasicFunctions
             atk2 = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            Atack1(weaponInfo.Damage, weaponInfo.Atk1Duration);
-        }
-        else if (Input.GetKeyDown(KeyCode.Mouse1))
-        {
-            Atack2(weaponInfo.Damage, weaponInfo.Atk2Duration, weaponInfo.SpecialDmgMultiplier);
-        }
+        //if (Input.GetKeyDown(KeyCode.Mouse0))
+        //{
+        //    Atack1(weaponInfo.Damage, weaponInfo.Atk1Duration);
+        //}
+        //else if (Input.GetKeyDown(KeyCode.Mouse1))
+        //{
+        //    Atack2(weaponInfo.Damage, weaponInfo.Atk2Duration, weaponInfo.SpecialDmgMultiplier);
+        //}
     }
 
     public override void Atack1(float weaponAtk, float duration)

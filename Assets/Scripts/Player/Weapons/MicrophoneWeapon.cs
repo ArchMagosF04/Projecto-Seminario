@@ -127,7 +127,7 @@ public class MicrophoneWeapon : WeaponBasicFunctions
         if (enemy != null)
         {
             //damage = currentDamage * currentMultiplier;            
-            enemy.TakeDamage(currentDamage);
+            collision.gameObject.GetComponent<HealthComponent>().TakeDamage(currentDamage);
             Debug.Log("WepDamage: "+currentDamage /*+ ", Mult: "+currentMultiplier+", BtMult: "+beatDmgMultiplier*/);
         }
     }

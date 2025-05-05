@@ -2,21 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyBasicFunctions : MonoBehaviour
+public abstract class EnemyBasicFunctions : MonoBehaviour
 {
     [SerializeField] private EnemyStats stats;
-    [SerializeField]private float hp;
+    //[SerializeField]private float hp;
     private float spd;
     private float atk;
-    [SerializeField] private bool useOwnGracePeriod;
-    [SerializeField] private float gracePeriodForBeat;
-    private float graceTimer;    
-
-    public static bool onBeat;
+    private int techniquePoints;
    
     void Start()
     {
-        hp = stats.Hp;
+        gameObject.GetComponent<HealthComponent>().AssignHealth(stats.Hp);
         spd = stats.Spd;
         atk = stats.Atk;
     }
@@ -24,16 +20,31 @@ public class EnemyBasicFunctions : MonoBehaviour
     void Update()
     {
         
-    }
+    }   
 
-    public void TakeDamage(float damage)
+
+    protected abstract void BasicAttack();
+    protected abstract void SpecialAttack();
+    protected abstract void SecretTechnique();
+
+
+    protected virtual void chooseAtack()
     {
-        if (hp > 0)
+        int temp = Random.Range(0, 100);
+
+        if (techniquePoints >= stats.MaxTechniquePoints)
         {
-            hp -= damage;
-            Debug.Log(damage);
+            SecretTechnique();
+        }
+        else if (temp < stats.SpecialAttackWeight)
+        {
+            SpecialAttack();
+        }
+        else 
+        { 
+            BasicAttack();
         }
         
-    }   
+    }
         
 }

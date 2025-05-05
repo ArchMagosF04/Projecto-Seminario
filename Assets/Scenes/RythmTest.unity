@@ -1672,9 +1672,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1652286522}
   - component: {fileID: 1652286521}
-  - component: {fileID: 1652286520}
   - component: {fileID: 1652286524}
   - component: {fileID: 1652286525}
+  - component: {fileID: 1652286526}
   m_Layer: 0
   m_Name: Enemigo
   m_TagString: Untagged
@@ -1682,22 +1682,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1652286520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1652286519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49c0b2687ae4a9b449fba62528981b52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stats: {fileID: 11400000, guid: 4fc03180364c9c6498947c9f4ee92b35, type: 2}
-  hp: 0
-  useOwnGracePeriod: 0
-  gracePeriodForBeat: 0.5
 --- !u!212 &1652286521
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1840,6 +1824,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1652286526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652286519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d330612beec315408e96719ad964378, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!1 &1853248768
 GameObject:
   m_ObjectHideFlags: 0

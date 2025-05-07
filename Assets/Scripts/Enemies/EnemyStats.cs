@@ -18,4 +18,7 @@ public class EnemyStats : ScriptableObject
     [SerializeField] int maxTechniquePoints;
     public int MaxTechniquePoints;
 
+    [SerializeField] private List<GameObject> projectiles;
+    public GameObject GetProyectile(int proyectileIndex) {  return projectiles[proyectileIndex];}
+
 }

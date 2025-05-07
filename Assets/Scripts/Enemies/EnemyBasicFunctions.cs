@@ -4,17 +4,24 @@ using UnityEngine;
 
 public abstract class EnemyBasicFunctions : MonoBehaviour
 {
-    [SerializeField] private EnemyStats stats;
+    [SerializeField] private protected EnemyStats enemyInfo;
+    private protected GameObject player;
     //[SerializeField]private float hp;
-    private float spd;
-    private float atk;
-    private int techniquePoints;
-   
+    private protected float spd;
+    private protected float atk;
+    private protected int techniquePoints;
+
+    private void Awake()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
+
     void Start()
     {
-        gameObject.GetComponent<HealthComponent>().AssignHealth(stats.Hp);
-        spd = stats.Spd;
-        atk = stats.Atk;
+        gameObject.GetComponent<HealthComponent>().AssignHealth(enemyInfo.Hp);
+        spd = enemyInfo.Spd;
+        atk = enemyInfo.Atk;
+        
     }
 
     void Update()
@@ -32,11 +39,11 @@ public abstract class EnemyBasicFunctions : MonoBehaviour
     {
         int temp = Random.Range(0, 100);
 
-        if (techniquePoints >= stats.MaxTechniquePoints)
+        if (techniquePoints >= enemyInfo.MaxTechniquePoints)
         {
             SecretTechnique();
         }
-        else if (temp < stats.SpecialAttackWeight)
+        else if (temp < enemyInfo.SpecialAttackWeight)
         {
             SpecialAttack();
         }
@@ -45,6 +52,12 @@ public abstract class EnemyBasicFunctions : MonoBehaviour
             BasicAttack();
         }
         
+    }
+
+    private protected float GetPlayerRalativeDirection()
+    {
+        Vector3 direction = player.transform.position - transform.position;
+        return Mathf.Atan2(direction.y,direction.x)*Mathf.Rad2Deg;
     }
         
 }

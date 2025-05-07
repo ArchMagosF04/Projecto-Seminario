@@ -13,5 +13,11 @@ MonoBehaviour:
   m_Name: Test Enemy
   m_EditorClassIdentifier: 
   hp: 100
-  spd: 0
-  atk: 0
+  spd: 10
+  atk: 5
+  specialAttackWeight: 0
+  SpecialAttackWeight: 0
+  maxTechniquePoints: 0
+  MaxTechniquePoints: 0
+  projectiles:
+  - {fileID: 5017142362319034512, guid: 3c50653082b6c694f8027cf99b7ef9a1, type: 3}

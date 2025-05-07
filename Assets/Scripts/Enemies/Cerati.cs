@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.WebSockets;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -8,9 +9,27 @@ public class Cerati : EnemyBasicFunctions
     // Start is called before the first frame update
     private float time= 5;
     private float timer;
+    private BossMovement movementComponent;
+    [SerializeField] Transform centerStage;
+    [SerializeField]private bool specialAttack;
+    private bool atCenterStage;
+    [SerializeField] private float specialAtkDuration;
+    private float specialAtkTimer;
+
     void Start()
     {
-        
+        movementComponent = gameObject.GetComponent<BossMovement>();
+    }
+
+    private void FixedUpdate()
+    {
+        if (specialAttack)
+        {
+            if (!atCenterStage)
+            {
+                movementComponent.Move(enemyInfo.AirAcceleration, enemyInfo.AirDeceleration, new Vector2(FindCenterStage(),0));
+            }
+        }
     }
 
     // Update is called once per frame
@@ -25,6 +44,18 @@ public class Cerati : EnemyBasicFunctions
             timer = 0;
             BasicAttack();
         }
+
+        if (transform.position.x == centerStage.position.x)
+        {
+            atCenterStage = true;
+        }
+
+        if(specialAttack && atCenterStage)
+        {
+
+        }
+
+        
     }
 
     protected override void BasicAttack()
@@ -42,7 +73,14 @@ public class Cerati : EnemyBasicFunctions
 
     protected override void SpecialAttack()
     {
-        throw new System.NotImplementedException();
+
+        movementComponent.Move(enemyInfo.AirAcceleration, enemyInfo.AirDeceleration, new Vector2(-1,0));
+    }
+
+    private float FindCenterStage()
+    {
+        Vector3 result = centerStage.position - transform.position;
+        return result.normalized.x;
     }
 
 

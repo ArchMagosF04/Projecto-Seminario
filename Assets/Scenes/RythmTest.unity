@@ -355,6 +355,37 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &159300065
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 159300066}
+  m_Layer: 0
+  m_Name: Center
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &159300066
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159300065}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: -4.5, z: -0.031981453}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &325043319
 GameObject:
   m_ObjectHideFlags: 0
@@ -1737,6 +1768,7 @@ GameObject:
   - component: {fileID: 1652286525}
   - component: {fileID: 1652286526}
   - component: {fileID: 1652286527}
+  - component: {fileID: 1652286528}
   m_Layer: 6
   m_Name: Enemigo
   m_TagString: Untagged
@@ -1871,20 +1903,20 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.0001
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 6200000, guid: b98d50db152b8944dac62413cd3a4e29, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!114 &1652286526
 MonoBehaviour:
@@ -1912,6 +1944,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyInfo: {fileID: 11400000, guid: 4fc03180364c9c6498947c9f4ee92b35, type: 2}
+  centerStage: {fileID: 159300066}
+  specialAttack: 1
+  specialAtkDuration: 0
+--- !u!114 &1652286528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652286519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2311c8abe2a571f4fb0a88ec25b98d30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyStats: {fileID: 11400000, guid: 4fc03180364c9c6498947c9f4ee92b35, type: 2}
+  _collider: {fileID: 1652286524}
+  _isGrounded: 0
+  _isJumping: 0
+  _isFastFalling: 0
+  _isFalling: 0
+  _isPastApexThreshold: 0
 --- !u!1 &1853248768
 GameObject:
   m_ObjectHideFlags: 0
@@ -2207,3 +2261,4 @@ SceneRoots:
   - {fileID: 1051597475}
   - {fileID: 473699991}
   - {fileID: 1652286522}
+  - {fileID: 159300066}

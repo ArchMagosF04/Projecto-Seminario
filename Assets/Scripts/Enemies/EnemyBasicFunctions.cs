@@ -19,7 +19,7 @@ public abstract class EnemyBasicFunctions : MonoBehaviour
     void Start()
     {
         gameObject.GetComponent<HealthComponent>().AssignHealth(enemyInfo.Hp);
-        spd = enemyInfo.Spd;
+        spd = enemyInfo.MoveSpd;
         atk = enemyInfo.Atk;
         
     }

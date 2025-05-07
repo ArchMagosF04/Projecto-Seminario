@@ -13,8 +13,18 @@ MonoBehaviour:
   m_Name: Test Enemy
   m_EditorClassIdentifier: 
   hp: 100
-  spd: 10
+  moveSpd: 12.5
   atk: 5
+  gravity: -100
+  groundAcceleration: 5
+  groundDeceleration: 20
+  airAcceleration: 5
+  airDeceleration: 5
+  maxFallSpeed: 26
+  groundDetectionRayLength: 0.02
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
   specialAttackWeight: 0
   SpecialAttackWeight: 0
   maxTechniquePoints: 0

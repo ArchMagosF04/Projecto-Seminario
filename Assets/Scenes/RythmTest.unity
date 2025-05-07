@@ -1947,6 +1947,10 @@ MonoBehaviour:
   centerStage: {fileID: 159300066}
   specialAttack: 1
   specialAtkDuration: 0
+  guitarWaves: {fileID: 1363657723553904943, guid: 0b7d6f0a470283d41aafcfabe0fb27d2, type: 3}
+  wavesSpawnInterval: 3
+  wavesGrowthSpeed: 3
+  wavesMaxSize: 15
 --- !u!114 &1652286528
 MonoBehaviour:
   m_ObjectHideFlags: 0

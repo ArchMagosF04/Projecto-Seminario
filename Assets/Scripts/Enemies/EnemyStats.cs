@@ -9,7 +9,6 @@ public class EnemyStats : ScriptableObject
     public float Hp {  get { return hp; } }
     [SerializeField] private float moveSpd;
     public float MoveSpd { get { return moveSpd; } }
-    [SerializeField] private float atk;
 
     [SerializeField] private float gravity;
     public float Gravity { get { return gravity; } }
@@ -35,10 +34,14 @@ public class EnemyStats : ScriptableObject
     [SerializeField] private LayerMask groundLayer;
     public LayerMask GroundLayer { get { return groundLayer; } }
 
+    [SerializeField] private float atk;
     public float Atk { get { return atk; } }
 
     [SerializeField] int specialAttackWeight;
     public int SpecialAttackWeight;
+
+    [SerializeField] float specialAttackmultiplier;
+    public float SpecialAttackmultiplier { get { return specialAttackmultiplier; } }
 
     [SerializeField] int maxTechniquePoints;
     public int MaxTechniquePoints;

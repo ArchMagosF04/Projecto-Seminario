@@ -15,6 +15,11 @@ public class Cerati : EnemyBasicFunctions
     private bool atCenterStage;
     [SerializeField] private float specialAtkDuration;
     private float specialAtkTimer;
+    [SerializeField] private GameObject guitarWaves;
+    [SerializeField] private float wavesSpawnInterval;
+    private float wavesIntervalTimer;
+    [SerializeField] private float wavesGrowthSpeed;
+    [SerializeField] private float wavesMaxSize;
 
     void Start()
     {
@@ -35,15 +40,19 @@ public class Cerati : EnemyBasicFunctions
     // Update is called once per frame
     void Update()
     {
-        if (timer < time)
+        if (!specialAttack)
         {
-            timer += Time.deltaTime;
+            if (timer < time)
+            {
+                timer += Time.deltaTime;
+            }
+            else if (timer > time)
+            {
+                timer = 0;
+                BasicAttack();
+            }
         }
-        else if (timer > time) 
-        { 
-            timer = 0;
-            BasicAttack();
-        }
+        
 
         if (transform.position.x == centerStage.position.x)
         {
@@ -52,7 +61,18 @@ public class Cerati : EnemyBasicFunctions
 
         if(specialAttack && atCenterStage)
         {
+            if(wavesIntervalTimer <= 0)
+            {
+                GameObject temp = GameObject.Instantiate(guitarWaves, transform.position, quaternion.identity);
+                temp.gameObject.GetComponent<WaveAttack>().Initialize(atk * enemyInfo.SpecialAttackmultiplier, this.gameObject, wavesMaxSize, wavesGrowthSpeed);
+                wavesIntervalTimer = wavesSpawnInterval;
+            }
+            else
+            {
+                wavesIntervalTimer -= Time.deltaTime;
+            }
 
+            
         }
 
         
@@ -73,8 +93,7 @@ public class Cerati : EnemyBasicFunctions
 
     protected override void SpecialAttack()
     {
-
-        movementComponent.Move(enemyInfo.AirAcceleration, enemyInfo.AirDeceleration, new Vector2(-1,0));
+        specialAttack = true;
     }
 
     private float FindCenterStage()

@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class ProyectileBase : MonoBehaviour
 {
-    private GameObject owner;
-    private float damage;
-    private float speed;
-    [SerializeField] private float lifeSpan;
-    private float currentLifeSpan;
+    private protected GameObject owner;
+    private protected float damage;
+    private protected float speed;
+    [SerializeField] private protected float lifeSpan;
+    private protected float currentLifeSpan;
 
     Rigidbody2D rigidbody2d;
 
 
-    private void Awake()
+    protected virtual void Awake()
     {
         this.gameObject.GetComponent<Collider2D>().enabled = false;
         rigidbody2d = this.gameObject.GetComponent<Rigidbody2D>();        
@@ -23,13 +23,13 @@ public class ProyectileBase : MonoBehaviour
         
     }
 
-    private void FixedUpdate()
+    protected virtual void FixedUpdate()
     {
         rigidbody2d.velocity = transform.right * speed;
     }
 
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
         if(currentLifeSpan < lifeSpan)
         {

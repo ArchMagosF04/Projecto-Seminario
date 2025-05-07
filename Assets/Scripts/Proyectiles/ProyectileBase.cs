@@ -46,7 +46,10 @@ public class ProyectileBase : MonoBehaviour
         owner = shooter;
         damage = projectileDamage;
         speed = projectileSpeed;
-        gameObject.layer = shooter.layer;
+        if(shooter.layer == 6)
+        {
+            this.gameObject.layer = 7;
+        }
         this.gameObject.GetComponent<Collider2D>().enabled = true;
 
     }
@@ -62,17 +65,7 @@ public class ProyectileBase : MonoBehaviour
             }
 
         }
-        if (collision.gameObject.layer != this.gameObject.layer)
-        {
-            if(this.gameObject.layer == 6 && collision.gameObject.layer != 3)
-            {                
-                Destroy(this.gameObject);
-            }            
-        }
 
-        //if(collision.gameObject.layer == 3)
-        //{
-        //    Physics2D.IgnoreCollision(this.gameObject.GetComponent<Collider2D>(), collision.collider);
-        //}        
+        Destroy(this.gameObject);
     }
 }

@@ -73,12 +73,12 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponentInChildren<Animator>();
 
-        stateMachine = new StateMachine();
-        IdleState = new Idle_Player(this, stateMachine);
-        RunState = new Run_Player(this, stateMachine);
-        JumpState = new Jump_Player(this, stateMachine);
-        FallState = new Fall_Player(this, stateMachine);
-        DashState = new Dash_Player(this, stateMachine);
+        //stateMachine = new StateMachine();
+        //IdleState = new Idle_Player(this, stateMachine);
+        //RunState = new Run_Player(this, stateMachine);
+        //JumpState = new Jump_Player(this, stateMachine);
+        //FallState = new Fall_Player(this, stateMachine);
+        //DashState = new Dash_Player(this, stateMachine);
     }
 
     private void Update()
@@ -86,7 +86,7 @@ public class PlayerMovement : MonoBehaviour
         CountTimers();
         JumpChecks();
         LandCheck();
-        DashCheck();
+        //DashCheck();
         AnimationChanges();
     }
 
@@ -176,11 +176,7 @@ public class PlayerMovement : MonoBehaviour
         //Landed
         if ((_isJumping || _isFalling) && _isGrounded && VerticalVelocity <= 0f)
         {
-            _isJumping = false;
-            _isFalling = false;
-            _isFastFalling = false;
-            _fastFallTime = 0f;
-            _isPastApexThreshold = false;
+            ResetJumpValues();
             _numberOfJumpsUsed = 0;
 
             ResetUsedDashes();
@@ -408,26 +404,30 @@ public class PlayerMovement : MonoBehaviour
         _numberOfDashesUsed = 0;
     }
 
-    private void DashCheck()
+    public bool DashCheck()
     {
         if (InputManager.DashWasPressed)
         {
             //Ground Dash
             if (_isGrounded && _dashOnGroundTimer < 0 && !_isDashing)
             {
-                InitiateDash();
+                //InitiateDash();
+                return true;
             }
 
             //Air Dash
             else if (!_isGrounded && !_isDashing && _numberOfDashesUsed < MoveStats.NumberOfDashes)
             {
                 _isAirDashing = true;
-                InitiateDash();
+                //InitiateDash();
+                return true;
             }
         }
+
+        return false;
     }
 
-    private void InitiateDash()
+    public void InitiateDash()
     {
         _dashDirection = InputManager.Movement;
 
@@ -481,7 +481,7 @@ public class PlayerMovement : MonoBehaviour
         ResetJumpValues();
     }
 
-    private void Dash()
+    public void Dash()
     {
         if (_isDashing)
         {

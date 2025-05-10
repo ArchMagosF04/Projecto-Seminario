@@ -4,35 +4,18 @@ using UnityEngine;
 
 public class StateMachine
 {
-    private IState currentState;
-    public IState CurrentState => currentState;
+    public PlayerState CurrentState { get; private set; }
 
-    public void Initialize(IState state)
+    public void Initialize(PlayerState startingState)
     {
-        currentState = state;
-        currentState.OnEnter();
+        CurrentState = startingState;
+        CurrentState.OnEnter();
     }
 
-    public void ChangeState(IState nextState) //Gets called to switch between states.
+    public void ChangeState(PlayerState newState)
     {
-        currentState.OnExit();
-        currentState = nextState;
-        currentState.OnEnter();
-
-    }
-
-    public void Update()
-    {
-        if (currentState != null)
-        {
-            currentState.OnUpdate();
-        }
-    }
-    public void FixedUpdate()
-    {
-        if (currentState != null)
-        {
-            currentState.OnFixedUpdate();
-        }
+        CurrentState.OnExit();
+        CurrentState = newState;
+        CurrentState.OnEnter();
     }
 }

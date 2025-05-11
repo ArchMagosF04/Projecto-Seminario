@@ -1,12 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerST_Grounded : PlayerState
 {
     protected int xInput;
+    protected int yInput;
 
-    private bool JumpInput;
+    private bool jumpInput;
+
+    private bool dashInput;
+
+    private bool isGrounded;
 
     public PlayerST_Grounded(PlayerController controller, StateMachine stateMachine, PlayerData playerData, string animBoolName) : base(controller, stateMachine, playerData, animBoolName)
     {
@@ -16,11 +22,16 @@ public class PlayerST_Grounded : PlayerState
     public override void DoChecks()
     {
         base.DoChecks();
+
+        isGrounded = controller.GroundCheck();
     }
 
     public override void OnEnter()
     {
         base.OnEnter();
+
+        controller.JumpState.ResetAmountOfJumps();
+        controller.DashState.ResetCanDash();
     }
 
     public override void OnExit()
@@ -38,12 +49,22 @@ public class PlayerST_Grounded : PlayerState
         base.OnUpdate();
 
         xInput = controller.InputHandler.NormInputX;
-        JumpInput = controller.InputHandler.JumpInput;
+        yInput = controller.InputHandler.NormInputY;
+        jumpInput = controller.InputHandler.JumpInput;
+        dashInput = controller.InputHandler.DashInput;
 
-        if (JumpInput)
+        if (jumpInput && controller.JumpState.CanJump())
         {
-            controller.InputHandler.UseJumpInput();
             stateMachine.ChangeState(controller.JumpState);
+        }
+        else if (!isGrounded)
+        {
+            controller.AirborneState.StartCoyoteTime();
+            stateMachine.ChangeState(controller.AirborneState);
+        }
+        else if (dashInput && controller.DashState.CheckIfCanDash())
+        {
+            stateMachine.ChangeState(controller.DashState);
         }
     }
 }

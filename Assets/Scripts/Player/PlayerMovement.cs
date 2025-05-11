@@ -56,14 +56,6 @@ public class PlayerMovement : MonoBehaviour
     private float _dashFastFallTime;
     private float _dashFastFallReleaseSpeed;
 
-    //State Machine Variables
-    private StateMachine stateMachine;
-    public Idle_Player IdleState { get; private set; }
-    public Run_Player RunState { get; private set; }
-    public Jump_Player JumpState { get; private set; }
-    public Fall_Player FallState { get; private set; }
-    public Dash_Player DashState { get; private set; }
-
     #endregion
 
     private void Awake()
@@ -72,13 +64,6 @@ public class PlayerMovement : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponentInChildren<Animator>();
-
-        //stateMachine = new StateMachine();
-        //IdleState = new Idle_Player(this, stateMachine);
-        //RunState = new Run_Player(this, stateMachine);
-        //JumpState = new Jump_Player(this, stateMachine);
-        //FallState = new Fall_Player(this, stateMachine);
-        //DashState = new Dash_Player(this, stateMachine);
     }
 
     private void Update()

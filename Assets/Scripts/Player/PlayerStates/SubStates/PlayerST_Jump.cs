@@ -4,35 +4,32 @@ using UnityEngine;
 
 public class PlayerST_Jump : PlayerST_Ability
 {
+    private int amountOfJumpsLeft;
+
     public PlayerST_Jump(PlayerController controller, StateMachine stateMachine, PlayerData playerData, string animBoolName) : base(controller, stateMachine, playerData, animBoolName)
     {
-    }
-
-    public override void DoChecks()
-    {
-        base.DoChecks();
+        amountOfJumpsLeft = playerData.amountOfJumps;
     }
 
     public override void OnEnter()
     {
         base.OnEnter();
 
+        controller.InputHandler.UseJumpInput();
         controller.SetVelocityY(playerData.jumpVelocity);
         isAbilityDone = true;
+        DecreaseAmountOfJumpsLeft();
+        controller.AirborneState.SetIsJumping();
     }
 
-    public override void OnExit()
+    public bool CanJump()
     {
-        base.OnExit();
+        if (amountOfJumpsLeft > 0) return true;
+
+        return false;
     }
 
-    public override void OnFixedUpdate()
-    {
-        base.OnFixedUpdate();
-    }
+    public void ResetAmountOfJumps() => amountOfJumpsLeft = playerData.amountOfJumps;
 
-    public override void OnUpdate()
-    {
-        base.OnUpdate();
-    }
+    public void DecreaseAmountOfJumpsLeft() => amountOfJumpsLeft--;
 }

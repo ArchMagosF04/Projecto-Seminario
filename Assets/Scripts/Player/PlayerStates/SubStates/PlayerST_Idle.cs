@@ -33,9 +33,16 @@ public class PlayerST_Idle : PlayerST_Grounded
     {
         base.OnUpdate();
 
-        if (xInput != 0)
+        if (!isExitingState)
         {
-            stateMachine.ChangeState(controller.MoveState);
+            if (xInput != 0)
+            {
+                stateMachine.ChangeState(controller.MoveState);
+            }
+            else if (yInput == -1)
+            {
+                stateMachine.ChangeState(controller.CrouchState);
+            }
         }
     }
 }

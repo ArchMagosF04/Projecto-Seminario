@@ -36,7 +36,7 @@ public class PlayerST_Move : PlayerST_Grounded
 
         controller.SetVelocityX(playerData.movementVelocity * xInput);
 
-        if (xInput == 0)
+        if (xInput == 0 && !isExitingState)
         {
             stateMachine.ChangeState(controller.IdleState);
         }

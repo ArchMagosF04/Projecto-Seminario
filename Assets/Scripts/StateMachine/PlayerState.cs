@@ -8,6 +8,9 @@ public class PlayerState
     protected StateMachine stateMachine;
     protected PlayerData playerData;
 
+    protected bool isAnimationFinished;
+    protected bool isExitingState;
+
     protected float startTime;
 
     private string animBoolName;
@@ -26,12 +29,11 @@ public class PlayerState
         controller.Anim.SetBool(animBoolName, true);
         startTime = Time.time;
         Debug.Log(animBoolName);
+        isAnimationFinished = false;
+        isExitingState = false;
     }
 
-    public virtual void OnUpdate()
-    {
-
-    }
+    public virtual void OnUpdate() { }
 
     public virtual void OnFixedUpdate()
     {
@@ -41,10 +43,12 @@ public class PlayerState
     public virtual void OnExit()
     {
         controller.Anim.SetBool(animBoolName, false);
+        isExitingState = true;
     }
 
-    public virtual void DoChecks()
-    {
+    public virtual void DoChecks() { }
 
-    }
+    public virtual void AnimationTrigger() { }
+
+    public virtual void AnimationFinishedTrigger() => isAnimationFinished = true;
 }

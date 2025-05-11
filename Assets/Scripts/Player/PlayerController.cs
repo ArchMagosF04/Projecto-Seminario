@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     public PlayerST_Jump JumpState { get; private set; }
     public PlayerST_Airborne AirborneState { get; private set; }
     public PlayerST_Land LandState { get; private set; }
+    public PlayerST_Dash DashState { get; private set; }
+    public PlayerST_Crouch CrouchState { get; private set; }
 
     #endregion
 
@@ -18,6 +20,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D RB { get; private set; }
     public Animator Anim { get; private set; }
     public PlayerInputHandler InputHandler { get; private set; }
+    public BoxCollider2D PlayerCollider { get; private set; }
 
     [SerializeField] private PlayerData playerData;
 
@@ -43,6 +46,7 @@ public class PlayerController : MonoBehaviour
         RB = GetComponent<Rigidbody2D>();
         Anim = GetComponentInChildren<Animator>();
         InputHandler = GetComponent<PlayerInputHandler>();
+        PlayerCollider = GetComponent<BoxCollider2D>();
 
         StateMachine = new StateMachine();
 
@@ -51,6 +55,8 @@ public class PlayerController : MonoBehaviour
         JumpState = new PlayerST_Jump(this, StateMachine, playerData, "InAir");
         AirborneState = new PlayerST_Airborne(this, StateMachine, playerData, "InAir");
         LandState = new PlayerST_Land (this, StateMachine, playerData, "Land");
+        DashState = new PlayerST_Dash(this, StateMachine, playerData, "Dash");
+        CrouchState = new PlayerST_Crouch(this, StateMachine, playerData, "Crouch");
     }
 
     private void Start()
@@ -73,6 +79,22 @@ public class PlayerController : MonoBehaviour
     #endregion
 
     #region Set Functions
+    
+    public void SetVelocity(float velocity, Vector2 angle, int direction)
+    {
+        angle.Normalize();
+        workSpace.Set(angle.x * velocity * direction, angle.y * velocity);
+        RB.velocity = workSpace;
+        CurrentVelocity = workSpace;
+    }
+
+    public void SetVelocity(float velocity, Vector2 direction)
+    {
+        workSpace = direction * velocity;
+        RB.velocity = workSpace;
+        CurrentVelocity = workSpace;
+    }
+
     public void SetVelocityX(float velocity)
     {
         workSpace.Set(velocity, CurrentVelocity.y);
@@ -87,6 +109,11 @@ public class PlayerController : MonoBehaviour
         CurrentVelocity = workSpace;
     }
 
+    public void SetVelocityZero()
+    {
+        RB.velocity = Vector2.zero;
+        CurrentVelocity = Vector2.zero;
+    }
 
     #endregion
 
@@ -105,6 +132,28 @@ public class PlayerController : MonoBehaviour
     #endregion
 
     #region Other Functions
+
+    public void SetColliderHeight(float height)
+    {
+        Vector2 center = PlayerCollider.offset;
+        workSpace.Set(PlayerCollider.size.x, height);
+
+        center.y += (height - PlayerCollider.size.y) / 2;
+
+        PlayerCollider.size = workSpace;
+        PlayerCollider.offset = center;
+    }
+
+    public void AnimationTrigger()
+    {
+        StateMachine.CurrentState.AnimationTrigger();
+    }
+
+    public void AnimationFinishedTrigger()
+    {
+        StateMachine.CurrentState.AnimationFinishedTrigger();
+    }
+
     private void Flip()
     {
         FacingDirection *= -1;

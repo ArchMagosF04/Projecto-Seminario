@@ -6,7 +6,7 @@ public class PlayerST_Ability : PlayerState
 {
     protected bool isAbilityDone;
 
-    private bool isGrounded;
+    protected bool isGrounded;
 
     public PlayerST_Ability(PlayerController controller, StateMachine stateMachine, PlayerData playerData, string animBoolName) : base(controller, stateMachine, playerData, animBoolName)
     {

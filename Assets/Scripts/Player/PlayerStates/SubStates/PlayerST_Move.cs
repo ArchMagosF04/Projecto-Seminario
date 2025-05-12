@@ -32,9 +32,9 @@ public class PlayerST_Move : PlayerST_Grounded
     {
         base.OnUpdate();
 
-        controller.FlipCheck(xInput);
+        core.Movement.FlipCheck(xInput);
 
-        controller.SetVelocityX(playerData.movementVelocity * xInput);
+        core.Movement.SetVelocityX(playerData.movementVelocity * xInput);
 
         if (xInput == 0 && !isExitingState)
         {

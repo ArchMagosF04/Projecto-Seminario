@@ -23,7 +23,7 @@ public class PlayerST_Airborne : PlayerState
     {
         base.DoChecks();
 
-        isGrounded = controller.GroundCheck();
+        isGrounded = core.CollisionSenses.Grounded;
     }
 
     public override void OnEnter()
@@ -63,7 +63,7 @@ public class PlayerST_Airborne : PlayerState
             stateMachine.ChangeState(controller.SecondaryAttackState);
         }
 
-        else if (isGrounded && controller.CurrentVelocity.y < 0.01f)
+        else if (isGrounded && core.Movement.CurrentVelocity.y < 0.01f)
         {
             stateMachine.ChangeState(controller.LandState);
         }
@@ -77,10 +77,10 @@ public class PlayerST_Airborne : PlayerState
         }
         else
         {
-            controller.FlipCheck(xInput);
-            controller.SetVelocityX(playerData.movementVelocity * xInput);
+            core.Movement.FlipCheck(xInput);
+            core.Movement.SetVelocityX(playerData.movementVelocity * xInput);
 
-            controller.Anim.SetFloat("yVelocity", controller.CurrentVelocity.y);
+            controller.Anim.SetFloat("yVelocity", core.Movement.CurrentVelocity.y);
         }
     }
 
@@ -90,10 +90,10 @@ public class PlayerST_Airborne : PlayerState
         {
             if (jumpInputStop)
             {
-                controller.SetVelocityY(controller.CurrentVelocity.y * playerData.variableJumpHeightMultiplier);
+                core.Movement.SetVelocityY(core.Movement.CurrentVelocity.y * playerData.variableJumpHeightMultiplier);
                 isJumping = false;
             }
-            else if (controller.CurrentVelocity.y <= 0f)
+            else if (core.Movement.CurrentVelocity.y <= 0f)
             {
                 isJumping = false;
             }

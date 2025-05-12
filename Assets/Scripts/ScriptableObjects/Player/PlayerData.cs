@@ -29,8 +29,4 @@ public class PlayerData : ScriptableObject
     [Header("Crouch State")]
     public float crouchColliderHeight = 0.8f;
     public float standColliderHeight = 2.4f;
-
-    [Header("Check Variables")]
-    public float groundCheckRadius = 0.3f;
-    public LayerMask whatIsGround;
 }

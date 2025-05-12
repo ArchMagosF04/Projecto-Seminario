@@ -12,7 +12,7 @@ public class PlayerST_Crouch : PlayerST_Grounded
     {
         base.OnEnter();
 
-        controller.SetVelocityZero();
+        core.Movement.SetVelocityZero();
         controller.SetColliderHeight(playerData.crouchColliderHeight);
     }
 

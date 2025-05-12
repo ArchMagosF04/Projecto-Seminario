@@ -27,7 +27,7 @@ public class PlayerST_Dash : PlayerST_Ability
 
         isHolding = true;
 
-        dashDirection = Vector2.right * controller.FacingDirection;
+        dashDirection = Vector2.right * core.Movement.FacingDirection;
 
         Time.timeScale = playerData.holdTimeScale; //Delete Later
         startTime = Time.unscaledTime; //Delete Later
@@ -37,9 +37,9 @@ public class PlayerST_Dash : PlayerST_Ability
     {
         base.OnExit();
 
-        if (controller.CurrentVelocity.y > 0)
+        if (core.Movement.CurrentVelocity.y > 0)
         {
-            controller.SetVelocityY(controller.CurrentVelocity.y * playerData.dashEndYMultipler);
+            core.Movement.SetVelocityY(core.Movement.CurrentVelocity.y * playerData.dashEndYMultipler);
         }
     }
 
@@ -67,14 +67,14 @@ public class PlayerST_Dash : PlayerST_Ability
                     isHolding = false;
                     Time.timeScale = 1f;
                     startTime = Time.time;
-                    controller.FlipCheck(Mathf.RoundToInt(dashDirection.x));
+                    core.Movement.FlipCheck(Mathf.RoundToInt(dashDirection.x));
                     controller.RB.drag = playerData.drag;
-                    controller.SetVelocity(playerData.dashVelocity, dashDirection);
+                    core.Movement.SetVelocity(playerData.dashVelocity, dashDirection);
                 }
             }
             else
             {
-                controller.SetVelocity(playerData.dashVelocity, dashDirection);
+                core.Movement.SetVelocity(playerData.dashVelocity, dashDirection);
 
                 if (Time.time >= startTime + playerData.dashTime)
                 {

@@ -23,7 +23,7 @@ public class PlayerST_Grounded : PlayerState
     {
         base.DoChecks();
 
-        isGrounded = controller.GroundCheck();
+        isGrounded = core.CollisionSenses.Grounded;
     }
 
     public override void OnEnter()

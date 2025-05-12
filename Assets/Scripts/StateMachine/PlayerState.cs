@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerState
 {
+    protected Core core;
+
     protected PlayerController controller;
     protected StateMachine stateMachine;
     protected PlayerData playerData;
@@ -21,6 +23,7 @@ public class PlayerState
         this.stateMachine = stateMachine;
         this.playerData = playerData;
         this.animBoolName = animBoolName;
+        core = controller.Core;
     }
 
     public virtual void OnEnter()
@@ -28,7 +31,7 @@ public class PlayerState
         DoChecks();
         controller.Anim.SetBool(animBoolName, true);
         startTime = Time.time;
-        Debug.Log(animBoolName);
+        //Debug.Log(animBoolName);
         isAnimationFinished = false;
         isExitingState = false;
     }

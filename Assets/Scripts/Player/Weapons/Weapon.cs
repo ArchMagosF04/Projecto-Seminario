@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    [SerializeField] private SO_WeaponData weaponData;
+    [SerializeField] protected SO_WeaponData weaponData;
 
     protected Animator weaponAnimator;
 
@@ -15,10 +15,7 @@ public class Weapon : MonoBehaviour
     protected virtual void Awake()
     {
         weaponAnimator = GetComponentInChildren<Animator>();
-    }
 
-    protected void Start()
-    {
         gameObject.SetActive(false);
     }
 
@@ -26,7 +23,7 @@ public class Weapon : MonoBehaviour
     {
         gameObject.SetActive(true);
 
-        if (attackCounter >= weaponData.movementSpeed.Length)
+        if (attackCounter >= weaponData.amountofAttacks)
         {
             attackCounter = 0;
         }
@@ -70,6 +67,11 @@ public class Weapon : MonoBehaviour
     public virtual void AnimationTurnOnFlipTrigger()
     {
         state.SetFlipCheck(true);
+    }
+
+    public virtual void AnimationActionTrigger()
+    {
+
     }
 
     #endregion

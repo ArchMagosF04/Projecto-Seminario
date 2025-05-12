@@ -16,7 +16,7 @@ public class PlayerST_Idle : PlayerST_Grounded
     public override void OnEnter()
     {
         base.OnEnter();
-        controller.SetVelocityX(0f);
+        core.Movement.SetVelocityX(0f);
     }
 
     public override void OnExit()

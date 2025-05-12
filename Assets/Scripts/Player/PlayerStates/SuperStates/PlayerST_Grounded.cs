@@ -53,7 +53,16 @@ public class PlayerST_Grounded : PlayerState
         jumpInput = controller.InputHandler.JumpInput;
         dashInput = controller.InputHandler.DashInput;
 
-        if (jumpInput && controller.JumpState.CanJump())
+        if (controller.InputHandler.AttackInputs[(int)CombatInputs.primary])
+        {
+            stateMachine.ChangeState(controller.PrimaryAttackState);
+        }
+        else if (controller.InputHandler.AttackInputs[(int)CombatInputs.secondary])
+        {
+            stateMachine.ChangeState(controller.SecondaryAttackState);
+        }
+
+        else if (jumpInput && controller.JumpState.CanJump())
         {
             stateMachine.ChangeState(controller.JumpState);
         }

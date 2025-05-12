@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     public PlayerST_Land LandState { get; private set; }
     public PlayerST_Dash DashState { get; private set; }
     public PlayerST_Crouch CrouchState { get; private set; }
+    public PlayerST_Attack PrimaryAttackState { get; private set; }
+    public PlayerST_Attack SecondaryAttackState { get; private set; }
 
     #endregion
 
@@ -21,6 +23,7 @@ public class PlayerController : MonoBehaviour
     public Animator Anim { get; private set; }
     public PlayerInputHandler InputHandler { get; private set; }
     public BoxCollider2D PlayerCollider { get; private set; }
+    public PlayerInventory Inventory { get; private set; }
 
     [SerializeField] private PlayerData playerData;
 
@@ -47,6 +50,7 @@ public class PlayerController : MonoBehaviour
         Anim = GetComponentInChildren<Animator>();
         InputHandler = GetComponent<PlayerInputHandler>();
         PlayerCollider = GetComponent<BoxCollider2D>();
+        Inventory = GetComponent<PlayerInventory>();
 
         StateMachine = new StateMachine();
 
@@ -57,11 +61,17 @@ public class PlayerController : MonoBehaviour
         LandState = new PlayerST_Land (this, StateMachine, playerData, "Land");
         DashState = new PlayerST_Dash(this, StateMachine, playerData, "Dash");
         CrouchState = new PlayerST_Crouch(this, StateMachine, playerData, "Crouch");
+        PrimaryAttackState = new PlayerST_Attack(this, StateMachine, playerData, "Attack");
+        SecondaryAttackState = new PlayerST_Attack(this, StateMachine, playerData, "Attack");
     }
 
     private void Start()
     {
         FacingDirection = 1;
+
+        PrimaryAttackState.SetWeapon(Inventory.weapons[(int)CombatInputs.primary]);
+        //SecondaryAttackState.SetWeapon(Inventory.weapons[(int)CombatInputs.secondary]);
+
         StateMachine.Initialize(IdleState);
     }
 

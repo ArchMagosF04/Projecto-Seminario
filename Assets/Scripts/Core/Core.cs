@@ -6,17 +6,29 @@ public class Core : MonoBehaviour
 {
     public Movement Movement { get; private set; }
     public CollisionSenses CollisionSenses { get; private set; }
+    public Combat Combat { get; private set; }
+
+    private List<ILogicUpdate> coreComponents = new List<ILogicUpdate>();
 
     private void Awake()
     {
         Movement = GetComponentInChildren<Movement>();
         CollisionSenses = GetComponentInChildren<CollisionSenses>();
+        Combat = GetComponentInChildren<Combat>();
 
-        if (!Movement || !CollisionSenses) Debug.Log("Missing Core Component");
+        if (!Movement || !CollisionSenses || !Combat) Debug.Log("Missing Core Component");
     }
 
     public void LogicUpdate()
     {
-        Movement.LogicUpdate();
+        foreach (ILogicUpdate component in coreComponents)
+        {
+            component.LogicUpdate();
+        }
+    }
+
+    public void AddComponent(ILogicUpdate component)
+    {
+        if (!coreComponents.Contains(component)) coreComponents.Add(component);
     }
 }

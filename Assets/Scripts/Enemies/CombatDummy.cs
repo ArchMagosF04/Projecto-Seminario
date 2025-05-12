@@ -2,10 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CombatDummy : MonoBehaviour, IDamageable
+public class CombatDummy : MonoBehaviour
 {
-    public void TakeDamage(float amount)
+    public Core Core { get; private set; }
+
+    private void Awake()
     {
-        Debug.Log(amount + " Damage Taken");
+        Core = GetComponentInChildren<Core>();
+    }
+
+    private void Update()
+    {
+        Core.LogicUpdate();
     }
 }

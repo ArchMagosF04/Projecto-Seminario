@@ -53,7 +53,7 @@ public class PlayerST_Attack : PlayerST_Ability
     public void SetWeapon(Weapon weapon)
     {
         this.weapon = weapon;
-        weapon.InitializeWeapon(this);
+        weapon.InitializeWeapon(this, core);
     }
 
     public void SetPlayerVelocity(float velocity)

@@ -16,9 +16,15 @@ MonoBehaviour:
   - attackName: Overhead Slash 1
     movementSpeed: 3
     damageAmount: 1
+    knockbackStrength: 3
+    knockbackAngle: {x: 1, y: 2}
   - attackName: Sweep 1
     movementSpeed: 4
     damageAmount: 3
+    knockbackStrength: 6
+    knockbackAngle: {x: 1, y: 0}
   - attackName: Overhead Slash 2
     movementSpeed: 2
     damageAmount: 2
+    knockbackStrength: 4
+    knockbackAngle: {x: 1, y: -1}

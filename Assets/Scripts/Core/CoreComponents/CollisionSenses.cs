@@ -16,12 +16,8 @@ public class CollisionSenses : CoreComponent
     [SerializeField] private LayerMask whatIsGround;
     public LayerMask WhatIsGround => whatIsGround;
 
-    #region Check Functions
-
     public bool Grounded
     {
         get => Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
     }
-
-    #endregion
 }

@@ -6,6 +6,13 @@ using UnityEngine;
 public struct WeaponAttackDetails
 {
     public string attackName;
+
     public float movementSpeed;
+
+    [Header("Damage")]
     public float damageAmount;
+
+    [Header("KnockBack")]
+    public float knockbackStrength;
+    public Vector2 knockbackAngle;
 }

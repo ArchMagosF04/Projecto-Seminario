@@ -7,6 +7,7 @@ public class Core : MonoBehaviour
     public Movement Movement { get; private set; }
     public CollisionSenses CollisionSenses { get; private set; }
     public Combat Combat { get; private set; }
+    public Stats Stats { get; private set; }
 
     private List<ILogicUpdate> coreComponents = new List<ILogicUpdate>();
 
@@ -15,8 +16,9 @@ public class Core : MonoBehaviour
         Movement = GetComponentInChildren<Movement>();
         CollisionSenses = GetComponentInChildren<CollisionSenses>();
         Combat = GetComponentInChildren<Combat>();
+        Stats = GetComponentInChildren<Stats>();
 
-        if (!Movement || !CollisionSenses || !Combat) Debug.Log("Missing Core Component");
+        if (!Movement || !CollisionSenses || !Combat || !Stats) Debug.Log("Missing Core Component");
     }
 
     public void LogicUpdate()

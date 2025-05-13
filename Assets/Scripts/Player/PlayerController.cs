@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -24,7 +26,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D RB { get; private set; }
     public Animator Anim { get; private set; }
     public PlayerInputHandler InputHandler { get; private set; }
-    public BoxCollider2D[] PlayerCollider { get; private set; }
+    [field: SerializeField] public BoxCollider2D[] PlayerCollider { get; private set; }
     public PlayerInventory Inventory { get; private set; }
 
     [SerializeField] private PlayerData playerData;
@@ -45,7 +47,6 @@ public class PlayerController : MonoBehaviour
         RB = GetComponent<Rigidbody2D>();
         Anim = GetComponentInChildren<Animator>();
         InputHandler = GetComponent<PlayerInputHandler>();
-        PlayerCollider = GetComponentsInChildren<BoxCollider2D>();
         Inventory = GetComponent<PlayerInventory>();
 
         if (PlayerCollider.Length != 2) Debug.LogError("Player got the wrong colliders.");

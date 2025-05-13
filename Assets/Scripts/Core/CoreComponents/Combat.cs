@@ -17,6 +17,8 @@ public class Combat : CoreComponent, IDamageable, IKnockbackable
     public void TakeDamage(float amount)
     {
         Debug.Log(core.transform.parent.name + " Damaged");
+
+        core.Stats.DecreaseHealth(amount);
     }
 
     public void Knockback(Vector2 angle, float strength, int direction)

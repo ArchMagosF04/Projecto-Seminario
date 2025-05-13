@@ -24,6 +24,14 @@ public class DirectionalWeapon : AggressiveWeapon
         directions[0] = new Vector2(1, -1);
     }
 
+    public override void EnterWeapon()
+    {
+        base.EnterWeapon();
+
+        weaponAnimator.SetInteger("xInput", state.XInput);
+        weaponAnimator.SetInteger("yInput", state.YInput);
+    }
+
     public override void AnimationActionTrigger()
     {
         base.AnimationActionTrigger();

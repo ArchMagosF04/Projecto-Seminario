@@ -8,7 +8,7 @@ public class Spike : MonoBehaviour
     {
         if (collision.TryGetComponent<IDamageable>(out IDamageable damageable))
         {
-            damageable.TakeDamage(5f);
+            damageable.TakeDamage(10f);
         }
 
         if (collision.TryGetComponent<IKnockbackable>(out IKnockbackable knockbackable))

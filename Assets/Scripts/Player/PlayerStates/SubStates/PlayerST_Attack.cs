@@ -24,6 +24,9 @@ public class PlayerST_Attack : PlayerST_Ability
 
         setVelocity = false;
 
+        XInput = controller.InputHandler.NormInputX;
+        YInput = controller.InputHandler.NormInputY;
+
         weapon.EnterWeapon();
     }
 

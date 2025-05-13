@@ -6,7 +6,8 @@ public class PlayerST_Attack : PlayerST_Ability
 {
     private Weapon weapon;
 
-    private int xInput;
+    public int XInput { get; private set; }
+    public int YInput { get; private set; }
 
     private float velocityToSet;
     private bool setVelocity;
@@ -37,11 +38,12 @@ public class PlayerST_Attack : PlayerST_Ability
     {
         base.OnUpdate();
 
-        xInput = controller.InputHandler.NormInputX;
+        XInput = controller.InputHandler.NormInputX;
+        YInput = controller.InputHandler.NormInputY;
 
         if (shoudCheckFlip)
         {
-            core.Movement.FlipCheck(xInput);
+            core.Movement.FlipCheck(XInput);
         }
 
         if (setVelocity)

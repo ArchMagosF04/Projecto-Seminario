@@ -8,6 +8,9 @@ public class PlayerST_Grounded : PlayerState
     protected int xInput;
     protected int yInput;
 
+    protected bool crouchInput;
+    protected bool crouchInputStop;
+
     private bool jumpInput;
 
     private bool dashInput;
@@ -52,6 +55,8 @@ public class PlayerST_Grounded : PlayerState
         yInput = controller.InputHandler.NormInputY;
         jumpInput = controller.InputHandler.JumpInput;
         dashInput = controller.InputHandler.DashInput;
+        crouchInput = controller.InputHandler.CrouchInput;
+        crouchInputStop = controller.InputHandler.CrouchInputStop;
 
         if (controller.InputHandler.AttackInputs[(int)CombatInputs.primary])
         {

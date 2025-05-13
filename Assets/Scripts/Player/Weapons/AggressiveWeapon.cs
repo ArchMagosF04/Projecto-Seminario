@@ -7,8 +7,8 @@ public class AggressiveWeapon : Weapon
 {
     protected SO_AggressiveWeaponData aggressiveWeaponData;
 
-    private List<IDamageable> detectedDamageables = new List<IDamageable>();
-    private List<IKnockbackable> detectedKnockbackables = new List<IKnockbackable>();
+    protected List<IDamageable> detectedDamageables = new List<IDamageable>();
+    protected List<IKnockbackable> detectedKnockbackables = new List<IKnockbackable>();
 
     protected override void Awake()
     {
@@ -31,7 +31,7 @@ public class AggressiveWeapon : Weapon
         CheckMeleeAttack();
     }
 
-    private void CheckMeleeAttack()
+    protected virtual void CheckMeleeAttack()
     {
         WeaponAttackDetails details = aggressiveWeaponData.AttackDetails[attackCounter];
 

@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D RB { get; private set; }
     public Animator Anim { get; private set; }
     public PlayerInputHandler InputHandler { get; private set; }
-    public BoxCollider2D PlayerCollider { get; private set; }
+    public BoxCollider2D[] PlayerCollider { get; private set; }
     public PlayerInventory Inventory { get; private set; }
 
     [SerializeField] private PlayerData playerData;
@@ -45,8 +45,10 @@ public class PlayerController : MonoBehaviour
         RB = GetComponent<Rigidbody2D>();
         Anim = GetComponentInChildren<Animator>();
         InputHandler = GetComponent<PlayerInputHandler>();
-        PlayerCollider = GetComponent<BoxCollider2D>();
+        PlayerCollider = GetComponentsInChildren<BoxCollider2D>();
         Inventory = GetComponent<PlayerInventory>();
+
+        if (PlayerCollider.Length != 2) Debug.LogError("Player got the wrong colliders.");
 
         StateMachine = new StateMachine();
 
@@ -64,7 +66,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         PrimaryAttackState.SetWeapon(Inventory.weapons[(int)CombatInputs.primary]);
-        //SecondaryAttackState.SetWeapon(Inventory.weapons[(int)CombatInputs.secondary]);
+        SecondaryAttackState.SetWeapon(Inventory.weapons[(int)CombatInputs.secondary]);
 
         StateMachine.Initialize(IdleState);
     }
@@ -86,13 +88,16 @@ public class PlayerController : MonoBehaviour
 
     public void SetColliderHeight(float height)
     {
-        Vector2 center = PlayerCollider.offset;
-        workSpace.Set(PlayerCollider.size.x, height);
+        foreach (BoxCollider2D collider in PlayerCollider)
+        {
+            Vector2 center = collider.offset;
+            workSpace.Set(collider.size.x, height);
 
-        center.y += (height - PlayerCollider.size.y) / 2;
+            center.y += (height - collider.size.y) / 2;
 
-        PlayerCollider.size = workSpace;
-        PlayerCollider.offset = center;
+            collider.size = workSpace;
+            collider.offset = center;
+        }   
     }
 
     public void AnimationTrigger()

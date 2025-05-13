@@ -39,7 +39,7 @@ public class PlayerST_Idle : PlayerST_Grounded
             {
                 stateMachine.ChangeState(controller.MoveState);
             }
-            else if (yInput == -1)
+            else if (crouchInput)
             {
                 stateMachine.ChangeState(controller.CrouchState);
             }

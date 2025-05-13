@@ -12,6 +12,8 @@ public class PlayerST_Crouch : PlayerST_Grounded
     {
         base.OnEnter();
 
+        controller.InputHandler.UseCrouchInput();
+
         core.Movement.SetVelocityZero();
         controller.SetColliderHeight(playerData.crouchColliderHeight);
     }
@@ -26,7 +28,7 @@ public class PlayerST_Crouch : PlayerST_Grounded
     {
         base.OnUpdate();
 
-        if (!isExitingState && yInput != -1)
+        if (!isExitingState && crouchInputStop)
         {
             stateMachine.ChangeState(controller.IdleState);
         }

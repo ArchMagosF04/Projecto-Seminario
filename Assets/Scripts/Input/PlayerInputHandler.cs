@@ -23,6 +23,9 @@ public class PlayerInputHandler : MonoBehaviour
     public bool DashInput { get; private set; }
     public bool DashInputStop { get; private set ; }
 
+    public bool CrouchInput { get; private set; }
+    public bool CrouchInputStop { get; private set; }
+
     public bool[] AttackInputs { get; private set; }
 
     [SerializeField] private float inputHoldTime = 0.2f;
@@ -82,6 +85,19 @@ public class PlayerInputHandler : MonoBehaviour
         NormInputY = Mathf.RoundToInt(RawMovementInput.y);
     }
 
+    public void OnCrouchInput(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            CrouchInput = true;
+            CrouchInputStop = false;
+        }
+        else if (context.canceled)
+        {
+            CrouchInputStop = true;
+        }
+    }
+
     public void OnDashInput(InputAction.CallbackContext context)
     {
         if (context.started)
@@ -120,6 +136,8 @@ public class PlayerInputHandler : MonoBehaviour
     public void UseJumpInput() => JumpInput = false;
 
     public void UseDashInput() => DashInput = false;
+
+    public void UseCrouchInput() => CrouchInput = false;
 
     private void CheckJumpInputHoldTime()
     {

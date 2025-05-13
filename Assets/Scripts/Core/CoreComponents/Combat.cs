@@ -4,6 +4,20 @@ using UnityEngine;
 
 public class Combat : CoreComponent, IDamageable, IKnockbackable
 {
+    [SerializeField] private GameObject damageParticles;
+
+    private Movement Movement => movement ? movement : core.GetCoreComponent(ref movement);
+    private Movement movement;
+
+    private CollisionSenses CollisionSenses => collisionSenses ? collisionSenses : core.GetCoreComponent(ref collisionSenses); //If its null then does the get the value on the right.
+    private CollisionSenses collisionSenses;
+
+    private Stats Stats => stats ? stats : core.GetCoreComponent(ref stats);
+    private Stats stats;
+
+    private ParticleManager ParticleManager => particleManager ? particleManager : core.GetCoreComponent(ref particleManager);
+    private ParticleManager particleManager;
+
     [SerializeField] private float maxKnockbackTime = 0.2f;
 
     private bool isKnockbackActive;
@@ -18,13 +32,15 @@ public class Combat : CoreComponent, IDamageable, IKnockbackable
     {
         Debug.Log(core.transform.parent.name + " Damaged");
 
-        core.Stats.DecreaseHealth(amount);
+        Stats?.DecreaseHealth(amount);
+
+        //ParticleManager?.StartParticlesWithRandomRotation(damageParticles);
     }
 
     public void Knockback(Vector2 angle, float strength, int direction)
     {
-        core.Movement.SetVelocity(strength, angle, direction);
-        core.Movement.CanSetVelocity = false;
+        Movement?.SetVelocity(strength, angle, direction);
+        Movement.CanSetVelocity = false;
         isKnockbackActive = true;
 
         knockBackStartTime = Time.time;
@@ -32,10 +48,10 @@ public class Combat : CoreComponent, IDamageable, IKnockbackable
 
     private void CheckKnockback()
     {
-        if (isKnockbackActive && ((core.Movement.CurrentVelocity.y <= 0.01f && core.CollisionSenses.Grounded) || Time.time >= knockBackStartTime + maxKnockbackTime))
+        if (isKnockbackActive && ((Movement.CurrentVelocity.y <= 0.01f && CollisionSenses.Grounded) || Time.time >= knockBackStartTime + maxKnockbackTime))
         {
             isKnockbackActive = false;
-            core.Movement.CanSetVelocity = true;
+            Movement.CanSetVelocity = true;
         }
     }
 }

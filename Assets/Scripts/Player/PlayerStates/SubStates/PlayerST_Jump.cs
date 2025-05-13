@@ -16,7 +16,7 @@ public class PlayerST_Jump : PlayerST_Ability
         base.OnEnter();
 
         controller.InputHandler.UseJumpInput();
-        core.Movement.SetVelocityY(playerData.jumpVelocity);
+        Movement?.SetVelocityY(playerData.jumpVelocity);
         isAbilityDone = true;
         DecreaseAmountOfJumpsLeft();
         controller.AirborneState.SetIsJumping();

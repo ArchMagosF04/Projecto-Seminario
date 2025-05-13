@@ -14,6 +14,9 @@ public class Weapon : MonoBehaviour
 
     protected int attackCounter;
 
+    protected Movement Movement => movement ? movement : core.GetCoreComponent(ref movement);
+    private Movement movement;
+
     protected virtual void Awake()
     {
         weaponAnimator = GetComponentInChildren<Animator>();

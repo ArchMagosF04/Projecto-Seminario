@@ -1,36 +1,45 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class Core : MonoBehaviour
 {
-    public Movement Movement { get; private set; }
-    public CollisionSenses CollisionSenses { get; private set; }
-    public Combat Combat { get; private set; }
-    public Stats Stats { get; private set; }
-
-    private List<ILogicUpdate> coreComponents = new List<ILogicUpdate>();
+    private readonly List<CoreComponent> coreComponents = new List<CoreComponent>();
 
     private void Awake()
     {
-        Movement = GetComponentInChildren<Movement>();
-        CollisionSenses = GetComponentInChildren<CollisionSenses>();
-        Combat = GetComponentInChildren<Combat>();
-        Stats = GetComponentInChildren<Stats>();
 
-        if (!Movement || !CollisionSenses || !Combat || !Stats) Debug.Log("Missing Core Component");
     }
 
     public void LogicUpdate()
     {
-        foreach (ILogicUpdate component in coreComponents)
+        foreach (CoreComponent component in coreComponents)
         {
             component.LogicUpdate();
         }
     }
 
-    public void AddComponent(ILogicUpdate component)
+    public void AddComponent(CoreComponent component)
     {
         if (!coreComponents.Contains(component)) coreComponents.Add(component);
+    }
+
+    public T GetCoreComponent<T>() where T : CoreComponent
+    {
+        var comp = coreComponents.OfType<T>().FirstOrDefault();
+
+        if (comp == null)
+        {
+            Debug.LogWarning($"{typeof(T)} not found on {transform.parent.name}");
+        }
+
+        return comp;
+    }
+
+    public T GetCoreComponent<T>(ref T value) where T : CoreComponent
+    {
+        value = GetCoreComponent<T>();
+        return value;
     }
 }

@@ -27,7 +27,7 @@ public class PlayerST_Dash : PlayerST_Ability
 
         isHolding = true;
 
-        dashDirection = Vector2.right * core.Movement.FacingDirection;
+        dashDirection = Vector2.right * Movement.FacingDirection;
 
         Time.timeScale = playerData.holdTimeScale; //Delete Later
         startTime = Time.unscaledTime; //Delete Later
@@ -37,9 +37,9 @@ public class PlayerST_Dash : PlayerST_Ability
     {
         base.OnExit();
 
-        if (core.Movement.CurrentVelocity.y > 0)
+        if (Movement.CurrentVelocity.y > 0)
         {
-            core.Movement.SetVelocityY(core.Movement.CurrentVelocity.y * playerData.dashEndYMultipler);
+            Movement.SetVelocityY(Movement.CurrentVelocity.y * playerData.dashEndYMultipler);
         }
     }
 
@@ -54,27 +54,27 @@ public class PlayerST_Dash : PlayerST_Ability
                 dashDirectionInput = controller.InputHandler.DashDirectionInput;
                 dashInputStop = controller.InputHandler.DashInputStop;
 
-                if (dashDirectionInput != Vector2.zero)
-                {
-                    dashDirection = dashDirectionInput;
-                    dashDirection.Normalize();
-                }
+                //if (dashDirectionInput != Vector2.zero)
+                //{
+                //    dashDirection = dashDirectionInput;
+                //    dashDirection.Normalize();
+                //}
 
-                float angle = Vector2.SignedAngle(Vector2.right, dashDirection);
+                //float angle = Vector2.SignedAngle(Vector2.right, dashDirection); //This is for a theoretical indicator for the dash direction.
 
                 if (dashInputStop || Time.unscaledTime >= startTime + playerData.maxHoldTime)
                 {
                     isHolding = false;
                     Time.timeScale = 1f;
                     startTime = Time.time;
-                    core.Movement.FlipCheck(Mathf.RoundToInt(dashDirection.x));
+                    Movement.FlipCheck(Mathf.RoundToInt(dashDirection.x));
                     controller.RB.drag = playerData.drag;
-                    core.Movement.SetVelocity(playerData.dashVelocity, dashDirection);
+                    Movement.SetVelocity(playerData.dashVelocity, dashDirection);
                 }
             }
             else
             {
-                core.Movement.SetVelocity(playerData.dashVelocity, dashDirection);
+                Movement.SetVelocity(playerData.dashVelocity, dashDirection);
 
                 if (Time.time >= startTime + playerData.dashTime)
                 {

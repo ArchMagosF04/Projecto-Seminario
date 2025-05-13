@@ -15,6 +15,12 @@ public class PlayerST_Airborne : PlayerState
     private bool coyoteTime;
     private bool isJumping;
 
+    protected Movement Movement => movement ? movement : core.GetCoreComponent(ref movement);
+    private Movement movement;
+
+    private CollisionSenses CollisionSenses => collisionSenses ? collisionSenses : core.GetCoreComponent(ref collisionSenses); //If its null then does the get the value on the right.
+    private CollisionSenses collisionSenses;
+
     public PlayerST_Airborne(PlayerController controller, StateMachine stateMachine, PlayerData playerData, string animBoolName) : base(controller, stateMachine, playerData, animBoolName)
     {
     }
@@ -23,7 +29,7 @@ public class PlayerST_Airborne : PlayerState
     {
         base.DoChecks();
 
-        isGrounded = core.CollisionSenses.Grounded;
+        isGrounded = CollisionSenses.Grounded;
     }
 
     public override void OnEnter()
@@ -63,7 +69,7 @@ public class PlayerST_Airborne : PlayerState
             stateMachine.ChangeState(controller.SecondaryAttackState);
         }
 
-        else if (isGrounded && core.Movement.CurrentVelocity.y < 0.01f)
+        else if (isGrounded && Movement.CurrentVelocity.y < 0.01f)
         {
             stateMachine.ChangeState(controller.LandState);
         }
@@ -77,10 +83,10 @@ public class PlayerST_Airborne : PlayerState
         }
         else
         {
-            core.Movement.FlipCheck(xInput);
-            core.Movement.SetVelocityX(playerData.movementVelocity * xInput);
+            Movement.FlipCheck(xInput);
+            Movement.SetVelocityX(playerData.movementVelocity * xInput);
 
-            controller.Anim.SetFloat("yVelocity", core.Movement.CurrentVelocity.y);
+            controller.Anim.SetFloat("yVelocity", Movement.CurrentVelocity.y);
         }
     }
 
@@ -90,10 +96,10 @@ public class PlayerST_Airborne : PlayerState
         {
             if (jumpInputStop)
             {
-                core.Movement.SetVelocityY(core.Movement.CurrentVelocity.y * playerData.variableJumpHeightMultiplier);
+                Movement.SetVelocityY(Movement.CurrentVelocity.y * playerData.variableJumpHeightMultiplier);
                 isJumping = false;
             }
-            else if (core.Movement.CurrentVelocity.y <= 0f)
+            else if (Movement.CurrentVelocity.y <= 0f)
             {
                 isJumping = false;
             }

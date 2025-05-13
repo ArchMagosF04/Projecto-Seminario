@@ -14,7 +14,7 @@ public class PlayerST_Crouch : PlayerST_Grounded
 
         controller.InputHandler.UseCrouchInput();
 
-        core.Movement.SetVelocityZero();
+        Movement?.SetVelocityZero();
         controller.SetColliderHeight(playerData.crouchColliderHeight);
     }
 

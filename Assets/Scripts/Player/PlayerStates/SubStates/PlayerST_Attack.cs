@@ -46,12 +46,12 @@ public class PlayerST_Attack : PlayerST_Ability
 
         if (shoudCheckFlip)
         {
-            core.Movement.FlipCheck(XInput);
+            Movement?.FlipCheck(XInput);
         }
 
         if (setVelocity)
         {
-            core.Movement.SetVelocityX(velocityToSet * core.Movement.FacingDirection);
+            Movement?.SetVelocityX(velocityToSet * Movement.FacingDirection);
         }
     }
 
@@ -63,7 +63,7 @@ public class PlayerST_Attack : PlayerST_Ability
 
     public void SetPlayerVelocity(float velocity)
     {
-        core.Movement.SetVelocityX(velocity * core.Movement.FacingDirection);
+        Movement?.SetVelocityX(velocity * Movement.FacingDirection);
 
         velocityToSet = velocity;
         setVelocity = true;

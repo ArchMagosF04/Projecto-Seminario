@@ -48,7 +48,7 @@ public class DirectionalWeapon : AggressiveWeapon
 
         foreach (IKnockbackable item in detectedKnockbackables.ToList())
         {
-            item.Knockback(details.knockbackAngle, details.knockbackStrength, core.Movement.FacingDirection);
+            item.Knockback(details.knockbackAngle, details.knockbackStrength, Movement.FacingDirection);
         }
     }
 

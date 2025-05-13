@@ -17,6 +17,12 @@ public class PlayerST_Grounded : PlayerState
 
     private bool isGrounded;
 
+    protected Movement Movement => movement ? movement : core.GetCoreComponent(ref movement); 
+    private Movement movement;
+
+    private CollisionSenses CollisionSenses => collisionSenses ? collisionSenses : core.GetCoreComponent(ref collisionSenses); //If its null then does the get the value on the right.
+    private CollisionSenses collisionSenses;
+
     public PlayerST_Grounded(PlayerController controller, StateMachine stateMachine, PlayerData playerData, string animBoolName) : base(controller, stateMachine, playerData, animBoolName)
     {
 
@@ -26,7 +32,10 @@ public class PlayerST_Grounded : PlayerState
     {
         base.DoChecks();
 
-        isGrounded = core.CollisionSenses.Grounded;
+        if (CollisionSenses) 
+        {
+            isGrounded = CollisionSenses.Grounded;
+        }
     }
 
     public override void OnEnter()

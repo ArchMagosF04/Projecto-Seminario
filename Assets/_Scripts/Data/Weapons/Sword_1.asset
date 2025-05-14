@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbe2db2335d146c4f8a668ba69382912, type: 3}
+  m_Name: Sword_1
+  m_EditorClassIdentifier: 
+  <NumberOfAttacks>k__BackingField: 3
+  <ComponentData>k__BackingField:
+  - rid: 998087510569517231
+  - rid: 998087510569517233
+  - rid: 998087510569517286
+  references:
+    version: 2
+    RefIds:
+    - rid: 998087510569517231
+      type: {class: WeaponSpriteData, ns: , asm: Assembly-CSharp}
+      data:
+        <AttackData>k__BackingField:
+        - <Sprites>k__BackingField:
+          - {fileID: 3117775995601270193, guid: 992887ddf8c2e99449e725b3eb0ad543, type: 3}
+          - {fileID: 8139804621348180182, guid: 992887ddf8c2e99449e725b3eb0ad543, type: 3}
+          - {fileID: -3573696086554577925, guid: 992887ddf8c2e99449e725b3eb0ad543, type: 3}
+          - {fileID: -6677449987691099553, guid: 992887ddf8c2e99449e725b3eb0ad543, type: 3}
+        - <Sprites>k__BackingField:
+          - {fileID: 1334909474723237668, guid: 56e9ebff3d0d526408ff370ce958648d, type: 3}
+          - {fileID: -7080961375967834571, guid: 56e9ebff3d0d526408ff370ce958648d, type: 3}
+          - {fileID: -4680654449115406751, guid: 56e9ebff3d0d526408ff370ce958648d, type: 3}
+          - {fileID: -7127675528933595853, guid: 56e9ebff3d0d526408ff370ce958648d, type: 3}
+          - {fileID: 6855488510596582009, guid: 56e9ebff3d0d526408ff370ce958648d, type: 3}
+          - {fileID: -7259909186463099801, guid: 56e9ebff3d0d526408ff370ce958648d, type: 3}
+        - <Sprites>k__BackingField:
+          - {fileID: -5589327875898107882, guid: 81ae1353b3181cc4fa5afcdc63f42b48, type: 3}
+          - {fileID: -4079485388738996815, guid: 81ae1353b3181cc4fa5afcdc63f42b48, type: 3}
+          - {fileID: -4272872418886566087, guid: 81ae1353b3181cc4fa5afcdc63f42b48, type: 3}
+          - {fileID: -3847299042336022702, guid: 81ae1353b3181cc4fa5afcdc63f42b48, type: 3}
+    - rid: 998087510569517233
+      type: {class: WeaponMovementData, ns: , asm: Assembly-CSharp}
+      data:
+        <AttackData>k__BackingField:
+        - <Direction>k__BackingField: {x: 1, y: 0}
+          <Velocity>k__BackingField: 2
+        - <Direction>k__BackingField: {x: 1, y: 0}
+          <Velocity>k__BackingField: 4
+        - <Direction>k__BackingField: {x: 0, y: 1}
+          <Velocity>k__BackingField: 3
+    - rid: 998087510569517286
+      type: {class: WeaponActionHitboxData, ns: , asm: Assembly-CSharp}
+      data:
+        <AttackData>k__BackingField:
+        - Debug: 1
+          <Hitbox>k__BackingField:
+            serializedVersion: 2
+            x: 0
+            y: -1.2
+            width: 3.2
+            height: 2.39
+        - Debug: 1
+          <Hitbox>k__BackingField:
+            serializedVersion: 2
+            x: -1.73
+            y: -1.2
+            width: 4.6
+            height: 2.11
+        - Debug: 1
+          <Hitbox>k__BackingField:
+            serializedVersion: 2
+            x: 0
+            y: -1.2
+            width: 3.2
+            height: 2.39
+        <DetectableLayers>k__BackingField:
+          serializedVersion: 2
+          m_Bits: 256

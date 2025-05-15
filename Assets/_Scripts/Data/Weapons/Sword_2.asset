@@ -23,13 +23,16 @@ MonoBehaviour:
     - rid: 998087510569517232
       type: {class: WeaponSpriteData, ns: , asm: Assembly-CSharp}
       data:
-        <AttackData>k__BackingField:
-        - <Sprites>k__BackingField:
+        name: WeaponSpriteData
+        attackData:
+        - name: Attack 1
+          <Sprites>k__BackingField:
           - {fileID: 3117775995601270193, guid: 992887ddf8c2e99449e725b3eb0ad543, type: 3}
           - {fileID: 8139804621348180182, guid: 992887ddf8c2e99449e725b3eb0ad543, type: 3}
           - {fileID: -3573696086554577925, guid: 992887ddf8c2e99449e725b3eb0ad543, type: 3}
           - {fileID: -6677449987691099553, guid: 992887ddf8c2e99449e725b3eb0ad543, type: 3}
-        - <Sprites>k__BackingField:
+        - name: Attack 2
+          <Sprites>k__BackingField:
           - {fileID: 1334909474723237668, guid: 56e9ebff3d0d526408ff370ce958648d, type: 3}
           - {fileID: -7080961375967834571, guid: 56e9ebff3d0d526408ff370ce958648d, type: 3}
           - {fileID: -4680654449115406751, guid: 56e9ebff3d0d526408ff370ce958648d, type: 3}
@@ -39,29 +42,35 @@ MonoBehaviour:
     - rid: 998087510569517274
       type: {class: WeaponMovementData, ns: , asm: Assembly-CSharp}
       data:
-        <AttackData>k__BackingField:
-        - <Direction>k__BackingField: {x: 1, y: 0}
-          <Velocity>k__BackingField: 3
-        - <Direction>k__BackingField: {x: 1, y: 0}
-          <Velocity>k__BackingField: 5
+        name: WeaponMovementData
+        attackData:
+        - name: Attack 1
+          <Direction>k__BackingField: {x: 1, y: 0}
+          <Velocity>k__BackingField: 2
+        - name: Attack 2
+          <Direction>k__BackingField: {x: 1, y: 0}
+          <Velocity>k__BackingField: 4
     - rid: 998087510569517290
       type: {class: WeaponActionHitboxData, ns: , asm: Assembly-CSharp}
       data:
-        <AttackData>k__BackingField:
-        - Debug: 1
+        name: WeaponActionHitboxData
+        attackData:
+        - name: Attack 1
+          Debug: 0
           <Hitbox>k__BackingField:
             serializedVersion: 2
             x: 0
             y: -1.2
             width: 3.2
-            height: 2.39
-        - Debug: 1
+            height: 2.4
+        - name: Attack 2
+          Debug: 0
           <Hitbox>k__BackingField:
             serializedVersion: 2
             x: -1.73
             y: -1.2
             width: 4.6
-            height: 2.11
+            height: 2.1
         <DetectableLayers>k__BackingField:
           serializedVersion: 2
           m_Bits: 256

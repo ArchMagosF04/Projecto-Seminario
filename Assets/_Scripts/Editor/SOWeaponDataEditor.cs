@@ -13,6 +13,9 @@ public class SOWeaponDataEditor : Editor
 
     private SO_WeaponData dataSO;
 
+    private bool showForceUpdateButtons;
+    private bool showAddComponentButtons;
+
     private void OnEnable()
     {
         dataSO = target as SO_WeaponData;
@@ -22,15 +25,51 @@ public class SOWeaponDataEditor : Editor
     {
         base.OnInspectorGUI();
 
-        foreach (var item in dataCompTypes)
+        if (GUILayout.Button("Set Number of Attacks"))
         {
-            if (GUILayout.Button(item.Name))
+            foreach (var item in dataSO.ComponentData)
             {
-                var comp = Activator.CreateInstance(item) as ComponentData;
+                item.InitializeAttackData(dataSO.NumberOfAttacks);
+;            }
+        }
 
-                if (comp == null) return;
+        showAddComponentButtons = EditorGUILayout.Foldout(showAddComponentButtons, "Add Components Buttons");
 
-                dataSO.AddData(comp);
+        if (showAddComponentButtons)
+        {
+            foreach (var item in dataCompTypes)
+            {
+                if (GUILayout.Button(item.Name))
+                {
+                    var comp = Activator.CreateInstance(item) as ComponentData;
+
+                    if (comp == null) return;
+
+                    comp.InitializeAttackData(dataSO.NumberOfAttacks);
+
+                    dataSO.AddData(comp);
+                }
+            }
+        }
+
+        showForceUpdateButtons = EditorGUILayout.Foldout(showForceUpdateButtons, "Force Updates Buttons");
+
+        if (showForceUpdateButtons)
+        {
+            if (GUILayout.Button("Force Update Component Names"))
+            {
+                foreach (var item in dataSO.ComponentData)
+                {
+                    item.SetComponentName();
+                }
+            }
+
+            if (GUILayout.Button("Force Update Attack Names"))
+            {
+                foreach (var item in dataSO.ComponentData)
+                {
+                    item.SetAttackDataNames();
+                }
             }
         }
     }

@@ -11,9 +11,9 @@ public class Spike : MonoBehaviour
             damageable.TakeDamage(10f);
         }
 
-        if (collision.TryGetComponent<IKnockbackable>(out IKnockbackable knockbackable))
+        if (collision.TryGetComponent<IKnockBackable>(out IKnockBackable knockbackable))
         {
-            knockbackable.Knockback(new Vector2(2f, 3f), 15f, 1);
+            knockbackable.KnockBack(new Vector2(2f, 3f), 15f, 1);
         }
     }
 }

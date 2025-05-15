@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    [field: SerializeField] public SO_WeaponData Data { get; private set; }
-
     [SerializeField] private float attackCounterResetCooldown;
+
+    public SO_WeaponData Data { get; private set; }
 
     public int CurrentAttackCounter
     {
@@ -62,6 +62,11 @@ public class Weapon : MonoBehaviour
     public void SetCore(Core core)
     {
         Core = core;
+    }
+
+    public void SetData(SO_WeaponData data)
+    {
+        Data = data;
     }
 
     private void ResetAttackCounter() => CurrentAttackCounter = 0;

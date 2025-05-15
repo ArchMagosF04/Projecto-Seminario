@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class WeaponActionHitBox : WeaponComponent<WeaponActionHitboxData, AttackActionHitBox>
 {
-    private event Action<Collider2D[]> OnDetectedCollider2D;
+    public event Action<Collider2D[]> OnDetectedCollider2D;
 
     private CoreComp<Movement> movement;
 
@@ -18,6 +18,8 @@ public class WeaponActionHitBox : WeaponComponent<WeaponActionHitboxData, Attack
         base.Start();
 
         movement = new CoreComp<Movement>(core);
+
+        EventHandler.OnAttackAction += HandleAttackAction;
     }
 
     private void HandleAttackAction()
@@ -31,22 +33,11 @@ public class WeaponActionHitBox : WeaponComponent<WeaponActionHitboxData, Attack
         if (detected.Length == 0) return;
 
         OnDetectedCollider2D?.Invoke(detected);
-
-        foreach (var item in detected)
-        {
-            Debug.Log(item.name);
-        }
     }
 
-    protected override void OnEnable()
+    protected override void OnDestroy()
     {
-        base.OnEnable();
-        EventHandler.OnAttackAction += HandleAttackAction;
-    }
-
-    protected override void OnDisable()
-    {
-        base.OnDisable();
+        base.OnDestroy();
         EventHandler.OnAttackAction -= HandleAttackAction;
     }
 

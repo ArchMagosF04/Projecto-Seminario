@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,11 @@ public class SO_WeaponData : ScriptableObject
     public T GetData<T>()
     {
         return ComponentData.OfType<T>().FirstOrDefault();
+    }
+
+    public List<Type> GetAllDependencies()
+    {
+        return ComponentData.Select(component => component.ComponentDependency).ToList();
     }
 
     public void AddData(ComponentData data)

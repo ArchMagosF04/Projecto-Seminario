@@ -17,6 +17,7 @@ MonoBehaviour:
   - rid: 998087510569517232
   - rid: 998087510569517274
   - rid: 998087510569517290
+  - rid: 998087531398955095
   references:
     version: 2
     RefIds:
@@ -74,3 +75,12 @@ MonoBehaviour:
         <DetectableLayers>k__BackingField:
           serializedVersion: 2
           m_Bits: 256
+    - rid: 998087531398955095
+      type: {class: WeaponDamageData, ns: , asm: Assembly-CSharp}
+      data:
+        name: WeaponDamageData
+        attackData:
+        - name: Attack 1
+          <Amount>k__BackingField: 3
+        - name: Attack 2
+          <Amount>k__BackingField: 5

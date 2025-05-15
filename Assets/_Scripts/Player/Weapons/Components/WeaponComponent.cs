@@ -13,6 +13,11 @@ public abstract class WeaponComponent : MonoBehaviour
 
     protected bool isAttackActive;
 
+    public virtual void Init()
+    {
+
+    }
+
     protected virtual void Awake()
     {
         weapon = GetComponent<Weapon>();
@@ -22,7 +27,8 @@ public abstract class WeaponComponent : MonoBehaviour
 
     protected virtual void Start()
     {
-
+        weapon.OnEnter += HandleEnter;
+        weapon.OnExit += HandleExit;
     }
 
     protected virtual void HandleEnter()
@@ -35,13 +41,7 @@ public abstract class WeaponComponent : MonoBehaviour
         isAttackActive = false;
     }
 
-    protected virtual void OnEnable()
-    {
-        weapon.OnEnter += HandleEnter;
-        weapon.OnExit += HandleExit;
-    }
-
-    protected virtual void OnDisable()
+    protected virtual void OnDestroy()
     {
         weapon.OnEnter -= HandleEnter;
         weapon.OnExit -= HandleExit;
@@ -54,9 +54,9 @@ public abstract class WeaponComponent<T1, T2> : WeaponComponent where T1 : Compo
 
     protected T2 currentAttackData;
 
-    protected override void Awake()
+    public override void Init()
     {
-        base.Awake();
+        base.Init();
 
         data = weapon.Data.GetData<T1>();
     }

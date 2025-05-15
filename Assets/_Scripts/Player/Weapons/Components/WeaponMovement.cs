@@ -17,17 +17,17 @@ public class WeaponMovement : WeaponComponent<WeaponMovementData, AttackMovement
         CoreMovement.SetVelocityZero();
     }
 
-    protected override void OnEnable()
+    protected override void Start()
     {
-        base.OnEnable();
+        base.Start();
 
         EventHandler.OnStartMovement += HandleStartMovement;
         EventHandler.OnStopMovement += HandleStopMovement;
     }
 
-    protected override void OnDisable()
+    protected override void OnDestroy()
     {
-        base.OnDisable();
+        base.OnDestroy();
 
         EventHandler.OnStartMovement -= HandleStartMovement;
         EventHandler.OnStopMovement -= HandleStopMovement;

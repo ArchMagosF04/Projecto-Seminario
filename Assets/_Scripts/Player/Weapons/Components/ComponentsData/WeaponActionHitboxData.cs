@@ -5,4 +5,9 @@ using UnityEngine;
 public class WeaponActionHitboxData : ComponentData<AttackActionHitBox>
 {
     [field: SerializeField] public LayerMask DetectableLayers {  get; private set; }
+
+    public WeaponActionHitboxData()
+    {
+        ComponentDependency = typeof(WeaponActionHitBox);
+    }
 }

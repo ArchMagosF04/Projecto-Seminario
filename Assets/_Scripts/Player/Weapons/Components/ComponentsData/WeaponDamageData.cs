@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WeaponDamageData : ComponentData<AttackDamage>
 {
-    public WeaponDamageData()
+    protected override void SetComponentDependency()
     {
         ComponentDependency = typeof(WeaponDamage);
     }

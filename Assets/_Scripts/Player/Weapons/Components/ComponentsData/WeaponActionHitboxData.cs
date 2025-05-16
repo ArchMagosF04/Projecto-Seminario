@@ -6,7 +6,7 @@ public class WeaponActionHitboxData : ComponentData<AttackActionHitBox>
 {
     [field: SerializeField] public LayerMask DetectableLayers {  get; private set; }
 
-    public WeaponActionHitboxData()
+    protected override void SetComponentDependency()
     {
         ComponentDependency = typeof(WeaponActionHitBox);
     }

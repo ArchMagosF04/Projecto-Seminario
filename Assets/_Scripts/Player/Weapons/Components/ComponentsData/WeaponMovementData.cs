@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WeaponMovementData : ComponentData<AttackMovement>
 {
-    public WeaponMovementData()
+    protected override void SetComponentDependency()
     {
         ComponentDependency = typeof(WeaponMovement);
     }

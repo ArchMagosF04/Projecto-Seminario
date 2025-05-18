@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IKnockBackable
+public interface IKnockbackable
 {
-    void KnockBack(Vector2 angle, float strength, int direction);
+    void Knockback(Vector2 angle, float strength, int direction);
 }

@@ -15,17 +15,17 @@ public class PlayerController : MonoBehaviour
     public PlayerST_Land LandState { get; private set; }
     public PlayerST_Dash DashState { get; private set; }
     public PlayerST_Crouch CrouchState { get; private set; }
-    public PlayerST_Attack PrimaryAttackState { get; private set; }
-    public PlayerST_Attack SecondaryAttackState { get; private set; }
+    public PlayerST_PrimaryAttack PrimaryAttackState { get; private set; }
+    public PlayerST_SecondaryAttack SecondaryAttackState { get; private set; }
 
     #endregion
 
     #region Component References
-
     public Core Core { get; private set; }
     public Rigidbody2D RB { get; private set; }
     public Animator Anim { get; private set; }
     public PlayerInputHandler InputHandler { get; private set; }
+    public PlayerWeapon Weapon { get; private set; }
     [field: SerializeField] public BoxCollider2D[] PlayerCollider { get; private set; }
 
     [SerializeField] private PlayerData playerData;
@@ -36,9 +36,6 @@ public class PlayerController : MonoBehaviour
 
     private Vector2 workSpace;
 
-    private Weapon primaryWeapon;
-    private Weapon secondaryWeapon;
-
     #endregion
 
     #region Unity Functions
@@ -46,11 +43,7 @@ public class PlayerController : MonoBehaviour
     {
         Core = GetComponentInChildren<Core>();
 
-        primaryWeapon = transform.Find("PrimaryWeapon").GetComponent<Weapon>();
-        secondaryWeapon = transform.Find("SecondaryWeapon").GetComponent<Weapon>();
-
-        primaryWeapon.SetCore(Core);
-        secondaryWeapon.SetCore(Core);
+        Weapon = GetComponentInChildren<PlayerWeapon>();
 
         RB = GetComponent<Rigidbody2D>();
         Anim = GetComponentInChildren<Animator>();
@@ -67,13 +60,14 @@ public class PlayerController : MonoBehaviour
         LandState = new PlayerST_Land (this, StateMachine, playerData, "Land");
         DashState = new PlayerST_Dash(this, StateMachine, playerData, "Dash");
         CrouchState = new PlayerST_Crouch(this, StateMachine, playerData, "Crouch");
-        PrimaryAttackState = new PlayerST_Attack(this, StateMachine, playerData, "Attack", primaryWeapon);
-        SecondaryAttackState = new PlayerST_Attack(this, StateMachine, playerData, "Attack", secondaryWeapon);
+        PrimaryAttackState = new PlayerST_PrimaryAttack(this, StateMachine, playerData, "Attack");
+        SecondaryAttackState = new PlayerST_SecondaryAttack(this, StateMachine, playerData, "Attack", Weapon);
     }
 
     private void Start()
     {
         StateMachine.Initialize(IdleState);
+        Weapon.InitializeWeapon(PrimaryAttackState, SecondaryAttackState, Core);
     }
 
     private void Update()

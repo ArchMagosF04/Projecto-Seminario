@@ -9,6 +9,8 @@ public class PlayerST_Airborne : PlayerState
     private bool jumpInput;
     private bool jumpInputStop;
     private bool dashInput;
+    private bool primaryAttackInput;
+    private bool secondaryAttackInput;
 
     //Checks
     private bool isGrounded;
@@ -57,14 +59,16 @@ public class PlayerST_Airborne : PlayerState
         jumpInput = controller.InputHandler.JumpInput;
         jumpInputStop = controller.InputHandler.JumpInputStop;
         dashInput = controller.InputHandler.DashInput;
+        primaryAttackInput = controller.InputHandler.PrimaryAttackInput;
+        secondaryAttackInput = controller.InputHandler.SecondaryAttackInput;
 
         CheckJumpMultipler();
 
-        if (controller.InputHandler.AttackInputs[(int)CombatInputs.primary])
+        if (primaryAttackInput)
         {
             stateMachine.ChangeState(controller.PrimaryAttackState);
         }
-        else if (controller.InputHandler.AttackInputs[(int)CombatInputs.secondary])
+        else if (secondaryAttackInput && controller.SecondaryAttackState.CanSpecialAttack())
         {
             stateMachine.ChangeState(controller.SecondaryAttackState);
         }

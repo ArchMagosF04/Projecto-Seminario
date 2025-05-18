@@ -17,6 +17,9 @@ public class PlayerST_Grounded : PlayerState
 
     private bool isGrounded;
 
+    private bool primaryAttackInput;
+    private bool secondaryAttackInput;
+
     protected Movement Movement => movement ? movement : core.GetCoreComponent(ref movement); 
     private Movement movement;
 
@@ -66,12 +69,14 @@ public class PlayerST_Grounded : PlayerState
         dashInput = controller.InputHandler.DashInput;
         crouchInput = controller.InputHandler.CrouchInput;
         crouchInputStop = controller.InputHandler.CrouchInputStop;
+        primaryAttackInput = controller.InputHandler.PrimaryAttackInput;
+        secondaryAttackInput = controller.InputHandler.SecondaryAttackInput;
 
-        if (controller.InputHandler.AttackInputs[(int)CombatInputs.primary])
+        if (primaryAttackInput)
         {
             stateMachine.ChangeState(controller.PrimaryAttackState);
         }
-        else if (controller.InputHandler.AttackInputs[(int)CombatInputs.secondary])
+        else if (secondaryAttackInput && controller.SecondaryAttackState.CanSpecialAttack())
         {
             stateMachine.ChangeState(controller.SecondaryAttackState);
         }

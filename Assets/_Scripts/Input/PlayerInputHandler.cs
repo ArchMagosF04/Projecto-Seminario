@@ -26,12 +26,17 @@ public class PlayerInputHandler : MonoBehaviour
     public bool CrouchInput { get; private set; }
     public bool CrouchInputStop { get; private set; }
 
-    public bool[] AttackInputs { get; private set; }
+    public bool PrimaryAttackInput { get; private set; }
+    public bool PrimaryAttackInputStop { get; private set; }
+    public bool SecondaryAttackInput { get; private set; }
+    public bool SecondaryAttackInputStop { get; private set; }
 
     [SerializeField] private float inputHoldTime = 0.2f;
 
     private float jumpInputStartTime;
     private float dashInputStartTime;
+    private float primaryAttackInputStartTime;
+    private float secondaryAttackInputStartTime;
 
     private void Awake()
     {
@@ -39,28 +44,26 @@ public class PlayerInputHandler : MonoBehaviour
         cam = Camera.main;
     }
 
-    private void Start()
-    {
-        int count = Enum.GetValues(typeof(CombatInputs)).Length;
-        AttackInputs = new bool[count];
-    }
-
     private void Update()
     {
         CheckJumpInputHoldTime();
         CheckDashInputHoldTime();
+        CheckPrimaryAttackInputHoldTime();
+        CheckSecondaryAttackInputHoldTime();
     }
 
     public void OnPrimaryAttackInput(InputAction.CallbackContext context)
     {
         if (context.started)
         {
-            AttackInputs[(int)CombatInputs.primary] = true;
+            PrimaryAttackInput = true;
+            PrimaryAttackInputStop = false;
+            primaryAttackInputStartTime = Time.time;
         }
 
         if (context.canceled)
         {
-            AttackInputs[(int)CombatInputs.primary] = false;
+            PrimaryAttackInputStop = true;
         }
     }
 
@@ -68,12 +71,14 @@ public class PlayerInputHandler : MonoBehaviour
     {
         if (context.started)
         {
-            AttackInputs[(int)CombatInputs.secondary] = true;
+            SecondaryAttackInput = true;
+            SecondaryAttackInputStop = false;
+            secondaryAttackInputStartTime = Time.time;
         }
 
         if (context.canceled)
         {
-            AttackInputs[(int)CombatInputs.secondary] = false;
+            SecondaryAttackInputStop = true;
         }
     }
 
@@ -139,6 +144,9 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void UseCrouchInput() => CrouchInput = false;
 
+    public void UsePrimaryAttackInput() => PrimaryAttackInput = false;
+    public void UseSecondaryAttackInput() => SecondaryAttackInput = false;
+
     private void CheckJumpInputHoldTime()
     {
         if (Time.time >= jumpInputStartTime + inputHoldTime)
@@ -154,9 +162,20 @@ public class PlayerInputHandler : MonoBehaviour
             DashInput = false;
         }
     }
-}
 
-public enum CombatInputs
-{
-    primary, secondary
+    private void CheckPrimaryAttackInputHoldTime()
+    {
+        if (Time.time >= primaryAttackInputStartTime + inputHoldTime)
+        {
+            PrimaryAttackInput = false;
+        }
+    }
+
+    private void CheckSecondaryAttackInputHoldTime()
+    {
+        if (Time.time >= secondaryAttackInputStartTime + inputHoldTime)
+        {
+            SecondaryAttackInput = false;
+        }
+    }
 }

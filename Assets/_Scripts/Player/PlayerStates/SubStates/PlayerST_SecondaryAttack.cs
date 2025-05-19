@@ -10,8 +10,8 @@ public class PlayerST_SecondaryAttack : PlayerST_Ability
     public PlayerST_SecondaryAttack(PlayerController controller, StateMachine stateMachine, PlayerData playerData,
         string animBoolName, PlayerWeapon weapon) : base(controller, stateMachine, playerData, animBoolName)
     {
-        this.weapon = weapon;
-        weapon.OnExit += ExitHandler;
+        //this.weapon = weapon;
+        //weapon.OnExit += ExitHandler;
     }
 
     public override void OnEnter()

@@ -7,9 +7,7 @@ public class WP_Component : MonoBehaviour
     protected PlayerWeapon weapon;
 
     protected SO_WeaponData data;
-
     protected WeaponAnimationEventHandler EventHandler => weapon.EventHandler;
-
     protected Core core => weapon.Core;
 
     protected bool isAttackActive;
@@ -22,8 +20,8 @@ public class WP_Component : MonoBehaviour
 
     protected virtual void OnEnable()
     {
-        weapon.OnEnter += HandleEnter;
-        weapon.OnExit += HandleExit;
+        //weapon.OnEnter += HandleEnter;
+        //weapon.OnExit += HandleExit;
     }
 
     protected virtual void HandleEnter()
@@ -38,7 +36,7 @@ public class WP_Component : MonoBehaviour
 
     protected virtual void OnDisable()
     {
-        weapon.OnEnter -= HandleEnter;
-        weapon.OnExit -= HandleExit;
+        //weapon.OnEnter -= HandleEnter;
+        //weapon.OnExit -= HandleExit;
     }
 }

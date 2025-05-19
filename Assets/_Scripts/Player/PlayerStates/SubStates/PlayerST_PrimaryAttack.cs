@@ -4,25 +4,22 @@ using UnityEngine;
 
 public class PlayerST_PrimaryAttack : PlayerST_Ability
 {
-    private Weapon weapon;
+    private PlayerWeapon weapon;
 
     public int XInput { get; private set; }
     public int YInput { get; private set; }
 
-    private float velocityToSet;
-    private bool setVelocity;
-
     private bool shoudCheckFlip;
 
-    public PlayerST_PrimaryAttack(PlayerController controller, StateMachine stateMachine, PlayerData playerData, string animBoolName) : base(controller, stateMachine, playerData, animBoolName)
+    public PlayerST_PrimaryAttack(PlayerController controller, StateMachine stateMachine, PlayerData playerData, string animBoolName, PlayerWeapon weapon) : base(controller, stateMachine, playerData, animBoolName)
     {
+        this.weapon = weapon;
+        weapon.OnExit += ExitHandler;
     }
 
     public override void OnEnter()
     {
         base.OnEnter();
-
-        setVelocity = false;
 
         XInput = controller.InputHandler.NormInputX;
         YInput = controller.InputHandler.NormInputY;
@@ -48,25 +45,6 @@ public class PlayerST_PrimaryAttack : PlayerST_Ability
         {
             Movement?.FlipCheck(XInput);
         }
-
-        if (setVelocity)
-        {
-            Movement?.SetVelocityX(velocityToSet * Movement.FacingDirection);
-        }
-    }
-
-    public void SetWeapon(Weapon weapon)
-    {
-        this.weapon = weapon;
-        weapon.InitializeWeapon(this, core);
-    }
-
-    public void SetPlayerVelocity(float velocity)
-    {
-        Movement?.SetVelocityX(velocity * Movement.FacingDirection);
-
-        velocityToSet = velocity;
-        setVelocity = true;
     }
 
     public void SetFlipCheck(bool value)
@@ -74,9 +52,9 @@ public class PlayerST_PrimaryAttack : PlayerST_Ability
         shoudCheckFlip = value;
     }
 
-    public override void AnimationFinishedTrigger()
+    private void ExitHandler()
     {
-        base.AnimationFinishedTrigger();
+        AnimationFinishedTrigger();
 
         isAbilityDone = true;
     }

@@ -10,7 +10,7 @@ public class PlayerWeapon : MonoBehaviour
 
     public Core Core { get; private set; }
     public WeaponAnimationEventHandler EventHandler { get; private set; }
-    public WeaponAttackDetails currentAttackDetails { get; private set; }
+    public int CurrentAttackIndex { get; private set; }
 
     protected Animator weaponAnimator;
 
@@ -29,25 +29,36 @@ public class PlayerWeapon : MonoBehaviour
 
         components = GetComponents<WP_Component>();
 
-        gameObject.SetActive(false);
-    }
-
-    protected void Start()
-    {
         foreach (var component in components)
         {
             component.Init(this, weaponData);
         }
+
+        gameObject.SetActive(false);
     }
 
     private void OnEnable()
     {
         EventHandler.OnFinish += ExitWeapon;
+        EventHandler.OnTurnOnFlip += TurnOnFlip;
+        EventHandler.OnTurnOffFlip += TurnOffFlip;
     }
 
     private void OnDisable()
     {
         EventHandler.OnFinish -= ExitWeapon;
+        EventHandler.OnTurnOnFlip -= TurnOnFlip;
+        EventHandler.OnTurnOffFlip -= TurnOffFlip;
+    }
+
+    public void SetCurrentAttackIndex(int index)
+    {
+        this.CurrentAttackIndex = index;
+
+        if (CurrentAttackIndex >= weaponData.AttackDetails.Length)
+        {
+            CurrentAttackIndex = 0;
+        }
     }
 
     public void InitializeWeapon(PlayerST_PrimaryAttack state1, PlayerST_SecondaryAttack state2, Core core)
@@ -73,5 +84,15 @@ public class PlayerWeapon : MonoBehaviour
         gameObject.SetActive(false);
 
         OnExit?.Invoke();
+    }
+
+    private void TurnOnFlip()
+    {
+        primaryAttackState.SetFlipCheck(true);
+    }
+
+    private void TurnOffFlip()
+    {
+        primaryAttackState.SetFlipCheck(false);
     }
 }

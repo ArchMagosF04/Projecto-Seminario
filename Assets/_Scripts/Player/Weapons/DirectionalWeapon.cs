@@ -43,12 +43,12 @@ public class DirectionalWeapon : AggressiveWeapon
 
         foreach (IDamageable item in detectedDamageables.ToList()) //Creates a copy of the list so the original one can be modified by destroying a member.
         {
-            item.TakeDamage(details.damageAmount);
+            item.TakeDamage(details.DamageAmount);
         }
 
         foreach (IKnockbackable item in detectedKnockbackables.ToList())
         {
-            item.Knockback(details.knockbackAngle, details.knockbackStrength, Movement.FacingDirection);
+            item.Knockback(details.KnockbackAngle, details.KnockbackStrength, Movement.FacingDirection);
         }
     }
 

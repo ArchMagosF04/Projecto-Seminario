@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D RB { get; private set; }
     public Animator Anim { get; private set; }
     public PlayerInputHandler InputHandler { get; private set; }
-    public PlayerWeapon Weapon { get; private set; }
+    [field: SerializeField] public PlayerWeapon Weapon { get; private set; }
     [field: SerializeField] public BoxCollider2D[] PlayerCollider { get; private set; }
 
     [SerializeField] private PlayerData playerData;
@@ -43,8 +43,6 @@ public class PlayerController : MonoBehaviour
     {
         Core = GetComponentInChildren<Core>();
 
-        Weapon = GetComponentInChildren<PlayerWeapon>();
-
         RB = GetComponent<Rigidbody2D>();
         Anim = GetComponentInChildren<Animator>();
         InputHandler = GetComponent<PlayerInputHandler>();
@@ -60,7 +58,7 @@ public class PlayerController : MonoBehaviour
         LandState = new PlayerST_Land (this, StateMachine, playerData, "Land");
         DashState = new PlayerST_Dash(this, StateMachine, playerData, "Dash");
         CrouchState = new PlayerST_Crouch(this, StateMachine, playerData, "Crouch");
-        PrimaryAttackState = new PlayerST_PrimaryAttack(this, StateMachine, playerData, "Attack");
+        PrimaryAttackState = new PlayerST_PrimaryAttack(this, StateMachine, playerData, "Attack", Weapon);
         SecondaryAttackState = new PlayerST_SecondaryAttack(this, StateMachine, playerData, "Attack", Weapon);
     }
 

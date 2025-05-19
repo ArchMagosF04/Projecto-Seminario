@@ -28,7 +28,7 @@ public class Weapon : MonoBehaviour
     {
         gameObject.SetActive(true);
 
-        if (attackCounter >= weaponData.amountofAttacks)
+        if (attackCounter >= weaponData.AttackDetails.Length)
         {
             attackCounter = 0;
         }
@@ -52,16 +52,6 @@ public class Weapon : MonoBehaviour
     public virtual void AnimationFinishedTrigger()
     {
         state.AnimationFinishedTrigger();
-    }
-
-    public virtual void AnimationStartMovementTrigger()
-    {
-        state.SetPlayerVelocity(weaponData.movementSpeed[attackCounter]);
-    }
-
-    public virtual void AnimationStopMovementTrigger()
-    {
-        state.SetPlayerVelocity(0f);
     }
 
     public virtual void AnimationTurnOffFlipTrigger()

@@ -9,7 +9,9 @@ public class WP_Movement : WP_Component
 
     private void HandleStartMovement()
     {
-        //CoreMovement.SetVelocity(weapon.currentAttackDetails.movementSpeed, weapon.currentAttackDetails.angle, CoreMovement.FacingDirection);
+        WeaponAttackDetails attack = data.AttackDetails[weapon.CurrentAttackIndex];
+
+        CoreMovement.SetVelocity(attack.MovementSpeed, attack.Angle, CoreMovement.FacingDirection);
     }
 
     protected void HandleStopMovement()

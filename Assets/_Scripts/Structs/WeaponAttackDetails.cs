@@ -5,14 +5,19 @@ using UnityEngine;
 [System.Serializable]
 public struct WeaponAttackDetails
 {
-    public string attackName;
+    [field: SerializeField] public string AttackName {  get; private set; }
 
-    public float movementSpeed;
+
+    [Header("Movement")]
+    [field: SerializeField] public float MovementSpeed { get; private set; }
+    [field: SerializeField] public Vector2 Angle { get; private set; }
+
 
     [Header("Damage")]
-    public float damageAmount;
+    [field: SerializeField] public float DamageAmount { get; private set; }
+
 
     [Header("KnockBack")]
-    public float knockbackStrength;
-    public Vector2 knockbackAngle;
+    [field: SerializeField] public float KnockbackStrength { get; private set; }
+    [field: SerializeField] public Vector2 KnockbackAngle { get; private set; }
 }

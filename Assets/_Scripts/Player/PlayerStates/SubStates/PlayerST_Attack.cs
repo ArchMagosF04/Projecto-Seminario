@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class PlayerST_Attack : PlayerST_Ability
 {
-    private Weapon weapon;
+    public int XInput { get; private set; }
+    public int YInput { get; private set; }
+
+    private PlayerWeapon weapon;
+
     public PlayerST_Attack(PlayerController controller, StateMachine stateMachine, PlayerData playerData,
-        string animBoolName, Weapon weapon) : base(controller, stateMachine, playerData, animBoolName)
+        string animBoolName, PlayerWeapon weapon) : base(controller, stateMachine, playerData, animBoolName)
     {
         this.weapon = weapon;
         weapon.OnExit += ExitHandler;
@@ -16,7 +20,18 @@ public class PlayerST_Attack : PlayerST_Ability
     {
         base.OnEnter();
 
+        XInput = controller.InputHandler.NormInputX;
+        YInput = controller.InputHandler.NormInputY;
+
         weapon.Enter();
+    }
+
+    public override void OnUpdate()
+    {
+        base.OnUpdate();
+
+        XInput = controller.InputHandler.NormInputX;
+        YInput = controller.InputHandler.NormInputY;
     }
 
     private void ExitHandler()

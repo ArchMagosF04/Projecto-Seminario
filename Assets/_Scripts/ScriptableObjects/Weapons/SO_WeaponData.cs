@@ -1,30 +1,19 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "newWeaponData", menuName = "Data/Weapon Data/ Basic WeaponData", order = 0)]
+[CreateAssetMenu(fileName = "newWeaponData", menuName = "Data/Weapon Data/Basic", order = 0)]
 public class SO_WeaponData : ScriptableObject
 {
     [field: SerializeField] public int NumberOfAttacks {  get; private set; }
 
-    [field: SerializeReference] public List<ComponentData> ComponentData { get; private set; }
 
-    public T GetData<T>()
-    {
-        return ComponentData.OfType<T>().FirstOrDefault();
-    }
+    [Header("Weapon Movement")]
+    [field: SerializeField] public AD_Movement[] MovementData { get; private set; }
 
-    public List<Type> GetAllDependencies()
-    {
-        return ComponentData.Select(component => component.ComponentDependency).ToList();
-    }
+    [Header("Weapon Damage")]
+    [field: SerializeField] public AD_Damage[] DamageData { get; private set; }
 
-    public void AddData(ComponentData data)
-    {
-        if(ComponentData.FirstOrDefault(t => t.GetType() == data.GetType()) != null) return;
-
-        ComponentData.Add(data);
-    }
+    [Header("Weapon Knockback")]
+    [field: SerializeField] public AD_Knockback[] KnockbackData { get; set; }
 }

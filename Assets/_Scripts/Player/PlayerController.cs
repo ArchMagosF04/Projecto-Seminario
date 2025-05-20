@@ -36,8 +36,8 @@ public class PlayerController : MonoBehaviour
 
     private Vector2 workSpace;
 
-    private Weapon primaryWeapon;
-    private Weapon secondaryWeapon;
+    private PlayerWeapon primaryWeapon; //Check Later;
+    private PlayerWeapon secondaryWeapon;
 
     #endregion
 
@@ -46,10 +46,10 @@ public class PlayerController : MonoBehaviour
     {
         Core = GetComponentInChildren<Core>();
 
-        primaryWeapon = transform.Find("PrimaryWeapon").GetComponent<Weapon>();
-        secondaryWeapon = transform.Find("SecondaryWeapon").GetComponent<Weapon>();
+        primaryWeapon = transform.Find("PrimaryWeapon").GetComponent<PlayerWeapon>(); //Check Later;
+        secondaryWeapon = transform.Find("SecondaryWeapon").GetComponent<PlayerWeapon>();
 
-        primaryWeapon.SetCore(Core);
+        primaryWeapon.SetCore(Core); //Check Later;
         secondaryWeapon.SetCore(Core);
 
         RB = GetComponent<Rigidbody2D>();
@@ -67,8 +67,11 @@ public class PlayerController : MonoBehaviour
         LandState = new PlayerST_Land (this, StateMachine, playerData, "Land");
         DashState = new PlayerST_Dash(this, StateMachine, playerData, "Dash");
         CrouchState = new PlayerST_Crouch(this, StateMachine, playerData, "Crouch");
-        PrimaryAttackState = new PlayerST_Attack(this, StateMachine, playerData, "Attack", primaryWeapon);
+        PrimaryAttackState = new PlayerST_Attack(this, StateMachine, playerData, "Attack", primaryWeapon); //Check Later;
         SecondaryAttackState = new PlayerST_Attack(this, StateMachine, playerData, "Attack", secondaryWeapon);
+
+        primaryWeapon.SetState(PrimaryAttackState);
+        secondaryWeapon.SetState(SecondaryAttackState);
     }
 
     private void Start()

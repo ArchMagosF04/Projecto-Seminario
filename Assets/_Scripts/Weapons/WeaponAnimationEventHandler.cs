@@ -9,9 +9,11 @@ public class WeaponAnimationEventHandler : MonoBehaviour
     public event Action OnStartMovement;
     public event Action OnStopMovement;
     public event Action OnAttackAction;
+    public event Action OnFireProjectile;
 
     private void AnimationFinishedTrigger() => OnFinish?.Invoke();
     private void StartMovementTrigger() => OnStartMovement?.Invoke();
     private void StopMovementTrigger() => OnStopMovement?.Invoke();
     private void AttackActionTrigger() => OnAttackAction?.Invoke();
+    private void FireProjectile() => OnFireProjectile?.Invoke();
 }

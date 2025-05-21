@@ -27,6 +27,13 @@ public class PlayerST_SecAttack : PlayerST_Ability
         base.OnUpdate();
     }
 
+    public bool CanPerformSpecialAttack()
+    {
+        //TO DO
+
+        return true;
+    }
+
     private void ExitHandler()
     {
         AnimationFinishedTrigger();

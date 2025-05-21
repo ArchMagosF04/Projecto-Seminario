@@ -64,7 +64,7 @@ public class PlayerST_Airborne : PlayerState
         {
             stateMachine.ChangeState(controller.PrimaryAttackState);
         }
-        else if (controller.InputHandler.SecondaryAttackInput)
+        else if (controller.InputHandler.SecondaryAttackInput && controller.SecondaryAttackState.CanPerformSpecialAttack())
         {
             stateMachine.ChangeState(controller.SecondaryAttackState);
         }

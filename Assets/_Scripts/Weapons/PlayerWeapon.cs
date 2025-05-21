@@ -14,7 +14,7 @@ public class PlayerWeapon : MonoBehaviour
     [field: SerializeField] public SO_WeaponData Data { get; private set; }
     public WeaponAnimationEventHandler EventHandler { get; private set; }
     public Core Core { get; private set; }
-    public PlayerST_Attack state { get; private set; }
+    public PlayerST_PrimeAttack state { get; private set; }
 
     private Animator anim;
     private Timer attackCounterResetTimer;
@@ -24,6 +24,9 @@ public class PlayerWeapon : MonoBehaviour
     #region Other Variables
 
     [SerializeField] private float attackCounterResetCooldown;
+
+    public bool isSpecialAttack { get; private set; }
+
     public int CurrentAttackCounter
     {
         get => currentAttackCounter;
@@ -61,19 +64,22 @@ public class PlayerWeapon : MonoBehaviour
     }
 
     public void SetCore(Core core) => Core = core;
-    public void SetState(PlayerST_Attack state) => this.state = state;
+    public void SetState(PlayerST_PrimeAttack state) => this.state = state;
 
     private void ResetAttackCounter() => CurrentAttackCounter = 0;
     public void ModifyAttackCounter(int amount) => CurrentAttackCounter = amount;
 
-    public void Enter()
+    public void Enter(bool isSpecial)
     {
         //Debug.Log($"{transform.name} enter");
 
         attackCounterResetTimer.StopTimer();
 
+        isSpecialAttack = isSpecial;
+
         OnEnter?.Invoke();
 
+        anim.SetBool("Special", isSpecial);
         anim.SetBool("Active", true);
         anim.SetInteger("Counter", currentAttackCounter);
     }
@@ -81,6 +87,8 @@ public class PlayerWeapon : MonoBehaviour
     private void Exit()
     {
         anim.SetBool("Active", false);
+        anim.SetBool("Special", false);
+        isSpecialAttack = false;
 
         attackCounterResetTimer.StartTimer();
 

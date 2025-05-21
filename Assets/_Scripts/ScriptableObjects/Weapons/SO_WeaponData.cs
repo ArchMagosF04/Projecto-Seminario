@@ -16,4 +16,9 @@ public class SO_WeaponData : ScriptableObject
 
     [Header("Weapon Knockback")]
     [field: SerializeField] public AD_Knockback[] KnockbackData { get; set; }
+
+    [Header("Special Attack")]
+    [field: SerializeField] public AD_Movement SpecialMovementData { get; private set; }
+    [field: SerializeField] public AD_Damage SpecialDamageData { get; private set; }
+    [field: SerializeField] public AD_Knockback SpecialKnockbackData { get; set; }
 }

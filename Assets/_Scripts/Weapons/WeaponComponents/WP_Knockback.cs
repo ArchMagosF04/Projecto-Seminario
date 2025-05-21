@@ -34,6 +34,7 @@ public class WP_Knockback : WeaponComponent
     private void HandleKnockback()
     {
         AD_Knockback data = WeaponData.KnockbackData[weapon.CurrentAttackCounter];
+        if (weapon.isSpecialAttack) data = WeaponData.SpecialKnockbackData;
 
         foreach (var item in hitbox.collider2Ds.ToList())
         {

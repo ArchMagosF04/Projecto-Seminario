@@ -26,7 +26,10 @@ public class PlayerInputHandler : MonoBehaviour
     public bool CrouchInput { get; private set; }
     public bool CrouchInputStop { get; private set; }
 
-    public bool[] AttackInputs { get; private set; }
+    public bool PrimaryAttackInput { get; private set; }
+    public bool PrimaryAttackInputStop { get; private set; }
+    public bool SecondaryAttackInput { get; private set; }
+    public bool SecondaryAttackInputStop { get; private set; }
 
     [SerializeField] private float inputHoldTime = 0.2f;
 
@@ -39,12 +42,6 @@ public class PlayerInputHandler : MonoBehaviour
         cam = Camera.main;
     }
 
-    private void Start()
-    {
-        int count = Enum.GetValues(typeof(CombatInputs)).Length;
-        AttackInputs = new bool[count];
-    }
-
     private void Update()
     {
         CheckJumpInputHoldTime();
@@ -55,12 +52,13 @@ public class PlayerInputHandler : MonoBehaviour
     {
         if (context.started)
         {
-            AttackInputs[(int)CombatInputs.primary] = true;
+            PrimaryAttackInput = true;
+            PrimaryAttackInputStop = false;
         }
 
         if (context.canceled)
         {
-            AttackInputs[(int)CombatInputs.primary] = false;
+            PrimaryAttackInputStop = true;
         }
     }
 
@@ -68,12 +66,13 @@ public class PlayerInputHandler : MonoBehaviour
     {
         if (context.started)
         {
-            AttackInputs[(int)CombatInputs.secondary] = true;
+            SecondaryAttackInput = true;
+            SecondaryAttackInputStop = false;
         }
 
         if (context.canceled)
         {
-            AttackInputs[(int)CombatInputs.secondary] = false;
+            SecondaryAttackInputStop = true;
         }
     }
 
@@ -108,7 +107,7 @@ public class PlayerInputHandler : MonoBehaviour
         }
         else if (context.canceled)
         {
-            DashInputStop= true;
+            DashInputStop = true;
         }
     }
 
@@ -138,6 +137,8 @@ public class PlayerInputHandler : MonoBehaviour
     public void UseDashInput() => DashInput = false;
 
     public void UseCrouchInput() => CrouchInput = false;
+    public void UsePrimaryAttackInput() => PrimaryAttackInput = false;
+    public void UseSecondaryAttackInput() => SecondaryAttackInput = false;
 
     private void CheckJumpInputHoldTime()
     {
@@ -154,9 +155,4 @@ public class PlayerInputHandler : MonoBehaviour
             DashInput = false;
         }
     }
-}
-
-public enum CombatInputs
-{
-    primary, secondary
 }

@@ -60,11 +60,11 @@ public class PlayerST_Airborne : PlayerState
 
         CheckJumpMultipler();
 
-        if (controller.InputHandler.AttackInputs[(int)CombatInputs.primary])
+        if (controller.InputHandler.PrimaryAttackInput)
         {
             stateMachine.ChangeState(controller.PrimaryAttackState);
         }
-        else if (controller.InputHandler.AttackInputs[(int)CombatInputs.secondary])
+        else if (controller.InputHandler.SecondaryAttackInput)
         {
             stateMachine.ChangeState(controller.SecondaryAttackState);
         }

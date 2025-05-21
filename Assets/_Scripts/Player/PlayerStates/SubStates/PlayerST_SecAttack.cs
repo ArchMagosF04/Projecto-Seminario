@@ -2,14 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerST_Attack : PlayerST_Ability
+public class PlayerST_SecAttack : PlayerST_Ability
 {
-    public int XInput { get; private set; }
-    public int YInput { get; private set; }
-
     private PlayerWeapon weapon;
 
-    public PlayerST_Attack(PlayerController controller, StateMachine stateMachine, PlayerData playerData,
+    public PlayerST_SecAttack(PlayerController controller, StateMachine stateMachine, PlayerData playerData,
         string animBoolName, PlayerWeapon weapon) : base(controller, stateMachine, playerData, animBoolName)
     {
         this.weapon = weapon;
@@ -20,18 +17,14 @@ public class PlayerST_Attack : PlayerST_Ability
     {
         base.OnEnter();
 
-        XInput = controller.InputHandler.NormInputX;
-        YInput = controller.InputHandler.NormInputY;
+        controller.InputHandler.UseSecondaryAttackInput();
 
-        weapon.Enter();
+        weapon.Enter(true);
     }
 
     public override void OnUpdate()
     {
         base.OnUpdate();
-
-        XInput = controller.InputHandler.NormInputX;
-        YInput = controller.InputHandler.NormInputY;
     }
 
     private void ExitHandler()
@@ -40,5 +33,3 @@ public class PlayerST_Attack : PlayerST_Ability
         isAbilityDone = true;
     }
 }
-
-

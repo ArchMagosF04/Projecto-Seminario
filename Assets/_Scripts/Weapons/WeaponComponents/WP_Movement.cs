@@ -10,6 +10,7 @@ public class WP_Movement : WeaponComponent
     private void HandleStartMovement()
     {
         AD_Movement data = WeaponData.MovementData[weapon.CurrentAttackCounter];
+        if (weapon.isSpecialAttack) data = WeaponData.SpecialMovementData;
 
         CoreMovement.SetVelocity(data.Velocity, data.Direction, CoreMovement.FacingDirection);
     }

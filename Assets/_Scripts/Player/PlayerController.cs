@@ -15,8 +15,8 @@ public class PlayerController : MonoBehaviour
     public PlayerST_Land LandState { get; private set; }
     public PlayerST_Dash DashState { get; private set; }
     public PlayerST_Crouch CrouchState { get; private set; }
-    public PlayerST_Attack PrimaryAttackState { get; private set; }
-    public PlayerST_Attack SecondaryAttackState { get; private set; }
+    public PlayerST_PrimeAttack PrimaryAttackState { get; private set; }
+    public PlayerST_SecAttack SecondaryAttackState { get; private set; }
 
     #endregion
 
@@ -29,15 +29,13 @@ public class PlayerController : MonoBehaviour
     [field: SerializeField] public BoxCollider2D[] PlayerCollider { get; private set; }
 
     [SerializeField] private PlayerData playerData;
+    [SerializeField] protected PlayerWeapon weapon;
 
     #endregion
 
     #region Other Variables
 
     private Vector2 workSpace;
-
-    private PlayerWeapon primaryWeapon; //Check Later;
-    private PlayerWeapon secondaryWeapon;
 
     #endregion
 
@@ -46,11 +44,7 @@ public class PlayerController : MonoBehaviour
     {
         Core = GetComponentInChildren<Core>();
 
-        primaryWeapon = transform.Find("PrimaryWeapon").GetComponent<PlayerWeapon>(); //Check Later;
-        secondaryWeapon = transform.Find("SecondaryWeapon").GetComponent<PlayerWeapon>();
-
-        primaryWeapon.SetCore(Core); //Check Later;
-        secondaryWeapon.SetCore(Core);
+        weapon.SetCore(Core);
 
         RB = GetComponent<Rigidbody2D>();
         Anim = GetComponentInChildren<Animator>();
@@ -67,11 +61,10 @@ public class PlayerController : MonoBehaviour
         LandState = new PlayerST_Land (this, StateMachine, playerData, "Land");
         DashState = new PlayerST_Dash(this, StateMachine, playerData, "Dash");
         CrouchState = new PlayerST_Crouch(this, StateMachine, playerData, "Crouch");
-        PrimaryAttackState = new PlayerST_Attack(this, StateMachine, playerData, "Attack", primaryWeapon); //Check Later;
-        SecondaryAttackState = new PlayerST_Attack(this, StateMachine, playerData, "Attack", secondaryWeapon);
+        PrimaryAttackState = new PlayerST_PrimeAttack(this, StateMachine, playerData, "Attack", weapon); //Check Later;
+        SecondaryAttackState = new PlayerST_SecAttack(this, StateMachine, playerData, "Attack", weapon);
 
-        primaryWeapon.SetState(PrimaryAttackState);
-        secondaryWeapon.SetState(SecondaryAttackState);
+        weapon.SetState(PrimaryAttackState);
     }
 
     private void Start()

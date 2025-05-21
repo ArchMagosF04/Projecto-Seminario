@@ -31,6 +31,7 @@ public class WP_Damage : WeaponComponent
     private void HandleDamage()
     {
         AD_Damage data = WeaponData.DamageData[weapon.CurrentAttackCounter];
+        if (weapon.isSpecialAttack) data = WeaponData.SpecialDamageData;
 
         foreach (var item in hitbox.collider2Ds.ToList())
         {

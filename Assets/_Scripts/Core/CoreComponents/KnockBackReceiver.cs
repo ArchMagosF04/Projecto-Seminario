@@ -6,18 +6,20 @@ public class KnockBackReceiver : CoreComponent, IKnockBackable
 {
     [SerializeField] private float maxKnockBackTime = 0.2f;
 
+    public bool HyperArmor { get; private set; }
+
     private bool isKnockBackActive;
     private float knockBackStartTime;
 
-    private CoreComp<Movement> movement;
-    private CoreComp<CollisionSenses> collisionSenses;
+    private Movement movement;
+    private CollisionSenses collisionSenses;
 
     protected override void Awake()
     {
         base.Awake();
 
-        movement = new CoreComp<Movement>(core);
-        collisionSenses = new CoreComp<CollisionSenses>(core);
+        movement = core.GetCoreComponent<Movement>();
+        collisionSenses = core.GetCoreComponent<CollisionSenses>();
     }
 
     public override void LogicUpdate()
@@ -25,10 +27,17 @@ public class KnockBackReceiver : CoreComponent, IKnockBackable
         CheckKnockBack();
     }
 
+    public void ToggleHyperArmor(bool value)
+    {
+        HyperArmor = value;
+    }
+
     public void KnockBack(Vector2 angle, float strength, int direction)
     {
-        movement.Comp?.SetVelocity(strength, angle, direction);
-        movement.Comp.CanSetVelocity = false;
+        if (HyperArmor) return;
+
+        movement.SetVelocity(strength, angle, direction);
+        movement.CanSetVelocity = false;
         isKnockBackActive = true;
 
         knockBackStartTime = Time.time;
@@ -36,10 +45,10 @@ public class KnockBackReceiver : CoreComponent, IKnockBackable
 
     private void CheckKnockBack()
     {
-        if (isKnockBackActive && ((movement.Comp.CurrentVelocity.y <= 0.01f && collisionSenses.Comp.Grounded) || Time.time >= knockBackStartTime + maxKnockBackTime))
+        if (isKnockBackActive && ((movement.CurrentVelocity.y <= 0.01f && collisionSenses.Grounded) || Time.time >= knockBackStartTime + maxKnockBackTime))
         {
             isKnockBackActive = false;
-            movement.Comp.CanSetVelocity = true;
+            movement.CanSetVelocity = true;
         }
     }
 }

@@ -7,6 +7,8 @@ public class PlayerST_Dash : PlayerST_Ability
     public bool CanDash { get; private set; }
     private bool isHolding;
     private bool dashInputStop;
+    private bool canInvincibleDash = true;
+    private int beatsToInvincibleDash;
 
     private float lastDashTime;
 
@@ -14,8 +16,13 @@ public class PlayerST_Dash : PlayerST_Ability
 
     private Vector2 dashDirectionInput;
 
+    private DamageReceiver damageReceiver;
+    private KnockBackReceiver knockBackReceiver;
+
     public PlayerST_Dash(PlayerController controller, StateMachine stateMachine, PlayerData playerData, string animBoolName) : base(controller, stateMachine, playerData, animBoolName)
     {
+        damageReceiver = controller.Core.GetCoreComponent<DamageReceiver>();
+        knockBackReceiver = controller.Core.GetCoreComponent<KnockBackReceiver>();
     }
 
     public override void OnEnter()
@@ -24,6 +31,13 @@ public class PlayerST_Dash : PlayerST_Ability
 
         CanDash = false;
         controller.InputHandler.UseDashInput();
+
+        if (canInvincibleDash)
+        {
+            Debug.Log("Invincible Dash");
+            damageReceiver.ToggleInvincibility(true);
+            knockBackReceiver.ToggleHyperArmor(true);
+        }
 
         isHolding = true;
 
@@ -36,6 +50,9 @@ public class PlayerST_Dash : PlayerST_Ability
     public override void OnExit()
     {
         base.OnExit();
+
+        damageReceiver.ToggleInvincibility(false);
+        knockBackReceiver.ToggleHyperArmor(false);
 
         if (Movement.CurrentVelocity.y > 0)
         {

@@ -36,14 +36,6 @@ public class BossMovement : MonoBehaviour
     private float _timePastApexThreshold;
     [SerializeField] private bool _isPastApexThreshold;
 
-    //State Machine Variables
-    private StateMachine stateMachine;
-    public Idle_Player IdleState { get; private set; }
-    public Run_Player RunState { get; private set; }
-    public Jump_Player JumpState { get; private set; }
-    public Fall_Player FallState { get; private set; }
-    public Dash_Player DashState { get; private set; }
-
     #endregion
 
     private void Awake()

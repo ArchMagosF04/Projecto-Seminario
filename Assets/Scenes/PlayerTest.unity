@@ -3130,8 +3130,8 @@ MonoBehaviour:
   bpm: 115
   audioSource: {fileID: 1549287341}
   <OneBeat>k__BackingField:
-    OnBeat: 0
-    gracePeriod: 0.2
+    <BeatGrace>k__BackingField: 0
+    gracePeriod: 0.5
     steps: 1
     unityTrigger:
       m_PersistentCalls:
@@ -3149,8 +3149,8 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   <TwoBeat>k__BackingField:
-    OnBeat: 0
-    gracePeriod: 0.2
+    <BeatGrace>k__BackingField: 0
+    gracePeriod: 0.5
     steps: 0.5
     unityTrigger:
       m_PersistentCalls:
@@ -3168,8 +3168,8 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   <FourBeat>k__BackingField:
-    OnBeat: 0
-    gracePeriod: 0.2
+    <BeatGrace>k__BackingField: 0
+    gracePeriod: 0.5
     steps: 0.25
     unityTrigger:
       m_PersistentCalls:
@@ -3187,8 +3187,8 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   <HalfBeat>k__BackingField:
-    OnBeat: 0
-    gracePeriod: 0.2
+    <BeatGrace>k__BackingField: 0
+    gracePeriod: 0.5
     steps: 2
     unityTrigger:
       m_PersistentCalls:
@@ -4317,8 +4317,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1606427413272764216}
   - {fileID: 103252591638996476}
+  - {fileID: 1606427413272764216}
   - {fileID: 7320273732929911266}
   - {fileID: 119782710}
   - {fileID: 1421359300}

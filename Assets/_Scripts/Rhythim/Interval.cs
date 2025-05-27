@@ -7,12 +7,17 @@ using UnityEngine.Events;
 [Serializable]
 public class Interval
 {
-    [SerializeField] private bool OnBeat;
-    [SerializeField, Range(0.1f, 0.5f)] private float gracePeriod = 0.2f;
+    [field: SerializeField] public bool BeatGrace {  get; private set; }
+    [SerializeField, Range(0.3f, 1f)] private float gracePeriod = 0.5f;
     [SerializeField, Range(0.25f, 2f)] private float steps;
     [SerializeField] private UnityEvent unityTrigger;
-    private Action trigger;
+    public Action OnBeatEvent;
     private int lastInterval;
+
+    public Interval() 
+    {
+        gracePeriod = (gracePeriod * steps) / 2;
+    }
 
     public float GetIntervalLength(float bpm)
     {
@@ -21,21 +26,21 @@ public class Interval
 
     public void CheckForNewInterval(float interval)
     {
-        if(!OnBeat && interval - lastInterval > 1f - ((gracePeriod * steps) / 2))
+        if(!BeatGrace && interval - lastInterval > 1f - gracePeriod)
         {
-            OnBeat = true;
+            BeatGrace = true;
         }
 
         if(Mathf.FloorToInt(interval) != lastInterval)
         {
             lastInterval = Mathf.FloorToInt(interval);
-            trigger?.Invoke();
+            OnBeatEvent?.Invoke();
             unityTrigger?.Invoke();
         }
 
-        if (OnBeat && interval - lastInterval > 0f + ((gracePeriod * steps) / 2))
+        if (BeatGrace && interval - lastInterval > 0f + gracePeriod)
         {
-            OnBeat = false;
+            BeatGrace = false;
         }
     }
 }

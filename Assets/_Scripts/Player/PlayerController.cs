@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D RB { get; private set; }
     public Animator Anim { get; private set; }
     public PlayerInputHandler InputHandler { get; private set; }
+    public SpriteRenderer playerSprite {  get; private set; }
     [field: SerializeField] public BoxCollider2D[] PlayerCollider { get; private set; }
 
     [SerializeField] private PlayerData playerData;
@@ -48,6 +49,7 @@ public class PlayerController : MonoBehaviour
 
         RB = GetComponent<Rigidbody2D>();
         Anim = GetComponentInChildren<Animator>();
+        playerSprite = GetComponentInChildren<SpriteRenderer>();
         InputHandler = GetComponent<PlayerInputHandler>();
 
         if (PlayerCollider.Length != 2) Debug.LogError("Player got the wrong colliders.");
@@ -83,6 +85,16 @@ public class PlayerController : MonoBehaviour
         StateMachine.CurrentState.OnFixedUpdate();
     }
 
+    private void OnEnable()
+    {
+        DashState.SubscribeToEvents();
+    }
+
+    private void OnDisable()
+    {
+        DashState.UnsubscribeToEvents();
+    }
+
     #endregion
 
     #region Other Functions
@@ -109,6 +121,18 @@ public class PlayerController : MonoBehaviour
     public void AnimationFinishedTrigger()
     {
         StateMachine.CurrentState.AnimationFinishedTrigger();
+    }
+
+    public void ActivateDashCooldownIndicator()
+    {
+        StartCoroutine(PlayerFlash());
+    }
+
+    private IEnumerator PlayerFlash()
+    {
+        playerSprite.color = Color.red;
+        yield return new WaitForSeconds(0.2f);
+        playerSprite.color = Color.white;
     }
 
     #endregion

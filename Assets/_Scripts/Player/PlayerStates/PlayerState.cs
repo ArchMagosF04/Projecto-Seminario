@@ -54,4 +54,7 @@ public class PlayerState
     public virtual void AnimationTrigger() { }
 
     public virtual void AnimationFinishedTrigger() => isAnimationFinished = true;
+
+    public virtual void SubscribeToEvents() { }
+    public virtual void UnsubscribeToEvents() { }
 }

@@ -1,6 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Net.WebSockets;
+using System.Threading;
+using NUnit.Framework.Constraints;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -11,6 +14,9 @@ public class Cerati : EnemyBasicFunctions
     private float timer;
     private BossMovement movementComponent;
     [SerializeField] Transform centerStage;
+    [SerializeField] Transform plataform1;
+    [SerializeField] Transform plataform2;
+
     [SerializeField]private bool specialAttack;
     private bool atCenterStage;
     [SerializeField] private float specialAtkDuration;
@@ -20,6 +26,11 @@ public class Cerati : EnemyBasicFunctions
     private float wavesIntervalTimer;
     [SerializeField] private float wavesGrowthSpeed;
     [SerializeField] private float wavesMaxSize;
+    [SerializeField] private float specialDelayTime = 3;
+    private float currentSpecialDelayTime = 0;
+    [SerializeField] float waitToMakeChoices;
+    private float currentTimeToMakeChoices = 0;
+    private bool makeChoice = false;
 
     void Start()
     {
@@ -40,6 +51,32 @@ public class Cerati : EnemyBasicFunctions
     // Update is called once per frame
     void Update()
     {
+        //if(currentTimeToMakeChoices < waitToMakeChoices)
+        //{
+        //    currentTimeToMakeChoices += Time.deltaTime;
+        //}
+        //else
+        //{
+        // makeChoice = true;   
+        //}
+
+        //if (makeChoice)
+        //{
+        //    int r = UnityEngine.Random.Range(1, 100);
+
+        //    if (r < enemyInfo.SpecialAttackWeight)
+        //    {
+        //        specialAttack = true;
+        //    }
+        //    else
+        //    {
+        //        makeChoice = false;
+        //        currentTimeToMakeChoices = 0;
+        //    }
+        //}
+
+
+
         if (!specialAttack)
         {
             if (timer < time)
@@ -54,22 +91,40 @@ public class Cerati : EnemyBasicFunctions
         }
         
 
-        if (transform.position.x == centerStage.position.x)
+        if (Mathf.Abs(transform.position.x - centerStage.position.x) < 0.1f && specialAttack)
         {
-            atCenterStage = true;
+            if (currentSpecialDelayTime < specialDelayTime)
+            {
+                currentSpecialDelayTime += Time.deltaTime;
+            }
+            else
+            {
+                atCenterStage = true;
+                currentSpecialDelayTime = 0;
+            }                
         }
 
         if(specialAttack && atCenterStage)
         {
-            if(wavesIntervalTimer <= 0)
+            if(specialAtkTimer < specialAtkDuration)
             {
-                GameObject temp = GameObject.Instantiate(guitarWaves, transform.position, quaternion.identity);
-                temp.gameObject.GetComponent<WaveAttack>().Initialize(atk * enemyInfo.SpecialAttackmultiplier, this.gameObject, wavesMaxSize, wavesGrowthSpeed);
-                wavesIntervalTimer = wavesSpawnInterval;
+                if (wavesIntervalTimer <= 0)
+                {
+                    GameObject temp = GameObject.Instantiate(guitarWaves, transform.position, quaternion.identity);
+                    temp.gameObject.GetComponent<WaveAttack>().Initialize(enemyInfo.Atk * enemyInfo.SpecialAttackmultiplier, this.gameObject, wavesMaxSize, wavesGrowthSpeed);
+                    wavesIntervalTimer = wavesSpawnInterval;
+                }
+                else
+                {
+                    wavesIntervalTimer -= Time.deltaTime;
+                }
+                specialAtkTimer += Time.deltaTime;
             }
             else
             {
-                wavesIntervalTimer -= Time.deltaTime;
+                specialAttack = false;
+                atCenterStage = false;
+                specialAtkTimer = 0;
             }
 
             
@@ -81,7 +136,7 @@ public class Cerati : EnemyBasicFunctions
     protected override void BasicAttack()
     {
         GameObject bullet = GameObject.Instantiate(enemyInfo.GetProyectile(0), transform.position, Quaternion.Euler(0,0, GetPlayerRalativeDirection()));
-        bullet.GetComponent<ProyectileBase>().Initialize(atk,this.gameObject);
+        bullet.GetComponent<ProyectileBase>().Initialize(enemyInfo.Atk,this.gameObject);
     }
 
 
@@ -101,6 +156,8 @@ public class Cerati : EnemyBasicFunctions
         Vector3 result = centerStage.position - transform.position;
         return result.normalized.x;
     }
+
+    
 
 
 }

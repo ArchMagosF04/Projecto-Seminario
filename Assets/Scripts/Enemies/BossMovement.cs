@@ -4,108 +4,102 @@ using UnityEngine;
 
 public class BossMovement : MonoBehaviour
 {
-        #region Variables
+    #region Variables
 
-        [Header("References")]
-        public EnemyStats enemyStats;
-        [SerializeField] private Collider2D _collider;
+    [Header("References")]
+    public EnemyStats enemyStats;
+    [SerializeField] private Collider2D _collider;
 
-        private Rigidbody2D rb;
-        //public Animator animator;
+    private Rigidbody2D rb;
+    //public Animator animator;
 
-        //Movement Variables
-        public float HorizontalVelocity { get; private set; }
-        private bool _isFacingRight;
+    //Movement Variables
+    public float HorizontalVelocity { get; private set; }
+    private bool _isFacingRight;
 
-        //Collision Check Variables
-        private RaycastHit2D _groundHit;
-        private RaycastHit2D _headHit;
-        [SerializeField] private bool _isGrounded;
-        private bool _bumpedHead;
+    //Collision Check Variables
+    private RaycastHit2D _groundHit;
+    private RaycastHit2D _headHit;
+    [SerializeField] private bool _isGrounded;
+    private bool _bumpedHead;
 
-        //Jump Variables
-        public float VerticalVelocity { get; private set; }
-        [SerializeField] private bool _isJumping;
-        [SerializeField] private bool _isFastFalling;
-        [SerializeField] private bool _isFalling;
-        private float _fastFallTime;
-        private float _fastFallReleaseSpeed;
-        private int _numberOfJumpsUsed;
+    //Jump Variables
+    public float VerticalVelocity { get; private set; }
+    [SerializeField] private bool _isJumping;
+    [SerializeField] private bool _isFastFalling;
+    [SerializeField] private bool _isFalling;
+    private float _fastFallTime;
+    private float _fastFallReleaseSpeed;
 
-        //Apex Variables
-        private float _apexPoint;
-        private float _timePastApexThreshold;
-        [SerializeField] private bool _isPastApexThreshold;
+    //Apex Variables
+    private float _apexPoint;
+    private float _timePastApexThreshold;
+    [SerializeField] private bool _isPastApexThreshold;
 
-        //Jump Buffer Variables
-        private float _jumpBufferTimer;
-        private bool _jumpReleasedDuringBuffer;
+    //State Machine Variables
+    private StateMachine stateMachine;
+    public Idle_Player IdleState { get; private set; }
+    public Run_Player RunState { get; private set; }
+    public Jump_Player JumpState { get; private set; }
+    public Fall_Player FallState { get; private set; }
+    public Dash_Player DashState { get; private set; }
 
-        //State Machine Variables
-        private StateMachine stateMachine;
-        public Idle_Player IdleState { get; private set; }
-        public Run_Player RunState { get; private set; }
-        public Jump_Player JumpState { get; private set; }
-        public Fall_Player FallState { get; private set; }
-        public Dash_Player DashState { get; private set; }
+    #endregion
 
-        #endregion
+    private void Awake()
+    {
+        _isFacingRight = true;
 
-        private void Awake()
+        rb = GetComponent<Rigidbody2D>();
+        //animator = GetComponentInChildren<Animator>();
+
+        //stateMachine = new StateMachine();
+        //IdleState = new Idle_Player(this, stateMachine);
+        //RunState = new Run_Player(this, stateMachine);
+        //JumpState = new Jump_Player(this, stateMachine);
+        //FallState = new Fall_Player(this, stateMachine);
+        //DashState = new Dash_Player(this, stateMachine);
+    }
+
+    private void Update()
+    {
+        JumpChecks();
+        LandCheck();
+        //AnimationChanges();
+    }
+
+    private void FixedUpdate()
+    {
+        CollisionChecks();
+        //Jump();
+        Fall();
+
+        if (_isGrounded)
         {
-            _isFacingRight = true;
-
-            rb = GetComponent<Rigidbody2D>();
-            //animator = GetComponentInChildren<Animator>();
-
-            //stateMachine = new StateMachine();
-            //IdleState = new Idle_Player(this, stateMachine);
-            //RunState = new Run_Player(this, stateMachine);
-            //JumpState = new Jump_Player(this, stateMachine);
-            //FallState = new Fall_Player(this, stateMachine);
-            //DashState = new Dash_Player(this, stateMachine);
+            Move(enemyStats.GroundAcceleration, enemyStats.GroundDeceleration, new Vector2(0, 0));
+        }
+        else
+        {
+            Move(enemyStats.AirAcceleration, enemyStats.AirDeceleration, new Vector2(0, 0));
         }
 
-        private void Update()
+        ApplyVelocity();
+    }
+
+    private void ApplyVelocity()
+    {
+        //Clamp fall speed
+        VerticalVelocity = Mathf.Clamp(VerticalVelocity, -enemyStats.MaxFallSpeed, 50f);
+
+        rb.velocity = new Vector2(HorizontalVelocity, VerticalVelocity);
+    }
+
+    #region Movement
+
+    public void Move(float acceleration, float deceleration, Vector2 moveInput)
+    {
+        if (moveInput.x != enemyStats.MoveSpd)
         {
-            CountTimers();
-            //JumpChecks();
-            LandCheck();
-            //AnimationChanges();
-        }
-
-        private void FixedUpdate()
-        {
-            CollisionChecks();
-            //Jump();
-            Fall();
-
-            if (_isGrounded)
-            {
-                Move(enemyStats.GroundAcceleration, enemyStats.GroundDeceleration, InputManager.Movement);
-            }
-            else
-            {
-                Move(enemyStats.AirAcceleration, enemyStats.AirDeceleration, InputManager.Movement);
-            }
-
-            ApplyVelocity();
-        }
-
-        private void ApplyVelocity()
-        {
-            //Clamp fall speed
-            VerticalVelocity = Mathf.Clamp(VerticalVelocity, -enemyStats.MaxFallSpeed, 50f);
-
-            rb.velocity = new Vector2(HorizontalVelocity, VerticalVelocity);
-        }
-
-        #region Movement
-
-        public void Move(float acceleration, float deceleration, Vector2 moveInput)
-        {
-            if (moveInput.x != enemyStats.MoveSpd)
-            {
             TurnCheck(moveInput);
 
             float targetVelocity = 0f;
@@ -113,257 +107,208 @@ public class BossMovement : MonoBehaviour
             targetVelocity = moveInput.x * enemyStats.MoveSpd;
 
             HorizontalVelocity = Mathf.Lerp(HorizontalVelocity, targetVelocity, acceleration * Time.fixedDeltaTime);
-            }
-     
-                else if (Mathf.Abs(moveInput.x) < enemyStats.MoveSpd)
-                {
-                    HorizontalVelocity = Mathf.Lerp(HorizontalVelocity, 0f, deceleration * Time.fixedDeltaTime);
-                }
-            
         }
 
-        private void TurnCheck(Vector2 moveInput)
+        else if (Mathf.Abs(moveInput.x) < enemyStats.MoveSpd)
         {
-            if (_isFacingRight && moveInput.x < 0)
-            {
-                Turn(false);
-            }
-            else if (!_isFacingRight && moveInput.x > 0)
-            {
-                Turn(true);
-            }
+            HorizontalVelocity = Mathf.Lerp(HorizontalVelocity, 0f, deceleration * Time.fixedDeltaTime);
         }
 
-        private void Turn(bool turn)
+    }
+
+    private void TurnCheck(Vector2 moveInput)
+    {
+        if (_isFacingRight && moveInput.x < 0)
         {
-            if (turn)
+            Turn(false);
+        }
+        else if (!_isFacingRight && moveInput.x > 0)
+        {
+            Turn(true);
+        }
+    }
+
+    private void Turn(bool turn)
+    {
+        if (turn)
+        {
+            _isFacingRight = true;
+            transform.Rotate(0f, 180f, 0f);
+        }
+        else
+        {
+            _isFacingRight = false;
+            transform.Rotate(0f, -180f, 0f);
+        }
+    }
+
+    #endregion
+
+    #region Land/Fall
+
+    private void LandCheck()
+    {
+        //Landed
+        if ((_isJumping || _isFalling) && _isGrounded && VerticalVelocity <= 0f)
+        {
+            _isJumping = false;
+            _isFalling = false;
+            _isFastFalling = false;
+            _fastFallTime = 0f;
+            _isPastApexThreshold = false;
+
+            VerticalVelocity = Physics2D.gravity.y;
+        }
+    }
+
+    private void Fall()
+    {
+        //Normal gravity while falling
+        if (!_isGrounded && !_isJumping)
+        {
+            if (!_isFalling)
             {
-                _isFacingRight = true;
-                transform.Rotate(0f, 180f, 0f);
+                _isFalling = true;
+            }
+
+            VerticalVelocity += enemyStats.Gravity * Time.fixedDeltaTime;
+        }
+    }
+
+    #endregion
+
+    #region Jump
+
+    private void ResetJumpValues()
+    {
+        _isJumping = false;
+        _isFalling = false;
+        _isFastFalling = false;
+        _fastFallTime = 0f;
+        _isPastApexThreshold = false;
+    }
+
+    private void JumpChecks()
+    {
+        //When we release the jump button
+        if (_isJumping && VerticalVelocity > 0f)
+        {
+            if (_isPastApexThreshold)
+            {
+                _isPastApexThreshold = false;
+                _isFastFalling = true;
+                _fastFallTime = enemyStats.TimeForUpwardsCancel;
+                VerticalVelocity = 0f;
             }
             else
             {
-                _isFacingRight = false;
-                transform.Rotate(0f, -180f, 0f);
+                _isFastFalling = true;
+                _fastFallReleaseSpeed = VerticalVelocity;
             }
         }
+    } 
 
-        #endregion
 
-        #region Land/Fall
+    //Initiate jump
 
-        private void LandCheck()
+    public void InitiateJump(int numberOfJumpsUsed)
+    {
+        if (!_isJumping)
         {
-            //Landed
-            if ((_isJumping || _isFalling) && _isGrounded && VerticalVelocity <= 0f)
+            _isJumping = true;
+        }
+
+        //_jumpBufferTimer = 0f;
+        //_numberOfJumpsUsed += numberOfJumpsUsed;
+        VerticalVelocity = enemyStats.InitialJumpVelocity;
+    }
+
+    private void Jump()
+    {
+        //Apply gravity while jumping
+        if (_isJumping)
+        {
+            //Check for head bump
+            if (_bumpedHead)
             {
-                _isJumping = false;
-                _isFalling = false;
-                _isFastFalling = false;
-                _fastFallTime = 0f;
-                _isPastApexThreshold = false;
-                _numberOfJumpsUsed = 0;
-
-                VerticalVelocity = Physics2D.gravity.y;
+                _isFastFalling = true;
             }
-        }
 
-        private void Fall()
-        {
-            //Normal gravity while falling
-            if (!_isGrounded && !_isJumping)
+            //Gravity on Ascending
+            if (VerticalVelocity >= 0f)
+            {
+                //Apex controls
+                _apexPoint = Mathf.InverseLerp(enemyStats.InitialJumpVelocity, 0f, VerticalVelocity);
+
+                if (_apexPoint > enemyStats.ApexThreshold)
+                {
+                    if (!_isPastApexThreshold)
+                    {
+                        _isPastApexThreshold = true;
+                        _timePastApexThreshold = 0f;
+                    }
+
+                    if (_isPastApexThreshold)
+                    {
+                        _timePastApexThreshold += Time.fixedDeltaTime;
+                        if (_timePastApexThreshold < enemyStats.ApexHangTime)
+                        {
+                            VerticalVelocity = 0f;
+                        }
+                        else
+                        {
+                            VerticalVelocity = -0.01f;
+                        }
+                    }
+                }
+
+                //Gravity on ascending but not past apex threshold
+                else if (!_isFastFalling)
+                {
+                    VerticalVelocity += enemyStats.Gravity * Time.fixedDeltaTime;
+                    if (_isPastApexThreshold)
+                    {
+                        _isPastApexThreshold = false;
+                    }
+                }
+            }
+
+            //Gravity on descending
+            else if (!_isFastFalling)
+            {
+                VerticalVelocity += enemyStats.Gravity * enemyStats.GravityOnReleaseMultiplier * Time.fixedDeltaTime;
+            }
+
+            else if (VerticalVelocity < 0f)
             {
                 if (!_isFalling)
                 {
                     _isFalling = true;
                 }
-
-                VerticalVelocity += enemyStats.Gravity * Time.fixedDeltaTime;
             }
         }
 
-        #endregion
+        //Jump cut
+        if (_isFastFalling)
+        {
+            if (_fastFallTime >= enemyStats.TimeForUpwardsCancel)
+            {
+                VerticalVelocity += enemyStats.Gravity * enemyStats.GravityOnReleaseMultiplier * Time.fixedDeltaTime;
+            }
+            else if (_fastFallTime < enemyStats.TimeForUpwardsCancel)
+            {
+                VerticalVelocity = Mathf.Lerp(_fastFallReleaseSpeed, 0f, (_fastFallTime / enemyStats.TimeForUpwardsCancel));
+            }
 
-        //#region Jump
+            _fastFallTime += Time.fixedDeltaTime;
+        }
+    }
 
-        //private void ResetJumpValues()
-        //{
-        //    _isJumping = false;
-        //    _isFalling = false;
-        //    _isFastFalling = false;
-        //    _fastFallTime = 0f;
-        //    _isPastApexThreshold = false;
-        //}
+    #endregion
 
-        //private void JumpChecks()
-        //{
-        //    //When we press the jump button
-        //    if (InputManager.JumpWasPressed)
-        //    {
-        //        _jumpBufferTimer = enemyStats.JumpBufferTime;
-        //        _jumpReleasedDuringBuffer = false;
-        //    }
+    #region Collision Checks
 
-
-        //    //When we release the jump button
-        //    if (InputManager.JumpWasReleased)
-        //    {
-        //        if (_jumpBufferTimer > 0f)
-        //        {
-        //            _jumpReleasedDuringBuffer = true;
-        //        }
-
-        //        if (_isJumping && VerticalVelocity > 0f)
-        //        {
-        //            if (_isPastApexThreshold)
-        //            {
-        //                _isPastApexThreshold = false;
-        //                _isFastFalling = true;
-        //                _fastFallTime = enemyStats.TimeForUpwardsCancel;
-        //                VerticalVelocity = 0f;
-        //            }
-        //            else
-        //            {
-        //                _isFastFalling = true;
-        //                _fastFallReleaseSpeed = VerticalVelocity;
-        //            }
-        //        }
-        //    }
-
-        //    //Initiate jump with buffer and coyote time
-        //    if (_jumpBufferTimer > 0f && !_isJumping && _isGrounded)
-        //    {
-        //        InitiateJump(1);
-
-        //        if (_jumpReleasedDuringBuffer)
-        //        {
-        //            _isFastFalling = true;
-        //            _fastFallReleaseSpeed = VerticalVelocity;
-        //        }
-        //    }
-
-        //    //Double jump
-        //    else if (_jumpBufferTimer > 0f && _isJumping && _numberOfJumpsUsed < enemyStats.NumberOfJumpsAllowed)
-        //    {
-        //        _isFastFalling = false;
-        //        InitiateJump(1);               
-        //    }
-
-        //    //Air jump after coyote time lapsed;
-        //    else if (_jumpBufferTimer > 0f && _isFalling && _numberOfJumpsUsed < enemyStats.NumberOfJumpsAllowed - 1)
-        //    {
-        //        InitiateJump(2);
-        //        _isFastFalling = false;
-        //    }
-
-
-        //}
-
-        //public bool JumpFromIdleCheck()
-        //{
-        //    if (_jumpBufferTimer > 0f && !_isJumping && _isGrounded) return true;
-
-        //    return false;
-        //}
-
-        //private void InitiateJump(int numberOfJumpsUsed)
-        //{
-        //    if (!_isJumping)
-        //    {
-        //        _isJumping = true;
-        //    }
-
-        //    _jumpBufferTimer = 0f;
-        //    _numberOfJumpsUsed += numberOfJumpsUsed;
-        //    VerticalVelocity = enemyStats.InitialJumpVelocity;
-        //}
-
-        //private void Jump()
-        //{
-        //    //Apply gravity while jumping
-        //    if (_isJumping)
-        //    {
-        //        //Check for head bump
-        //        if (_bumpedHead)
-        //        {
-        //            _isFastFalling = true;
-        //        }
-
-        //        //Gravity on Ascending
-        //        if (VerticalVelocity >= 0f)
-        //        {
-        //            //Apex controls
-        //            _apexPoint = Mathf.InverseLerp(enemyStats.InitialJumpVelocity, 0f, VerticalVelocity);
-
-        //            if (_apexPoint > enemyStats.ApexThreshold)
-        //            {
-        //                if (!_isPastApexThreshold)
-        //                {
-        //                    _isPastApexThreshold = true;
-        //                    _timePastApexThreshold = 0f;
-        //                }
-
-        //                if (_isPastApexThreshold)
-        //                {
-        //                    _timePastApexThreshold += Time.fixedDeltaTime;
-        //                    if (_timePastApexThreshold < enemyStats.ApexHangTime)
-        //                    {
-        //                        VerticalVelocity = 0f;
-        //                    }
-        //                    else
-        //                    {
-        //                        VerticalVelocity = -0.01f;
-        //                    }
-        //                }
-        //            }
-
-        //            //Gravity on ascending but not past apex threshold
-        //            else if (!_isFastFalling)
-        //            {
-        //                VerticalVelocity += enemyStats.Gravity * Time.fixedDeltaTime;
-        //                if (_isPastApexThreshold)
-        //                {
-        //                    _isPastApexThreshold = false;
-        //                }
-        //            }
-        //        }
-
-        //        //Gravity on descending
-        //        else if (!_isFastFalling)
-        //        {
-        //            VerticalVelocity += enemyStats.Gravity * enemyStats.GravityOnReleaseMultiplier * Time.fixedDeltaTime;
-        //        }
-
-        //        else if (VerticalVelocity < 0f)
-        //        {
-        //            if (!_isFalling)
-        //            {
-        //                _isFalling = true;
-        //            }
-        //        }
-        //    }
-
-        //    //Jump cut
-        //    if (_isFastFalling)
-        //    {
-        //        if (_fastFallTime >= enemyStats.TimeForUpwardsCancel)
-        //        {
-        //            VerticalVelocity += enemyStats.Gravity * enemyStats.GravityOnReleaseMultiplier * Time.fixedDeltaTime;
-        //        }
-        //        else if (_fastFallTime < enemyStats.TimeForUpwardsCancel)
-        //        {
-        //            VerticalVelocity = Mathf.Lerp(_fastFallReleaseSpeed, 0f, (_fastFallTime / enemyStats.TimeForUpwardsCancel));
-        //        }
-
-        //        _fastFallTime += Time.fixedDeltaTime;
-        //    }
-        //}
-
-        //#endregion
-
-        #region Collision Checks
-
-        private void IsGrounded()
+    private void IsGrounded()
         {
             Vector2 boxCastOrigin = new Vector2(_collider.bounds.center.x, _collider.bounds.min.y);
             Vector2 boxCastSize = new Vector2(_collider.bounds.size.x, enemyStats.GroundDetectionRayLength);
@@ -433,15 +378,7 @@ public class BossMovement : MonoBehaviour
 
         #endregion
 
-        #region Timers
-
-        private void CountTimers()
-        {
-            //Jump buffer
-            _jumpBufferTimer -= Time.deltaTime;
-        }
-
-        #endregion
+       
 
         //private void AnimationChanges()
         //{

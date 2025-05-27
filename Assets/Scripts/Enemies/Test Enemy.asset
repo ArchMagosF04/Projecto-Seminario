@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 100
   moveSpd: 12.5
-  atk: 5
   gravity: -100
   groundAcceleration: 5
   groundDeceleration: 20
@@ -25,8 +24,15 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
+  initialJumpVelocity: 0
+  apexThreshold: 0
+  apexHangTime: 0
+  gravityOnReleaseMultiplier: 0
+  timeForUpwardsCancel: 0
+  atk: 5
   specialAttackWeight: 0
   SpecialAttackWeight: 0
+  specialAttackmultiplier: 1
   maxTechniquePoints: 0
   MaxTechniquePoints: 0
   projectiles:

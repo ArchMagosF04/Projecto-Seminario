@@ -34,6 +34,25 @@ public class EnemyStats : ScriptableObject
     [SerializeField] private LayerMask groundLayer;
     public LayerMask GroundLayer { get { return groundLayer; } }
 
+    // Jump Variables-----------------------------------------------------------------------
+
+    [SerializeField] private float initialJumpVelocity;
+    public float InitialJumpVelocity { get { return initialJumpVelocity; } }
+
+    [SerializeField] private float apexThreshold;
+    public float ApexThreshold { get { return apexThreshold; } }
+
+    [SerializeField] private float apexHangTime;
+    public float ApexHangTime { get { return apexHangTime; } }
+
+    [SerializeField] private float gravityOnReleaseMultiplier;
+    public float GravityOnReleaseMultiplier { get { return gravityOnReleaseMultiplier; } }
+
+    [SerializeField] private float timeForUpwardsCancel;
+    public float TimeForUpwardsCancel { get { return timeForUpwardsCancel; } }
+
+    //-------------------------------------------------------------------------------------
+
     [SerializeField] private float atk;
     public float Atk { get { return atk; } }
 

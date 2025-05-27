@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbe2db2335d146c4f8a668ba69382912, type: 3}
+  m_Name: Microphone
+  m_EditorClassIdentifier: 
+  <NumberOfAttacks>k__BackingField: 5
+  <MovementData>k__BackingField:
+  - <Name>k__BackingField: Forward
+    <Direction>k__BackingField: {x: 1, y: 0}
+    <Velocity>k__BackingField: 4
+  - <Name>k__BackingField: Upward
+    <Direction>k__BackingField: {x: 0, y: 1}
+    <Velocity>k__BackingField: 4
+  - <Name>k__BackingField: Downward
+    <Direction>k__BackingField: {x: 0, y: 1}
+    <Velocity>k__BackingField: 4
+  - <Name>k__BackingField: Up-Diagonal
+    <Direction>k__BackingField: {x: 1, y: 1}
+    <Velocity>k__BackingField: 4
+  - <Name>k__BackingField: Down-Diagonal
+    <Direction>k__BackingField: {x: -1, y: 1}
+    <Velocity>k__BackingField: 4
+  <DamageData>k__BackingField:
+  - <Name>k__BackingField: Forward
+    <Amount>k__BackingField: 4
+  - <Name>k__BackingField: Upward
+    <Amount>k__BackingField: 4
+  - <Name>k__BackingField: Downward
+    <Amount>k__BackingField: 4
+  - <Name>k__BackingField: Up-Diagonal
+    <Amount>k__BackingField: 4
+  - <Name>k__BackingField: Down-Diagonal
+    <Amount>k__BackingField: 4
+  <KnockbackData>k__BackingField:
+  - <Name>k__BackingField: Forward
+    <Angle>k__BackingField: {x: 1, y: 0}
+    <Strength>k__BackingField: 4
+  - <Name>k__BackingField: Upward
+    <Angle>k__BackingField: {x: 0, y: 2}
+    <Strength>k__BackingField: 4
+  - <Name>k__BackingField: Downward
+    <Angle>k__BackingField: {x: 0, y: -2}
+    <Strength>k__BackingField: 20
+  - <Name>k__BackingField: Up-Diagonal
+    <Angle>k__BackingField: {x: 1, y: 1}
+    <Strength>k__BackingField: 4
+  - <Name>k__BackingField: Down-Diagonal
+    <Angle>k__BackingField: {x: 1, y: -1}
+    <Strength>k__BackingField: 20
+  <SpecialMovementData>k__BackingField:
+    <Name>k__BackingField: 
+    <Direction>k__BackingField: {x: 0, y: 0}
+    <Velocity>k__BackingField: 0
+  <SpecialDamageData>k__BackingField:
+    <Name>k__BackingField: 
+    <Amount>k__BackingField: 1
+  <SpecialKnockbackData>k__BackingField:
+    <Name>k__BackingField: 
+    <Angle>k__BackingField: {x: 1, y: 1}
+    <Strength>k__BackingField: 1

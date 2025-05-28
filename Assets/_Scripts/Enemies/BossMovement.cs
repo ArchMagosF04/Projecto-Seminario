@@ -60,6 +60,18 @@ public class BossMovement : MonoBehaviour
         }
     }
 
+    public void BossJump(Vector2 direction, float force)
+    {
+        if (isGrounded && bossCollider.enabled == true)
+        {
+            currentFallingSpeed = 1;
+            Vector2 currentposition = transform.position;
+            Vector2 jumpDirection = (direction - currentposition).normalized;
+            rb.AddForce(new Vector2(jumpDirection.x * force, force), ForceMode2D.Impulse);
+        }
+    }
+
+
     //
     public void Move(float acceleration, Vector2 moveInput)
     {

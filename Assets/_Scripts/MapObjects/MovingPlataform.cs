@@ -6,6 +6,7 @@ public class MovingPlataform : MonoBehaviour
 {
     [SerializeField] Transform[] checkpoints;
     [SerializeField] float speed = 1;
+    [SerializeField] BoxCollider2D trigger;
     int index = 0;
     // Start is called before the first frame update
     void Start()
@@ -32,6 +33,22 @@ public class MovingPlataform : MonoBehaviour
                 index = 0;
             }
 
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag != "Projectile")
+        {
+            collision.transform.parent = transform;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag != "Projectile")
+        {
+            collision.transform.parent = null;
         }
     }
 }

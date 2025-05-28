@@ -10,14 +10,15 @@ using UnityEngine;
 public class Cerati : EnemyBasicFunctions
 {
     // Start is called before the first frame update
-    private float time= 5;
-    private float timer;
+    [SerializeField]private float timeToShoot= 5;
+    private float timerToShoot;
     private BossMovement movementComponent;
     [SerializeField] Transform centerStage;
     [SerializeField] Transform plataform1;
     [SerializeField] Transform plataform2;
 
     [SerializeField]private bool specialAttack;
+    [SerializeField] private bool technique;
     private bool atCenterStage;
     [SerializeField] private float specialAtkDuration;
     [SerializeField]private float specialAtkTimer;
@@ -30,8 +31,10 @@ public class Cerati : EnemyBasicFunctions
     private float currentSpecialDelayTime = 0;
     [SerializeField] float waitToMakeChoices = 1;
     private float currentTimeToMakeChoices = 0;
-    private bool makeChoice = false;
+    //private bool makeChoice = false;
     [SerializeField] float jumpforce;
+    private bool moving;
+    private int shotsFired;
 
     void Start()
     {
@@ -48,57 +51,47 @@ public class Cerati : EnemyBasicFunctions
             }
         }
 
+        if (shotsFired >= 3)
+        {
+            SwitchPlataform();
+            shotsFired = 0;
+        }
+
         //movementComponent.BossJumpUp(Vector2.up, jumpforce);
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Choose Atack
-        if (currentTimeToMakeChoices < waitToMakeChoices)
-        {
-            currentTimeToMakeChoices += Time.deltaTime;
-        }
-        else
-        {
-            makeChoice = true;
-        }
-
-        if (makeChoice)
-        {
-            int r = UnityEngine.Random.Range(1, 100);
-
-            print("rolled a: "+r);
-
-            if (r < enemyInfo.SpecialAttackWeight)
-            {
-                specialAttack = true;
-            }
-            else
-            {
-                makeChoice = false;
-                currentTimeToMakeChoices = 0;
-            }
-        }
-        //--------------------------------------------------------
-
-
-
-        if (!specialAttack)
+        if (!specialAttack && movementComponent.IsGrounded)
         {
             if (movementComponent.IsGrounded)
             {
-                float jumpDirection = Math.Sign(FindOpositePlataform().x - transform.position.x);
+                float jumpDirection = Math.Sign(FindOpositePlataform().position.x - transform.position.x);
                 RaycastHit2D plataformInFront = Physics2D.Raycast(transform.position, new Vector2(jumpDirection, 0), 3f, enemyInfo.GroundLayer);
             }
 
-            if (timer < time)
+            // Choose Atack
+            if (currentTimeToMakeChoices < waitToMakeChoices)
             {
-                timer += Time.deltaTime;
+                currentTimeToMakeChoices += Time.deltaTime;
             }
-            else if (timer > time)
+            else
             {
-                timer = 0;
+                RollAtk();
+            }
+
+            
+            //--------------------------------------------------------
+
+
+            if (timerToShoot < timeToShoot)
+            {
+                timerToShoot += Time.deltaTime;
+            }
+            else if (timerToShoot > timeToShoot)
+            {
+                timerToShoot = 0;
                 BasicAttack();
             }
         }
@@ -183,6 +176,7 @@ public class Cerati : EnemyBasicFunctions
     {
         GameObject bullet = GameObject.Instantiate(enemyInfo.GetProyectile(0), transform.position, Quaternion.Euler(0,0, GetPlayerRalativeDirection()));
         bullet.GetComponent<ProyectileBase>().Initialize(enemyInfo.Atk,this.gameObject);
+        shotsFired++;
     }
 
 
@@ -203,17 +197,42 @@ public class Cerati : EnemyBasicFunctions
         return result.normalized.x;
     }
 
-    private Vector2 FindOpositePlataform()
+    private Transform FindOpositePlataform()
     {
         if((plataform1.transform.position - transform.position).magnitude < (plataform2.transform.position - transform.position).magnitude)
         {
-            return plataform2.position;
+            return plataform2.transform;
         }
         else
         {
-            return plataform1.position;
+            return plataform1.transform;
         }
     }
+
+    private void RollAtk()
+    {
+        int r = UnityEngine.Random.Range(1, 100);
+
+        print("rolled a: " + r);
+
+        if (r < enemyInfo.SpecialAttackWeight)
+        {
+            specialAttack = true;
+        }
+        else
+        {
+            currentTimeToMakeChoices = 0;
+        }
+    }
+
+    private void SwitchPlataform()
+    {
+        Vector2 target = FindOpositePlataform().position;
+        moving = true;
+        float impulse = (FindOpositePlataform().position - transform.position).magnitude;
+        movementComponent.BossJump(target, jumpforce + impulse/1.65f);
+        print("impulse was: "+impulse);
+    }   
 
 
 }

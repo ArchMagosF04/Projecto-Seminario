@@ -31,6 +31,7 @@ public class Cerati : EnemyBasicFunctions
     [SerializeField] float waitToMakeChoices;
     private float currentTimeToMakeChoices = 0;
     private bool makeChoice = false;
+    [SerializeField] float jumpforce;
 
     void Start()
     {
@@ -43,42 +44,55 @@ public class Cerati : EnemyBasicFunctions
         {
             if (!atCenterStage)
             {
-                movementComponent.Move(enemyInfo.AirAcceleration, enemyInfo.AirDeceleration, new Vector2(FindCenterStage(),0));
+                movementComponent.Move(enemyInfo.AirAcceleration, enemyInfo.AirDeceleration, new Vector2(FindCenterStage(), 0));
             }
         }
+
+        //movementComponent.BossJumpUp(Vector2.up, jumpforce);
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if(currentTimeToMakeChoices < waitToMakeChoices)
-        //{
-        //    currentTimeToMakeChoices += Time.deltaTime;
-        //}
-        //else
-        //{
-        // makeChoice = true;   
-        //}
 
-        //if (makeChoice)
-        //{
-        //    int r = UnityEngine.Random.Range(1, 100);
 
-        //    if (r < enemyInfo.SpecialAttackWeight)
-        //    {
-        //        specialAttack = true;
-        //    }
-        //    else
-        //    {
-        //        makeChoice = false;
-        //        currentTimeToMakeChoices = 0;
-        //    }
-        //}
+
+        // Choose Atack
+        if (currentTimeToMakeChoices < waitToMakeChoices)
+        {
+            currentTimeToMakeChoices += Time.deltaTime;
+        }
+        else
+        {
+            makeChoice = true;
+        }
+
+        if (makeChoice)
+        {
+            int r = UnityEngine.Random.Range(1, 100);
+
+            if (r < enemyInfo.SpecialAttackWeight)
+            {
+                specialAttack = true;
+            }
+            else
+            {
+                makeChoice = false;
+                currentTimeToMakeChoices = 0;
+            }
+        }
+        //--------------------------------------------------------
 
 
 
         if (!specialAttack)
         {
+            if (movementComponent.IsGrounded)
+            {
+                float jumpDirection = Math.Sign(FindOpositePlataform().x - transform.position.x);
+                RaycastHit2D plataformInFront = Physics2D.Raycast(transform.position, new Vector2(jumpDirection, 0), 3f, enemyInfo.GroundLayer);
+            }
+
             if (timer < time)
             {
                 timer += Time.deltaTime;
@@ -89,8 +103,9 @@ public class Cerati : EnemyBasicFunctions
                 BasicAttack();
             }
         }
-        
 
+
+        // Position for special atk--------------------------------------------------------------------------
         if (Mathf.Abs(transform.position.x - centerStage.position.x) < 0.1f && specialAttack)
         {
             if (currentSpecialDelayTime < specialDelayTime)
@@ -101,12 +116,14 @@ public class Cerati : EnemyBasicFunctions
             {
                 atCenterStage = true;
                 currentSpecialDelayTime = 0;
-            }                
+            }
         }
+        //-----------------------------------------------------------------------------------------------------------
 
-        if(specialAttack && atCenterStage)
+        //Special Atk---------------------------------------------------------------------------------------------------
+        if (specialAttack && atCenterStage)
         {
-            if(specialAtkTimer < specialAtkDuration)
+            if (specialAtkTimer < specialAtkDuration)
             {
                 if (wavesIntervalTimer <= 0)
                 {
@@ -127,10 +144,10 @@ public class Cerati : EnemyBasicFunctions
                 specialAtkTimer = 0;
             }
 
-            
-        }
 
-        
+        }
+        //---------------------------------------------------------------------------------------------------------------------------------
+
     }
 
     protected override void BasicAttack()
@@ -157,7 +174,17 @@ public class Cerati : EnemyBasicFunctions
         return result.normalized.x;
     }
 
-    
+    private Vector2 FindOpositePlataform()
+    {
+        if((plataform1.transform.position - transform.position).magnitude < (plataform2.transform.position - transform.position).magnitude)
+        {
+            return plataform2.position;
+        }
+        else
+        {
+            return plataform1.position;
+        }
+    }
 
 
 }

@@ -1,409 +1,71 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEngine.LightAnchor;
 
 public class BossMovement : MonoBehaviour
 {
-    #region Variables
+    Rigidbody2D rb;
+    Collider2D bossCollider;
+    [SerializeField] LayerMask ground;
+    [SerializeField]private bool isGrounded;
+    public bool IsGrounded { get { return isGrounded; } }
+    [SerializeField] private bool isGroundAbove;
+    [SerializeField] private float fallingSpeedModifier;
+    private float currentFallingSpeed = 1;
+    [SerializeField] float transparancyDuration;
+    [SerializeField]private float currentTransparancyDuration;
 
-    [Header("References")]
-    public EnemyStats enemyStats;
-    [SerializeField] private Collider2D _collider;
-
-    private Rigidbody2D rb;
-    //public Animator animator;
-
-    //Movement Variables
-    public float HorizontalVelocity { get; private set; }
-    private bool _isFacingRight;
-
-    //Collision Check Variables
-    private RaycastHit2D _groundHit;
-    private RaycastHit2D _headHit;
-    [SerializeField] private bool _isGrounded;
-    private bool _bumpedHead;
-
-    //Jump Variables
-    public float VerticalVelocity { get; private set; }
-    [SerializeField] private bool _isJumping;
-    [SerializeField] private bool _isFastFalling;
-    [SerializeField] private bool _isFalling;
-    private float _fastFallTime;
-    private float _fastFallReleaseSpeed;
-
-    //Apex Variables
-    private float _apexPoint;
-    private float _timePastApexThreshold;
-    [SerializeField] private bool _isPastApexThreshold;
-
-    #endregion
-
-    private void Awake()
+    private void Start()
     {
-        _isFacingRight = true;
-
         rb = GetComponent<Rigidbody2D>();
-        //animator = GetComponentInChildren<Animator>();
-
-        //stateMachine = new StateMachine();
-        //IdleState = new Idle_Player(this, stateMachine);
-        //RunState = new Run_Player(this, stateMachine);
-        //JumpState = new Jump_Player(this, stateMachine);
-        //FallState = new Fall_Player(this, stateMachine);
-        //DashState = new Dash_Player(this, stateMachine);
-    }
-
-    private void Update()
-    {
-        JumpChecks();
-        LandCheck();
-        //AnimationChanges();
+        bossCollider = gameObject.GetComponent<Collider2D>();
     }
 
     private void FixedUpdate()
     {
-        CollisionChecks();
-        //Jump();
-        Fall();
-
-        if (_isGrounded)
+        if (!isGrounded)
         {
-            Move(enemyStats.GroundAcceleration, enemyStats.GroundDeceleration, new Vector2(0, 0));
-        }
-        else
-        {
-            Move(enemyStats.AirAcceleration, enemyStats.AirDeceleration, new Vector2(0, 0));
-        }
-
-        ApplyVelocity();
+            currentFallingSpeed = currentFallingSpeed * fallingSpeedModifier;
+            rb.AddForce(Vector2.down * currentFallingSpeed, ForceMode2D.Force);
+        }        
     }
 
-    private void ApplyVelocity()
+    private void Update()
     {
-        //Clamp fall speed
-        VerticalVelocity = Mathf.Clamp(VerticalVelocity, -enemyStats.MaxFallSpeed, 50f);
+        isGrounded = Physics2D.Raycast(transform.position, Vector2.down, 0.7f, ground);
 
-        rb.velocity = new Vector2(HorizontalVelocity, VerticalVelocity);
-    }
+        isGroundAbove = Physics2D.Raycast(transform.position, Vector2.up, 2f, ground);
 
-    #region Movement
-
-    public void Move(float acceleration, float deceleration, Vector2 moveInput)
-    {
-        if (moveInput.x != enemyStats.MoveSpd)
+        if (!bossCollider.enabled)
         {
-            TurnCheck(moveInput);
-
-            float targetVelocity = 0f;
-
-            targetVelocity = moveInput.x * enemyStats.MoveSpd;
-
-            HorizontalVelocity = Mathf.Lerp(HorizontalVelocity, targetVelocity, acceleration * Time.fixedDeltaTime);
-        }
-
-        else if (Mathf.Abs(moveInput.x) < enemyStats.MoveSpd)
-        {
-            HorizontalVelocity = Mathf.Lerp(HorizontalVelocity, 0f, deceleration * Time.fixedDeltaTime);
-        }
-
-    }
-
-    private void TurnCheck(Vector2 moveInput)
-    {
-        if (_isFacingRight && moveInput.x < 0)
-        {
-            Turn(false);
-        }
-        else if (!_isFacingRight && moveInput.x > 0)
-        {
-            Turn(true);
-        }
-    }
-
-    private void Turn(bool turn)
-    {
-        if (turn)
-        {
-            _isFacingRight = true;
-            transform.Rotate(0f, 180f, 0f);
-        }
-        else
-        {
-            _isFacingRight = false;
-            transform.Rotate(0f, -180f, 0f);
-        }
-    }
-
-    #endregion
-
-    #region Land/Fall
-
-    private void LandCheck()
-    {
-        //Landed
-        if ((_isJumping || _isFalling) && _isGrounded && VerticalVelocity <= 0f)
-        {
-            _isJumping = false;
-            _isFalling = false;
-            _isFastFalling = false;
-            _fastFallTime = 0f;
-            _isPastApexThreshold = false;
-
-            VerticalVelocity = Physics2D.gravity.y;
-        }
-    }
-
-    private void Fall()
-    {
-        //Normal gravity while falling
-        if (!_isGrounded && !_isJumping)
-        {
-            if (!_isFalling)
+            if(currentTransparancyDuration < transparancyDuration)
             {
-                _isFalling = true;
+                currentTransparancyDuration += Time.deltaTime;
             }
-
-            VerticalVelocity += enemyStats.Gravity * Time.fixedDeltaTime;
-        }
-    }
-
-    #endregion
-
-    #region Jump
-
-    private void ResetJumpValues()
-    {
-        _isJumping = false;
-        _isFalling = false;
-        _isFastFalling = false;
-        _fastFallTime = 0f;
-        _isPastApexThreshold = false;
-    }
-
-    private void JumpChecks()
-    {
-        //When we release the jump button
-        if (_isJumping && VerticalVelocity > 0f)
-        {
-            if (_isPastApexThreshold)
+            else if(currentTransparancyDuration >= transparancyDuration)
             {
-                _isPastApexThreshold = false;
-                _isFastFalling = true;
-                _fastFallTime = enemyStats.TimeForUpwardsCancel;
-                VerticalVelocity = 0f;
-            }
-            else
-            {
-                _isFastFalling = true;
-                _fastFallReleaseSpeed = VerticalVelocity;
-            }
-        }
-    } 
-
-
-    //Initiate jump
-
-    public void InitiateJump(int numberOfJumpsUsed)
-    {
-        if (!_isJumping)
-        {
-            _isJumping = true;
-        }
-
-        //_jumpBufferTimer = 0f;
-        //_numberOfJumpsUsed += numberOfJumpsUsed;
-        VerticalVelocity = enemyStats.InitialJumpVelocity;
-    }
-
-    private void Jump()
-    {
-        //Apply gravity while jumping
-        if (_isJumping)
-        {
-            //Check for head bump
-            if (_bumpedHead)
-            {
-                _isFastFalling = true;
-            }
-
-            //Gravity on Ascending
-            if (VerticalVelocity >= 0f)
-            {
-                //Apex controls
-                _apexPoint = Mathf.InverseLerp(enemyStats.InitialJumpVelocity, 0f, VerticalVelocity);
-
-                if (_apexPoint > enemyStats.ApexThreshold)
-                {
-                    if (!_isPastApexThreshold)
-                    {
-                        _isPastApexThreshold = true;
-                        _timePastApexThreshold = 0f;
-                    }
-
-                    if (_isPastApexThreshold)
-                    {
-                        _timePastApexThreshold += Time.fixedDeltaTime;
-                        if (_timePastApexThreshold < enemyStats.ApexHangTime)
-                        {
-                            VerticalVelocity = 0f;
-                        }
-                        else
-                        {
-                            VerticalVelocity = -0.01f;
-                        }
-                    }
-                }
-
-                //Gravity on ascending but not past apex threshold
-                else if (!_isFastFalling)
-                {
-                    VerticalVelocity += enemyStats.Gravity * Time.fixedDeltaTime;
-                    if (_isPastApexThreshold)
-                    {
-                        _isPastApexThreshold = false;
-                    }
-                }
-            }
-
-            //Gravity on descending
-            else if (!_isFastFalling)
-            {
-                VerticalVelocity += enemyStats.Gravity * enemyStats.GravityOnReleaseMultiplier * Time.fixedDeltaTime;
-            }
-
-            else if (VerticalVelocity < 0f)
-            {
-                if (!_isFalling)
-                {
-                    _isFalling = true;
-                }
+                bossCollider.enabled = true;
+                currentTransparancyDuration = 0;
             }
         }
 
-        //Jump cut
-        if (_isFastFalling)
+        if (isGroundAbove)
         {
-            if (_fastFallTime >= enemyStats.TimeForUpwardsCancel)
-            {
-                VerticalVelocity += enemyStats.Gravity * enemyStats.GravityOnReleaseMultiplier * Time.fixedDeltaTime;
-            }
-            else if (_fastFallTime < enemyStats.TimeForUpwardsCancel)
-            {
-                VerticalVelocity = Mathf.Lerp(_fastFallReleaseSpeed, 0f, (_fastFallTime / enemyStats.TimeForUpwardsCancel));
-            }
-
-            _fastFallTime += Time.fixedDeltaTime;
+            bossCollider.enabled = false;
         }
     }
-
-    #endregion
-
-    #region Collision Checks
-
-    private void IsGrounded()
+    public void BossJumpUp(Vector2 direction, float force)
+    {
+        if (isGrounded && bossCollider.enabled==true)
         {
-            Vector2 boxCastOrigin = new Vector2(_collider.bounds.center.x, _collider.bounds.min.y);
-            Vector2 boxCastSize = new Vector2(_collider.bounds.size.x, enemyStats.GroundDetectionRayLength);
+            currentFallingSpeed = 1;
+            Vector2 jumpDirection = direction * force;
+            rb.AddForce(jumpDirection* force, ForceMode2D.Impulse);            
+        } 
+    }  
 
-            _groundHit = Physics2D.BoxCast(boxCastOrigin, boxCastSize, 0f, Vector2.down, enemyStats.GroundDetectionRayLength, enemyStats.GroundLayer);
-
-            if (_groundHit.collider != null)
-            {
-                _isGrounded = true;
-            }
-            else { _isGrounded = false; }
-
-
-
-            //if (enemyStats.DebugShowIsGroundedBox)
-            //{
-            //    Color rayColor;
-            //    if (_isGrounded)
-            //    {
-            //        rayColor = Color.green;
-            //    }
-            //    else { rayColor = Color.red; }
-
-            //    Debug.DrawRay(new Vector2(boxCastOrigin.x - boxCastSize.x / 2, boxCastOrigin.y), Vector2.down * enemyStats.GroundDetectionRayLength, rayColor);
-            //    Debug.DrawRay(new Vector2(boxCastOrigin.x + boxCastSize.x / 2, boxCastOrigin.y), Vector2.down * enemyStats.GroundDetectionRayLength, rayColor);
-            //    Debug.DrawRay(new Vector2(boxCastOrigin.x - boxCastSize.x / 2, boxCastOrigin.y - enemyStats.GroundDetectionRayLength), Vector2.right * boxCastSize.x, rayColor);
-            //}
-        }
-
-        //private void BumpedHead()
-        //{
-        //    Vector2 boxCastOrigin = new Vector2(_feetColl.bounds.center.x, _bodyColl.bounds.max.y);
-        //    Vector2 boxCastSize = new Vector2(_feetColl.bounds.size.x * enemyStats.HeadWidth, enemyStats.HeadDetectionRayLength);
-
-        //    _headHit = Physics2D.BoxCast(boxCastOrigin, boxCastSize, 0f, Vector2.up, enemyStats.HeadDetectionRayLength, enemyStats.GroundLayer);
-
-        //    if (_headHit.collider != null)
-        //    {
-        //        _bumpedHead = true;
-        //    }
-        //    else { _bumpedHead = false; }
-
-
-
-        //    if (enemyStats.DebugShowHeadBumpBox)
-        //    {
-        //        float headWidth = enemyStats.HeadWidth;
-
-        //        Color rayColor;
-        //        if (_bumpedHead)
-        //        {
-        //            rayColor = Color.green;
-        //        }
-        //        else { rayColor = Color.red; }
-
-        //        Debug.DrawRay(new Vector2(boxCastOrigin.x - boxCastSize.x / 2 * headWidth, boxCastOrigin.y), Vector2.up * enemyStats.HeadDetectionRayLength, rayColor);
-        //        Debug.DrawRay(new Vector2(boxCastOrigin.x + (boxCastSize.x / 2) * headWidth, boxCastOrigin.y), Vector2.up * enemyStats.HeadDetectionRayLength, rayColor);
-        //        Debug.DrawRay(new Vector2(boxCastOrigin.x - boxCastSize.x / 2 * headWidth, boxCastOrigin.y + enemyStats.HeadDetectionRayLength), Vector2.right * boxCastSize.x * headWidth, rayColor);
-        //    }
-        //}
-
-        private void CollisionChecks()
-        {
-            IsGrounded();
-            //BumpedHead();
-        }
-
-        #endregion
-
-       
-
-        //private void AnimationChanges()
-        //{
-        //    if (InputManager.Movement != Vector2.zero)
-        //    {
-        //        animator.SetBool("IsRunning", true);
-        //        animator.SetBool("IsIdle", false);
-        //    }
-        //    else
-        //    {
-        //        animator.SetBool("IsIdle", true);
-        //        animator.SetBool("IsRunning", false);
-        //    }
-
-        //    animator.SetBool("IsJumping", _isJumping);
-
-        //    if (_isFalling || _isFastFalling || _isDashFastFalling)
-        //    {
-        //        animator.SetBool("IsFalling", true);
-        //    }
-        //    else
-        //    {
-        //        animator.SetBool("IsFalling", false);
-        //    }
-
-        //    if (_isDashing || _isAirDashing)
-        //    {
-        //        animator.SetBool("IsDashing", true);
-        //    }
-        //    else
-        //    {
-        //        animator.SetBool("IsDashing", false);
-        //    }
-        //}
+    
     
 }

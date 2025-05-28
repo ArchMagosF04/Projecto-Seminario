@@ -23,7 +23,7 @@ public class TestTrackChange : MonoBehaviour
         }
         else if (timer >= timeToChangeTrack)
         {
-            beatManager.ChangeTrack(newTrack);
+            //beatManager.ChangeTrack(newTrack);
             Destroy(gameObject);
         }
         

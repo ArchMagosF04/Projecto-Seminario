@@ -17,7 +17,7 @@ MonoBehaviour:
   amountOfJumps: 2
   coyoteTime: 0.2
   variableJumpHeightMultiplier: 0.5
-  dashCooldown: 0.5
+  dashCooldown: 0.3
   maxHoldTime: 0
   holdTimeScale: 0.25
   dashTime: 0.2

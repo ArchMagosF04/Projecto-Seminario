@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - ParticleContainer
+  - BeatCenter
+  - BeatMarker
   layers:
   - Default
   - TransparentFX
@@ -53,4 +55,7 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 3218899877
+    locked: 0
+  - name: UI
+    uniqueID: 676550495
     locked: 0

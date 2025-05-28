@@ -67,7 +67,7 @@ public class PlayerST_Grounded : PlayerState
         crouchInput = controller.InputHandler.CrouchInput;
         crouchInputStop = controller.InputHandler.CrouchInputStop;
 
-        if (controller.InputHandler.PrimaryAttackInput)
+        if (controller.InputHandler.PrimaryAttackInput && controller.PrimaryAttackState.CanPerformAttack())
         {
             stateMachine.ChangeState(controller.PrimaryAttackState);
         }

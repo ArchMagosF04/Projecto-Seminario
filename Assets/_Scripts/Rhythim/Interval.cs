@@ -7,11 +7,13 @@ using UnityEngine.Events;
 [Serializable]
 public class Interval
 {
+    public Action OnBeatEvent;
+
     [field: SerializeField] public bool BeatGrace {  get; private set; }
     [SerializeField, Range(0.3f, 1f)] private float gracePeriod = 0.5f;
     [SerializeField, Range(0.25f, 2f)] private float steps;
     [SerializeField] private UnityEvent unityTrigger;
-    public Action OnBeatEvent;
+    
     private int lastInterval;
 
     public Interval() 

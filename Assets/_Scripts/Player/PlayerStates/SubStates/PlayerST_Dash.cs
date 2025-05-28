@@ -138,6 +138,7 @@ public class PlayerST_Dash : PlayerST_Ability
     {
         if (isInvincible)
         {
+            isInvincible = false;
             damageReceiver.ToggleInvincibility(false);
             knockBackReceiver.ToggleHyperArmor(false);
             spriteColor.a = 1f;
@@ -152,7 +153,7 @@ public class PlayerST_Dash : PlayerST_Ability
         if (!canInvincibleDash)
         {
             beatsToInvincibleDash++;
-            if (beatsToInvincibleDash == 3)
+            if (beatsToInvincibleDash == 2)
             {
                 canInvincibleDash = true;
                 beatsToInvincibleDash = 0;

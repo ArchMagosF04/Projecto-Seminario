@@ -26,6 +26,7 @@ public class PlayerWeapon : MonoBehaviour
     [SerializeField] private float attackCounterResetCooldown;
 
     public bool isSpecialAttack { get; private set; }
+    public bool isOnBeat { get; private set; }
 
     public int CurrentAttackCounter
     {
@@ -77,6 +78,8 @@ public class PlayerWeapon : MonoBehaviour
 
         isSpecialAttack = isSpecial;
 
+        if(BeatManager.Instance.OneBeat.BeatGrace) isOnBeat = true;
+
         OnEnter?.Invoke();
 
         anim.SetBool("Special", isSpecial);
@@ -89,6 +92,7 @@ public class PlayerWeapon : MonoBehaviour
         anim.SetBool("Active", false);
         anim.SetBool("Special", false);
         isSpecialAttack = false;
+        isOnBeat = false;
 
         attackCounterResetTimer.StartTimer();
 

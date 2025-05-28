@@ -313,7 +313,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &100212486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3013,8 +3013,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 38925e24dff2e444db6e3a73def07c35, type: 3}
-  m_Resource: {fileID: 8300000, guid: 38925e24dff2e444db6e3a73def07c35, type: 3}
+  m_audioClip: {fileID: 8300000, guid: fd5f6d5ec8a7eee42aabfbffc06dc0b7, type: 3}
+  m_Resource: {fileID: 8300000, guid: fd5f6d5ec8a7eee42aabfbffc06dc0b7, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -3127,7 +3127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae537f84c9e605146ac444195669113a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bpm: 115
+  bpm: 100
   audioSource: {fileID: 1549287341}
   <OneBeat>k__BackingField:
     <BeatGrace>k__BackingField: 0
@@ -4024,7 +4024,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2127831771
 MonoBehaviour:
   m_ObjectHideFlags: 0

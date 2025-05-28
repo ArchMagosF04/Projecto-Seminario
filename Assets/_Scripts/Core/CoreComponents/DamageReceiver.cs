@@ -28,7 +28,7 @@ public class DamageReceiver : CoreComponent, IDamageable
     {
         if (IsInvincible) return;
 
-        Debug.Log(core.transform.parent.name + " Damaged");
+        Debug.Log(core.transform.parent.name + $" Received {amount} damage");
 
         stats.Comp?.DecreaseHealth(amount);
 

@@ -36,6 +36,13 @@ public class PlayerST_PrimeAttack : PlayerST_Ability
         YInput = controller.InputHandler.NormInputY;
     }
 
+    public bool CanPerformAttack()
+    {
+        //TO DO
+
+        return true;
+    }
+
     private void ExitHandler()
     {
         AnimationFinishedTrigger();

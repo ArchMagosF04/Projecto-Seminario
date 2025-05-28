@@ -3141,8 +3141,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 62651df2f23e0c54391804f2b16999ab, type: 3}
-  m_Resource: {fileID: 8300000, guid: 62651df2f23e0c54391804f2b16999ab, type: 3}
+  m_audioClip: {fileID: 8300000, guid: fd5f6d5ec8a7eee42aabfbffc06dc0b7, type: 3}
+  m_Resource: {fileID: 8300000, guid: fd5f6d5ec8a7eee42aabfbffc06dc0b7, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -3255,8 +3255,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae537f84c9e605146ac444195669113a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <BPM>k__BackingField: 88
-  audioSource: {fileID: 1549287341}
+  <BPM>k__BackingField: 100
+  <AudioSource>k__BackingField: {fileID: 1549287341}
   <SampledTime>k__BackingField: 0
   <OneBeat>k__BackingField:
     <BeatGrace>k__BackingField: 0
@@ -4684,6 +4684,38 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 5111827d-4133-4e81-b6f1-821f01f957db
     m_ActionName: 'Gameplay/Crouch[/Keyboard/leftCtrl]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8018029462501653835}
+        m_TargetAssemblyTypeName: PlayerInputHandler, Assembly-CSharp
+        m_MethodName: OnPauseInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 3fe8ece5-7051-478a-8645-b2dcf78ae2bb
+    m_ActionName: 'Gameplay/Pause[/Keyboard/escape]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8018029462501653835}
+        m_TargetAssemblyTypeName: PlayerInputHandler, Assembly-CSharp
+        m_MethodName: OnResetInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 7e8b31db-fe27-481c-9083-9e9c1d0aa89a
+    m_ActionName: Gameplay/New action
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay

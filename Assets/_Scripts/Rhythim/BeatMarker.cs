@@ -19,7 +19,7 @@ public class BeatMarker : MonoBehaviour
 
     private void Update()
     {
-        transform.position -= new Vector3 (2f * beatsPerSecond * Time.deltaTime, 0f, 0f);
+        transform.position -= new Vector3 (4f * Time.deltaTime, 0f, 0f);
         if (transform.localPosition.x <= 0f)
         {
             Destroy(gameObject);

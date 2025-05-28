@@ -53,6 +53,6 @@ public class BeatIndicator : MonoBehaviour
     private void SpawnNewMarker()
     {
         BeatMarker newMarker = Instantiate(marker, transform);
-        newMarker.transform.position += new Vector3(2f * 4, 0f, 0f);
+        newMarker.transform.position += new Vector3(2f * (60f / BeatManager.Instance.BPM), 0f, 0f);
     }
 }

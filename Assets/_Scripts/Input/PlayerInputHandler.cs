@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerInputHandler : MonoBehaviour
 {
@@ -123,6 +124,16 @@ public class PlayerInputHandler : MonoBehaviour
         {
             JumpInputStop = true;
         }
+    }
+
+    public void OnPauseInput(InputAction.CallbackContext context)
+    {
+        if (context.started) Application.Quit();
+    }
+
+    public void OnResetInput(InputAction.CallbackContext context)
+    {
+        if (context.started) SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void OnDashDirectionInput(InputAction.CallbackContext context)

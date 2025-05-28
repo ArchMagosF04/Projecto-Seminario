@@ -20,7 +20,7 @@ public class Cerati : EnemyBasicFunctions
     [SerializeField]private bool specialAttack;
     private bool atCenterStage;
     [SerializeField] private float specialAtkDuration;
-    private float specialAtkTimer;
+    [SerializeField]private float specialAtkTimer;
     [SerializeField] private GameObject guitarWaves;
     [SerializeField] private float wavesSpawnInterval;
     private float wavesIntervalTimer;
@@ -28,7 +28,7 @@ public class Cerati : EnemyBasicFunctions
     [SerializeField] private float wavesMaxSize;
     [SerializeField] private float specialDelayTime = 3;
     private float currentSpecialDelayTime = 0;
-    [SerializeField] float waitToMakeChoices;
+    [SerializeField] float waitToMakeChoices = 1;
     private float currentTimeToMakeChoices = 0;
     private bool makeChoice = false;
     [SerializeField] float jumpforce;
@@ -44,7 +44,7 @@ public class Cerati : EnemyBasicFunctions
         {
             if (!atCenterStage)
             {
-                movementComponent.Move(enemyInfo.AirAcceleration, enemyInfo.AirDeceleration, new Vector2(FindCenterStage(), 0));
+                movementComponent.Move(7, new Vector2(FindCenterStage(), 0));
             }
         }
 
@@ -54,9 +54,6 @@ public class Cerati : EnemyBasicFunctions
     // Update is called once per frame
     void Update()
     {
-
-
-
         // Choose Atack
         if (currentTimeToMakeChoices < waitToMakeChoices)
         {
@@ -70,6 +67,8 @@ public class Cerati : EnemyBasicFunctions
         if (makeChoice)
         {
             int r = UnityEngine.Random.Range(1, 100);
+
+            print("rolled a: "+r);
 
             if (r < enemyInfo.SpecialAttackWeight)
             {
@@ -147,6 +146,36 @@ public class Cerati : EnemyBasicFunctions
 
         }
         //---------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+        //if (!bossCollider.enabled)
+        //{
+        //    if (currentTransparancyDuration < transparancyDuration)
+        //    {
+        //        currentTransparancyDuration += Time.deltaTime;
+        //    }
+        //    else if (currentTransparancyDuration >= transparancyDuration)
+        //    {
+        //        bossCollider.enabled = true;
+        //        currentTransparancyDuration = 0;
+        //    }
+        //}
+
+        //if (isGroundAbove)
+        //{
+        //    bossCollider.enabled = false;
+        //}
+
+
+
+
+
 
     }
 

@@ -56,8 +56,8 @@ public class EnemyStats : ScriptableObject
     [SerializeField] private float atk;
     public float Atk { get { return atk; } }
 
-    [SerializeField] int specialAttackWeight;
-    public int SpecialAttackWeight;
+    [SerializeField] private int specialAttackWeight;
+    public int SpecialAttackWeight { get { return specialAttackWeight; } }
 
     [SerializeField] float specialAttackmultiplier;
     public float SpecialAttackmultiplier { get { return specialAttackmultiplier; } }

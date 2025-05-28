@@ -2081,7 +2081,7 @@ GameObject:
   - component: {fileID: 1652286526}
   - component: {fileID: 1652286527}
   - component: {fileID: 1652286528}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: Enemigo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2261,6 +2261,7 @@ MonoBehaviour:
   plataform2: {fileID: 1362797598}
   specialAttack: 0
   specialAtkDuration: 5
+  specialAtkTimer: 0
   guitarWaves: {fileID: 1363657723553904943, guid: 0b7d6f0a470283d41aafcfabe0fb27d2, type: 3}
   wavesSpawnInterval: 3
   wavesGrowthSpeed: 3
@@ -2280,6 +2281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2311c8abe2a571f4fb0a88ec25b98d30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyStats: {fileID: 11400000, guid: 4fc03180364c9c6498947c9f4ee92b35, type: 2}
   ground:
     serializedVersion: 2
     m_Bits: 8

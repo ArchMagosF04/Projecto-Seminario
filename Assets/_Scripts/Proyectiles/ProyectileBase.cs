@@ -41,14 +41,15 @@ public class ProyectileBase : MonoBehaviour
         }
     }
 
-    public void Initialize(float projectileDamage, GameObject shooter, float projectileSpeed = 3)
+    public void Initialize(float projectileDamage, GameObject shooter, float projectileSpeed = 3, float lifeTime = 5)
     {
         owner = shooter;
         damage = projectileDamage;
         speed = projectileSpeed;
-        if(shooter.layer == 6)
+        lifeSpan = lifeTime;
+        if(shooter.layer == 10)
         {
-            this.gameObject.layer = 7;
+            this.gameObject.layer = 12;
         }
         this.gameObject.GetComponent<Collider2D>().enabled = true;
 

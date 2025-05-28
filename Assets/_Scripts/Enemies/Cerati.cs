@@ -19,7 +19,7 @@ public class Cerati : EnemyBasicFunctions
 
     [SerializeField]private bool specialAttack;
     [SerializeField] private bool technique;
-    private bool atCenterStage;
+    [SerializeField]private bool atCenterStage;
     [SerializeField] private float specialAtkDuration;
     [SerializeField]private float specialAtkTimer;
     [SerializeField] private GameObject guitarWaves;
@@ -35,6 +35,8 @@ public class Cerati : EnemyBasicFunctions
     [SerializeField] float jumpforce;
     private bool moving;
     private int shotsFired;
+    private bool getBackUp;
+    private GameObject targetPlataform;
 
     void Start()
     {
@@ -47,14 +49,31 @@ public class Cerati : EnemyBasicFunctions
         {
             if (!atCenterStage)
             {
-                movementComponent.Move(7, new Vector2(FindCenterStage(), 0));
+                movementComponent.Move(8, new Vector2(FindCenterStage(), 0));
             }
         }
 
-        if (shotsFired >= 3)
+        if (shotsFired >= 3 && !getBackUp)
         {
             SwitchPlataform();
             shotsFired = 0;
+        }
+
+        if (getBackUp)
+        {
+            if (Mathf.Abs(targetPlataform.transform.position.x - transform.position.x) > 2f && movementComponent.IsGrounded)
+            {
+                movementComponent.Move(8f, (targetPlataform.transform.position - transform.position).normalized);
+            }
+            if (Mathf.Abs(targetPlataform.transform.position.x - transform.position.x) < 2f)
+            {
+                if(Mathf.Abs(gameObject.GetComponent<Rigidbody2D>().velocity.x) > 0)
+                {
+                    gameObject.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0);
+                }
+                
+                movementComponent.BossJumpUp(Vector2.up, jumpforce * 1.5f);
+            }
         }
 
         //movementComponent.BossJumpUp(Vector2.up, jumpforce);
@@ -63,7 +82,7 @@ public class Cerati : EnemyBasicFunctions
     // Update is called once per frame
     void Update()
     {
-        if (!specialAttack && movementComponent.IsGrounded)
+        if (!specialAttack && movementComponent.IsGrounded && !getBackUp)
         {
             if (movementComponent.IsGrounded)
             {
@@ -81,7 +100,7 @@ public class Cerati : EnemyBasicFunctions
                 RollAtk();
             }
 
-            
+
             //--------------------------------------------------------
 
 
@@ -96,9 +115,28 @@ public class Cerati : EnemyBasicFunctions
             }
         }
 
+        if (!specialAttack && transform.position.y < plataform1.transform.position.y && !getBackUp)
+        {
+            getBackUp = true;
+
+            int r = UnityEngine.Random.Range(1, 3);
+            if (r > 1)
+            {
+                targetPlataform = plataform2.gameObject;
+            }
+            else
+            {
+                targetPlataform = plataform1.gameObject;
+            }
+        }
+        else if (transform.position.y > plataform1.transform.position.y)
+        {
+            getBackUp = false;
+        }
+
 
         // Position for special atk--------------------------------------------------------------------------
-        if (Mathf.Abs(transform.position.x - centerStage.position.x) < 0.1f && specialAttack)
+        if (Mathf.Abs(transform.position.x - centerStage.position.x) < 0.5f && specialAttack)
         {
             if (currentSpecialDelayTime < specialDelayTime)
             {
@@ -147,23 +185,7 @@ public class Cerati : EnemyBasicFunctions
 
 
 
-        //if (!bossCollider.enabled)
-        //{
-        //    if (currentTransparancyDuration < transparancyDuration)
-        //    {
-        //        currentTransparancyDuration += Time.deltaTime;
-        //    }
-        //    else if (currentTransparancyDuration >= transparancyDuration)
-        //    {
-        //        bossCollider.enabled = true;
-        //        currentTransparancyDuration = 0;
-        //    }
-        //}
 
-        //if (isGroundAbove)
-        //{
-        //    bossCollider.enabled = false;
-        //}
 
 
 

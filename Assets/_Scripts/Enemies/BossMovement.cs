@@ -7,7 +7,7 @@ using static UnityEngine.LightAnchor;
 public class BossMovement : MonoBehaviour
 {
     Rigidbody2D rb;
-    Collider2D bossCollider;
+    [SerializeField]Collider2D bossCollider;
     public EnemyStats enemyStats;
     [SerializeField] LayerMask ground;
     [SerializeField]private bool isGrounded;
@@ -17,11 +17,13 @@ public class BossMovement : MonoBehaviour
     private float currentFallingSpeed = 1;
     [SerializeField] float transparancyDuration;
     [SerializeField]private float currentTransparancyDuration;
+    //[SerializeField] Collider2D groundDetector;
+    [SerializeField] float maxSpeed;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        bossCollider = gameObject.GetComponent<Collider2D>();
+        //bossCollider = gameObject.GetComponent<Collider2D>();
     }
 
     private void FixedUpdate()
@@ -46,9 +48,27 @@ public class BossMovement : MonoBehaviour
 
     private void Update()
     {
-        isGrounded = Physics2D.Raycast(transform.position, Vector2.down, 0.7f, ground);
+        //isGrounded = Physics2D.Raycast(transform.position, Vector2.down, 0.7f, ground);        
 
         isGroundAbove = Physics2D.Raycast(transform.position, Vector2.up, 1f, ground);
+
+        if (!bossCollider.enabled)
+        {
+            if (currentTransparancyDuration < transparancyDuration)
+            {
+                currentTransparancyDuration += Time.deltaTime;
+            }
+            else if (currentTransparancyDuration >= transparancyDuration)
+            {
+                bossCollider.enabled = true;
+                currentTransparancyDuration = 0;
+            }
+        }
+
+        if (isGroundAbove)
+        {
+            bossCollider.enabled = false;
+        }
     }
     public void BossJumpUp(Vector2 direction, float force)
     {
@@ -71,12 +91,41 @@ public class BossMovement : MonoBehaviour
         }
     }
 
+    //public void Move(float acceleration, Vector2 moveInput)
+    //{
+    //    rb.velocity = new Vector2(moveInput.x * acceleration, rb.velocity.y);
+    //}
 
-    //
     public void Move(float acceleration, Vector2 moveInput)
     {
-        rb.velocity = new Vector2(moveInput.x * acceleration, rb.velocity.y);
-    }    
-    //
+        if(Mathf.Abs(rb.velocityX) < maxSpeed)
+        {
+            rb.AddForce(new Vector2(moveInput.x * acceleration, rb.velocity.y), ForceMode2D.Force);
+        }
+        
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.layer == 3)
+        {
+            isGrounded = true;
+        }       
+       
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == 3)
+        {
+            isGrounded = false;
+        }
+       
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        
+    }
 
 }

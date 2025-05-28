@@ -30,7 +30,7 @@ MonoBehaviour:
   gravityOnReleaseMultiplier: 0
   timeForUpwardsCancel: 0
   atk: 5
-  specialAttackWeight: 0
+  specialAttackWeight: 30
   specialAttackmultiplier: 1
   maxTechniquePoints: 0
   MaxTechniquePoints: 0

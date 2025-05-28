@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ParticleContainer
   - Projectile
+  - Plataform
   layers:
   - Default
   - TransparentFX

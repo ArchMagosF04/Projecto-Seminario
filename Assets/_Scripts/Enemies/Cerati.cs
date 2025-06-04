@@ -10,37 +10,37 @@ using UnityEngine;
 
 public class Cerati : /*EnemyBasicFunctions*/ MonoBehaviour
 {
-    [SerializeField]private float timeToShoot= 5;
-    private float timerToShoot;
-    private BossMovement movementComponent;
-    //[SerializeField] Transform centerStage;
-    [SerializeField] Transform plataform1;
-    [SerializeField] Transform plataform2;
+    //[SerializeField]private float timeToShoot= 5;
+    //private float timerToShoot;
+    //private BossMovement movementComponent;
+    ////[SerializeField] Transform centerStage;
+    //[SerializeField] Transform plataform1;
+    //[SerializeField] Transform plataform2;
 
-    //[SerializeField]private bool specialAttack;
-    [SerializeField] private bool technique;
-    //[SerializeField]private bool atCenterStage;
-    //[SerializeField] private float specialAtkDuration;
-    //[SerializeField]private float specialAtkTimer;
-    //[SerializeField] private GameObject guitarWaves;
-    //[SerializeField] private float wavesSpawnInterval;
-    //private float wavesIntervalTimer;
-    //[SerializeField] private float wavesGrowthSpeed;
-    //[SerializeField] private float wavesMaxSize;
-    //[SerializeField] private float specialDelayTime = 3;
-    //private float currentSpecialDelayTime = 0;
-    [SerializeField] float waitToMakeChoices = 1;
-    private float currentTimeToMakeChoices = 0;
-    //private bool makeChoice = false;
-    [SerializeField] float jumpforce;
-    private bool moving;
-    private int shotsFired;
-    private bool getBackUp;
-    private GameObject targetPlataform;
+    ////[SerializeField]private bool specialAttack;
+    //[SerializeField] private bool technique;
+    ////[SerializeField]private bool atCenterStage;
+    ////[SerializeField] private float specialAtkDuration;
+    ////[SerializeField]private float specialAtkTimer;
+    ////[SerializeField] private GameObject guitarWaves;
+    ////[SerializeField] private float wavesSpawnInterval;
+    ////private float wavesIntervalTimer;
+    ////[SerializeField] private float wavesGrowthSpeed;
+    ////[SerializeField] private float wavesMaxSize;
+    ////[SerializeField] private float specialDelayTime = 3;
+    ////private float currentSpecialDelayTime = 0;
+    //[SerializeField] float waitToMakeChoices = 1;
+    //private float currentTimeToMakeChoices = 0;
+    ////private bool makeChoice = false;
+    //[SerializeField] float jumpforce;
+    //private bool moving;
+    //private int shotsFired;
+    //private bool getBackUp;
+    //private GameObject targetPlataform;
 
     void Start()
     {
-        movementComponent = gameObject.GetComponent<BossMovement>();
+        //movementComponent = gameObject.GetComponent<BossMovement>();
     }
 
     private void FixedUpdate()

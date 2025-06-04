@@ -34,7 +34,8 @@ public class BeatManager : MonoBehaviour
         intervals[0] = OneBeat;
         intervals[1] = TwoBeat;
         intervals[2] = FourBeat;
-        intervals[3] = HalfBeat;
+        intervals[3] = HalfBeat;       
+        
     }
 
     private void Update()

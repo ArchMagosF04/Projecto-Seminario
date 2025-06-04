@@ -19,7 +19,9 @@ public class Boss1SpecialAttack<T> : State<T>
     private float wavesMaxSize;
     private float wavesGrowthSpeed;
 
-    public Boss1SpecialAttack(BossMovement bossMovement, Transform targetLocation, GameObject user, EnemyStats enemyInformation)
+    private BeatDetector beatDetector;
+
+    public Boss1SpecialAttack(BossMovement bossMovement, Transform targetLocation, GameObject user, EnemyStats enemyInformation, BeatDetector beatDetector)
     {
         movementController = bossMovement;
         stageLocation = targetLocation;
@@ -29,7 +31,8 @@ public class Boss1SpecialAttack<T> : State<T>
         wavesSpawnInterval = enemyInformation.WavesSpawnInterval;
         atkProjectiles = enemyInformation.GetProyectile(1);
         wavesMaxSize = enemyInformation.WavesMaxSize;
-        wavesGrowthSpeed = enemyInformation.WavesGrowthSpeed;        
+        wavesGrowthSpeed = enemyInformation.WavesGrowthSpeed;
+        this.beatDetector = beatDetector;
     }   
 
     public override void FixedExecute()

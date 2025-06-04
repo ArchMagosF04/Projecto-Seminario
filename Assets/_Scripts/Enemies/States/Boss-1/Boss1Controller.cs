@@ -17,6 +17,8 @@ public class Boss1Controller : MonoBehaviour
     [SerializeField] private GameObject plataform1;
     [SerializeField] private GameObject plataform2;
 
+    [SerializeField] private BeatDetector[] beatDetectors;
+
 
     //--------------SPECIAL ATTACK VARIABLES----------------------------------------------------------------------------------------
 
@@ -53,14 +55,15 @@ public class Boss1Controller : MonoBehaviour
         spd = enemyInfo.MoveSpd;
         atk = enemyInfo.Atk;
 
-        specialAttackState = new Boss1SpecialAttack<string>(movementController, centerStage, this.gameObject, enemyInfo);
+        specialAttackState = new Boss1SpecialAttack<string>(movementController, centerStage, this.gameObject, enemyInfo, beatDetectors[0]);
 
         InitializeFSM();
 
     }
 
     private void FixedUpdate()
-    {
+    {      
+
         fsm.OnFixedUpdate();
     }
 
@@ -97,7 +100,7 @@ public class Boss1Controller : MonoBehaviour
     {
         var _idle = new Boss1IdleState<string>();
         //var _specialAttack = new Boss1SpecialAttack<string>(movementController, centerStage, this.gameObject, enemyInfo);
-        var _normalAttack = new Boss1NormalAttack<string>(player,plataform1, plataform2, movementController, this.gameObject, enemyInfo);
+        var _normalAttack = new Boss1NormalAttack<string>(player,plataform1, plataform2, movementController, this.gameObject, enemyInfo, beatDetectors[0], beatDetectors[2]);
 
         fsm = new GenericFSM<string>(_normalAttack);
         fsm.SetInitialState(_normalAttack);
@@ -122,5 +125,21 @@ public class Boss1Controller : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "player")
+        {
+            GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+        }
+        
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            collision.gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+        }        
+    }
 
 }

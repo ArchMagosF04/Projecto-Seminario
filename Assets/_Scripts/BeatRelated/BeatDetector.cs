@@ -9,9 +9,14 @@ public class BeatDetector : MonoBehaviour
     private bool isOnBeat = false;
     [SerializeField] private float gracePeriod;
     private float timer = 0;
+    private BeatManager manager;
 
     public event Action<bool> OnBeat;
 
+    private void Start()
+    {
+        
+    }
 
     void Update()
     {
@@ -32,7 +37,15 @@ public class BeatDetector : MonoBehaviour
 
     public void ActivateBeatEffect()
     {
-        isOnBeat=true;
-        OnBeat.Invoke(true);
+        if (OnBeat != null)
+        {
+            isOnBeat = true;
+            OnBeat.Invoke(true);
+        }        
+    }
+
+    public void SetGracePeriod(float time)
+    {
+        gracePeriod = time;
     }
 }

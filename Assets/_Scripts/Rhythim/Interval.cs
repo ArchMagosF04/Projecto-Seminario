@@ -11,6 +11,7 @@ public class Interval
     [SerializeField, Range(0.3f, 1f)] private float gracePeriod = 0.5f;
     [SerializeField, Range(0.25f, 2f)] private float steps;
     [SerializeField] private UnityEvent unityTrigger;
+    public UnityEvent UnityTrigger { get {  return unityTrigger; } }
     public Action OnBeatEvent;
     private int lastInterval;
 

@@ -15,6 +15,7 @@ public class BossMovement : MonoBehaviour
     [SerializeField] private bool isGroundAbove;
     [SerializeField] private float fallingSpeedModifier;
     private float currentFallingSpeed = 1;
+    [SerializeField] float maxFallSpeed;
     [SerializeField] float transparancyDuration;
     [SerializeField]private float currentTransparancyDuration;
     //[SerializeField] Collider2D groundDetector;
@@ -28,7 +29,7 @@ public class BossMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!isGrounded)
+        if (!isGrounded && rb.velocityY < maxFallSpeed)
         {
             currentFallingSpeed = currentFallingSpeed * fallingSpeedModifier;
             rb.AddForce(Vector2.down * currentFallingSpeed, ForceMode2D.Force);
@@ -121,11 +122,6 @@ public class BossMovement : MonoBehaviour
             isGrounded = false;
         }
        
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        
-    }
+    }    
 
 }

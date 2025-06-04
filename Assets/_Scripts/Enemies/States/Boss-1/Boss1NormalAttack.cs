@@ -164,7 +164,8 @@ public class Boss1NormalAttack<T> : State<T>
         Vector2 target = FindOpositePlataform().position;
         //moving = true;
         float impulse = (FindOpositePlataform().position - boss.transform.position).magnitude;
-        movementComponent.BossJump(target, enemyInfo.JumpForce + impulse / 1.65f);
+        movementComponent.BossJump(target, enemyInfo.JumpForce + impulse / 1.60f);
+        movementComponent.Move(impulse / 1.55f, target);
         Console.WriteLine("impulse was: " + impulse);
     }
 

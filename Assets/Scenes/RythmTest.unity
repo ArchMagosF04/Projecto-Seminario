@@ -386,6 +386,80 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &211806907
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 211806909}
+  - component: {fileID: 211806908}
+  m_Layer: 0
+  m_Name: Beat Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &211806908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211806907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c140821b1b9a9d94fb2f34539f09925d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bpm: 120
+  audioSource: {fileID: 1051597474}
+  <OneBeat>k__BackingField:
+    <BeatGrace>k__BackingField: 0
+    gracePeriod: 0.3
+    steps: 0.25
+    unityTrigger:
+      m_PersistentCalls:
+        m_Calls: []
+  <TwoBeat>k__BackingField:
+    <BeatGrace>k__BackingField: 0
+    gracePeriod: 0.3
+    steps: 0.25
+    unityTrigger:
+      m_PersistentCalls:
+        m_Calls: []
+  <FourBeat>k__BackingField:
+    <BeatGrace>k__BackingField: 0
+    gracePeriod: 0.3
+    steps: 0.25
+    unityTrigger:
+      m_PersistentCalls:
+        m_Calls: []
+  <HalfBeat>k__BackingField:
+    <BeatGrace>k__BackingField: 0
+    gracePeriod: 0.3
+    steps: 0.25
+    unityTrigger:
+      m_PersistentCalls:
+        m_Calls: []
+--- !u!4 &211806909
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211806907}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.3900244, y: 4.1705484, z: -0.099274084}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &325043319
 GameObject:
   m_ObjectHideFlags: 0
@@ -669,7 +743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 369dde2d82eac9a4793dbc6808280058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  beatManager: {fileID: 1443823095}
+  beatManager: {fileID: 0}
   newTrack: {fileID: 11400000, guid: 37504666b6617dd42860ed72a41aa768, type: 2}
   timeToChangeTrack: 30
 --- !u!4 &473699991
@@ -1914,50 +1988,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!1 &1443823094
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1443823096}
-  - component: {fileID: 1443823095}
-  m_Layer: 0
-  m_Name: BeatManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1443823095
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1443823094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53a4ddc87094e6346ad63e0ad31a816d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1443823096
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1443823094}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.8404291, y: 5.270143, z: -0.019010372}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1457863602
 GameObject:
   m_ObjectHideFlags: 0
@@ -2119,9 +2149,9 @@ GameObject:
   - component: {fileID: 1652286524}
   - component: {fileID: 1652286525}
   - component: {fileID: 1652286526}
-  - component: {fileID: 1652286527}
   - component: {fileID: 1652286528}
   - component: {fileID: 1652286529}
+  - component: {fileID: 1652286530}
   m_Layer: 10
   m_Name: Enemigo
   m_TagString: Untagged
@@ -2192,7 +2222,7 @@ Transform:
   m_GameObject: {fileID: 1652286519}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 8.27, y: 2.75, z: 0}
+  m_LocalPosition: {x: 7.95, y: 1.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2284,35 +2314,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
---- !u!114 &1652286527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1652286519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94967cc2b337d634592f7882172a3b15, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyInfo: {fileID: 11400000, guid: 4fc03180364c9c6498947c9f4ee92b35, type: 2}
-  timeToShoot: 1
-  centerStage: {fileID: 159300066}
-  plataform1: {fileID: 779955500}
-  plataform2: {fileID: 1362797598}
-  specialAttack: 0
-  technique: 0
-  atCenterStage: 0
-  specialAtkDuration: 3
-  specialAtkTimer: 0
-  guitarWaves: {fileID: 1363657723553904943, guid: 0b7d6f0a470283d41aafcfabe0fb27d2, type: 3}
-  wavesSpawnInterval: 3
-  wavesGrowthSpeed: 3
-  wavesMaxSize: 15
-  specialDelayTime: 3
-  waitToMakeChoices: 0.5
-  jumpforce: 2.5
 --- !u!114 &1652286528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2382,6 +2383,28 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 0.12246919}
   m_EdgeRadius: 0
+--- !u!114 &1652286530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652286519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c267e2107fc75547ab325bef9bc8957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementController: {fileID: 1652286528}
+  centerStage: {fileID: 159300066}
+  plataform1: {fileID: 779955495}
+  plataform2: {fileID: 1362797593}
+  doingSpecialAttack: 0
+  RollAfterCertainAmountOfShots: 0
+  amountOfShots: 3
+  timeForTheNextRoll: 5
+  enemyInfo: {fileID: 11400000, guid: 4fc03180364c9c6498947c9f4ee92b35, type: 2}
+  hp: 100
 --- !u!1 &1853248768
 GameObject:
   m_ObjectHideFlags: 0
@@ -2532,7 +2555,6 @@ SceneRoots:
   - {fileID: 448584289}
   - {fileID: 1307109364}
   - {fileID: 325043321}
-  - {fileID: 1443823096}
   - {fileID: 621223806}
   - {fileID: 371770826}
   - {fileID: 51042410}
@@ -2549,3 +2571,4 @@ SceneRoots:
   - {fileID: 1610330665}
   - {fileID: 1457863603}
   - {fileID: 537500657}
+  - {fileID: 211806909}

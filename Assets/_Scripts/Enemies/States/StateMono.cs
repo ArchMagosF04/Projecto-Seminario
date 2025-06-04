@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StateMono<T> : MonoBehaviour, IState
+public class StateMono<T> : MonoBehaviour, IState<T>
 {
     // Start is called before the first frame update
     void Start()
@@ -16,7 +16,7 @@ public class StateMono<T> : MonoBehaviour, IState
         
     }
 
-    Dictionary<T, IState> transitions = new Dictionary<T, IState>();
+    Dictionary<T, IState<T>> transitions = new Dictionary<T, IState<T>>();
     public virtual void Enter()
     {
         throw new System.NotImplementedException();
@@ -37,12 +37,12 @@ public class StateMono<T> : MonoBehaviour, IState
         throw new System.NotImplementedException();
     }
 
-    public void AddTransition(T condition, IState newState)
+    public void AddTransition(T condition, IState<T> newState)
     {
         transitions[condition] = newState;
     }
 
-    public IState GetTransition(T condition)
+    public IState<T> GetTransition(T condition)
     {
         if (!transitions.ContainsKey(condition)) return null;
         return transitions[condition];

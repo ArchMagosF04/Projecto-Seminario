@@ -7,26 +7,13 @@ public class EnemyStats : ScriptableObject
 {
     [SerializeField] private float hp;
     public float Hp {  get { return hp; } }
+
+    //---------------MOVEMENT VARIABLES-------------------------------------------------------
     [SerializeField] private float moveSpd;
     public float MoveSpd { get { return moveSpd; } }
 
-    [SerializeField] private float gravity;
-    public float Gravity { get { return gravity; } }
-
-    [SerializeField] private float groundAcceleration;
-    public float GroundAcceleration { get { return groundAcceleration; } }
-
-    [SerializeField] private float groundDeceleration;
-    public float GroundDeceleration { get { return groundDeceleration; } }
-
-    [SerializeField] private float airAcceleration;
-    public float AirAcceleration { get { return airAcceleration; } }
-
-    [SerializeField] private float airDeceleration;
-    public float AirDeceleration { get { return airDeceleration; } }
-
-    [SerializeField] private float maxFallSpeed;
-    public float MaxFallSpeed { get { return maxFallSpeed; } }
+    [SerializeField] private float acceleration;
+    public float Acceleration { get { return acceleration; } }   
 
     [SerializeField] private float groundDetectionRayLength;
     public float GroundDetectionRayLength { get { return groundDetectionRayLength; } }
@@ -34,33 +21,53 @@ public class EnemyStats : ScriptableObject
     [SerializeField] private LayerMask groundLayer;
     public LayerMask GroundLayer { get { return groundLayer; } }
 
+
+
     // Jump Variables-----------------------------------------------------------------------
 
-    [SerializeField] private float initialJumpVelocity;
-    public float InitialJumpVelocity { get { return initialJumpVelocity; } }
+    [SerializeField] private float jumpforce;
+    public float JumpForce { get { return jumpforce; } }
 
-    [SerializeField] private float apexThreshold;
-    public float ApexThreshold { get { return apexThreshold; } }
-
-    [SerializeField] private float apexHangTime;
-    public float ApexHangTime { get { return apexHangTime; } }
-
-    [SerializeField] private float gravityOnReleaseMultiplier;
-    public float GravityOnReleaseMultiplier { get { return gravityOnReleaseMultiplier; } }
-
-    [SerializeField] private float timeForUpwardsCancel;
-    public float TimeForUpwardsCancel { get { return timeForUpwardsCancel; } }
+    [SerializeField] private float maxFallSpeed;
+    public float MaxFallSpeed { get { return maxFallSpeed; } }
 
     //-------------------------------------------------------------------------------------
 
+
+
     [SerializeField] private float atk;
     public float Atk { get { return atk; } }
+
+
+
+    //--------------SPECIAL ATTACK VARIABLES----------------------------------------------
 
     [SerializeField] private int specialAttackWeight;
     public int SpecialAttackWeight { get { return specialAttackWeight; } }
 
     [SerializeField] float specialAttackmultiplier;
     public float SpecialAttackmultiplier { get { return specialAttackmultiplier; } }
+
+    [SerializeField] private float specialAtkDuration;
+    public float SpecialAtkDuration { get { return specialAtkDuration; } }
+
+    [SerializeField] private float wavesSpawnInterval;
+    public float WavesSpawnInterval { get { return wavesSpawnInterval; } }
+
+    [SerializeField] private float wavesGrowthSpeed;
+    public float WavesGrowthSpeed { get {return wavesGrowthSpeed; } }
+
+
+    [SerializeField] private float wavesMaxSize;
+    public float WavesMaxSize { get { return wavesMaxSize; } }
+
+
+    [SerializeField] private float specialDelayTime = 3;
+    public float SpecialDelayTime { get { return specialDelayTime; } }    
+
+    //-------------------------------------------------------------------------------------
+
+
 
     [SerializeField] int maxTechniquePoints;
     public int MaxTechniquePoints;

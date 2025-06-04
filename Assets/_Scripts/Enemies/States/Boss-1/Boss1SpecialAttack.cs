@@ -2,49 +2,47 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Boss1SpecialAttack : State
+public class Boss1SpecialAttack<T> : State<T>
 {
     private BossMovement movementController;
     private Transform stageLocation;
     private GameObject boss;
     private GameObject atkProjectiles;
     private EnemyStats enemyInfo;
-    private float dmg;
     private float specialDelayTime;
     private bool atCenterStage;
-    private float currentSpecialDelayTime;
-    private float specialAtkDuration;
-    private float specialAtkTimer;
+    public bool AtCenterStage {  get { return atCenterStage; } }
+
+    private float currentSpecialDelayTime =0;
     private float wavesSpawnInterval;
     private float wavesIntervalTimer;
     private float wavesMaxSize;
     private float wavesGrowthSpeed;
 
-    public Boss1SpecialAttack(BossMovement bossMovement, Transform targetLocation, GameObject user, float delayToStartAttack, float atkDuration, float atkIntervals, GameObject projectile, float projectileMaxSize, float projectileGrowthSpeed, EnemyStats enemyInformation)
+    public Boss1SpecialAttack(BossMovement bossMovement, Transform targetLocation, GameObject user, EnemyStats enemyInformation)
     {
         movementController = bossMovement;
         stageLocation = targetLocation;
         boss = user;
-        specialDelayTime = delayToStartAttack;
-        specialAtkDuration = atkDuration;
-        wavesSpawnInterval = atkIntervals;
-        atkProjectiles = projectile;
-        wavesMaxSize = projectileMaxSize;
-        wavesGrowthSpeed = projectileGrowthSpeed;
         enemyInfo = enemyInformation;
+        specialDelayTime = enemyInformation.SpecialDelayTime;
+        wavesSpawnInterval = enemyInformation.WavesSpawnInterval;
+        atkProjectiles = enemyInformation.GetProyectile(1);
+        wavesMaxSize = enemyInformation.WavesMaxSize;
+        wavesGrowthSpeed = enemyInformation.WavesGrowthSpeed;        
     }   
 
     public override void FixedExecute()
     {
-        //if (!atCenterStage)
-        //{
-        //    movementController.Move(enemyInfo.AirAcceleration, enemyInfo.AirDeceleration, new Vector2(FindCenterStage(), 0));
-        //}
+        if (!atCenterStage)
+        {
+            movementController.Move(enemyInfo.Acceleration, new Vector2(FindCenterStage(), 0));
+        }
     }
 
     public override void Execute()
     {
-        if (Mathf.Abs(boss.transform.position.x - stageLocation.position.x) < 0.1f)
+        if (Mathf.Abs(boss.transform.position.x - stageLocation.position.x) < 0.7f)
         {
             if (currentSpecialDelayTime < specialDelayTime)
             {
@@ -59,28 +57,22 @@ public class Boss1SpecialAttack : State
 
         if (atCenterStage)
         {
-            if (specialAtkTimer < specialAtkDuration)
+            if (wavesIntervalTimer <= 0)
             {
-                if (wavesIntervalTimer <= 0)
-                {
-                    GameObject temp = GameObject.Instantiate(atkProjectiles, boss.transform.position, boss.transform.rotation/*quaternion.identity*/);
-                    temp.gameObject.GetComponent<WaveAttack>().Initialize(enemyInfo.Atk * enemyInfo.SpecialAttackmultiplier, boss, wavesMaxSize, wavesGrowthSpeed);
-                    wavesIntervalTimer = wavesSpawnInterval;
-                }
-                else
-                {
-                    wavesIntervalTimer -= Time.deltaTime;
-                }
-                specialAtkTimer += Time.deltaTime;
+                GameObject temp = GameObject.Instantiate(atkProjectiles, boss.transform.position, boss.transform.rotation);
+                temp.gameObject.GetComponent<WaveAttack>().Initialize(enemyInfo.Atk * enemyInfo.SpecialAttackmultiplier, boss, wavesMaxSize, wavesGrowthSpeed);
+                wavesIntervalTimer = wavesSpawnInterval;
             }
             else
             {
-                atCenterStage = false;
-                specialAtkTimer = 0;
+                wavesIntervalTimer -= Time.deltaTime;
             }
-
-
         }
+    }
+
+    public override void Exit()
+    {
+        atCenterStage = false;
     }
 
     private float FindCenterStage()

@@ -14,25 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 100
   moveSpd: 12.5
-  gravity: -100
-  groundAcceleration: 5
-  groundDeceleration: 20
-  airAcceleration: 5
-  airDeceleration: 5
-  maxFallSpeed: 26
+  acceleration: 8
   groundDetectionRayLength: 0.02
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
-  initialJumpVelocity: 0
-  apexThreshold: 0
-  apexHangTime: 0
-  gravityOnReleaseMultiplier: 0
-  timeForUpwardsCancel: 0
+  jumpforce: 3
+  maxFallSpeed: 26
   atk: 5
   specialAttackWeight: 30
-  specialAttackmultiplier: 1
+  specialAttackmultiplier: 1.5
+  specialAtkDuration: 7
+  wavesSpawnInterval: 3
+  wavesGrowthSpeed: 5
+  wavesMaxSize: 7
+  specialDelayTime: 3
   maxTechniquePoints: 0
   MaxTechniquePoints: 0
   projectiles:
   - {fileID: 5017142362319034512, guid: 3c50653082b6c694f8027cf99b7ef9a1, type: 3}
+  - {fileID: 1363657723553904943, guid: 0b7d6f0a470283d41aafcfabe0fb27d2, type: 3}

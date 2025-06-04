@@ -18,7 +18,7 @@ public class BossMovement : MonoBehaviour
     [SerializeField] float maxFallSpeed;
     [SerializeField] float transparancyDuration;
     [SerializeField]private float currentTransparancyDuration;
-    //[SerializeField] Collider2D groundDetector;
+    [SerializeField] Collider2D groundDetector;
     [SerializeField] float maxSpeed;
 
     private void Start()

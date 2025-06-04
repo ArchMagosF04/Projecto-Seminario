@@ -49,7 +49,7 @@ public class MovingPlataform : MonoBehaviour
 
         foreach (GameObject passanger in passangers)
         {
-            if (Mathf.Abs(passanger.GetComponent<Rigidbody2D>().velocity.x) > 1)
+            if (Mathf.Abs(passanger.GetComponent<Rigidbody2D>().velocity.x) > 0.7)
             {
                 passanger.transform.parent = null;
             }

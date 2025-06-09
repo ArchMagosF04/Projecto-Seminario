@@ -78,7 +78,8 @@ public class PlayerWeapon : MonoBehaviour
 
         isSpecialAttack = isSpecial;
 
-        if(BeatManager.Instance.OneBeat.BeatGrace) isOnBeat = true;
+        PlayerBeatManager.Instance.OnBeatAction();
+        if (BeatManager.Instance.OneBeat.BeatGrace) isOnBeat = true;
 
         OnEnter?.Invoke();
 

@@ -7,8 +7,16 @@ public class PulseToBeat : MonoBehaviour
     [SerializeField] private bool useTestBeat;
     [SerializeField] private float pulseSize = 1.2f;
     [SerializeField] private float returnSpeed = 5f;
+    [SerializeField] private bool signalGracePeriod;
 
     private Vector3 startSize;
+    private SpriteRenderer sprite;
+    private bool colorBackToNormal = true;
+
+    private void Awake()
+    {
+        sprite = GetComponent<SpriteRenderer>();
+    }
 
     private void Start()
     {
@@ -22,6 +30,18 @@ public class PulseToBeat : MonoBehaviour
     private void Update()
     {
         transform.localScale = Vector3.Lerp(transform.localScale, startSize, Time.deltaTime * returnSpeed);
+
+        if (!signalGracePeriod) return;
+        if (BeatManager.Instance.OneBeat.BeatGrace)
+        {
+            sprite.color = Color.white;
+            colorBackToNormal = false;
+        }
+        else if (!BeatManager.Instance.OneBeat.BeatGrace && !colorBackToNormal)
+        {
+            sprite.color = Color.black;
+            colorBackToNormal = true;
+        }
     }
 
     public void Pulse()

@@ -10,7 +10,7 @@ public class BeatManager : MonoBehaviour
     [field: SerializeField] public AudioSource AudioSource { get; private set; }
     private Interval[] intervals = new Interval[4];
 
-    [field: SerializeField] public float SampledTime { get; private set; }
+    private float SampledTime;
 
     [field: SerializeField] public Interval OneBeat { get; private set; }
     [field: SerializeField] public Interval TwoBeat { get; private set; }
@@ -41,13 +41,13 @@ public class BeatManager : MonoBehaviour
 
     private void Update()
     {
-        SampledTime = (AudioSource.timeSamples / (AudioSource.clip.frequency * OneBeat.GetIntervalLength(BPM)));
-        OneBeat.CheckForNewInterval(SampledTime);
+        //SampledTime = (AudioSource.timeSamples / (AudioSource.clip.frequency * OneBeat.GetIntervalLength(BPM)));
+        //OneBeat.CheckForNewInterval(SampledTime);
 
-        //foreach (Interval interval in intervals)
-        //{
-        //    float sampledTime = (audioSource.timeSamples / (audioSource.clip.frequency * interval.GetIntervalLength(BPM)));
-        //    interval.CheckForNewInterval(sampledTime);
-        //}
+        foreach (Interval interval in intervals)
+        {
+            float sampledTime = (AudioSource.timeSamples / (AudioSource.clip.frequency * interval.GetIntervalLength(BPM)));
+            interval.CheckForNewInterval(sampledTime);
+        }
     }
 }

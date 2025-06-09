@@ -10,18 +10,13 @@ public class Interval
     public Action OnBeatEvent;
 
     [field: SerializeField] public bool BeatGrace {  get; private set; }
-    [SerializeField, Range(0.3f, 1f)] private float gracePeriod = 0.5f;
+    [SerializeField, Range(0.1f, 1f)] private float gracePeriod = 0.5f;
     [SerializeField, Range(0.25f, 2f)] private float steps;
     [SerializeField] private UnityEvent unityTrigger;
 
     public float BeatProgress { get; private set; }
 
     private int lastInterval;
-
-    public Interval() 
-    {
-        gracePeriod = (gracePeriod * steps) / 2;
-    }
 
     public float GetIntervalLength(float bpm)
     {
@@ -32,7 +27,7 @@ public class Interval
     {
         BeatProgress = interval - lastInterval;
 
-        if(!BeatGrace && interval - lastInterval > 1f - gracePeriod)
+        if(!BeatGrace && interval - lastInterval > 1f - (gracePeriod * steps) / 2)
         {
             BeatGrace = true;
         }
@@ -44,7 +39,7 @@ public class Interval
             unityTrigger?.Invoke();
         }
 
-        if (BeatGrace && interval - lastInterval > 0f + gracePeriod)
+        if (BeatGrace && interval - lastInterval > 0f + (gracePeriod * steps) / 2)
         {
             BeatGrace = false;
         }

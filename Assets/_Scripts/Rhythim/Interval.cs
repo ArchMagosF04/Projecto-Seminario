@@ -13,7 +13,9 @@ public class Interval
     [SerializeField, Range(0.3f, 1f)] private float gracePeriod = 0.5f;
     [SerializeField, Range(0.25f, 2f)] private float steps;
     [SerializeField] private UnityEvent unityTrigger;
-    
+
+    public float BeatProgress { get; private set; }
+
     private int lastInterval;
 
     public Interval() 
@@ -28,6 +30,8 @@ public class Interval
 
     public void CheckForNewInterval(float interval)
     {
+        BeatProgress = interval - lastInterval;
+
         if(!BeatGrace && interval - lastInterval > 1f - gracePeriod)
         {
             BeatGrace = true;

@@ -4,55 +4,38 @@ using UnityEngine;
 
 public class BeatIndicator : MonoBehaviour
 {
-    //BeatHeart
-    [SerializeField] private Transform beatHeart;
-    [SerializeField] private float returnSpeed = 5f;
-    [SerializeField] private float pulseSize = 1.2f;
-    private Vector3 startSize;
-
     //BeatMarkers
     [SerializeField] private BeatMarker marker;
 
+    private Vector3 markerStartPos;
+
     private void Start()
     {
-        startSize = beatHeart.localScale;
+        float SPB = BeatManager.Instance.BPM / 60f;
+        markerStartPos = transform.position + new Vector3(8f * SPB, 0, 0);
         //SpawnInitialMarkers();
-    }
-
-    private void Update()
-    {
-        if (beatHeart.localScale != startSize) beatHeart.localScale = Vector3.Lerp(beatHeart.localScale, startSize, Time.deltaTime * returnSpeed);
     }
 
     private void OnEnable()
     {
-        BeatManager.Instance.OneBeat.OnBeatEvent += BeatPulse;
-        //BeatManager.Instance.OneBeat.OnBeatEvent += SpawnNewMarker;
+        BeatManager.Instance.OneBeat.OnBeatEvent += SpawnNewMarker;
     }
 
     private void OnDisable()
     {
-        BeatManager.Instance.OneBeat.OnBeatEvent -= BeatPulse;
-        //BeatManager.Instance.OneBeat.OnBeatEvent -= SpawnNewMarker;
-    }
-
-    public void BeatPulse()
-    {
-        beatHeart.localScale = startSize * pulseSize;
+        BeatManager.Instance.OneBeat.OnBeatEvent -= SpawnNewMarker;
     }
 
     private void SpawnInitialMarkers()
     {
         for (int i = 0; i < 3; i++)
         {
-            BeatMarker newMarker = Instantiate(marker, transform);
-            newMarker.transform.position += new Vector3(2f * i+1, 0f, 0f);
+            BeatMarker newMarker = Instantiate(marker, markerStartPos, Quaternion.identity, transform);
         }
     }
 
     private void SpawnNewMarker()
     {
-        BeatMarker newMarker = Instantiate(marker, transform);
-        newMarker.transform.position += new Vector3(2f * (60f / BeatManager.Instance.BPM), 0f, 0f);
+        BeatMarker newMarker = Instantiate(marker, markerStartPos, Quaternion.identity, transform);
     }
 }

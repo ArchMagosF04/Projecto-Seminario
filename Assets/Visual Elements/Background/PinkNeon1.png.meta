@@ -143,7 +143,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      PinkNeon1_0: -4815525220934111270
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

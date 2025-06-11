@@ -363,17 +363,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &148024092 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5873986429929538683, guid: 8f5825e5c6e148f41accb701353e8eaa, type: 3}
-  m_PrefabInstance: {fileID: 287331828}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d4ff2ccd3e87f2468ce5f6fa743fee0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &159300065
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,6 +415,7 @@ GameObject:
   m_Component:
   - component: {fileID: 211806909}
   - component: {fileID: 211806908}
+  - component: {fileID: 211806910}
   m_Layer: 0
   m_Name: Beat Manager
   m_TagString: Untagged
@@ -445,168 +435,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c140821b1b9a9d94fb2f34539f09925d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bpm: 115
-  audioSource: {fileID: 1051597474}
-  <OneBeat>k__BackingField:
-    <BeatGrace>k__BackingField: 0
-    gracePeriod: 0.3
-    steps: 1
-    unityTrigger:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1777462593}
-          m_TargetAssemblyTypeName: BeatDetector, Assembly-CSharp
-          m_MethodName: SetGracePeriod
-          m_Mode: 4
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0.3
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1777462593}
-          m_TargetAssemblyTypeName: BeatDetector, Assembly-CSharp
-          m_MethodName: ActivateBeatEffect
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 148024092}
-          m_TargetAssemblyTypeName: PulseToBeat, Assembly-CSharp
-          m_MethodName: Pulse
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  <TwoBeat>k__BackingField:
-    <BeatGrace>k__BackingField: 0
-    gracePeriod: 0.3
-    steps: 0.5
-    unityTrigger:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1827309540}
-          m_TargetAssemblyTypeName: BeatDetector, Assembly-CSharp
-          m_MethodName: SetGracePeriod
-          m_Mode: 4
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0.3
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1827309540}
-          m_TargetAssemblyTypeName: BeatDetector, Assembly-CSharp
-          m_MethodName: ActivateBeatEffect
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 369688222}
-          m_TargetAssemblyTypeName: PulseToBeat, Assembly-CSharp
-          m_MethodName: Pulse
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  <FourBeat>k__BackingField:
-    <BeatGrace>k__BackingField: 0
-    gracePeriod: 0.3
-    steps: 0.25
-    unityTrigger:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1212730468}
-          m_TargetAssemblyTypeName: BeatDetector, Assembly-CSharp
-          m_MethodName: SetGracePeriod
-          m_Mode: 4
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0.3
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1212730468}
-          m_TargetAssemblyTypeName: BeatDetector, Assembly-CSharp
-          m_MethodName: ActivateBeatEffect
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  <HalfBeat>k__BackingField:
-    <BeatGrace>k__BackingField: 0
-    gracePeriod: 0.3
-    steps: 2
-    unityTrigger:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 281182389}
-          m_TargetAssemblyTypeName: BeatDetector, Assembly-CSharp
-          m_MethodName: SetGracePeriod
-          m_Mode: 4
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0.3
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 281182389}
-          m_TargetAssemblyTypeName: BeatDetector, Assembly-CSharp
-          m_MethodName: ActivateBeatEffect
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 954524329}
-          m_TargetAssemblyTypeName: PulseToBeat, Assembly-CSharp
-          m_MethodName: Pulse
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!4 &211806909
 Transform:
   m_ObjectHideFlags: 0
@@ -622,6 +450,141 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &211806910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211806907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae537f84c9e605146ac444195669113a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <BPM>k__BackingField: 0
+  <AudioSource>k__BackingField: {fileID: 0}
+  BeatGracePeriod: 0
+  <OneBeat>k__BackingField:
+    gracePeriod: 0.5
+    steps: 0.25
+    unityTrigger:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1777462593}
+          m_TargetAssemblyTypeName: BeatDetector, Assembly-CSharp
+          m_MethodName: ActivateBeatEffect
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1777462593}
+          m_TargetAssemblyTypeName: BeatDetector, Assembly-CSharp
+          m_MethodName: SetGracePeriod
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0.4
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  <TwoBeat>k__BackingField:
+    gracePeriod: 0.5
+    steps: 0.25
+    unityTrigger:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1827309540}
+          m_TargetAssemblyTypeName: BeatDetector, Assembly-CSharp
+          m_MethodName: ActivateBeatEffect
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1827309540}
+          m_TargetAssemblyTypeName: BeatDetector, Assembly-CSharp
+          m_MethodName: SetGracePeriod
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0.4
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  <FourBeat>k__BackingField:
+    gracePeriod: 0.5
+    steps: 0.25
+    unityTrigger:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1212730468}
+          m_TargetAssemblyTypeName: BeatDetector, Assembly-CSharp
+          m_MethodName: ActivateBeatEffect
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1212730468}
+          m_TargetAssemblyTypeName: BeatDetector, Assembly-CSharp
+          m_MethodName: SetGracePeriod
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0.4
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  <HalfBeat>k__BackingField:
+    gracePeriod: 0.5
+    steps: 0.25
+    unityTrigger:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 281182389}
+          m_TargetAssemblyTypeName: BeatDetector, Assembly-CSharp
+          m_MethodName: ActivateBeatEffect
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 281182389}
+          m_TargetAssemblyTypeName: BeatDetector, Assembly-CSharp
+          m_MethodName: SetGracePeriod
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0.4
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &261384456
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,7 +644,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 8900093193088336276, guid: 7d026d0ac3edae8449946d005a86c864, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -922,9 +885,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1290890476351063447, guid: 8f5825e5c6e148f41accb701353e8eaa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1568808336796197041, guid: 8f5825e5c6e148f41accb701353e8eaa, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.25
+      value: -10.5
       objectReference: {fileID: 0}
     - target: {fileID: 1568808336796197041, guid: 8f5825e5c6e148f41accb701353e8eaa, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1052,9 +1019,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingLayerID: 779406755
+  m_SortingLayer: 3
+  m_SortingOrder: 2
   m_Sprite: {fileID: -4815525220934111270, guid: 3b7bbabf67f8e5c4f97dd39d0e861c9c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1258,17 +1225,6 @@ MonoBehaviour:
   beatDetector1: {fileID: 1777462593}
   beatDetector2: {fileID: 1212730468}
   beatDetector3: {fileID: 281182389}
---- !u!114 &369688222 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3884342072359028567, guid: 8f5825e5c6e148f41accb701353e8eaa, type: 3}
-  m_PrefabInstance: {fileID: 287331828}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d4ff2ccd3e87f2468ce5f6fa743fee0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &371770824
 GameObject:
   m_ObjectHideFlags: 0
@@ -2172,9 +2128,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingLayerID: 779406755
+  m_SortingLayer: 3
+  m_SortingOrder: 2
   m_Sprite: {fileID: 5115017640827833183, guid: 858191f3116dcb34ab225804fb23bfef, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2206,17 +2162,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 654179259163106858, guid: 16bc5078924fe8c46b9937fbed388f5c, type: 3}
   m_PrefabInstance: {fileID: 1430469541249992906}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &954524329 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4215188879141991917, guid: 8f5825e5c6e148f41accb701353e8eaa, type: 3}
-  m_PrefabInstance: {fileID: 287331828}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d4ff2ccd3e87f2468ce5f6fa743fee0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1031831106
 GameObject:
   m_ObjectHideFlags: 0
@@ -2448,9 +2393,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingLayerID: 779406755
+  m_SortingLayer: 3
+  m_SortingOrder: 2
   m_Sprite: {fileID: -653494745953656903, guid: e1e84558d05a9b1489011a09be3aae37, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2530,7 +2475,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1143457339
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2571,9 +2516,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingLayerID: 779406755
+  m_SortingLayer: 3
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 96a4153f893f0c649b9f9175eedbee6b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2945,9 +2890,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingLayerID: 779406755
+  m_SortingLayer: 3
+  m_SortingOrder: 2
   m_Sprite: {fileID: -2845362366965722094, guid: 96a4153f893f0c649b9f9175eedbee6b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

@@ -34,27 +34,27 @@ public class PlayerBeatManager : MonoBehaviour
         defaultColor = sprite.color;
     }
 
-    private void Update()
-    {
-        if (performedAction && !BeatManager.Instance.OneBeat.BeatGrace)
-        {
-            sprite.color = defaultColor;
-        }
-    }
+    //private void Update()
+    //{
+    //    if (performedAction && !BeatManager.Instance.OneBeat.BeatGrace)
+    //    {
+    //        sprite.color = defaultColor;
+    //    }
+    //}
 
-    public void OnBeatAction()
-    {
-        bool condition = BeatManager.Instance.OneBeat.BeatGrace;
+    //public void OnBeatAction()
+    //{
+    //    bool condition = BeatManager.Instance.OneBeat.BeatGrace;
 
-        if (condition)
-        {
-            sprite.color = correctColor;
-        }
-        else if(!condition)
-        {
-            sprite.color = wrongColor;
-        }
+    //    if (condition)
+    //    {
+    //        sprite.color = correctColor;
+    //    }
+    //    else if(!condition)
+    //    {
+    //        sprite.color = wrongColor;
+    //    }
 
-        performedAction = true;
-    }
+    //    performedAction = true;
+    //}
 }

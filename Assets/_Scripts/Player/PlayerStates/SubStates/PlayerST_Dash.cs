@@ -49,7 +49,7 @@ public class PlayerST_Dash : PlayerST_Ability
         CanDash = false;
         controller.InputHandler.UseDashInput();
 
-        PlayerBeatManager.Instance.OnBeatAction();
+        //PlayerBeatManager.Instance.OnBeatAction();
 
         CheckInvincibleDash();
 
@@ -125,7 +125,7 @@ public class PlayerST_Dash : PlayerST_Ability
 
     private void CheckInvincibleDash()
     {
-        if (BeatManager.Instance.OneBeat.BeatGrace)
+        if (BeatManager.Instance.BeatGracePeriod)
         {
             SoundManager.Instance.CreateSound().WithSoundData(controller.playerLibrary.soundData[1]).Play();
             

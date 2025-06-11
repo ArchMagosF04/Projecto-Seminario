@@ -12,11 +12,11 @@ public class BeatManager : MonoBehaviour
 
     private float SampledTime;
 
+    public bool BeatGracePeriod; //{ get; private set; }
     [field: SerializeField] public Interval OneBeat { get; private set; }
     [field: SerializeField] public Interval TwoBeat { get; private set; }
     [field: SerializeField] public Interval FourBeat { get; private set; }
     [field: SerializeField] public Interval HalfBeat { get; private set; }
-
 
     private void Awake()
     {
@@ -49,5 +49,10 @@ public class BeatManager : MonoBehaviour
             float sampledTime = (AudioSource.timeSamples / (AudioSource.clip.frequency * interval.GetIntervalLength(BPM)));
             interval.CheckForNewInterval(sampledTime);
         }
+    }
+
+    public void ToggleGracePeriod(bool value)
+    {
+        BeatGracePeriod = value;
     }
 }

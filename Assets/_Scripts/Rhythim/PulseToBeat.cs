@@ -32,16 +32,16 @@ public class PulseToBeat : MonoBehaviour
         transform.localScale = Vector3.Lerp(transform.localScale, startSize, Time.deltaTime * returnSpeed);
 
         if (!signalGracePeriod) return;
-        if (BeatManager.Instance.OneBeat.BeatGrace)
-        {
-            sprite.color = Color.white;
-            colorBackToNormal = false;
-        }
-        else if (!BeatManager.Instance.OneBeat.BeatGrace && !colorBackToNormal)
-        {
-            sprite.color = Color.black;
-            colorBackToNormal = true;
-        }
+        //if (BeatManager.Instance.OneBeat.BeatGrace)
+        //{
+        //    sprite.color = Color.white;
+        //    colorBackToNormal = false;
+        //}
+        //else if (!BeatManager.Instance.OneBeat.BeatGrace && !colorBackToNormal)
+        //{
+        //    sprite.color = Color.black;
+        //    colorBackToNormal = true;
+        //}
     }
 
     public void Pulse()

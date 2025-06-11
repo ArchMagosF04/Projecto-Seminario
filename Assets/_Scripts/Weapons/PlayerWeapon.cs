@@ -80,9 +80,9 @@ public class PlayerWeapon : MonoBehaviour
 
         isSpecialAttack = isSpecial;
 
-        PlayerBeatManager.Instance.OnBeatAction();
+        //PlayerBeatManager.Instance.OnBeatAction();
 
-        if (BeatManager.Instance.OneBeat.BeatGrace)
+        if (BeatManager.Instance.BeatGracePeriod)
         {
             isOnBeat = true;
             SoundManager.Instance.CreateSound().WithSoundData(weaponLibrary.soundData[0]).Play();

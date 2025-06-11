@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,9 @@ using UnityEngine;
 public class BeatManager : MonoBehaviour
 {
     public static BeatManager Instance;
+
+    public Action OnCorrectBeat;
+    public Action OnWrongBeat;
 
     [field: SerializeField] public float BPM { get; private set; }
     [field: SerializeField] public AudioSource AudioSource { get; private set; }
@@ -49,6 +53,12 @@ public class BeatManager : MonoBehaviour
             float sampledTime = (AudioSource.timeSamples / (AudioSource.clip.frequency * interval.GetIntervalLength(BPM)));
             interval.CheckForNewInterval(sampledTime);
         }
+    }
+
+    public void OnPlayerRhythmicAction()
+    {
+        if (BeatGracePeriod) OnCorrectBeat?.Invoke();
+        else OnWrongBeat?.Invoke();
     }
 
     public void ToggleGracePeriod(bool value)

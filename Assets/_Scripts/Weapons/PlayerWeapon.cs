@@ -80,7 +80,7 @@ public class PlayerWeapon : MonoBehaviour
 
         isSpecialAttack = isSpecial;
 
-        //PlayerBeatManager.Instance.OnBeatAction();
+        BeatManager.Instance.OnPlayerRhythmicAction();
 
         if (BeatManager.Instance.BeatGracePeriod)
         {

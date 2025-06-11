@@ -49,7 +49,7 @@ public class PlayerST_Dash : PlayerST_Ability
         CanDash = false;
         controller.InputHandler.UseDashInput();
 
-        //PlayerBeatManager.Instance.OnBeatAction();
+        BeatManager.Instance.OnPlayerRhythmicAction();
 
         CheckInvincibleDash();
 

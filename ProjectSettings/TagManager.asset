@@ -5,8 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - ParticleContainer
-  - Projectile
-  - Plataform
+  - BeatCenter
+  - BeatMarker
   layers:
   - Default
   - TransparentFX
@@ -20,9 +20,9 @@ TagManager:
   - Weapon
   - Enemies
   - Projectiles_Player
-  - Projectiles_Enemy
-  - Utilities
-  - Roof
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -41,8 +41,14 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 3218899877
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Enemies
+    uniqueID: 2205469349
     locked: 0
   - name: Player
     uniqueID: 1994613697
@@ -50,9 +56,6 @@ TagManager:
   - name: Projectiles
     uniqueID: 779406755
     locked: 0
-  - name: Enemies
-    uniqueID: 2205469349
-    locked: 0
-  - name: Background
-    uniqueID: 3218899877
+  - name: UI
+    uniqueID: 676550495
     locked: 0

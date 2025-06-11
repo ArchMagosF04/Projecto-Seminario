@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem.XR;
 
 public class PlayerWeapon : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class PlayerWeapon : MonoBehaviour
 
     #region Component References
     [field: SerializeField] public SO_WeaponData Data { get; private set; }
+    [field: SerializeField] public SoundLibraryObject weaponLibrary { get; private set; }
     public WeaponAnimationEventHandler EventHandler { get; private set; }
     public Core Core { get; private set; }
     public PlayerST_PrimeAttack state { get; private set; }
@@ -26,6 +28,7 @@ public class PlayerWeapon : MonoBehaviour
     [SerializeField] private float attackCounterResetCooldown;
 
     public bool isSpecialAttack { get; private set; }
+    public bool isOnBeat { get; private set; }
 
     public int CurrentAttackCounter
     {
@@ -77,6 +80,18 @@ public class PlayerWeapon : MonoBehaviour
 
         isSpecialAttack = isSpecial;
 
+        BeatManager.Instance.OnPlayerRhythmicAction();
+
+        if (BeatManager.Instance.BeatGracePeriod)
+        {
+            isOnBeat = true;
+            SoundManager.Instance.CreateSound().WithSoundData(weaponLibrary.soundData[0]).Play();
+        }
+        else
+        {
+            SoundManager.Instance.CreateSound().WithSoundData(weaponLibrary.soundData[1]).Play();
+        }
+
         OnEnter?.Invoke();
 
         anim.SetBool("Special", isSpecial);
@@ -89,6 +104,7 @@ public class PlayerWeapon : MonoBehaviour
         anim.SetBool("Active", false);
         anim.SetBool("Special", false);
         isSpecialAttack = false;
+        isOnBeat = false;
 
         attackCounterResetTimer.StartTimer();
 

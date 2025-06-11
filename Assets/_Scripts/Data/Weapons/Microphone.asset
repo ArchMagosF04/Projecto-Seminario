@@ -31,15 +31,20 @@ MonoBehaviour:
     <Velocity>k__BackingField: 4
   <DamageData>k__BackingField:
   - <Name>k__BackingField: Forward
-    <Amount>k__BackingField: 4
+    <Amount>k__BackingField: 3
+    <OnBeatMultipler>k__BackingField: 2
   - <Name>k__BackingField: Upward
-    <Amount>k__BackingField: 4
+    <Amount>k__BackingField: 3
+    <OnBeatMultipler>k__BackingField: 2
   - <Name>k__BackingField: Downward
-    <Amount>k__BackingField: 4
+    <Amount>k__BackingField: 3
+    <OnBeatMultipler>k__BackingField: 2
   - <Name>k__BackingField: Up-Diagonal
-    <Amount>k__BackingField: 4
+    <Amount>k__BackingField: 3
+    <OnBeatMultipler>k__BackingField: 2
   - <Name>k__BackingField: Down-Diagonal
-    <Amount>k__BackingField: 4
+    <Amount>k__BackingField: 3
+    <OnBeatMultipler>k__BackingField: 2
   <KnockbackData>k__BackingField:
   - <Name>k__BackingField: Forward
     <Angle>k__BackingField: {x: 1, y: 0}
@@ -63,6 +68,7 @@ MonoBehaviour:
   <SpecialDamageData>k__BackingField:
     <Name>k__BackingField: 
     <Amount>k__BackingField: 1
+    <OnBeatMultipler>k__BackingField: 3
   <SpecialKnockbackData>k__BackingField:
     <Name>k__BackingField: 
     <Angle>k__BackingField: {x: 1, y: 1}

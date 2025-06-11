@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,15 +7,20 @@ public class BeatManager : MonoBehaviour
 {
     public static BeatManager Instance;
 
-    [SerializeField] private float bpm;
-    [SerializeField] private AudioSource audioSource;
+    public Action OnCorrectBeat;
+    public Action OnWrongBeat;
+
+    [field: SerializeField] public float BPM { get; private set; }
+    [field: SerializeField] public AudioSource AudioSource { get; private set; }
     private Interval[] intervals = new Interval[4];
 
+    private float SampledTime;
+
+    public bool BeatGracePeriod; //{ get; private set; }
     [field: SerializeField] public Interval OneBeat { get; private set; }
     [field: SerializeField] public Interval TwoBeat { get; private set; }
     [field: SerializeField] public Interval FourBeat { get; private set; }
     [field: SerializeField] public Interval HalfBeat { get; private set; }
-
 
     private void Awake()
     {
@@ -40,11 +46,25 @@ public class BeatManager : MonoBehaviour
 
     private void Update()
     {
+        //SampledTime = (AudioSource.timeSamples / (AudioSource.clip.frequency * OneBeat.GetIntervalLength(BPM)));
+        //OneBeat.CheckForNewInterval(SampledTime);
+
         foreach (Interval interval in intervals)
         {
-            float sampledTime = (audioSource.timeSamples / (audioSource.clip.frequency * interval.GetIntervalLength(bpm)));
+            float sampledTime = (AudioSource.timeSamples / (AudioSource.clip.frequency * interval.GetIntervalLength(BPM)));
             interval.CheckForNewInterval(sampledTime);
         }
+    }
+
+    public void OnPlayerRhythmicAction()
+    {
+        if (BeatGracePeriod) OnCorrectBeat?.Invoke();
+        else OnWrongBeat?.Invoke();
+    }
+
+    public void ToggleGracePeriod(bool value)
+    {
+        BeatGracePeriod = value;
     }
 }
 

@@ -19,7 +19,7 @@ public class Stats : CoreComponent
 
     public void DecreaseHealth(float amount)
     {
-        currentHealth -= amount;
+        currentHealth = MathF.Round(currentHealth - amount);
 
         if (currentHealth <= 0)
         {

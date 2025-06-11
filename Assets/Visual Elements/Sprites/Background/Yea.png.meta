@@ -1,0 +1,889 @@
+fileFormatVersion: 2
+guid: 5bd7abd82b4888247912ca21c8e1a7c7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 689901400721174899
+    second: Yea_0
+  - first:
+      213: -1695986183990961136
+    second: Yea_1
+  - first:
+      213: 7472824330265907964
+    second: Yea_2
+  - first:
+      213: 8486711126745088524
+    second: Yea_3
+  - first:
+      213: 1666964725388590379
+    second: Yea_4
+  - first:
+      213: -9133901135240626056
+    second: Yea_5
+  - first:
+      213: -7966069790774157980
+    second: Yea_6
+  - first:
+      213: 259563920152606436
+    second: Yea_7
+  - first:
+      213: -1216812813984075071
+    second: Yea_8
+  - first:
+      213: -6774984336152372185
+    second: Yea_9
+  - first:
+      213: -667017837206491371
+    second: Yea_10
+  - first:
+      213: -717363511481386059
+    second: Yea_11
+  - first:
+      213: 1640128499400948207
+    second: Yea_12
+  - first:
+      213: 7883319846445562280
+    second: Yea_13
+  - first:
+      213: -916195798061142232
+    second: Yea_14
+  - first:
+      213: 3878448686188320379
+    second: Yea_15
+  - first:
+      213: 533224653291535542
+    second: Yea_16
+  - first:
+      213: 5744918516596602990
+    second: Yea_17
+  - first:
+      213: 6360878351817895042
+    second: Yea_18
+  - first:
+      213: 4249724968547853266
+    second: Yea_19
+  - first:
+      213: 2133856970959927093
+    second: Yea_20
+  - first:
+      213: 3612618540594394377
+    second: Yea_21
+  - first:
+      213: -6242125603532524728
+    second: Yea_22
+  - first:
+      213: 6615823785409551951
+    second: Yea_23
+  - first:
+      213: -7698398245096939648
+    second: Yea_24
+  - first:
+      213: 8663008169585471243
+    second: Yea_25
+  - first:
+      213: 4403539148849988390
+    second: Yea_26
+  - first:
+      213: 1894038956579728048
+    second: Yea_27
+  - first:
+      213: 3675932731733601615
+    second: Yea_28
+  - first:
+      213: 3200305300050324028
+    second: Yea_29
+  - first:
+      213: -7417869033170806527
+    second: Yea_30
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Yea_0
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 180
+        width: 35
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 371b7003ba5039900800000000000000
+      internalID: 689901400721174899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yea_1
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 184
+        width: 42
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01c9f372d85a678e0800000000000000
+      internalID: -1695986183990961136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yea_2
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 165
+        width: 134
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf2556ab22ec4b760800000000000000
+      internalID: 7472824330265907964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yea_3
+      rect:
+        serializedVersion: 2
+        x: 766
+        y: 195
+        width: 56
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c020ff42ecad6c570800000000000000
+      internalID: 8486711126745088524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yea_4
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 159
+        width: 110
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2db4e5f59f322710800000000000000
+      internalID: 1666964725388590379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yea_5
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 138
+        width: 123
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 870027c9f4ddd3180800000000000000
+      internalID: -9133901135240626056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yea_6
+      rect:
+        serializedVersion: 2
+        x: 1193
+        y: 220
+        width: 65
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46d9fe83bb5d27190800000000000000
+      internalID: -7966069790774157980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yea_7
+      rect:
+        serializedVersion: 2
+        x: 1452
+        y: 158
+        width: 96
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e6343992082a9300800000000000000
+      internalID: 259563920152606436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yea_8
+      rect:
+        serializedVersion: 2
+        x: 1558
+        y: 135
+        width: 73
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c2f55051330d1fe0800000000000000
+      internalID: -1216812813984075071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yea_9
+      rect:
+        serializedVersion: 2
+        x: 1589
+        y: 282
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72c5dc444ab6af1a0800000000000000
+      internalID: -6774984336152372185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yea_10
+      rect:
+        serializedVersion: 2
+        x: 1662
+        y: 107
+        width: 72
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51f2572afc64eb6f0800000000000000
+      internalID: -667017837206491371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yea_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 45
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bb3353efa96b06f0800000000000000
+      internalID: -717363511481386059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yea_12
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 146
+        width: 54
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe9b9c03e28e2c610800000000000000
+      internalID: 1640128499400948207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yea_13
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 166
+        width: 60
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a9bc2af1ad276d60800000000000000
+      internalID: 7883319846445562280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yea_14
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 109
+        width: 87
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82f2cdf96c40943f0800000000000000
+      internalID: -916195798061142232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yea_15
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 115
+        width: 142
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b76d5dbf78403d530800000000000000
+      internalID: 3878448686188320379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yea_16
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 122
+        width: 122
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bc3cec3ff4666700800000000000000
+      internalID: 533224653291535542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yea_17
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 146
+        width: 34
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e68fd45f3fc0abf40800000000000000
+      internalID: 5744918516596602990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yea_18
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 144
+        width: 82
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28ce39bd821664850800000000000000
+      internalID: 6360878351817895042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yea_19
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 166
+        width: 32
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d32767c75e0afa30800000000000000
+      internalID: 4249724968547853266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yea_20
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 164
+        width: 88
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 537be830c9bfc9d10800000000000000
+      internalID: 2133856970959927093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yea_21
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 182
+        width: 33
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9057e151c69922230800000000000000
+      internalID: 3612618540594394377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yea_22
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 133
+        width: 149
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 843b216f5d38f59a0800000000000000
+      internalID: -6242125603532524728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yea_23
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 128
+        width: 54
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4e9ae14ea020db50800000000000000
+      internalID: 6615823785409551951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yea_24
+      rect:
+        serializedVersion: 2
+        x: 1399
+        y: 142
+        width: 59
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08f918d759bc92590800000000000000
+      internalID: -7698398245096939648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yea_25
+      rect:
+        serializedVersion: 2
+        x: 1726
+        y: 121
+        width: 130
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0fe27a1800393870800000000000000
+      internalID: 8663008169585471243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yea_26
+      rect:
+        serializedVersion: 2
+        x: 1856
+        y: 119
+        width: 62
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 623cab166838c1d30800000000000000
+      internalID: 4403539148849988390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yea_27
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 174
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0baafad556af84a10800000000000000
+      internalID: 1894038956579728048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yea_28
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 121
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4d6635f759830330800000000000000
+      internalID: 3675932731733601615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yea_29
+      rect:
+        serializedVersion: 2
+        x: 1498
+        y: 135
+        width: 33
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3aac46e6b4c96c20800000000000000
+      internalID: 3200305300050324028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yea_30
+      rect:
+        serializedVersion: 2
+        x: 1704
+        y: 127
+        width: 32
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 109db777a6f6e0990800000000000000
+      internalID: -7417869033170806527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Yea_0: 689901400721174899
+      Yea_1: -1695986183990961136
+      Yea_10: -667017837206491371
+      Yea_11: -717363511481386059
+      Yea_12: 1640128499400948207
+      Yea_13: 7883319846445562280
+      Yea_14: -916195798061142232
+      Yea_15: 3878448686188320379
+      Yea_16: 533224653291535542
+      Yea_17: 5744918516596602990
+      Yea_18: 6360878351817895042
+      Yea_19: 4249724968547853266
+      Yea_2: 7472824330265907964
+      Yea_20: 2133856970959927093
+      Yea_21: 3612618540594394377
+      Yea_22: -6242125603532524728
+      Yea_23: 6615823785409551951
+      Yea_24: -7698398245096939648
+      Yea_25: 8663008169585471243
+      Yea_26: 4403539148849988390
+      Yea_27: 1894038956579728048
+      Yea_28: 3675932731733601615
+      Yea_29: 3200305300050324028
+      Yea_3: 8486711126745088524
+      Yea_30: -7417869033170806527
+      Yea_4: 1666964725388590379
+      Yea_5: -9133901135240626056
+      Yea_6: -7966069790774157980
+      Yea_7: 259563920152606436
+      Yea_8: -1216812813984075071
+      Yea_9: -6774984336152372185
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

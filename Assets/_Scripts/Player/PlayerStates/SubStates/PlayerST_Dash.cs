@@ -49,6 +49,8 @@ public class PlayerST_Dash : PlayerST_Ability
         CanDash = false;
         controller.InputHandler.UseDashInput();
 
+        BeatManager.Instance.OnPlayerRhythmicAction();
+
         CheckInvincibleDash();
 
         isHolding = true;
@@ -123,14 +125,19 @@ public class PlayerST_Dash : PlayerST_Ability
 
     private void CheckInvincibleDash()
     {
-        if (canInvincibleDash && BeatManager.Instance.OneBeat.BeatGrace)
+        if (BeatManager.Instance.BeatGracePeriod)
         {
-            Debug.Log("Invincible Dash");
-            damageReceiver.ToggleInvincibility(true);
-            knockBackReceiver.ToggleHyperArmor(true);
-            spriteColor.a = 0.5f;
-            controller.playerSprite.color = spriteColor;
-            isInvincible = true;
+            SoundManager.Instance.CreateSound().WithSoundData(controller.playerLibrary.soundData[1]).Play();
+            
+            if (canInvincibleDash)
+            {
+                damageReceiver.ToggleInvincibility(true);
+                knockBackReceiver.ToggleHyperArmor(true);
+                spriteColor.a = 0.5f;
+                controller.playerSprite.color = spriteColor;
+                isInvincible = true;
+                SoundManager.Instance.CreateSound().WithSoundData(controller.playerLibrary.soundData[0]).WithRandomPitch().Play();
+            }
         }
     }
 
@@ -138,6 +145,7 @@ public class PlayerST_Dash : PlayerST_Ability
     {
         if (isInvincible)
         {
+            isInvincible = false;
             damageReceiver.ToggleInvincibility(false);
             knockBackReceiver.ToggleHyperArmor(false);
             spriteColor.a = 1f;
@@ -152,7 +160,7 @@ public class PlayerST_Dash : PlayerST_Ability
         if (!canInvincibleDash)
         {
             beatsToInvincibleDash++;
-            if (beatsToInvincibleDash == 3)
+            if (beatsToInvincibleDash == 2)
             {
                 canInvincibleDash = true;
                 beatsToInvincibleDash = 0;

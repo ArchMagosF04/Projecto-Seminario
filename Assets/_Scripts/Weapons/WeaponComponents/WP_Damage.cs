@@ -31,13 +31,20 @@ public class WP_Damage : WeaponComponent
     private void HandleDamage()
     {
         AD_Damage data = WeaponData.DamageData[weapon.CurrentAttackCounter];
+        float multipler = 1f;
+        if (weapon.isOnBeat)
+        {
+            multipler = data.OnBeatMultipler;
+            Debug.Log("WeaponOnBeat");
+        }
+
         if (weapon.isSpecialAttack) data = WeaponData.SpecialDamageData;
 
         foreach (var item in hitbox.collider2Ds.ToList())
         {
             if (item.TryGetComponent(out IDamageable damageable))
             {
-                damageable.TakeDamage(data.Amount);
+                damageable.TakeDamage(data.Amount * multipler);
             }
 
             if(item.TryGetComponent(out HealthComponent healthComponent))

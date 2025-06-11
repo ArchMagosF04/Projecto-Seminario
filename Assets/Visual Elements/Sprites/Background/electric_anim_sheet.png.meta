@@ -120,6 +120,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -322,7 +335,16 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      electric_anim_sheet_0: -1963042733035483650
+      electric_anim_sheet_1: -1639819539622878171
+      electric_anim_sheet_2: -1581797914452754556
+      electric_anim_sheet_3: -2028330751816851826
+      electric_anim_sheet_4: -9043692291565173004
+      electric_anim_sheet_5: 2995794564103936752
+      electric_anim_sheet_6: -8718605911549882116
+      electric_anim_sheet_7: 5566235943518659897
+      electric_anim_sheet_8: -6906005018635426922
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

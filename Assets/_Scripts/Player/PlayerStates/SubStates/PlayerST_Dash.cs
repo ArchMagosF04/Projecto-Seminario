@@ -125,14 +125,19 @@ public class PlayerST_Dash : PlayerST_Ability
 
     private void CheckInvincibleDash()
     {
-        if (canInvincibleDash && BeatManager.Instance.OneBeat.BeatGrace)
+        if (BeatManager.Instance.OneBeat.BeatGrace)
         {
-            Debug.Log("Invincible Dash");
-            damageReceiver.ToggleInvincibility(true);
-            knockBackReceiver.ToggleHyperArmor(true);
-            spriteColor.a = 0.5f;
-            controller.playerSprite.color = spriteColor;
-            isInvincible = true;
+            SoundManager.Instance.CreateSound().WithSoundData(controller.playerLibrary.soundData[1]).Play();
+            
+            if (canInvincibleDash)
+            {
+                damageReceiver.ToggleInvincibility(true);
+                knockBackReceiver.ToggleHyperArmor(true);
+                spriteColor.a = 0.5f;
+                controller.playerSprite.color = spriteColor;
+                isInvincible = true;
+                SoundManager.Instance.CreateSound().WithSoundData(controller.playerLibrary.soundData[0]).WithRandomPitch().Play();
+            }
         }
     }
 

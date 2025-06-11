@@ -369,6 +369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Data>k__BackingField: {fileID: 11400000, guid: 3084d7e8061c7c343b04ba5e9915d52f, type: 2}
+  <weaponLibrary>k__BackingField: {fileID: 0}
   attackCounterResetCooldown: 0
 --- !u!1 &126469437
 GameObject:
@@ -842,6 +843,55 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathParticles: []
+--- !u!1 &406802326
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 406802327}
+  - component: {fileID: 406802328}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &406802327
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 406802326}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &406802328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 406802326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c823f670b87849947b126debe6ef6622, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEmitterPrefab: {fileID: 4562877821302370109, guid: fcba1fe1aefbf2a4ab41ee6ba2a82e53, type: 3}
+  collectionCheck: 1
+  defaultCapacity: 20
+  maxPoolSize: 100
+  maxSoundInstances: 30
 --- !u!1 &491740156
 GameObject:
   m_ObjectHideFlags: 0
@@ -4579,6 +4629,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Microphone
       objectReference: {fileID: 0}
+    - target: {fileID: 4038828438883892537, guid: c8539d51a6fe7434aa6333c86185c3e9, type: 3}
+      propertyPath: <weaponLibrary>k__BackingField
+      value: 
+      objectReference: {fileID: 11400000, guid: ac988426b4d19784098eb134909bb2de, type: 2}
     - target: {fileID: 7155797232096190500, guid: c8539d51a6fe7434aa6333c86185c3e9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -4761,6 +4815,7 @@ MonoBehaviour:
   - {fileID: 8845210435933236233}
   playerData: {fileID: 11400000, guid: d9408391b685a264b99ff08eb4cb0974, type: 2}
   weapon: {fileID: 7320273732929911271}
+  <playerLibrary>k__BackingField: {fileID: 11400000, guid: f547b194f39d91b439793734aa5bccc5, type: 2}
 --- !u!4 &7320273732929911266 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7155797232096190500, guid: c8539d51a6fe7434aa6333c86185c3e9, type: 3}
@@ -4956,3 +5011,4 @@ SceneRoots:
   - {fileID: 126469438}
   - {fileID: 149047278}
   - {fileID: 318935070}
+  - {fileID: 406802327}

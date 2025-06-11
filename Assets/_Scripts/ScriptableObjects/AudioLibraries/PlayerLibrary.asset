@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11b109b5fdb2cbc40805e57b54cb6154, type: 3}
+  m_Name: PlayerLibrary
+  m_EditorClassIdentifier: 
+  soundData:
+  - Id: Dash
+    Clip: {fileID: 8300000, guid: 6594c96a72be9b7458407614c9a43c94, type: 3}
+    MixerGroup: {fileID: -522563215728743215, guid: b8d78bfe791ff554bb28ad093872b0b4, type: 2}
+    Volume: 1
+    Loop: 0
+    PlayOnAwake: 0
+    IsFrequent: 0
+  - Id: OnBeat
+    Clip: {fileID: 8300000, guid: 584838b36ecb4144ea159e568ae59351, type: 3}
+    MixerGroup: {fileID: -522563215728743215, guid: b8d78bfe791ff554bb28ad093872b0b4, type: 2}
+    Volume: 1
+    Loop: 0
+    PlayOnAwake: 0
+    IsFrequent: 0
+  - Id: OffBeat
+    Clip: {fileID: 8300000, guid: 0b4c3d048cacd3d4fa6e1ae13de5c7e3, type: 3}
+    MixerGroup: {fileID: -522563215728743215, guid: b8d78bfe791ff554bb28ad093872b0b4, type: 2}
+    Volume: 1
+    Loop: 0
+    PlayOnAwake: 0
+    IsFrequent: 0

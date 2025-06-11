@@ -30,7 +30,8 @@ public class PlayerController : MonoBehaviour
     [field: SerializeField] public BoxCollider2D[] PlayerCollider { get; private set; }
 
     [SerializeField] private PlayerData playerData;
-    [SerializeField] protected PlayerWeapon weapon;
+    [SerializeField] private PlayerWeapon weapon;
+    [field: SerializeField] public SoundLibraryObject playerLibrary { get; private set; }
 
     #endregion
 

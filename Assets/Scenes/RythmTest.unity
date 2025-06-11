@@ -977,6 +977,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5681921882872358815, guid: 8f5825e5c6e148f41accb701353e8eaa, type: 3}
       insertIndex: -1
       addedObject: {fileID: 483112106}
+    - targetCorrespondingSourceObject: {fileID: 5681921882872358815, guid: 8f5825e5c6e148f41accb701353e8eaa, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 483112107}
   m_SourcePrefab: {fileID: 100100000, guid: 8f5825e5c6e148f41accb701353e8eaa, type: 3}
 --- !u!1 &296337532
 GameObject:
@@ -1453,6 +1456,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageParticles: {fileID: 0}
   healthBar: {fileID: 160272628}
+--- !u!114 &483112107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483112105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d330612beec315408e96719ad964378, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  healthbar: {fileID: 160272628}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -3363,7 +3380,6 @@ GameObject:
   - component: {fileID: 1652286528}
   - component: {fileID: 1652286529}
   - component: {fileID: 1652286530}
-  - component: {fileID: 1652286531}
   m_Layer: 10
   m_Name: Enemigo
   m_TagString: Untagged
@@ -3527,6 +3543,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  healthbar: {fileID: 1598795025}
 --- !u!114 &1652286528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3626,20 +3643,6 @@ MonoBehaviour:
   timeForTheNextRoll: 5
   enemyInfo: {fileID: 11400000, guid: 4fc03180364c9c6498947c9f4ee92b35, type: 2}
   hp: 100
---- !u!114 &1652286531
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1652286519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e0e71787f90b4041833f1b3ee60d201, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageParticles: {fileID: 0}
-  healthBar: {fileID: 1598795025}
 --- !u!1 &1777462592
 GameObject:
   m_ObjectHideFlags: 0

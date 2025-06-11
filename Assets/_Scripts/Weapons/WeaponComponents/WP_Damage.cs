@@ -39,6 +39,11 @@ public class WP_Damage : WeaponComponent
             {
                 damageable.TakeDamage(data.Amount);
             }
+
+            if(item.TryGetComponent(out HealthComponent healthComponent))
+            {
+                healthComponent.TakeDamage(data.Amount);
+            }
         }
     }
 

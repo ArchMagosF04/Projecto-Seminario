@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class HealthComponent : MonoBehaviour
 {
     [SerializeField]private float health = 0;
+    [SerializeField] private Image healthbar;
 
     public void TakeDamage(float damage)
     {
@@ -12,6 +14,7 @@ public class HealthComponent : MonoBehaviour
         {
             health -= damage;
             Debug.Log(damage);
+            healthbar.fillAmount -= damage/100;
         }
 
     }

@@ -18,7 +18,7 @@ public class Boss1NormalAttack<T> : State<T>
     private BeatDetector shootBeatDetector;
     private BeatDetector jumpBeatdetector;
 
-    private float timeToShoot = 0.4f;
+    private float timeToShoot = 1;
     private float timerToShoot;
     private bool beatEffect = false;
     private bool beatEffect2 = false;
@@ -164,8 +164,9 @@ public class Boss1NormalAttack<T> : State<T>
         Vector2 target = FindOpositePlataform().position;
         //moving = true;
         float impulse = (FindOpositePlataform().position - boss.transform.position).magnitude;
-        movementComponent.BossJump(target, enemyInfo.JumpForce + impulse / 1.60f);
-        movementComponent.Move(impulse / 1.55f, target);
+        movementComponent.Move(impulse / 1.1f, target);
+        movementComponent.BossJump(target, enemyInfo.JumpForce + impulse / 1.60f);        
+            
         Console.WriteLine("impulse was: " + impulse);
     }
 

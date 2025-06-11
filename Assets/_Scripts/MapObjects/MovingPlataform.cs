@@ -20,7 +20,10 @@ public class MovingPlataform : MonoBehaviour
     {
         foreach (GameObject passanger in passangers)
         {
-            passanger.GetComponent<Rigidbody2D>().velocity += rb.velocity;
+            if (passanger != null && passanger.GetComponent<Rigidbody2D>() != null)
+            {
+                passanger.GetComponent<Rigidbody2D>().velocity += rb.velocity;
+            }            
         }
     }
 

@@ -13,6 +13,7 @@ public class BossMovement : MonoBehaviour
     [SerializeField]private bool isGrounded;
     public bool IsGrounded { get { return isGrounded; } }
     [SerializeField] private bool isGroundAbove;
+    [SerializeField] private bool isGroundAbove2;
     [SerializeField] private float fallingSpeedModifier;
     private float currentFallingSpeed = 1;
     [SerializeField] float maxFallSpeed;
@@ -51,7 +52,8 @@ public class BossMovement : MonoBehaviour
     {
         //isGrounded = Physics2D.Raycast(transform.position, Vector2.down, 0.7f, ground);        
 
-        isGroundAbove = Physics2D.Raycast(transform.position, Vector2.up, 1f, ground);
+        isGroundAbove = Physics2D.Raycast(new Vector2(transform.position.x-0.5f, transform.position.y), Vector2.up, 1f, ground);
+        isGroundAbove2 = Physics2D.Raycast(new Vector2(transform.position.x + 0.5f, transform.position.y), Vector2.up, 1f, ground);
 
         if (!bossCollider.enabled)
         {
@@ -66,7 +68,7 @@ public class BossMovement : MonoBehaviour
             }
         }
 
-        if (isGroundAbove)
+        if (isGroundAbove || isGroundAbove2)
         {
             bossCollider.enabled = false;
         }

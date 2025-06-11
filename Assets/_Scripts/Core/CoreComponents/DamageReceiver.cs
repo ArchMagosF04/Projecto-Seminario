@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DamageReceiver : CoreComponent, IDamageable
 {
     [SerializeField] private GameObject damageParticles;
+    [SerializeField] private Image healthBar;
 
     public bool IsInvincible { get; private set; }
 
@@ -31,6 +33,7 @@ public class DamageReceiver : CoreComponent, IDamageable
         Debug.Log(core.transform.parent.name + " Damaged");
 
         stats.Comp?.DecreaseHealth(amount);
+        healthBar.fillAmount -= amount;
 
         //particleManager.Comp?.StartParticlesWithRandomRotation(damageParticles);
     }

@@ -45,6 +45,7 @@ MonoBehaviour:
   - <Name>k__BackingField: Down-Diagonal
     <Amount>k__BackingField: 3
     <OnBeatMultipler>k__BackingField: 2
+  <ManaGain>k__BackingField: 10
   <KnockbackData>k__BackingField:
   - <Name>k__BackingField: Forward
     <Angle>k__BackingField: {x: 1, y: 0}

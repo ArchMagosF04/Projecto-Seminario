@@ -10,6 +10,10 @@ public class MovingPlataform : MonoBehaviour
     [SerializeField] float speed = 1;  
     int index = 0;
     List<GameObject> passangers = new List<GameObject>();
+
+    private bool movingRight;
+    public bool MovingRight { get { return movingRight; } }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +29,8 @@ public class MovingPlataform : MonoBehaviour
                 passanger.GetComponent<Rigidbody2D>().velocity += rb.velocity;
             }            
         }
+
+        
     }
 
 
@@ -35,6 +41,7 @@ public class MovingPlataform : MonoBehaviour
         if ((checkpoints[index].position - transform.position).magnitude > 2)
         {
             transform.position += (checkpoints[index].position - transform.position).normalized * Time.deltaTime * speed;
+            
 
         }
         else
@@ -61,7 +68,22 @@ public class MovingPlataform : MonoBehaviour
                 passanger.transform.parent = transform;
             }
         }
-    }    
+
+        GetMovingDirection((checkpoints[index].position - transform.position).normalized);
+    }
+
+    private void GetMovingDirection(Vector3 NormalizedDirection)
+    {
+       float temp = Vector3.Cross(NormalizedDirection, Vector3.right).y;
+        if(temp > 0)
+        {
+            movingRight = true;
+        }
+        else if(temp < 0)
+        {
+            movingRight=false;
+        }
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

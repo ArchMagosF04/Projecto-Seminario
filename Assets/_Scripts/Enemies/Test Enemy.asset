@@ -22,7 +22,7 @@ MonoBehaviour:
   jumpforce: 3
   maxFallSpeed: 26
   atk: 5
-  specialAttackWeight: 12
+  specialAttackWeight: 10
   specialAttackmultiplier: 1.5
   specialAtkDuration: 8
   wavesSpawnInterval: 1

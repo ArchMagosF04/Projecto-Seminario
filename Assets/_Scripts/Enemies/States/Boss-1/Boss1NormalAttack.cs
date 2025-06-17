@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using Unity.Mathematics;
 
 public class Boss1NormalAttack<T> : State<T>
 {
@@ -161,11 +162,23 @@ public class Boss1NormalAttack<T> : State<T>
 
     private void SwitchPlataform()
     {
-        Vector2 target = FindOpositePlataform().position;
+        var target = FindOpositePlataform();
+        Vector3 targetPosition = target.position;
+        float impulse = 0;
         //moving = true;
-        float impulse = (FindOpositePlataform().position - boss.transform.position).magnitude;
-        movementComponent.Move(impulse / 1.1f, target);
-        movementComponent.BossJump(target, enemyInfo.JumpForce + impulse / 1.60f);        
+        if (target.gameObject.GetComponent<MovingPlataform>().MovingRight)
+        {
+            impulse = 1.5f;
+        }
+        else
+        {
+            impulse = -1.5f;
+        }
+
+        float distance = (target.position - boss.transform.position).magnitude;
+        Vector3 newPositon = new Vector3(target.position.x + impulse, targetPosition.y);
+        movementComponent.Move(distance, targetPosition);
+        movementComponent.BossJump(newPositon, enemyInfo.JumpForce + (distance/MathF.Abs(impulse)));        
             
         Console.WriteLine("impulse was: " + impulse);
     }

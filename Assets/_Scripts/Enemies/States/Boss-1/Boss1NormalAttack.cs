@@ -168,20 +168,42 @@ public class Boss1NormalAttack<T> : State<T>
         //moving = true;
         if (target.gameObject.GetComponent<MovingPlataform>().MovingRight)
         {
-            impulse = 1.5f;
+            impulse = 1.2f;
         }
         else
         {
-            impulse = -1.5f;
+            impulse = -1f;
         }
 
-        float distance = (target.position - boss.transform.position).magnitude;
+        
         Vector3 newPositon = new Vector3(target.position.x + impulse, targetPosition.y);
-        movementComponent.Move(distance, targetPosition);
-        movementComponent.BossJump(newPositon, enemyInfo.JumpForce + (distance/MathF.Abs(impulse)));        
-            
+        float distance = (newPositon - boss.transform.position).magnitude;
+
+        //movementComponent.BossJump(targetPosition, enemyInfo.JumpForce + (distance - Mathf.Abs(impulse+3.5f)));
+
+        //movementComponent.BossJump(targetPosition, enemyInfo.JumpForce + (distance - distance/4f));
+
+        //movementComponent.Move(distance/1.5f, targetPosition);
+
+        if (distance < 3)
+        {
+            movementComponent.BossJump(newPositon, enemyInfo.JumpForce + 1 + (distance / 1.5f));
+            movementComponent.Move(distance / 1.1f, targetPosition);
+        }
+        else
+        {
+            movementComponent.BossJump(newPositon, enemyInfo.JumpForce + 1f + (distance / 1.45f));
+            movementComponent.Move(distance, targetPosition);
+        }
+
+        //movementComponent.BossJump(newPositon, enemyInfo.JumpForce /*+ 1f*/ + (distance / 1.45f));
+        //movementComponent.Move(distance, targetPosition);
+
+        //movementComponent.BossJump(newPositon, enemyInfo.JumpForce + (distance / 1.5f));        
+
         Console.WriteLine("impulse was: " + impulse);
     }
+
 
     private protected float GetPlayerRalativeDirection()
     {

@@ -37,20 +37,20 @@ public abstract class EnemyBasicFunctions : MonoBehaviour
 
     protected virtual void chooseAtack()
     {
-        int temp = Random.Range(0, 100);
+        //int temp = Random.Range(0, 100);
 
-        if (techniquePoints >= enemyInfo.MaxTechniquePoints)
-        {
-            SecretTechnique();
-        }
-        else if (temp < enemyInfo.SpecialAttackWeight)
-        {
-            SpecialAttack();
-        }
-        else 
-        { 
-            BasicAttack();
-        }
+        //if (techniquePoints >= enemyInfo.MaxTechniquePoints)
+        //{
+        //    SecretTechnique();
+        //}
+        //else if (temp < enemyInfo.SpecialAttackWeight)
+        //{
+        //    SpecialAttack();
+        //}
+        //else 
+        //{ 
+        //    BasicAttack();
+        //}
         
     }
 

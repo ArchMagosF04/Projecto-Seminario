@@ -69,8 +69,16 @@ public class EnemyStats : ScriptableObject
 
 
 
-    [SerializeField] int maxTechniquePoints;
-    public int MaxTechniquePoints;
+    [SerializeField] float timeToUseTechnique;
+    public float TimeToUseTechnique { get { return timeToUseTechnique; } }
+
+    [SerializeField] float techniqueDuration;
+    public float TechniqueDuration { get { return techniqueDuration; } }
+
+    [SerializeField] private float techniqueDelayTime = 3;
+    public float TechniqueDelayTime { get { return techniqueDelayTime; } }
+
+
 
     [SerializeField] private List<GameObject> projectiles;
     public GameObject GetProyectile(int proyectileIndex) {  return projectiles[proyectileIndex];}

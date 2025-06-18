@@ -22,15 +22,16 @@ MonoBehaviour:
   jumpforce: 3
   maxFallSpeed: 26
   atk: 5
-  specialAttackWeight: 12
+  specialAttackWeight: 10
   specialAttackmultiplier: 1.5
   specialAtkDuration: 8
   wavesSpawnInterval: 1
   wavesGrowthSpeed: 5
   wavesMaxSize: 7
   specialDelayTime: 3
-  maxTechniquePoints: 0
-  MaxTechniquePoints: 0
+  timeToUseTechnique: 15
+  techniqueDuration: 10
+  techniqueDelayTime: 1
   projectiles:
   - {fileID: 5017142362319034512, guid: 3c50653082b6c694f8027cf99b7ef9a1, type: 3}
   - {fileID: 1363657723553904943, guid: 0b7d6f0a470283d41aafcfabe0fb27d2, type: 3}

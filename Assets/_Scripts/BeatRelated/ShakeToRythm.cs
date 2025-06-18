@@ -5,17 +5,21 @@ using UnityEngine;
 public class ShakeToRythm : MonoBehaviour
 {
     [SerializeField] BeatDetector beatDetector1;
-    [SerializeField] BeatDetector beatDetector2;
-    [SerializeField] BeatDetector beatDetector3;
-    private bool shakeUp;
-    private bool shakeDown;
+    [SerializeField] bool suscribeOnStart;
+    //[SerializeField] BeatDetector beatDetector2;
+    //[SerializeField] BeatDetector beatDetector3;
+    
     private Vector2 initialPos;
 
     // Start is called before the first frame update
     void Start()
     {
         initialPos = transform.position;
-        beatDetector1.OnBeat += BeatEffect;
+        if (suscribeOnStart)
+        {
+            beatDetector1.OnBeat += BeatEffect;
+        }
+        
         //beatDetector2.OnBeat += BeatEffect2;
         //beatDetector3.OnBeat += BeatEffect3;
 
@@ -28,17 +32,29 @@ public class ShakeToRythm : MonoBehaviour
     }
 
     private void BeatEffect(bool state)
-    {
-        shakeUp = state;
+    {        
         if (state == true)
         {
-            transform.position = new Vector2(transform.position.x, transform.position.y + 0.1f);
+            transform.position = new Vector2(transform.position.x +0.3f, transform.position.y + 0.3f);
         }
         else if (state == false)
         {
-            transform.position = new Vector2(transform.position.x, transform.position.y - 0.1f);
+            transform.position = initialPos;
         }
         
-    }    
+    }  
+    
+    public void ActivateShake(bool status, BeatDetector beatDetector)
+    {
+        if (status == true)
+        {
+            beatDetector.OnBeat += BeatEffect;
+        }
+        if (status == false)
+        {
+            beatDetector.OnBeat -= BeatEffect;
+        }
+        
+    }
 
 }

@@ -8,10 +8,12 @@ public class Boss1Controller : MonoBehaviour
 {
     [SerializeField] BossMovement movementController;
     [SerializeField] Transform centerStage;
+    [SerializeField] GameObject cameraToShake;
 
 
     GenericFSM<string> fsm;
     Boss1SpecialAttack<string> specialAttackState;
+    Boss1Technique<string> techniqueState;
     IState<string> normalAttackState;
 
     [SerializeField] private GameObject plataform1;
@@ -42,7 +44,11 @@ public class Boss1Controller : MonoBehaviour
     [SerializeField]private float hp;
     private protected float spd;
     private protected float atk;
-    private protected int techniquePoints;
+
+    public bool doingTechnique;
+    [SerializeField]private protected float techniqueTime;
+    private float techniqueCurrentDuration;
+    [SerializeField] GameObject playerAnchor;
 
     private void Awake()
     {
@@ -56,6 +62,7 @@ public class Boss1Controller : MonoBehaviour
         atk = enemyInfo.Atk;
 
         specialAttackState = new Boss1SpecialAttack<string>(movementController, centerStage, this.gameObject, enemyInfo, beatDetectors[0]);
+        techniqueState = new Boss1Technique<string>(movementController, centerStage, this.gameObject, plataform1, plataform2, enemyInfo, beatDetectors[3], cameraToShake, player, playerAnchor);
 
         InitializeFSM();
 
@@ -72,6 +79,11 @@ public class Boss1Controller : MonoBehaviour
     {
         fsm.OnUpdate();        
 
+        if (!doingTechnique)
+        {
+            techniqueTime += Time.deltaTime;
+        }
+
         if (specialAttackState.AtCenterStage && specialAtkTimer < enemyInfo.SpecialAtkDuration)
         {            
             specialAtkTimer += Time.deltaTime;
@@ -82,11 +94,23 @@ public class Boss1Controller : MonoBehaviour
             specialAtkTimer = 0;            
         }
 
-        if (currentTimeToMakeChoices < timeForTheNextRoll)
+        if (techniqueState.AtCenterStage && techniqueCurrentDuration < enemyInfo.TechniqueDuration)
+        {
+            techniqueCurrentDuration += Time.deltaTime;
+        }
+        else if (techniqueState.AtCenterStage && techniqueCurrentDuration >= enemyInfo.TechniqueDuration)
+        {
+            techniqueTime = 0;
+            techniqueCurrentDuration = 0;
+            doingTechnique = false;
+            RollAtk();            
+        }
+
+        if (currentTimeToMakeChoices < timeForTheNextRoll && !doingTechnique)
         {
             currentTimeToMakeChoices += Time.deltaTime;
         }
-        else
+        else if (currentTimeToMakeChoices >= timeForTheNextRoll && !doingTechnique)
         {
             RollAtk();
         }
@@ -99,30 +123,47 @@ public class Boss1Controller : MonoBehaviour
     private void InitializeFSM()
     {
         var _idle = new Boss1IdleState<string>();
+
         //var _specialAttack = new Boss1SpecialAttack<string>(movementController, centerStage, this.gameObject, enemyInfo);
+
         var _normalAttack = new Boss1NormalAttack<string>(player,plataform1, plataform2, movementController, this.gameObject, enemyInfo, beatDetectors[0], beatDetectors[2]);
 
         fsm = new GenericFSM<string>(_normalAttack);
         fsm.SetInitialState(_normalAttack);
 
         _normalAttack.AddTransition("specialAttack", specialAttackState);
+        _normalAttack.AddTransition("techniqueAttack", techniqueState);
+
         specialAttackState.AddTransition("normalAttack", _normalAttack);
+        specialAttackState.AddTransition("techniqueAttack", techniqueState);
+
+        techniqueState.AddTransition("specialAttack", specialAttackState);
+        techniqueState.AddTransition("normalAttack", _normalAttack);
     }
 
     private void RollAtk()
     {
-        int r = UnityEngine.Random.Range(1, 100);
-
-        Console.WriteLine("rolled a: " + r);
-
-        if (r < enemyInfo.SpecialAttackWeight)
+        if(techniqueTime >= enemyInfo.TimeToUseTechnique)
         {
-            fsm.ChangeState("specialAttack");
+            fsm.ChangeState("techniqueAttack");
+            doingTechnique = true;
         }
         else
         {
-            currentTimeToMakeChoices = 0;
-        }
+            int r = UnityEngine.Random.Range(1, 100);
+
+            Console.WriteLine("rolled a: " + r);
+
+            if (r < enemyInfo.SpecialAttackWeight)
+            {
+                fsm.ChangeState("specialAttack");
+            }
+            else
+            {
+                fsm.ChangeState("normalAttack");
+                currentTimeToMakeChoices = 0;
+            }
+        }        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

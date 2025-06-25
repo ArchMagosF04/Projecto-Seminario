@@ -2995,6 +2995,18 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 1359644854941497335, guid: ee08ddc4a989a5b4e98422a2c009e4cd, type: 3}
+      propertyPath: fallingSpeedModifier
+      value: 1.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 1442434624764983996, guid: ee08ddc4a989a5b4e98422a2c009e4cd, type: 3}
+      propertyPath: m_Mass
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1442434624764983996, guid: ee08ddc4a989a5b4e98422a2c009e4cd, type: 3}
+      propertyPath: m_LinearDrag
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3525699052787274622, guid: ee08ddc4a989a5b4e98422a2c009e4cd, type: 3}
       propertyPath: plataform1
       value: 

@@ -18,9 +18,9 @@ public class MainMenu : MonoBehaviour
         
     }
 
-    public void LoadLvlSelection(SceneAsset scene)
+    public void LoadLvlSelection(string sceneName)
     {
-        SceneManager.LoadScene(scene.name);
+        SceneManager.LoadScene(sceneName);
     }
 
     public void ShowOptionsMenu()
@@ -30,6 +30,6 @@ public class MainMenu : MonoBehaviour
 
     public void Quit()
     {
-        
+        Application.Quit();
     }
 }

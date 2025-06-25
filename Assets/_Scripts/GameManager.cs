@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private static List<PlayerWeapon> availableWeapons;
+    [SerializeField] private static List<GameObject> WeaponPrefabs;
+    [SerializeField] private static int availableWeapons=1;
     [SerializeField] int maxLevels;
     [SerializeField] int UnlockedLevels = 1;
 
@@ -13,7 +14,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        DontDestroyOnLoad(gameObject);
     }
 
     // Update is called once per frame
@@ -32,10 +33,10 @@ public class GameManager : MonoBehaviour
 
     public void UnlockWeapon(PlayerWeapon weapon)
     {
-        availableWeapons.Add(weapon);
+        availableWeapons += 1;
     }
 
-    public static List<PlayerWeapon> GetAvailableWeapons()
+    public static int GetAvailableWeapons()
     {
         return availableWeapons;
     }

@@ -10,12 +10,12 @@ public class LvlSelectionController : MonoBehaviour
     [SerializeField] Camera camera;
     [SerializeField] float cameraSpeed = 3;
     [SerializeField] GameObject[] worldMarkers;
-    [SerializeField] SceneAsset[] levels;
+    [SerializeField] String[] levels;
     private int index = 0;
 
     private bool levelSelected = false;
+    public static Action<bool> OnSelection = delegate { };    
     
-    public bool LevelSelected {  get { return levelSelected; } }
 
     // Start is called before the first frame update
     void Start()
@@ -46,9 +46,10 @@ public class LvlSelectionController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            if (levels[index] != null)
+            if (index < levels.Length && levels[index] != null)
             {
                 levelSelected = true;
+                OnSelection(levelSelected);
             }
             else
             {
@@ -59,6 +60,7 @@ public class LvlSelectionController : MonoBehaviour
         if(levelSelected && Input.GetKeyDown(KeyCode.Escape))
         {
             levelSelected=false;
+            OnSelection(levelSelected);
         }
 
         if(camera.transform.position != worldMarkers[index].transform.position)
@@ -72,7 +74,7 @@ public class LvlSelectionController : MonoBehaviour
     {
         if (levels[index] != null)
         {
-            SceneManager.LoadScene(levels[index].name);
+            SceneManager.LoadScene(levels[index]);
         }        
     }
 }

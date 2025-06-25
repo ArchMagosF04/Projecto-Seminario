@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: Test Enemy
   m_EditorClassIdentifier: 
   hp: 100
-  moveSpd: 12.5
+  moveSpd: 15
   acceleration: 8
   groundDetectionRayLength: 0.02
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
-  jumpforce: 3
+  jumpforce: 4
   maxFallSpeed: 26
-  atk: 5
-  specialAttackWeight: 10
+  atk: 3
+  specialAttackWeight: 20
   specialAttackmultiplier: 1.5
   specialAtkDuration: 8
   wavesSpawnInterval: 1
@@ -30,7 +30,7 @@ MonoBehaviour:
   wavesMaxSize: 7
   specialDelayTime: 3
   timeToUseTechnique: 15
-  techniqueDuration: 10
+  techniqueDuration: 6
   techniqueDelayTime: 1
   projectiles:
   - {fileID: 5017142362319034512, guid: 3c50653082b6c694f8027cf99b7ef9a1, type: 3}

@@ -9,26 +9,30 @@ public class WeaponSelectPannel : MonoBehaviour
     [SerializeField] GameObject[] weaponButtons;
     private int availableWeapons = 1;
 
-    
+    private bool buttonsHidden = false;
+    private bool buttonsShown = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        LvlSelectionController.OnSelection += ToggleWeaponPanel;
+        DeactivateButtons();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (controller.LevelSelected)
+        if (weaponSelectionPanel.activeSelf && !buttonsShown)
         {
-            weaponSelectionPanel.SetActive(true);
+            ActivateButtons();
+            buttonsShown = true;
         }
+       
     }
 
-    private void OnEnable()
+    private void ActivateButtons()
     {
-        availableWeapons = GameManager.GetAvailableWeapons().Count;
+        availableWeapons = GameManager.GetAvailableWeapons();
 
         for (int i =0;  i < availableWeapons; i++)
         {
@@ -36,16 +40,24 @@ public class WeaponSelectPannel : MonoBehaviour
         }
     }
 
-    private void OnDisable()
+    private void DeactivateButtons()
     {
         foreach (var weaponButton in weaponButtons)
         {
-            weaponButton.gameObject.SetActive(false);
+            if (weaponButton != null)
+            {
+                weaponButton.gameObject.SetActive(false);
+            }
         }
     }
 
     public void EquipSelectedWeapon(int weapon)
     {
         GameManager.EquipWeapon(weapon);
+    }
+
+    private void ToggleWeaponPanel(bool toggle)
+    {
+        weaponSelectionPanel.SetActive(toggle);
     }
 }

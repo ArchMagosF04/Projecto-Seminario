@@ -6,6 +6,8 @@ using Unity.Mathematics;
 
 public class Boss1NormalAttack<T> : State<T>
 {
+    [SerializeField] float dist;
+
     private GameObject player;
     private GameObject plataform1;
     private GameObject plataform2;
@@ -70,8 +72,10 @@ public class Boss1NormalAttack<T> : State<T>
                 {
                     boss.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0);
                 }
+                
+                movementComponent.BossJumpUp(Vector2.up, enemyInfo.JumpForce /** 1.34f*/);
+                //movementComponent.Move(enemyInfo.JumpForce, (targetPlataform.transform.position - boss.transform.position).normalized);
 
-                movementComponent.BossJumpUp(Vector2.up, enemyInfo.JumpForce * 1.34f);
             }
         }
     }
@@ -158,7 +162,7 @@ public class Boss1NormalAttack<T> : State<T>
         {
             return plataform1.transform;
         }
-    }   
+    }
 
     private void SwitchPlataform()
     {
@@ -168,38 +172,34 @@ public class Boss1NormalAttack<T> : State<T>
         //moving = true;
         if (target.gameObject.GetComponent<MovingPlataform>().MovingRight)
         {
-            impulse = 1.2f;
+            impulse = 1.7f;
         }
         else
         {
-            impulse = -1f;
+            impulse = -1.7f;
         }
 
-        
+
         Vector3 newPositon = new Vector3(target.position.x + impulse, targetPosition.y);
         float distance = (newPositon - boss.transform.position).magnitude;
+        //float distance2 = (targetPosition - boss.transform.position).magnitude;
+        float Hdistance = 0;
 
-        //movementComponent.BossJump(targetPosition, enemyInfo.JumpForce + (distance - Mathf.Abs(impulse+3.5f)));
-
-        //movementComponent.BossJump(targetPosition, enemyInfo.JumpForce + (distance - distance/4f));
-
-        //movementComponent.Move(distance/1.5f, targetPosition);
-
-        if (distance < 3)
+        if (distance < 14)
         {
-            movementComponent.BossJump(newPositon, enemyInfo.JumpForce + 1 + (distance / 1.5f));
-            movementComponent.Move(distance / 1.1f, targetPosition);
+            Hdistance = 5;
+        }        
+        if (distance > 21)
+        {
+            Hdistance = -8;
         }
-        else
+        if (distance > 18 && distance < 21)
         {
-            movementComponent.BossJump(newPositon, enemyInfo.JumpForce + 1f + (distance / 1.45f));
-            movementComponent.Move(distance, targetPosition);
+            Hdistance = -5;
         }
 
-        //movementComponent.BossJump(newPositon, enemyInfo.JumpForce /*+ 1f*/ + (distance / 1.45f));
-        //movementComponent.Move(distance, targetPosition);
+        movementComponent.Jump(enemyInfo.JumpForce + distance, targetPosition.normalized, distance + impulse + enemyInfo.JumpForce*1.2f + Hdistance); //works well
 
-        //movementComponent.BossJump(newPositon, enemyInfo.JumpForce + (distance / 1.5f));        
 
         Console.WriteLine("impulse was: " + impulse);
     }

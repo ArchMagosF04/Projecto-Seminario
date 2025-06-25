@@ -13,6 +13,10 @@ public class LvlSelectionController : MonoBehaviour
     [SerializeField] SceneAsset[] levels;
     private int index = 0;
 
+    private bool levelSelected = false;
+    
+    public bool LevelSelected {  get { return levelSelected; } }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +28,7 @@ public class LvlSelectionController : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
         {
-            if(index < worldMarkers.Length)
+            if(index < worldMarkers.Length-1)
             {
                 index += 1;
             }
@@ -44,7 +48,7 @@ public class LvlSelectionController : MonoBehaviour
         {
             if (levels[index] != null)
             {
-                SceneManager.LoadScene(levels[index].name);
+                levelSelected = true;
             }
             else
             {
@@ -52,10 +56,23 @@ public class LvlSelectionController : MonoBehaviour
             }
         }
 
+        if(levelSelected && Input.GetKeyDown(KeyCode.Escape))
+        {
+            levelSelected=false;
+        }
+
         if(camera.transform.position != worldMarkers[index].transform.position)
         {            
             Vector2 temp = (worldMarkers[index].transform.position - camera.transform.position).normalized;
             camera.transform.Translate(temp * Time.deltaTime * cameraSpeed);
         }
+    }
+
+    public void LoadLevel()
+    {
+        if (levels[index] != null)
+        {
+            SceneManager.LoadScene(levels[index].name);
+        }        
     }
 }

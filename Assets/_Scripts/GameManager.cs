@@ -4,45 +4,42 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private static List<GameObject> WeaponPrefabs;
-    [SerializeField] private static int availableWeapons=1;
-    [SerializeField] int maxLevels;
-    [SerializeField] int UnlockedLevels = 1;
+    public static GameManager Instance;
 
-    public int weaponSelected;
+    [SerializeField] private GameObject pauseScreen;
 
-    // Start is called before the first frame update
-    void Start()
+    public bool IsGamePaused { get; private set; }
+
+    private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void UnlockNextLevel()
-    {
-        if(UnlockedLevels < maxLevels)
+        if (Instance == null)
         {
-            UnlockedLevels += 1;
+            Instance = this;
         }
+        else if (Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        BeatManager.Instance.ToggleMusic(true);
+        pauseScreen.SetActive(false);
     }
 
-    public void UnlockWeapon(PlayerWeapon weapon)
+    public void PauseMenu(bool input)
     {
-        availableWeapons += 1;
-    }
-
-    public static int GetAvailableWeapons()
-    {
-        return availableWeapons;
-    }
-
-    public static void EquipWeapon(int weaponIndex)
-    {
-        // PlayerWeapon
+        IsGamePaused = input;
+        if (input)
+        {
+            pauseScreen.SetActive(true);
+            BeatManager.Instance.ToggleMusic(false);
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            pauseScreen.SetActive(false);
+            Time.timeScale = 1f;
+            BeatManager.Instance.ToggleMusic(true);
+        }
     }
 }

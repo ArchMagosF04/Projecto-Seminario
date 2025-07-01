@@ -5,11 +5,13 @@ using UnityEngine;
 public class PlayerST_SecAttack : PlayerST_Ability
 {
     private PlayerWeapon weapon;
+    private Mana manaComponent;
 
     public PlayerST_SecAttack(PlayerController controller, StateMachine stateMachine, PlayerData playerData,
         string animBoolName, PlayerWeapon weapon) : base(controller, stateMachine, playerData, animBoolName)
     {
         this.weapon = weapon;
+        manaComponent = controller.Core.GetCoreComponent<Mana>();
         weapon.OnExit += ExitHandler;
     }
 
@@ -29,9 +31,11 @@ public class PlayerST_SecAttack : PlayerST_Ability
 
     public bool CanPerformSpecialAttack()
     {
-        //TO DO
+        if (manaComponent.isManaFull) return true;
 
-        return true;
+        controller.InputHandler.UseSecondaryAttackInput();
+
+        return false;
     }
 
     private void ExitHandler()

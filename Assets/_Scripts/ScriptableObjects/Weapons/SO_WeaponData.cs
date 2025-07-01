@@ -13,6 +13,7 @@ public class SO_WeaponData : ScriptableObject
 
     [Header("Weapon Damage")]
     [field: SerializeField] public AD_Damage[] DamageData { get; private set; }
+    [field: SerializeField] public float ManaGain { get; private set; } 
 
     [Header("Weapon Knockback")]
     [field: SerializeField] public AD_Knockback[] KnockbackData { get; set; }

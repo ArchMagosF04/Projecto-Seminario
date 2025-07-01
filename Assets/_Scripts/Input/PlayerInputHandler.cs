@@ -51,6 +51,8 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void OnPrimaryAttackInput(InputAction.CallbackContext context)
     {
+        if (GameManager.Instance.IsGamePaused) return;
+
         if (context.started)
         {
             PrimaryAttackInput = true;
@@ -65,6 +67,8 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void OnSecondaryAttackInput(InputAction.CallbackContext context)
     {
+        if (GameManager.Instance.IsGamePaused) return;
+
         if (context.started)
         {
             SecondaryAttackInput = true;
@@ -79,6 +83,8 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void OnMoveInput(InputAction.CallbackContext context)
     {
+        if (GameManager.Instance.IsGamePaused) return;
+
         RawMovementInput = context.ReadValue<Vector2>();
 
         NormInputX = Mathf.RoundToInt(RawMovementInput.x);
@@ -87,6 +93,8 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void OnCrouchInput(InputAction.CallbackContext context)
     {
+        if (GameManager.Instance.IsGamePaused) return;
+
         if (context.started)
         {
             CrouchInput = true;
@@ -100,6 +108,8 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void OnDashInput(InputAction.CallbackContext context)
     {
+        if (GameManager.Instance.IsGamePaused) return;
+
         if (context.started)
         {
             DashInput = true;
@@ -114,6 +124,8 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void OnJumpInput(InputAction.CallbackContext context)
     {
+        if (GameManager.Instance.IsGamePaused) return;
+
         if (context.started)
         {
             JumpInput = true;
@@ -128,16 +140,18 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void OnPauseInput(InputAction.CallbackContext context)
     {
-        if (context.started) Application.Quit();
+        if (context.started) GameManager.Instance.PauseMenu(!GameManager.Instance.IsGamePaused);
     }
 
     public void OnResetInput(InputAction.CallbackContext context)
     {
-        if (context.started) SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //if (context.started) SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void OnDashDirectionInput(InputAction.CallbackContext context)
     {
+        if (GameManager.Instance.IsGamePaused) return;
+
         RawDashDirectionInput = context.ReadValue<Vector2>();
 
         DashDirectionInput = Vector2Int.RoundToInt(RawDashDirectionInput.normalized);

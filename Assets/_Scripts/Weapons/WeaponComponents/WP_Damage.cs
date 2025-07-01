@@ -45,11 +45,13 @@ public class WP_Damage : WeaponComponent
             if (item.TryGetComponent(out IDamageable damageable))
             {
                 damageable.TakeDamage(data.Amount * multipler);
+                if (weapon.isOnBeat && !weapon.isSpecialAttack) weapon.manaComponent.IncreaseMana(WeaponData.ManaGain);
             }
 
             if(item.TryGetComponent(out HealthComponent healthComponent))
             {
                 healthComponent.TakeDamage(data.Amount);
+                if (weapon.isOnBeat && !weapon.isSpecialAttack) weapon.manaComponent.IncreaseMana(WeaponData.ManaGain);
             }
         }
     }

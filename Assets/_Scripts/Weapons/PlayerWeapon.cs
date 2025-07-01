@@ -17,6 +17,7 @@ public class PlayerWeapon : MonoBehaviour
     public WeaponAnimationEventHandler EventHandler { get; private set; }
     public Core Core { get; private set; }
     public PlayerST_PrimeAttack state { get; private set; }
+    public Mana manaComponent { get; private set; }
 
     private Animator anim;
     private Timer attackCounterResetTimer;
@@ -46,7 +47,7 @@ public class PlayerWeapon : MonoBehaviour
         anim = GetComponentInChildren<Animator>();
         EventHandler = GetComponentInChildren<WeaponAnimationEventHandler>();
 
-        attackCounterResetTimer = new Timer(attackCounterResetCooldown);
+        attackCounterResetTimer = new Timer(attackCounterResetCooldown);   
     }
 
     private void Update()
@@ -66,7 +67,12 @@ public class PlayerWeapon : MonoBehaviour
         attackCounterResetTimer.OnTimerDone -= ResetAttackCounter;
     }
 
-    public void SetCore(Core core) => Core = core;
+    public void SetCore(Core core)
+    {
+        Core = core;
+
+        manaComponent = Core.GetCoreComponent<Mana>();
+    }
     public void SetState(PlayerST_PrimeAttack state) => this.state = state;
 
     private void ResetAttackCounter() => CurrentAttackCounter = 0;
@@ -93,6 +99,8 @@ public class PlayerWeapon : MonoBehaviour
         }
 
         OnEnter?.Invoke();
+
+        if (isSpecial && manaComponent.isManaFull) manaComponent.UseMana();
 
         anim.SetBool("Special", isSpecial);
         anim.SetBool("Active", true);

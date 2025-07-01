@@ -10,13 +10,6 @@ public class PulseToBeat : MonoBehaviour
     [SerializeField] private bool signalGracePeriod;
 
     private Vector3 startSize;
-    private SpriteRenderer sprite;
-    private bool colorBackToNormal = true;
-
-    private void Awake()
-    {
-        sprite = GetComponent<SpriteRenderer>();
-    }
 
     private void Start()
     {

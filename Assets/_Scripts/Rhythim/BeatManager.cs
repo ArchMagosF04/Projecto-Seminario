@@ -41,11 +41,18 @@ public class BeatManager : MonoBehaviour
         intervals[1] = TwoBeat;
         intervals[2] = FourBeat;
         intervals[3] = HalfBeat;       
-        
+    }
+
+    public void ToggleMusic(bool input)
+    {
+        if (input) AudioSource.Play();
+        else AudioSource.Pause();
     }
 
     private void Update()
     {
+        if (!AudioSource.isPlaying) return;
+
         //SampledTime = (AudioSource.timeSamples / (AudioSource.clip.frequency * OneBeat.GetIntervalLength(BPM)));
         //OneBeat.CheckForNewInterval(SampledTime);
 

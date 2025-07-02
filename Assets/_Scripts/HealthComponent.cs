@@ -8,6 +8,7 @@ public class HealthComponent : MonoBehaviour
     [SerializeField]private float health = 0;
     [SerializeField] private Image healthbar;
 
+    public System.Action OnDeath = delegate { };
     public void TakeDamage(float damage)
     {
         if (health > 0)
@@ -15,6 +16,10 @@ public class HealthComponent : MonoBehaviour
             health -= damage;
             Debug.Log(damage);
             healthbar.fillAmount -= damage/100;
+        }
+        else if (health <= 0)
+        {
+            OnDeath();
         }
 
     }

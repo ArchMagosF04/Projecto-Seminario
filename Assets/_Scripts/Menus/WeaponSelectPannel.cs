@@ -32,7 +32,7 @@ public class WeaponSelectPannel : MonoBehaviour
 
     private void ActivateButtons()
     {
-        availableWeapons = GameManager.GetAvailableWeapons();
+        //availableWeapons = GameManager.GetAvailableWeapons();
 
         for (int i =0;  i < availableWeapons; i++)
         {
@@ -53,7 +53,7 @@ public class WeaponSelectPannel : MonoBehaviour
 
     public void EquipSelectedWeapon(int weapon)
     {
-        GameManager.EquipWeapon(weapon);
+        //GameManager.EquipWeapon(weapon);
     }
 
     private void ToggleWeaponPanel(bool toggle)

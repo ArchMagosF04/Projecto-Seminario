@@ -19,7 +19,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
-  jumpforce: 4
+  jumpforce: 3
   maxFallSpeed: 26
   atk: 3
   specialAttackWeight: 20
@@ -29,7 +29,7 @@ MonoBehaviour:
   wavesGrowthSpeed: 5
   wavesMaxSize: 7
   specialDelayTime: 3
-  timeToUseTechnique: 15
+  timeToUseTechnique: 52
   techniqueDuration: 6
   techniqueDelayTime: 1
   projectiles:

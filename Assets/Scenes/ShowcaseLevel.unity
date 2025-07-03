@@ -4414,10 +4414,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -2411039567873315589, guid: b8d78bfe791ff554bb28ad093872b0b4, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 38925e24dff2e444db6e3a73def07c35, type: 3}
-  m_Resource: {fileID: 8300000, guid: 38925e24dff2e444db6e3a73def07c35, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 9a028f24152dc18498334f16f934b7a3, type: 3}
+  m_Resource: {fileID: 8300000, guid: 9a028f24152dc18498334f16f934b7a3, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.65
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -4528,7 +4528,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae537f84c9e605146ac444195669113a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <BPM>k__BackingField: 115
+  <BPM>k__BackingField: 99
   <AudioSource>k__BackingField: {fileID: 1549287341}
   BeatGracePeriod: 0
   <OneBeat>k__BackingField:

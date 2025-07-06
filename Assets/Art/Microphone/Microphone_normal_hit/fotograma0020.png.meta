@@ -1,0 +1,2418 @@
+fileFormatVersion: 2
+guid: 2e365b725af4bc8438fc3f3c24ebda51
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2340537979653635916
+    second: fotograma0020_0
+  - first:
+      213: -3018757175731722916
+    second: fotograma0020_1
+  - first:
+      213: -8364312687957406654
+    second: fotograma0020_2
+  - first:
+      213: -6387208060648243569
+    second: fotograma0020_3
+  - first:
+      213: 5027131555612839978
+    second: fotograma0020_4
+  - first:
+      213: 1879465389832067053
+    second: fotograma0020_5
+  - first:
+      213: -2525976458309009455
+    second: fotograma0020_6
+  - first:
+      213: 6630924353573569871
+    second: fotograma0020_7
+  - first:
+      213: -2266585879616835758
+    second: fotograma0020_8
+  - first:
+      213: 2208183145635179347
+    second: fotograma0020_9
+  - first:
+      213: 2315768999886565630
+    second: fotograma0020_10
+  - first:
+      213: 1785267387730814744
+    second: fotograma0020_11
+  - first:
+      213: 5800917893872599843
+    second: fotograma0020_12
+  - first:
+      213: -7383887309630929027
+    second: fotograma0020_13
+  - first:
+      213: 3548288270286452375
+    second: fotograma0020_14
+  - first:
+      213: 6888725891151783073
+    second: fotograma0020_15
+  - first:
+      213: -6175668962203571031
+    second: fotograma0020_16
+  - first:
+      213: -1320497310343470404
+    second: fotograma0020_17
+  - first:
+      213: -165958299912347744
+    second: fotograma0020_18
+  - first:
+      213: 9084046098749626284
+    second: fotograma0020_19
+  - first:
+      213: 1930108676327216005
+    second: fotograma0020_20
+  - first:
+      213: -7100666264821609206
+    second: fotograma0020_21
+  - first:
+      213: 2733749972965992205
+    second: fotograma0020_22
+  - first:
+      213: 3278108771459900787
+    second: fotograma0020_23
+  - first:
+      213: 3295652246774376511
+    second: fotograma0020_24
+  - first:
+      213: -4284795534266644426
+    second: fotograma0020_25
+  - first:
+      213: -6859673360491370855
+    second: fotograma0020_26
+  - first:
+      213: -7677900102605043691
+    second: fotograma0020_27
+  - first:
+      213: -4182975277092408450
+    second: fotograma0020_28
+  - first:
+      213: -1151557319115124197
+    second: fotograma0020_29
+  - first:
+      213: -7717424838715159744
+    second: fotograma0020_30
+  - first:
+      213: -1900081407245032780
+    second: fotograma0020_31
+  - first:
+      213: -7670669328958737524
+    second: fotograma0020_32
+  - first:
+      213: 560968466026225821
+    second: fotograma0020_33
+  - first:
+      213: -1695617825458682494
+    second: fotograma0020_34
+  - first:
+      213: 2539694124601094772
+    second: fotograma0020_35
+  - first:
+      213: 9154150176495304931
+    second: fotograma0020_36
+  - first:
+      213: 8335180875189380395
+    second: fotograma0020_37
+  - first:
+      213: -2742119275494387703
+    second: fotograma0020_38
+  - first:
+      213: 4367183512532105955
+    second: fotograma0020_39
+  - first:
+      213: -6273775416696051438
+    second: fotograma0020_40
+  - first:
+      213: 5473959864237021625
+    second: fotograma0020_41
+  - first:
+      213: -4169772489993259957
+    second: fotograma0020_42
+  - first:
+      213: 2575832081265176025
+    second: fotograma0020_43
+  - first:
+      213: 456643659305218937
+    second: fotograma0020_44
+  - first:
+      213: 2840334282442388281
+    second: fotograma0020_45
+  - first:
+      213: -3869322552268125677
+    second: fotograma0020_46
+  - first:
+      213: 7645086609507501696
+    second: fotograma0020_47
+  - first:
+      213: 9156054803724763751
+    second: fotograma0020_48
+  - first:
+      213: -1642805546001762540
+    second: fotograma0020_49
+  - first:
+      213: 4454307379272357657
+    second: fotograma0020_50
+  - first:
+      213: 7592131913229442193
+    second: fotograma0020_51
+  - first:
+      213: 1038151549602720735
+    second: fotograma0020_52
+  - first:
+      213: -6080047186349625871
+    second: fotograma0020_53
+  - first:
+      213: 495713335167479223
+    second: fotograma0020_54
+  - first:
+      213: 1915469296631541771
+    second: fotograma0020_55
+  - first:
+      213: 4306680635213996526
+    second: fotograma0020_56
+  - first:
+      213: -4901140272999409854
+    second: fotograma0020_57
+  - first:
+      213: 5799549414884622930
+    second: fotograma0020_58
+  - first:
+      213: 2637190025511231246
+    second: fotograma0020_59
+  - first:
+      213: -4148676334429542455
+    second: fotograma0020_60
+  - first:
+      213: 1838760992475109726
+    second: fotograma0020_61
+  - first:
+      213: -6737433327334928911
+    second: fotograma0020_62
+  - first:
+      213: 8382467256354192678
+    second: fotograma0020_63
+  - first:
+      213: -5457549122967538230
+    second: fotograma0020_64
+  - first:
+      213: -2150768328672451372
+    second: fotograma0020_65
+  - first:
+      213: -2696699802809173688
+    second: fotograma0020_66
+  - first:
+      213: -8554702093102153762
+    second: fotograma0020_67
+  - first:
+      213: -4229629483924501430
+    second: fotograma0020_68
+  - first:
+      213: 2647923829438043754
+    second: fotograma0020_69
+  - first:
+      213: 4802184458414907381
+    second: fotograma0020_70
+  - first:
+      213: -4167048893949768541
+    second: fotograma0020_71
+  - first:
+      213: -6391414076304405307
+    second: fotograma0020_72
+  - first:
+      213: 8795224348653837272
+    second: fotograma0020_73
+  - first:
+      213: -3429692722852962524
+    second: fotograma0020_74
+  - first:
+      213: -4444176012172486859
+    second: fotograma0020_75
+  - first:
+      213: -7779918569727524390
+    second: fotograma0020_76
+  - first:
+      213: 1228133764311938388
+    second: fotograma0020_77
+  - first:
+      213: -3465188393073002814
+    second: fotograma0020_78
+  - first:
+      213: -3060424549783286882
+    second: fotograma0020_79
+  - first:
+      213: 8126881518909648886
+    second: fotograma0020_80
+  - first:
+      213: -5754090867990402949
+    second: fotograma0020_81
+  - first:
+      213: -2881071877704628200
+    second: fotograma0020_82
+  - first:
+      213: -770296452813632724
+    second: fotograma0020_83
+  - first:
+      213: -7201121369428475775
+    second: fotograma0020_84
+  - first:
+      213: -2478209602110684059
+    second: fotograma0020_85
+  - first:
+      213: 7405070327333477931
+    second: fotograma0020_86
+  - first:
+      213: -5709407399566699372
+    second: fotograma0020_87
+  - first:
+      213: -1658811338302501277
+    second: fotograma0020_88
+  - first:
+      213: -6150430466931805082
+    second: fotograma0020_89
+  - first:
+      213: 3554804636992682795
+    second: fotograma0020_90
+  - first:
+      213: 808417138707027290
+    second: fotograma0020_91
+  - first:
+      213: -6534173478996237599
+    second: fotograma0020_92
+  - first:
+      213: 6487846616589881484
+    second: fotograma0020_93
+  - first:
+      213: -8202285192878629239
+    second: fotograma0020_94
+  - first:
+      213: 153412208581363105
+    second: fotograma0020_95
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fotograma0020_0
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 322
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b04f63bb1db48fd0800000000000000
+      internalID: -2340537979653635916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_1
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 322
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c55695db7583b16d0800000000000000
+      internalID: -3018757175731722916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_2
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 322
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24c81042dedfbeb80800000000000000
+      internalID: -8364312687957406654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_3
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 322
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8ebc861c141c57a0800000000000000
+      internalID: -6387208060648243569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_4
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 322
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a20d573d385f3c540800000000000000
+      internalID: 5027131555612839978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_5
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 321
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de7d49070d3351a10800000000000000
+      internalID: 1879465389832067053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_6
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 321
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dffd7b5bcde1fcd0800000000000000
+      internalID: -2525976458309009455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_7
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 321
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f454d334196c50c50800000000000000
+      internalID: 6630924353573569871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_8
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 321
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25fa580c6287b80e0800000000000000
+      internalID: -2266585879616835758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_9
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 322
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35be69a1fda05ae10800000000000000
+      internalID: 2208183145635179347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_10
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 51
+        width: 207
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef0b91cc2a3432020800000000000000
+      internalID: 2315768999886565630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_11
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 313
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 817e8cafa3b86c810800000000000000
+      internalID: 1785267387730814744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_12
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 313
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 323cb730710018050800000000000000
+      internalID: 5800917893872599843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_13
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 313
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d770fe70d99278990800000000000000
+      internalID: -7383887309630929027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_14
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 313
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 796fb17d16d0e3130800000000000000
+      internalID: 3548288270286452375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_15
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 313
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a4632133bba99f50800000000000000
+      internalID: 6888725891151783073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_16
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 313
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ac63798ccd9b4aa0800000000000000
+      internalID: -6175668962203571031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_17
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 312
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb26e1a41b6acade0800000000000000
+      internalID: -1320497310343470404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_18
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 312
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0af52363ec562bdf0800000000000000
+      internalID: -165958299912347744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_19
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 312
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca79e372cc3011e70800000000000000
+      internalID: 9084046098749626284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_20
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 312
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 583126e6d9f19ca10800000000000000
+      internalID: 1930108676327216005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_21
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 303
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0d45b037ad557d90800000000000000
+      internalID: -7100666264821609206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_22
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 303
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d072f5bcd1b30f520800000000000000
+      internalID: 2733749972965992205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_23
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 294
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 375a5f93f8e2e7d20800000000000000
+      internalID: 3278108771459900787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_24
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 294
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f386430e1428cbd20800000000000000
+      internalID: 3295652246774376511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_25
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 285
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6384bd4d9295984c0800000000000000
+      internalID: -4284795534266644426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_26
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 285
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 996a3b83c6b8dc0a0800000000000000
+      internalID: -6859673360491370855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_27
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 276
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5188a43398e927590800000000000000
+      internalID: -7677900102605043691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_28
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 276
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e737aa8d52613f5c0800000000000000
+      internalID: -4182975277092408450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_29
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 276
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1254af28b8d400f0800000000000000
+      internalID: -1151557319115124197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_30
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 267
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04b4b937ff236e490800000000000000
+      internalID: -7717424838715159744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_31
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 267
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b2e5d4f60e81a5e0800000000000000
+      internalID: -1900081407245032780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_32
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 267
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c833ee1e2ee4c8590800000000000000
+      internalID: -7670669328958737524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_33
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 258
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9060b309d5f8c700800000000000000
+      internalID: 560968466026225821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_34
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 258
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28507be4294f778e0800000000000000
+      internalID: -1695617825458682494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_35
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 258
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 472bef6b95ece3320800000000000000
+      internalID: 2539694124601094772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_36
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 249
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e00592b5131a0f70800000000000000
+      internalID: 9154150176495304931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_37
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 249
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b25ea4428d28ca370800000000000000
+      internalID: 8335180875189380395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_38
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 249
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 900d76c1c0902f9d0800000000000000
+      internalID: -2742119275494387703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_39
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 240
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ea3b6d244a5b9c30800000000000000
+      internalID: 4367183512532105955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_40
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 240
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 219e0479f721fe8a0800000000000000
+      internalID: -6273775416696051438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_41
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 240
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b9d7968e7967fb40800000000000000
+      internalID: 5473959864237021625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_42
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 232
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4471c3430ef126c0800000000000000
+      internalID: -4169772489993259957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_43
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 232
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ddaddc61a13fb320800000000000000
+      internalID: 2575832081265176025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_44
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 232
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97372dd1df2565600800000000000000
+      internalID: 456643659305218937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_45
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 223
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 933b75c2bf4ea6720800000000000000
+      internalID: 2840334282442388281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_46
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 217
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31a86a6a3a76d4ac0800000000000000
+      internalID: -3869322552268125677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_47
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 142
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0864ac414cdc81a60800000000000000
+      internalID: 7645086609507501696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_48
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 142
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76206084557d01f70800000000000000
+      internalID: 9156054803724763751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_49
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 133
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 417f5835f059339e0800000000000000
+      internalID: -1642805546001762540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_50
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 133
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9171ee526f0e0dd30800000000000000
+      internalID: 4454307379272357657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_51
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 133
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19c92ff00cbac5960800000000000000
+      internalID: 7592131913229442193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_52
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 133
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdb67118551486e00800000000000000
+      internalID: 1038151549602720735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_53
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 124
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fd64082c455f9ba0800000000000000
+      internalID: -6080047186349625871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_54
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 124
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bde415e6a021e600800000000000000
+      internalID: 495713335167479223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_55
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 124
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b00f3eb3d2d159a10800000000000000
+      internalID: 1915469296631541771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_56
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 124
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee1ebfe483764cb30800000000000000
+      internalID: 4306680635213996526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_57
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 115
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 247528993e6abfbb0800000000000000
+      internalID: -4901140272999409854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_58
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 115
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 252c58b27732c7050800000000000000
+      internalID: 5799549414884622930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_59
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 115
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0fdcc31b5e299420800000000000000
+      internalID: 2637190025511231246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_60
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 106
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c7e14ebad0fc66c0800000000000000
+      internalID: -4148676334429542455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_61
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 106
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e59d2576167948910800000000000000
+      internalID: 1838760992475109726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_62
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 106
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fdc252d514df72a0800000000000000
+      internalID: -6737433327334928911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_63
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 97
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62db554be81845470800000000000000
+      internalID: 8382467256354192678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_64
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 97
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac5764decf3e244b0800000000000000
+      internalID: -5457549122967538230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_65
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 97
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d4615fa99fe622e0800000000000000
+      internalID: -2150768328672451372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_66
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 97
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84971bb21d5639ad0800000000000000
+      internalID: -2696699802809173688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_67
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 88
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edffa5565c7974980800000000000000
+      internalID: -8554702093102153762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_68
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 88
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4c4927d4665d45c0800000000000000
+      internalID: -4229629483924501430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_69
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 88
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6652fd81b05fb420800000000000000
+      internalID: 2647923829438043754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_70
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 79
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ffd8b56259c4a240800000000000000
+      internalID: 4802184458414907381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_71
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 79
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ac8072eb1bab26c0800000000000000
+      internalID: -4167048893949768541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_72
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 79
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ccc171c2c22d47a0800000000000000
+      internalID: -6391414076304405307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_73
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 70
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dbd06d22f9ee0a70800000000000000
+      internalID: 8795224348653837272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_74
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 70
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42f5b9dc3a84760d0800000000000000
+      internalID: -3429692722852962524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_75
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 61
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5379523967d1352c0800000000000000
+      internalID: -4444176012172486859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_76
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 52
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad10de5d74d280490800000000000000
+      internalID: -7779918569727524390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_77
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 50
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 455f976d6253b0110800000000000000
+      internalID: 1228133764311938388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_78
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 43
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c6b31f048d29efc0800000000000000
+      internalID: -3465188393073002814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_79
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 43
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9b484836103785d0800000000000000
+      internalID: -3060424549783286882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_80
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 43
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ffeb42feab78c070800000000000000
+      internalID: 8126881518909648886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_81
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 43
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b78ec1097dc5520b0800000000000000
+      internalID: -5754090867990402949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_82
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 43
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8184c0d44606408d0800000000000000
+      internalID: -2881071877704628200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_83
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 43
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2bcc46157b5f45f0800000000000000
+      internalID: -770296452813632724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_84
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 42
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 180cdb6844a701c90800000000000000
+      internalID: -7201121369428475775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_85
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 34
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5640b3b3f71ab9dd0800000000000000
+      internalID: -2478209602110684059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_86
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 43
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2e5f7d9a3814c660800000000000000
+      internalID: 7405070327333477931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_87
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 34
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49417d6483c14c0b0800000000000000
+      internalID: -5709407399566699372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_88
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 34
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36ec61760e7baf8e0800000000000000
+      internalID: -1658811338302501277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_89
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 34
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6643ac2a31845aaa0800000000000000
+      internalID: -6150430466931805082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_90
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 34
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2b3cd1bbf3355130800000000000000
+      internalID: 3554804636992682795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_91
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 34
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5558feba13183b00800000000000000
+      internalID: 808417138707027290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_92
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 34
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e2a6a327d3f155a0800000000000000
+      internalID: -6534173478996237599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_93
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 34
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c805f0baf16790a50800000000000000
+      internalID: 6487846616589881484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_94
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 25
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98ed50c1311ab2e80800000000000000
+      internalID: -8202285192878629239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fotograma0020_95
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 25
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a543b44797012200800000000000000
+      internalID: 153412208581363105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

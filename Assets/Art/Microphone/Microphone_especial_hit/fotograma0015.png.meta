@@ -79,7 +79,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -88,7 +88,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -117,7 +117,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -459,14 +459,29 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      fotograma0015_0: -2496048901692151022
+      fotograma0015_1: 1502315895804907553
+      fotograma0015_10: 7676548941908512147
+      fotograma0015_11: -7758192298204208533
+      fotograma0015_12: -2538014447678250854
+      fotograma0015_13: -7720562555842483684
+      fotograma0015_14: -5488879486243908378
+      fotograma0015_2: 5491956005715356305
+      fotograma0015_3: 116152379300575345
+      fotograma0015_4: 4743917397343804617
+      fotograma0015_5: -3033273537370547262
+      fotograma0015_6: -1906066983591777519
+      fotograma0015_7: 8787507483491747320
+      fotograma0015_8: 4539063561321165815
+      fotograma0015_9: -7204216987685524631
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

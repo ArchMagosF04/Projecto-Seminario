@@ -202,7 +202,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -211,7 +211,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -240,7 +240,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -1443,14 +1443,70 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      fotograma0016_0: -1294526852314854727
+      fotograma0016_1: 9117554404158306990
+      fotograma0016_10: -1434616193307020023
+      fotograma0016_11: -5036412966610876407
+      fotograma0016_12: -6180473102794690672
+      fotograma0016_13: 5587954313074327500
+      fotograma0016_14: -2600054414546503477
+      fotograma0016_15: 5972143901851203935
+      fotograma0016_16: 4297616812473708418
+      fotograma0016_17: -4373650526873935796
+      fotograma0016_18: -1330092983517346926
+      fotograma0016_19: -643958785128436753
+      fotograma0016_2: 5005562882002788547
+      fotograma0016_20: 6566287680576761732
+      fotograma0016_21: -7477651999120573475
+      fotograma0016_22: 5789069218042409402
+      fotograma0016_23: 679604598057169149
+      fotograma0016_24: 2232563801234568394
+      fotograma0016_25: -5885357969799737313
+      fotograma0016_26: 8704929240587712565
+      fotograma0016_27: 6770975638042907869
+      fotograma0016_28: 5316993329692992687
+      fotograma0016_29: -1749935711239011175
+      fotograma0016_3: 5117813500508048045
+      fotograma0016_30: 1215969014471946777
+      fotograma0016_31: -9196848321194747566
+      fotograma0016_32: -2564959191970813851
+      fotograma0016_33: 542448644612375327
+      fotograma0016_34: 4515247691952141826
+      fotograma0016_35: -7572164569113332076
+      fotograma0016_36: -6663900573827827278
+      fotograma0016_37: -1413824234930728025
+      fotograma0016_38: -2307254952497770244
+      fotograma0016_39: -1313002981188337511
+      fotograma0016_4: 4823290861540450390
+      fotograma0016_40: -2660831424770323220
+      fotograma0016_41: -8024790158612190566
+      fotograma0016_42: 5958531117229512974
+      fotograma0016_43: -7263558296694333944
+      fotograma0016_44: -839102942044058969
+      fotograma0016_45: 3678767897852945455
+      fotograma0016_46: 3146947308794412286
+      fotograma0016_47: -6859563862362690698
+      fotograma0016_48: 7609971461298925932
+      fotograma0016_49: 273878160626427361
+      fotograma0016_5: -7898808165423411969
+      fotograma0016_50: 4663145166073461074
+      fotograma0016_51: 8627623308683532011
+      fotograma0016_52: 1125144793750458281
+      fotograma0016_53: -4589804681675988146
+      fotograma0016_54: -6472902569847873288
+      fotograma0016_55: 1192741854411760374
+      fotograma0016_6: -8040424793722662377
+      fotograma0016_7: -1945138626285795695
+      fotograma0016_8: -5937476207870015396
+      fotograma0016_9: -8423739670624086440
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

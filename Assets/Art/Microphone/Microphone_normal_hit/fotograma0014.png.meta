@@ -106,7 +106,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -115,7 +115,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -144,7 +144,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -675,14 +675,38 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      fotograma0014_0: -5596338468421432420
+      fotograma0014_1: 6035560713804843927
+      fotograma0014_10: -4814567958547834266
+      fotograma0014_11: -8236995779451799123
+      fotograma0014_12: 6917624612907223057
+      fotograma0014_13: 8809706526097578951
+      fotograma0014_14: -7842285118702431655
+      fotograma0014_15: 4503981632650531558
+      fotograma0014_16: 2603017967645941582
+      fotograma0014_17: 5323301263807884031
+      fotograma0014_18: -8223577405409435722
+      fotograma0014_19: 4589489438922178644
+      fotograma0014_2: 3622279889122741009
+      fotograma0014_20: -8472655375876516453
+      fotograma0014_21: -6410889177239827985
+      fotograma0014_22: -4827120329237310534
+      fotograma0014_23: 429583538168698035
+      fotograma0014_3: -2905764825576678925
+      fotograma0014_4: 1394161018879805234
+      fotograma0014_5: -242700470178574476
+      fotograma0014_6: -5971293531297680495
+      fotograma0014_7: 1728034065653061079
+      fotograma0014_8: 6476853527990345583
+      fotograma0014_9: -5513688731303937978
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

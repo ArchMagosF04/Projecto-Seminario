@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Armature_Falling_22_0: -165373178107861750
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

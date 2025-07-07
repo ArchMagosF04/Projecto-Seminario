@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Armature_jumping_13_0: -3703679659027604490
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

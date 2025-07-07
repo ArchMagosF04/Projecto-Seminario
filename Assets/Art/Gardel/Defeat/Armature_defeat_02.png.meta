@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Armature_defeat_02_0: 6868864578722984827
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

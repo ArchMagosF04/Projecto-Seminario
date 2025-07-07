@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Armature_Attack_normal_30_0: 1819767411154189881
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

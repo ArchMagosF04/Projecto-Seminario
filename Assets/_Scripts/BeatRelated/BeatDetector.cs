@@ -30,7 +30,7 @@ public class BeatDetector : MonoBehaviour
             {
                 isOnBeat = false;
                 timer = 0;
-                OnBeat.Invoke(false);
+                OnBeat?.Invoke(false);
             }
         }
     }
@@ -40,7 +40,7 @@ public class BeatDetector : MonoBehaviour
         if (OnBeat != null)
         {
             isOnBeat = true;
-            OnBeat.Invoke(true);
+            OnBeat?.Invoke(true);
         }        
     }
 

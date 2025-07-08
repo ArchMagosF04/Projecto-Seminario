@@ -168,9 +168,11 @@ public class Boss1Controller : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "player")
+        if(collision.gameObject.tag == "Player")
         {
-            GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+            //GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+            collision.gameObject.GetComponent<HealthComponent>().TakeDamage(enemyInfo.Atk);
+            collision.gameObject.GetComponent<Rigidbody2D>().AddForce((transform.right + transform.up)*5);
         }
         
     }

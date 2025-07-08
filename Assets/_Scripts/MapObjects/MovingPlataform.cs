@@ -65,14 +65,14 @@ public class MovingPlataform : MonoBehaviour
         {
             foreach (GameObject passanger in passangers)
             {
-                if (Mathf.Abs(passanger.GetComponent<Rigidbody2D>().velocity.x) > 0.7)
+                if (Mathf.Abs(passanger.GetComponent<Rigidbody2D>().velocity.x) > 0.7 || Mathf.Abs(passanger.GetComponent<Rigidbody2D>().velocity.y) > 0.7)
                 {
                     passanger.transform.parent = null;
                 }
-                else
-                {
-                    passanger.transform.parent = transform;
-                }
+                //else 
+                //{
+                //    passanger.transform.parent = transform;
+                //}
             }
         }
         
@@ -153,7 +153,7 @@ public class MovingPlataform : MonoBehaviour
         }               
     }
 
-    private void AdoptPassangers()
+    public void AdoptPassangers()
     {
         if(passangers != null && passangers.Count != 0)
         {
@@ -162,5 +162,5 @@ public class MovingPlataform : MonoBehaviour
                 passanger.transform.parent = transform;
             }
         }        
-    }
+    }    
 }

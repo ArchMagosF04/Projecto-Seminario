@@ -73,7 +73,7 @@ public class Boss1NormalAttack<T> : State<T>
                     boss.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0);
                 }
                 
-                movementComponent.BossJumpUp(Vector2.up, enemyInfo.JumpForce /** 1.34f*/);
+                movementComponent.BossJumpUp(Vector2.up, enemyInfo.JumpForce * 1.34f);
                 //movementComponent.Move(enemyInfo.JumpForce, (targetPlataform.transform.position - boss.transform.position).normalized);
 
             }
@@ -198,7 +198,7 @@ public class Boss1NormalAttack<T> : State<T>
             Hdistance = -5;
         }
 
-        movementComponent.Jump(enemyInfo.JumpForce + distance, targetPosition.normalized, distance + impulse + enemyInfo.JumpForce*1.2f + Hdistance); //works well
+        movementComponent.Jump(enemyInfo.JumpForce + distance, targetPosition.normalized, distance + impulse + enemyInfo.JumpForce + Hdistance); //works well
 
 
         Console.WriteLine("impulse was: " + impulse);

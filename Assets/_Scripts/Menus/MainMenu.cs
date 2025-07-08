@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
+    [SerializeField] private GameObject mainMenu;
+    [SerializeField] private GameObject credits;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,5 +35,16 @@ public class MainMenu : MonoBehaviour
     public void Quit()
     {
         Application.Quit();
+    }
+
+    public void Credits()
+    {
+        mainMenu.SetActive(false);
+        credits.SetActive(true);
+    }
+     public void CreditsBack()
+    {
+        mainMenu.SetActive(true);
+        credits.SetActive(false);
     }
 }

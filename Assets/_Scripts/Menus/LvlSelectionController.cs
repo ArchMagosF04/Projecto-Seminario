@@ -62,9 +62,14 @@ public class LvlSelectionController : MonoBehaviour
             levelSelected=false;
             OnSelection(levelSelected);
         }
+        else if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("Main Menu");
+            SceneManager.UnloadSceneAsync("Lvl Selection Screen");
+        }
 
-        if(camera.transform.position != worldMarkers[index].transform.position)
-        {            
+        if (camera.transform.position != worldMarkers[index].transform.position)
+        {
             Vector2 temp = (worldMarkers[index].transform.position - camera.transform.position).normalized;
             camera.transform.Translate(temp * Time.deltaTime * cameraSpeed);
         }

@@ -23,7 +23,7 @@ public class Metronome : MonoBehaviour
         markerSpawnlocation = transform.position + markerOffset * numberOfMarkers;
         markerSpawnPoint.position = markerSpawnlocation;
         timelapse = Time.time;
-        SpawnInitialMarkers();
+        //SpawnInitialMarkers();
     }
 
     private void Update()

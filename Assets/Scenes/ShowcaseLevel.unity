@@ -6024,6 +6024,14 @@ PrefabInstance:
       propertyPath: manaBar
       value: 
       objectReference: {fileID: 205083366}
+    - target: {fileID: 7053056934408427477, guid: 6dd1e7f43c212a84a8cc4ee0a7f4782f, type: 3}
+      propertyPath: m_Mass
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7053056934408427477, guid: 6dd1e7f43c212a84a8cc4ee0a7f4782f, type: 3}
+      propertyPath: m_LinearDrag
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

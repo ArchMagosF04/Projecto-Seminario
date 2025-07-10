@@ -18,6 +18,9 @@ public class MovingPlataform : MonoBehaviour
     private bool movingRight;
     public bool MovingRight { get { return movingRight; } }
 
+    float time;
+    float timer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -162,5 +165,6 @@ public class MovingPlataform : MonoBehaviour
                 passanger.transform.parent = transform;
             }
         }        
-    }    
+    }
+   
 }

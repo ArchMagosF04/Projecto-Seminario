@@ -16,7 +16,7 @@ public class PlataformJump : MonoBehaviour
     private void Update()
     {
        bool detected = Physics2D.Raycast(transform.position, transform.up, distance, plataformLayer);
-        
+
         if (detected && currentTime == 0)
         {
             DeactivateCollision();            
@@ -46,7 +46,7 @@ public class PlataformJump : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Plataform")
         {
@@ -54,7 +54,7 @@ public class PlataformJump : MonoBehaviour
         }
     }
 
-    private void OnCollisionStay(Collision collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Plataform")
         {

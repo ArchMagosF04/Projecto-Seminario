@@ -21,6 +21,7 @@ public class Boss1Controller : MonoBehaviour
 
     [SerializeField] private BeatDetector[] beatDetectors;
 
+    [SerializeField] private float knockbackForce;
 
     //--------------SPECIAL ATTACK VARIABLES----------------------------------------------------------------------------------------
 
@@ -170,9 +171,7 @@ public class Boss1Controller : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            //GetComponent<Rigidbody2D>().velocity = Vector3.zero;
-            collision.gameObject.GetComponent<HealthComponent>().TakeDamage(enemyInfo.Atk);
-            collision.gameObject.GetComponent<Rigidbody2D>().AddForce((transform.right + transform.up)*5);
+            GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         }
         
     }
@@ -182,6 +181,16 @@ public class Boss1Controller : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             collision.gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+        }        
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            collision.gameObject.GetComponent<HealthComponent>().TakeDamage(enemyInfo.Atk);
+            collision.gameObject.GetComponentInChildren<KnockBackReceiver>().KnockBack((player.transform.position - transform.position).normalized, knockbackForce, 5);
+            collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * knockbackForce*10, ForceMode2D.Impulse);
         }        
     }
 

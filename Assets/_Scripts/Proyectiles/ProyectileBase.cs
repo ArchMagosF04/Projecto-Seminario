@@ -9,6 +9,7 @@ public class ProyectileBase : MonoBehaviour
     private protected float speed;
     [SerializeField] private protected float lifeSpan;
     private protected float currentLifeSpan;
+    [SerializeField] private List<Sprite> sprites;
 
     Rigidbody2D rigidbody2d;
 
@@ -16,7 +17,9 @@ public class ProyectileBase : MonoBehaviour
     protected virtual void Awake()
     {
         this.gameObject.GetComponent<Collider2D>().enabled = false;
-        rigidbody2d = this.gameObject.GetComponent<Rigidbody2D>();        
+        rigidbody2d = this.gameObject.GetComponent<Rigidbody2D>();
+        int temp = Random.Range(0, sprites.Count-1);
+        gameObject.GetComponent<SpriteRenderer>().sprite = sprites[temp];
     }
     void Start()
     {

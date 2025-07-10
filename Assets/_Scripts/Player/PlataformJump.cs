@@ -10,6 +10,7 @@ public class PlataformJump : MonoBehaviour
     float currentTime;
     public GameObject player;
     public GameObject plataform;
+    private bool adopted;
 
 
     private void Update()
@@ -41,11 +42,19 @@ public class PlataformJump : MonoBehaviour
 
     private void ActivateCollision()
     {
-        player.GetComponent<Rigidbody2D>().includeLayers += plataformLayer;       
+        player.GetComponent<Rigidbody2D>().includeLayers += plataformLayer;
 
     }
 
     private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Plataform")
+        {
+            collision.gameObject.GetComponent<MovingPlataform>().AdoptPassangers();
+        }
+    }
+
+    private void OnCollisionStay(Collision collision)
     {
         if (collision.gameObject.tag == "Plataform")
         {

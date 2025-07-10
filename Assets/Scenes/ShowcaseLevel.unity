@@ -3238,7 +3238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 734528021f62ed342bb09379724d7729, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxKnockBackTime: 0.2
+  maxKnockBackTime: 0.1
 --- !u!1 &830653707
 GameObject:
   m_ObjectHideFlags: 0
@@ -4532,8 +4532,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfcb34624ca9b284d990b3817699d1ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 1548474291}
-  enemyHealth: {fileID: 2242516353245902466}
+  playerHealth: {fileID: 2242516353245902466}
+  enemyHealth: {fileID: 1548474291}
 --- !u!4 &1417758354
 Transform:
   m_ObjectHideFlags: 0

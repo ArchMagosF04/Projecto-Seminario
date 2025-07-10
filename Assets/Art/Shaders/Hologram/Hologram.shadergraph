@@ -509,7 +509,7 @@
     "m_ShaderOutputName": "OutMinMax",
     "m_StageCapability": 3,
     "m_Value": {
-        "x": 0.10000000149011612,
+        "x": 0.30000001192092898,
         "y": 1.0
     },
     "m_DefaultValue": {
@@ -878,10 +878,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -1072.0,
-            "y": 253.99998474121095,
-            "width": 208.00006103515626,
-            "height": 326.0
+            "x": -1087.0,
+            "y": 690.0,
+            "width": 207.99993896484376,
+            "height": 326.00006103515627
         }
     },
     "m_Slots": [
@@ -3102,7 +3102,7 @@
     "m_StageCapability": 3,
     "m_Value": {
         "x": 0.0,
-        "y": 0.4000000059604645
+        "y": 1.0
     },
     "m_DefaultValue": {
         "x": 0.0,

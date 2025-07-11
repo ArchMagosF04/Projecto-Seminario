@@ -20,8 +20,9 @@ public class Boss1SpecialAttack<T> : State<T>
     private float wavesGrowthSpeed;
 
     private BeatDetector beatDetector;
+    private Animator animator;
 
-    public Boss1SpecialAttack(BossMovement bossMovement, Transform targetLocation, GameObject user, EnemyStats enemyInformation, BeatDetector beatDetector)
+    public Boss1SpecialAttack(BossMovement bossMovement, Transform targetLocation, GameObject user, EnemyStats enemyInformation, BeatDetector beatDetector, Animator anim)
     {
         movementController = bossMovement;
         stageLocation = targetLocation;
@@ -33,7 +34,15 @@ public class Boss1SpecialAttack<T> : State<T>
         wavesMaxSize = enemyInformation.WavesMaxSize;
         wavesGrowthSpeed = enemyInformation.WavesGrowthSpeed;
         this.beatDetector = beatDetector;
-    }   
+        animator = anim;
+    }
+
+    public override void Enter()
+    {
+        base.Enter();
+
+        animator.SetTrigger("SpecialAttack");
+    }
 
     public override void FixedExecute()
     {
@@ -76,6 +85,7 @@ public class Boss1SpecialAttack<T> : State<T>
     public override void Exit()
     {
         atCenterStage = false;
+        animator.SetTrigger("Idle");
     }
 
     private float FindCenterStage()

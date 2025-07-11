@@ -27,7 +27,9 @@ public class Boss1Technique<T> : State<T>
 
     private BeatDetector beatDetector;
 
-    public Boss1Technique(BossMovement bossMovement, Transform targetLocation, GameObject user, GameObject plataform1, GameObject plataform2, EnemyStats enemyInformation, BeatDetector beatDetector, GameObject virtualCamera, GameObject player, GameObject playerAnchor)
+    private Animator anim;
+
+    public Boss1Technique(BossMovement bossMovement, Transform targetLocation, GameObject user, GameObject plataform1, GameObject plataform2, EnemyStats enemyInformation, BeatDetector beatDetector, GameObject virtualCamera, GameObject player, GameObject playerAnchor, Animator anim)
     {
         movementController = bossMovement;
         stageLocation = targetLocation;
@@ -44,11 +46,13 @@ public class Boss1Technique<T> : State<T>
         this.beatDetector = beatDetector;
         this.player = player;
         anchor = playerAnchor;
+        this.anim = anim;
     }
 
     public override void Enter()
     {
         player.transform.SetParent(anchor.transform);
+        anim.SetTrigger("SecretAttack");
     }
 
     public override void FixedExecute()
@@ -83,6 +87,7 @@ public class Boss1Technique<T> : State<T>
     public override void Exit()
     {
         atCenterStage = false;
+        anim.SetTrigger("Idle");
         DeactivatePlataforms();
     }
 

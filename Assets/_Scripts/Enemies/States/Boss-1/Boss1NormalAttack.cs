@@ -24,7 +24,10 @@ public class Boss1NormalAttack<T> : State<T>
     private bool beatEffect = false;
     private bool beatEffect2 = false;
     private bool shotFired = false;
-    public Boss1NormalAttack(GameObject player, GameObject plataform1, GameObject plataform2, BossMovement movementComponent, GameObject user, EnemyStats enemyInfo, BeatDetector shootbeatDetector, BeatDetector jumpBeatDetector = null)
+
+    private Animator animator;
+
+    public Boss1NormalAttack(GameObject player, GameObject plataform1, GameObject plataform2, BossMovement movementComponent, GameObject user, EnemyStats enemyInfo, BeatDetector shootbeatDetector, Animator animator, BeatDetector jumpBeatDetector = null)
     {
         this.player = player;
         this.plataform1 = plataform1;
@@ -42,12 +45,16 @@ public class Boss1NormalAttack<T> : State<T>
         {
             jumpBeatdetector = shootBeatDetector;
         }
+
+        this.animator = animator;
+
     }
 
     public override void Enter()
     {
         shootBeatDetector.OnBeat += ActivateBeatEffect1;
         jumpBeatdetector.OnBeat += ActivateBeatEffect2;
+        animator.SetTrigger("NormalAttack");
     }
 
     public override void FixedExecute()
@@ -137,6 +144,7 @@ public class Boss1NormalAttack<T> : State<T>
         shotsFired = 0;
         shotFired = false;
         shootBeatDetector.OnBeat -= ActivateBeatEffect1;
+        animator.SetTrigger("Idle");
     }
 
     private void BasicAttack()

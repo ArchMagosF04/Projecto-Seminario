@@ -22,6 +22,8 @@ public class BossMovement : MonoBehaviour
     [SerializeField] Collider2D groundDetector;
     [SerializeField] float maxSpeed;
 
+    [field: SerializeField] public Animator Anim { get; private set; }
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -80,6 +82,7 @@ public class BossMovement : MonoBehaviour
             currentFallingSpeed = 1;
             Vector2 jumpDirection = direction * force;
             rb.AddForce(jumpDirection * force, ForceMode2D.Impulse);
+            Anim.SetTrigger("InAir");
         }
     }
 
@@ -91,6 +94,7 @@ public class BossMovement : MonoBehaviour
             Vector2 currentposition = transform.position;
             Vector2 jumpDirection = (direction - currentposition).normalized;
             rb.AddForce(new Vector2(jumpDirection.x * force, force), ForceMode2D.Impulse);
+            Anim.SetTrigger("InAir");
         }
     }
 
@@ -113,6 +117,8 @@ public class BossMovement : MonoBehaviour
         if(collision.gameObject.layer == 3)
         {
             isGrounded = true;
+            //Anim.ResetTrigger("InAir");
+            Anim.SetTrigger("Idle");
         }       
        
     }
@@ -122,6 +128,7 @@ public class BossMovement : MonoBehaviour
         if (collision.gameObject.layer == 3)
         {
             isGrounded = false;
+            Anim.SetTrigger("InAir");
         }
        
     }    

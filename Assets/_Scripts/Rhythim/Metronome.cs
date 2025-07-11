@@ -16,6 +16,13 @@ public class Metronome : MonoBehaviour
 
     private float timelapse;
 
+    private Animator anim;
+
+    private void Awake()
+    {
+        anim = GetComponentInChildren<Animator>();
+    }
+
     private void Start()
     {
         float distance = markerSpeed * (60f / BeatManager.Instance.BPM);
@@ -55,6 +62,8 @@ public class Metronome : MonoBehaviour
 
         GameObject newMarker = Instantiate(markerPrefab, markerSpawnPoint.position, Quaternion.identity, transform);
         markers.Add(newMarker);
+
+        anim.SetTrigger("Beat");
     }
 
     private void SpawnInitialMarkers()

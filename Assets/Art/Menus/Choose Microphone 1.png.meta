@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Choose Microphone 1_0: -4788968387845770137
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

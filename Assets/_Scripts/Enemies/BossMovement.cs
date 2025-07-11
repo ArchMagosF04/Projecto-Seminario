@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Windows;
 using static UnityEngine.LightAnchor;
 
 public class BossMovement : MonoBehaviour
@@ -22,10 +23,14 @@ public class BossMovement : MonoBehaviour
     [SerializeField] Collider2D groundDetector;
     [SerializeField] float maxSpeed;
 
+    [SerializeField] private Transform sprite;
+    private bool facingRight = true;
+
     [field: SerializeField] public Animator Anim { get; private set; }
 
     private void Start()
     {
+        facingRight = true;
         rb = GetComponent<Rigidbody2D>();
         //bossCollider = gameObject.GetComponent<Collider2D>();
     }
@@ -84,6 +89,7 @@ public class BossMovement : MonoBehaviour
             Vector2 jumpDirection = direction * force;
             rb.AddForce(jumpDirection * force, ForceMode2D.Impulse);
             Anim.SetTrigger("InAir");
+            CheckFlip();
         }
     }
 
@@ -96,6 +102,7 @@ public class BossMovement : MonoBehaviour
             Vector2 jumpDirection = (direction - currentposition).normalized;
             rb.AddForce(new Vector2(jumpDirection.x * force, force), ForceMode2D.Impulse);
             Anim.SetTrigger("InAir");
+            CheckFlip();
         }
     }
 
@@ -107,6 +114,7 @@ public class BossMovement : MonoBehaviour
             rb.velocity = Vector2.zero; // clear momentum
             Vector2 jumpVector = Vector2.up * jumpForce + direction.normalized * horizontalImpulse;
             rb.AddForce(jumpVector, ForceMode2D.Impulse);
+            CheckFlip();
         }
     }
 
@@ -120,8 +128,23 @@ public class BossMovement : MonoBehaviour
         if(Mathf.Abs(rb.velocityX) < maxSpeed)
         {
             rb.AddForce(new Vector2(moveInput.x * acceleration, rb.velocity.y), ForceMode2D.Force);
+            CheckFlip();
         }
         
+    }
+
+    private void CheckFlip()
+    {
+        if (rb.velocity.x > 0 && !facingRight)
+        {
+            facingRight = true;
+            sprite.Rotate(0f, 180f, 0f);
+        }
+        else if (rb.velocity.x < 0 && facingRight)
+        {
+            facingRight = false;
+            sprite.Rotate(0f, 180f, 0f);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

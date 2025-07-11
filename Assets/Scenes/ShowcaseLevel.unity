@@ -2780,6 +2780,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 515235968}
   m_CullTransparentMesh: 1
+--- !u!4 &517232998 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1977192995819304963, guid: ee08ddc4a989a5b4e98422a2c009e4cd, type: 3}
+  m_PrefabInstance: {fileID: 1873809470}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -8614,6 +8619,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 569866868108216915, guid: ee08ddc4a989a5b4e98422a2c009e4cd, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 569866868108216915, guid: ee08ddc4a989a5b4e98422a2c009e4cd, type: 3}
+      propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 581503632274411054, guid: ee08ddc4a989a5b4e98422a2c009e4cd, type: 3}
       propertyPath: m_Name
       value: Enemigo
@@ -8633,6 +8646,26 @@ PrefabInstance:
     - target: {fileID: 1065206509878397787, guid: ee08ddc4a989a5b4e98422a2c009e4cd, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1359644854941497335, guid: ee08ddc4a989a5b4e98422a2c009e4cd, type: 3}
+      propertyPath: sprite
+      value: 
+      objectReference: {fileID: 517232998}
+    - target: {fileID: 1977192995819304963, guid: ee08ddc4a989a5b4e98422a2c009e4cd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977192995819304963, guid: ee08ddc4a989a5b4e98422a2c009e4cd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977192995819304963, guid: ee08ddc4a989a5b4e98422a2c009e4cd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977192995819304963, guid: ee08ddc4a989a5b4e98422a2c009e4cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3525699052787274622, guid: ee08ddc4a989a5b4e98422a2c009e4cd, type: 3}
       propertyPath: plataform1

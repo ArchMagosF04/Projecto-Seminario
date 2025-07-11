@@ -10,6 +10,7 @@ public class Boss1Controller : MonoBehaviour
     [SerializeField] Transform centerStage;
     [SerializeField] GameObject cameraToShake;
 
+    [field: SerializeField] public Animator Anim { get; private set; }
 
     GenericFSM<string> fsm;
     Boss1SpecialAttack<string> specialAttackState;
@@ -62,8 +63,8 @@ public class Boss1Controller : MonoBehaviour
         spd = enemyInfo.MoveSpd;
         atk = enemyInfo.Atk;
 
-        specialAttackState = new Boss1SpecialAttack<string>(movementController, centerStage, this.gameObject, enemyInfo, beatDetectors[0]);
-        techniqueState = new Boss1Technique<string>(movementController, centerStage, this.gameObject, plataform1, plataform2, enemyInfo, beatDetectors[3], cameraToShake, player, playerAnchor);
+        specialAttackState = new Boss1SpecialAttack<string>(movementController, centerStage, this.gameObject, enemyInfo, beatDetectors[0], Anim);
+        techniqueState = new Boss1Technique<string>(movementController, centerStage, this.gameObject, plataform1, plataform2, enemyInfo, beatDetectors[3], cameraToShake, player, playerAnchor, Anim);
 
         InitializeFSM();
 
@@ -127,7 +128,7 @@ public class Boss1Controller : MonoBehaviour
 
         //var _specialAttack = new Boss1SpecialAttack<string>(movementController, centerStage, this.gameObject, enemyInfo);
 
-        var _normalAttack = new Boss1NormalAttack<string>(player,plataform1, plataform2, movementController, this.gameObject, enemyInfo, beatDetectors[0], beatDetectors[2]);
+        var _normalAttack = new Boss1NormalAttack<string>(player, plataform1, plataform2, movementController, this.gameObject, enemyInfo, beatDetectors[0], Anim, beatDetectors[2]);
 
         fsm = new GenericFSM<string>(_normalAttack);
         fsm.SetInitialState(_normalAttack);

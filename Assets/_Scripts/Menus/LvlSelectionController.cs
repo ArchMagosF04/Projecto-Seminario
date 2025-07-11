@@ -65,6 +65,7 @@ public class LvlSelectionController : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.Escape))
         {
             OnSelection = delegate { };
+            Destroy(GameObject.Find("Music"));
             SceneManager.LoadScene("Main Menu");
             SceneManager.UnloadSceneAsync("Lvl Selection Screen");
         }

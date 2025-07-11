@@ -81,6 +81,7 @@ public class LvlSelectionController : MonoBehaviour
     {
         if (levels[index] != null)
         {
+            Destroy(GameObject.Find("Music"));
             OnSelection = delegate { };
             SceneManager.LoadScene(levels[index]);
         }        

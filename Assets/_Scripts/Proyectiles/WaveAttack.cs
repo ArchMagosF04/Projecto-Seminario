@@ -10,7 +10,7 @@ public class WaveAttack : ProyectileBase
 
     protected override void Awake()
     {
-        base.Awake();
+        this.gameObject.GetComponent<Collider2D>().enabled = false;
         circleCollider = GetComponent<CircleCollider2D>();
     }
     void Start()
@@ -49,13 +49,17 @@ public class WaveAttack : ProyectileBase
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (owner != null && collision.gameObject != owner)
-        {
-            collision.gameObject.TryGetComponent<HealthComponent>(out HealthComponent health);            
-            if (health != null)
+        if (collision.gameObject.tag == "Player")
+        {   
+            if (collision.gameObject.GetComponent<PlayerController>().CurrentState != collision.gameObject.GetComponent<PlayerController>().CurrentState as PlayerST_Jump)
             {
-                health.TakeDamage(damage);
+                collision.gameObject.TryGetComponent<HealthComponent>(out HealthComponent health);
+                if (health != null)
+                {
+                    health.TakeDamage(damage);
+                }
             }
+            
 
         }        
     }

@@ -18,6 +18,9 @@ public class PlayerController : MonoBehaviour
     public PlayerST_PrimeAttack PrimaryAttackState { get; private set; }
     public PlayerST_SecAttack SecondaryAttackState { get; private set; }
 
+    private PlayerState currentState;
+    public PlayerState CurrentState { get { return currentState; } }
+
     #endregion
 
     #region Component References
@@ -84,6 +87,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         StateMachine.CurrentState.OnFixedUpdate();
+        currentState = StateMachine.CurrentState;
     }
 
     private void OnEnable()

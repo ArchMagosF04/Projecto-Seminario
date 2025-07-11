@@ -153,11 +153,12 @@ public class Boss1Controller : MonoBehaviour
         {
             int r = UnityEngine.Random.Range(1, 100);
 
-            Console.WriteLine("rolled a: " + r);
+            Debug.Log("rolled a: " + r);
 
             if (r < enemyInfo.SpecialAttackWeight)
             {
                 fsm.ChangeState("specialAttack");
+                currentTimeToMakeChoices = 0;
             }
             else
             {

@@ -9,6 +9,7 @@ public class MainMenu : MonoBehaviour
 {
     [SerializeField] private GameObject mainMenu;
     [SerializeField] private GameObject credits;
+    [SerializeField] private GameObject options;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +30,12 @@ public class MainMenu : MonoBehaviour
 
     public void ShowOptionsMenu()
     {
+        options.SetActive(true);
+    }
 
+    public void OptionsBack()
+    {
+        options.SetActive(false);
     }
 
     public void Quit()

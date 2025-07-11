@@ -19,12 +19,12 @@ public class WinCondition : MonoBehaviour
 
     public static void WinScreen()
     {
-        SceneManager.LoadScene("WinScreen");
+        SceneManager.LoadScene(3);
     }
 
     public static void LoseScreen()
     {
-        SceneManager.LoadScene("LoseScene");
+        SceneManager.LoadScene(4);
     }
 
     

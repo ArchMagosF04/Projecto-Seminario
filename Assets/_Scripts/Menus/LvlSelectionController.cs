@@ -80,6 +80,7 @@ public class LvlSelectionController : MonoBehaviour
     {
         if (levels[index] != null)
         {
+            OnSelection = delegate { };
             SceneManager.LoadScene(levels[index]);
         }        
     }

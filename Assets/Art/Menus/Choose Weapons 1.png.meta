@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a2edafa2c077a1148a422aa930b6ed9f
+guid: 5fc5e32de3eaffb4880d36f420164190
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8242318803678554509
-    second: 3 Boton Music_0
+      213: -3982150029655256542
+    second: Choose Weapons 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 3 Boton Music_0
+      name: Choose Weapons 1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1500
-        height: 525
+        width: 2063
+        height: 1375
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d8968c24849926270800000000000000
-      internalID: 8242318803678554509
+      spriteID: 222561875af8cb8c0800000000000000
+      internalID: -3982150029655256542
       vertices: []
       indices: 
       edges: []
@@ -143,8 +130,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      3 Boton Music_0: 8242318803678554509
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

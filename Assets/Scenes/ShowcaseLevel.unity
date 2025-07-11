@@ -6738,7 +6738,7 @@ PrefabInstance:
     - target: {fileID: 5403878387269740161, guid: ee08ddc4a989a5b4e98422a2c009e4cd, type: 3}
       propertyPath: healthbar
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 468816579}
     - target: {fileID: 6137932139233334775, guid: ee08ddc4a989a5b4e98422a2c009e4cd, type: 3}
       propertyPath: m_Enabled
       value: 0

@@ -6,14 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/ShowcaseLevel.unity
-    guid: 1052403e7d6f47048b183c92c1f2719f
-  - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: de5dcb08c19b0e04d9aedb676046d92f
   - enabled: 1
     path: Assets/Scenes/Lvl Selection Screen.unity
     guid: a942b5970807602448913d57fdf32ada
+  - enabled: 1
+    path: Assets/Scenes/ShowcaseLevel.unity
+    guid: 1052403e7d6f47048b183c92c1f2719f
   - enabled: 1
     path: Assets/Scenes/WinScreen.unity
     guid: 9c5365ed244a4064786ef73977275331

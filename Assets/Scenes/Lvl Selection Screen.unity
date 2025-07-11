@@ -298,10 +298,11 @@ MonoBehaviour:
   cameraSpeed: 7
   worldMarkers:
   - {fileID: 2145054084}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 653950628}
+  - {fileID: 1911473518}
+  - {fileID: 1759026425}
+  - {fileID: 1576558325}
+  - {fileID: 1349024668}
   levels:
   - ShowcaseLevel
 --- !u!4 &371014615
@@ -3240,7 +3241,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: -3329881001751326599, guid: 2013214e4497a0e439dd2fb1220a92d2, type: 3}
   m_Color: {r: 0.990566, g: 0.042052314, b: 0.042052314, a: 1}
   m_FlipX: 0

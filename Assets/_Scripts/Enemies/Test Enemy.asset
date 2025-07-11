@@ -29,7 +29,7 @@ MonoBehaviour:
   wavesGrowthSpeed: 5
   wavesMaxSize: 18
   specialDelayTime: 3
-  timeToUseTechnique: 52
+  timeToUseTechnique: 5
   techniqueDuration: 6
   techniqueDelayTime: 1
   projectiles:

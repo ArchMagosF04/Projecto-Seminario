@@ -9,7 +9,7 @@ public class ShakeToRythm : MonoBehaviour
     //[SerializeField] BeatDetector beatDetector2;
     //[SerializeField] BeatDetector beatDetector3;
     
-    private Vector2 initialPos;
+    private Vector3 initialPos;
 
     // Start is called before the first frame update
     void Start()
@@ -35,7 +35,7 @@ public class ShakeToRythm : MonoBehaviour
     {        
         if (state == true)
         {
-            transform.position = new Vector2(transform.position.x +0.3f, transform.position.y + 0.3f);
+            transform.position = new Vector3(transform.position.x +0.3f, transform.position.y + 0.3f, transform.position.z);
         }
         else if (state == false)
         {

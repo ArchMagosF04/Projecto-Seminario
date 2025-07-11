@@ -1848,7 +1848,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 431941424}
-  - component: {fileID: 431941423}
   m_Layer: 0
   m_Name: CameraTarget
   m_TagString: Untagged
@@ -1856,20 +1855,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &431941423
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 431941422}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e893221c1d0065c46aa20d9333941953, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  beatDetector1: {fileID: 0}
-  suscribeOnStart: 0
 --- !u!4 &431941424
 Transform:
   m_ObjectHideFlags: 0
@@ -6673,7 +6658,7 @@ PrefabInstance:
     - target: {fileID: 3525699052787274622, guid: ee08ddc4a989a5b4e98422a2c009e4cd, type: 3}
       propertyPath: cameraToShake
       value: 
-      objectReference: {fileID: 431941422}
+      objectReference: {fileID: 1995973953}
     - target: {fileID: 3525699052787274622, guid: ee08ddc4a989a5b4e98422a2c009e4cd, type: 3}
       propertyPath: knockbackForce
       value: 3
@@ -7238,6 +7223,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1995973955}
   - component: {fileID: 1995973954}
+  - component: {fileID: 1995973956}
   m_Layer: 0
   m_Name: Virtual Camera
   m_TagString: Untagged
@@ -7300,6 +7286,20 @@ Transform:
   - {fileID: 932372779}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1995973956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995973953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e893221c1d0065c46aa20d9333941953, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beatDetector1: {fileID: 0}
+  suscribeOnStart: 0
 --- !u!1 &2001836388
 GameObject:
   m_ObjectHideFlags: 0
@@ -7453,7 +7453,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2014241397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7461,7 +7461,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2014241396}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d4ff2ccd3e87f2468ce5f6fa743fee0, type: 3}
   m_Name: 

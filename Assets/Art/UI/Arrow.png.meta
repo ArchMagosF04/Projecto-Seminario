@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 25c03f0889e2647409e5069e40f832b1
+guid: 772b54858b3f36c43a96ac5d29ccb114
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8639280536357395715
-    second: Choose Weapons (2)_0
+      213: -4346244404228752641
+    second: Arrow_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Choose Weapons (2)_0
+      name: Arrow_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 2063
-        height: 2063
+        x: 4
+        y: 1
+        width: 82
+        height: 166
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,8 +127,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 30d578cffd3e4e770800000000000000
-      internalID: 8639280536357395715
+      spriteID: ffa7ae2edb90fa3c0800000000000000
+      internalID: -4346244404228752641
       vertices: []
       indices: 
       edges: []
@@ -143,8 +143,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Choose Weapons (2)_0: 8639280536357395715
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

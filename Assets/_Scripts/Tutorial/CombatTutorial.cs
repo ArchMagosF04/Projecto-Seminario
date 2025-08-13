@@ -2,23 +2,27 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class CombatTutorial : MonoBehaviour
 {
     [SerializeField] GameObject[] messages;
     [SerializeField] GameObject[] arrows;
-    [SerializeField] GameObject mainShadePanel;
+    [SerializeField] GameObject centerShadePanel;
     [SerializeField] GameObject playerShadePanel;
     [SerializeField] GameObject enemyShadePanel;
     [SerializeField] GameObject metronome;
+    [SerializeField] TextMeshProUGUI hitCounter;
+    [SerializeField] Mana energyBar;
     private static int index =0;
     private int count = 0;
     private static event Action<int> OnIndexChange = delegate { };
     private GameObject player;
     private float timer = 0.5f;
     private float currentTimer;
-    private BeatDetector beatDetector;
+    [SerializeField] BeatDetector beatDetector;
     
     public void AdvanceIndex()
     {
@@ -32,9 +36,8 @@ public class CombatTutorial : MonoBehaviour
     {
         OnIndexChange += ShowEnemyHUD;
         OnIndexChange += ShowMetronome;
-        OnIndexChange += ShowEnergy;
+        OnIndexChange += ShowEnergy;       
         
-        beatDetector = GetComponent<BeatDetector>();
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -74,11 +77,9 @@ public class CombatTutorial : MonoBehaviour
             }
             else if (Input.anyKey)
             {
-                if (beatDetector.IsOnBeat())
-                {
-                    AdvanceIndex();
-                    currentTimer = 0;
-                }                
+
+                AdvanceIndex();
+                currentTimer = 0;                               
             }
         }
 
@@ -86,7 +87,10 @@ public class CombatTutorial : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
-                AdvanceIndex();
+                if (beatDetector.IsOnBeat())
+                {
+                    AdvanceIndex();
+                }                
             }
         }
 
@@ -103,32 +107,62 @@ public class CombatTutorial : MonoBehaviour
             }
         }
 
-        if( index == 6)
+        if(index == 6)
         {
             if (count < 3 && Input.GetKeyDown(KeyCode.Mouse0) && beatDetector.IsOnBeat())
             {
                 count++;
+                hitCounter.text = count.ToString();
             }
-            else if(count >= 3)
+            else if(count < 3 && Input.GetKeyDown(KeyCode.Mouse0) && !beatDetector.IsOnBeat())
+            {
+                count = 0;
+                hitCounter.text = count.ToString();
+            }
+            else if (count >= 3)
             {
                 AdvanceIndex();
+                count = 0;
             }
 
         }
+
+        if(index == 7)
+        {
+            if (currentTimer < timer)
+            {
+                currentTimer += Time.deltaTime;
+            }
+            else if (Input.anyKey)
+            {
+                AdvanceIndex();
+                currentTimer = 0;
+            }
+        }
+
+        if(index == 8)
+        {
+            if (Input.GetKeyDown(KeyCode.Mouse1))
+            {
+                AdvanceIndex();
+            }
+        }
+        
     }
 
     private void ShowEnemyHUD(int index)
     {
         if (index == 1)
         {
-            arrows[0].SetActive(true);
-            mainShadePanel.SetActive(true);
-            playerShadePanel.SetActive(true);
             TogglePlayerControls();
+            arrows[0].SetActive(true);
+            centerShadePanel.SetActive(true);
+            bool a = centerShadePanel.activeSelf;
+            playerShadePanel.SetActive(true);
         }
-        else if (index == 2)
+        else if (index != 1)
         {
-            mainShadePanel.SetActive(false);
+            centerShadePanel.SetActive(false);
             playerShadePanel.SetActive(false);
             arrows[0].SetActive(false);
             TogglePlayerControls();
@@ -144,27 +178,31 @@ public class CombatTutorial : MonoBehaviour
     {
         if(index == 3)
         {
-            mainShadePanel.SetActive(true);
+            centerShadePanel.SetActive(true);
             arrows[1].SetActive(true);
         }
         else if (index == 4)
         {
-            mainShadePanel.SetActive(false);
+            centerShadePanel.SetActive(false);
             arrows[1].SetActive(false);
         }
     }
 
     private void ShowEnergy(int index)
     {
-        if(index == 5)
+        if(index == 5 || index == 7)
         {
-            mainShadePanel.SetActive(true);
+            if(index == 7)
+            {
+                energyBar.IncreaseMana(100);
+            }
+            centerShadePanel.SetActive(true);
             enemyShadePanel.SetActive(true);
             arrows[2].SetActive(true);
         }
-        else if(index == 6)
+        else if(index != 5 || index !=7)
         {
-            mainShadePanel.SetActive(false);
+            centerShadePanel.SetActive(false);
             enemyShadePanel.SetActive(false);
             arrows[2].SetActive(false);
         }

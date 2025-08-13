@@ -11,7 +11,7 @@ public class BeatDetector : MonoBehaviour
     private float timer = 0;
     private BeatManager manager;
 
-    public event Action<bool> OnBeat;
+    public event Action<bool> OnBeat = delegate { };
 
     private void Start()
     {

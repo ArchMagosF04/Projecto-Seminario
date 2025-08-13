@@ -6,13 +6,28 @@ public class InhibitPlayerMovement : MonoBehaviour
 {
     private GameObject player;
     [SerializeField] CombatTutorial tutorialScript;
+    bool activate = false;
+
+    private void Update()
+    {
+        if (activate)
+        {
+            player.GetComponent<Rigidbody2D>().velocityX = 0;
+            player.GetComponent<Rigidbody2D>().velocityY = 0;
+        }
+        if(CombatTutorial.Index == 9)
+        {
+            DestroyTrigger();
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         collision.gameObject.TryGetComponent<Rigidbody2D>(out Rigidbody2D rigidbody);
-        rigidbody.bodyType = RigidbodyType2D.Static;
+        //rigidbody.bodyType = RigidbodyType2D.Static;
         player = rigidbody.gameObject;
         tutorialScript.AdvanceIndex();
+        activate = true;
     }
 
     public void DestroyTrigger()

@@ -17,6 +17,7 @@ public class CombatTutorial : MonoBehaviour
     [SerializeField] TextMeshProUGUI hitCounter;
     [SerializeField] Mana energyBar;
     private static int index =0;
+    public static int Index {  get { return index; } }
     private int count = 0;
     private static event Action<int> OnIndexChange = delegate { };
     private GameObject player;
@@ -85,12 +86,15 @@ public class CombatTutorial : MonoBehaviour
 
         if (index == 4)
         {
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+            if (beatDetector.IsOnBeat())
             {
-                if (beatDetector.IsOnBeat())
-                {
-                    AdvanceIndex();
-                }                
+                Time.timeScale = 0;
+            }
+
+            if (Input.GetKeyDown(KeyCode.Mouse0) && Time.timeScale == 0)
+            {
+                Time.timeScale = 1;
+                AdvanceIndex();               
             }
         }
 
@@ -104,11 +108,12 @@ public class CombatTutorial : MonoBehaviour
             {
                 AdvanceIndex();
                 currentTimer = 0;
+                count = 0;
             }
         }
 
         if(index == 6)
-        {
+        {            
             if (count < 3 && Input.GetKeyDown(KeyCode.Mouse0) && beatDetector.IsOnBeat())
             {
                 count++;
@@ -144,9 +149,11 @@ public class CombatTutorial : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Mouse1))
             {
+                TogglePlayerControls();
                 AdvanceIndex();
+                
             }
-        }
+        }       
         
     }
 
@@ -156,8 +163,7 @@ public class CombatTutorial : MonoBehaviour
         {
             TogglePlayerControls();
             arrows[0].SetActive(true);
-            centerShadePanel.SetActive(true);
-            bool a = centerShadePanel.activeSelf;
+            centerShadePanel.SetActive(true);            
             playerShadePanel.SetActive(true);
         }
         else if (index != 1)

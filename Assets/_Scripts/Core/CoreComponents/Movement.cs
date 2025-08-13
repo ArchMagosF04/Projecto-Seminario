@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Movement : CoreComponent
@@ -67,7 +68,7 @@ public class Movement : CoreComponent
         if (CanSetVelocity)
         {
             RB.velocity = workSpace;
-            CurrentVelocity = workSpace;
+            CurrentVelocity = workSpace;           
         }
     }
 

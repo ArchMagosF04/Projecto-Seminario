@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 25c03f0889e2647409e5069e40f832b1
+guid: f90cbb57f86b763498a437dc3e8fe572
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8639280536357395715
-    second: Choose Weapons (2)_0
+      213: 2191376080174992297
+    second: City_far_1_0
+  - first:
+      213: 7219542394017765730
+    second: City_far_1_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,7 +49,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,7 +78,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Choose Weapons (2)_0
+      name: City_far_1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 2063
-        height: 2063
+        x: 289
+        y: 332
+        width: 578
+        height: 515
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +117,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 30d578cffd3e4e770800000000000000
-      internalID: 8639280536357395715
+      spriteID: 9ab4e1c3fe4596e10800000000000000
+      internalID: 2191376080174992297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City_far_1_1
+      rect:
+        serializedVersion: 2
+        x: 1156
+        y: 304
+        width: 476
+        height: 385
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2695d4c7e87f03460800000000000000
+      internalID: 7219542394017765730
       vertices: []
       indices: 
       edges: []
@@ -123,7 +147,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -131,7 +155,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Choose Weapons (2)_0: 8639280536357395715
+      City_far_1_0: 2191376080174992297
+      City_far_1_1: 7219542394017765730
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

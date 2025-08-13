@@ -48,4 +48,6 @@ public class BeatDetector : MonoBehaviour
     {
         gracePeriod = time;
     }
+
+    public bool IsOnBeat() {  return isOnBeat; }
 }

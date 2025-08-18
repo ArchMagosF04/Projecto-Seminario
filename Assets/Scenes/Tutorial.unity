@@ -10499,6 +10499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beatDetector: {fileID: 0}
+  tutorial: {fileID: 0}
 --- !u!61 &1977915525
 BoxCollider2D:
   m_ObjectHideFlags: 0

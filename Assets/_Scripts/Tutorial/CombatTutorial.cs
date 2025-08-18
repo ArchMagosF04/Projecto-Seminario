@@ -24,6 +24,7 @@ public class CombatTutorial : MonoBehaviour
     private float timer = 0.5f;
     private float currentTimer;
     [SerializeField] BeatDetector beatDetector;
+    private bool keepGoing = false;
     
     public void AdvanceIndex()
     {
@@ -40,6 +41,18 @@ public class CombatTutorial : MonoBehaviour
         OnIndexChange += ShowEnergy;       
         
         player = GameObject.FindGameObjectWithTag("Player");
+    }
+
+    private void FixedUpdate()
+    {
+        if (index == 4)
+        {
+            if(currentTimer < timer)
+            {
+                currentTimer += 0.5f;
+            } 
+            
+        }
     }
 
     private void Update()
@@ -78,23 +91,24 @@ public class CombatTutorial : MonoBehaviour
             }
             else if (Input.anyKey)
             {
-
-                AdvanceIndex();
-                currentTimer = 0;                               
+                currentTimer = 0;
+                AdvanceIndex();                
             }
-        }
-
+        }    
+        
         if (index == 4)
         {
             if (beatDetector.IsOnBeat())
-            {
+            {                
+                StartCoroutine(StopGame());
                 Time.timeScale = 0;
             }
 
-            if (Input.GetKeyDown(KeyCode.Mouse0) && Time.timeScale == 0)
+            if (keepGoing)
             {
-                Time.timeScale = 1;
-                AdvanceIndex();               
+                StopCoroutine(StopGame());
+                AdvanceIndex();
+                
             }
         }
 
@@ -213,4 +227,25 @@ public class CombatTutorial : MonoBehaviour
             arrows[2].SetActive(false);
         }
     }
+
+    IEnumerator StopGame()
+    {
+        //if (beatDetector.IsOnBeat())
+        //{
+        //    //AdvanceIndex();
+        //    Time.timeScale = 0;
+        //}        
+        
+
+        yield return new WaitForSecondsRealtime(2);
+
+        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Mouse0));
+
+        Time.timeScale = 1;   
+
+        keepGoing = true;    
+
+        yield break;        
+    }
+    
 }

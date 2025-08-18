@@ -7,6 +7,7 @@ public class Dummy : MonoBehaviour
 {
     [SerializeField] BeatDetector beatDetector;
     private int hp = 100;
+    [SerializeField] CombatTutorial tutorial;
     // Start is called before the first frame update
     void Start()
     {

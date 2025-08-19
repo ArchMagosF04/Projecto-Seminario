@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Boss1Controller : MonoBehaviour, ISpeaker
+public class Boss1Controller : MonoBehaviour, ISpeaker, IDamageable
 {
     [SerializeField] BossMovement movementController;
     [SerializeField] Transform centerStage;
@@ -204,5 +204,16 @@ public class Boss1Controller : MonoBehaviour, ISpeaker
     public void TurnOn()
     {
         this.enabled = true;
+    }
+
+    public float GetHealth()
+    {
+        return hp;
+    }
+
+    public void TakeDamage(float amount)
+    {
+        hp -= amount;
+        gameObject.GetComponent<HealthComponent>()?.TakeDamage(amount);
     }
 }

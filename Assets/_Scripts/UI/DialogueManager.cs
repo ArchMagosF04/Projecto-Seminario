@@ -13,7 +13,11 @@ public class DialogueManager : MonoBehaviour
     private float currentWaitTime = 0;
 
     [SerializeField] private GameObject[] MidCombatDialogue;
+
     [SerializeField] private float screenTime;
+    public bool showMessagesAtRandom = false;
+    private float messageInterval = 5f;
+    private float currentMessageTimer = 0;
 
     private bool introEnded = false;
     private bool messageOnScreen = false;
@@ -26,6 +30,7 @@ public class DialogueManager : MonoBehaviour
     {
         player.enabled = false;
         enemy.GetComponent<ISpeaker>().TurnOff();
+
     }
 
     // Update is called once per frame
@@ -54,6 +59,37 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
+            float enemyHp = enemy.GetComponent<ISpeaker>().GetHealth();
+
+            if (!showMessagesAtRandom)
+            {
+                if (enemyHp / 100 < 0.25)
+                {
+                    StartCoroutine(ShowMessage(2));
+                }
+                else if (enemyHp / 100 < 0.50)
+                {
+                    StartCoroutine(ShowMessage(1));
+                }
+                else if (enemyHp / 100 < 0.75)
+                {
+                    StartCoroutine(ShowMessage(0));
+                }
+            }
+            else if (showMessagesAtRandom)
+            {
+                if(currentMessageTimer < messageInterval)
+                {
+                    currentMessageTimer += Time.deltaTime;
+                }
+                else if(currentMessageTimer >= messageInterval)
+                {
+                    StartCoroutine(ShowMessage(ChoseDialogue()));
+                    currentMessageTimer = 0;
+                }
+                    
+            }
+            
 
         }
     }
@@ -76,14 +112,39 @@ public class DialogueManager : MonoBehaviour
         
     }
 
-    private void ChoseDialogue()
+    private int ChoseDialogue()
     {
-       subIndex = Random.Range(0, MidCombatDialogue.Length);
+       return subIndex = Random.Range(0, MidCombatDialogue.Length);
     }
 
-    public void ShowMessage(int index)
+    //public void ShowMessage(int index)
+    //{
+    //    MidCombatDialogue[index].gameObject.SetActive(true);
+    //}
+
+    IEnumerator ShowMessage(int index)
     {
-        MidCombatDialogue[index].gameObject.SetActive(true);
+        if (!showMessagesAtRandom && MidCombatDialogue[index] != null)
+        {
+            MidCombatDialogue[index].gameObject.SetActive(true);
+
+            yield return new WaitForSeconds(screenTime);
+
+            MidCombatDialogue[index].gameObject.SetActive(false);
+            Destroy(MidCombatDialogue[index]);
+        }
+        else
+        {
+            MidCombatDialogue[index].gameObject.SetActive(true);
+
+            yield return new WaitForSeconds(screenTime);
+
+            MidCombatDialogue[index].gameObject.SetActive(false);
+        }
+
+            yield return null;
+
+        StopCoroutine(ShowMessage(index));
     }
 
 

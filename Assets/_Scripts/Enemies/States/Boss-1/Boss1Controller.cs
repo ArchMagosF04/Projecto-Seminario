@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Boss1Controller : MonoBehaviour
+public class Boss1Controller : MonoBehaviour, ISpeaker
 {
     [SerializeField] BossMovement movementController;
     [SerializeField] Transform centerStage;
@@ -196,4 +196,13 @@ public class Boss1Controller : MonoBehaviour
         }        
     }
 
+    public void TurnOff()
+    {
+        this.enabled = false;
+    }
+
+    public void TurnOn()
+    {
+        this.enabled = true;
+    }
 }

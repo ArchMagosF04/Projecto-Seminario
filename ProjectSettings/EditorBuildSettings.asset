@@ -6,7 +6,22 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/TestScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/Scenes/Main Menu.unity
+    guid: de5dcb08c19b0e04d9aedb676046d92f
+  - enabled: 1
+    path: Assets/Scenes/Lvl Selection Screen.unity
+    guid: a942b5970807602448913d57fdf32ada
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 97bede3a2132f654787d7a6869bbbfac
+  - enabled: 1
+    path: Assets/Scenes/Level1V2.unity
+    guid: a88ba5bf4ea73b24eaf17989978d7f43
+  - enabled: 1
+    path: Assets/Scenes/WinScreen.unity
+    guid: 9c5365ed244a4064786ef73977275331
+  - enabled: 1
+    path: Assets/Scenes/LoseScreen.unity
+    guid: d520e220ee7a86643ac48dad47840242
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

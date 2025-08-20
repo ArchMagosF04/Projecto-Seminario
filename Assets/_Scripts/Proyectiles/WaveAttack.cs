@@ -51,7 +51,7 @@ public class WaveAttack : ProyectileBase
     {
         if (collision.gameObject.tag == "Player")
         {   
-            if (collision.gameObject.GetComponent<PlayerController>().CurrentState != collision.gameObject.GetComponent<PlayerController>().CurrentState as PlayerST_Jump)
+            if (collision.gameObject.GetComponent<PlayerController>().StateMachine.CurrentState != collision.gameObject.GetComponent<PlayerController>().StateMachine.CurrentState as PlayerST_Jump)
             {
                 collision.gameObject.TryGetComponent<HealthComponent>(out HealthComponent health);
                 if (health != null)

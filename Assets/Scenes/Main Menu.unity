@@ -618,7 +618,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 4130640169021434097, guid: dc920ff30590142448efdce8ffe8b75a, type: 3}
+  m_Sprite: {fileID: 4130640169021434097, guid: 4fb8cb94852dc1248b100f7e923f51b9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -887,7 +887,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 4130640169021434097, guid: dc920ff30590142448efdce8ffe8b75a, type: 3}
+  m_Sprite: {fileID: 4130640169021434097, guid: 4fb8cb94852dc1248b100f7e923f51b9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1156,7 +1156,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -6470460504253458178, guid: 45495dfc138cfe54ea4729deeca961fc, type: 3}
+  m_Sprite: {fileID: -4178046375966092550, guid: a43396412a6b38d49bf45d3d5edbe483, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1206,7 +1206,7 @@ MonoBehaviour:
   masterSlider: {fileID: 1997817092}
   musicSlider: {fileID: 395497906}
   soundSlider: {fileID: 1965593936}
-  audioMixer: {fileID: 24100000, guid: b8d78bfe791ff554bb28ad093872b0b4, type: 2}
+  audioMixer: {fileID: 24100000, guid: 20d587f63ee10e746b23a5f4c255fffd, type: 2}
 --- !u!224 &369842624
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1547,7 +1547,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 7175261627662145010, guid: b64891f151c86af4ca06815484c11f61, type: 3}
+  m_Sprite: {fileID: 7175261627662145010, guid: bd467247535dd4848adf569d1e7159ec, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1794,7 +1794,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5561665765474925660, guid: bd70e3fd27bd760419c61c8797c5496d, type: 3}
+  m_Sprite: {fileID: 5561665765474925660, guid: f599c0bc5c6881941a615ed8a583b33c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2000,7 +2000,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 4130640169021434097, guid: dc920ff30590142448efdce8ffe8b75a, type: 3}
+  m_Sprite: {fileID: 4130640169021434097, guid: 4fb8cb94852dc1248b100f7e923f51b9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2118,7 +2118,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -2411039567873315589, guid: b8d78bfe791ff554bb28ad093872b0b4, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 13797db821b2c7d48afcc99c7bb9c2d6, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 13797db821b2c7d48afcc99c7bb9c2d6, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -2483,7 +2483,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -4178046375966092550, guid: 1f3a60731cfb93743b8a980bfb0f7f5c, type: 3}
+  m_Sprite: {fileID: -6470460504253458178, guid: 14931399eddc84546adfd340eaa501a2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2640,7 +2640,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5561665765474925660, guid: bd70e3fd27bd760419c61c8797c5496d, type: 3}
+  m_Sprite: {fileID: -7494436232033235922, guid: 7639fb430c32bc8408cd4022b2a42c6a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2809,7 +2809,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -4137940738014722460, guid: 7d630199e9458d8418e4fbd84a78e446, type: 3}
+  m_Sprite: {fileID: -6470460504253458178, guid: 14931399eddc84546adfd340eaa501a2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

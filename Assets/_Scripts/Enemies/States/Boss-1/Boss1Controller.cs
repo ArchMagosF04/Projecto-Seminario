@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Boss1Controller : MonoBehaviour, ISpeaker, IDamageable
+public class Boss1Controller : MonoBehaviour, ISpeaker
 {
     [SerializeField] BossMovement movementController;
     [SerializeField] Transform centerStage;
@@ -191,7 +191,7 @@ public class Boss1Controller : MonoBehaviour, ISpeaker, IDamageable
         if (collision.gameObject.tag == "Player")
         {
             collision.gameObject.GetComponent<HealthComponent>().TakeDamage(enemyInfo.Atk);
-            collision.gameObject.GetComponentInChildren<KnockBackReceiver>().KnockBack((player.transform.position - transform.position).normalized, knockbackForce, 5);
+            collision.gameObject.GetComponentInChildren<Core_Knockback>().KnockBack((player.transform.position - transform.position).normalized, knockbackForce, 5);
             collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * knockbackForce*10, ForceMode2D.Impulse);
         }        
     }

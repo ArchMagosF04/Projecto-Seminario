@@ -3,10 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - ParticleContainer
-  - BeatCenter
-  - BeatMarker
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -14,15 +11,15 @@ TagManager:
   - Ground
   - Water
   - UI
-  - Wall
+  - Walls
   - Player
-  - Damageable
-  - Weapon
-  - Enemies
-  - Projectiles_Player
-  - 
-  - 
-  - 
+  - Enemy
+  - PlayerPhysics
+  - EnemyPhysics
+  - MovingPlatform
+  - MovileGround
+  - EnemyAttacks
+  - PlayerAttacks
   - 
   - 
   - 
@@ -42,20 +39,23 @@ TagManager:
   - 
   m_SortingLayers:
   - name: Background
-    uniqueID: 3218899877
+    uniqueID: 4054858477
     locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Enemies
-    uniqueID: 2205469349
+  - name: Enemy
+    uniqueID: 421754133
     locked: 0
   - name: Player
-    uniqueID: 1994613697
+    uniqueID: 1300096155
     locked: 0
-  - name: Projectiles
-    uniqueID: 779406755
+  - name: Effects
+    uniqueID: 560529137
+    locked: 0
+  - name: Foreground
+    uniqueID: 3468129703
     locked: 0
   - name: UI
-    uniqueID: 676550495
+    uniqueID: 945808007
     locked: 0

@@ -10,7 +10,7 @@ public class PauseMenuButtons : MonoBehaviour
     [SerializeField] List<GameObject> Buttons = new List<GameObject>();
     public void ReturnGame()
     {
-        GameManager.Instance.PauseMenu(false);
+        PauseManager.Instance.TogglePauseMenu(false);
     }
 
     public void Volume()

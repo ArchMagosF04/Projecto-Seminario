@@ -15,7 +15,7 @@ public class CombatTutorial : MonoBehaviour
     [SerializeField] GameObject enemyShadePanel;
     [SerializeField] GameObject metronome;
     [SerializeField] TextMeshProUGUI hitCounter;
-    [SerializeField] Mana energyBar;
+    [SerializeField] Core_Mana energyBar;
     private static int index =0;
     public static int Index {  get { return index; } }
     private int count = 0;

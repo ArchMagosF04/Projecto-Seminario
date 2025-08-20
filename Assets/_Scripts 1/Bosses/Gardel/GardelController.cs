@@ -11,6 +11,8 @@ public class GardelController : MonoBehaviour
     public GardelST_Jump JumpState { get; private set; }
     public GardelST_Airborne AirborneState { get; private set; }
     public GardelST_NormalAttack NormalAttackState { get; private set; }
+    public GardelST_SpecialAttack SpecialAttackState { get; private set; }
+    public GardelST_StunAttack StunAttackState { get; private set; }
     #endregion
 
     #region Component References
@@ -20,6 +22,7 @@ public class GardelController : MonoBehaviour
     private Core_Movement movement;
     private Core_CollisionSenses collisionSenses;
     private Animator anim;
+    private CharacterAnimatorEvent animatorEvent;
 
     [SerializeField] private SoundLibraryObject soundLibrary;
 
@@ -30,12 +33,13 @@ public class GardelController : MonoBehaviour
 
     [Header("Attack Prefabs")]
     [SerializeField] private Projectile[] projectiles;
+    [SerializeField] private GameObject shoutAOEPrefab;
 
     #endregion
 
     #region Other Variables
     [Header("Other")]
-    public bool ExecutedDesiredAction { get; private set; } //Determines if the boss has decided on an attack to perform.
+    public bool LastAttackWasSpecial;
     public Transform DesiredJumpTarget;
     
     public enum ActionType { None, Normal, Special }
@@ -57,27 +61,34 @@ public class GardelController : MonoBehaviour
         anim.SetFloat("BeatSpeedMult", BeatManager.Instance.BeatSpeedMultiplier);
         soundLibrary.Initialize();
 
+        animatorEvent = GetComponentInChildren<CharacterAnimatorEvent>();
+
         StateMachine = new StateMachine();
         IdleState = new GardelST_Idle(this, StateMachine, anim, "Idle");
         JumpState = new GardelST_Jump(this, StateMachine, anim, "InAir");
         AirborneState = new GardelST_Airborne(this, StateMachine, anim, "InAir");
         NormalAttackState = new GardelST_NormalAttack(this, StateMachine, anim, "NormalAttack");
+        SpecialAttackState = new GardelST_SpecialAttack(this, StateMachine, anim, "SpecialAttack");
+        StunAttackState = new GardelST_StunAttack(this, StateMachine, anim, "StunAttack");
 
         StateMachine.Initialize(IdleState);
     }
 
     private void OnEnable()
     {
-        
+        animatorEvent.OnAnimationFinishedTrigger += AnimationFinishedTrigger;
     }
 
     private void OnDisable()
     {
-        //transform.SetParent(null);
         IdleState.UnsubscribeToEvents();
         JumpState.UnsubscribeToEvents();
         AirborneState.UnsubscribeToEvents();
         NormalAttackState.UnsubscribeToEvents();
+        SpecialAttackState.UnsubscribeToEvents();
+        StunAttackState.UnsubscribeToEvents();
+
+        animatorEvent.OnAnimationFinishedTrigger -= AnimationFinishedTrigger;
     }
 
     private void Update()
@@ -133,6 +144,13 @@ public class GardelController : MonoBehaviour
         Vector2 direction = GameManager.Instance.PlayerTransform.position - transform.position;
 
         newNote.LaunchProjectile(direction.normalized);
+    }
+
+    public void SpawnShout()
+    {
+        GameObject shout = Instantiate(shoutAOEPrefab, transform.position, Quaternion.identity);
+
+        Destroy(shout, 60/BeatManager.Instance.BPM);
     }
 
     #endregion

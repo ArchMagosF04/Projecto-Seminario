@@ -37,6 +37,7 @@ public class GardelST_NormalAttack : GardelState
     {
         if (numberOfAttacks == attackCount)
         {
+            controller.LastAttackWasSpecial = false;
             controller.DesiredAction = GardelController.ActionType.None;
             stateMachine.ChangeState(controller.IdleState);
             return;

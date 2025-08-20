@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,11 +11,15 @@ public class Projectile : MonoBehaviour
 
     [SerializeField] private float lifeTime = 5f;
 
+    [SerializeField] private ScreenShakeProfile shakeProfile;
+
     private Rigidbody2D rb;
+    private CinemachineImpulseSource impulseSource;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        impulseSource = GetComponent<CinemachineImpulseSource>();
     }
 
     private void Start()
@@ -34,6 +39,7 @@ public class Projectile : MonoBehaviour
         if (collision.TryGetComponent(out Core_Knockback component))
         {
             component.Knockback(transform, knockback);
+            CameraShakeManager.Instance.ScreenShakeFromProfile(shakeProfile, impulseSource);
         }
 
         if (collision.TryGetComponent(out IDamageable health))

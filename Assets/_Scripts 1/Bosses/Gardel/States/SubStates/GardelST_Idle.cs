@@ -60,9 +60,18 @@ public class GardelST_Idle : GardelState
     {
         if (controller.DesiredAction == GardelController.ActionType.None)
         {
-            controller.DesiredAction = GardelController.ActionType.Normal;
+            if (controller.LastAttackWasSpecial || Random.value < 0.66f)
+            {
+                controller.DesiredAction = GardelController.ActionType.Normal;
 
-            DecidePlatform();
+                DecidePlatform();
+            }
+            else
+            {
+                controller.DesiredAction = GardelController.ActionType.Special;
+
+                controller.DesiredJumpTarget = controller.stageCenter;
+            }
 
             stateMachine.ChangeState(controller.JumpState);
         }
@@ -73,6 +82,10 @@ public class GardelST_Idle : GardelState
         if (controller.DesiredAction == GardelController.ActionType.Normal)
         {
             stateMachine.ChangeState(controller.NormalAttackState);
+        }
+        else if (controller.DesiredAction == GardelController.ActionType.Special)
+        {
+            stateMachine.ChangeState(controller.SpecialAttackState);
         }
     }
 

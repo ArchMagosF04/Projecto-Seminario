@@ -15,6 +15,10 @@ public class SoundSettings : MonoBehaviour
 
     private void Awake()
     {
+        masterSlider.minValue = 0; masterSlider.maxValue = 100;
+        musicSlider.minValue = 0; musicSlider.maxValue = 100;
+        soundSlider.minValue = 0; soundSlider.maxValue = 100;
+
         masterSlider.onValueChanged.AddListener(SetMasterVolume);
         musicSlider.onValueChanged.AddListener(SetMusicVolume);
         soundSlider.onValueChanged.AddListener(SetSoundVolume);

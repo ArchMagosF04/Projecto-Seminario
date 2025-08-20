@@ -10,4 +10,8 @@ public class WinScreen : MonoBehaviour
         SceneManager.LoadScene("Lvl Selection Screen");
     }
     
+    public void LoadOtherLevel(string levelName)
+    {
+        SceneManager.LoadScene(levelName);
+    }
 }

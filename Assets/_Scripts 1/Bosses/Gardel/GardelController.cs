@@ -74,6 +74,10 @@ public class GardelController : MonoBehaviour
     private void OnDisable()
     {
         //transform.SetParent(null);
+        IdleState.UnsubscribeToEvents();
+        JumpState.UnsubscribeToEvents();
+        AirborneState.UnsubscribeToEvents();
+        NormalAttackState.UnsubscribeToEvents();
     }
 
     private void Update()

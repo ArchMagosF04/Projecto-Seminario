@@ -234,7 +234,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 4130640169021434097, guid: dc920ff30590142448efdce8ffe8b75a, type: 3}
+  m_Sprite: {fileID: 4130640169021434097, guid: 4fb8cb94852dc1248b100f7e923f51b9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -439,16 +439,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: LoadLvlSelection
+      - m_Target: {fileID: 1069315767}
+        m_TargetAssemblyTypeName: WinScreen, Assembly-CSharp
+        m_MethodName: LoadOtherLevel
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Lvl Selection Screen
+          m_StringArgument: Level1V2
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &704647470
@@ -471,7 +471,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -4178046375966092550, guid: 1f3a60731cfb93743b8a980bfb0f7f5c, type: 3}
+  m_Sprite: {fileID: -6470460504253458178, guid: 14931399eddc84546adfd340eaa501a2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -546,7 +546,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -8102473261025020785, guid: e13b6d8c1a95e5845845a7d29050803c, type: 3}
+  m_Sprite: {fileID: -8102473261025020785, guid: bfbdd9aac7c513343a8c9c89215e8593, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

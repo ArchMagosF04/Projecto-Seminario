@@ -121,16 +121,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16a4b566053c56f4d9ba3c3f12a5acb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gardelStats: {fileID: 11400000, guid: 4d6125dc252b125438bf1e9e7a7d3fda, type: 2}
   soundLibrary: {fileID: 11400000, guid: d40eed17ddcd037439beb5fc67a6990b, type: 2}
   <rightPlatform>k__BackingField: {fileID: 0}
   <leftPlatform>k__BackingField: {fileID: 0}
   <stageCenter>k__BackingField: {fileID: 0}
-  projectiles:
-  - {fileID: 2798240489296969066, guid: d79148af75e1f5248ae377637cdc53cf, type: 3}
-  - {fileID: 7184524012964115660, guid: ec9a6a13b51c3084488695efb35144f9, type: 3}
-  - {fileID: 3635873970996483199, guid: 05e6936a02c88564395dc383931df021, type: 3}
-  - {fileID: 9061878878131582695, guid: 2d97fcf90644b0449afc8b68fdab61fa, type: 3}
-  shoutAOEPrefab: {fileID: 0}
   LastAttackWasSpecial: 0
   DesiredJumpTarget: {fileID: 0}
   DesiredAction: 0
@@ -176,6 +171,7 @@ GameObject:
   - component: {fileID: 6470614100683706382}
   - component: {fileID: 8287480254959184023}
   - component: {fileID: 4610024122916527570}
+  - component: {fileID: 3888455034750731251}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -274,6 +270,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3888455034750731251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1688903599657790840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca8f48f5abdcb8f4f8d590f106a6ba19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2246265247275648550
 GameObject:
   m_ObjectHideFlags: 0

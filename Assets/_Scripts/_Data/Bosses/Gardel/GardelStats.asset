@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d87fd5520e6ef9540b30d1bd18b9622d, type: 3}
+  m_Name: GardelStats
+  m_EditorClassIdentifier: 
+  <BeatsSpentOnIdle>k__BackingField: 3
+  <StunAttackChance>k__BackingField: 0
+  <StunAttackChanceAtHalf>k__BackingField: 1
+  <JumpForce>k__BackingField: 25
+  <NumberOfAttacks>k__BackingField: 3
+  <SpecialBeatsToWait>k__BackingField: 1
+  <StunBeatsToWait>k__BackingField: 1
+  <Projectiles>k__BackingField:
+  - {fileID: 2798240489296969066, guid: d79148af75e1f5248ae377637cdc53cf, type: 3}
+  - {fileID: 7184524012964115660, guid: ec9a6a13b51c3084488695efb35144f9, type: 3}
+  - {fileID: 3635873970996483199, guid: 05e6936a02c88564395dc383931df021, type: 3}
+  - {fileID: 9061878878131582695, guid: 2d97fcf90644b0449afc8b68fdab61fa, type: 3}
+  <ShoutAOEPrefab>k__BackingField: {fileID: 3186468393202133140, guid: d90ba900b5a1089458d05a125f14cac8, type: 3}

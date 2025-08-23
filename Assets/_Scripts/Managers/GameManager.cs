@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    [field: SerializeField] public Transform PlayerTransform {  get; private set; }
+    [field: SerializeField] public PlayerController PlayerInstance {  get; private set; }
 
     private void Awake()
     {

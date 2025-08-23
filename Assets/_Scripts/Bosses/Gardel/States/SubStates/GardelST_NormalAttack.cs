@@ -42,7 +42,7 @@ public class GardelST_NormalAttack : GardelState
             return;
         }
 
-        controller.CheckFlip(GameManager.Instance.PlayerTransform);
+        controller.CheckFlip(GameManager.Instance.PlayerInstance.transform);
 
         anim.SetTrigger("NormalAttackBeat");
 

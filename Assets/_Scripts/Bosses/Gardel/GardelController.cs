@@ -103,10 +103,9 @@ public class GardelController : MonoBehaviour
 
     #region Other Functions
 
-    public void OnBeatAction()
+    public void PlaySound(string name)
     {
-        anim.SetTrigger("OnBeat");
-        SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.Library["FingerSnap"]).Play();
+        SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.Library[name]).Play();
     }
 
     public void AnimationTrigger()
@@ -139,7 +138,7 @@ public class GardelController : MonoBehaviour
     {
         Projectile newNote = Instantiate(gardelStats.Projectiles[Random.Range(0, gardelStats.Projectiles.Length)], transform.position, Quaternion.identity);
         
-        Vector2 direction = GameManager.Instance.PlayerTransform.position - transform.position;
+        Vector2 direction = GameManager.Instance.PlayerInstance.transform.position - transform.position;
 
         newNote.LaunchProjectile(direction.normalized);
     }
@@ -149,6 +148,11 @@ public class GardelController : MonoBehaviour
         GameObject shout = Instantiate(gardelStats.ShoutAOEPrefab, transform.position, Quaternion.identity);
 
         Destroy(shout, 60/BeatManager.Instance.BPM);
+    }
+
+    public void StunningShout()
+    {
+        GameManager.Instance.PlayerInstance.TryToStunPlayer(gardelStats.StunEffectBeatDuration);
     }
 
     #endregion

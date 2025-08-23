@@ -72,7 +72,7 @@ public class BeatComboCounter : MonoBehaviour
             currentRankIndex++;
             currentRank = styleRanks[currentRankIndex];
 
-            Debug.Log(currentRank.rankName);
+            //Debug.Log(currentRank.rankName);
         }
 
         ResetDecayTimer();
@@ -110,7 +110,7 @@ public class BeatComboCounter : MonoBehaviour
         beatComboCounter = currentRank.rankThreshold;
         if (counterTextBox != null) counterTextBox.text = beatComboCounter.ToString();
 
-        Debug.Log(currentRank.rankName);
+        //Debug.Log(currentRank.rankName);
 
         ResetDecayTimer();
     }

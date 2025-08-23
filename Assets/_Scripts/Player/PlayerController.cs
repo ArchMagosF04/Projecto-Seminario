@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.IO.LowLevel.Unsafe;
@@ -17,6 +18,7 @@ public class PlayerController : MonoBehaviour
     public PlayerST_Crouch CrouchState { get; private set; }
     public PlayerST_PrimeAttack PrimaryAttackState { get; private set; }
     public PlayerST_SecAttack SecondaryAttackState { get; private set; }
+    public PlayerST_Stun StunState { get; private set; }
 
     #endregion
 
@@ -31,11 +33,17 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private PlayerStats playerData;
     [SerializeField] private PlayerWeapon weapon;
-    //[field: SerializeField] public SoundLibraryObject playerLibrary { get; private set; }
+    [SerializeField] private SoundLibraryObject soundLibrary;
+
+    private Core_CollisionSenses collisionSenses;
 
     #endregion
 
     #region Other Variables
+
+    public int StunBeatDuration { get; private set; }
+
+    public Action OnStunEvent;
 
     private Vector2 workSpace;
 
@@ -51,6 +59,7 @@ public class PlayerController : MonoBehaviour
         RB = GetComponent<Rigidbody2D>();
         Anim = GetComponentInChildren<Animator>();
         playerSprite = GetComponentInChildren<SpriteRenderer>();
+        collisionSenses = Core.GetCoreComponent<Core_CollisionSenses>();
 
         if (PlayerCollider.Length != 2) Debug.LogError("Player got the wrong colliders.");
 
@@ -66,6 +75,7 @@ public class PlayerController : MonoBehaviour
         CrouchState = new PlayerST_Crouch(this, playerData, StateMachine, Anim, "Crouch");
         PrimaryAttackState = new PlayerST_PrimeAttack(this, playerData, StateMachine, Anim, "PrimeAttack", weapon);
         SecondaryAttackState = new PlayerST_SecAttack(this, playerData, StateMachine, Anim, "SecAttack", weapon);
+        StunState = new PlayerST_Stun(this, playerData, StateMachine, Anim, "Stun");
     }
 
     private void Start()
@@ -95,11 +105,17 @@ public class PlayerController : MonoBehaviour
         CrouchState.UnsubscribeToEvents();
         PrimaryAttackState.UnsubscribeToEvents();
         SecondaryAttackState.UnsubscribeToEvents();
+        StunState.UnsubscribeToEvents();
     }
 
     #endregion
 
     #region Other Functions
+
+    public void PlaySound(string name)
+    {
+        SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.Library[name]).Play();
+    }
 
     public void SetColliderHeight(float height)
     {
@@ -114,6 +130,14 @@ public class PlayerController : MonoBehaviour
             collider.offset = center;
         }
     }
+
+    public void TryToStunPlayer(int value) 
+    {
+        Debug.Log("TryToStun");
+        if (!collisionSenses.Grounded) return;
+        StunBeatDuration = value;
+        StateMachine.ChangeState(StunState);
+    } 
 
     public void AnimationTrigger()
     {

@@ -643,7 +643,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 100
-  m_LinearDrag: 0.5
+  m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 5
   m_Material: {fileID: 6200000, guid: b6b4c1ab11c5607498dad783890ab36f, type: 2}
@@ -674,6 +674,7 @@ MonoBehaviour:
   - {fileID: 877126473947971669}
   playerData: {fileID: 11400000, guid: 0ddf61c787af8df4c9074f1bc3df8248, type: 2}
   weapon: {fileID: 2076463419345413119}
+  soundLibrary: {fileID: 0}
 --- !u!114 &6811924436956391939
 MonoBehaviour:
   m_ObjectHideFlags: 0

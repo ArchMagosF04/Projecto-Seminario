@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GardelStats
   m_EditorClassIdentifier: 
   <BeatsSpentOnIdle>k__BackingField: 3
-  <StunAttackChance>k__BackingField: 1
+  <StunAttackChance>k__BackingField: 0.1
   <StunAttackChanceAtHalf>k__BackingField: 0.35
   <JumpForce>k__BackingField: 25
   <NumberOfAttacks>k__BackingField: 3

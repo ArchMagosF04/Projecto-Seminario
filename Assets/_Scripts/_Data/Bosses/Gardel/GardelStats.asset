@@ -20,6 +20,7 @@ MonoBehaviour:
   <SpecialBeatsToWait>k__BackingField: 1
   <StunBeatsToWait>k__BackingField: 1
   <StunEffectBeatDuration>k__BackingField: 3
+  <StunShakeProfile>k__BackingField: {fileID: 11400000, guid: 3f67121fb3219e140aacb0850b4d44b7, type: 2}
   <Projectiles>k__BackingField:
   - {fileID: 2798240489296969066, guid: d79148af75e1f5248ae377637cdc53cf, type: 3}
   - {fileID: 7184524012964115660, guid: ec9a6a13b51c3084488695efb35144f9, type: 3}

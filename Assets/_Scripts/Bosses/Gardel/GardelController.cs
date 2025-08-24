@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -20,9 +21,9 @@ public class GardelController : MonoBehaviour
     
     private Core_Health health;
     private Core_Movement movement;
-    private Core_CollisionSenses collisionSenses;
     private Animator anim;
     private CharacterAnimatorEvent animatorEvent;
+    private CinemachineImpulseSource impulseSource;
 
     [Header("Scriptable Objects")]
     [SerializeField] private GardelStats gardelStats;
@@ -53,7 +54,7 @@ public class GardelController : MonoBehaviour
 
         health = Core.GetCoreComponent<Core_Health>();
         movement = Core.GetCoreComponent<Core_Movement>();
-        collisionSenses = Core.GetCoreComponent<Core_CollisionSenses>();
+        impulseSource = GetComponent<CinemachineImpulseSource>();
 
         anim = GetComponentInChildren<Animator>();
         anim.SetFloat("BeatSpeedMult", BeatManager.Instance.BeatSpeedMultiplier);
@@ -153,6 +154,7 @@ public class GardelController : MonoBehaviour
     public void StunningShout()
     {
         GameManager.Instance.PlayerInstance.TryToStunPlayer(gardelStats.StunEffectBeatDuration);
+        CameraShakeManager.Instance.ScreenShakeFromProfile(gardelStats.StunShakeProfile, impulseSource);
     }
 
     #endregion

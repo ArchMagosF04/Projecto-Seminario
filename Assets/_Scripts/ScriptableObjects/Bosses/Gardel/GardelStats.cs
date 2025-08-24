@@ -22,6 +22,7 @@ public class GardelStats : ScriptableObject
     [field: Header("Stun Attack State")]
     [field: SerializeField] public int StunBeatsToWait { get; private set; } = 1;
     [field: SerializeField] public int StunEffectBeatDuration { get; private set; } = 3;
+    [field: SerializeField] public ScreenShakeProfile StunShakeProfile { get; private set; }
 
     [field: Header("Attack Prefabs")]
     [field: SerializeField] public Projectile[] Projectiles { get; private set; }

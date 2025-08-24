@@ -141,7 +141,7 @@ public class InputManager : MonoBehaviour
     {
         if (context.started)
         {
-            PauseManager.Instance.TogglePauseMenu(true);
+            PauseManager.Instance.OpenPauseScreen();
             playerInput.SwitchCurrentActionMap("UI");
         }
     }
@@ -189,7 +189,7 @@ public class InputManager : MonoBehaviour
 
     public void ResumeGame()
     {
-        PauseManager.Instance.TogglePauseMenu(false);
+        PauseManager.Instance.ResumeGame();
         playerInput.SwitchCurrentActionMap("Gameplay");
     }
 

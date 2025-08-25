@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PauseManager : MonoBehaviour
 {
@@ -16,6 +17,13 @@ public class PauseManager : MonoBehaviour
     [SerializeField] private GameObject volumeSettingsMenu;
     [SerializeField] private GameObject videoSettingsMenu;
     [SerializeField] private GameObject controlSettingsMenu;
+
+    [Header("Buttons to Select")]
+    [SerializeField] private GameObject mainPauseFirstSelected;
+    [SerializeField] private GameObject optionsFirstSelected;
+    [SerializeField] private GameObject volumeFirstSelected;
+    [SerializeField] private GameObject videoFirstSelected;
+    [SerializeField] private GameObject controlFirstSelected;
 
     public bool IsGamePaused { get; private set; }
 
@@ -52,6 +60,8 @@ public class PauseManager : MonoBehaviour
     {
         IsGamePaused = true;
 
+        EventSystem.current.SetSelectedGameObject(mainPauseFirstSelected);
+
         pauseScreen.enabled = true;
         BeatManager.Instance.ToggleMusic(false);
         Time.timeScale = 0f;
@@ -60,6 +70,8 @@ public class PauseManager : MonoBehaviour
     public void ClosePauseScreen()
     {
         IsGamePaused = false;
+
+        EventSystem.current.SetSelectedGameObject(null);
 
         ResetScreens();
         Time.timeScale = 1f;
@@ -80,12 +92,16 @@ public class PauseManager : MonoBehaviour
     {
         mainPauseMenu?.SetActive(false);
         optionsMenu?.SetActive(true);
+
+        EventSystem.current.SetSelectedGameObject(optionsFirstSelected);
     }
 
     public void CloseOptionsMenu()
     {
         mainPauseMenu?.SetActive(true);
         optionsMenu?.SetActive(false);
+
+        EventSystem.current.SetSelectedGameObject(mainPauseFirstSelected);
     }
 
     #endregion
@@ -96,36 +112,48 @@ public class PauseManager : MonoBehaviour
     {
         optionsMenu?.SetActive(false);
         volumeSettingsMenu?.SetActive(true);
+
+        EventSystem.current.SetSelectedGameObject(volumeFirstSelected);
     }
 
     public void CloseVolumeSettings()
     {
         volumeSettingsMenu?.SetActive(false);
         optionsMenu?.SetActive(true);
+
+        EventSystem.current.SetSelectedGameObject(optionsFirstSelected);
     }
 
     public void OpenVideoSettings()
     {
         optionsMenu?.SetActive(false);
         videoSettingsMenu?.SetActive(true);
+
+        EventSystem.current.SetSelectedGameObject(videoFirstSelected);
     }
 
     public void CloseVideoSettings()
     {
         videoSettingsMenu?.SetActive(false);
         optionsMenu?.SetActive(true);
+
+        EventSystem.current.SetSelectedGameObject(optionsFirstSelected);
     }
 
     public void OpenControlSettings()
     {
         optionsMenu?.SetActive(false);
         controlSettingsMenu?.SetActive(true);
+
+        EventSystem.current.SetSelectedGameObject(controlFirstSelected);
     }
 
     public void CloseControlSettings()
     {
         controlSettingsMenu?.SetActive(false);
         optionsMenu?.SetActive(true);
+
+        EventSystem.current.SetSelectedGameObject(optionsFirstSelected);
     }
 
     #endregion

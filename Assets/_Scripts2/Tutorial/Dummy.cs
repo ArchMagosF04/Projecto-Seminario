@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Dummy : MonoBehaviour
+public class Dummy : MonoBehaviour, IDamageable
 {
     [SerializeField] BeatDetector beatDetector;
     private int hp = 100;
@@ -34,22 +34,29 @@ public class Dummy : MonoBehaviour
     //    }
     //}
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void TakeDamage(float amount, Vector2 attackDirection)
     {
-        if (collision.gameObject.layer == 9)
+        if (beatDetector.IsOnBeat())
         {
-            if (beatDetector.IsOnBeat())
-            {                
-                gameObject.GetComponent<HealthComponent>().TakeDamage(5*3);
-                hp -= 5*3;
-                print("Dummy taking EXTRA damage");
-            }
-
+            gameObject.GetComponent<HealthComponent>().TakeDamage(5 * 3);
+            hp -= 5 * 3;
+            print("Dummy taking EXTRA damage");
+            
+            tutorial.RiseCount();
+        }
+        else
+        {
             gameObject.GetComponent<HealthComponent>().TakeDamage(5);
             hp -= 5;
             print("Dummy taking REGULAR damage");
-        }
 
+            if(tutorial.GetIndex() == 6)
+            tutorial.ResetCount();
+        }        
+    }
 
+    public void HealHealth(float amount)
+    {
+        
     }
 }

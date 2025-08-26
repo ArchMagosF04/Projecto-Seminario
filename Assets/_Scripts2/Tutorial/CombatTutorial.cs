@@ -14,6 +14,8 @@ public class CombatTutorial : MonoBehaviour
     [SerializeField] GameObject playerShadePanel;
     [SerializeField] GameObject enemyShadePanel;
     [SerializeField] GameObject metronome;
+    [SerializeField] GameObject beatManager;
+    [SerializeField] GameObject enemyHud;
     [SerializeField] TextMeshProUGUI hitCounter;
     [SerializeField] Core_Mana energyBar;
     private static int index =0;
@@ -127,18 +129,8 @@ public class CombatTutorial : MonoBehaviour
         }
 
         if(index == 6)
-        {            
-            if (count < 3 && Input.GetKeyDown(KeyCode.Mouse0) && beatDetector.IsOnBeat())
-            {
-                count++;
-                hitCounter.text = count.ToString();
-            }
-            else if(count < 3 && Input.GetKeyDown(KeyCode.Mouse0) && !beatDetector.IsOnBeat())
-            {
-                count = 0;
-                hitCounter.text = count.ToString();
-            }
-            else if (count >= 3)
+        {           
+            if (count >= 3)
             {
                 AdvanceIndex();
                 count = 0;
@@ -176,6 +168,7 @@ public class CombatTutorial : MonoBehaviour
         if (index == 1)
         {
             TogglePlayerControls();
+            enemyHud.SetActive(true);
             arrows[0].SetActive(true);
             centerShadePanel.SetActive(true);            
             playerShadePanel.SetActive(true);
@@ -236,17 +229,33 @@ public class CombatTutorial : MonoBehaviour
         //    //AdvanceIndex();
         //    Time.timeScale = 0;
         //}        
-        
 
         yield return new WaitForSecondsRealtime(2);
 
-        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Mouse0));
+        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Mouse0));        
 
         Time.timeScale = 1;   
 
         keepGoing = true;    
 
         yield break;        
+    }
+
+    public void RiseCount()
+    {
+        count++;
+        hitCounter.text = count.ToString();
+    }
+
+    public void ResetCount()
+    {
+        count = 0;
+        hitCounter.text = count.ToString();
+    }
+
+    public int GetIndex()
+    {
+        return index;
     }
     
 }

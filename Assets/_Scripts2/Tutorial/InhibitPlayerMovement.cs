@@ -17,7 +17,7 @@ public class InhibitPlayerMovement : MonoBehaviour
         }
         if(CombatTutorial.Index == 9)
         {
-            player.gameObject.GetComponent<ISpeaker>().TurnOn();
+            player.gameObject.GetComponent<ISpeaker>().StopSpeaking();
             DestroyTrigger();
         }
     }
@@ -27,7 +27,7 @@ public class InhibitPlayerMovement : MonoBehaviour
         collision.gameObject.TryGetComponent<Rigidbody2D>(out Rigidbody2D rigidbody);
         //rigidbody.bodyType = RigidbodyType2D.Static;
         player = rigidbody.gameObject;
-        player.gameObject.GetComponent<ISpeaker>().TurnOff();
+        player.gameObject.GetComponent<ISpeaker>().StartSpeaking();
         tutorialScript.AdvanceIndex();        
         activate = true;
     }

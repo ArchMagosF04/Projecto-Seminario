@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class DialogueManager : MonoBehaviour
 {
     [SerializeField] private GameObject enemy;
-    [SerializeField] private PlayerInput player;
+    [SerializeField] private GameObject player;
 
     [SerializeField] private GameObject[] IntroDialogue;
     private float waitTime = 3;
@@ -28,8 +28,8 @@ public class DialogueManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player.enabled = false;
-        enemy.GetComponent<ISpeaker>().TurnOff();
+        player.GetComponent<ISpeaker>().StartSpeaking();
+        enemy.GetComponent<ISpeaker>().StartSpeaking();
 
     }
 
@@ -106,8 +106,8 @@ public class DialogueManager : MonoBehaviour
         {
             IntroDialogue[mainIndex].gameObject.SetActive(false);
             introEnded = true;
-            player.enabled = true;
-            enemy.GetComponent<ISpeaker>().TurnOn();
+            player.GetComponent<ISpeaker>().StopSpeaking();
+            enemy.GetComponent<ISpeaker>().StopSpeaking();
         }
         
     }

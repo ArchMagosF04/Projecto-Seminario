@@ -151,12 +151,12 @@ public class PlayerController : MonoBehaviour, ISpeaker
         StateMachine.CurrentState.AnimationFinishedTrigger();
     }
 
-    public void TurnOff()
+    public void StartSpeaking()
     {
         speaking = true;
     }
 
-    public void TurnOn()
+    public void StopSpeaking()
     {
         speaking = false;
     }

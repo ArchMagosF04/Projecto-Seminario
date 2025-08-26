@@ -4,9 +4,9 @@ using UnityEngine;
 
 public interface ISpeaker 
 {
-    public void TurnOff();
+    public void StartSpeaking();
 
-    public void TurnOn();
+    public void StopSpeaking();
 
     public float GetHealth();
 }

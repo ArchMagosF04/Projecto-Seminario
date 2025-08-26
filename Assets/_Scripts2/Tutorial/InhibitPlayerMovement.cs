@@ -6,17 +6,18 @@ public class InhibitPlayerMovement : MonoBehaviour
 {
     private GameObject player;
     [SerializeField] CombatTutorial tutorialScript;
-    bool activate = false;
+    public bool activate = false;
 
     private void Update()
     {
         if (activate)
         {
-            player.GetComponent<Rigidbody2D>().velocityX = 0;
+            player.GetComponent<Rigidbody2D>().velocityX = 0; 
             player.GetComponent<Rigidbody2D>().velocityY = 0;
         }
         if(CombatTutorial.Index == 9)
         {
+            player.gameObject.GetComponent<ISpeaker>().TurnOn();
             DestroyTrigger();
         }
     }
@@ -26,7 +27,8 @@ public class InhibitPlayerMovement : MonoBehaviour
         collision.gameObject.TryGetComponent<Rigidbody2D>(out Rigidbody2D rigidbody);
         //rigidbody.bodyType = RigidbodyType2D.Static;
         player = rigidbody.gameObject;
-        tutorialScript.AdvanceIndex();
+        player.gameObject.GetComponent<ISpeaker>().TurnOff();
+        tutorialScript.AdvanceIndex();        
         activate = true;
     }
 

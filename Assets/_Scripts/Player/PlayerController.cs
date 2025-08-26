@@ -5,7 +5,7 @@ using Unity.IO.LowLevel.Unsafe;
 using UnityEngine;
 using UnityEngine.InputSystem.LowLevel;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, ISpeaker
 {
     #region State Machine Variables
     public StateMachine StateMachine { get; private set; }
@@ -46,6 +46,8 @@ public class PlayerController : MonoBehaviour
     public Action OnStunEvent;
 
     private Vector2 workSpace;
+
+    public bool speaking;
 
     #endregion
 
@@ -147,6 +149,21 @@ public class PlayerController : MonoBehaviour
     public void AnimationFinishedTrigger()
     {
         StateMachine.CurrentState.AnimationFinishedTrigger();
+    }
+
+    public void TurnOff()
+    {
+        speaking = true;
+    }
+
+    public void TurnOn()
+    {
+        speaking = false;
+    }
+
+    public float GetHealth()
+    {
+        throw new NotImplementedException();
     }
 
     #endregion

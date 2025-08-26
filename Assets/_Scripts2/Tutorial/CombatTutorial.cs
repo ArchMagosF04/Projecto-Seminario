@@ -189,15 +189,16 @@ public class CombatTutorial : MonoBehaviour
         }
     }
 
-    private void TogglePlayerControls()
+    public void TogglePlayerControls()
     {
-        player.GetComponent<PlayerInput>().enabled = !player.GetComponent<PlayerInput>().enabled;
+        //player.GetComponent<PlayerController>().enabled = !player.GetComponent<PlayerController>().enabled;
     }
 
     private void ShowMetronome(int index)
     {
         if(index == 3)
         {
+            metronome.SetActive(true);
             centerShadePanel.SetActive(true);
             arrows[1].SetActive(true);
         }

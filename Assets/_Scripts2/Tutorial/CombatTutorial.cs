@@ -23,7 +23,7 @@ public class CombatTutorial : MonoBehaviour
     private int count = 0;
     private static event Action<int> OnIndexChange = delegate { };
     private GameObject player;
-    private float timer = 0.5f;
+    private float timer = 0.7f;
     private float currentTimer;
     [SerializeField] BeatDetector beatDetector;
     private bool keepGoing = false;
@@ -100,18 +100,30 @@ public class CombatTutorial : MonoBehaviour
         
         if (index == 4)
         {
-            if (beatDetector.IsOnBeat())
-            {                
-                StartCoroutine(StopGame());
-                Time.timeScale = 0;
+            //if (beatDetector.IsOnBeat())
+            //{                
+            //    StartCoroutine(StopGame());
+            //    Time.timeScale = 0;
+            //}
+
+            //if (keepGoing)
+            //{
+            //    StopCoroutine(StopGame());
+            //    AdvanceIndex();
+
+            //}
+
+            if (currentTimer < timer)
+            {
+                currentTimer += Time.deltaTime;
+            }
+            else if (Input.anyKey)
+            {
+                AdvanceIndex();
+                currentTimer = 0;
             }
 
-            if (keepGoing)
-            {
-                StopCoroutine(StopGame());
-                AdvanceIndex();
-                
-            }
+
         }
 
         if(index == 5)
@@ -224,12 +236,6 @@ public class CombatTutorial : MonoBehaviour
 
     IEnumerator StopGame()
     {
-        //if (beatDetector.IsOnBeat())
-        //{
-        //    //AdvanceIndex();
-        //    Time.timeScale = 0;
-        //}        
-
         yield return new WaitForSecondsRealtime(2);
 
         yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Mouse0));        

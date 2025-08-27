@@ -91,6 +91,12 @@ public class PlayerController : MonoBehaviour, ISpeaker
     {
         Core.LogicUpdate();
         StateMachine.CurrentState.OnUpdate();
+
+        if (speaking)
+        {
+            GetComponent<Rigidbody2D>().velocityX = 0;
+            GetComponent<Rigidbody2D>().velocityY = 0;
+        }
     }
 
     private void FixedUpdate()
@@ -160,7 +166,7 @@ public class PlayerController : MonoBehaviour, ISpeaker
 
     public void StopSpeaking()
     {
-        speaking = false;
+        speaking = false;        
     }
 
     public float GetHealth()

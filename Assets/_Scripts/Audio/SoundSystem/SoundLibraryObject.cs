@@ -12,7 +12,10 @@ public class SoundLibraryObject : ScriptableObject
     {
         foreach (var data in soundData)
         {
-            Library.Add(data.Id, data);
+            if (!Library.ContainsKey(data.Id))
+            {
+                Library.Add(data.Id, data);
+            }            
         }
     }
 }

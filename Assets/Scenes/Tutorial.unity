@@ -9303,7 +9303,7 @@ PrefabInstance:
     - target: {fileID: 3392897585196418049, guid: 4d40a187711fb064f9755077f23dee53, type: 3}
       propertyPath: <intervals>k__BackingField.Array.data[0].unityTrigger.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
-      objectReference: {fileID: 1488005331}
+      objectReference: {fileID: 1488005333}
     - target: {fileID: 3392897585196418049, guid: 4d40a187711fb064f9755077f23dee53, type: 3}
       propertyPath: <intervals>k__BackingField.Array.data[1].unityTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -9327,7 +9327,7 @@ PrefabInstance:
     - target: {fileID: 3392897585196418049, guid: 4d40a187711fb064f9755077f23dee53, type: 3}
       propertyPath: <intervals>k__BackingField.Array.data[2].unityTrigger.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
-      objectReference: {fileID: 1488005331}
+      objectReference: {fileID: 1488005333}
     - target: {fileID: 3392897585196418049, guid: 4d40a187711fb064f9755077f23dee53, type: 3}
       propertyPath: <intervals>k__BackingField.Array.data[3].unityTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

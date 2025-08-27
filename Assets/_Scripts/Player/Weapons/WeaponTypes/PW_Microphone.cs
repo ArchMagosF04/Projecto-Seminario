@@ -52,21 +52,13 @@ public class PW_Microphone : PlayerWeapon
                 if (isOnBeat) multiplier = beatCombo.currentRank.rankDamageMultiplier;
                 if (isOnBeat)
                 {
-                    soundLibrary.Library.TryGetValue("OnBeatHit-" + randomSound.ToString(), out SoundData sound);
-                    SoundManager.Instance.CanPlaySound(sound);
-                    //audioSource.resource = sound.Clip;
-                    //audioSource.volume = sound.Volume;
-                    //audioSource.pitch = sound.PitchVariation;
-                    //audioSource.Play();
+                    //soundLibrary.Library.TryGetValue("OnBeatHit-" + randomSound.ToString(), out SoundData sound);
+                    SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.Library["OnBeatHit-" + randomSound.ToString()]).Play();
                 }
                 else
                 {
                     soundLibrary.Library.TryGetValue("OnMissHit-" + randomSound.ToString(), out SoundData sound);
-                    SoundManager.Instance.CanPlaySound(sound);
-                    //audioSource.resource = sound.Clip;
-                    //audioSource.volume = sound.Volume;
-                    //audioSource.pitch = sound.PitchVariation;
-                    //audioSource.Play();
+                    SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.Library["OnMissHit-" + randomSound.ToString()]).Play();
                 }
 
                 damageable.TakeDamage(basicAttackDamage * multiplier, movementComponent.FacingDirection * Vector2.right);

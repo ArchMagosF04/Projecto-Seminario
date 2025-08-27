@@ -815,7 +815,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &125096916
 Transform:
   m_ObjectHideFlags: 0
@@ -2048,7 +2048,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   centralMetronome: {fileID: 1287243564}
-  lingeringBeatGraceTime: 0.05
+  lingeringBeatGraceTime: 0.15
   markerSprites:
   - {fileID: 1236179654}
   currentInterval: 2
@@ -4216,7 +4216,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &617334666
 Transform:
   m_ObjectHideFlags: 0
@@ -5135,7 +5135,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &815925288
 Transform:
   m_ObjectHideFlags: 0
@@ -5660,7 +5660,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   centralMetronome: {fileID: 1287243564}
-  lingeringBeatGraceTime: 0.05
+  lingeringBeatGraceTime: 0.15
   markerSprites:
   - {fileID: 1236179654}
   currentInterval: 2
@@ -6545,7 +6545,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   centralMetronome: {fileID: 1287243564}
-  lingeringBeatGraceTime: 0.1
+  lingeringBeatGraceTime: 0.15
   markerSprites:
   - {fileID: 1236179654}
   currentInterval: 2
@@ -9305,11 +9305,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bdeac3fe3e87464eaa4b3fbb35dd576, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  VolumeOptions: {fileID: 1084344688}
-  Buttons:
-  - {fileID: 151699887}
-  - {fileID: 1555777973}
-  - {fileID: 515235968}
 --- !u!1 &1545463090
 GameObject:
   m_ObjectHideFlags: 0
@@ -10179,7 +10174,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1715518902
 Transform:
   m_ObjectHideFlags: 0
@@ -10441,7 +10436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   centralMetronome: {fileID: 1287243564}
-  lingeringBeatGraceTime: 0.1
+  lingeringBeatGraceTime: 0.15
   markerSprites:
   - {fileID: 1236179654}
   currentInterval: 2

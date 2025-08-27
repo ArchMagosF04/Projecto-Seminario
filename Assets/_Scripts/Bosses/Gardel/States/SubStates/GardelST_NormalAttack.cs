@@ -14,11 +14,6 @@ public class GardelST_NormalAttack : GardelState
     {
         base.OnEnter();
 
-        //if (controller.Speaking)
-        //{
-        //    OnExit();
-        //}
-
         attackCount = 0;
 
         BeatManager.Instance.intervals[0].OnBeatEvent += PerformAttack;

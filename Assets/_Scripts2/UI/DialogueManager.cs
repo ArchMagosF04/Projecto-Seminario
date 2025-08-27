@@ -63,17 +63,20 @@ public class DialogueManager : MonoBehaviour
 
             if (!showMessagesAtRandom)
             {
-                if (enemyHp / 100 < 0.25)
-                {
+                if (enemyHp / 100 < 0.25 && subIndex == 2)
+                {                    
                     StartCoroutine(ShowMessage(2));
+                    subIndex++;
                 }
-                else if (enemyHp / 100 < 0.50)
+                else if (enemyHp / 100 < 0.50 && subIndex == 1)
                 {
                     StartCoroutine(ShowMessage(1));
+                    subIndex++;
                 }
-                else if (enemyHp / 100 < 0.75)
+                else if (enemyHp / 100 < 0.75 && subIndex ==0)
                 {
                     StartCoroutine(ShowMessage(0));
+                    subIndex++;
                 }
             }
             else if (showMessagesAtRandom)
@@ -142,7 +145,7 @@ public class DialogueManager : MonoBehaviour
             MidCombatDialogue[index].gameObject.SetActive(false);
         }
 
-            yield return null;
+            //yield return null;
 
         StopCoroutine(ShowMessage(index));
     }

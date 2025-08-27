@@ -9,7 +9,7 @@ public class InputManager : MonoBehaviour
     public static InputManager Instance;
 
     //Components
-    private PlayerInput playerInput;
+    [SerializeField]private PlayerInput playerInput;
 
     #region Input Data
     public Vector2 RawMovementInput { get; private set; }

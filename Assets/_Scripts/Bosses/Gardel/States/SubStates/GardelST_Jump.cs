@@ -17,6 +17,10 @@ public class GardelST_Jump : GardelState
     public override void OnEnter()
     {
         base.OnEnter();
+        //if (controller.Speaking)
+        //{
+        //    OnExit();
+        //}
         PerformJump();
     }
 

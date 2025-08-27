@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class GardelController : MonoBehaviour
+public class GardelController : MonoBehaviour, ISpeaker
 {
     #region State Machine Varibles
     public StateMachine StateMachine {  get; private set; }
@@ -43,6 +43,10 @@ public class GardelController : MonoBehaviour
     
     public enum ActionType { None, Normal, Special }
     public ActionType DesiredAction = ActionType.None;
+
+    private bool speaking;
+
+    public bool Speaking { get { return speaking; } }
 
 
     #endregion
@@ -91,13 +95,13 @@ public class GardelController : MonoBehaviour
     }
 
     private void Update()
-    {
-        StateMachine.CurrentState.OnUpdate();
+    {        
+        StateMachine.CurrentState.OnUpdate();        
     }
 
     private void FixedUpdate()
     {
-        StateMachine.CurrentState.OnFixedUpdate();
+            StateMachine.CurrentState.OnFixedUpdate();        
     }
 
     #endregion
@@ -155,6 +159,21 @@ public class GardelController : MonoBehaviour
     {
         GameManager.Instance.PlayerInstance.TryToStunPlayer(gardelStats.StunEffectBeatDuration);
         CameraShakeManager.Instance.ScreenShakeFromProfile(gardelStats.StunShakeProfile, impulseSource);
+    }
+
+    public void StartSpeaking()
+    {
+        speaking = true;
+    }
+
+    public void StopSpeaking()
+    {
+        speaking=false;        
+    }
+
+    public float GetHealth()
+    {
+        return health.CurrentHealth;
     }
 
     #endregion

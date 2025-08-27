@@ -47,7 +47,9 @@ public class PlayerController : MonoBehaviour, ISpeaker
 
     private Vector2 workSpace;
 
-    public bool speaking;
+    private bool speaking;
+
+    public bool Speaking { get { return speaking; } }
 
     #endregion
 

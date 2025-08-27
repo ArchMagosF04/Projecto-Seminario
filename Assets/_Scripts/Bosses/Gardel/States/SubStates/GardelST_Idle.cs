@@ -49,7 +49,7 @@ public class GardelST_Idle : GardelState
         anim.SetTrigger("OnBeat");
         controller.PlaySound("FingerSnap");
 
-        if (beatTimer == stats.BeatsSpentOnIdle)
+        if (beatTimer >= stats.BeatsSpentOnIdle && !controller.Speaking)
         {
             DecideAction();
             BeatManager.Instance.intervals[0].OnBeatEvent -= BeatTimer;

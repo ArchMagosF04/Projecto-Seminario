@@ -13,6 +13,10 @@ public class GardelST_SpecialAttack : GardelState
     public override void OnEnter()
     {
         base.OnEnter();
+        //if (controller.Speaking)
+        //{
+        //    OnExit();
+        //}
         beatTimer = 0;
 
         BeatManager.Instance.intervals[0].OnBeatEvent += BeatTimer;

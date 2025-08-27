@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PW_Microphone : PlayerWeapon
 {
@@ -10,6 +11,8 @@ public class PW_Microphone : PlayerWeapon
     [SerializeField] protected float basicAttackDamage = 3f;
     [SerializeField] protected float specialAttackDamage = 1f;
     [SerializeField] protected float manaOnBeatHit;
+    [SerializeField] protected SoundLibraryObject soundLibrary;
+    protected AudioSource audioSource;
 
     private MeleeWeaponHitbox hitbox;
 
@@ -17,6 +20,8 @@ public class PW_Microphone : PlayerWeapon
     {
         base.Awake();
         hitbox = GetComponentInChildren<MeleeWeaponHitbox>();
+        audioSource = GetComponent<AudioSource>();
+        soundLibrary.Initialize();
     }
 
     protected override void OnEnable()
@@ -37,7 +42,7 @@ public class PW_Microphone : PlayerWeapon
 
     private void BasicAttackDamage()
     {
-        //DealDamage(basicAttackDamage);
+        int randomSound = Random.Range(0, 3);
 
         foreach (var item in hitbox.collider2Ds.ToList())
         {
@@ -45,6 +50,24 @@ public class PW_Microphone : PlayerWeapon
             {
                 float multiplier = 0.8f;
                 if (isOnBeat) multiplier = beatCombo.currentRank.rankDamageMultiplier;
+                if (isOnBeat)
+                {
+                    soundLibrary.Library.TryGetValue("OnBeatHit-" + randomSound.ToString(), out SoundData sound);
+                    SoundManager.Instance.CanPlaySound(sound);
+                    //audioSource.resource = sound.Clip;
+                    //audioSource.volume = sound.Volume;
+                    //audioSource.pitch = sound.PitchVariation;
+                    //audioSource.Play();
+                }
+                else
+                {
+                    soundLibrary.Library.TryGetValue("OnMissHit-" + randomSound.ToString(), out SoundData sound);
+                    SoundManager.Instance.CanPlaySound(sound);
+                    //audioSource.resource = sound.Clip;
+                    //audioSource.volume = sound.Volume;
+                    //audioSource.pitch = sound.PitchVariation;
+                    //audioSource.Play();
+                }
 
                 damageable.TakeDamage(basicAttackDamage * multiplier, movementComponent.FacingDirection * Vector2.right);
 

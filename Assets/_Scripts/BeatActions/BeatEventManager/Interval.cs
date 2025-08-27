@@ -13,7 +13,7 @@ public class Interval
 
     //[field: SerializeField] public bool BeatGrace {  get; private set; }
     //[SerializeField, Range(0.1f, 1f)] private float gracePeriod = 0.5f;
-    [SerializeField, Range(0.25f, 2f)] private float steps;
+    [SerializeField, Range(0.25f, 4f)] private float steps;
     [SerializeField] private UnityEvent unityTrigger;
 
     public float BeatProgress { get; private set; }

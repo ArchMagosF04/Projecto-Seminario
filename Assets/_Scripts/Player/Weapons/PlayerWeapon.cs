@@ -62,6 +62,12 @@ public class PlayerWeapon : MonoBehaviour
     {
         if (BeatManager.Instance.BeatGracePeriod) isOnBeat = true;
 
+        if (isOnBeat)
+        {
+            print("Attack on beat");
+        }
+        
+
         OnBasicEnter?.Invoke();
 
         anim.SetBool("Active", true);

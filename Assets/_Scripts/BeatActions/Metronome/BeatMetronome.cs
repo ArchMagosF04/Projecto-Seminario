@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,11 +20,33 @@ public class BeatMetronome : MonoBehaviour
     private float startOfBeat;
     private float beatDuration;
 
+    [SerializeField]private int currentInterval = 0;
+
+    [SerializeField] ExtraMetronome[] extraMetronomes;
+
+    public event Func<bool> OnExtraBeat;
+
     private void Awake()
     {
         anim = GetComponentInChildren<Animator>();
-        markerSprites[0] = markerRight.GetComponent<SpriteRenderer>();
-        markerSprites[1] = markerLeft.GetComponent<SpriteRenderer>();
+        if (markerRight != null)
+        {
+            markerSprites[0] = markerRight.GetComponent<SpriteRenderer>();
+        }
+
+        if (markerLeft != null)
+        {
+            markerSprites[1] = markerLeft.GetComponent<SpriteRenderer>();
+        }
+
+        //foreach (ExtraMetronome metronome in extraMetronomes)
+        //{
+        //    if (metronome != null)
+        //    {
+        //        metronome.OnBeatAction +=
+        //    }
+        //}
+
     }
 
     private void Start()
@@ -34,33 +57,49 @@ public class BeatMetronome : MonoBehaviour
 
     private void OnEnable()
     {
-        BeatManager.Instance.intervals[0].OnBeatEvent += MetronomeBeat;
+        BeatManager.Instance.intervals[currentInterval].OnBeatEvent += MetronomeBeat;
         BeatManager.Instance.OnWrongBeat += OnBeatMiss;
     }
 
     private void OnDisable()
     {
-        BeatManager.Instance.intervals[0].OnBeatEvent -= MetronomeBeat;
+        BeatManager.Instance.intervals[currentInterval].OnBeatEvent -= MetronomeBeat;
         BeatManager.Instance.OnWrongBeat -= OnBeatMiss;
-    }
+    } 
 
     private void MetronomeBeat()
-    {
+    {       
         ResetMarkers();
 
         anim.SetTrigger("Beat");
 
-        StartCoroutine(LerpRightToPosition());
-        StartCoroutine(LerpLeftToPosition());
+        if (markerRight != null)
+        {
+            StartCoroutine(LerpRightToPosition());
+        }
+
+        if (markerLeft != null)
+        {
+            StartCoroutine(LerpLeftToPosition());
+        } 
+
     }
 
-    private void ResetMarkers()
+    public void ResetMarkers()
     {
-        markerRight.transform.position = markerSpawnPointRight.position;
+        if (markerRight != null)
+        {
+            markerRight.transform.position = markerSpawnPointRight.position;
+
+        }
 
         foreach (SpriteRenderer spriteRenderer in markerSprites)
         {
-            spriteRenderer.color = Color.white;
+            if (spriteRenderer != null)
+            {
+                spriteRenderer.color = Color.white;
+            }
+
         }
 
         StartCoroutine(LingeringGrace(extraGraceTime));
@@ -79,6 +118,7 @@ public class BeatMetronome : MonoBehaviour
         while (Time.time - startOfBeat < beatDuration)
         {
             float elapse = Time.time - startOfBeat;
+            
             markerRight.transform.position = Vector2.Lerp(markerSpawnPointRight.position, transform.position, elapse / beatDuration);
 
             yield return null;
@@ -102,19 +142,27 @@ public class BeatMetronome : MonoBehaviour
     {
         foreach (SpriteRenderer spriteRenderer in markerSprites)
         {
-            spriteRenderer.color = Color.green;
-            BeatManager.Instance.ToggleGracePeriod(true);
+            if (spriteRenderer != null)
+            {
+                spriteRenderer.color = Color.green;
+            }            
+
+                BeatManager.Instance.ToggleGracePeriod(true);
         }
     }
 
     [ContextMenu("OnBeatMiss")]
-    private void OnBeatMiss()
+    public void OnBeatMiss()
     {
+        if (OnExtraBeat())
+        {
+            return;
+        }
         foreach (SpriteRenderer spriteRenderer in markerSprites)
         {
             spriteRenderer.color = Color.red;
         }
 
         StopAllCoroutines();
-    }
+    }    
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,7 +12,7 @@ public class InputManager : MonoBehaviour
     //Components
     private PlayerInput playerInput;
 
-    #region Input Data
+    #region Gameplay Input Data
     public Vector2 RawMovementInput { get; private set; }
 
     public int NormInputX { get; private set; }
@@ -33,10 +34,24 @@ public class InputManager : MonoBehaviour
 
     #endregion
 
+    #region LevelSelector Input Data
+
+    public Action OnMainMenu;
+    public Action OnNextLevel;
+    public Action OnPreviousLevel;
+    public Action OnSelectLevel;
+    public Action OnCloseWeaponScreen;
+
+    #endregion
+
+    #region Other Variables
+
     [SerializeField] private float inputHoldTime = 0.2f;
 
     private float jumpInputStartTime;
     private float dashInputStartTime;
+
+    #endregion
 
     private void Awake()
     {
@@ -191,6 +206,35 @@ public class InputManager : MonoBehaviour
     {
         PauseManager.Instance.ResumeGame();
         playerInput.SwitchCurrentActionMap("Gameplay");
+    }
+
+    #endregion
+
+    #region Level Selector Action Map
+
+    public void OnMainMenuInput(InputAction.CallbackContext context)
+    {
+        if (context.started) OnMainMenu?.Invoke();
+    }
+
+    public void OnNextLevelInput(InputAction.CallbackContext context)
+    {
+        if (context.started) OnNextLevel?.Invoke();
+    }
+
+    public void OnPreviousLevelInput(InputAction.CallbackContext context)
+    {
+        if (context.started) OnPreviousLevel?.Invoke();
+    }
+
+    public void OnSelectLevelInput(InputAction.CallbackContext context)
+    {
+        if (context.started) OnSelectLevel?.Invoke();
+    }
+
+    public void OnCloseWeaponScreenInput(InputAction.CallbackContext context)
+    {
+        if (context.started) OnCloseWeaponScreen?.Invoke();
     }
 
     #endregion

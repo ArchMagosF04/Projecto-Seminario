@@ -4514,6 +4514,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 526843313}
+    - target: {fileID: 6654182904088333475, guid: 7a97620bc07dd564db7c3de8225a954b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4742,10 +4746,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gardel
       objectReference: {fileID: 0}
-    - target: {fileID: 763008524621281506, guid: 167bd3e95d15e7f4bb3d5df603406eef, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3542179459611290134, guid: 167bd3e95d15e7f4bb3d5df603406eef, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -4791,37 +4791,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1540457303}
     - target: {fileID: 4720750532754480863, guid: 167bd3e95d15e7f4bb3d5df603406eef, type: 3}
-      propertyPath: OnDeathUN.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4720750532754480863, guid: 167bd3e95d15e7f4bb3d5df603406eef, type: 3}
-      propertyPath: OnDeathUN.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4720750532754480863, guid: 167bd3e95d15e7f4bb3d5df603406eef, type: 3}
       propertyPath: OnDeathUN.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1111672173}
-    - target: {fileID: 4720750532754480863, guid: 167bd3e95d15e7f4bb3d5df603406eef, type: 3}
-      propertyPath: OnDeathUN.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4720750532754480863, guid: 167bd3e95d15e7f4bb3d5df603406eef, type: 3}
-      propertyPath: OnDeathUN.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnWinGame
-      objectReference: {fileID: 0}
-    - target: {fileID: 4720750532754480863, guid: 167bd3e95d15e7f4bb3d5df603406eef, type: 3}
-      propertyPath: OnDeathUN.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: GameManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4720750532754480863, guid: 167bd3e95d15e7f4bb3d5df603406eef, type: 3}
-      propertyPath: OnDeathUN.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7309964777318614142, guid: 167bd3e95d15e7f4bb3d5df603406eef, type: 3}
-      propertyPath: shoutAOEPrefab
-      value: 
-      objectReference: {fileID: 3186468393202133140, guid: d90ba900b5a1089458d05a125f14cac8, type: 3}
     - target: {fileID: 7309964777318614142, guid: 167bd3e95d15e7f4bb3d5df603406eef, type: 3}
       propertyPath: <stageCenter>k__BackingField
       value: 

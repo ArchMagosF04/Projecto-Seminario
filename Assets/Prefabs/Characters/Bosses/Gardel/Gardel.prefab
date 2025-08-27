@@ -270,7 +270,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2c010103f5a6afc4fb221fb21353de45, type: 2}
+  - {fileID: 2100000, guid: acd868c3b4b387249901c1f3a7c4b389, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -532,7 +532,19 @@ MonoBehaviour:
   damageParticles: {fileID: 7233778717429442434, guid: b862ed757906f6f4bb83bb89c09b1105, type: 3}
   OnDeathUN:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: OnWinGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnDamageReceivedUN:
     m_PersistentCalls:
       m_Calls:
@@ -622,7 +634,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashColor:
-  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 2, g: 2, b: 2, a: 1}
   flashTime: 0.25
   flashSpeedCurve:
     serializedVersion: 2
@@ -630,17 +642,26 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 1
-      inSlope: -4
-      outSlope: -4
+      inSlope: -0.038259126
+      outSlope: -0.038259126
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
+      time: 0.09035934
+      value: 0.99654293
+      inSlope: -0.1627323
+      outSlope: -0.1627323
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.113227226
+      outWeight: 0.33333334
+    - serializedVersion: 3
       time: 0.25
       value: 0
-      inSlope: -4
-      outSlope: -4
+      inSlope: -6.2424126
+      outSlope: -6.2424126
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334

@@ -295,8 +295,8 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
 
             // Configure the rebind.
             m_RebindOperation = action.PerformInteractiveRebinding(bindingIndex)
-                .WithCancelingThrough("<Keyboard>/escape")
-                .WithCancelingThrough("<Gamepad>/start")
+                .WithCancelingThrough("<Keyboard>/backspace")
+                .WithCancelingThrough("<Gamepad>/select")
                 .OnCancel(
                     operation =>
                     {

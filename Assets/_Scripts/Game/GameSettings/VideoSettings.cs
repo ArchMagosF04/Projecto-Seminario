@@ -35,8 +35,8 @@ public class VideoSettings : MonoBehaviour
 
         for (int i = 0; i < availableResolutions.Length; i++)
         {
-            if (availableResolutions[i].refreshRateRatio.value != 60 && availableResolutions[i].refreshRateRatio.value != 30 && availableResolutions[i].refreshRateRatio.value != 120 && availableResolutions[i].refreshRateRatio.value != 144)
-                return;
+            //if (availableResolutions[i].refreshRateRatio.value != 60 && availableResolutions[i].refreshRateRatio.value != 30 && availableResolutions[i].refreshRateRatio.value != 120 && availableResolutions[i].refreshRateRatio.value != 144)
+            //    return;
 
             string option = $"{availableResolutions[i].width}X{availableResolutions[i].height} @{availableResolutions[i].refreshRateRatio}hz";
             resOptions.Add(option);

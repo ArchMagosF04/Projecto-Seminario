@@ -15,8 +15,6 @@ public class PlayerST_Dash : PlayerST_Ability
 
     private Vector2 dashDirection;
 
-
-
     //private DamageReceiver damageReceiver;
     //private KnockBackReceiver knockBackReceiver;
 
@@ -39,6 +37,8 @@ public class PlayerST_Dash : PlayerST_Ability
     public override void OnEnter()
     {
         base.OnEnter();
+
+        controller.PlaySound("Dash");
 
         CanDash = false;
         InputManager.Instance.UseDashInput();

@@ -8,6 +8,8 @@ public class SoundLibraryObject : ScriptableObject
     [SerializeField] private SoundData[] soundData;
     public Dictionary<string, SoundData> Library = new Dictionary<string, SoundData>();
 
+    public SoundData nullData;
+
     public void Initialize()
     {
         foreach (var data in soundData)
@@ -17,5 +19,15 @@ public class SoundLibraryObject : ScriptableObject
                 Library.Add(data.Id, data);
             }            
         }
+    }
+
+    public SoundData GetSound(string name)
+    {
+        if (Library.TryGetValue(name, out SoundData data))
+        {
+            return data;
+        }
+
+        else return nullData;
     }
 }

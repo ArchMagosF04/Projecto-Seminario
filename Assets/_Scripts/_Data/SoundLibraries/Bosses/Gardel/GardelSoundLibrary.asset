@@ -22,3 +22,13 @@ MonoBehaviour:
     Loop: 0
     PlayOnAwake: 0
     FrequentSound: 0
+  nullData:
+    Id: 
+    Clip: {fileID: 8300000, guid: d4a953d4924840345ac047a4cec06646, type: 3}
+    MixerGroup: {fileID: -522563215728743215, guid: 20d587f63ee10e746b23a5f4c255fffd, type: 2}
+    Volume: 1
+    RandomPitch: 0
+    PitchVariation: 0.1
+    Loop: 0
+    PlayOnAwake: 0
+    FrequentSound: 0

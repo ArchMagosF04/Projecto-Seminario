@@ -18,6 +18,7 @@ public class GardelST_Jump : GardelState
     {
         base.OnEnter();
 
+        controller.PlaySound("Jump");
         PerformJump();
     }
 

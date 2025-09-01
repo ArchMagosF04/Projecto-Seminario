@@ -110,7 +110,7 @@ public class GardelController : MonoBehaviour, ISpeaker
 
     public void PlaySound(string name)
     {
-        SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.Library[name]).Play();
+        SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound(name)).Play();
     }
 
     public void AnimationTrigger()

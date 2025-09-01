@@ -382,7 +382,19 @@ MonoBehaviour:
   damageParticles: {fileID: 0}
   OnDeathUN:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: OnLoseGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnDamageReceivedUN:
     m_PersistentCalls:
       m_Calls:
@@ -626,7 +638,7 @@ MonoBehaviour:
   - {fileID: 877126473947971669}
   playerData: {fileID: 11400000, guid: 0ddf61c787af8df4c9074f1bc3df8248, type: 2}
   weapon: {fileID: 2076463419345413119}
-  soundLibrary: {fileID: 0}
+  soundLibrary: {fileID: 11400000, guid: 6f37861273ea0874383c0c3cff641457, type: 2}
 --- !u!114 &6811924436956391939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -648,27 +660,27 @@ MonoBehaviour:
     beatsForRankDecay: 9
     rankColor: {r: 1, g: 1, b: 1, a: 1}
   - rankName: Decent
-    rankThreshold: 3
+    rankThreshold: 4
     rankDamageMultiplier: 1.12
     beatsForRankDecay: 7.2
     rankColor: {r: 0, g: 0.3395729, b: 1, a: 1}
   - rankName: Cool
-    rankThreshold: 9
+    rankThreshold: 8
     rankDamageMultiplier: 1.24
     beatsForRankDecay: 6.6
     rankColor: {r: 0.1115191, g: 1, b: 0, a: 1}
   - rankName: Bravo
-    rankThreshold: 16
+    rankThreshold: 12
     rankDamageMultiplier: 1.36
     beatsForRankDecay: 5.2
     rankColor: {r: 1, g: 0.8768307, b: 0, a: 1}
   - rankName: Amazing
-    rankThreshold: 23
+    rankThreshold: 16
     rankDamageMultiplier: 1.48
     beatsForRankDecay: 4.6
     rankColor: {r: 1, g: 0, b: 0, a: 1}
   - rankName: Star
-    rankThreshold: 30
+    rankThreshold: 20
     rankDamageMultiplier: 1.6
     beatsForRankDecay: 3.2
     rankColor: {r: 1, g: 0, b: 0.6683483, a: 1}
@@ -720,6 +732,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7390276578815594650, guid: 43bd48b7c341e9041baa5931c0677720, type: 3}
+      propertyPath: soundLibrary
+      value: 
+      objectReference: {fileID: 11400000, guid: aa6b73f6913b0174ba0ba996bef2578a, type: 2}
     - target: {fileID: 8339370775965729869, guid: 43bd48b7c341e9041baa5931c0677720, type: 3}
       propertyPath: m_Name
       value: Weapon_Microphone

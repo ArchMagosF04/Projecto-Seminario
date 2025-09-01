@@ -5,15 +5,15 @@ using UnityEngine;
 
 public class LightToRythm : MonoBehaviour
 {
-    private Light2D light;
+    private Light2D _light;
     [SerializeField] float intensity;
     private float initialIntensity;
     [SerializeField] BeatDetector detector;
 
     private void Awake()
     {    
-        light = GetComponent<Light2D>();
-        initialIntensity = light.intensity;
+        _light = GetComponent<Light2D>();
+        initialIntensity = _light.intensity;
     }
 
     // Start is called before the first frame update
@@ -32,11 +32,11 @@ public class LightToRythm : MonoBehaviour
     {
         if (status == true)
         {
-            light.intensity = intensity;
+            _light.intensity = intensity;
         }
         else if (status == false)
         {
-            light.intensity = initialIntensity;
+            _light.intensity = initialIntensity;
         }
     }
 }

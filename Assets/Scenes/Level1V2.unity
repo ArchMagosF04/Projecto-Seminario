@@ -3973,33 +3973,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 200516338}
     - target: {fileID: 6973123241411622913, guid: 3183d21e511f0754ea7668c3703fd19e, type: 3}
-      propertyPath: OnDeathUN.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6973123241411622913, guid: 3183d21e511f0754ea7668c3703fd19e, type: 3}
-      propertyPath: OnDeathUN.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6973123241411622913, guid: 3183d21e511f0754ea7668c3703fd19e, type: 3}
       propertyPath: OnDeathUN.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1111672173}
-    - target: {fileID: 6973123241411622913, guid: 3183d21e511f0754ea7668c3703fd19e, type: 3}
-      propertyPath: OnDeathUN.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6973123241411622913, guid: 3183d21e511f0754ea7668c3703fd19e, type: 3}
-      propertyPath: OnDeathUN.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnLoseGame
-      objectReference: {fileID: 0}
-    - target: {fileID: 6973123241411622913, guid: 3183d21e511f0754ea7668c3703fd19e, type: 3}
-      propertyPath: OnDeathUN.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: GameManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 6973123241411622913, guid: 3183d21e511f0754ea7668c3703fd19e, type: 3}
-      propertyPath: OnDeathUN.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 7071860409988344374, guid: 3183d21e511f0754ea7668c3703fd19e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.82
@@ -4502,18 +4478,70 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2879573528468615523, guid: 7a97620bc07dd564db7c3de8225a954b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879573528468615523, guid: 7a97620bc07dd564db7c3de8225a954b, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879573528468615523, guid: 7a97620bc07dd564db7c3de8225a954b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879573528468615523, guid: 7a97620bc07dd564db7c3de8225a954b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3005686020425526894, guid: 7a97620bc07dd564db7c3de8225a954b, type: 3}
       propertyPath: m_Name
       value: PauseMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 3005686020425526894, guid: 7a97620bc07dd564db7c3de8225a954b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3148817730635296141, guid: 7a97620bc07dd564db7c3de8225a954b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2093883401}
+    - target: {fileID: 5979904499464089603, guid: 7a97620bc07dd564db7c3de8225a954b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5979904499464089603, guid: 7a97620bc07dd564db7c3de8225a954b, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5979904499464089603, guid: 7a97620bc07dd564db7c3de8225a954b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5979904499464089603, guid: 7a97620bc07dd564db7c3de8225a954b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6154616858606213349, guid: 7a97620bc07dd564db7c3de8225a954b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 526843313}
+    - target: {fileID: 6425795233930281995, guid: 7a97620bc07dd564db7c3de8225a954b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6425795233930281995, guid: 7a97620bc07dd564db7c3de8225a954b, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6425795233930281995, guid: 7a97620bc07dd564db7c3de8225a954b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6425795233930281995, guid: 7a97620bc07dd564db7c3de8225a954b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6654182904088333475, guid: 7a97620bc07dd564db7c3de8225a954b, type: 3}
       propertyPath: m_Enabled
       value: 0

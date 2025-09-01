@@ -20,7 +20,7 @@ public class DialogueManager : MonoBehaviour
     private float currentMessageTimer = 0;
 
     private bool introEnded = false;
-    private bool messageOnScreen = false;
+    //private bool messageOnScreen = false;
 
     private int mainIndex = 0;
     private int subIndex = 0;

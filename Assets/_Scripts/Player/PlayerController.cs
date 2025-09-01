@@ -64,6 +64,7 @@ public class PlayerController : MonoBehaviour, ISpeaker
         Anim = GetComponentInChildren<Animator>();
         playerSprite = GetComponentInChildren<SpriteRenderer>();
         collisionSenses = Core.GetCoreComponent<Core_CollisionSenses>();
+        soundLibrary.Initialize();
 
         if (PlayerCollider.Length != 2) Debug.LogError("Player got the wrong colliders.");
 
@@ -124,7 +125,7 @@ public class PlayerController : MonoBehaviour, ISpeaker
 
     public void PlaySound(string name)
     {
-        SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.Library[name]).Play();
+        SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound(name)).Play();
     }
 
     public void SetColliderHeight(float height)
@@ -143,7 +144,7 @@ public class PlayerController : MonoBehaviour, ISpeaker
 
     public void TryToStunPlayer(int value) 
     {
-        Debug.Log("TryToStun");
+        //Debug.Log("TryToStun");
         if (!collisionSenses.Grounded) return;
         StunBeatDuration = value;
         StateMachine.ChangeState(StunState);

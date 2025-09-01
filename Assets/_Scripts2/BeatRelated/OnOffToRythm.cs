@@ -5,12 +5,12 @@ using UnityEngine;
 public class OnOffToRythm : MonoBehaviour
 {
     [SerializeField] BeatDetector beatDetector;
-    private SpriteRenderer renderer;
+    private SpriteRenderer spriteRenderer;
     // Start is called before the first frame update
     void Start()
     {
         beatDetector.OnBeat += BeatEffect;
-        renderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -21,6 +21,6 @@ public class OnOffToRythm : MonoBehaviour
 
     private void BeatEffect(bool status)
     {
-        renderer.enabled = status;
+        spriteRenderer.enabled = status;
     }
 }

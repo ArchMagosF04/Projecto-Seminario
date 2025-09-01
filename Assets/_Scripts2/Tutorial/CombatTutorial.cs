@@ -26,7 +26,7 @@ public class CombatTutorial : MonoBehaviour
     private float timer = 0.7f;
     private float currentTimer;
     [SerializeField] BeatDetector beatDetector;
-    private bool keepGoing = false;
+    //private bool keepGoing = false;
     
     public void AdvanceIndex()
     {
@@ -40,8 +40,8 @@ public class CombatTutorial : MonoBehaviour
     {
         OnIndexChange += ShowEnemyHUD;
         OnIndexChange += ShowMetronome;
-        OnIndexChange += ShowEnergy;       
-        
+        OnIndexChange += ShowEnergy;
+
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -242,7 +242,7 @@ public class CombatTutorial : MonoBehaviour
 
         Time.timeScale = 1;   
 
-        keepGoing = true;    
+        //keepGoing = true;    
 
         yield break;        
     }

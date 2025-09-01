@@ -12,7 +12,6 @@ public class PW_Microphone : PlayerWeapon
     [SerializeField] protected float specialAttackDamage = 1f;
     [SerializeField] protected float manaOnBeatHit;
     [SerializeField] protected SoundLibraryObject soundLibrary;
-    protected AudioSource audioSource;
 
     private MeleeWeaponHitbox hitbox;
 
@@ -20,7 +19,6 @@ public class PW_Microphone : PlayerWeapon
     {
         base.Awake();
         hitbox = GetComponentInChildren<MeleeWeaponHitbox>();
-        audioSource = GetComponent<AudioSource>();
         soundLibrary.Initialize();
     }
 
@@ -44,22 +42,21 @@ public class PW_Microphone : PlayerWeapon
     {
         int randomSound = Random.Range(0, 3);
 
+        if (isOnBeat)
+        {
+            SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound("OnBeatHit-" + randomSound.ToString())).Play();
+        }
+        else
+        {
+            SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound("OnBeatHit-" + randomSound.ToString())).Play();
+        }
+
         foreach (var item in hitbox.collider2Ds.ToList())
         {
             if (item.TryGetComponent(out IDamageable damageable))
             {
                 float multiplier = 0.8f;
                 if (isOnBeat) multiplier = beatCombo.currentRank.rankDamageMultiplier;
-                if (isOnBeat)
-                {
-                    //soundLibrary.Library.TryGetValue("OnBeatHit-" + randomSound.ToString(), out SoundData sound);
-                    SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.Library["OnBeatHit-" + randomSound.ToString()]).Play();
-                }
-                else
-                {
-                    soundLibrary.Library.TryGetValue("OnMissHit-" + randomSound.ToString(), out SoundData sound);
-                    SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.Library["OnMissHit-" + randomSound.ToString()]).Play();
-                }
 
                 damageable.TakeDamage(basicAttackDamage * multiplier, movementComponent.FacingDirection * Vector2.right);
 

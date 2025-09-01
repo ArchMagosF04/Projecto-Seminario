@@ -46,6 +46,8 @@ public class GardelST_NormalAttack : GardelState
 
         anim.SetTrigger("NormalAttackBeat");
 
+        controller.PlaySound("NormalAttack");
+
         controller.FireProjectile();
 
         attackCount++;

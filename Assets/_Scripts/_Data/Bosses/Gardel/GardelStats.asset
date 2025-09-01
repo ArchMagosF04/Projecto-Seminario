@@ -17,8 +17,8 @@ MonoBehaviour:
   <StunAttackChanceAtHalf>k__BackingField: 0.35
   <JumpForce>k__BackingField: 25
   <NumberOfAttacks>k__BackingField: 3
-  <SpecialBeatsToWait>k__BackingField: 1
-  <StunBeatsToWait>k__BackingField: 1
+  <SpecialBeatsToWait>k__BackingField: 2
+  <StunBeatsToWait>k__BackingField: 2
   <StunEffectBeatDuration>k__BackingField: 3
   <StunShakeProfile>k__BackingField: {fileID: 11400000, guid: 3f67121fb3219e140aacb0850b4d44b7, type: 2}
   <Projectiles>k__BackingField:

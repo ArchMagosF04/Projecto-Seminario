@@ -15,6 +15,8 @@ public class PlayerST_Jump : PlayerST_Ability
     {
         base.OnEnter();
 
+        controller.PlaySound("Jump");
+
         InputManager.Instance.UseJumpInput();
         Movement?.SetVelocityY(playerStats.JumpVelocity);
         isAbilityDone = true;

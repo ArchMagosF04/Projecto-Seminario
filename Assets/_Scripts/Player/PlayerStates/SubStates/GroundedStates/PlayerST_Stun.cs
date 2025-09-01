@@ -17,9 +17,12 @@ public class PlayerST_Stun : PlayerState
     public override void OnEnter()
     {
         base.OnEnter();
+
+        controller.PlaySound("Stun");
+
         beatTimer = 0;
         movement.SetVelocityZero();
-        Debug.Log("Player Stun");
+        //Debug.Log("Player Stun");
         BeatManager.Instance.intervals[0].OnBeatEvent += BeatTimer;
     }
 

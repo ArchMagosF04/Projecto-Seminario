@@ -963,7 +963,7 @@ MonoBehaviour:
   markerLeft: {fileID: 5702236608854443893}
   halfMarkerRight: {fileID: 53191726180325596}
   halfMarkerLeft: {fileID: 5434369026665560682}
-  lingeringBeatGraceTime: 0.15
+  lingeringBeatGraceTime: 0.2
   halfBeatCounter: 0
 --- !u!61 &6287984879812065475
 BoxCollider2D:

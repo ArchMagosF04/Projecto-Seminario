@@ -58,6 +58,8 @@ public class PlayerController : MonoBehaviour, ISpeaker
     {
         Core = GetComponentInChildren<Core>();
 
+        Core.SetSoundLibrary(soundLibrary);
+
         BeatCombo = GetComponent<BeatComboCounter>();
 
         RB = GetComponent<Rigidbody2D>();

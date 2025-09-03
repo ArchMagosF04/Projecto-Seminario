@@ -7,10 +7,14 @@ public class Core : MonoBehaviour
 {
     private readonly List<CoreComponent> coreComponents = new List<CoreComponent>();
 
+    public SoundLibraryObject SoundLibrary { get; private set; }
+
     private void Awake()
     {
 
     }
+
+    public void SetSoundLibrary(SoundLibraryObject library) => SoundLibrary = library;
 
     public void LogicUpdate()
     {

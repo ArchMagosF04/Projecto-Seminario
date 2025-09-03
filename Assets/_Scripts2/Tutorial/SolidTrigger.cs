@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class SolidTrigger : MonoBehaviour
 {
-    private Collider2D collider;
+    private Collider2D objectCollider;
 
     private void Start()
     {
-        collider = GetComponent<Collider2D>();
+        objectCollider = GetComponent<Collider2D>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -20,7 +20,7 @@ public class SolidTrigger : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(1);
 
-        collider.isTrigger = false;
+        objectCollider.isTrigger = false;
 
         yield return null;
     }

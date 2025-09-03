@@ -618,7 +618,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d20b07f0a7cafdf4dbbf0788611b7c6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 5
   knockbackForce: 15
   shakeProfile: {fileID: 11400000, guid: a40a765b02bb8494d89d8ead763975b9, type: 2}
 --- !u!114 &5120317986441159209

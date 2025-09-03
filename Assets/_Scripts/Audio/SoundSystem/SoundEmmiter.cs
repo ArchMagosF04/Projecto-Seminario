@@ -9,7 +9,6 @@ public class SoundEmmiter : MonoBehaviour
 
     private AudioSource audioSource;
     private Coroutine playingCoroutine;
-    private float volume;
 
     private void Awake()
     {

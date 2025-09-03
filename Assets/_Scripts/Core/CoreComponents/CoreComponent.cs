@@ -6,6 +6,11 @@ public class CoreComponent : MonoBehaviour
 {
     protected Core core;
 
+    protected SoundLibraryObject soundLibrary
+    {
+        get { return core.SoundLibrary; }
+    }
+
     protected virtual void Awake()
     {
         core = transform.parent.GetComponent<Core>();

@@ -31,11 +31,20 @@ MonoBehaviour:
     Loop: 0
     PlayOnAwake: 0
     FrequentSound: 0
+  - Id: DamageSound
+    Clip: {fileID: 8300000, guid: 6c2df02852170d740b7cd0b745655d19, type: 3}
+    MixerGroup: {fileID: -522563215728743215, guid: 20d587f63ee10e746b23a5f4c255fffd, type: 2}
+    Volume: 0.316
+    RandomPitch: 1
+    PitchVariation: 0.2
+    Loop: 0
+    PlayOnAwake: 0
+    FrequentSound: 0
   nullData:
     Id: NullData
     Clip: {fileID: 8300000, guid: e3ee7cb72ccb3784c85b43ac24d047a1, type: 3}
     MixerGroup: {fileID: 1438264774059830765, guid: 20d587f63ee10e746b23a5f4c255fffd, type: 2}
-    Volume: 1
+    Volume: 0
     RandomPitch: 0
     PitchVariation: 0.1
     Loop: 0

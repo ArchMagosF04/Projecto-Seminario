@@ -63,7 +63,7 @@ public class PW_Microphone : PlayerWeapon
 
                 beatCombo.IncreaseComboCounter();
                 if (isOnBeat) manaComponent.IncreaseMana(manaOnBeatHit);
-                if (isOnBeat) gameObject.GetComponentInParent<PlayerController>().PlaySound("ManaUp01");
+                //if (isOnBeat) gameObject.GetComponentInParent<PlayerController>().PlaySound("ManaUp01");
             }
         }
     }

@@ -9,11 +9,15 @@ public class Core_Mana : CoreComponent
     [SerializeField] private float maxMana;
     private float currentMana;
 
+    private GameObject player;
+
     public bool isManaFull { get; private set; }
+    private bool fullSoundPlayed = false;
 
     protected override void Awake()
     {
         base.Awake();
+        player = GameObject.FindWithTag("Player");
     }
 
     private void Start()
@@ -25,6 +29,7 @@ public class Core_Mana : CoreComponent
     {
         currentMana = 0f;
         isManaFull = false;
+        fullSoundPlayed=false;
         manaBar.fillAmount = 0f;
     }
 
@@ -34,6 +39,19 @@ public class Core_Mana : CoreComponent
         manaBar.fillAmount = currentMana / maxMana;
 
         if (currentMana == maxMana) isManaFull = true;
+
+        if(player != null)
+        {
+            if (!isManaFull)
+            {
+                player.GetComponentInParent<PlayerController>().PlaySound("ManaUp01");
+            }
+            else if (isManaFull /*&& fullSoundPlayed == false*/)
+            {
+                player.GetComponentInParent<PlayerController>().PlaySound("EnergyFull");
+                //fullSoundPlayed = true;
+            }
+        }
     }
 
     [ContextMenu("FillManaBar")]

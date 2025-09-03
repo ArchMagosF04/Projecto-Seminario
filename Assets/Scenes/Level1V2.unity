@@ -3520,6 +3520,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 857465167}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -189.82}
+--- !u!1 &2003986793
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2003986795}
+  - component: {fileID: 2003986794}
+  m_Layer: 0
+  m_Name: Ambience
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2003986794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003986793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 182ec4149fe39384a8c8e03e8e8077a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  library: {fileID: 11400000, guid: 34b07fb478136cd4589bed9d56eba4f3, type: 2}
+--- !u!4 &2003986795
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003986793}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.8703227, y: -0.34912702, z: -0.019251935}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &2038028225 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 124963947287227684, guid: 7a97620bc07dd564db7c3de8225a954b, type: 3}
@@ -4017,6 +4062,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4686884552793293406, guid: 3183d21e511f0754ea7668c3703fd19e, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4686884552793293406, guid: 3183d21e511f0754ea7668c3703fd19e, type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5311272730225565056, guid: 3183d21e511f0754ea7668c3703fd19e, type: 3}
@@ -5031,3 +5080,4 @@ SceneRoots:
   - {fileID: 79649170}
   - {fileID: 1144707541}
   - {fileID: 686729955}
+  - {fileID: 2003986795}

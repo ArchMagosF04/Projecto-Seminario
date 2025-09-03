@@ -25,7 +25,7 @@ MonoBehaviour:
   - Id: ManaUp01
     Clip: {fileID: 8300000, guid: f4db6853876425146873b6c1707ef11b, type: 3}
     MixerGroup: {fileID: -522563215728743215, guid: 20d587f63ee10e746b23a5f4c255fffd, type: 2}
-    Volume: 0.556
+    Volume: 0.378
     RandomPitch: 0
     PitchVariation: 0.1
     Loop: 0

@@ -40,17 +40,7 @@ public class PW_Microphone : PlayerWeapon
 
     private void BasicAttackDamage()
     {
-        int randomSound = Random.Range(0, 3);
-
-        if (isOnBeat)
-        {
-            SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound("OnBeatHit-" + randomSound.ToString())).Play();
-            StartCoroutine(BumpUpMusic());
-        }
-        else
-        {
-            SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound("OnMissHit-" + randomSound.ToString())).Play();            
-        }
+        int randomSound = Random.Range(0, 3);       
 
         foreach (var item in hitbox.collider2Ds.ToList())
         {
@@ -63,14 +53,24 @@ public class PW_Microphone : PlayerWeapon
 
                 beatCombo.IncreaseComboCounter();
                 if (isOnBeat) manaComponent.IncreaseMana(manaOnBeatHit);
-                //if (isOnBeat) gameObject.GetComponentInParent<PlayerController>().PlaySound("ManaUp01");
-            }
+
+                if (isOnBeat)
+                {
+                    SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound("OnBeatHit-" + randomSound.ToString())).Play();
+                    StartCoroutine(BumpUpMusic());
+                }
+                else
+                {
+                    SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound("OnMissHit-" + randomSound.ToString())).Play();
+                }
+            }            
         }
     }
 
     private void SpecialAttackDamage()
     {
         BeatManager.Instance.intervals[2].OnBeatEvent += SpecialHitOnBeat;
+        SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound("Special")).Play();
         OnExit += UnsubFromBeat;
     }
 

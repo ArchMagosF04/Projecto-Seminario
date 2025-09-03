@@ -9,7 +9,7 @@ public class ShowHideMesages : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        hideMessage.SetActive(false);
-        showMessage.SetActive(true);
+        if (hideMessage!=null) hideMessage.SetActive(false);
+        if (showMessage != null) showMessage.SetActive(true);
     }
 }

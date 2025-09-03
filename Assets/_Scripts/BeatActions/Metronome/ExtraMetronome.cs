@@ -60,31 +60,38 @@ public class ExtraMetronome : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision != null)
+        if (collision.tag != "Player" && collision.tag != "Enemy")
         {
-            collision.gameObject.TryGetComponent<SpriteRenderer>(out SpriteRenderer renderer);
+            if (collision != null)
+            {
+                collision.gameObject.TryGetComponent<SpriteRenderer>(out SpriteRenderer renderer);
 
-            renderer.color = Color.yellow;
+                renderer.color = Color.yellow;
 
-            BeatManager.Instance.ToggleGracePeriod(true);
-            busy = true;
+                BeatManager.Instance.ToggleGracePeriod(true);
+                busy = true;
 
-            centralMetronome.OnExtraBeat += Isbusy;
+                centralMetronome.OnExtraBeat += Isbusy;
 
-            StartCoroutine(LingeringGrace(lingeringBeatGraceTime));
+                StartCoroutine(LingeringGrace(lingeringBeatGraceTime));
+            }
         }
-        
+                  
 
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision!= null)
+        if (collision.tag != "Player" && collision.tag != "Enemy")
         {
-            collision.gameObject.TryGetComponent<SpriteRenderer>(out SpriteRenderer renderer);
+            if (collision != null)
+            {
+                collision.gameObject.TryGetComponent<SpriteRenderer>(out SpriteRenderer renderer);
 
-            renderer.color = Color.white;
+                renderer.color = Color.white;
+            }
         }
+       
              
     }
 

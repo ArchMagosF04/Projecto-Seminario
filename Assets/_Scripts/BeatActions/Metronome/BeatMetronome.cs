@@ -140,15 +140,19 @@ public class BeatMetronome : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        foreach (SpriteRenderer spriteRenderer in markerSprites)
+        if (collision.tag != "Player" && collision.tag != "Enemy")
         {
-            if (spriteRenderer != null)
+            foreach (SpriteRenderer spriteRenderer in markerSprites)
             {
-                spriteRenderer.color = Color.green;
-            }            
+                if (spriteRenderer != null)
+                {
+                    spriteRenderer.color = Color.green;
+                }
 
                 BeatManager.Instance.ToggleGracePeriod(true);
-        }
+            }
+        }       
+        
     }
 
     [ContextMenu("OnBeatMiss")]

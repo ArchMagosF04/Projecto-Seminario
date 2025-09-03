@@ -18,6 +18,7 @@ public class CombatTutorial : MonoBehaviour
     [SerializeField] GameObject enemyHud;
     [SerializeField] TextMeshProUGUI hitCounter;
     [SerializeField] Core_Mana energyBar;
+    [SerializeField] GameObject locationIndicator;
     private static int index =0;
     public static int Index {  get { return index; } }
     private int count = 0;
@@ -41,8 +42,17 @@ public class CombatTutorial : MonoBehaviour
         OnIndexChange += ShowEnemyHUD;
         OnIndexChange += ShowMetronome;
         OnIndexChange += ShowEnergy;
+        OnIndexChange += ShowMarker;
 
         player = GameObject.FindGameObjectWithTag("Player");
+    }
+
+    private void OnDestroy()
+    {
+        OnIndexChange -= ShowEnemyHUD;
+        OnIndexChange -= ShowMetronome;
+        OnIndexChange -= ShowEnergy;
+        OnIndexChange -= ShowMarker;
     }
 
     private void FixedUpdate()
@@ -262,6 +272,15 @@ public class CombatTutorial : MonoBehaviour
     public int GetIndex()
     {
         return index;
+    }
+
+    private void ShowMarker(int index)
+    {
+        if (index == 9)
+        {
+            locationIndicator.SetActive(true);
+            Destroy(this);
+        }
     }
     
 }

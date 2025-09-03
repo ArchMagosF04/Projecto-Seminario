@@ -40,7 +40,8 @@ public class GardelST_SpecialAttack : GardelState
         if (beatTimer > stats.SpecialBeatsToWait)
         {
             anim.SetTrigger("SpecialAttackBeat");
-            controller.PlaySound("SpecialAttack");
+            int randomSound = Random.Range(1, 5);
+            controller.PlaySound("Shout-"+randomSound.ToString());
             controller.SpawnShout();
             BeatManager.Instance.intervals[0].OnBeatEvent -= BeatTimer;
         }

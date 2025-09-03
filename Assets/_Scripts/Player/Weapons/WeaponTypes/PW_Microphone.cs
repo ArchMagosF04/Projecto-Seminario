@@ -45,10 +45,11 @@ public class PW_Microphone : PlayerWeapon
         if (isOnBeat)
         {
             SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound("OnBeatHit-" + randomSound.ToString())).Play();
+            StartCoroutine(BumpUpMusic());
         }
         else
         {
-            SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound("OnBeatHit-" + randomSound.ToString())).Play();
+            SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound("OnMissHit-" + randomSound.ToString())).Play();            
         }
 
         foreach (var item in hitbox.collider2Ds.ToList())
@@ -62,6 +63,7 @@ public class PW_Microphone : PlayerWeapon
 
                 beatCombo.IncreaseComboCounter();
                 if (isOnBeat) manaComponent.IncreaseMana(manaOnBeatHit);
+                if (isOnBeat) gameObject.GetComponentInParent<PlayerController>().PlaySound("ManaUp01");
             }
         }
     }
@@ -70,6 +72,17 @@ public class PW_Microphone : PlayerWeapon
     {
         BeatManager.Instance.intervals[2].OnBeatEvent += SpecialHitOnBeat;
         OnExit += UnsubFromBeat;
+    }
+
+    IEnumerator BumpUpMusic()
+    {
+        BeatManager.Instance.IncreaseMusicVolume(1);
+
+        yield return new WaitForSecondsRealtime(1);
+
+        BeatManager.Instance.DecreaseMusicVolume(0.7f); 
+
+        yield break;
     }
 
     protected void SpecialHitOnBeat()

@@ -38,6 +38,6 @@ public class SoundBuilder
 
         if (soundData.FrequentSound) soundManager.FrequentSoundEmmiters.Enqueue(soundEmmiter);
 
-        soundEmmiter.Play();
+        soundEmmiter.Play();        
     }
 }

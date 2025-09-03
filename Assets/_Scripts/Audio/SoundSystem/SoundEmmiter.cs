@@ -9,6 +9,7 @@ public class SoundEmmiter : MonoBehaviour
 
     private AudioSource audioSource;
     private Coroutine playingCoroutine;
+    private float volume;
 
     private void Awake()
     {
@@ -48,11 +49,12 @@ public class SoundEmmiter : MonoBehaviour
     }
 
     public void Initialize(SoundData data)
-    {
+    {        
         Data = data; 
         audioSource.clip = data.Clip;
         audioSource.outputAudioMixerGroup = data.MixerGroup;
         audioSource.loop = data.Loop;
         audioSource.playOnAwake = data.PlayOnAwake;
+        audioSource.volume = data.Volume;
     }
 }

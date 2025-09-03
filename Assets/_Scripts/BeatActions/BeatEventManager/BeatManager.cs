@@ -19,6 +19,8 @@ public class BeatManager : MonoBehaviour
 
     public float BeatSpeedMultiplier { get; private set; }
 
+    private float normalMusicVolume;
+
     private void Awake()
     {
         if (Instance == null)
@@ -32,12 +34,29 @@ public class BeatManager : MonoBehaviour
         }
 
         CalculateAnimationSpeedMultiplier();
+        
+        normalMusicVolume = AudioSource.volume;
     }
 
     public void ToggleMusic(bool input)
     {
         if (input) AudioSource.Play();
         else AudioSource.Pause();
+    }
+
+    public void IncreaseMusicVolume(float volume)
+    {
+        AudioSource.volume = volume;
+    }
+
+    public void DecreaseMusicVolume(float volume)
+    {
+        AudioSource.volume = volume;
+    }
+
+    public void NormalizeMusicVolume()
+    {
+
     }
 
     private void Update()

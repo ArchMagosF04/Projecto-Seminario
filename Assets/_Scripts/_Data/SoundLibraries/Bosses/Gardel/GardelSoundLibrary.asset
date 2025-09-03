@@ -17,6 +17,87 @@ MonoBehaviour:
     Clip: {fileID: 8300000, guid: d4a953d4924840345ac047a4cec06646, type: 3}
     MixerGroup: {fileID: -522563215728743215, guid: 20d587f63ee10e746b23a5f4c255fffd, type: 2}
     Volume: 1
+    RandomPitch: 0
+    PitchVariation: 0.15
+    Loop: 0
+    PlayOnAwake: 0
+    FrequentSound: 0
+  - Id: MusicNote-1
+    Clip: {fileID: 8300000, guid: aa51591b01283e0449d9ec708211bce0, type: 3}
+    MixerGroup: {fileID: -522563215728743215, guid: 20d587f63ee10e746b23a5f4c255fffd, type: 2}
+    Volume: 0.601
+    RandomPitch: 1
+    PitchVariation: 0.15
+    Loop: 0
+    PlayOnAwake: 0
+    FrequentSound: 0
+  - Id: MusicNote-2
+    Clip: {fileID: 8300000, guid: 66034571091680b468206f61d4b80059, type: 3}
+    MixerGroup: {fileID: -522563215728743215, guid: 20d587f63ee10e746b23a5f4c255fffd, type: 2}
+    Volume: 0.614
+    RandomPitch: 1
+    PitchVariation: 0.15
+    Loop: 0
+    PlayOnAwake: 0
+    FrequentSound: 0
+  - Id: MusicNote-3
+    Clip: {fileID: 8300000, guid: 8ce617a7bf3c2fb408a4706dfd698ec0, type: 3}
+    MixerGroup: {fileID: -522563215728743215, guid: 20d587f63ee10e746b23a5f4c255fffd, type: 2}
+    Volume: 0.579
+    RandomPitch: 1
+    PitchVariation: 0.15
+    Loop: 0
+    PlayOnAwake: 0
+    FrequentSound: 0
+  - Id: MusicNote-4
+    Clip: {fileID: 8300000, guid: 067f0fc25b03d424cbca11ad71379220, type: 3}
+    MixerGroup: {fileID: -522563215728743215, guid: 20d587f63ee10e746b23a5f4c255fffd, type: 2}
+    Volume: 0.596
+    RandomPitch: 1
+    PitchVariation: 0.15
+    Loop: 0
+    PlayOnAwake: 0
+    FrequentSound: 0
+  - Id: Shout-1
+    Clip: {fileID: 8300000, guid: 3ea3cfb654d412f41883964b3d089e23, type: 3}
+    MixerGroup: {fileID: -522563215728743215, guid: 20d587f63ee10e746b23a5f4c255fffd, type: 2}
+    Volume: 1
+    RandomPitch: 0
+    PitchVariation: 0.15
+    Loop: 0
+    PlayOnAwake: 0
+    FrequentSound: 0
+  - Id: Shout-2
+    Clip: {fileID: 8300000, guid: 3a2f516cd7ebc8441815370aa880600b, type: 3}
+    MixerGroup: {fileID: -522563215728743215, guid: 20d587f63ee10e746b23a5f4c255fffd, type: 2}
+    Volume: 1
+    RandomPitch: 0
+    PitchVariation: 0.15
+    Loop: 0
+    PlayOnAwake: 0
+    FrequentSound: 0
+  - Id: Shout-3
+    Clip: {fileID: 8300000, guid: 4f8cafb420930954eb6b270c61c273a6, type: 3}
+    MixerGroup: {fileID: -522563215728743215, guid: 20d587f63ee10e746b23a5f4c255fffd, type: 2}
+    Volume: 1
+    RandomPitch: 0
+    PitchVariation: 0.15
+    Loop: 0
+    PlayOnAwake: 0
+    FrequentSound: 0
+  - Id: Shout-4
+    Clip: {fileID: 8300000, guid: 48feaf7f224985c49b0001863c77f502, type: 3}
+    MixerGroup: {fileID: -522563215728743215, guid: 20d587f63ee10e746b23a5f4c255fffd, type: 2}
+    Volume: 1
+    RandomPitch: 0
+    PitchVariation: 0.15
+    Loop: 0
+    PlayOnAwake: 0
+    FrequentSound: 0
+  - Id: Stomp
+    Clip: {fileID: 8300000, guid: ee4cc9b95bca408479c9ee7ef06e043b, type: 3}
+    MixerGroup: {fileID: -522563215728743215, guid: 20d587f63ee10e746b23a5f4c255fffd, type: 2}
+    Volume: 0.798
     RandomPitch: 1
     PitchVariation: 0.15
     Loop: 0

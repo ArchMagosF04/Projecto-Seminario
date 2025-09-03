@@ -12,7 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 523149f386095d045a39d39005b40315, type: 3}
   m_Name: AmbienceSounds
   m_EditorClassIdentifier: 
-  soundData: []
+  soundData:
+  - Id: CrowdCheersLoop
+    Clip: {fileID: 8300000, guid: 7eac8e925bb834c4e8dd647b81baf311, type: 3}
+    MixerGroup: {fileID: -522563215728743215, guid: 20d587f63ee10e746b23a5f4c255fffd, type: 2}
+    Volume: 0.726
+    RandomPitch: 0
+    PitchVariation: 0
+    Loop: 1
+    PlayOnAwake: 1
+    FrequentSound: 0
+  - Id: CrowdShortCheers
+    Clip: {fileID: 8300000, guid: 575ddcda5ea01044e99a1e089e7485e9, type: 3}
+    MixerGroup: {fileID: -522563215728743215, guid: 20d587f63ee10e746b23a5f4c255fffd, type: 2}
+    Volume: 0.378
+    RandomPitch: 0
+    PitchVariation: 0
+    Loop: 0
+    PlayOnAwake: 0
+    FrequentSound: 0
   nullData:
     Id: 
     Clip: {fileID: 0}

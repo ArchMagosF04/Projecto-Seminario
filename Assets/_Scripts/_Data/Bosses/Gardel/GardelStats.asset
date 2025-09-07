@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d87fd5520e6ef9540b30d1bd18b9622d, type: 3}
   m_Name: GardelStats
   m_EditorClassIdentifier: 
-  <BeatsSpentOnIdle>k__BackingField: 3
+  <BeatsSpentOnIdle>k__BackingField: 5
   <StunAttackChance>k__BackingField: 0.1
   <StunAttackChanceAtHalf>k__BackingField: 0.35
   <JumpForce>k__BackingField: 25
   <NumberOfAttacks>k__BackingField: 3
-  <SpecialBeatsToWait>k__BackingField: 2
+  <SpecialBeatsToWait>k__BackingField: 3
   <StunBeatsToWait>k__BackingField: 2
-  <StunEffectBeatDuration>k__BackingField: 3
+  <StunEffectBeatDuration>k__BackingField: 4
   <StunShakeProfile>k__BackingField: {fileID: 11400000, guid: 3f67121fb3219e140aacb0850b4d44b7, type: 2}
   <Projectiles>k__BackingField:
   - {fileID: 2798240489296969066, guid: d79148af75e1f5248ae377637cdc53cf, type: 3}

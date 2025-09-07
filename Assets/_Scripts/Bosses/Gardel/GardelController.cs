@@ -56,6 +56,8 @@ public class GardelController : MonoBehaviour, ISpeaker
     {
         Core = GetComponentInChildren<Core>();
 
+        Core.SetSoundLibrary(soundLibrary);
+
         health = Core.GetCoreComponent<Core_Health>();
         movement = Core.GetCoreComponent<Core_Movement>();
         impulseSource = GetComponent<CinemachineImpulseSource>();

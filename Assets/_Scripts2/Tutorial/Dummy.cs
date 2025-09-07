@@ -6,12 +6,18 @@ using UnityEngine;
 public class Dummy : MonoBehaviour, IDamageable
 {
     [SerializeField] BeatDetector beatDetector;
+    [SerializeField] BeatDetector beatDetector2;
     private int hp = 100;
     [SerializeField] CombatTutorial tutorial;
+
+    private bool onBeat;
+
+    [SerializeField]private float timer=0.1f;
+    private float currentTimer;
     // Start is called before the first frame update
     void Start()
     {
-        
+        BeatManager.Instance.OnCorrectBeat += BeatEffect;
     }
 
     // Update is called once per frame
@@ -21,6 +27,19 @@ public class Dummy : MonoBehaviour, IDamageable
         {
             gameObject.GetComponent<HealthComponent>().Heal(100);
             hp = 100;
+        }
+
+        if (onBeat)
+        {
+            if(currentTimer < timer)
+            {
+                currentTimer += Time.deltaTime;
+            }
+            else
+            {
+                onBeat = false;
+                currentTimer = 0;
+            }
         }
     }
 
@@ -36,7 +55,7 @@ public class Dummy : MonoBehaviour, IDamageable
 
     public void TakeDamage(float amount, Vector2 attackDirection)
     {
-        if (beatDetector.IsOnBeat())
+        if (onBeat)
         {
             gameObject.GetComponent<HealthComponent>().TakeDamage(5 * 3);
             hp -= 5 * 3;
@@ -55,8 +74,13 @@ public class Dummy : MonoBehaviour, IDamageable
         }        
     }
 
+    public void BeatEffect()
+    {
+        onBeat = true;
+    }
+
     public void HealHealth(float amount)
     {
-        
+        throw new System.NotImplementedException();
     }
 }

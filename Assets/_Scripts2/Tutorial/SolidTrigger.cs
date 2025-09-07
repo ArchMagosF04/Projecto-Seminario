@@ -13,6 +13,14 @@ public class SolidTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if(collision.tag == "Player")
+        {
+            collision.transform.position += transform.right * 5;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {        
         StartCoroutine(Solidify());
     }
 

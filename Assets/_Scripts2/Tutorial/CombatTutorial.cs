@@ -152,7 +152,7 @@ public class CombatTutorial : MonoBehaviour
 
         if(index == 6)
         {           
-            if (count >= 3)
+            if (count >= 10)
             {
                 AdvanceIndex();
                 count = 0;

@@ -4118,6 +4118,30 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.8018868
       objectReference: {fileID: 0}
+    - target: {fileID: 5629491105953628966, guid: 55996f5f38ab3c34f9b958279da1d2ca, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5629491105953628966, guid: 55996f5f38ab3c34f9b958279da1d2ca, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5629491105953628966, guid: 55996f5f38ab3c34f9b958279da1d2ca, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5629491105953628966, guid: 55996f5f38ab3c34f9b958279da1d2ca, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5629491105953628966, guid: 55996f5f38ab3c34f9b958279da1d2ca, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 117.599976
+      objectReference: {fileID: 0}
+    - target: {fileID: 5629491105953628966, guid: 55996f5f38ab3c34f9b958279da1d2ca, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -142.20001
+      objectReference: {fileID: 0}
     - target: {fileID: 6429794930985370823, guid: 55996f5f38ab3c34f9b958279da1d2ca, type: 3}
       propertyPath: m_Name
       value: Portrait

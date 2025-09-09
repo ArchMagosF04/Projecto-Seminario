@@ -53,7 +53,7 @@ public class Core_Health : CoreComponent, IDamageable
         OnDamageReceived?.Invoke();
         OnDamageReceivedUN?.Invoke();
 
-        SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound("DamageSound")).Play();
+        if (soundLibrary) SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound("DamageSound")).Play();
 
         if (popupPrefab != null)
         {

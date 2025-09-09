@@ -20,7 +20,7 @@ TagManager:
   - MovileGround
   - EnemyAttacks
   - PlayerAttacks
-  - 
+  - CameraBoundaries
   - 
   - 
   - 

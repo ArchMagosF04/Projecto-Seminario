@@ -5,6 +5,7 @@ using UnityEngine;
 public class AmbiencePlayer : MonoBehaviour
 {
     [SerializeField]SoundLibraryObject library;
+    private SoundEmmiter soundEmmiter;
 
     // Start is called before the first frame update
     private void Awake()
@@ -21,8 +22,13 @@ public class AmbiencePlayer : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(1.5f);
 
-        SoundManager.Instance.CreateSound().WithSoundData(library.GetSound("CrowdCheersLoop")).Play();
+         SoundManager.Instance.CreateSound().WithSoundData(library.GetSound("CrowdCheersLoop")).Play();
 
         yield return null;
+    }
+
+    private void OnDestroy()
+    {
+        SoundManager.Instance.CleanLoops();
     }
 }

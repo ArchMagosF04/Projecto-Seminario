@@ -112,4 +112,15 @@ public class SoundManager : MonoBehaviour
             defaultCapacity,
             maxPoolSize);
     }
+
+    public void CleanLoops()
+    {
+        foreach (SoundEmmiter sound in activeSoundEmmiters)
+        {
+            if (sound != null && sound.Data.Loop == true)
+            {
+                ReturnToPool(sound);
+            }
+        }
+    }
 }

@@ -27,7 +27,7 @@ public class Core_Mana : CoreComponent
     private void Start()
     {
         UseMana();
-        beatDetector.OnBeat += AdvanceAnimation;
+        //beatDetector.OnBeat += AdvanceAnimation;
     }
 
     public void UseMana()

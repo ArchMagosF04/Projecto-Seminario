@@ -12,6 +12,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField]private float waitTime = 2;
     private float currentWaitTime = 0;
     [SerializeField] GameObject skipText;
+    [SerializeField] GameObject skipText2;
     [SerializeField] private GameObject screenBorders;
 
     [SerializeField] private GameObject[] MidCombatDialogue;
@@ -49,6 +50,8 @@ public class DialogueManager : MonoBehaviour
             {
                 SkipDialogue();
                 AdvanceIndex();
+                skipText.SetActive(false);
+                skipText2.SetActive(false);
             }
             if (currentWaitTime < waitTime)
             {
@@ -111,7 +114,7 @@ public class DialogueManager : MonoBehaviour
             IntroDialogue[mainIndex].gameObject.SetActive(false);
             mainIndex++;
             IntroDialogue[mainIndex].gameObject.SetActive(true);
-        }
+        }        
         else
         {
             IntroDialogue[mainIndex].gameObject.SetActive(false);
@@ -123,8 +126,15 @@ public class DialogueManager : MonoBehaviour
                 screenBorders.SetActive(true);
             }
             skipText.SetActive(false);
+            skipText2.SetActive(false);
         }
-        
+
+        if (mainIndex > 1 && mainIndex < 3)
+        {
+            skipText.SetActive(false);
+            skipText2.SetActive(true);
+        }
+
     }
 
     private int ChoseDialogue()

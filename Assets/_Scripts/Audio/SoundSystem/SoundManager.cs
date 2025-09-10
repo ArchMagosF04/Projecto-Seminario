@@ -123,14 +123,5 @@ public class SoundManager : MonoBehaviour
                 ReturnToPool(sound);
             }
         }
-
-        try
-        {
-
-        }
-        catch
-        {
-
-        }
     }
 }

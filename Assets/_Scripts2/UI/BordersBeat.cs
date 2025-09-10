@@ -34,7 +34,6 @@ public class BordersBeat : MonoBehaviour
     {
         image.color = Color.white;
         //gameObject.SetActive(true);
-        Debug.Log("Borders active");
         animator.SetTrigger("On");
         OnBeat = true;
     }

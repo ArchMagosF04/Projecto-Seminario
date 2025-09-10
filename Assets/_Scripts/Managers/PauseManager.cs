@@ -41,6 +41,9 @@ public class PauseManager : MonoBehaviour
 
         IsGamePaused = false;
         ResetScreens();
+
+        Time.timeScale = 1.0f;
+        Debug.Log(Time.timeScale);
     }
 
     public void ResetScreens()

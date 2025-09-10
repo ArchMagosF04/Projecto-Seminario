@@ -6268,6 +6268,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4686884552793293406, guid: 3183d21e511f0754ea7668c3703fd19e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4686884552793293406, guid: 3183d21e511f0754ea7668c3703fd19e, type: 3}
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
@@ -6403,7 +6407,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3392897585196418049, guid: 4d40a187711fb064f9755077f23dee53, type: 3}
       propertyPath: <intervals>k__BackingField.Array.data[2].unityTrigger.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3392897585196418049, guid: 4d40a187711fb064f9755077f23dee53, type: 3}
       propertyPath: <intervals>k__BackingField.Array.data[0].unityTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Mode

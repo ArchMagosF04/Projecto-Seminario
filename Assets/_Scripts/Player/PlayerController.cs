@@ -89,7 +89,6 @@ public class PlayerController : MonoBehaviour, ISpeaker
     {
         StateMachine.Initialize(IdleState);
         Core_Mana.ManaIsFull += EnergyFullAnimation;
-
     }
 
     private void Update()

@@ -41,6 +41,7 @@ public class PlayerWeapon : MonoBehaviour
     protected virtual void OnEnable()
     {
         EventHandler.OnFinish += Exit;
+        EventHandler.OnStopMovement += HandleStopMovement;
     }
 
     protected virtual void OnDisable()
@@ -54,8 +55,6 @@ public class PlayerWeapon : MonoBehaviour
         Core = core;
         manaComponent = Core.GetCoreComponent<Core_Mana>();
         movementComponent = Core.GetCoreComponent<Core_Movement>();
-
-        EventHandler.OnStopMovement += HandleStopMovement;
     }
 
     public virtual void ExecuteBasicAttack()

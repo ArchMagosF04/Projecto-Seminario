@@ -25,7 +25,7 @@ public class AnittaController : MonoBehaviour
     private CinemachineImpulseSource impulseSource;
 
     [Header("Scriptable Objects")]
-    //[SerializeField] private GardelStats gardelStats;
+    [SerializeField] private AnittaStats anittaStats;
     [SerializeField] private SoundLibraryObject soundLibrary;
 
     [field: Header("Boss Waypoints")]

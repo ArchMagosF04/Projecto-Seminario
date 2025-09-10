@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
 public class SoundBuilder
@@ -25,9 +26,9 @@ public class SoundBuilder
         return this;
     }
 
-    public void Play()
+    public SoundEmmiter Play()
     {
-        if (!soundManager.CanPlaySound(soundData)) return;
+        if (!soundManager.CanPlaySound(soundData)) return null;
 
         SoundEmmiter soundEmmiter = soundManager.Get();
         soundEmmiter.Initialize(soundData);
@@ -39,5 +40,7 @@ public class SoundBuilder
         if (soundData.FrequentSound) soundManager.FrequentSoundEmmiters.Enqueue(soundEmmiter);
 
         soundEmmiter.Play();
+
+        return soundEmmiter;
     }
 }

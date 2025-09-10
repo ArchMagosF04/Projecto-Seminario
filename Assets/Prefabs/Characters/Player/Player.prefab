@@ -94,6 +94,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manaBar: {fileID: 0}
   maxMana: 100
+  beatDetector: {fileID: 0}
 --- !u!1 &2071206070149793569
 GameObject:
   m_ObjectHideFlags: 0
@@ -736,6 +737,14 @@ PrefabInstance:
       propertyPath: soundLibrary
       value: 
       objectReference: {fileID: 11400000, guid: aa6b73f6913b0174ba0ba996bef2578a, type: 2}
+    - target: {fileID: 7390276578815594650, guid: 43bd48b7c341e9041baa5931c0677720, type: 3}
+      propertyPath: manaOnBeatHit
+      value: 16.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390276578815594650, guid: 43bd48b7c341e9041baa5931c0677720, type: 3}
+      propertyPath: specialAttackDamage
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8339370775965729869, guid: 43bd48b7c341e9041baa5931c0677720, type: 3}
       propertyPath: m_Name
       value: Weapon_Microphone

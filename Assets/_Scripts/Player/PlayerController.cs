@@ -88,6 +88,8 @@ public class PlayerController : MonoBehaviour, ISpeaker
     private void Start()
     {
         StateMachine.Initialize(IdleState);
+        Core_Mana.ManaIsFull += EnergyFullAnimation;
+
     }
 
     private void Update()
@@ -119,6 +121,7 @@ public class PlayerController : MonoBehaviour, ISpeaker
         PrimaryAttackState.UnsubscribeToEvents();
         SecondaryAttackState.UnsubscribeToEvents();
         StunState.UnsubscribeToEvents();
+        Core_Mana.ManaIsFull -= EnergyFullAnimation;
     }
 
     #endregion
@@ -175,6 +178,11 @@ public class PlayerController : MonoBehaviour, ISpeaker
     public float GetHealth()
     {
         throw new NotImplementedException();
+    }
+
+    private void EnergyFullAnimation()
+    {
+        Anim.SetTrigger("EnergyFull");
     }
 
     #endregion

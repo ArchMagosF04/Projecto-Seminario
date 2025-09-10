@@ -9,8 +9,10 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject player;
 
     [SerializeField] private GameObject[] IntroDialogue;
-    private float waitTime = 3;
+    [SerializeField]private float waitTime = 2;
     private float currentWaitTime = 0;
+    [SerializeField] GameObject skipText;
+    [SerializeField] private GameObject screenBorders;
 
     [SerializeField] private GameObject[] MidCombatDialogue;
 
@@ -30,6 +32,7 @@ public class DialogueManager : MonoBehaviour
     {
         player.GetComponent<ISpeaker>().StartSpeaking();
         enemy.GetComponent<ISpeaker>().StartSpeaking();
+        skipText.SetActive(true);
 
     }
 
@@ -42,19 +45,23 @@ public class DialogueManager : MonoBehaviour
             {
                 IntroDialogue[mainIndex].gameObject.SetActive(true);
             }
-
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                SkipDialogue();
+                AdvanceIndex();
+            }
             if (currentWaitTime < waitTime)
             {
                 currentWaitTime += Time.deltaTime;                
             }
             else if (currentWaitTime >= waitTime)
             {
-                if (Input.anyKey)
+                if (Input.GetKeyDown(KeyCode.Mouse0))
                 {
                     currentWaitTime = 0;
                     AdvanceIndex();
 
-                }
+                }                
             }
         }
         else
@@ -111,6 +118,11 @@ public class DialogueManager : MonoBehaviour
             introEnded = true;
             player.GetComponent<ISpeaker>().StopSpeaking();
             enemy.GetComponent<ISpeaker>().StopSpeaking();
+            if(screenBorders!= null)
+            {
+                screenBorders.SetActive(true);
+            }
+            skipText.SetActive(false);
         }
         
     }
@@ -148,6 +160,15 @@ public class DialogueManager : MonoBehaviour
             //yield return null;
 
         StopCoroutine(ShowMessage(index));
+    }
+
+    private void SkipDialogue()
+    {
+        foreach (var message in IntroDialogue)
+        {
+            message.SetActive(false);
+        }
+        mainIndex = IntroDialogue.Length-1;
     }
 
 

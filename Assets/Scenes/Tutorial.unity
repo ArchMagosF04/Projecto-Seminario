@@ -285,6 +285,8 @@ GameObject:
   - component: {fileID: 28574210}
   - component: {fileID: 28574212}
   - component: {fileID: 28574211}
+  - component: {fileID: 28574213}
+  - component: {fileID: 28574214}
   m_Layer: 5
   m_Name: Face
   m_TagString: Untagged
@@ -349,6 +351,40 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 28574209}
   m_CullTransparentMesh: 1
+--- !u!114 &28574213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28574209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 077a72a1a0bf43f44b1e42887315c9cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &28574214
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28574209}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 42093980eabf6604092d8d6864aff5e9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &38730202
 GameObject:
   m_ObjectHideFlags: 0
@@ -1357,7 +1393,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Atack the enemy to the Rythm 3 times in a row to continue.
+  m_text: 'Atack the enemy to the Rythm 6 times in a row to continue.
 
 
     Chained
@@ -1648,7 +1684,7 @@ Animator:
   m_GameObject: {fileID: 205083364}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5a94c2ce2e9377841af8e71ef075e681, type: 2}
+  m_Controller: {fileID: 9100000, guid: b97895bf55521094499d37a4c19d0e01, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

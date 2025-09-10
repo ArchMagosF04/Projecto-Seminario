@@ -14,4 +14,9 @@ public class PortaitAnimation : MonoBehaviour
     {
         gameObject.GetComponent<Animator>().SetTrigger("play");
     }
+
+    private void OnDisable()
+    {
+        Core_Mana.ManaIsFull -= PlayAnimation;
+    }
 }

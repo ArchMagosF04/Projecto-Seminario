@@ -38,6 +38,7 @@ public class AnittaST_Idle : AnittaState
     public override void OnExit()
     {
         base.OnExit();
+        anim.ResetTrigger("IdleBeat");
         BeatManager.Instance.intervals[0].OnBeatEvent -= BeatTimer;
     }
 
@@ -45,7 +46,7 @@ public class AnittaST_Idle : AnittaState
     {
         beatTimer++;
 
-        anim.SetTrigger("OnBeat");
+        anim.SetTrigger("IdleBeat");
         //controller.PlaySound("FingerSnap");
 
         if (beatTimer >= stats.BeatsSpentOnIdle && !controller.Speaking)
@@ -59,22 +60,11 @@ public class AnittaST_Idle : AnittaState
     {
         if (controller.DesiredAction == AnittaController.ActionType.None)
         {
-            controller.DesiredAction = AnittaController.ActionType.Normal;
 
-
-
-            //if (controller.LastAttackWasSpecial || Random.value >= stats.SpecialAttackChance + stats.SecretAttackChance)
-            //{
-            //    controller.DesiredAction = AnittaController.ActionType.Normal;  
-            //}
-            //else
-            //{
-            //    controller.DesiredAction = AnittaController.ActionType.Special;
-            //}
 
             DecidePlatform();
 
-            //stateMachine.ChangeState(controller.JumpState);
+            stateMachine.ChangeState(controller.TeleportState);
         }
     }
 
@@ -92,6 +82,15 @@ public class AnittaST_Idle : AnittaState
 
     private void DecidePlatform()
     {
+        Transform lastPlat = controller.LastJumpTarget;
+        do
+        {
+            int randomPlatform = Random.Range(0, controller.Platforms.Length);
+            controller.DesiredJumpTarget = controller.Platforms[randomPlatform];
 
+        } 
+        while (lastPlat == controller.DesiredJumpTarget);
+
+        controller.LastJumpTarget = controller.DesiredJumpTarget;
     }
 }

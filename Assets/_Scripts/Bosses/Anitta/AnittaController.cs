@@ -7,9 +7,10 @@ public class AnittaController : MonoBehaviour
 {
     #region State Machine Varibles
     public StateMachine StateMachine { get; private set; }
-    //public GardelST_Idle IdleState { get; private set; }
-    //public GardelST_Jump JumpState { get; private set; }
-    //public GardelST_Airborne AirborneState { get; private set; }
+    public AnittaST_Idle IdleState { get; private set; }
+    //public AnittaST_Jump JumpState { get; private set; }
+    //public AnittaST_Airborne AirborneState { get; private set; }
+    public AnittaST_Teleport TeleportState { get; private set; }
     //public GardelST_NormalAttack NormalAttackState { get; private set; }
     //public GardelST_SpecialAttack SpecialAttackState { get; private set; }
     //public GardelST_StunAttack StunAttackState { get; private set; }
@@ -24,6 +25,10 @@ public class AnittaController : MonoBehaviour
     private CharacterAnimatorEvent animatorEvent;
     private CinemachineImpulseSource impulseSource;
 
+    [Header("Teleport Components")]
+    public Collider2D DamageCollider;
+    public SpriteRenderer TargetIndicator;
+
     [Header("Scriptable Objects")]
     [SerializeField] private AnittaStats anittaStats;
     [SerializeField] private SoundLibraryObject soundLibrary;
@@ -37,6 +42,7 @@ public class AnittaController : MonoBehaviour
     [Header("Status")]
     public bool LastAttackWasSpecial;
     public Transform DesiredJumpTarget;
+    public Transform LastJumpTarget;
 
     public enum ActionType { None, Normal, Special }
     public ActionType DesiredAction = ActionType.None;
@@ -66,7 +72,18 @@ public class AnittaController : MonoBehaviour
         animatorEvent = GetComponentInChildren<CharacterAnimatorEvent>();
 
         StateMachine = new StateMachine();
-        
+        IdleState = new AnittaST_Idle(this, StateMachine, anittaStats, anim, "Idle");
+        //JumpState = new AnittaST_Jump(this, StateMachine, anittaStats, anim, "InAir");
+        //AirborneState = new AnittaST_Airborne(this, StateMachine, anittaStats, anim, "InAir");
+        TeleportState = new AnittaST_Teleport(this, StateMachine, anittaStats, anim, "Teleport");
+
+        StateMachine.Initialize(IdleState);
+    }
+
+    private void Start()
+    {
+        TargetIndicator.enabled = false;
+        LastJumpTarget = Platforms[0];
     }
 
     private void OnEnable()
@@ -76,19 +93,20 @@ public class AnittaController : MonoBehaviour
 
     private void OnDisable()
     {
-        
+        IdleState.UnsubscribeToEvents();
+        TeleportState.UnsubscribeToEvents();
 
         animatorEvent.OnAnimationFinishedTrigger -= AnimationFinishedTrigger;
     }
 
     private void Update()
     {
-        //StateMachine.CurrentState.OnUpdate();
+        StateMachine.CurrentState.OnUpdate();
     }
 
     private void FixedUpdate()
     {
-        //StateMachine.CurrentState.OnFixedUpdate();
+        StateMachine.CurrentState.OnFixedUpdate();
     }
 
     #endregion

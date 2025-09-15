@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ab2f004fc7c41248a8f50f32865d38f, type: 3}
+  m_Name: AnittaStats
+  m_EditorClassIdentifier: 
+  <BeatsSpentOnIdle>k__BackingField: 4
+  <SpecialAttackChance>k__BackingField: 0.25
+  <SecretAttackChance>k__BackingField: 0.1
+  <JumpForce>k__BackingField: 30
+  <BeatsBeforeReappearance>k__BackingField: 2
+  <BeatsBeforeNormalAttack>k__BackingField: 2
+  <SpecialBeatsToWait>k__BackingField: 1
+  <StunBeatsToWait>k__BackingField: 1
+  <StunEffectBeatDuration>k__BackingField: 3
+  <StunShakeProfile>k__BackingField: {fileID: 11400000, guid: b675b848239243b4093389d46b17b861, type: 2}

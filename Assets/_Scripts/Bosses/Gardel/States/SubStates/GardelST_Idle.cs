@@ -39,6 +39,7 @@ public class GardelST_Idle : GardelState
     public override void OnExit()
     {
         base.OnExit();
+        anim.ResetTrigger("IdleBeat");
         BeatManager.Instance.intervals[0].OnBeatEvent -= BeatTimer;
     }
 

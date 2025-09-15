@@ -13,6 +13,9 @@ public class AnittaStats : ScriptableObject
     [field: Header("Jump State")]
     [field: SerializeField] public float JumpForce { get; private set; } = 25f;
 
+    [field: Header("Teleport State")]
+    [field: SerializeField] public int BeatsBeforeReappearance { get; private set; } = 2;
+
     [field: Header("Normal Attack State")]
     [field: SerializeField] public int BeatsBeforeNormalAttack { get; private set; } = 2;
 

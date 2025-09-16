@@ -6,46 +6,56 @@ using UnityEngine.UI;
 
 public class BordersBeat : MonoBehaviour
 {
-    private bool OnBeat = true;
-    private Animator animator;
-    private Image image;
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] Image borders;
+
+    [SerializeField] private float fadeModifier = 0.33f;
+
+    [SerializeField] private float fadeDuration= 3;
+
+    private void Awake()
     {
-       image = GetComponent<Image>();
-        animator = GetComponent<Animator>();
-        BeatManager.Instance.intervals[2].OnBeatEvent += BeatEffectOn;
-        BeatManager.Instance.OnCorrectBeat += GoodHit;
-        BeatManager.Instance.OnWrongBeat += BadHit;
+        
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        if (OnBeat)
+        BeatManager.Instance.OnCorrectBeat += PaintGreen;
+        BeatManager.Instance.OnWrongBeat += PaintRed;
+        BeatManager.Instance.intervals[0].OnBeatEvent += ShowBorders;
+    }
+
+    private void PaintGreen()
+    {
+        borders.color = Color.green;
+    }
+
+    private void PaintRed()
+    {
+        borders.color = Color.red;
+    }
+
+    private void ShowBorders()
+    {        
+        StopAllCoroutines();
+        borders.color = Color.white;
+        //Debug.Log("ShowBorders");
+        Color color = borders.color;
+        color.a = Mathf.Clamp01(1);
+        borders.color = color;
+        StartCoroutine(FadeBorders());
+    }
+
+    IEnumerator FadeBorders()
+    {        
+        float duration = fadeDuration;
+        while (duration > 0)
         {
-            OnBeat = false;
-            animator.SetTrigger("Off");
-            
+            yield return new WaitForSeconds(0.025f);            
+            Color color = borders.color;
+            color.a = Mathf.Clamp01(color.a -= fadeModifier);
+            borders.color = color;
+            Debug.Log("FadeBorders");
+            duration-= 0.025f;
         }
-    }
-
-    private void BeatEffectOn()
-    {
-        image.color = Color.white;
-        //gameObject.SetActive(true);
-        animator.SetTrigger("On");
-        OnBeat = true;
-    }
-
-    private void GoodHit()
-    {
-        //image.color = Color.green;
-        animator.SetTrigger("Green");
-    }
-
-    private void BadHit()
-    {
-        animator.SetTrigger("Red");
     }
 }

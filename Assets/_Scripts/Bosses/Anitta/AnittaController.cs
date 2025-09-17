@@ -11,7 +11,7 @@ public class AnittaController : MonoBehaviour
     //public AnittaST_Jump JumpState { get; private set; }
     //public AnittaST_Airborne AirborneState { get; private set; }
     public AnittaST_Teleport TeleportState { get; private set; }
-    //public GardelST_NormalAttack NormalAttackState { get; private set; }
+    public AnittaST_NormalAttack NormalAttackState { get; private set; }
     //public GardelST_SpecialAttack SpecialAttackState { get; private set; }
     //public GardelST_StunAttack StunAttackState { get; private set; }
     #endregion
@@ -76,6 +76,7 @@ public class AnittaController : MonoBehaviour
         //JumpState = new AnittaST_Jump(this, StateMachine, anittaStats, anim, "InAir");
         //AirborneState = new AnittaST_Airborne(this, StateMachine, anittaStats, anim, "InAir");
         TeleportState = new AnittaST_Teleport(this, StateMachine, anittaStats, anim, "Teleport");
+        NormalAttackState = new AnittaST_NormalAttack(this, StateMachine, anittaStats, anim, "NormalAttack");
 
         StateMachine.Initialize(IdleState);
     }
@@ -113,7 +114,15 @@ public class AnittaController : MonoBehaviour
 
     #region Boss Attacks
 
+    public void FireProjectile()
+    {
+        GameObject newNote = Instantiate(anittaStats.SeekingProjectile, transform.position + new Vector3(0, 1.5f), Quaternion.identity);
+    }
 
+    public void FireWave()
+    {
+        GameObject newNote = Instantiate(anittaStats.WaveProjectile, transform.position, Quaternion.identity);
+    }
 
     #endregion
 

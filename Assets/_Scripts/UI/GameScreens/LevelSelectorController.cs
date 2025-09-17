@@ -80,6 +80,7 @@ public class LevelSelectorController : MonoBehaviour
     {
         if (isWeaponMenuOpen) return;
 
+
         if (levelIndex < Mathf.Clamp(minSelectableIndex, 0, locationsTransform.Length - 1)) return;
 
         var name = levelNames != null && levelIndex < levelNames.Length ? levelNames[levelIndex] : null;
@@ -101,23 +102,6 @@ public class LevelSelectorController : MonoBehaviour
 
     public void LoadSelectedLevel()
     {
-        int idx = Mathf.Clamp(levelIndex, 0, levelNames.Length - 1);
-        string sceneName = levelNames[idx];
-
-        if (string.IsNullOrWhiteSpace(sceneName) || sceneName == "null")
-        {
-            Debug.LogWarning($"[LevelSelector] Nombre de escena vacío en index {idx}.");
-            return;
-        }
-
-        if (!Application.CanStreamedLevelBeLoaded(sceneName))
-        {
-            Debug.LogError($"[LevelSelector] La escena '{sceneName}' NO está en Build Settings. " +
-                           $"Agregala en File > Build Settings > Scenes In Build.");
-            return;
-        }
-
-        SceneLoaderManager.Instance.LoadSceneByName(sceneName);
+        SceneLoaderManager.Instance.LoadSceneByName(levelNames[levelIndex]);
     }
-
 }

@@ -1034,17 +1034,20 @@ MonoBehaviour:
   - {fileID: 653950630}
   - {fileID: 1911473520}
   - {fileID: 1759026427}
-  - {fileID: 1911473520}
+  - {fileID: 1576558327}
   - {fileID: 1349024670}
   levelNames:
+  - Tutorial
   - Level1V2
-  - null
+  - Level2
   - null
   - null
   - null
   - null
   weaponPanel: {fileID: 1187342941}
   weaponPanelFirstSelected: {fileID: 309334612}
+  startingIndex: 1
+  minSelectableIndex: 1
 --- !u!1 &523289591
 GameObject:
   m_ObjectHideFlags: 0

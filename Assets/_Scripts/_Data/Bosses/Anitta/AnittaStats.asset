@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AnittaStats
   m_EditorClassIdentifier: 
   <BeatsSpentOnIdle>k__BackingField: 4
-  <SpecialAttackChance>k__BackingField: 0.25
+  <SpecialAttackChance>k__BackingField: 0.33
   <SecretAttackChance>k__BackingField: 0.1
   <JumpForce>k__BackingField: 30
   <BeatsBeforeReappearance>k__BackingField: 2

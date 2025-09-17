@@ -27,6 +27,8 @@ public class AnittaStats : ScriptableObject
     [field: SerializeField] public int StunEffectBeatDuration { get; private set; } = 3;
     [field: SerializeField] public ScreenShakeProfile StunShakeProfile { get; private set; }
 
-    //[field: Header("Attack Prefabs")]
-    
+    [field: Header("Attack Prefabs")]
+    [field: SerializeField] public GameObject SeekingProjectile {  get; private set; }
+    [field: SerializeField] public GameObject WaveProjectile {  get; private set; }
+
 }

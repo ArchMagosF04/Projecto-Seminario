@@ -60,7 +60,7 @@ public class AnittaST_Idle : AnittaState
     {
         if (controller.DesiredAction == AnittaController.ActionType.None)
         {
-
+            controller.DesiredAction = AnittaController.ActionType.Normal;
 
             DecidePlatform();
 
@@ -72,7 +72,7 @@ public class AnittaST_Idle : AnittaState
     {
         if (controller.DesiredAction == AnittaController.ActionType.Normal)
         {
-            //stateMachine.ChangeState(controller.NormalAttackState);
+            stateMachine.ChangeState(controller.NormalAttackState);
         }
         //else if (controller.DesiredAction == AnittaController.ActionType.Special)
         //{

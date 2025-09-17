@@ -12,6 +12,7 @@ public class AnittaController : MonoBehaviour
     //public AnittaST_Airborne AirborneState { get; private set; }
     public AnittaST_Teleport TeleportState { get; private set; }
     public AnittaST_NormalAttack NormalAttackState { get; private set; }
+    public AnittaST_SpecialAttack SpecialAttackState { get; private set; }
     //public GardelST_SpecialAttack SpecialAttackState { get; private set; }
     //public GardelST_StunAttack StunAttackState { get; private set; }
     #endregion
@@ -77,6 +78,7 @@ public class AnittaController : MonoBehaviour
         //AirborneState = new AnittaST_Airborne(this, StateMachine, anittaStats, anim, "InAir");
         TeleportState = new AnittaST_Teleport(this, StateMachine, anittaStats, anim, "Teleport");
         NormalAttackState = new AnittaST_NormalAttack(this, StateMachine, anittaStats, anim, "NormalAttack");
+        SpecialAttackState = new AnittaST_SpecialAttack(this, StateMachine, anittaStats, anim, "SpecialAttack");
 
         StateMachine.Initialize(IdleState);
     }

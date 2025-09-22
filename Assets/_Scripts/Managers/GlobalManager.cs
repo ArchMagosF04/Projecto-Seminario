@@ -11,7 +11,7 @@ public class GlobalManager : MonoBehaviour
     public int selectedWeapon { get { return currentSelectedWeapon; } }
 
     private void Awake()
-    {
+    {        
         if (Instance == null)
         {
             Instance = this;
@@ -21,10 +21,12 @@ public class GlobalManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+
+        DontDestroyOnLoad(this);
     }    
 
     public void SetCurrentWeapon(int currentWeapon)
     {
         currentSelectedWeapon = currentWeapon;
-    }
+    }   
 }

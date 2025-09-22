@@ -6,10 +6,13 @@ public class WeaponHolster : MonoBehaviour
 {
     [SerializeField] WeaponList weaponList;
 
+
     // Start is called before the first frame update
     void Start()
     {
-        Instantiate(weaponList.GetWeapon(GlobalManager.Instance.selectedWeapon), this.transform.parent);
+        GameObject temp = null;
+        temp = Instantiate(weaponList.GetWeapon(GlobalManager.Instance.selectedWeapon), this.transform.parent);
+        this.transform.parent.GetComponent<PlayerController>().weapon = temp.GetComponent<PlayerWeapon>();
         Destroy(this.gameObject);
     }
 

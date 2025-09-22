@@ -230,3 +230,4 @@ MonoBehaviour:
   basicAttackDamage: 3
   specialAttackDamage: 1.5
   manaOnBeatHit: 10
+  soundLibrary: {fileID: 11400000, guid: aa6b73f6913b0174ba0ba996bef2578a, type: 2}

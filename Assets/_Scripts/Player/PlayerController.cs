@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour, ISpeaker
     [field: SerializeField] public BoxCollider2D[] PlayerCollider { get; private set; }
 
     [SerializeField] private PlayerStats playerData;
-    [SerializeField] private PlayerWeapon weapon;
+    [SerializeField] public PlayerWeapon weapon;
     [SerializeField] private SoundLibraryObject soundLibrary;
 
     private Core_CollisionSenses collisionSenses;
@@ -70,8 +70,6 @@ public class PlayerController : MonoBehaviour, ISpeaker
 
         if (PlayerCollider.Length != 2) Debug.LogError("Player got the wrong colliders.");
 
-        weapon.InitializeWeapon(Core);
-
         StateMachine = new StateMachine();
         IdleState = new PlayerST_Idle(this, playerData, StateMachine, Anim, "Idle");
         MoveState = new PlayerST_Move(this, playerData, StateMachine, Anim, "Move");
@@ -80,13 +78,18 @@ public class PlayerController : MonoBehaviour, ISpeaker
         LandState = new PlayerST_Land(this, playerData, StateMachine, Anim, "Land");
         DashState = new PlayerST_Dash(this, playerData, StateMachine, Anim, "Dash");
         CrouchState = new PlayerST_Crouch(this, playerData, StateMachine, Anim, "Crouch");
-        PrimaryAttackState = new PlayerST_PrimeAttack(this, playerData, StateMachine, Anim, "PrimeAttack", weapon);
-        SecondaryAttackState = new PlayerST_SecAttack(this, playerData, StateMachine, Anim, "SecAttack", weapon);
+        //PrimaryAttackState = new PlayerST_PrimeAttack(this, playerData, StateMachine, Anim, "PrimeAttack", weapon);
+        //SecondaryAttackState = new PlayerST_SecAttack(this, playerData, StateMachine, Anim, "SecAttack", weapon);
         StunState = new PlayerST_Stun(this, playerData, StateMachine, Anim, "Stun");
     }
 
     private void Start()
     {
+        weapon.InitializeWeapon(Core);
+
+        PrimaryAttackState = new PlayerST_PrimeAttack(this, playerData, StateMachine, Anim, "PrimeAttack", weapon);
+        SecondaryAttackState = new PlayerST_SecAttack(this, playerData, StateMachine, Anim, "SecAttack", weapon);
+
         StateMachine.Initialize(IdleState);
         Core_Mana.ManaIsFull += EnergyFullAnimation;
     }

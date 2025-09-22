@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
+public class GlobalManager : MonoBehaviour
 {
-    public static GameManager Instance;
+    public static GlobalManager Instance;
 
-    [field: SerializeField] public PlayerController PlayerInstance {  get; private set; }
+    private int currentSelectedWeapon;
+    public int selectedWeapon { get { return currentSelectedWeapon; } }
 
     private void Awake()
     {
@@ -20,15 +21,10 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-    }
+    }    
 
-    public void OnWinGame()
+    public void SetCurrentWeapon(int currentWeapon)
     {
-        SceneManager.LoadScene("WinScreen");
+        currentSelectedWeapon = currentWeapon;
     }
-
-    public void OnLoseGame()
-    {
-        SceneManager.LoadScene("LoseScreen");
-    }  
 }

@@ -122,20 +122,28 @@ public class PW_Acordeon : PlayerWeapon
             SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound("OnSpecialBeatHit-" + randomSound.ToString())).Play();
             projectile.GetComponent<Projectile>().SetDamage(basicAttackDamage * (damageMult * beats));
 
-            BeatManager.Instance.intervals[2].OnBeatEvent -= CountBeats;
-            beats = 0;
         }
         else
         {
             projectile = GameObject.Instantiate(projectiles[randomSound], transform.position, transform.rotation);
             SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound("OnBeatHit-" + randomSound.ToString())).Play();
-            projectile.GetComponent<Projectile>().SetDamage(basicAttackDamage * (damageMult * beats));
 
-            BeatManager.Instance.intervals[2].OnBeatEvent -= CountBeats;
-            beats = 0;
+            switch (beats)
+            {
+                case 3:
+                    projectile.GetComponent<Projectile>().SetDamage(basicAttackDamage * damageMult);
+                    break;
+                case 5:
+                    projectile.GetComponent<Projectile>().SetDamage(basicAttackDamage * (damageMult * 2));
+                    break;
+                default:
+                    projectile.GetComponent<Projectile>().SetDamage(basicAttackDamage);
+                    break;
+            }
         }
 
-        
+        BeatManager.Instance.intervals[2].OnBeatEvent -= CountBeats;
+        beats = 0;
 
 
     }

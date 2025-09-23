@@ -16,7 +16,7 @@ public class PW_Acordeon : PlayerWeapon
     [SerializeField] private float damageMultiplier = 1.5f;
 
     [Tooltip("Multiplicador de daño cuando se falla el ataque cargado. Formula: DañoBasico * penaltyMultiplier. \n Tabla de Referencia:\n 0.25= 75% menos daño\n 0.5 = 50% menos daño\n 0.75 = 25% menos daño\n 1 = AtaqueNormal sin reduccion")]
-    [SerializeField] private float penaltyMultiplier = 0.5f;
+    [SerializeField] private float damagePenalty = 0.5f;
 
     [Tooltip("Por cuantos beats puede mantener el ataque cargado el jugador, antes de que la carga falle automaticamente y lanze un proyectil con daño penalizado")]
     [SerializeField] private int maxHoldTimeInBeats = 7;
@@ -64,12 +64,13 @@ public class PW_Acordeon : PlayerWeapon
 
     private void Update()
     {
-        if (beats>7)
+        if (beats>=7)
         {
             GameObject projectile = null;
             int randomSound = Random.Range(0, 3);
             GameObject.Instantiate(projectiles[randomSound], transform.position, transform.rotation);
-            projectile.GetComponent<Projectile>().SetDamage(basicAttackDamage);
+            projectile.GetComponent<Projectile>().SetDamage(basicAttackDamage * damagePenalty);
+            projectile.GetComponent<Projectile>().LaunchProjectile(transform.right);
         }
     }
 
@@ -90,7 +91,8 @@ public class PW_Acordeon : PlayerWeapon
         {
             GameObject projectile = null;
             GameObject.Instantiate(projectiles[randomSound], transform.position, transform.rotation);
-            projectile.GetComponent<Projectile>().SetDamage(basicAttackDamage * penaltyMultiplier);
+            projectile.GetComponent<Projectile>().SetDamage(basicAttackDamage * damagePenalty);
+            projectile.GetComponent<Projectile>().LaunchProjectile(transform.right);
             //SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound("OnMissHit-" + randomSound.ToString())).Play();
         }        
 
@@ -155,6 +157,7 @@ public class PW_Acordeon : PlayerWeapon
                 projectile = GameObject.Instantiate(projectiles[randomSound], transform.position, transform.rotation);
                 //SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound("OnSpecialBeatHit-" + randomSound.ToString())).Play();
                 projectile.GetComponent<Projectile>().SetDamage(basicAttackDamage * (damageMult * beats));
+                projectile.GetComponent<Projectile>().LaunchProjectile(transform.right);
 
             }
             else
@@ -165,7 +168,7 @@ public class PW_Acordeon : PlayerWeapon
                 switch (beats)
                 {
                     case 3:
-                        projectile.GetComponent<Projectile>().SetDamage(basicAttackDamage * damageMult);
+                        projectile.GetComponent<Projectile>().SetDamage(basicAttackDamage * damageMult);                        
                         break;
                     case 5:
                         projectile.GetComponent<Projectile>().SetDamage(basicAttackDamage * (damageMult * 2));
@@ -174,11 +177,15 @@ public class PW_Acordeon : PlayerWeapon
                         projectile.GetComponent<Projectile>().SetDamage(basicAttackDamage);
                         break;
                 }
+
+                projectile.GetComponent<Projectile>().LaunchProjectile(transform.right);
             }
         }
         else
         {
-            GameObject.Instantiate(projectiles[randomSound], transform.position, transform.rotation);
+            projectile = GameObject.Instantiate(projectiles[randomSound], transform.position, transform.rotation);
+            projectile.GetComponent<Projectile>().SetDamage(basicAttackDamage * damagePenalty);
+            projectile.GetComponent<Projectile>().LaunchProjectile(transform.right);
         }
 
 

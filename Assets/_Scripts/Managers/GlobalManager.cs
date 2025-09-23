@@ -7,7 +7,7 @@ public class GlobalManager : MonoBehaviour
 {
     public static GlobalManager Instance;
 
-    private int currentSelectedWeapon;
+    [SerializeField] private int currentSelectedWeapon;
     public int selectedWeapon { get { return currentSelectedWeapon; } }
 
     private void Awake()

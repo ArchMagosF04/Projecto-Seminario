@@ -110,6 +110,7 @@ public class PW_Acordeon : PlayerWeapon
 
     IEnumerator ChargedAttack()
     {
+        StartCoroutine(ChargeAttkAnimation());
         float damageMult = damageMultiplier;
         int randomSound = Random.Range(0, 3);
         GameObject projectile = null;  
@@ -144,7 +145,19 @@ public class PW_Acordeon : PlayerWeapon
 
         BeatManager.Instance.intervals[2].OnBeatEvent -= CountBeats;
         beats = 0;
+        anim.SetInteger("ChargeLevel", 0);
+        StopAllCoroutines();
 
 
+    }
+
+    IEnumerator ChargeAttkAnimation()
+    {
+        yield return new WaitWhile(() => beats < 1);
+        anim.SetInteger("ChargeLevel", 1);
+        yield return new WaitWhile(() => beats < 3);
+        anim.SetInteger("ChargeLevel", 2);
+        yield return new WaitWhile(() => beats < 5);
+        anim.SetInteger("ChargeLevel", 3);
     }
 }

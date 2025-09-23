@@ -54,7 +54,7 @@ public class BordersBeat : MonoBehaviour
             Color color = borders.color;
             color.a = Mathf.Clamp01(color.a -= fadeModifier);
             borders.color = color;
-            Debug.Log("FadeBorders");
+            //Debug.Log("FadeBorders");
             duration-= 0.025f;
         }
     }

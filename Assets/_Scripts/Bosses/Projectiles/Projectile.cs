@@ -16,8 +16,6 @@ public class Projectile : MonoBehaviour
     private Rigidbody2D rb;
     private CinemachineImpulseSource impulseSource;
 
-    //private GameObject shooter;
-
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -36,7 +34,6 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //if(shooter != null && collision!=shooter)
         if (collision.TryGetComponent(out Core_Knockback component))
         {
             component.Knockback(transform, knockback);

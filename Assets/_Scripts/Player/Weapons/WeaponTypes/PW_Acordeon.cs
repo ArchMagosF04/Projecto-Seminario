@@ -14,7 +14,7 @@ public class PW_Acordeon : PlayerWeapon
     [SerializeField] private float damageMultiplier = 1.5f; [Tooltip("Multiplicador de daño por cada beat que se mantiene apretado el boton de ataque. Formula: basicAttackDamage * (damageMult * beats)")]
     //[SerializeField] protected float specialAttackSpeed = 1f;
     [SerializeField] protected float manaOnBeatHit;
-    [SerializeField] protected SoundLibraryObject soundLibrary;
+    //[SerializeField] protected SoundLibraryObject soundLibrary;
     [SerializeField] private GameObject[] projectiles;
 
     private int beats;
@@ -23,7 +23,7 @@ public class PW_Acordeon : PlayerWeapon
     protected override void Awake()
     {
         base.Awake();        
-        soundLibrary.Initialize();
+        //soundLibrary.Initialize();
     }
 
     protected override void OnEnable()
@@ -60,7 +60,7 @@ public class PW_Acordeon : PlayerWeapon
         else
         {
             GameObject.Instantiate(projectiles[randomSound], transform.position, transform.rotation);
-            SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound("OnMissHit-" + randomSound.ToString())).Play();
+            //SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound("OnMissHit-" + randomSound.ToString())).Play();
         }        
 
     }
@@ -68,7 +68,7 @@ public class PW_Acordeon : PlayerWeapon
     private void SpecialAttackDamage()
     {
         BeatManager.Instance.intervals[2].OnBeatEvent += SpecialHitOnBeat;
-        SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound("Special")).Play();
+        //SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound("Special")).Play();
         OnExit += UnsubFromBeat;
     }
 
@@ -119,14 +119,14 @@ public class PW_Acordeon : PlayerWeapon
         if (specialMode)
         {
             projectile = GameObject.Instantiate(projectiles[randomSound], transform.position, transform.rotation);
-            SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound("OnSpecialBeatHit-" + randomSound.ToString())).Play();
+            //SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound("OnSpecialBeatHit-" + randomSound.ToString())).Play();
             projectile.GetComponent<Projectile>().SetDamage(basicAttackDamage * (damageMult * beats));
 
         }
         else
         {
             projectile = GameObject.Instantiate(projectiles[randomSound], transform.position, transform.rotation);
-            SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound("OnBeatHit-" + randomSound.ToString())).Play();
+            //SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound("OnBeatHit-" + randomSound.ToString())).Play();
 
             switch (beats)
             {

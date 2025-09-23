@@ -46,6 +46,11 @@ public class PauseManager : MonoBehaviour
         Debug.Log(Time.timeScale);
     }
 
+    private void OnDisable()
+    {
+        Time.timeScale = 1f;
+    }
+
     public void ResetScreens()
     {
         pauseScreen.enabled = false;

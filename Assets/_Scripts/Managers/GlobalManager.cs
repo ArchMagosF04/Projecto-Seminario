@@ -5,28 +5,42 @@ using UnityEngine.SceneManagement;
 
 public class GlobalManager : MonoBehaviour
 {
-    public static GlobalManager Instance;
+    public static GlobalManager Instance { get; private set; }  
+    private float creationTime;
 
     [SerializeField] private int currentSelectedWeapon;
     public int selectedWeapon { get { return currentSelectedWeapon; } }
 
     private void Awake()
-    {        
+    {
         if (Instance == null)
         {
+            // This is the first instance, so set it as the persistent one
             Instance = this;
+            creationTime = Time.time;
+            DontDestroyOnLoad(gameObject); // Prevent this object from being destroyed on scene load
         }
-        else if (Instance != this)
+        else
         {
-            Destroy(gameObject);
-            return;
+            // If this is a new instance, check if it's newer than the existing one
+            if (Time.time > creationTime)
+            {
+                // This instance was created earlier, so we destroy the current one
+                Destroy(gameObject);
+            }
+            else
+            {
+                // This is the newer instance, destroy the old one
+                Destroy(Instance.gameObject);
+                Instance = this;
+                creationTime = Time.time;
+                DontDestroyOnLoad(gameObject);
+            }
         }
-
-        DontDestroyOnLoad(this);
-    }    
+    }
 
     public void SetCurrentWeapon(int currentWeapon)
     {
         currentSelectedWeapon = currentWeapon;
-    }   
+    }
 }

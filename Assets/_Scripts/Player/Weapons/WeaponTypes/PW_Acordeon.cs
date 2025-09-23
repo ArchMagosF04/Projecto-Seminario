@@ -40,7 +40,8 @@ public class PW_Acordeon : PlayerWeapon
 
     protected override void Awake()
     {
-        base.Awake();        
+        base.Awake();
+        //BeatManager.Instance.intervals[((int)designatedBeat)].OnBeatEvent
         //soundLibrary.Initialize();
     }
 
@@ -48,7 +49,7 @@ public class PW_Acordeon : PlayerWeapon
     {
         base.OnEnable();
         EventHandler.OnAttackAction += BasicAttackDamage;
-        OnSpecialEnter += SpecialAttackDamage;
+        OnSpecialEnter += SpecialAttackDamage;        
     }
 
     protected override void OnDisable()
@@ -66,11 +67,18 @@ public class PW_Acordeon : PlayerWeapon
     {
         if (beats>=7)
         {
+            StopAllCoroutines();
             GameObject projectile = null;
             int randomSound = Random.Range(0, 3);
-            GameObject.Instantiate(projectiles[randomSound], transform.position, transform.rotation);
+            projectile = GameObject.Instantiate(projectiles[randomSound], transform.position, transform.rotation);
             projectile.GetComponent<Projectile>().SetDamage(basicAttackDamage * damagePenalty);
             projectile.GetComponent<Projectile>().LaunchProjectile(transform.right);
+            projectile.GetComponentInChildren<SpriteRenderer>().color = Color.red;
+
+            BeatManager.Instance.intervals[((int)designatedBeat)].OnBeatEvent -= CountBeats;
+            beats = 0;
+            anim.SetInteger("ChargeLevel", 0);
+            StopAllCoroutines();
         }
     }
 
@@ -90,9 +98,10 @@ public class PW_Acordeon : PlayerWeapon
         else
         {
             GameObject projectile = null;
-            GameObject.Instantiate(projectiles[randomSound], transform.position, transform.rotation);
+            projectile = GameObject.Instantiate(projectiles[randomSound], transform.position, transform.rotation);
             projectile.GetComponent<Projectile>().SetDamage(basicAttackDamage * damagePenalty);
             projectile.GetComponent<Projectile>().LaunchProjectile(transform.right);
+            projectile.GetComponentInChildren<SpriteRenderer>().color = Color.red;
             //SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound("OnMissHit-" + randomSound.ToString())).Play();
         }        
 
@@ -150,8 +159,11 @@ public class PW_Acordeon : PlayerWeapon
 
         yield return new WaitWhile(() => Input.GetKey(KeyCode.Mouse0));
 
+        if (BeatManager.Instance.BeatGracePeriod) isOnBeat = true;
+
         if (isOnBeat)
         {
+            Debug.Log("Atack on beat");
             if (specialMode)
             {
                 projectile = GameObject.Instantiate(projectiles[randomSound], transform.position, transform.rotation);
@@ -168,7 +180,8 @@ public class PW_Acordeon : PlayerWeapon
                 switch (beats)
                 {
                     case 3:
-                        projectile.GetComponent<Projectile>().SetDamage(basicAttackDamage * damageMult);                        
+                        projectile.GetComponent<Projectile>().SetDamage(basicAttackDamage * damageMult);
+                        
                         break;
                     case 5:
                         projectile.GetComponent<Projectile>().SetDamage(basicAttackDamage * (damageMult * 2));
@@ -186,10 +199,13 @@ public class PW_Acordeon : PlayerWeapon
             projectile = GameObject.Instantiate(projectiles[randomSound], transform.position, transform.rotation);
             projectile.GetComponent<Projectile>().SetDamage(basicAttackDamage * damagePenalty);
             projectile.GetComponent<Projectile>().LaunchProjectile(transform.right);
+            projectile.GetComponentInChildren<SpriteRenderer>().color = Color.red;
+
+            Debug.Log("Missed beat");
         }
 
 
-            BeatManager.Instance.intervals[((int)designatedBeat)].OnBeatEvent -= CountBeats;
+        BeatManager.Instance.intervals[((int)designatedBeat)].OnBeatEvent -= CountBeats;
         beats = 0;
         anim.SetInteger("ChargeLevel", 0);
         StopAllCoroutines();

@@ -26,7 +26,9 @@ public class PlayerWeapon : MonoBehaviour
 
     #region Other Variables
 
-    public bool isOnBeat { get; private set; } = false;
+    protected bool isOnBeat = false;
+    public bool IsOnBeat { get { return isOnBeat; } }
+
 
     #endregion
 

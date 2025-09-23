@@ -169,7 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   basicAttackDamage: 3
   damageMultiplier: 1.5
-  penaltyMultiplier: 0.5
+  damagePenalty: 0.5
   maxHoldTimeInBeats: 7
   designatedBeat: 0
   manaOnBeatHit: 0

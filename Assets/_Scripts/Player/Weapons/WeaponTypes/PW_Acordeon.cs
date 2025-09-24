@@ -41,11 +41,12 @@ public class PW_Acordeon : PlayerWeapon
 
     [Tooltip("Lista de prefabs de proyectiles del arma. El arma utiliza un random para elegir uno de estos proyectiles cada vez que dispara")]
     [SerializeField] private GameObject[] projectiles;
-    
 
+    
 
     private int beats;
     private bool specialMode;
+    [SerializeField]private int charge = 0;
     private bool charging = false;
 
     protected override void Awake()
@@ -147,13 +148,37 @@ public class PW_Acordeon : PlayerWeapon
 
     private void CountBeats()
     {
-        if(beats < 5 + graceBeats)
+        if(!specialMode && beats < 5 + graceBeats)
         {
             beats++;
+
+            switch (beats)
+            {
+                case 2:
+                    charge++;
+                    break;
+                case 4:
+                    charge++;
+                    break;
+                default:                    
+                    break;
+            }
         }
-        else if(beats < 3 + graceBeats)
+        else if(specialMode && beats < 3 + graceBeats)
         {
-            beats++;            
+            beats++;
+
+            switch (beats)
+            {
+                case 0:
+                    charge++;
+                    break;
+                case 2:
+                    charge++;
+                    break;
+                default:
+                    break;
+            }
         }
 
         if (charging && beats < 5)
@@ -225,11 +250,11 @@ public class PW_Acordeon : PlayerWeapon
 
     IEnumerator ChargeAttkAnimation()
     {
-        yield return new WaitWhile(() => beats < 1);
+        //yield return new WaitWhile(() => charge < 1);
         anim.SetInteger("ChargeLevel", 1);
-        yield return new WaitWhile(() => beats < 3);
+        yield return new WaitWhile(() => charge == 0);
         anim.SetInteger("ChargeLevel", 2);
-        yield return new WaitWhile(() => beats < 5);
+        yield return new WaitWhile(() => charge > 1);
         anim.SetInteger("ChargeLevel", 3);
     }
 
@@ -278,6 +303,7 @@ public class PW_Acordeon : PlayerWeapon
         BeatManager.Instance.intervals[((int)designatedBeat)].OnBeatEvent -= CountBeats;
         beats = 0;
         anim.SetInteger("ChargeLevel", 0);
+        charge = 0;
         StopAllCoroutines();
     }
 }

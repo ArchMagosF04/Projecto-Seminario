@@ -12,6 +12,9 @@ public class PW_Acordeon : PlayerWeapon
     [Tooltip("Daño de cada proyectil")]
     [SerializeField] protected float basicAttackDamage = 3f;
 
+    //[SerializeField] private float fireRate = 1;
+    //private float currentFireCooldown;
+
     [Tooltip("Duracion del modo especial en segundos")]
     [SerializeField] private float specialModeDuration = 10;
     private float currentSpecialDuration;
@@ -72,7 +75,7 @@ public class PW_Acordeon : PlayerWeapon
     }
 
     private void Update()
-    {       
+    {
         if (!specialMode && beats>=5 + graceBeats)
         {
             int randomSound = Random.Range(0, 3);
@@ -100,20 +103,33 @@ public class PW_Acordeon : PlayerWeapon
 
     private void BasicAttackDamage()
     {
-        int randomSound = Random.Range(0, 3);
+        //if (currentFireCooldown == 0)
+        //{
 
-        if (isOnBeat)
-        {            
-            float multiplier = 0.8f;
-            multiplier = beatCombo.currentRank.rankDamageMultiplier;
-            beatCombo.IncreaseComboCounter();
-            StartCoroutine(BumpUpMusic());
-            StartCoroutine(ChargedAttack());
-        }
-        else
-        {
-            Shoot(randomSound, basicAttackDamage, false, false, damagePenalty);
-        }        
+            int randomSound = Random.Range(0, 3);
+
+            if (Input.GetKeyUp(KeyCode.Mouse0) && isOnBeat)
+            {
+                Shoot(randomSound, basicAttackDamage, true, specialMode);
+            }
+            else if (Input.GetKeyUp(KeyCode.Mouse0) && !isOnBeat)
+            {
+                Shoot(randomSound, basicAttackDamage, false, specialMode);
+            }
+
+            if (isOnBeat)
+            {
+                float multiplier = 0.8f;
+                multiplier = beatCombo.currentRank.rankDamageMultiplier;
+                beatCombo.IncreaseComboCounter();
+                StartCoroutine(BumpUpMusic());
+                StartCoroutine(ChargedAttack());
+            }
+            else
+            {
+                Shoot(randomSound, basicAttackDamage, false, false, damagePenalty);
+            }
+        //}           
 
     }
 
@@ -202,8 +218,7 @@ public class PW_Acordeon : PlayerWeapon
         if (BeatManager.Instance.BeatGracePeriod) isOnBeat = true;
 
         if (isOnBeat)
-        {
-            Debug.Log("Atack on beat");
+        {            
             if (specialMode)
             {               
                 switch (beats)
@@ -305,5 +320,7 @@ public class PW_Acordeon : PlayerWeapon
         anim.SetInteger("ChargeLevel", 0);
         charge = 0;
         StopAllCoroutines();
+
+        //currentFireCooldown = fireRate;
     }
 }

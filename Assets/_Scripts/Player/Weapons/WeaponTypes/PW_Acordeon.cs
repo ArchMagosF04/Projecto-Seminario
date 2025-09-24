@@ -103,9 +103,6 @@ public class PW_Acordeon : PlayerWeapon
 
     private void BasicAttackDamage()
     {
-        //if (currentFireCooldown == 0)
-        //{
-
             int randomSound = Random.Range(0, 3);
 
             if (Input.GetKeyUp(KeyCode.Mouse0) && isOnBeat)

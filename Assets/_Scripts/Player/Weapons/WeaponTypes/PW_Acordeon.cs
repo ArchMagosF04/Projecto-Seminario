@@ -38,6 +38,7 @@ public class PW_Acordeon : PlayerWeapon
     [SerializeField] protected float manaOnBeatHit;
 
     //[SerializeField] protected SoundLibraryObject soundLibrary;
+
     [Tooltip("Lista de prefabs de proyectiles del arma. El arma utiliza un random para elegir uno de estos proyectiles cada vez que dispara")]
     [SerializeField] private GameObject[] projectiles;
     
@@ -74,17 +75,19 @@ public class PW_Acordeon : PlayerWeapon
         if (!specialMode && beats>=5 + graceBeats)
         {
             int randomSound = Random.Range(0, 3);
-            Shoot(randomSound, basicAttackDamage, false, false, damagePenalty);    
+            Shoot(randomSound, basicAttackDamage, false, false, damagePenalty);
+            beatCombo.OnTimerDecay();
         }
         else if (specialMode && beats >= 3 + graceBeats)
         {            
             int randomSound = Random.Range(0, 3);
             Shoot(randomSound, basicAttackDamage, false, false, damagePenalty);
+            beatCombo.OnTimerDecay();
         }
 
         if (currentSpecialDuration > 0)
         {
-            currentSpecialDuration -= Time.deltaTime;
+            currentSpecialDuration -= Time.deltaTime;            
         }
         else if (currentSpecialDuration <= 0 && specialMode == true)
         {
@@ -151,7 +154,7 @@ public class PW_Acordeon : PlayerWeapon
             beats++;            
         }
 
-        if (charging)
+        if (charging && beats < 5)
         {
             float multiplier = 0.8f;
             multiplier = beatCombo.currentRank.rankDamageMultiplier;

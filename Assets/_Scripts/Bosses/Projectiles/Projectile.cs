@@ -16,6 +16,8 @@ public class Projectile : MonoBehaviour
     private Rigidbody2D rb;
     private CinemachineImpulseSource impulseSource;
 
+    public event System.Action OnHit = delegate { };
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -43,13 +45,29 @@ public class Projectile : MonoBehaviour
         if (collision.TryGetComponent(out IDamageable health))
         {
             health.TakeDamage(damage, transform.right);
+            OnHit();
         }
-
+        
         Destroy(gameObject);
     }
 
     public void SetDamage(float amount)
     {
         damage = amount;
-    }    
+    }
+
+    public float GetSpeed()
+    {
+        return speed;
+    }
+
+    public void SetSpeed(float amount)
+    {
+        speed = amount;
+    }
+
+    private void OnDestroy()
+    {
+        OnHit = null;
+    }
 }

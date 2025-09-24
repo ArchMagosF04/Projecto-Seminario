@@ -93,6 +93,7 @@ public class PW_Acordeon : PlayerWeapon
         {
             specialMode = false;
             currentSpecialDuration = 0;
+            anim.SetBool("Special2", false);
         }
     }
 
@@ -123,13 +124,14 @@ public class PW_Acordeon : PlayerWeapon
             //SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound("Special")).Play();
             specialMode = true;
             currentSpecialDuration = specialModeDuration;
+            anim.SetBool("Special2", true);
         }
         if (isOnBeat)
         {
             float multiplier = 0.8f;
             multiplier = beatCombo.currentRank.rankDamageMultiplier;
             beatCombo.IncreaseComboCounter();
-        }   
+        } 
     }
 
     IEnumerator BumpUpMusic()

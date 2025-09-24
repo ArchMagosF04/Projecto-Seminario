@@ -29,6 +29,8 @@ public class AnittaStats : ScriptableObject
 
     [field: Header("Attack Prefabs")]
     [field: SerializeField] public GameObject SeekingProjectile {  get; private set; }
+    [field: SerializeField] public GameObject SeekingProjectile2 { get; private set; }
     [field: SerializeField] public GameObject WaveProjectile {  get; private set; }
+    [field: SerializeField] public GameObject WaveProjectile2 { get; private set; }
 
 }

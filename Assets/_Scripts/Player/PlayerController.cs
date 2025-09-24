@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour, ISpeaker
     [SerializeField] private SoundLibraryObject soundLibrary;
 
     private Core_CollisionSenses collisionSenses;
+    private CharacterAnimatorEvent animatorEvent;
 
     #endregion
 
@@ -66,6 +67,7 @@ public class PlayerController : MonoBehaviour, ISpeaker
         Anim = GetComponentInChildren<Animator>();
         playerSprite = GetComponentInChildren<SpriteRenderer>();
         collisionSenses = Core.GetCoreComponent<Core_CollisionSenses>();
+        animatorEvent = GetComponentInChildren<CharacterAnimatorEvent>();
         soundLibrary.Initialize();
 
         if (PlayerCollider.Length != 2) Debug.LogError("Player got the wrong colliders.");
@@ -92,6 +94,7 @@ public class PlayerController : MonoBehaviour, ISpeaker
 
         StateMachine.Initialize(IdleState);
         Core_Mana.ManaIsFull += EnergyFullAnimation;
+        animatorEvent.OnAnimationFinishedTrigger += AnimationFinishedTrigger;
     }
 
     private void Update()
@@ -124,6 +127,7 @@ public class PlayerController : MonoBehaviour, ISpeaker
         SecondaryAttackState.UnsubscribeToEvents();
         StunState.UnsubscribeToEvents();
         Core_Mana.ManaIsFull -= EnergyFullAnimation;
+        animatorEvent.OnAnimationFinishedTrigger -= AnimationFinishedTrigger;
     }
 
     #endregion
@@ -149,13 +153,19 @@ public class PlayerController : MonoBehaviour, ISpeaker
         }
     }
 
-    public void TryToStunPlayer(int value) 
+    public void TryToStunPlayerIfGrounded(int value) 
     {
         //Debug.Log("TryToStun");
         if (!collisionSenses.Grounded) return;
         StunBeatDuration = value;
         StateMachine.ChangeState(StunState);
     } 
+
+    public void StunPlayer(int value)
+    {
+        StunBeatDuration = value;
+        StateMachine.ChangeState(StunState);
+    }
 
     public void AnimationTrigger()
     {

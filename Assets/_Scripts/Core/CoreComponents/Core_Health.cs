@@ -31,14 +31,13 @@ public class Core_Health : CoreComponent, IDamageable
 
     protected override void Awake()
     {
+        CurrentHealth = maxHealth;
         base.Awake();
     }
 
     private void Start()
     {
         Invincible = false;
-
-        CurrentHealth = maxHealth;
 
         if (healthBar != null) healthBar.fillAmount = CurrentHealth / maxHealth;
         //if (healthNumber != null) healthNumber.text = $"{currentHealth} / {maxHealth}";

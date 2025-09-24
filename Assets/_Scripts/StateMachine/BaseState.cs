@@ -52,4 +52,6 @@ public class BaseState
 
     public virtual void SubscribeToEvents() { }
     public virtual void UnsubscribeToEvents() { }
+
+    public virtual void ChangeAnimationName(string newName) => animBoolName = newName;
 }

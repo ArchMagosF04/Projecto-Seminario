@@ -8,9 +8,12 @@ public class AnittaST_Idle : AnittaState
 
     private Core_Movement movement;
 
+    private bool isOnPhaseTwo;
+
     public AnittaST_Idle(AnittaController controller, StateMachine stateMachine, AnittaStats stats, Animator anim, string animBoolName) : base(controller, stateMachine, stats, anim, animBoolName)
     {
         movement = core.GetCoreComponent<Core_Movement>();
+        isOnPhaseTwo = false;
     }
 
     public override void OnEnter()
@@ -27,6 +30,16 @@ public class AnittaST_Idle : AnittaState
         }
 
         BeatManager.Instance.intervals[0].OnBeatEvent += BeatTimer;
+    }
+
+    public override void DoChecks()
+    {
+        base.DoChecks();
+        if (!isOnPhaseTwo && controller.IsAtSecondPhase())
+        {
+            isOnPhaseTwo = true;
+            controller.SecondPhaseAdditions();
+        }
     }
 
     public override void UnsubscribeToEvents()

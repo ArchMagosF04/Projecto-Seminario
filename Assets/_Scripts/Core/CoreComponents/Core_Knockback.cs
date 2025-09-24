@@ -45,7 +45,7 @@ public class Core_Knockback : CoreComponent
         knockBackStartTime = Time.time;
     }
 
-    public void KnockBack(Vector2 angle, float strength, int direction)
+    public void Knockback(Vector2 angle, float strength, int direction)
     {
         if (HyperArmor) return;
 

@@ -5,13 +5,17 @@ using UnityEngine;
 
 public class SeekingProjectile : MonoBehaviour
 {
+    [Header("Stats")]
     [SerializeField] private float damage;
     [SerializeField] private float knockback;
     [SerializeField] private float speed;
 
+    [Header("Behaviour")]
     [SerializeField] private int beatLifeTime = 3;
     [SerializeField, Range(0, 1f)] private float stopIntervalLength = 0.15f;
+    [SerializeField] private bool worksOnTheHalfBeat;
 
+    [Header("Other")]
     [SerializeField] private ScreenShakeProfile shakeProfile;
 
     private Rigidbody2D rb;
@@ -35,13 +39,23 @@ public class SeekingProjectile : MonoBehaviour
     private void OnEnable()
     {
         isMoving = false;
-        beatTimer = 0;
-        BeatManager.Instance.intervals[0].OnBeatEvent += OnBeatAction;
+
+        if (worksOnTheHalfBeat)
+        {
+            beatTimer = 0;
+            BeatManager.Instance.intervals[2].OnBeatEvent += OnBeatAction;
+        }
+        else 
+        {
+            beatTimer = 0;
+            BeatManager.Instance.intervals[0].OnBeatEvent += OnBeatAction;
+        }
     }
 
     private void OnDisable()
     {
-        BeatManager.Instance.intervals[0].OnBeatEvent -= OnBeatAction;
+        if (worksOnTheHalfBeat) BeatManager.Instance.intervals[2].OnBeatEvent -= OnBeatAction;
+        else BeatManager.Instance.intervals[0].OnBeatEvent -= OnBeatAction;
     }
 
     private void Update()
@@ -58,12 +72,18 @@ public class SeekingProjectile : MonoBehaviour
 
     public void OnBeatAction()
     {
+        beatTimer++;
+
+        if (worksOnTheHalfBeat && beatTimer % 2 != 0) return;
+
         animator.ResetTrigger("OnBeat");
         animator.SetTrigger("OnBeat");
 
-        if (!isMoving) beatTimer++;
-
-        if (beatTimer > beatLifeTime)
+        if (worksOnTheHalfBeat && beatTimer > beatLifeTime*2)
+        {
+            Destroy(gameObject);
+        }
+        else if(!worksOnTheHalfBeat && beatTimer > beatLifeTime)
         {
             Destroy(gameObject);
         }

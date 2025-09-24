@@ -23,4 +23,6 @@ MonoBehaviour:
   <StunEffectBeatDuration>k__BackingField: 3
   <StunShakeProfile>k__BackingField: {fileID: 11400000, guid: b675b848239243b4093389d46b17b861, type: 2}
   <SeekingProjectile>k__BackingField: {fileID: 6371046825345793962, guid: a0afcd25ba57f1f4d8993167443ba3cc, type: 3}
+  <SeekingProjectile2>k__BackingField: {fileID: 6371046825345793962, guid: dbf201f0a2f2bea47803bf11042a48e6, type: 3}
   <WaveProjectile>k__BackingField: {fileID: 3369356030413207588, guid: 1a698ac7df71c8f48999977640f534d8, type: 3}
+  <WaveProjectile2>k__BackingField: {fileID: 3369356030413207588, guid: 00e1ef91ffba4f14b98242161eb07b90, type: 3}

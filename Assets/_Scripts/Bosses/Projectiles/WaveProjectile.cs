@@ -15,6 +15,8 @@ public class WaveProjectile : MonoBehaviour
 
     [SerializeField] private float speedIncrement;
     [SerializeField] private float sizeIncrement;
+    [SerializeField] private bool shouldStun;
+    [SerializeField] private int stunDuration = 2;
 
     private Rigidbody2D rb;
     private CinemachineImpulseSource impulseSource;
@@ -76,6 +78,7 @@ public class WaveProjectile : MonoBehaviour
         if (collision.TryGetComponent(out IDamageable health))
         {
             health.TakeDamage(damage, transform.right);
+            if (shouldStun) GameManager.Instance.PlayerInstance.StunPlayer(stunDuration);
         }
 
         Debug.Log(collision.name);

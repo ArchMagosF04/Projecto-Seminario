@@ -159,7 +159,7 @@ public class GardelController : MonoBehaviour, ISpeaker
 
     public void StunningShout()
     {
-        GameManager.Instance.PlayerInstance.TryToStunPlayer(gardelStats.StunEffectBeatDuration);
+        GameManager.Instance.PlayerInstance.TryToStunPlayerIfGrounded(gardelStats.StunEffectBeatDuration);
         CameraShakeManager.Instance.ScreenShakeFromProfile(gardelStats.StunShakeProfile, impulseSource);
     }
 

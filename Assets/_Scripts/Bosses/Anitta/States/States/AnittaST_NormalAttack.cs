@@ -45,7 +45,8 @@ public class AnittaST_NormalAttack : AnittaState
 
         //controller.PlaySound("MusicNote-" + randomSound.ToString());
 
-        controller.FireProjectile();
+        if (controller.IsAtSecondPhase()) controller.FireTwinProjectiles();
+        else controller.FireProjectile();
 
         attackPerformed = true;
     }

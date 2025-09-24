@@ -38,6 +38,8 @@ public class PlayerST_Dash : PlayerST_Ability
     {
         base.OnEnter();
 
+        Movement.FlipCheck(InputManager.Instance.NormInputX);
+
         controller.PlaySound("Dash");
 
         CanDash = false;

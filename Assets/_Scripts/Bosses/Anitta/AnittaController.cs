@@ -8,13 +8,9 @@ public class AnittaController : MonoBehaviour
     #region State Machine Varibles
     public StateMachine StateMachine { get; private set; }
     public AnittaST_Idle IdleState { get; private set; }
-    //public AnittaST_Jump JumpState { get; private set; }
-    //public AnittaST_Airborne AirborneState { get; private set; }
     public AnittaST_Teleport TeleportState { get; private set; }
     public AnittaST_NormalAttack NormalAttackState { get; private set; }
     public AnittaST_SpecialAttack SpecialAttackState { get; private set; }
-    //public GardelST_SpecialAttack SpecialAttackState { get; private set; }
-    //public GardelST_StunAttack StunAttackState { get; private set; }
     #endregion
 
     #region Component References
@@ -36,6 +32,7 @@ public class AnittaController : MonoBehaviour
 
     [field: Header("Boss Waypoints")]
     [field: SerializeField] public Transform[] Platforms {  get; private set; }
+    [field: SerializeField] private GameObject Cars;
 
     #endregion
 
@@ -74,17 +71,14 @@ public class AnittaController : MonoBehaviour
 
         StateMachine = new StateMachine();
         IdleState = new AnittaST_Idle(this, StateMachine, anittaStats, anim, "Idle");
-        //JumpState = new AnittaST_Jump(this, StateMachine, anittaStats, anim, "InAir");
-        //AirborneState = new AnittaST_Airborne(this, StateMachine, anittaStats, anim, "InAir");
         TeleportState = new AnittaST_Teleport(this, StateMachine, anittaStats, anim, "Teleport");
         NormalAttackState = new AnittaST_NormalAttack(this, StateMachine, anittaStats, anim, "NormalAttack");
         SpecialAttackState = new AnittaST_SpecialAttack(this, StateMachine, anittaStats, anim, "SpecialAttack");
-
-        StateMachine.Initialize(IdleState);
     }
 
     private void Start()
     {
+        StateMachine.Initialize(IdleState);
         TargetIndicator.enabled = false;
         LastJumpTarget = Platforms[0];
     }
@@ -98,6 +92,8 @@ public class AnittaController : MonoBehaviour
     {
         IdleState.UnsubscribeToEvents();
         TeleportState.UnsubscribeToEvents();
+        NormalAttackState.UnsubscribeToEvents();
+        SpecialAttackState.UnsubscribeToEvents();
 
         animatorEvent.OnAnimationFinishedTrigger -= AnimationFinishedTrigger;
     }
@@ -121,9 +117,22 @@ public class AnittaController : MonoBehaviour
         GameObject newNote = Instantiate(anittaStats.SeekingProjectile, transform.position + new Vector3(0, 1.5f), Quaternion.identity);
     }
 
+    public void FireTwinProjectiles()
+    {
+        GameObject newNote = Instantiate(anittaStats.SeekingProjectile, transform.position + new Vector3(0, 1.5f), Quaternion.identity);
+        GameObject newNote2 = Instantiate(anittaStats.SeekingProjectile2, transform.position - new Vector3(0, 1.5f), Quaternion.identity);
+    }
+
     public void FireWave()
     {
-        GameObject newNote = Instantiate(anittaStats.WaveProjectile, transform.position, Quaternion.identity);
+        if (IsAtSecondPhase())
+        {
+            GameObject newNote = Instantiate(anittaStats.WaveProjectile2, transform.position, Quaternion.identity);
+        }
+        else
+        {
+            GameObject newNote2 = Instantiate(anittaStats.WaveProjectile, transform.position, Quaternion.identity);
+        }
     }
 
     #endregion
@@ -145,10 +154,15 @@ public class AnittaController : MonoBehaviour
         StateMachine.CurrentState.AnimationFinishedTrigger();
     }
 
-    public bool IsAtHalfHealth()
+    public bool IsAtSecondPhase()
     {
         if (health.CurrentHealth / health.MaxHealth <= 0.5) return true;
         return false;
+    }
+
+    public void SecondPhaseAdditions()
+    {
+        Cars.SetActive(true);
     }
 
     public void CheckFlip(Transform target)

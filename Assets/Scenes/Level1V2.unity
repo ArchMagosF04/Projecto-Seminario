@@ -7413,6 +7413,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1540457303}
     - target: {fileID: 4720750532754480863, guid: 167bd3e95d15e7f4bb3d5df603406eef, type: 3}
+      propertyPath: maxHealth
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 4720750532754480863, guid: 167bd3e95d15e7f4bb3d5df603406eef, type: 3}
       propertyPath: OnDeathUN.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1111672173}

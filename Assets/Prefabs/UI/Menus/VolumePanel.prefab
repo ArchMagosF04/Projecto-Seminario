@@ -1136,7 +1136,6 @@ GameObject:
   - component: {fileID: 882859529874054186}
   - component: {fileID: 6090736282324759810}
   - component: {fileID: 6308175481936879266}
-  - component: {fileID: 1818816169231326923}
   m_Layer: 5
   m_Name: VolumePanel
   m_TagString: Untagged
@@ -1232,22 +1231,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &1818816169231326923
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5980442908734659449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f2f6327ee062c14d92a441af7e00566, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  masterSlider: {fileID: 8899649489770980415}
-  musicSlider: {fileID: 6029988623613778986}
-  soundSlider: {fileID: 7970540578970710377}
-  audioMixer: {fileID: 24100000, guid: 20d587f63ee10e746b23a5f4c255fffd, type: 2}
 --- !u!1 &6333540018552949284
 GameObject:
   m_ObjectHideFlags: 0

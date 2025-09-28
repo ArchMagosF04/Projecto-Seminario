@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.61542, y: 0.61542, z: 0.61542}
+  m_LocalScale: {x: 0.08940128, y: 0.08677422, z: 0.61542}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1525198269342911876}
@@ -77,8 +77,8 @@ SpriteRenderer:
   m_SortingLayerID: 1300096155
   m_SortingLayer: 2
   m_SortingOrder: 1
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0, g: 1, b: 0.15642643, a: 1}
+  m_Sprite: {fileID: -8841441172752759499, guid: 36bba5e07bf2dca49aff85749285116c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -170,13 +170,14 @@ MonoBehaviour:
   basicAttackDamage: 3
   specialModeDuration: 10
   specialModeDamageBonus: 5
+  projectileSpeedBonus: 20
   damageMultiplier: 1.5
-  graceBeats: 2
   damagePenalty: 0.5
-  maxHoldTimeInBeats: 7
+  graceBeats: 2
   designatedBeat: 0
   manaOnBeatHit: 100
   projectiles:
   - {fileID: 3848427730215156677, guid: d340859ecba197f4d8859fdcf4a897ba, type: 3}
   - {fileID: 3848427730215156677, guid: a79564e3236a09b4b9d21378bf28390b, type: 3}
   - {fileID: 3848427730215156677, guid: bb39d1dbebed5f743b873abe61fce44a, type: 3}
+  charge: 0

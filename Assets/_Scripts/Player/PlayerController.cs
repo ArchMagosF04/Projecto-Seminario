@@ -89,9 +89,6 @@ public class PlayerController : MonoBehaviour, ISpeaker
     {
         weapon.InitializeWeapon(Core);
 
-        PrimaryAttackState = new PlayerST_PrimeAttack(this, playerData, StateMachine, Anim, "PrimeAttack", weapon);
-        SecondaryAttackState = new PlayerST_SecAttack(this, playerData, StateMachine, Anim, "SecAttack", weapon);
-
         StateMachine.Initialize(IdleState);
         Core_Mana.ManaIsFull += EnergyFullAnimation;
         animatorEvent.OnAnimationFinishedTrigger += AnimationFinishedTrigger;
@@ -184,7 +181,9 @@ public class PlayerController : MonoBehaviour, ISpeaker
 
     public void StopSpeaking()
     {
-        speaking = false;        
+        speaking = false;
+        PrimaryAttackState = new PlayerST_PrimeAttack(this, playerData, StateMachine, Anim, "PrimeAttack", weapon);
+        SecondaryAttackState = new PlayerST_SecAttack(this, playerData, StateMachine, Anim, "SecAttack", weapon);
     }
 
     public float GetHealth()

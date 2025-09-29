@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponSwitcher : MonoBehaviour
+public class GlobalHelper : MonoBehaviour
 {
     private GlobalManager gManager;
+    [SerializeField] LevelSelectorController levelSelector;
 
     // Start is called before the first frame update
     void Start()
@@ -15,6 +16,11 @@ public class WeaponSwitcher : MonoBehaviour
     public void ChangeWeapon(int weapon)
     {
         gManager.SetCurrentWeapon(weapon);
+    }
+
+    public void SetLevel()
+    {
+        gManager.SetCurrentLevel(levelSelector.GetSelectedLevel());
     }
 
 }

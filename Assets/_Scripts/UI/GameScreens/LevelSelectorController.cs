@@ -104,4 +104,9 @@ public class LevelSelectorController : MonoBehaviour
     {
         SceneLoaderManager.Instance.LoadSceneByName(levelNames[levelIndex]);
     }
+
+    public string GetSelectedLevel()
+    {
+        return levelNames[levelIndex];
+    }
 }

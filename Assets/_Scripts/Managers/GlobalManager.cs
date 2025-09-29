@@ -12,6 +12,8 @@ public class GlobalManager : MonoBehaviour
     [SerializeField] private int currentSelectedWeapon;
     public int selectedWeapon { get { return currentSelectedWeapon; } }
 
+    [SerializeField]private string currentLevel;
+
     private void Awake()
     {
         if (Instance == null)
@@ -43,5 +45,15 @@ public class GlobalManager : MonoBehaviour
     public void SetCurrentWeapon(int currentWeapon)
     {
         currentSelectedWeapon = currentWeapon;
+    }
+
+    public void SetCurrentLevel(string newScene)
+    {
+        currentLevel = newScene;
+    }
+
+    public string GetCurrentScene()
+    {
+        return currentLevel;
     }
 }

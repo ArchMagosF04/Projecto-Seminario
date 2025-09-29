@@ -43,17 +43,17 @@ MonoBehaviour:
   - Id: OnMissHit-0
     Clip: {fileID: 8300000, guid: a095efda51b9bf4499633e8c8bfe3048, type: 3}
     MixerGroup: {fileID: -522563215728743215, guid: 20d587f63ee10e746b23a5f4c255fffd, type: 2}
-    Volume: 0.146
-    RandomPitch: 1
-    PitchVariation: 0.36
+    Volume: 1
+    RandomPitch: 0
+    PitchVariation: 0
     Loop: 0
     PlayOnAwake: 0
     FrequentSound: 0
   - Id: OnMissHit-1
     Clip: {fileID: 8300000, guid: 8b07dbb02b508ed40ae98605c432cba5, type: 3}
     MixerGroup: {fileID: -522563215728743215, guid: 20d587f63ee10e746b23a5f4c255fffd, type: 2}
-    Volume: 0.195
-    RandomPitch: 1
+    Volume: 1
+    RandomPitch: 0
     PitchVariation: 0
     Loop: 0
     PlayOnAwake: 0
@@ -61,8 +61,8 @@ MonoBehaviour:
   - Id: OnMissHit-2
     Clip: {fileID: 8300000, guid: 9d2a9993126af98438b52cccd065a146, type: 3}
     MixerGroup: {fileID: -522563215728743215, guid: 20d587f63ee10e746b23a5f4c255fffd, type: 2}
-    Volume: 0.244
-    RandomPitch: 1
+    Volume: 1
+    RandomPitch: 0
     PitchVariation: 0
     Loop: 0
     PlayOnAwake: 0

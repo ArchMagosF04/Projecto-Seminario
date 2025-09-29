@@ -40,7 +40,7 @@ public class PW_Acordeon : PlayerWeapon
     [Tooltip("Cuanto mana recargara cada impacto de proyectil")]
     [SerializeField] protected float manaOnBeatHit;
 
-    //[SerializeField] protected SoundLibraryObject soundLibrary;
+    [SerializeField] protected SoundLibraryObject soundLibrary;
 
     [Tooltip("Lista de prefabs de proyectiles del arma. El arma utiliza un random para elegir uno de estos proyectiles cada vez que dispara")]
     [SerializeField] private GameObject[] projectiles;
@@ -49,14 +49,14 @@ public class PW_Acordeon : PlayerWeapon
 
     private int beats;
     private bool specialMode;
-    [SerializeField]private int charge = 0;
+    private int charge = 0;
     private bool charging = false;
 
     protected override void Awake()
     {
         base.Awake();
         //BeatManager.Instance.intervals[((int)designatedBeat)].OnBeatEvent
-        //soundLibrary.Initialize();
+        soundLibrary.Initialize();
     }
 
     protected override void OnEnable()
@@ -301,14 +301,17 @@ public class PW_Acordeon : PlayerWeapon
 
         if (onBeat)
         {
-
+            SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound("OnBeatHit-" + projectileNumber.ToString())).Play();
+            Debug.Log("OnBeatHit-" + projectileNumber);
         }
         else
         {
             projectile.GetComponentInChildren<SpriteRenderer>().color = Color.red;
+            SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound("OnMissHit-" + projectileNumber.ToString())).Play();
+            Debug.Log("OnMissHit-" + projectileNumber);
         }
 
-        //SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound("OnSpecialBeatHit-" + projectileNumber.ToString())).Play();
+        
         projectile.GetComponent<Projectile>().LaunchProjectile(transform.right);
 
         charging = false;

@@ -176,8 +176,8 @@ MonoBehaviour:
   graceBeats: 2
   designatedBeat: 0
   manaOnBeatHit: 100
+  soundLibrary: {fileID: 11400000, guid: b92d03ac10758ff49a120b27535a7e62, type: 2}
   projectiles:
   - {fileID: 3848427730215156677, guid: d340859ecba197f4d8859fdcf4a897ba, type: 3}
   - {fileID: 3848427730215156677, guid: a79564e3236a09b4b9d21378bf28390b, type: 3}
   - {fileID: 3848427730215156677, guid: bb39d1dbebed5f743b873abe61fce44a, type: 3}
-  charge: 0

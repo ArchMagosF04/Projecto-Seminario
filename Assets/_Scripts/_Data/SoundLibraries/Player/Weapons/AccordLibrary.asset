@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 523149f386095d045a39d39005b40315, type: 3}
-  m_Name: AccordeonLibrary
+  m_Name: AccordLibrary
   m_EditorClassIdentifier: 
   soundData:
   - Id: OnBeatHit-0
     Clip: {fileID: 8300000, guid: cdb8a910281548d41bbc1476e4740448, type: 3}
     MixerGroup: {fileID: -522563215728743215, guid: 20d587f63ee10e746b23a5f4c255fffd, type: 2}
-    Volume: 0.5
+    Volume: 1
     RandomPitch: 0
     PitchVariation: 0
     Loop: 0
@@ -25,7 +25,7 @@ MonoBehaviour:
   - Id: OnBeatHit-1
     Clip: {fileID: 8300000, guid: 354b43bb2826bfa4b95638cc20e6ab6c, type: 3}
     MixerGroup: {fileID: -522563215728743215, guid: 20d587f63ee10e746b23a5f4c255fffd, type: 2}
-    Volume: 0.5
+    Volume: 1
     RandomPitch: 0
     PitchVariation: 0
     Loop: 0
@@ -34,7 +34,7 @@ MonoBehaviour:
   - Id: OnBeatHit-2
     Clip: {fileID: 8300000, guid: 2dbd1391aed52524a867dcc2108c1d64, type: 3}
     MixerGroup: {fileID: -522563215728743215, guid: 20d587f63ee10e746b23a5f4c255fffd, type: 2}
-    Volume: 0.5
+    Volume: 1
     RandomPitch: 0
     PitchVariation: 0
     Loop: 0
@@ -43,17 +43,17 @@ MonoBehaviour:
   - Id: OnMissHit-0
     Clip: {fileID: 8300000, guid: 17e32c4dc7206cd4082136722c196ee6, type: 3}
     MixerGroup: {fileID: -522563215728743215, guid: 20d587f63ee10e746b23a5f4c255fffd, type: 2}
-    Volume: 0.146
-    RandomPitch: 1
-    PitchVariation: 0.36
+    Volume: 1
+    RandomPitch: 0
+    PitchVariation: 0
     Loop: 0
     PlayOnAwake: 0
     FrequentSound: 0
   - Id: OnMissHit-1
     Clip: {fileID: 8300000, guid: 23e9de4942ff4bf499c6abeacd482cf9, type: 3}
     MixerGroup: {fileID: -522563215728743215, guid: 20d587f63ee10e746b23a5f4c255fffd, type: 2}
-    Volume: 0.195
-    RandomPitch: 1
+    Volume: 1
+    RandomPitch: 0
     PitchVariation: 0
     Loop: 0
     PlayOnAwake: 0
@@ -61,19 +61,19 @@ MonoBehaviour:
   - Id: OnMissHit-2
     Clip: {fileID: 8300000, guid: 3f40cc825b5df3d4b84d16321cb27235, type: 3}
     MixerGroup: {fileID: -522563215728743215, guid: 20d587f63ee10e746b23a5f4c255fffd, type: 2}
-    Volume: 0.244
-    RandomPitch: 1
+    Volume: 1
+    RandomPitch: 0
     PitchVariation: 0
     Loop: 0
     PlayOnAwake: 0
     FrequentSound: 0
   nullData:
-    Id: Null Data
-    Clip: {fileID: 8300000, guid: e3ee7cb72ccb3784c85b43ac24d047a1, type: 3}
-    MixerGroup: {fileID: 1438264774059830765, guid: 20d587f63ee10e746b23a5f4c255fffd, type: 2}
+    Id: 
+    Clip: {fileID: 0}
+    MixerGroup: {fileID: 0}
     Volume: 1
     RandomPitch: 0
-    PitchVariation: 0
+    PitchVariation: 0.1
     Loop: 0
     PlayOnAwake: 0
     FrequentSound: 0

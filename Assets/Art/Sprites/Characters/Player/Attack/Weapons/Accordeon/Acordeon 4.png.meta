@@ -143,7 +143,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Acordeon 4_0: -8841441172752759499
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

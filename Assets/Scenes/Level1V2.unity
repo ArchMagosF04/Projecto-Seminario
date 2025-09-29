@@ -189,8 +189,8 @@ MonoBehaviour:
   m_text: "Lejandaro Seni\xF3t:\nMy, my, look what we have here. One of the biggest
     names in Tango. \n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e37b860afdea35848b123ec2aee04bd5, type: 2}
+  m_sharedMaterial: {fileID: 1095243426707246435, guid: e37b860afdea35848b123ec2aee04bd5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -214,8 +214,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 17
-  m_fontSizeBase: 17
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -631,8 +631,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: As long as you keep fighting, all your pitiful triumphs are only temporary.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e37b860afdea35848b123ec2aee04bd5, type: 2}
+  m_sharedMaterial: {fileID: 1095243426707246435, guid: e37b860afdea35848b123ec2aee04bd5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -765,10 +765,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "It's the last spree of my life\u266A\n\nOf my life that's slipping away\u266B"
+  m_text: 'It''s the last spree of my life.
+
+
+    Of my life that''s slipping away.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e37b860afdea35848b123ec2aee04bd5, type: 2}
+  m_sharedMaterial: {fileID: 1095243426707246435, guid: e37b860afdea35848b123ec2aee04bd5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1104,8 +1107,8 @@ MonoBehaviour:
   m_text: "Gardel:\nIllusion? Don\u2019t forget, sister. You know, you shouldn\u2019t
     play around. \n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e37b860afdea35848b123ec2aee04bd5, type: 2}
+  m_sharedMaterial: {fileID: 1095243426707246435, guid: e37b860afdea35848b123ec2aee04bd5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2122,8 +2125,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Click to continue - Enter to skip
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e37b860afdea35848b123ec2aee04bd5, type: 2}
+  m_sharedMaterial: {fileID: 1095243426707246435, guid: e37b860afdea35848b123ec2aee04bd5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2188,7 +2191,7 @@ MonoBehaviour:
   m_margin: {x: -106.49389, y: 0, z: -0.8949966, w: 0.89486694}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &579139954
@@ -2297,8 +2300,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Click to continue - Enter to skip
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e37b860afdea35848b123ec2aee04bd5, type: 2}
+  m_sharedMaterial: {fileID: 1095243426707246435, guid: e37b860afdea35848b123ec2aee04bd5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2363,7 +2366,7 @@ MonoBehaviour:
   m_margin: {x: -106.49389, y: 0, z: -0.8949966, w: 0.89486694}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &602979012
@@ -2963,8 +2966,8 @@ MonoBehaviour:
 
     A shadow you will soon be.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e37b860afdea35848b123ec2aee04bd5, type: 2}
+  m_sharedMaterial: {fileID: 1095243426707246435, guid: e37b860afdea35848b123ec2aee04bd5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2988,8 +2991,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 17
-  m_fontSizeBase: 17
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3572,8 +3575,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "I am filled with sorrow \nwhen I recall your treachery and cruelty."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e37b860afdea35848b123ec2aee04bd5, type: 2}
+  m_sharedMaterial: {fileID: 1095243426707246435, guid: e37b860afdea35848b123ec2aee04bd5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3909,8 +3912,8 @@ MonoBehaviour:
   m_text: "Lejandaro Seni\xF3t:\nDon\u2019t you dare think I didn\u2019t come prepared,
     illusion. Let\u2019s dance!."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e37b860afdea35848b123ec2aee04bd5, type: 2}
+  m_sharedMaterial: {fileID: 1095243426707246435, guid: e37b860afdea35848b123ec2aee04bd5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3934,8 +3937,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 17
-  m_fontSizeBase: 17
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -7012,6 +7015,54 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2093883401}
+    - target: {fileID: 3277402806021931620, guid: 7a97620bc07dd564db7c3de8225a954b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3277402806021931620, guid: 7a97620bc07dd564db7c3de8225a954b, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3277402806021931620, guid: 7a97620bc07dd564db7c3de8225a954b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3277402806021931620, guid: 7a97620bc07dd564db7c3de8225a954b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3559617172754655043, guid: 7a97620bc07dd564db7c3de8225a954b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3559617172754655043, guid: 7a97620bc07dd564db7c3de8225a954b, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3559617172754655043, guid: 7a97620bc07dd564db7c3de8225a954b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3559617172754655043, guid: 7a97620bc07dd564db7c3de8225a954b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3620523788668966840, guid: 7a97620bc07dd564db7c3de8225a954b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3620523788668966840, guid: 7a97620bc07dd564db7c3de8225a954b, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3620523788668966840, guid: 7a97620bc07dd564db7c3de8225a954b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3620523788668966840, guid: 7a97620bc07dd564db7c3de8225a954b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5979904499464089603, guid: 7a97620bc07dd564db7c3de8225a954b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -7045,6 +7096,22 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6425795233930281995, guid: 7a97620bc07dd564db7c3de8225a954b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7787477222557790007, guid: 7a97620bc07dd564db7c3de8225a954b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7787477222557790007, guid: 7a97620bc07dd564db7c3de8225a954b, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7787477222557790007, guid: 7a97620bc07dd564db7c3de8225a954b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7787477222557790007, guid: 7a97620bc07dd564db7c3de8225a954b, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}

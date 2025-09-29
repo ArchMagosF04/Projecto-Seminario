@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class DialogueManager : MonoBehaviour
-{
+{ 
     [SerializeField] private GameObject enemy;
     [SerializeField] private GameObject player;
 
@@ -31,9 +31,18 @@ public class DialogueManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player.GetComponent<ISpeaker>().StartSpeaking();
-        enemy.GetComponent<ISpeaker>().StartSpeaking();
-        skipText.SetActive(true);
+        if (IntroDialogue.Length > 0)
+        {
+            player.GetComponent<ISpeaker>().StartSpeaking();
+            enemy.GetComponent<ISpeaker>().StartSpeaking();
+            skipText.SetActive(true);
+        }
+        else
+        {
+            player.GetComponent<ISpeaker>().StopSpeaking();
+            enemy.GetComponent<ISpeaker>().StopSpeaking();
+        }
+
 
     }
 

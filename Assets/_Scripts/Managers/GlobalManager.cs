@@ -9,10 +9,12 @@ public class GlobalManager : MonoBehaviour
     public static GlobalManager Instance { get; private set; }  
     private float creationTime;
 
-    [SerializeField] private int currentSelectedWeapon;
+    private int currentSelectedWeapon;
     public int selectedWeapon { get { return currentSelectedWeapon; } }
 
-    [SerializeField]private string currentLevel;
+    private string currentLevel;
+
+    private bool firstTimePlaying;
 
     private void Awake()
     {
@@ -40,6 +42,22 @@ public class GlobalManager : MonoBehaviour
                 DontDestroyOnLoad(gameObject);
             }
         }
+
+        if (PlayerPrefs.GetInt("FirstTime")== 0)
+        {
+            firstTimePlaying = true;
+        }
+    }
+
+    private void Start()
+    {
+        if (firstTimePlaying)
+        {
+            PlayerPrefs.SetInt("Levels Completed", 0);
+            PlayerPrefs.SetInt("FirstTime", 1);
+            PlayerPrefs.Save();
+            firstTimePlaying = false;
+        }        
     }
 
     public void SetCurrentWeapon(int currentWeapon)
@@ -55,5 +73,11 @@ public class GlobalManager : MonoBehaviour
     public string GetCurrentScene()
     {
         return currentLevel;
+    }
+
+    public void SaveCompletedLvl(int level)
+    {
+        PlayerPrefs.SetInt("Levels Completed", level);
+        PlayerPrefs.Save();
     }
 }

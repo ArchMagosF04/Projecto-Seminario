@@ -40,7 +40,7 @@ public class DialogueManager : MonoBehaviour
         else
         {
             player.GetComponent<ISpeaker>().StopSpeaking();
-            enemy.GetComponent<ISpeaker>().StopSpeaking();
+            if(enemy!=null) enemy.GetComponent<ISpeaker>().StopSpeaking();
         }
 
 
@@ -49,6 +49,7 @@ public class DialogueManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(IntroDialogue.Length < 1) return;
         if (introEnded == false)
         {
             if(mainIndex == 0)

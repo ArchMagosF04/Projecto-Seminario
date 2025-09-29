@@ -19,6 +19,8 @@ public class AnittaST_Idle : AnittaState
     public override void OnEnter()
     {
         base.OnEnter();
+
+        controller.CheckFlip(GameManager.Instance.PlayerInstance.transform);
         movement.SetVelocityZero();
 
         beatTimer = 0;
@@ -105,8 +107,8 @@ public class AnittaST_Idle : AnittaState
         Transform lastPlat = controller.LastJumpTarget;
         do
         {
-            int randomPlatform = Random.Range(0, controller.Platforms.Length);
-            controller.DesiredJumpTarget = controller.Platforms[randomPlatform];
+            int randomPlatform = Random.Range(0, controller.PlatformsTransforms.Length);
+            controller.DesiredJumpTarget = controller.PlatformsTransforms[randomPlatform];
 
         } 
         while (lastPlat == controller.DesiredJumpTarget);

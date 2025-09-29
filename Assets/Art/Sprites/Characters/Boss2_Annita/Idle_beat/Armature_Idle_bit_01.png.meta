@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c26be22831f7c6c469e6dafbcc1aef3d
+guid: 1aa2e176566e8744b839d4fe0efc512a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1271683027050583379
-    second: Armature_Idle_bit_10_0
+      213: -7382150087591119728
+    second: Armature_Idle_bit_01_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,8 +49,8 @@ TextureImporter:
   spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
+  alignment: 9
+  spritePivot: {x: 0.69, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Armature_Idle_bit_10_0
+      name: Armature_Idle_bit_01_0
       rect:
         serializedVersion: 2
-        x: 99
-        y: 9
-        width: 135
-        height: 454
+        x: 91
+        y: 12
+        width: 138
+        height: 451
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3555e36b9fce5a110800000000000000
-      internalID: 1271683027050583379
+      spriteID: 094338e8b955d8990800000000000000
+      internalID: -7382150087591119728
       vertices: []
       indices: 
       edges: []
@@ -131,7 +131,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Armature_Idle_bit_10_0: 1271683027050583379
+      Armature_Idle_bit_01_0: -7382150087591119728
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -38,6 +38,7 @@ public class AnittaST_Teleport : AnittaState
 
         if (beatTimer >= stats.BeatsBeforeReappearance)
         {
+            controller.CheckFlip(GameManager.Instance.PlayerInstance.transform);
             anim.SetTrigger("TPBeat");
             controller.TargetIndicator.enabled = false;
             BeatManager.Instance.intervals[0].OnBeatEvent -= BeatCounter;

@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Choose Weapons Accordion_0: 7986272451909595751
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -31,7 +31,8 @@ public class AnittaController : MonoBehaviour
     [SerializeField] private SoundLibraryObject soundLibrary;
 
     [field: Header("Boss Waypoints")]
-    [field: SerializeField] public Transform[] Platforms {  get; private set; }
+    [field: SerializeField] public Transform[] PlatformsTransforms {  get; private set; }
+    [field: SerializeField] public PushPlatform[] PushPlatforms { get; private set; }
     [field: SerializeField] private GameObject Cars;
 
     #endregion
@@ -80,7 +81,7 @@ public class AnittaController : MonoBehaviour
     {
         StateMachine.Initialize(IdleState);
         TargetIndicator.enabled = false;
-        LastJumpTarget = Platforms[0];
+        LastJumpTarget = PlatformsTransforms[0];
     }
 
     private void OnEnable()
@@ -163,6 +164,11 @@ public class AnittaController : MonoBehaviour
     public void SecondPhaseAdditions()
     {
         Cars.SetActive(true);
+
+        foreach (PushPlatform platform in PushPlatforms)
+        {
+            platform.EnterSecondPhase();
+        }
     }
 
     public void CheckFlip(Transform target)

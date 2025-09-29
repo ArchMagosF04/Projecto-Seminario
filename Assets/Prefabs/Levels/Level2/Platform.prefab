@@ -268,8 +268,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc6e79d98ae4cdf479b47a9e35cda4fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  beatsUntilActivation: 10
-  beatsUntilActivationPhase2: 7
+  beatsTillPush: 7
+  beatsTillPushP2: 5
   pushStrength: 20
   pushAngle: {x: 1, y: 0.2}
   direction: -1

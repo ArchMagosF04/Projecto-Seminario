@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class PushPlatform : MonoBehaviour
 {
     [Header("Activation Time")]
-    [SerializeField] private int beatsUntilActivation = 10;
-    [SerializeField] private int beatsUntilActivationPhase2 = 7;
+    [SerializeField] private int beatsTillPush = 10;
+    [SerializeField] private int beatsTillPushP2 = 7;
 
     [Header("Knockback Settings")]
     [SerializeField] private float pushStrength = 20f;
@@ -21,10 +21,12 @@ public class PushPlatform : MonoBehaviour
     [SerializeField] private Collider2D player;
 
     [SerializeField] private int beatTimer;
-    private bool is2ndPhase;
+
+    private int beatsUntilActivation;
 
     private void Start()
     {
+        beatsUntilActivation = beatsTillPush;
         beatTimer = beatsUntilActivation;
         timerImage.fillAmount = 1;
     }
@@ -57,6 +59,11 @@ public class PushPlatform : MonoBehaviour
         {
             knockback.Knockback(pushAngle, pushStrength, direction);
         }
+    }
+
+    public void EnterSecondPhase()
+    {
+        beatsUntilActivation = beatsTillPushP2;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

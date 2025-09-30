@@ -9,10 +9,10 @@ public class GlobalManager : MonoBehaviour
     public static GlobalManager Instance { get; private set; }  
     private float creationTime;
 
-    [SerializeField] private int currentSelectedWeapon;
+    private int currentSelectedWeapon;
     public int selectedWeapon { get { return currentSelectedWeapon; } }
 
-    [SerializeField] private string currentLevel;
+    private string currentLevel;
 
     private bool firstTimePlaying;
 

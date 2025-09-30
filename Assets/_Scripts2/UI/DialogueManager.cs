@@ -29,21 +29,19 @@ public class DialogueManager : MonoBehaviour
     private int subIndex = 0;
 
     // Start is called before the first frame update
+    private void Awake()
+    {       
+
+    }
+
     void Start()
     {
-        if (IntroDialogue.Length > 0)
+        if (IntroDialogue != null && IntroDialogue.Length > 0)
         {
             player.GetComponent<ISpeaker>().StartSpeaking();
-            enemy.GetComponent<ISpeaker>().StartSpeaking();
+            if (enemy != null) enemy.GetComponent<ISpeaker>().StartSpeaking();
             skipText.SetActive(true);
         }
-        else
-        {
-            player.GetComponent<ISpeaker>().StopSpeaking();
-            if(enemy!=null) enemy.GetComponent<ISpeaker>().StopSpeaking();
-        }
-
-
     }
 
     // Update is called once per frame

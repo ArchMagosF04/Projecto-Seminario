@@ -28,7 +28,8 @@ public class InhibitPlayerMovement : MonoBehaviour
         //rigidbody.bodyType = RigidbodyType2D.Static;
         player = rigidbody.gameObject;
         player.gameObject.GetComponent<ISpeaker>().StartSpeaking();
-        tutorialScript.AdvanceIndex();        
+        tutorialScript.AdvanceIndex();
+        player.gameObject.GetComponent<PlayerController>().canAtack = false;
         activate = true;
     }
 

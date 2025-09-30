@@ -61,11 +61,14 @@ public class LevelSelectorController : MonoBehaviour
 
     public void SelectTheNextLevel()
     {
-        if (isWeaponMenuOpen) return;
-        if (levelIndex >= locationsTransform.Length - 1) return;
+        if(PlayerPrefs.GetInt("CompletedTutorial") == 1 && PlayerPrefs.GetInt("CompletedLevels")+1>= levelIndex)
+        {
+            if (isWeaponMenuOpen) return;
+            if (levelIndex >= locationsTransform.Length - 1) return;
 
-        levelIndex++;
-        virtualCamera.Follow = locationsTransform[levelIndex];
+            levelIndex++;
+            virtualCamera.Follow = locationsTransform[levelIndex];
+        }        
     }
 
     public void SelectThePreviousLevel()

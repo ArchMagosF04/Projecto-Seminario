@@ -1079,7 +1079,7 @@ MonoBehaviour:
   - null
   weaponPanel: {fileID: 1187342941}
   weaponPanelFirstSelected: {fileID: 309334612}
-  startingIndex: 1
+  startingIndex: 0
   minSelectableIndex: 0
 --- !u!1 &522048832
 GameObject:
@@ -4202,8 +4202,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8847173fa4bb8924da7db2ea2cfb7280, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSelectedWeapon: 0
-  currentLevel: 
 --- !u!1 &1890876927
 GameObject:
   m_ObjectHideFlags: 0

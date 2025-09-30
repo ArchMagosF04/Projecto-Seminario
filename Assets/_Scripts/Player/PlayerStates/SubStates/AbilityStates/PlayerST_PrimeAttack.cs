@@ -37,8 +37,15 @@ public class PlayerST_PrimeAttack : PlayerST_Ability
     public bool CanPerformAttack()
     {
         //TO DO
-
-        return true;
+        if(controller.Speaking == true && controller.canAtack == false)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+        
     }
 
     private void ExitHandler()

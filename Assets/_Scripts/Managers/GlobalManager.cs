@@ -9,10 +9,10 @@ public class GlobalManager : MonoBehaviour
     public static GlobalManager Instance { get; private set; }  
     private float creationTime;
 
-    private int currentSelectedWeapon;
+    [SerializeField] private int currentSelectedWeapon;
     public int selectedWeapon { get { return currentSelectedWeapon; } }
 
-    private string currentLevel;
+    [SerializeField] private string currentLevel;
 
     private bool firstTimePlaying;
 
@@ -53,7 +53,8 @@ public class GlobalManager : MonoBehaviour
     {
         if (firstTimePlaying)
         {
-            PlayerPrefs.SetInt("Levels Completed", 0);
+            PlayerPrefs.SetInt("CompletedLevels", 0);
+            PlayerPrefs.SetInt("CompletedTutorial", 0);
             PlayerPrefs.SetInt("FirstTime", 1);
             PlayerPrefs.Save();
             firstTimePlaying = false;
@@ -75,9 +76,15 @@ public class GlobalManager : MonoBehaviour
         return currentLevel;
     }
 
-    public void SaveCompletedLvl(int level)
+    public void RecordCompletedLvl(int level)
     {
-        PlayerPrefs.SetInt("Levels Completed", level);
+        PlayerPrefs.SetInt("CompletedLevels", level);
+        PlayerPrefs.Save();
+    }
+
+    public void RecordTutorialComplete()
+    {
+        PlayerPrefs.SetInt("CompletedTutorial", 1);
         PlayerPrefs.Save();
     }
 }

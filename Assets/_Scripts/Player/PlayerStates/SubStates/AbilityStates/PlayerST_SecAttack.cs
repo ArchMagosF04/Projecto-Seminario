@@ -42,6 +42,8 @@ public class PlayerST_SecAttack : PlayerST_Ability
     {
         if (manaComponent.isManaFull) return true;
 
+        if(controller.Speaking && controller.canAtack==false) return false;
+
         InputManager.Instance.UseSecondaryAttackInput();
 
         return false;

@@ -131,6 +131,7 @@ public class CombatTutorial : MonoBehaviour
             {
                 AdvanceIndex();
                 currentTimer = 0;
+                player.GetComponent<PlayerController>().canAtack = true;
             }
 
 

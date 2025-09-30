@@ -52,6 +52,8 @@ public class PlayerController : MonoBehaviour, ISpeaker
 
     public bool Speaking { get { return speaking; } }
 
+    public bool canAtack = true;
+
     #endregion
 
     #region Unity Functions
@@ -92,6 +94,8 @@ public class PlayerController : MonoBehaviour, ISpeaker
         StateMachine.Initialize(IdleState);
         Core_Mana.ManaIsFull += EnergyFullAnimation;
         animatorEvent.OnAnimationFinishedTrigger += AnimationFinishedTrigger;
+        PrimaryAttackState = new PlayerST_PrimeAttack(this, playerData, StateMachine, Anim, "PrimeAttack", weapon);
+        SecondaryAttackState = new PlayerST_SecAttack(this, playerData, StateMachine, Anim, "SecAttack", weapon);
     }
 
     private void Update()
@@ -102,7 +106,7 @@ public class PlayerController : MonoBehaviour, ISpeaker
         if (speaking)
         {
             GetComponent<Rigidbody2D>().velocityX = 0;
-            GetComponent<Rigidbody2D>().velocityY = 0;
+            GetComponent<Rigidbody2D>().velocityY = 0;            
         }
     }
 
@@ -182,8 +186,6 @@ public class PlayerController : MonoBehaviour, ISpeaker
     public void StopSpeaking()
     {
         speaking = false;
-        PrimaryAttackState = new PlayerST_PrimeAttack(this, playerData, StateMachine, Anim, "PrimeAttack", weapon);
-        SecondaryAttackState = new PlayerST_SecAttack(this, playerData, StateMachine, Anim, "SecAttack", weapon);
     }
 
     public float GetHealth()

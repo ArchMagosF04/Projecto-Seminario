@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour, ISpeaker
 
     public bool Speaking { get { return speaking; } }
 
-    public bool canAtack = true;
+    public bool canAtack = false;
 
     #endregion
 
@@ -96,6 +96,8 @@ public class PlayerController : MonoBehaviour, ISpeaker
         animatorEvent.OnAnimationFinishedTrigger += AnimationFinishedTrigger;
         PrimaryAttackState = new PlayerST_PrimeAttack(this, playerData, StateMachine, Anim, "PrimeAttack", weapon);
         SecondaryAttackState = new PlayerST_SecAttack(this, playerData, StateMachine, Anim, "SecAttack", weapon);
+
+        canAtack = false;
     }
 
     private void Update()
@@ -186,6 +188,7 @@ public class PlayerController : MonoBehaviour, ISpeaker
     public void StopSpeaking()
     {
         speaking = false;
+        canAtack = true;
     }
 
     public float GetHealth()

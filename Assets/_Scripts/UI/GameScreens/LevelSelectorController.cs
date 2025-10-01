@@ -20,9 +20,7 @@ public class LevelSelectorController : MonoBehaviour
     [SerializeField] private GameObject weaponPanelFirstSelected;
 
     [Header("Behaviour")]
-    [Tooltip("En qué índice empieza parado el selector (1 = Argentina).")]
     [SerializeField] private int startingIndex = 1;
-    [Tooltip("Índice mínimo navegable/seleccionable. Poné 1 para ocultar el Tutorial.")]
     [SerializeField] private int minSelectableIndex = 1;
 
     private int levelIndex;

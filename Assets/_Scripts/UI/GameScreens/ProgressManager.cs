@@ -6,13 +6,19 @@ public class ProgressManager : MonoBehaviour
 {
     [SerializeField] GameObject argentinaSprite;
     [SerializeField] GameObject brazilSprite;
-
     [SerializeField] GameObject accordeonLock;
+
     void Start()
+    {
+        RefreshProgress();
+    }
+
+    public void RefreshProgress()
     {
         if (PlayerPrefs.GetInt("AccordeonUnlocked") == 1)
         {
             accordeonLock.SetActive(false);
+            brazilSprite.SetActive(true);
         }
 
         if (PlayerPrefs.GetInt("CompletedTutorial") == 1)

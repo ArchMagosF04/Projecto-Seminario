@@ -127,7 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 3
   knockback: 2
-  speed: 10
+  speed: 15
   lifeTime: 5
   shakeProfile: {fileID: 11400000, guid: f7e8943dd2992dc4bbb53e2785068844, type: 2}
   destroy: 1
@@ -216,4 +216,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3f6fb056c5e60e41aae9881578e4a56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  charge: 0

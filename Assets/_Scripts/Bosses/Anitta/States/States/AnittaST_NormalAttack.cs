@@ -37,6 +37,8 @@ public class AnittaST_NormalAttack : AnittaState
     {
         if (attackPerformed) return;
 
+        if (controller.Speaking) return;
+
         controller.CheckFlip(GameManager.Instance.PlayerInstance.transform);
 
         anim.SetTrigger("NormalAttackBeat");
@@ -63,4 +65,6 @@ public class AnittaST_NormalAttack : AnittaState
             return;
         }
     }
+
+
 }

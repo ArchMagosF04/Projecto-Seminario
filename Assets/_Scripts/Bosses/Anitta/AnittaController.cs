@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AnittaController : MonoBehaviour
+public class AnittaController : MonoBehaviour, ISpeaker
 {
     #region State Machine Varibles
     public StateMachine StateMachine { get; private set; }

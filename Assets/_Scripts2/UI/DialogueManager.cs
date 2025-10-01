@@ -42,7 +42,7 @@ public class DialogueManager : MonoBehaviour
         {
             player.GetComponent<ISpeaker>().StartSpeaking();
             if (enemy != null) enemy.GetComponent<ISpeaker>().StartSpeaking();
-            skipText.SetActive(true);
+            if (skipText != null) skipText.SetActive(true);
         }
     }
 
@@ -192,7 +192,16 @@ public class DialogueManager : MonoBehaviour
         {
             message.SetActive(false);
         }
-        mainIndex = IntroDialogue.Count-2;
+
+        if(IntroDialogue.Count - 2 > 0)
+        {
+            mainIndex = IntroDialogue.Count - 2;
+        }
+        else
+        {
+            mainIndex = IntroDialogue.Count - 1;
+        }
+
 
         if (panel != null)
         {

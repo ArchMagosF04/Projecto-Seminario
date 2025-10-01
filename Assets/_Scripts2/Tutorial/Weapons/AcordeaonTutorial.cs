@@ -7,7 +7,7 @@ public class AcordeaonTutorial : MonoBehaviour
     [SerializeField] GameObject tutorial;
     
     // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         tutorial.SetActive(false);
 
@@ -21,7 +21,7 @@ public class AcordeaonTutorial : MonoBehaviour
             GameObject.Find("DialogueManager").GetComponent<DialogueManager>().AddIntroMessage(tutorial);
             PlayerPrefs.SetInt("AcordeonTutorial", 1);
         }
-    }
+    }   
 
     
 }

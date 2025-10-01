@@ -87,6 +87,10 @@ public class GlobalManager : MonoBehaviour
     {
         PlayerPrefs.SetInt("CompletedLevels", level);
         PlayerPrefs.Save();
+        if (level == 1)
+        {
+            PlayerPrefs.SetInt("AccordeonUnlocked", 1);
+        }
     }
 
     public void RecordTutorialComplete()

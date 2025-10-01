@@ -35,6 +35,7 @@ public class LevelCheat : MonoBehaviour
         {
             PlayerPrefs.SetInt("CompletedLevels", 2);
             PlayerPrefs.SetInt("CompletedTutorial", 1);
+            PlayerPrefs.SetInt("AccordeonUnlocked", 1);
             Destroy(gameObject);
         }
     }

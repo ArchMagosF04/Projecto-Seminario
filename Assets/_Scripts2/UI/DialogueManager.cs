@@ -8,8 +8,9 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject enemy;
     [SerializeField] private GameObject player;
 
+
     [SerializeField] GameObject panel;
-    [SerializeField] private GameObject[] IntroDialogue;
+    [SerializeField] private List<GameObject> IntroDialogue;
     [SerializeField]private float waitTime = 2;
     private float currentWaitTime = 0;
     [SerializeField] GameObject skipText;
@@ -37,7 +38,7 @@ public class DialogueManager : MonoBehaviour
 
     void Start()
     {
-        if (IntroDialogue != null && IntroDialogue.Length > 0)
+        if (IntroDialogue != null && IntroDialogue.Count > 0)
         {
             player.GetComponent<ISpeaker>().StartSpeaking();
             if (enemy != null) enemy.GetComponent<ISpeaker>().StartSpeaking();
@@ -48,7 +49,7 @@ public class DialogueManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(IntroDialogue.Length < 1) return;
+        if(IntroDialogue.Count < 1) return;
         if (introEnded == false)
         {
             if(mainIndex == 0)
@@ -118,7 +119,7 @@ public class DialogueManager : MonoBehaviour
 
     public void AdvanceIndex()
     {
-        if (mainIndex < IntroDialogue.Length - 1)
+        if (mainIndex < IntroDialogue.Count - 1)
         {
             IntroDialogue[mainIndex].gameObject.SetActive(false);
             mainIndex++;
@@ -137,7 +138,7 @@ public class DialogueManager : MonoBehaviour
             if(panel != null)
             {
                 panel.SetActive(false);
-            }
+            }           
             skipText.SetActive(false);
             skipText2.SetActive(false);
         }
@@ -191,12 +192,17 @@ public class DialogueManager : MonoBehaviour
         {
             message.SetActive(false);
         }
-        mainIndex = IntroDialogue.Length-1;
+        mainIndex = IntroDialogue.Count-2;
 
         if (panel != null)
         {
             panel.SetActive(false);
-        }       
+        }
+    }
+
+    public void AddIntroMessage(GameObject message)
+    {
+        IntroDialogue.Add(message);
     }
 
 

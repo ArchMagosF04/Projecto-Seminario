@@ -10,5 +10,6 @@ public class FactoryResetScript : MonoBehaviour
         PlayerPrefs.SetInt("CompletedLevels", 0);
         PlayerPrefs.SetInt("CompletedTutorial", 0);
         PlayerPrefs.SetInt("AccordeonUnlocked", 0);
+        PlayerPrefs.SetInt("AcordeonTutorial", 0);
     }
 }

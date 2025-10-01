@@ -1,11 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelCheat : MonoBehaviour
 {
     public string code;
-    [SerializeField] private ProgressManager pm;
 
     void Update()
     {
@@ -21,8 +18,11 @@ public class LevelCheat : MonoBehaviour
             PlayerPrefs.SetInt("AccordeonUnlocked", 1);
             PlayerPrefs.Save();
 
+            ProgressManager pm = FindObjectOfType<ProgressManager>();
             if (pm != null)
+            {
                 pm.RefreshProgress();
+            }
 
             Destroy(gameObject);
         }

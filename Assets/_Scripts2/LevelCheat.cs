@@ -5,37 +5,25 @@ using UnityEngine;
 public class LevelCheat : MonoBehaviour
 {
     public string code;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private ProgressManager pm;
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            code += "s";
-        }
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            code += "t";
-        }
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            code += "a";
-        }
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            code += "r";
-        }
+        if (Input.GetKeyDown(KeyCode.S)) code += "s";
+        if (Input.GetKeyDown(KeyCode.T)) code += "t";
+        if (Input.GetKeyDown(KeyCode.A)) code += "a";
+        if (Input.GetKeyDown(KeyCode.R)) code += "r";
 
-        if(code == "star")
+        if (code == "star")
         {
             PlayerPrefs.SetInt("CompletedLevels", 2);
             PlayerPrefs.SetInt("CompletedTutorial", 1);
             PlayerPrefs.SetInt("AccordeonUnlocked", 1);
+            PlayerPrefs.Save();
+
+            if (pm != null)
+                pm.RefreshProgress();
+
             Destroy(gameObject);
         }
     }

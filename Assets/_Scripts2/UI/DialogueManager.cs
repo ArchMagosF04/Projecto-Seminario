@@ -138,15 +138,15 @@ public class DialogueManager : MonoBehaviour
             if(panel != null)
             {
                 panel.SetActive(false);
-            }           
-            skipText.SetActive(false);
-            skipText2.SetActive(false);
+            }
+            if (skipText != null) skipText.SetActive(false);
+            if (skipText2 != null) skipText2.SetActive(false);
         }
 
         if (mainIndex > 1 && mainIndex < 3)
         {
-            skipText.SetActive(false);
-            skipText2.SetActive(true);
+            if (skipText != null) skipText.SetActive(false);
+            if (skipText2 != null) skipText2.SetActive(true);
         }
 
     }

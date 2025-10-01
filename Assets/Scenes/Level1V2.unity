@@ -3491,12 +3491,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 7523253979120937001}
   player: {fileID: 1489505093148253597}
+  panel: {fileID: 1273462267}
   IntroDialogue:
   - {fileID: 1336346937}
   - {fileID: 1174986744}
   - {fileID: 461821815}
   - {fileID: 948645996}
-  waitTime: 3
+  waitTime: 1.5
   skipText: {fileID: 579139951}
   skipText2: {fileID: 602979009}
   screenBorders: {fileID: 5115689266512464025}

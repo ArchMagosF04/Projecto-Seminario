@@ -8,6 +8,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject enemy;
     [SerializeField] private GameObject player;
 
+    [SerializeField] GameObject panel;
     [SerializeField] private GameObject[] IntroDialogue;
     [SerializeField]private float waitTime = 2;
     private float currentWaitTime = 0;
@@ -133,6 +134,10 @@ public class DialogueManager : MonoBehaviour
             {
                 screenBorders.SetActive(true);
             }
+            if(panel != null)
+            {
+                panel.SetActive(false);
+            }
             skipText.SetActive(false);
             skipText2.SetActive(false);
         }
@@ -187,6 +192,11 @@ public class DialogueManager : MonoBehaviour
             message.SetActive(false);
         }
         mainIndex = IntroDialogue.Length-1;
+
+        if (panel != null)
+        {
+            panel.SetActive(false);
+        }       
     }
 
 

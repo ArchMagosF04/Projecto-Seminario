@@ -3900,6 +3900,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2202007057484290176, guid: 7a97620bc07dd564db7c3de8225a954b, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 783f7c4038ed6094fa03e3a542b8544f, type: 2}
     - target: {fileID: 2879573528468615523, guid: 7a97620bc07dd564db7c3de8225a954b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

@@ -15,6 +15,6 @@ public class Retry : MonoBehaviour
     }
     public void RetryLevel()
     {
-        sceneManager.LoadSceneByName(gManager.GetCurrentScene());
+        sceneManager.LoadSceneByName(gManager.GetCurrentLevel());
     }
 }

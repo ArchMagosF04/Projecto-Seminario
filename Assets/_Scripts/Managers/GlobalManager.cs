@@ -13,6 +13,7 @@ public class GlobalManager : MonoBehaviour
     public int selectedWeapon { get { return currentSelectedWeapon; } }
 
     private string currentLevel;
+    private int currentLevelIndex;
 
     private bool firstTimePlaying;
 
@@ -66,14 +67,20 @@ public class GlobalManager : MonoBehaviour
         currentSelectedWeapon = currentWeapon;
     }
 
-    public void SetCurrentLevel(string newScene)
+    public void SetCurrentLevel(string newScene, int sceneIndex)
     {
         currentLevel = newScene;
+        currentLevelIndex = sceneIndex;
     }
 
-    public string GetCurrentScene()
+    public string GetCurrentLevel()
     {
         return currentLevel;
+    }
+
+    public int GetCurentLevelIndex()
+    {
+        return currentLevelIndex;
     }
 
     public void RecordCompletedLvl(int level)

@@ -20,7 +20,7 @@ public class GlobalHelper : MonoBehaviour
 
     public void SetLevel()
     {
-        gManager.SetCurrentLevel(levelSelector.GetSelectedLevel());
+        gManager.SetCurrentLevel(levelSelector.GetSelectedLevel(), levelSelector.GetSelectedLevelIdex());
     }
 
 }

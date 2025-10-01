@@ -143,7 +143,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      AccordSpecialImg_0: 3878781480347674385
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

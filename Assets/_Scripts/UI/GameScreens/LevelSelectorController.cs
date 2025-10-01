@@ -15,6 +15,7 @@ public class LevelSelectorController : MonoBehaviour
     [Header("UI Panels")]
     [SerializeField] private GameObject weaponPanel;
     [SerializeField] private GameObject lockedMessage;
+    [SerializeField] private GameObject comingSoonMessage;
 
     [Header("UI Selection")]
     [SerializeField] private GameObject weaponPanelFirstSelected;
@@ -30,9 +31,8 @@ public class LevelSelectorController : MonoBehaviour
     {
         weaponPanel.SetActive(false);
         lockedMessage.SetActive(false);
-
+        comingSoonMessage.SetActive(false);
         isWeaponMenuOpen = false;
-
         levelIndex = Mathf.Clamp(startingIndex, 0, locationsTransform.Length - 1);
         virtualCamera.Follow = locationsTransform[levelIndex];
     }
@@ -63,52 +63,43 @@ public class LevelSelectorController : MonoBehaviour
     public void SelectTheNextLevel()
     {
         if (isWeaponMenuOpen) return;
-            
-            if (levelIndex >= locationsTransform.Length - 1) return;
-
-            levelIndex++;
-            virtualCamera.Follow = locationsTransform[levelIndex];      
+        if (levelIndex >= locationsTransform.Length - 1) return;
+        levelIndex++;
+        virtualCamera.Follow = locationsTransform[levelIndex];
     }
 
     public void SelectThePreviousLevel()
     {
         if (isWeaponMenuOpen) return;
-
         if (levelIndex - 1 < 0) return;
-
-            levelIndex--;
-            virtualCamera.Follow = locationsTransform[levelIndex];       
+        levelIndex--;
+        virtualCamera.Follow = locationsTransform[levelIndex];
     }
 
     public void ConfirmLevelSelection()
     {
         if (isWeaponMenuOpen) return;
-        int test = 0;
-        if ((levelIndex>0 && PlayerPrefs.GetInt("CompletedTutorial") !=1) || PlayerPrefs.GetInt("CompletedLevels") + 1 < levelIndex)
+        if (levelNames[levelIndex] == "null")
         {
-            Debug.Log("CompletedLevels = " + PlayerPrefs.GetInt("CompletedLevels") + "  Lvl Index= " + levelIndex);
-
-            Debug.Log("CompletedTutorial =" + PlayerPrefs.GetInt("CompletedTutorial"));
-            test = PlayerPrefs.GetInt("CompletedLevels");
+            comingSoonMessage.SetActive(true);
+            return;
+        }
+        if ((levelIndex > 0 && PlayerPrefs.GetInt("CompletedTutorial") != 1) || PlayerPrefs.GetInt("CompletedLevels") + 1 < levelIndex)
+        {
             lockedMessage.SetActive(true);
             return;
         }
-
         if (levelIndex < Mathf.Clamp(minSelectableIndex, 0, locationsTransform.Length - 1)) return;
-
         var name = levelNames != null && levelIndex < levelNames.Length ? levelNames[levelIndex] : null;
         if (string.IsNullOrWhiteSpace(name) || name == "null") return;
-
         isWeaponMenuOpen = true;
         weaponPanel.SetActive(true);
         EventSystem.current.SetSelectedGameObject(weaponPanelFirstSelected);
     }
-    
 
     public void CancelWeaponSelection()
     {
         if (!isWeaponMenuOpen) return;
-
         isWeaponMenuOpen = false;
         weaponPanel.SetActive(false);
         EventSystem.current.SetSelectedGameObject(null);
@@ -117,11 +108,12 @@ public class LevelSelectorController : MonoBehaviour
     public void CloseLockedWindow()
     {
         lockedMessage.SetActive(false);
+        comingSoonMessage.SetActive(false);
         EventSystem.current.SetSelectedGameObject(null);
     }
 
     public void LoadSelectedLevel()
-    {        
+    {
         SceneLoaderManager.Instance.LoadSceneByName(levelNames[levelIndex]);
     }
 

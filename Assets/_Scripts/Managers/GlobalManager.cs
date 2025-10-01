@@ -9,7 +9,7 @@ public class GlobalManager : MonoBehaviour
     public static GlobalManager Instance { get; private set; }  
     private float creationTime;
 
-    private int currentSelectedWeapon;
+    [SerializeField]private int currentSelectedWeapon;
     public int selectedWeapon { get { return currentSelectedWeapon; } }
 
     private string currentLevel;

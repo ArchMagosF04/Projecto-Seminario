@@ -346,6 +346,7 @@ MonoBehaviour:
   argentinaSprite: {fileID: 1871389102}
   brazilSprite: {fileID: 1999835121}
   accordeonLock: {fileID: 120848292}
+  levelSelectorController: {fileID: 457387602}
 --- !u!1 &120848292
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,6 +15,7 @@ public class Projectile : MonoBehaviour
 
     private Rigidbody2D rb;
     private CinemachineImpulseSource impulseSource;
+    public bool destroy = true;
 
     public event System.Action OnHit = delegate { };
 
@@ -46,9 +47,10 @@ public class Projectile : MonoBehaviour
         {
             health.TakeDamage(damage, transform.right);
             OnHit();
-        }
-        
-        Destroy(gameObject);
+        }        
+
+
+        if(destroy) Destroy(gameObject);
     }
 
     public void SetDamage(float amount)

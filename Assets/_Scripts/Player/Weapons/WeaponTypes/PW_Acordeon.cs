@@ -45,11 +45,11 @@ public class PW_Acordeon : PlayerWeapon
     [Tooltip("Lista de prefabs de proyectiles del arma. El arma utiliza un random para elegir uno de estos proyectiles cada vez que dispara")]
     [SerializeField] private GameObject[] projectiles;
 
-    
+    [SerializeField] private Animator animator2;
 
     private int beats;
     private bool specialMode;
-    private int charge = 0;
+    [SerializeField]private int charge = 0;
     private bool charging = false;
 
     protected override void Awake()
@@ -209,6 +209,7 @@ public class PW_Acordeon : PlayerWeapon
         StartCoroutine(ChargeAttkAnimation());
         float damageMult = damageMultiplier;
         int randomSound = Random.Range(0, 3);
+        anim.SetBool("Holding", true);
 
         yield return new WaitWhile(() => Input.GetKey(KeyCode.Mouse0));
 
@@ -263,11 +264,11 @@ public class PW_Acordeon : PlayerWeapon
     IEnumerator ChargeAttkAnimation()
     {
         //yield return new WaitWhile(() => charge < 1);
-        anim.SetInteger("ChargeLevel", 1);
+        animator2.SetInteger("ChargeLevel", 1);
         yield return new WaitWhile(() => charge == 0);
-        anim.SetInteger("ChargeLevel", 2);
+        animator2.SetInteger("ChargeLevel", 2);
         yield return new WaitWhile(() => charge > 1);
-        anim.SetInteger("ChargeLevel", 3);
+        animator2.SetInteger("ChargeLevel", 3);
     }
 
     private void RecoverMana()
@@ -302,7 +303,7 @@ public class PW_Acordeon : PlayerWeapon
         if (onBeat)
         {
             SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound("OnBeatHit-" + projectileNumber.ToString())).Play();
-            Debug.Log("OnBeatHit-" + projectileNumber);
+            Debug.Log("OnBeatHit-" + projectileNumber);            
         }
         else
         {
@@ -311,13 +312,14 @@ public class PW_Acordeon : PlayerWeapon
             Debug.Log("OnMissHit-" + projectileNumber);
         }
 
-        
+        projectile.GetComponent<ProjectileEnimationEvents>().SetCharge(charge); ;
         projectile.GetComponent<Projectile>().LaunchProjectile(transform.right);
 
         charging = false;
         BeatManager.Instance.intervals[((int)designatedBeat)].OnBeatEvent -= CountBeats;
         beats = 0;
-        anim.SetInteger("ChargeLevel", 0);
+        animator2.SetInteger("ChargeLevel", 0);
+        anim.SetBool("Holding", false);
         charge = 0;
         StopAllCoroutines();
 

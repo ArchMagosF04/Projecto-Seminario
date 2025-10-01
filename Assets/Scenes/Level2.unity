@@ -3504,7 +3504,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 1747186298}
-  popupPrefab: {fileID: 3009466947853114038, guid: 2baa4dee2cd411c438c0a9c01772876e, type: 3}
+  popupPrefab: {fileID: 3009466947853114038, guid: 9b5d507f92069004a9092ebee74da66b, type: 3}
   maxHealth: 150
   damageParticles: {fileID: 7233778717429442434, guid: b862ed757906f6f4bb83bb89c09b1105, type: 3}
   OnDeathUN:

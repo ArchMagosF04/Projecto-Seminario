@@ -1030,11 +1030,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 095ca0c6fc9e0164db2d963373422596, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basicAttackDamage: 3
+  basicAttackDamage: 4
   specialModeDuration: 10
   specialModeDamageBonus: 5
   projectileSpeedBonus: 20
-  damageMultiplier: 1.5
+  damageMultiplier: 2
   damagePenalty: 0.5
   graceBeats: 2
   designatedBeat: 0

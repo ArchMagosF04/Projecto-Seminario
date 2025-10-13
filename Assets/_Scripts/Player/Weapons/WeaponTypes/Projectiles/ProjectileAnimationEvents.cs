@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.Rendering.DebugUI;
 
-public class ProjectileEnimationEvents : MonoBehaviour
+public class ProjectileAnimationEvents : MonoBehaviour
 {
     private Animator anim;
     private int charge;

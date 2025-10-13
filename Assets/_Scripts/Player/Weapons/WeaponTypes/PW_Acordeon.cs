@@ -287,6 +287,7 @@ public class PW_Acordeon : PlayerWeapon
 
         projectile.GetComponent<Projectile>().SetDamage(damage * mod);
 
+        projectile.GetComponent<ProjectileAnimationEvents>().SetCharge(charge);
 
         if (special)
         {
@@ -311,8 +312,7 @@ public class PW_Acordeon : PlayerWeapon
             SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound("OnMissHit-" + projectileNumber.ToString())).Play();
             Debug.Log("OnMissHit-" + projectileNumber);
         }
-
-        projectile.GetComponent<ProjectileEnimationEvents>().SetCharge(charge); ;
+        
         projectile.GetComponent<Projectile>().LaunchProjectile(transform.right);
 
         charging = false;

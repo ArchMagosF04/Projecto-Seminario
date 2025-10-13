@@ -173,7 +173,7 @@ public class PW_Acordeon : PlayerWeapon
                 case 4:
                     charge++;
                     break;
-                default:                    
+                default:
                     break;
             }
         }
@@ -221,11 +221,11 @@ public class PW_Acordeon : PlayerWeapon
             {               
                 switch (beats)
                 {
-                    case 1:                        
+                    case 1:
                         Shoot(randomSound, basicAttackDamage + specialModeDamageBonus, true, true, damageMult);
-
+                        
                         break;
-                    case 3:                        
+                    case 3:
                         Shoot(randomSound, basicAttackDamage + specialModeDamageBonus, true, true, damageMult*2);
                         break;
                     default:
@@ -240,10 +240,10 @@ public class PW_Acordeon : PlayerWeapon
             {
                 switch (beats)
                 {
-                    case 3:                        
+                    case 3:
                         Shoot(randomSound, basicAttackDamage, true, false, damageMult);                        
                         break;
-                    case 5:                       
+                    case 5:
                         Shoot(randomSound, basicAttackDamage, true, false, damageMult*2);
                         break;
                     default:
@@ -263,9 +263,9 @@ public class PW_Acordeon : PlayerWeapon
 
     IEnumerator ChargeAttkAnimation()
     {
-        //yield return new WaitWhile(() => charge < 1);
+        yield return new WaitWhile(() => charge < 1);
         animator2.SetInteger("ChargeLevel", 1);
-        yield return new WaitWhile(() => charge == 0);
+        yield return new WaitWhile(() => charge == 1);
         animator2.SetInteger("ChargeLevel", 2);
         yield return new WaitWhile(() => charge > 1);
         animator2.SetInteger("ChargeLevel", 3);

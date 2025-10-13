@@ -257,7 +257,7 @@ public class PW_Acordeon : PlayerWeapon
         }
         else
         {
-            Shoot(randomSound, basicAttackDamage, true, false, damagePenalty);
+            Shoot(randomSound, basicAttackDamage, false, false, damagePenalty);
         }
     }
 

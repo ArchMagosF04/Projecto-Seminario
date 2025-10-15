@@ -35,7 +35,7 @@ public class InhibitPlayerMovement : MonoBehaviour
 
     public void DestroyTrigger()
     {
-        player.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+        player.gameObject.GetComponent<ISpeaker>().StopSpeaking();
         Destroy(this.gameObject);
     }
 }

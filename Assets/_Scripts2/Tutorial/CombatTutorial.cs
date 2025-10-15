@@ -49,7 +49,8 @@ public class CombatTutorial : MonoBehaviour
     }
 
     private void OnDestroy()
-    {        
+    {
+        index = 0;
         OnIndexChange -= ShowEnemyHUD;
         OnIndexChange -= ShowMetronome;
         OnIndexChange -= ShowEnergy;
@@ -281,7 +282,7 @@ public class CombatTutorial : MonoBehaviour
         if (index == 9)
         {
             locationIndicator.SetActive(true);
-            Destroy(this);
+            //Destroy(this);
         }
     }
     

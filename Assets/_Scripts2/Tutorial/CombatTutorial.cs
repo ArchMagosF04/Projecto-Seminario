@@ -39,6 +39,7 @@ public class CombatTutorial : MonoBehaviour
 
     private void Start()
     {
+        index = 0;
         OnIndexChange += ShowEnemyHUD;
         OnIndexChange += ShowMetronome;
         OnIndexChange += ShowEnergy;
@@ -48,7 +49,7 @@ public class CombatTutorial : MonoBehaviour
     }
 
     private void OnDestroy()
-    {
+    {        
         OnIndexChange -= ShowEnemyHUD;
         OnIndexChange -= ShowMetronome;
         OnIndexChange -= ShowEnergy;

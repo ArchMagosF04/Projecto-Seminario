@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -25,6 +26,7 @@ public class DialogueManager : MonoBehaviour
     private float currentMessageTimer = 0;
 
     private bool introEnded = false;
+    private bool paused = false;
     //private bool messageOnScreen = false;
 
     private int mainIndex = 0;
@@ -49,7 +51,7 @@ public class DialogueManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(IntroDialogue.Count < 1) return;
+        if(IntroDialogue.Count < 1 || paused) return;
         if (introEnded == false)
         {
             if(mainIndex == 0)
@@ -79,9 +81,10 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            float enemyHp = enemy.GetComponent<ISpeaker>().GetHealth();
+            float enemyHp = 0;
+            if (enemy!= null) enemyHp = enemy.GetComponent<ISpeaker>().GetHealth();
 
-            if (!showMessagesAtRandom)
+            if (!showMessagesAtRandom && MidCombatDialogue != null && MidCombatDialogue[0]!=null)
             {
                 if (enemyHp / 100 < 0.25 && subIndex == 2)
                 {                    
@@ -123,14 +126,14 @@ public class DialogueManager : MonoBehaviour
         {
             IntroDialogue[mainIndex].gameObject.SetActive(false);
             mainIndex++;
-            IntroDialogue[mainIndex].gameObject.SetActive(true);
+            if(!paused)IntroDialogue[mainIndex].gameObject.SetActive(true);
         }        
         else
         {
             IntroDialogue[mainIndex].gameObject.SetActive(false);
             introEnded = true;
             player.GetComponent<ISpeaker>().StopSpeaking();
-            enemy.GetComponent<ISpeaker>().StopSpeaking();
+            if(enemy!=null) enemy.GetComponent<ISpeaker>().StopSpeaking();
             if(screenBorders!= null)
             {
                 screenBorders.SetActive(true);
@@ -209,10 +212,27 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    public void Pause()
+    {
+        paused = true;
+        IntroDialogue[mainIndex].gameObject.SetActive(false);
+        IntroDialogue[mainIndex+1].gameObject.SetActive(false);
+        player.GetComponent<ISpeaker>().StopSpeaking();       
+        this.gameObject.SetActive(false);
+    }
+
+    public void Unpause()
+    {
+        paused = false;
+        IntroDialogue[mainIndex].gameObject.SetActive(true);       
+        player.GetComponent<ISpeaker>().StartSpeaking();
+        this.gameObject.SetActive(true);
+    }
+
     public void AddIntroMessage(GameObject message)
     {
         IntroDialogue.Add(message);
-    }
+    }  
 
 
 }

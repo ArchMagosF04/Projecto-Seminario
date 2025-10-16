@@ -11,11 +11,5 @@ public class DialoguePause : MonoBehaviour
         //player.StopSpeaking();
         //Dmanager.enabled = false;
         Dmanager.Pause();
-    }
-
-    private void OnDestroy()
-    {
-        player.StopSpeaking();
-        Dmanager.enabled = false;
-    }
+    }    
 }

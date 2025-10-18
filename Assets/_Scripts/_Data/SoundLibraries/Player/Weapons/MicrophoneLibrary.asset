@@ -23,7 +23,7 @@ MonoBehaviour:
     PlayOnAwake: 0
     FrequentSound: 0
   - Id: OnBeatHit-1
-    Clip: {fileID: 8300000, guid: f1cea64553c0efa4a81e3cbc8883f8d6, type: 3}
+    Clip: {fileID: 8300000, guid: 9735183755c16cd4f85461f28a5f26a6, type: 3}
     MixerGroup: {fileID: -522563215728743215, guid: 20d587f63ee10e746b23a5f4c255fffd, type: 2}
     Volume: 0.5
     RandomPitch: 0
@@ -32,7 +32,7 @@ MonoBehaviour:
     PlayOnAwake: 0
     FrequentSound: 0
   - Id: OnBeatHit-2
-    Clip: {fileID: 8300000, guid: e74d695f04d74ca4283a179e2adf2838, type: 3}
+    Clip: {fileID: 8300000, guid: 9735183755c16cd4f85461f28a5f26a6, type: 3}
     MixerGroup: {fileID: -522563215728743215, guid: 20d587f63ee10e746b23a5f4c255fffd, type: 2}
     Volume: 0.5
     RandomPitch: 0
@@ -41,7 +41,7 @@ MonoBehaviour:
     PlayOnAwake: 0
     FrequentSound: 0
   - Id: OnMissHit-0
-    Clip: {fileID: 8300000, guid: a095efda51b9bf4499633e8c8bfe3048, type: 3}
+    Clip: {fileID: 8300000, guid: ce53af718d520d2478cce77b8d8f90e5, type: 3}
     MixerGroup: {fileID: -522563215728743215, guid: 20d587f63ee10e746b23a5f4c255fffd, type: 2}
     Volume: 1
     RandomPitch: 0
@@ -50,7 +50,7 @@ MonoBehaviour:
     PlayOnAwake: 0
     FrequentSound: 0
   - Id: OnMissHit-1
-    Clip: {fileID: 8300000, guid: 8b07dbb02b508ed40ae98605c432cba5, type: 3}
+    Clip: {fileID: 8300000, guid: ce53af718d520d2478cce77b8d8f90e5, type: 3}
     MixerGroup: {fileID: -522563215728743215, guid: 20d587f63ee10e746b23a5f4c255fffd, type: 2}
     Volume: 1
     RandomPitch: 0
@@ -59,7 +59,7 @@ MonoBehaviour:
     PlayOnAwake: 0
     FrequentSound: 0
   - Id: OnMissHit-2
-    Clip: {fileID: 8300000, guid: 9d2a9993126af98438b52cccd065a146, type: 3}
+    Clip: {fileID: 8300000, guid: ce53af718d520d2478cce77b8d8f90e5, type: 3}
     MixerGroup: {fileID: -522563215728743215, guid: 20d587f63ee10e746b23a5f4c255fffd, type: 2}
     Volume: 1
     RandomPitch: 0

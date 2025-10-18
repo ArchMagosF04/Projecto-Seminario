@@ -227,7 +227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 861e6bd58ae6093429a4a3a86f0c5e6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basicAttackDamage: 3
+  basicAttackDamage: 7
   specialAttackDamage: 1.5
   manaOnBeatHit: 10
   soundLibrary: {fileID: 11400000, guid: aa6b73f6913b0174ba0ba996bef2578a, type: 2}

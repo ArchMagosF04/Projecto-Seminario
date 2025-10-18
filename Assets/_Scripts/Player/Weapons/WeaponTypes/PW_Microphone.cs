@@ -10,6 +10,7 @@ public class PW_Microphone : PlayerWeapon
     [Header("Weapon Stats")]
     [SerializeField] protected float basicAttackDamage = 3f;
     [SerializeField] protected float specialAttackDamage = 1f;
+    [SerializeField] private float damgePenalty = 3;
     [SerializeField] protected float manaOnBeatHit;
     [SerializeField] protected SoundLibraryObject soundLibrary;
 
@@ -40,8 +41,16 @@ public class PW_Microphone : PlayerWeapon
 
     private void BasicAttackDamage()
     {
-        int randomSound = Random.Range(0, 3);       
-
+        int randomSound = Random.Range(0, 3);
+        if (isOnBeat)
+        {
+            SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound("OnBeatHit-" + randomSound.ToString())).Play();
+            StartCoroutine(BumpUpMusic());
+        }
+        else
+        {
+            SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound("OnMissHit-" + randomSound.ToString())).Play();
+        }
         foreach (var item in hitbox.collider2Ds.ToList())
         {
             if (item.TryGetComponent(out IDamageable damageable))
@@ -52,17 +61,7 @@ public class PW_Microphone : PlayerWeapon
                 damageable.TakeDamage(basicAttackDamage * multiplier, movementComponent.FacingDirection * Vector2.right);
 
                 beatCombo.IncreaseComboCounter();
-                if (isOnBeat) manaComponent.IncreaseMana(manaOnBeatHit);
-
-                if (isOnBeat)
-                {
-                    SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound("OnBeatHit-" + randomSound.ToString())).Play();
-                    StartCoroutine(BumpUpMusic());
-                }
-                else
-                {
-                    SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound("OnMissHit-" + randomSound.ToString())).Play();
-                }
+                if (isOnBeat) manaComponent.IncreaseMana(manaOnBeatHit);                
             }            
         }
     }

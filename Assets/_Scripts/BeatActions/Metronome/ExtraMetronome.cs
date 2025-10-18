@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ExtraMetronome : MonoBehaviour
 {
-    [SerializeField] BeatMetronome centralMetronome;
+    [SerializeField] MetronomeVertical centralMetronome;
 
     [SerializeField, Range(0f, 0.5f)] private float lingeringBeatGraceTime = 0.2f;
     private float extraGraceTime;
@@ -18,6 +18,8 @@ public class ExtraMetronome : MonoBehaviour
 
     [SerializeField] private int currentInterval = 0;
 
+    //[SerializeField] private bool finalMetronome;
+    [SerializeField] private bool animate;
     private bool busy = false;
 
     
@@ -47,7 +49,8 @@ public class ExtraMetronome : MonoBehaviour
 
     private void MetronomeBeat()
     {      
-        anim.SetTrigger("Beat");      
+        if(animate)anim.SetTrigger("Beat");
+        //if (finalMetronome) centralMetronome.MoveBar();
     }
 
     private IEnumerator LingeringGrace(float time)
@@ -66,13 +69,16 @@ public class ExtraMetronome : MonoBehaviour
             {
                 collision.gameObject.TryGetComponent<SpriteRenderer>(out SpriteRenderer renderer);
 
-                renderer.color = Color.yellow;
+                renderer.color = Color.green;
 
                 BeatManager.Instance.ToggleGracePeriod(true);
                 busy = true;
 
                 centralMetronome.OnExtraBeat += Isbusy;
-
+                //if (finalMetronome)
+                //{
+                //    centralMetronome.ResetMarkers();                    
+                //}
                 StartCoroutine(LingeringGrace(lingeringBeatGraceTime));
             }
         }
@@ -88,7 +94,7 @@ public class ExtraMetronome : MonoBehaviour
             {
                 collision.gameObject.TryGetComponent<SpriteRenderer>(out SpriteRenderer renderer);
 
-                renderer.color = Color.white;
+                renderer.color = Color.white;                
             }
         }
        

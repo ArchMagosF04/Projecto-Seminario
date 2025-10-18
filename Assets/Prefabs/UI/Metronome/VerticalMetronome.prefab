@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.5, y: 0, z: 0}
-  m_LocalScale: {x: 0.64645, y: 0.64645, z: 0.65}
+  m_LocalScale: {x: 1.0508691, y: 1.0508691, z: 1.0566399}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1352430026631967059}
@@ -197,12 +197,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6be8826cbb1913d41b705596e15ce597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  centralMetronome: {fileID: 0}
-  lingeringBeatGraceTime: 0.145
+  centralMetronome: {fileID: 252102934033755674}
+  lingeringBeatGraceTime: 0.5
   markerSprites:
   - {fileID: 8935760038851188339}
-  currentInterval: 2
-  animate: 0
+  currentInterval: 0
+  animate: 1
 --- !u!1 &1721638766635942568
 GameObject:
   m_ObjectHideFlags: 0
@@ -432,7 +432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6be8826cbb1913d41b705596e15ce597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  centralMetronome: {fileID: 0}
+  centralMetronome: {fileID: 252102934033755674}
   lingeringBeatGraceTime: 0.15
   markerSprites:
   - {fileID: 8935760038851188339}
@@ -453,7 +453,7 @@ GameObject:
   - component: {fileID: 6395501828802095607}
   - component: {fileID: 252102934033755674}
   m_Layer: 5
-  m_Name: 1/2 Beat Metronome (2)
+  m_Name: Final Beat Metronome
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1085,7 +1085,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6be8826cbb1913d41b705596e15ce597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  centralMetronome: {fileID: 0}
+  centralMetronome: {fileID: 252102934033755674}
   lingeringBeatGraceTime: 0.15
   markerSprites:
   - {fileID: 8935760038851188339}
@@ -1127,9 +1127,9 @@ Transform:
   m_Children:
   - {fileID: 1269175905471214851}
   - {fileID: 5567865766139621073}
-  - {fileID: 6072854583369362180}
-  - {fileID: 2100913811071373688}
   - {fileID: 7940089701938966552}
+  - {fileID: 2100913811071373688}
+  - {fileID: 6072854583369362180}
   - {fileID: 7828578578447279167}
   m_Father: {fileID: 6255768161237446388}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

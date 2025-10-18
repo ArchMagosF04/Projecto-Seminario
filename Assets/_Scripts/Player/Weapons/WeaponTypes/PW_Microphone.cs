@@ -56,12 +56,17 @@ public class PW_Microphone : PlayerWeapon
             if (item.TryGetComponent(out IDamageable damageable))
             {
                 float multiplier = 0.8f;
-                if (isOnBeat) multiplier = beatCombo.currentRank.rankDamageMultiplier;
+                if (isOnBeat)
+                {
+                    multiplier = beatCombo.currentRank.rankDamageMultiplier;
 
-                damageable.TakeDamage(basicAttackDamage * multiplier, movementComponent.FacingDirection * Vector2.right);
+                    damageable.TakeDamage(basicAttackDamage * multiplier, movementComponent.FacingDirection * Vector2.right);
 
-                beatCombo.IncreaseComboCounter();
-                if (isOnBeat) manaComponent.IncreaseMana(manaOnBeatHit);                
+                    beatCombo.IncreaseComboCounter();
+                    manaComponent.IncreaseMana(manaOnBeatHit);
+                }
+                else { damageable.TakeDamage(basicAttackDamage / damgePenalty, movementComponent.FacingDirection * Vector2.right); }
+                        
             }            
         }
     }

@@ -65,7 +65,11 @@ public class PW_Microphone : PlayerWeapon
                     beatCombo.IncreaseComboCounter();
                     manaComponent.IncreaseMana(manaOnBeatHit);
                 }
-                else { damageable.TakeDamage(basicAttackDamage / damgePenalty, movementComponent.FacingDirection * Vector2.right); }
+                else 
+                { 
+                    damageable.TakeDamage(basicAttackDamage / damgePenalty, movementComponent.FacingDirection * Vector2.right);
+                    healthComponent.TakeDamage(5, Vector2.zero);
+                }
                         
             }            
         }

@@ -18,6 +18,8 @@ public class PlayerWeapon : MonoBehaviour
     public BeatComboCounter beatCombo { get; private set; }
     public Core Core { get; private set; }
     public Core_Mana manaComponent { get; private set; }
+
+    public Core_Health healthComponent { get; private set; }
     public Core_Movement movementComponent { get; private set; }
 
     protected Animator anim;
@@ -56,6 +58,7 @@ public class PlayerWeapon : MonoBehaviour
     {
         Core = core;
         manaComponent = Core.GetCoreComponent<Core_Mana>();
+        healthComponent = Core.GetCoreComponent<Core_Health>();
         movementComponent = Core.GetCoreComponent<Core_Movement>();
     }
 

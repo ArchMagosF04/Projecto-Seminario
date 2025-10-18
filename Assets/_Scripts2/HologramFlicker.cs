@@ -34,7 +34,7 @@ public class HologramFlicker : MonoBehaviour
         //Debug.Log("ShowBorders");        
         while (duration > 0)
         {
-            if (BeatManager.Instance.BeatGracePeriod) break;
+            if (!BeatManager.Instance.BeatGracePeriod) break;
             yield return new WaitForSeconds(0.015f);
             Color color = sprite.color;
             if (color.a + fadeModifier < 1)

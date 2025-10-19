@@ -36,7 +36,7 @@ public class MetronomeVertical : MonoBehaviour
 
     private void Start()
     {
-        beatDuration = 60f*2 / BeatManager.Instance.BPM;
+        beatDuration = 120f / BeatManager.Instance.BPM;
         extraGraceTime = beatDuration * lingeringBeatGraceTime;
     }
 

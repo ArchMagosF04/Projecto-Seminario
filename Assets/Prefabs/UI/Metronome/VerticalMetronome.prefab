@@ -201,8 +201,8 @@ MonoBehaviour:
   lingeringBeatGraceTime: 0.5
   markerSprites:
   - {fileID: 8935760038851188339}
-  currentInterval: 0
-  animate: 1
+  currentInterval: 2
+  animate: 0
 --- !u!1 &1721638766635942568
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,7 +436,7 @@ MonoBehaviour:
   lingeringBeatGraceTime: 0.15
   markerSprites:
   - {fileID: 8935760038851188339}
-  currentInterval: 2
+  currentInterval: 3
   animate: 0
 --- !u!1 &3261656982449130245
 GameObject:
@@ -637,7 +637,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   markerSpawnPointRight: {fileID: 1269175905471214851}
   markerRight: {fileID: 5702236608854443893}
-  lingeringBeatGraceTime: 0.007
+  lingeringBeatGraceTime: 0.5
   currentInterval: 1
   extraMetronomes: []
   animate: 1
@@ -741,7 +741,7 @@ GameObject:
   - component: {fileID: 4797544852567204656}
   m_Layer: 5
   m_Name: MarkerLeft
-  m_TagString: Untagged
+  m_TagString: MetronomeBar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1089,7 +1089,7 @@ MonoBehaviour:
   lingeringBeatGraceTime: 0.15
   markerSprites:
   - {fileID: 8935760038851188339}
-  currentInterval: 2
+  currentInterval: 3
   animate: 0
 --- !u!1 &8574603797569636222
 GameObject:
@@ -1295,7 +1295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   centralMetronome: {fileID: 252102934033755674}
-  lingeringBeatGraceTime: 0.2
+  lingeringBeatGraceTime: 0.15
   markerSprites:
   - {fileID: 8935760038851188339}
   currentInterval: 0

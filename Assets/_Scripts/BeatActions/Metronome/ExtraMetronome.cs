@@ -34,6 +34,7 @@ public class ExtraMetronome : MonoBehaviour
         //Time.timeScale = 0.25f;
         beatDuration = 60f / BeatManager.Instance.BPM;
         extraGraceTime = beatDuration * lingeringBeatGraceTime;
+        centralMetronome.OnExtraBeat += Isbusy;
     }
 
     private void OnEnable()
@@ -57,45 +58,62 @@ public class ExtraMetronome : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         BeatManager.Instance.ToggleGracePeriod(false);
-        busy = false;
+        markerSprites[0].color = Color.white;
+        busy = false;       
 
     }
 
+    
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag != "Player" && collision.tag != "Enemy")
-        {
+        if (collision.tag == "MetronomeBar")
+        {            
+            BeatManager.Instance.ToggleGracePeriod(true);
             if (collision != null)
             {
                 collision.gameObject.TryGetComponent<SpriteRenderer>(out SpriteRenderer renderer);
 
                 renderer.color = Color.green;
-
-                BeatManager.Instance.ToggleGracePeriod(true);
+                
                 busy = true;
 
-                centralMetronome.OnExtraBeat += Isbusy;
+                
                 //if (finalMetronome)
                 //{
                 //    centralMetronome.ResetMarkers();                    
                 //}
-                StartCoroutine(LingeringGrace(lingeringBeatGraceTime));
+                
+            }
+        }                 
+
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.tag == "MetronomeBar")
+        {
+            
+            if (collision != null)
+            {
+                busy = true;
+                BeatManager.Instance.ToggleGracePeriod(true);
             }
         }
-                  
-
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag != "Player" && collision.tag != "Enemy")
+        if (collision.tag == "MetronomeBar")
         {
             if (collision != null)
             {
                 collision.gameObject.TryGetComponent<SpriteRenderer>(out SpriteRenderer renderer);
 
-                renderer.color = Color.white;                
+                renderer.color = Color.white;
+                StartCoroutine(LingeringGrace(lingeringBeatGraceTime));
             }
+            
         }
        
              

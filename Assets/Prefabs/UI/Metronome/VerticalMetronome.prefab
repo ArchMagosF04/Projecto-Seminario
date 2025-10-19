@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   centralMetronome: {fileID: 252102934033755674}
-  lingeringBeatGraceTime: 0.5
+  lingeringBeatGraceTime: 0.1
   markerSprites:
   - {fileID: 8935760038851188339}
   currentInterval: 2
@@ -433,7 +433,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   centralMetronome: {fileID: 252102934033755674}
-  lingeringBeatGraceTime: 0.15
+  lingeringBeatGraceTime: 0.1
   markerSprites:
   - {fileID: 8935760038851188339}
   currentInterval: 3
@@ -637,7 +637,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   markerSpawnPointRight: {fileID: 1269175905471214851}
   markerRight: {fileID: 5702236608854443893}
-  lingeringBeatGraceTime: 0.5
+  lingeringBeatGraceTime: 0.1
   currentInterval: 1
   extraMetronomes: []
   animate: 1
@@ -1086,7 +1086,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   centralMetronome: {fileID: 252102934033755674}
-  lingeringBeatGraceTime: 0.15
+  lingeringBeatGraceTime: 0.1
   markerSprites:
   - {fileID: 8935760038851188339}
   currentInterval: 3

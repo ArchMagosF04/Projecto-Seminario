@@ -14,7 +14,7 @@ public class PlayerST_Jump : PlayerST_Ability
     public override void OnEnter()
     {
         base.OnEnter();
-
+        
         controller.PlaySound("Jump");
 
         InputManager.Instance.UseJumpInput();
@@ -26,9 +26,8 @@ public class PlayerST_Jump : PlayerST_Ability
     }
 
     public bool CanJump()
-    {
-        if (amountOfJumpsLeft > 1) return true;
-        if(amountOfJumpsLeft > 0 && BeatManager.Instance.BeatGracePeriod) return true;
+    {        
+        if (amountOfJumpsLeft > 0 && BeatManager.Instance.BeatGracePeriod) return true;      
 
         return false;
     }

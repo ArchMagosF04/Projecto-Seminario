@@ -22,11 +22,13 @@ public class PlayerST_Jump : PlayerST_Ability
         isAbilityDone = true;
         DecreaseAmountOfJumpsLeft();
         controller.AirborneState.SetIsJumping();
+
     }
 
     public bool CanJump()
     {
-        if (amountOfJumpsLeft > 0) return true;
+        if (amountOfJumpsLeft > 1) return true;
+        if(amountOfJumpsLeft > 0 && BeatManager.Instance.BeatGracePeriod) return true;
 
         return false;
     }

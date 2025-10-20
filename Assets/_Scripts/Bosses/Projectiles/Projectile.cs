@@ -9,6 +9,11 @@ public class Projectile : MonoBehaviour
     [SerializeField] private float knockback;
     [SerializeField] private float speed;
 
+    [SerializeField] private bool AffectedByParry;
+    public bool affectedByParry {  get { return AffectedByParry; }}
+
+    private Vector2 moveDirection;
+
     [SerializeField] private float lifeTime = 5f;
 
     [SerializeField] private ScreenShakeProfile shakeProfile;
@@ -32,6 +37,7 @@ public class Projectile : MonoBehaviour
 
     public void LaunchProjectile(Vector2 direction)
     {
+        moveDirection = direction;
         rb.velocity = direction * speed;
     }
 
@@ -47,10 +53,12 @@ public class Projectile : MonoBehaviour
         {
             health.TakeDamage(damage, transform.right);
             OnHit();
+        }    
+
+        if(collision.gameObject.layer != 14 && collision.gameObject.layer != 13)
+        {
+            if (destroy) Destroy(gameObject);
         }        
-
-
-        if(destroy) Destroy(gameObject);
     }
 
     public void SetDamage(float amount)
@@ -66,6 +74,11 @@ public class Projectile : MonoBehaviour
     public void SetSpeed(float amount)
     {
         speed = amount;
+    }
+
+    public Vector2 GetDirection()
+    {
+        return moveDirection;
     }
 
     private void OnDestroy()

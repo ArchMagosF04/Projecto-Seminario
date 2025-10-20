@@ -97,7 +97,7 @@ public class ExtraMetronome : MonoBehaviour
             if (collision != null)
             {
                 busy = true;
-                BeatManager.Instance.ToggleGracePeriod(true);
+                BeatManager.Instance.ToggleGracePeriod(true);                
             }
         }
     }

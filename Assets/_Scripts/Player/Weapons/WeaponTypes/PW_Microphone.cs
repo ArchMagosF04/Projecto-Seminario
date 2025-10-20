@@ -5,6 +5,9 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+using ParryMethods;
+using static UnityEditor.Progress;
+
 public class PW_Microphone : PlayerWeapon
 {
     [Header("Weapon Stats")]
@@ -20,7 +23,7 @@ public class PW_Microphone : PlayerWeapon
     {
         base.Awake();
         hitbox = GetComponentInChildren<MeleeWeaponHitbox>();
-        soundLibrary.Initialize();
+        soundLibrary.Initialize();        
     }
 
     protected override void OnEnable()
@@ -71,7 +74,17 @@ public class PW_Microphone : PlayerWeapon
                     healthComponent.TakeDamage(5, Vector2.zero);
                 }
                         
-            }            
+            }
+
+            if (item.TryGetComponent(out Projectile attack) && isOnBeat)
+            {
+                if(attack.affectedByParry)
+                {
+                    attack.LaunchProjectile(ParryMethods.ParryUtilities.ReverseAttack(attack.GetDirection()));
+                    ParryMethods.ParryUtilities.SwitchAttackLayer(item.gameObject);
+                }
+                
+            }
         }
     }
 

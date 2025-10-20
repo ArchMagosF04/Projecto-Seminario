@@ -137,8 +137,10 @@ MonoBehaviour:
   damage: 10
   knockback: 5
   speed: 10
+  AffectedByParry: 1
   lifeTime: 5
   shakeProfile: {fileID: 11400000, guid: f7e8943dd2992dc4bbb53e2785068844, type: 2}
+  destroy: 1
 --- !u!50 &514662469442402832
 Rigidbody2D:
   serializedVersion: 4

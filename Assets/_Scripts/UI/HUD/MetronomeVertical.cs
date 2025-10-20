@@ -127,7 +127,7 @@ public class MetronomeVertical : MonoBehaviour
     {
         if (OnExtraBeat())
         {
-            return;
+            return;            
         }
 
         markerSprite.color = Color.red;

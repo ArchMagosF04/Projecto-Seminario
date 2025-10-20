@@ -86,12 +86,12 @@ GameObject:
   - component: {fileID: 3973989204155932866}
   - component: {fileID: 2670962561702974491}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Tutorial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6968870574112620662
 RectTransform:
   m_ObjectHideFlags: 0
@@ -513,12 +513,12 @@ SpriteRenderer:
   m_SortingLayerID: 1300096155
   m_SortingLayer: 2
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 176a2ac53913a454b85fcf5c4ce02bc3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7612c2feefc9ca04585e8a94c1a5ab3b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.2, y: 1.5714285}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

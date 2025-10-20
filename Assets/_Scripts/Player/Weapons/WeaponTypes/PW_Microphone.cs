@@ -6,7 +6,6 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 using ParryMethods;
-using static UnityEditor.Progress;
 
 public class PW_Microphone : PlayerWeapon
 {

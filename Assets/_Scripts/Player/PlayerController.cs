@@ -201,5 +201,13 @@ public class PlayerController : MonoBehaviour, ISpeaker
         Anim.SetTrigger("EnergyFull");
     }
 
+    public bool ReleaseChargeAttack()
+    {
+        if (!weapon.UseWeaponOnReleaseInput) return false;
+
+        if (InputManager.Instance.PrimaryAttackInputStop == 2) return true;
+        else return false;
+    }
+
     #endregion
 }

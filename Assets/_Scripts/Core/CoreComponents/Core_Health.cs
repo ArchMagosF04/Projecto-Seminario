@@ -18,6 +18,10 @@ public class Core_Health : CoreComponent, IDamageable
     public float CurrentHealth {  get; private set; }
     public float MaxHealth => maxHealth;
 
+    [Header("Invincibility Frames")]
+    [SerializeField] private bool hasIFrames = false;
+    [SerializeField, Range(0f, 1f)] private float iFramesDuration;
+
     [Header("Particle Prefabs")]
     [SerializeField] private ParticleSystem damageParticles;
 
@@ -47,6 +51,8 @@ public class Core_Health : CoreComponent, IDamageable
 
     public void TakeDamage(float amount, Vector2 attackDirection)
     {
+        if (Invincible) return;
+
         CurrentHealth = MathF.Round(CurrentHealth - amount);
 
         OnDamageReceived?.Invoke();
@@ -75,6 +81,13 @@ public class Core_Health : CoreComponent, IDamageable
         }
 
         if (healthBar != null) healthBar.fillAmount = CurrentHealth / maxHealth;
+
+        if (hasIFrames)
+        {
+            ToggleInvincibility(true);
+            StopAllCoroutines();
+            StartCoroutine(IFramesTimer());
+        }
     }
 
     public void HealHealth(float amount)
@@ -99,5 +112,11 @@ public class Core_Health : CoreComponent, IDamageable
     public void HealHealthTest()
     {
         HealHealth(10);
+    }
+
+    private IEnumerator IFramesTimer()
+    {
+        yield return new WaitForSeconds(iFramesDuration);
+        ToggleInvincibility(false);
     }
 }

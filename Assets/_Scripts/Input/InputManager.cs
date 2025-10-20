@@ -19,18 +19,20 @@ public class InputManager : MonoBehaviour
     public int NormInputY { get; private set; }
 
     public bool JumpInput { get; private set; }
-    public bool JumpInputStop { get; private set; }
+    public bool JumpInputStop { get; private set; } = true;
 
     public bool DashInput { get; private set; }
-    public bool DashInputStop { get; private set; }
+    public bool DashInputStop { get; private set; } = true;
 
     public bool CrouchInput { get; private set; }
-    public bool CrouchInputStop { get; private set; }
+    public bool CrouchInputStop { get; private set; } = true;
 
     public bool PrimaryAttackInput { get; private set; }
-    public bool PrimaryAttackInputStop { get; private set; }
+    public int PrimaryAttackInputStop { get; private set; } = 0;
     public bool SecondaryAttackInput { get; private set; }
-    public bool SecondaryAttackInputStop { get; private set; }
+    public bool SecondaryAttackInputStop { get; private set; } = true;
+
+    public Action OnPrimaryAttackRelease;
 
     #endregion
 
@@ -47,9 +49,11 @@ public class InputManager : MonoBehaviour
     #region Other Variables
 
     [SerializeField] private float inputHoldTime = 0.2f;
+    [SerializeField] private float inputReleaseTime = 0.1f;
 
     private float jumpInputStartTime;
     private float dashInputStartTime;
+    private float primaryAttackInputStopTime;
 
     #endregion
 
@@ -72,6 +76,7 @@ public class InputManager : MonoBehaviour
     {
         CheckJumpInputHoldTime();
         CheckDashInputHoldTime();
+        CheckPrimaryAttackHoldTime();
     }
 
     #region Gameplay Action Map
@@ -80,12 +85,14 @@ public class InputManager : MonoBehaviour
         if (context.started)
         {
             PrimaryAttackInput = true;
-            PrimaryAttackInputStop = false;
+            PrimaryAttackInputStop = 1;
         }
 
         if (context.canceled)
         {
-            PrimaryAttackInputStop = true;
+            PrimaryAttackInputStop = 2;
+            primaryAttackInputStopTime = Time.time;
+            OnPrimaryAttackRelease?.Invoke();
         }
     }
 
@@ -174,6 +181,7 @@ public class InputManager : MonoBehaviour
 
     public void UsePrimaryAttackInput() => PrimaryAttackInput = false;
     public void UseSecondaryAttackInput() => SecondaryAttackInput = false;
+    public void UsePrimaryAttackCharge() => PrimaryAttackInputStop = 0;
 
     private void CheckJumpInputHoldTime()
     {
@@ -188,6 +196,16 @@ public class InputManager : MonoBehaviour
         if (Time.time >= dashInputStartTime + inputHoldTime)
         {
             DashInput = false;
+        }
+    }
+
+    private void CheckPrimaryAttackHoldTime()
+    {
+        if (PrimaryAttackInputStop != 2) return;
+
+        if (Time.time >= primaryAttackInputStopTime + inputReleaseTime)
+        {
+            PrimaryAttackInputStop = 0;
         }
     }
 

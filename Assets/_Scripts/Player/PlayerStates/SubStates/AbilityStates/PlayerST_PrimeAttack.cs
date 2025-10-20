@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Windows;
 
 public class PlayerST_PrimeAttack : PlayerST_Ability
 {
@@ -23,6 +24,8 @@ public class PlayerST_PrimeAttack : PlayerST_Ability
     {
         base.OnEnter();
 
+        Movement.SetVelocityX(0f);
+
         InputManager.Instance.UsePrimaryAttackInput();
         BeatManager.Instance.OnPlayerRhythmicAction();
 
@@ -32,6 +35,12 @@ public class PlayerST_PrimeAttack : PlayerST_Ability
     public override void OnUpdate()
     {
         base.OnUpdate();
+
+        int xInput = InputManager.Instance.NormInputX;
+
+        Movement.FlipCheck(xInput);
+
+        Movement.SetVelocityX(playerStats.MovementVelocity * xInput);
     }
 
     public bool CanPerformAttack()

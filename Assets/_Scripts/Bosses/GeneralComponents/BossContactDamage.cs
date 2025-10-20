@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(CinemachineImpulseSource))]
 public class BossContactDamage : MonoBehaviour
 {
     [SerializeField] private float damage;

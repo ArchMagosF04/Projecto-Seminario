@@ -64,7 +64,7 @@ public class PlayerST_Airborne : PlayerState
 
         CheckJumpMultipler();
 
-        if (primaryAttackInput && controller.PrimaryAttackState.CanPerformAttack())
+        if ((primaryAttackInput || controller.ReleaseChargeAttack()) && controller.PrimaryAttackState.CanPerformAttack())
         {
             stateMachine.ChangeState(controller.PrimaryAttackState);
         }

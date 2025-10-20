@@ -13,30 +13,30 @@ MonoBehaviour:
   m_Name: AccordLibrary
   m_EditorClassIdentifier: 
   soundData:
-  - Id: OnBeatHit-0
+  - Id: OnBeatHit-1
     Clip: {fileID: 8300000, guid: cdb8a910281548d41bbc1476e4740448, type: 3}
     MixerGroup: {fileID: -522563215728743215, guid: 20d587f63ee10e746b23a5f4c255fffd, type: 2}
     Volume: 1
-    RandomPitch: 0
-    PitchVariation: 0
-    Loop: 0
-    PlayOnAwake: 0
-    FrequentSound: 0
-  - Id: OnBeatHit-1
-    Clip: {fileID: 8300000, guid: 354b43bb2826bfa4b95638cc20e6ab6c, type: 3}
-    MixerGroup: {fileID: -522563215728743215, guid: 20d587f63ee10e746b23a5f4c255fffd, type: 2}
-    Volume: 1
-    RandomPitch: 0
-    PitchVariation: 0
+    RandomPitch: 1
+    PitchVariation: 0.05
     Loop: 0
     PlayOnAwake: 0
     FrequentSound: 0
   - Id: OnBeatHit-2
+    Clip: {fileID: 8300000, guid: 354b43bb2826bfa4b95638cc20e6ab6c, type: 3}
+    MixerGroup: {fileID: -522563215728743215, guid: 20d587f63ee10e746b23a5f4c255fffd, type: 2}
+    Volume: 1
+    RandomPitch: 1
+    PitchVariation: 0.05
+    Loop: 0
+    PlayOnAwake: 0
+    FrequentSound: 0
+  - Id: OnBeatHit-0
     Clip: {fileID: 8300000, guid: 2dbd1391aed52524a867dcc2108c1d64, type: 3}
     MixerGroup: {fileID: -522563215728743215, guid: 20d587f63ee10e746b23a5f4c255fffd, type: 2}
     Volume: 1
-    RandomPitch: 0
-    PitchVariation: 0
+    RandomPitch: 1
+    PitchVariation: 0.05
     Loop: 0
     PlayOnAwake: 0
     FrequentSound: 0
@@ -44,8 +44,8 @@ MonoBehaviour:
     Clip: {fileID: 8300000, guid: 17e32c4dc7206cd4082136722c196ee6, type: 3}
     MixerGroup: {fileID: -522563215728743215, guid: 20d587f63ee10e746b23a5f4c255fffd, type: 2}
     Volume: 1
-    RandomPitch: 0
-    PitchVariation: 0
+    RandomPitch: 1
+    PitchVariation: 0.05
     Loop: 0
     PlayOnAwake: 0
     FrequentSound: 0
@@ -53,8 +53,8 @@ MonoBehaviour:
     Clip: {fileID: 8300000, guid: 23e9de4942ff4bf499c6abeacd482cf9, type: 3}
     MixerGroup: {fileID: -522563215728743215, guid: 20d587f63ee10e746b23a5f4c255fffd, type: 2}
     Volume: 1
-    RandomPitch: 0
-    PitchVariation: 0
+    RandomPitch: 1
+    PitchVariation: 0.05
     Loop: 0
     PlayOnAwake: 0
     FrequentSound: 0
@@ -62,8 +62,8 @@ MonoBehaviour:
     Clip: {fileID: 8300000, guid: 3f40cc825b5df3d4b84d16321cb27235, type: 3}
     MixerGroup: {fileID: -522563215728743215, guid: 20d587f63ee10e746b23a5f4c255fffd, type: 2}
     Volume: 1
-    RandomPitch: 0
-    PitchVariation: 0
+    RandomPitch: 1
+    PitchVariation: 0.05
     Loop: 0
     PlayOnAwake: 0
     FrequentSound: 0

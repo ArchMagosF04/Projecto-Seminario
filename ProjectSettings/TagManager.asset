@@ -22,7 +22,7 @@ TagManager:
   - EnemyAttacks
   - PlayerAttacks
   - CameraBoundaries
-  - 
+  - GhostPlatform
   - 
   - 
   - 
@@ -54,12 +54,12 @@ TagManager:
   - name: Effects
     uniqueID: 560529137
     locked: 0
-  - name: UI
-    uniqueID: 945808007
-    locked: 0
   - name: Foreground
     uniqueID: 3468129703
     locked: 0
   - name: Popup
     uniqueID: 4290284105
+    locked: 0
+  - name: UI
+    uniqueID: 945808007
     locked: 0

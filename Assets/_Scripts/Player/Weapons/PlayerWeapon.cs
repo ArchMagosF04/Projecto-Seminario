@@ -70,9 +70,13 @@ public class PlayerWeapon : MonoBehaviour
         {
             print("Attack on beat");
         }
-        
+        else
+        {
+            healthComponent.TakeDamage(5, Vector2.zero);
+        }
 
-        OnBasicEnter?.Invoke();
+
+            OnBasicEnter?.Invoke();
 
         anim.SetBool("Active", true);
     }

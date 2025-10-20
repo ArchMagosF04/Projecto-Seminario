@@ -71,7 +71,7 @@ public class PW_Microphone : PlayerWeapon
                 else 
                 { 
                     damageable.TakeDamage(basicAttackDamage / damgePenalty, movementComponent.FacingDirection * Vector2.right);
-                    healthComponent.TakeDamage(5, Vector2.zero);
+                    //healthComponent.TakeDamage(5, Vector2.zero);
                 }
                         
             }

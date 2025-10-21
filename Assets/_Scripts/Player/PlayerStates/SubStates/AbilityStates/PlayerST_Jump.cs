@@ -27,7 +27,7 @@ public class PlayerST_Jump : PlayerST_Ability
 
     public bool CanJump()
     {
-        if (!BeatManager.Instance.BeatGracePeriod) amountOfJumpsLeft = 0;
+        if (!BeatManager.Instance.BeatGracePeriod) amountOfJumpsLeft--;
         if (amountOfJumpsLeft > 0) return true;      
 
         return false;

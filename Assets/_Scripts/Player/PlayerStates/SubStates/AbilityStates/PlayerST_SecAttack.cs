@@ -5,12 +5,11 @@ using UnityEngine;
 public class PlayerST_SecAttack : PlayerST_Ability
 {
     private PlayerWeapon weapon;
-    private Core_Mana manaComponent;
+    
 
     public PlayerST_SecAttack(PlayerController controller, PlayerStats stats, StateMachine stateMachine, Animator anim, string animBoolName, PlayerWeapon weapon) : base(controller, stats, stateMachine, anim, animBoolName)
     {
         this.weapon = weapon;
-        manaComponent = controller.Core.GetCoreComponent<Core_Mana>();
         weapon.OnExit += ExitHandler;
         anim.SetFloat("BeatSpeedMult", BeatManager.Instance.BeatSpeedMultiplier);
     }

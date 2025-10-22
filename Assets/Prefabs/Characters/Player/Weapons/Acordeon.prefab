@@ -465,7 +465,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5670045, y: 0.55034304, z: 3.903142}
+  m_LocalScale: {x: 1.55, y: 1.55, z: 1.55}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1525198269342911876}
@@ -1030,6 +1030,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 095ca0c6fc9e0164db2d963373422596, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <UseWeaponOnReleaseInput>k__BackingField: 0
   basicAttackDamage: 4
   specialModeDuration: 10
   specialModeDamageBonus: 5

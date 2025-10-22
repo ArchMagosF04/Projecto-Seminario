@@ -67,14 +67,14 @@ public class PlayerWeapon : MonoBehaviour
     {
         if (BeatManager.Instance.BeatGracePeriod) isOnBeat = true;
 
-        if (isOnBeat)
-        {
-            print("Attack on beat");
-        }
-        else
-        {
-            healthComponent.TakeDamage(5, Vector2.zero);
-        }
+        //if (isOnBeat)
+        //{
+        //    print("Attack on beat");
+        //}
+        //else
+        //{
+        //    healthComponent.TakeDamage(5, Vector2.zero);
+        //}
 
             OnBasicEnter?.Invoke();
 

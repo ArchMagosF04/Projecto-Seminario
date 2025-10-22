@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class ExitLevel : MonoBehaviour
 {
     private GlobalManager gManager;
+
     // Start is called before the first frame update
     void Start()
     {

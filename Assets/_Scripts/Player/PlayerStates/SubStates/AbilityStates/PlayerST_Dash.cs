@@ -47,7 +47,11 @@ public class PlayerST_Dash : PlayerST_Ability
 
         BeatManager.Instance.OnPlayerRhythmicAction();
 
-        if (BeatManager.Instance.BeatGracePeriod) controller.BeatCombo.ResetDecayTimer();
+        if (BeatManager.Instance.BeatGracePeriod)
+        {
+            controller.BeatCombo.ResetDecayTimer();
+            manaComponent.IncreaseMana(1);
+        }
 
         //CheckInvincibleDash();
 

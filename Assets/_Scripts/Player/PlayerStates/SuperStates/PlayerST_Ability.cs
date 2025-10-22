@@ -14,8 +14,11 @@ public class PlayerST_Ability : PlayerState
     protected Core_CollisionSenses CollisionSenses => collisionSenses ? collisionSenses : core.GetCoreComponent(ref collisionSenses); //If its null then does the get the value on the right.
     private Core_CollisionSenses collisionSenses;
 
+    protected Core_Mana manaComponent;
+
     public PlayerST_Ability(PlayerController controller, PlayerStats stats, StateMachine stateMachine, Animator anim, string animBoolName) : base(controller, stats, stateMachine, anim, animBoolName)
     {
+        manaComponent = controller.Core.GetCoreComponent<Core_Mana>();
     }
 
     public override void DoChecks()

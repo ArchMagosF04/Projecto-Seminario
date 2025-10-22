@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class LevelSelectorController : MonoBehaviour
 {
     [SerializeField] private CinemachineVirtualCamera virtualCamera;
+    [SerializeField] private AsyncSceneLoader asyncLoader; 
 
     [Header("Level Lists")]
     [SerializeField] private Transform[] locationsTransform;
@@ -114,7 +115,9 @@ public class LevelSelectorController : MonoBehaviour
 
     public void LoadSelectedLevel()
     {
-        SceneLoaderManager.Instance.LoadSceneByName(levelNames[levelIndex]);
+        //SceneLoaderManager.Instance.LoadSceneByName(levelNames[levelIndex]);
+        asyncLoader.LoadLevel(levelNames[levelIndex]);
+
     }
 
     public string GetSelectedLevel()

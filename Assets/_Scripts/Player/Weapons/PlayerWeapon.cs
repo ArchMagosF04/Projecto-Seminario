@@ -31,6 +31,7 @@ public class PlayerWeapon : MonoBehaviour
     protected bool isOnBeat = false;
     public bool IsOnBeat { get { return isOnBeat; } }
 
+    [field: SerializeField] public bool UseWeaponOnReleaseInput {  get; private set; } = false;
 
     #endregion
 
@@ -74,7 +75,6 @@ public class PlayerWeapon : MonoBehaviour
         {
             healthComponent.TakeDamage(5, Vector2.zero);
         }
-
 
             OnBasicEnter?.Invoke();
 

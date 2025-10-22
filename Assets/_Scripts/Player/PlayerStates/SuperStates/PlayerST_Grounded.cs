@@ -72,7 +72,7 @@ public class PlayerST_Grounded : PlayerState
         primaryAttack = InputManager.Instance.PrimaryAttackInput;
         secondaryAttack = InputManager.Instance.SecondaryAttackInput;
 
-        if (primaryAttack && controller.PrimaryAttackState.CanPerformAttack())
+        if ((primaryAttack || controller.ReleaseChargeAttack()) && controller.PrimaryAttackState.CanPerformAttack())
         {
             stateMachine.ChangeState(controller.PrimaryAttackState);
         }

@@ -393,6 +393,8 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   popupPrefab: {fileID: 3009466947853114038, guid: 2b1850330b433494a904d31f82c56f00, type: 3}
   maxHealth: 100
+  hasIFrames: 1
+  iFramesDuration: 0.2
   damageParticles: {fileID: 0}
   OnDeathUN:
     m_PersistentCalls:
@@ -698,6 +700,7 @@ MonoBehaviour:
   playerData: {fileID: 11400000, guid: 0ddf61c787af8df4c9074f1bc3df8248, type: 2}
   weapon: {fileID: 0}
   soundLibrary: {fileID: 11400000, guid: 6f37861273ea0874383c0c3cff641457, type: 2}
+  canAtack: 0
 --- !u!114 &6811924436956391939
 MonoBehaviour:
   m_ObjectHideFlags: 0

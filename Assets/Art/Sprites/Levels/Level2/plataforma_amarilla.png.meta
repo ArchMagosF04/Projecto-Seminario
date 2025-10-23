@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e94c816fafcd52c4c90736bc7eb4edbb
+guid: 09c958a8e64e5da4d9503135e7c3ee9b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 612878601484492734
-    second: Nube_azul_0
+      213: 5329110990190343192
+    second: plataforma_amarilla_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Nube_azul_0
+      name: plataforma_amarilla_0
       rect:
         serializedVersion: 2
-        x: 12
-        y: 3
-        width: 1230
-        height: 269
+        x: 3
+        y: 0
+        width: 1136
+        height: 173
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ebfdbe347d1618800800000000000000
-      internalID: 612878601484492734
+      spriteID: 814fce2f53ec4f940800000000000000
+      internalID: 5329110990190343192
       vertices: []
       indices: 
       edges: []
@@ -131,7 +131,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Nube_azul_0: 612878601484492734
+      plataforma_amarilla_0: 5329110990190343192
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

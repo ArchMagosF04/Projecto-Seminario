@@ -19,6 +19,7 @@ public class CombatTutorial : MonoBehaviour
     [SerializeField] TextMeshProUGUI hitCounter;
     [SerializeField] Core_Mana energyBar;
     [SerializeField] GameObject locationIndicator;
+    
     private static int index =0;
     public static int Index {  get { return index; } }
     private int count = 0;
@@ -79,6 +80,7 @@ public class CombatTutorial : MonoBehaviour
             }
             else if (Input.anyKey)
             {
+                player.GetComponent<PlayerController>().canAtack = true;
                 AdvanceIndex();
                 currentTimer = 0;
             }                
@@ -94,6 +96,7 @@ public class CombatTutorial : MonoBehaviour
             {
                 AdvanceIndex();
                 count = 0;
+                player.GetComponent<PlayerController>().canAtack = false;
             }                
         }
 
@@ -106,7 +109,8 @@ public class CombatTutorial : MonoBehaviour
             else if (Input.anyKey)
             {
                 currentTimer = 0;
-                AdvanceIndex();                
+                player.GetComponent<PlayerController>().canAtack = true;
+                AdvanceIndex();             
             }
         }    
         
@@ -132,8 +136,7 @@ public class CombatTutorial : MonoBehaviour
             else if (Input.anyKey)
             {
                 AdvanceIndex();
-                currentTimer = 0;
-                player.GetComponent<PlayerController>().canAtack = true;
+                currentTimer = 0;              
             }
 
 

@@ -16,6 +16,7 @@ public class LevelCheat : MonoBehaviour
             PlayerPrefs.SetInt("CompletedLevels", 2);
             PlayerPrefs.SetInt("CompletedTutorial", 1);
             PlayerPrefs.SetInt("AccordeonUnlocked", 1);
+            PlayerPrefs.SetInt("SaxofonUnlocked", 1);
             PlayerPrefs.Save();
 
             ProgressManager pm = FindObjectOfType<ProgressManager>();

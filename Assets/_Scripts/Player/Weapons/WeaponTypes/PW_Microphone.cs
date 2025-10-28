@@ -74,16 +74,6 @@ public class PW_Microphone : PlayerWeapon
                 }
                         
             }
-
-            if (item.TryGetComponent(out Projectile attack) && isOnBeat)
-            {
-                if(attack.affectedByParry)
-                {
-                    attack.LaunchProjectile(ParryMethods.ParryUtilities.ReverseAttack(attack.GetDirection()));
-                    ParryMethods.ParryUtilities.SwitchAttackLayer(item.gameObject);
-                }
-                
-            }
         }
     }
 

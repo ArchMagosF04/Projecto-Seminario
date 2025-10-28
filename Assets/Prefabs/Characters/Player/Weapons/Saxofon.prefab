@@ -1051,6 +1051,5 @@ MonoBehaviour:
   manaOnBeatHit: 0
   soundLibrary: {fileID: 11400000, guid: 5f5e27b0771f1e6419086f8afc665f57, type: 2}
   projectiles:
-  - {fileID: 3848427730215156677, guid: d340859ecba197f4d8859fdcf4a897ba, type: 3}
-  - {fileID: 3848427730215156677, guid: a79564e3236a09b4b9d21378bf28390b, type: 3}
-  - {fileID: 3848427730215156677, guid: bb39d1dbebed5f743b873abe61fce44a, type: 3}
+  - {fileID: 3848427730215156677, guid: 045612d6e8819194b97a65fbcfb80b18, type: 3}
+  - {fileID: 3848427730215156677, guid: 045612d6e8819194b97a65fbcfb80b18, type: 3}

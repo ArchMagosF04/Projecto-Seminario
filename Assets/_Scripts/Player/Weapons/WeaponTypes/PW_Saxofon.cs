@@ -126,10 +126,10 @@ public class PW_Saxofon : PlayerWeapon
         projectile = GameObject.Instantiate(projectiles[projectileNumber], transform.position, transform.rotation);
         projectile2 = GameObject.Instantiate(projectiles[projectileNumber], transform.position, transform.rotation);
 
-        projectile.GetComponent<Projectile>().SetDamage(damage * mod);
-        projectile2.GetComponent<Projectile>().SetDamage(damage * mod);
+        projectile.GetComponent<SaxofonProjectile>().SetDamage(damage * mod);
+        projectile2.GetComponent<SaxofonProjectile>().SetDamage(damage * mod);
 
-        if (onBeat) projectile.GetComponent<Projectile>().OnHit += RecoverMana;
+        if (onBeat) projectile.GetComponent<SaxofonProjectile>().OnHit += RecoverMana;
 
         if (onBeat)
         { 
@@ -144,8 +144,8 @@ public class PW_Saxofon : PlayerWeapon
             Debug.Log("OnMissHit-" + projectileNumber);
         }
         
-        projectile.GetComponent<Projectile>().LaunchProjectile(transform.right + transform.up);
-        projectile2.GetComponent<Projectile>().LaunchProjectile(transform.right - transform.up);
+        projectile.GetComponent<SaxofonProjectile>().LaunchProjectile(transform.right + transform.up);
+        projectile2.GetComponent<SaxofonProjectile>().LaunchProjectile(transform.right - transform.up);
 
         //StopAllCoroutines();
 

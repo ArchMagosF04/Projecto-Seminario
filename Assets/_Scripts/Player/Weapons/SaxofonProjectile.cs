@@ -3,11 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
+public class SaxofonProjectile : MonoBehaviour
 {
     [SerializeField] private float damage;
     [SerializeField] private float knockback;
-    [SerializeField] private float speed;
+    [SerializeField] private float speed;   
 
     private Vector2 moveDirection;
 
@@ -17,7 +17,7 @@ public class Projectile : MonoBehaviour
 
     private Rigidbody2D rb;
     private CinemachineImpulseSource impulseSource;
-    public bool destroy = true;
+    public bool destroy = false;
 
     public event System.Action OnHit = delegate { };
 
@@ -38,6 +38,20 @@ public class Projectile : MonoBehaviour
         rb.velocity = direction * speed;
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == 3 || collision.gameObject.layer == 6)
+        {
+            //Vector2 inDirection = rb.velocity.normalized;
+            //Vector2 normal = collision.contacts[0].normal;
+            //Vector2 reflectDir = Vector2.Reflect(inDirection, normal);
+
+            //print(collision.contacts[0].normal);
+            LaunchProjectile(moveDirection + collision.contacts[0].normal*2);
+        }
+    }
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.TryGetComponent(out Core_Knockback component))
@@ -50,12 +64,12 @@ public class Projectile : MonoBehaviour
         {
             health.TakeDamage(damage, transform.right);
             OnHit();
-        }    
+        }
 
-        if(collision.gameObject.layer != 14 && collision.gameObject.layer != 13)
-        {
-            if (destroy) Destroy(gameObject);
-        }        
+        if(collision.gameObject.layer == 7 || collision.gameObject.layer == 8) Destroy(gameObject);
+
+        if (destroy) Destroy(gameObject);
+
     }
 
     public void SetDamage(float amount)

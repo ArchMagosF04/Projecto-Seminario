@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AccordLibrary
   m_EditorClassIdentifier: 
   soundData:
-  - Id: OnBeatHit-1
+  - Id: OnBeatHit-0
     Clip: {fileID: 8300000, guid: 686e24c23c4e8454190c6749cb2fec71, type: 3}
     MixerGroup: {fileID: -522563215728743215, guid: 20d587f63ee10e746b23a5f4c255fffd, type: 2}
     Volume: 1
@@ -22,7 +22,7 @@ MonoBehaviour:
     Loop: 0
     PlayOnAwake: 0
     FrequentSound: 0
-  - Id: OnBeatHit-2
+  - Id: OnBeatHit-1
     Clip: {fileID: 8300000, guid: 2db9cea50c7f0924fb68f53961c22e1e, type: 3}
     MixerGroup: {fileID: -522563215728743215, guid: 20d587f63ee10e746b23a5f4c255fffd, type: 2}
     Volume: 1
@@ -31,7 +31,7 @@ MonoBehaviour:
     Loop: 0
     PlayOnAwake: 0
     FrequentSound: 0
-  - Id: OnBeatHit-0
+  - Id: OnBeatHit-2
     Clip: {fileID: 8300000, guid: 414fe69d5ad51ec48b371f187dc8384b, type: 3}
     MixerGroup: {fileID: -522563215728743215, guid: 20d587f63ee10e746b23a5f4c255fffd, type: 2}
     Volume: 1

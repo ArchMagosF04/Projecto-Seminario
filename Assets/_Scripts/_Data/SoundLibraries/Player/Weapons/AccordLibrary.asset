@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundData:
   - Id: OnBeatHit-1
-    Clip: {fileID: 8300000, guid: cdb8a910281548d41bbc1476e4740448, type: 3}
+    Clip: {fileID: 8300000, guid: 686e24c23c4e8454190c6749cb2fec71, type: 3}
     MixerGroup: {fileID: -522563215728743215, guid: 20d587f63ee10e746b23a5f4c255fffd, type: 2}
     Volume: 1
     RandomPitch: 1
@@ -23,7 +23,7 @@ MonoBehaviour:
     PlayOnAwake: 0
     FrequentSound: 0
   - Id: OnBeatHit-2
-    Clip: {fileID: 8300000, guid: 354b43bb2826bfa4b95638cc20e6ab6c, type: 3}
+    Clip: {fileID: 8300000, guid: 2db9cea50c7f0924fb68f53961c22e1e, type: 3}
     MixerGroup: {fileID: -522563215728743215, guid: 20d587f63ee10e746b23a5f4c255fffd, type: 2}
     Volume: 1
     RandomPitch: 1
@@ -32,7 +32,7 @@ MonoBehaviour:
     PlayOnAwake: 0
     FrequentSound: 0
   - Id: OnBeatHit-0
-    Clip: {fileID: 8300000, guid: 2dbd1391aed52524a867dcc2108c1d64, type: 3}
+    Clip: {fileID: 8300000, guid: 414fe69d5ad51ec48b371f187dc8384b, type: 3}
     MixerGroup: {fileID: -522563215728743215, guid: 20d587f63ee10e746b23a5f4c255fffd, type: 2}
     Volume: 1
     RandomPitch: 1

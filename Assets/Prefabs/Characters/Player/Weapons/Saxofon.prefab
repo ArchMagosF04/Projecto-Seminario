@@ -1048,8 +1048,8 @@ MonoBehaviour:
   specialModeDuration: 3
   specialModeDamageBonus: 0
   designatedBeat: 0
-  manaOnBeatHit: 0
+  manaOnBeatHit: 100
   soundLibrary: {fileID: 11400000, guid: 5f5e27b0771f1e6419086f8afc665f57, type: 2}
   projectiles:
   - {fileID: 3848427730215156677, guid: 045612d6e8819194b97a65fbcfb80b18, type: 3}
-  - {fileID: 3848427730215156677, guid: 045612d6e8819194b97a65fbcfb80b18, type: 3}
+  - {fileID: 3848427730215156677, guid: 0842479055063294a9cdd71611f6b2ff, type: 3}

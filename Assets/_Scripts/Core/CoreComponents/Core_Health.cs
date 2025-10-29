@@ -32,6 +32,7 @@ public class Core_Health : CoreComponent, IDamageable
     public UnityEvent OnDamageReceivedUN;
 
     public bool Invincible { get; private set; }
+    public bool doubleDamage;
 
     protected override void Awake()
     {
@@ -52,6 +53,8 @@ public class Core_Health : CoreComponent, IDamageable
     public void TakeDamage(float amount, Vector2 attackDirection)
     {
         if (Invincible) return;
+
+        if (doubleDamage) amount = amount * 2;
 
         CurrentHealth = MathF.Round(CurrentHealth - amount);
 

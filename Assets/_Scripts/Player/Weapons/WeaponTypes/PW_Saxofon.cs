@@ -12,15 +12,11 @@ public class PW_Saxofon : PlayerWeapon
     [Tooltip("Daño de cada proyectil")]
     [SerializeField] protected float basicAttackDamage = 3f;
 
-    [Tooltip("Duracion del modo especial en segundos")]
-    [SerializeField] private float specialModeDuration = 3;
-    private float currentSpecialDuration;
+    [Tooltip("Duracion del effecto de estado en segundos")]
+    [SerializeField] private float statusDuration = 3;
 
-    [Tooltip("Aumento de daño base a cada proyectil durante el modo especial. Formula: (basicAttackDamage + specialModeDamageBomus) * damageMultiplier")]
-    [SerializeField] private float specialModeDamageBonus;  
-
-    [Tooltip("Cual es la frecuencia de beat que este arma reconoce como correcto")]
-    [SerializeField] private BeatEnumarator designatedBeat = 0;
+    //[Tooltip("Cual es la frecuencia de beat que este arma reconoce como correcto")]
+    //[SerializeField] private BeatEnumarator designatedBeat = 0;
 
     [Tooltip("Cuanto mana recargara cada impacto de proyectil")]
     [SerializeField] protected float manaOnBeatHit;
@@ -29,10 +25,6 @@ public class PW_Saxofon : PlayerWeapon
 
     [Tooltip("Lista de prefabs de proyectiles del arma. El arma utiliza un random para elegir uno de estos proyectiles cada vez que dispara")]
     [SerializeField] private GameObject[] projectiles;
-
-    //[SerializeField] private Animator animator2;
-
-    private bool specialMode;
 
     protected override void Awake()
     {
@@ -60,11 +52,11 @@ public class PW_Saxofon : PlayerWeapon
 
             if (isOnBeat)
             {
-                Shoot(randomSound, basicAttackDamage, true, specialMode);
+                Shoot(0, basicAttackDamage, true, false);
             }
             else
             {
-                Shoot(randomSound, basicAttackDamage, false, specialMode);
+                Shoot(0, basicAttackDamage, false, false);
             }
 
             if (isOnBeat)
@@ -76,21 +68,17 @@ public class PW_Saxofon : PlayerWeapon
             }
             else
             {
-                Shoot(randomSound, basicAttackDamage, false, false);
+                Shoot(0, basicAttackDamage, false, false);
             }         
 
     }
 
     private void SpecialAttackDamage()
     {
-        if (specialMode == false)
-        {
-            specialMode = true;
-            //SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound("Special")).Play();
-            specialMode = true;
-            currentSpecialDuration = specialModeDuration;
-            anim.SetBool("Special2", true);
-        }
+        Shoot(1, basicAttackDamage, isOnBeat, true);
+
+        //SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound("Special")).Play();
+
         if (isOnBeat)
         {
             float multiplier = 0.8f;
@@ -118,37 +106,65 @@ public class PW_Saxofon : PlayerWeapon
         beatCombo.IncreaseComboCounter();
     }
 
-    private void Shoot(int projectileNumber, float damage, bool onBeat, bool special,float mod = 1)
+    private void Shoot(int projectileNumber, float damage, bool onBeat, bool special, float mod = 1)
      {
-        GameObject projectile = null;
-        GameObject projectile2 = null;
+        if (!special)
+        {
+            GameObject projectile = null;
+            GameObject projectile2 = null;
 
-        projectile = GameObject.Instantiate(projectiles[projectileNumber], transform.position, transform.rotation);
-        projectile2 = GameObject.Instantiate(projectiles[projectileNumber], transform.position, transform.rotation);
+            projectile = GameObject.Instantiate(projectiles[projectileNumber], transform.position, transform.rotation);
+            projectile2 = GameObject.Instantiate(projectiles[projectileNumber], transform.position, transform.rotation);
 
-        projectile.GetComponent<SaxofonProjectile>().SetDamage(damage * mod);
-        projectile2.GetComponent<SaxofonProjectile>().SetDamage(damage * mod);
+            projectile.GetComponent<SaxofonProjectile>().SetDamage(damage * mod);
+            projectile2.GetComponent<SaxofonProjectile>().SetDamage(damage * mod);
 
-        if (onBeat) projectile.GetComponent<SaxofonProjectile>().OnHit += RecoverMana;
+            if (onBeat) projectile.GetComponent<SaxofonProjectile>().OnHit += RecoverMana;
 
-        if (onBeat)
-        { 
-            SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound("OnBeatHit-" + projectileNumber.ToString())).Play();
-            Debug.Log("OnBeatHit-" + projectileNumber);            
+            if (onBeat)
+            {
+                SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound("OnBeatHit-" + projectileNumber.ToString())).Play();
+                Debug.Log("OnBeatHit-" + projectileNumber);
+            }
+            else
+            {
+                projectile.GetComponentInChildren<SpriteRenderer>().color = Color.red;
+                projectile2.GetComponentInChildren<SpriteRenderer>().color = Color.red;
+                SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound("OnMissHit-" + projectileNumber.ToString())).Play();
+                Debug.Log("OnMissHit-" + projectileNumber);
+            }
+
+            projectile.GetComponent<SaxofonProjectile>().LaunchProjectile(transform.right + transform.up);
+            projectile2.GetComponent<SaxofonProjectile>().LaunchProjectile(transform.right - transform.up);
         }
         else
         {
-            projectile.GetComponentInChildren<SpriteRenderer>().color = Color.red;
-            projectile2.GetComponentInChildren<SpriteRenderer>().color = Color.red;
-            SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound("OnMissHit-" + projectileNumber.ToString())).Play();
-            Debug.Log("OnMissHit-" + projectileNumber);
+            GameObject projectile = null;            
+
+            projectile = GameObject.Instantiate(projectiles[projectileNumber], transform.position, transform.rotation);
+            
+
+            projectile.GetComponent<SaxofonSpecialProjectile>().SetDamage(damage * mod);
+
+            if (onBeat) projectile.GetComponent<SaxofonSpecialProjectile>().OnHit += RecoverMana;
+
+            if (onBeat)
+            {
+                SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound("OnBeatHit-" + projectileNumber.ToString())).Play();
+                Debug.Log("OnBeatHit-" + projectileNumber);
+            }
+            else
+            {
+                //projectile.GetComponentInChildren<SpriteRenderer>().color = Color.red;
+                SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound("OnMissHit-" + projectileNumber.ToString())).Play();
+                Debug.Log("OnMissHit-" + projectileNumber);
+            }
+
+            projectile.GetComponent<SaxofonSpecialProjectile>().LaunchProjectile(transform.right);
+            return;
         }
+
         
-        projectile.GetComponent<SaxofonProjectile>().LaunchProjectile(transform.right + transform.up);
-        projectile2.GetComponent<SaxofonProjectile>().LaunchProjectile(transform.right - transform.up);
 
-        //StopAllCoroutines();
-
-        //currentFireCooldown = fireRate;
     }
 }

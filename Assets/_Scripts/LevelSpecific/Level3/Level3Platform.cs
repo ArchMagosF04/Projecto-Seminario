@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Level3Platform : MonoBehaviour
 {
-    [field: SerializeField] public bool isPlatformActive {  get; private set; } = false;
+    [field: SerializeField] public bool isPlatformActive {  get; private set; } = true;
     [field: SerializeField] public bool wasPlatformModified { get; private set; } = false;
 
     [Header("Components")]

@@ -217,6 +217,7 @@ public class DialogueManager : MonoBehaviour
         paused = true;
         IntroDialogue[mainIndex].gameObject.SetActive(false);
         IntroDialogue[mainIndex+1].gameObject.SetActive(false);
+        skipText.SetActive(false);
         player.GetComponent<ISpeaker>().StopSpeaking();       
         this.gameObject.SetActive(false);
     }

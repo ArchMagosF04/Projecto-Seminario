@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Neon mic attack_0: -1338511536862956664
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

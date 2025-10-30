@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Neon mic stand attack_0: -8031679893116928011
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

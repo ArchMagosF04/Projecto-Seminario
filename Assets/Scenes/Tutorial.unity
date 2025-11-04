@@ -1522,10 +1522,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1280, y: 720}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -6201,9 +6201,9 @@ RectTransform:
   m_Father: {fileID: 204642741}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -410.84872, y: -303.81097}
-  m_SizeDelta: {x: -821.6974, y: -607.6219}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 256.38446, y: 86.67115}
+  m_SizeDelta: {x: 512.7688, y: 173.3423}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1042804548
 MonoBehaviour:
@@ -8065,8 +8065,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -410.84872, y: -303.81097}
-  m_SizeDelta: {x: -821.6974, y: -607.6219}
+  m_AnchoredPosition: {x: -383.62, y: -239.69}
+  m_SizeDelta: {x: -767.23, y: -479.38}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1432929178
 MonoBehaviour:
@@ -8197,7 +8197,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 74.06366, y: -13.7245}
+  m_AnchoredPosition: {x: 133.4, y: 0.0000019073}
   m_SizeDelta: {x: 292.1273, y: 72.551}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1444180765
@@ -8248,8 +8248,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 15
+  m_fontSizeBase: 15
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -8286,7 +8286,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -52.644897, y: 0.08355713, z: -58.751953, w: -52.836205}
+  m_margin: {x: -52.644897, y: 0.08355713, z: 127.909676, w: -52.836205}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -11361,8 +11361,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -410.84872, y: -303.81097}
-  m_SizeDelta: {x: -821.6974, y: -607.6219}
+  m_AnchoredPosition: {x: -383.62, y: -239.69}
+  m_SizeDelta: {x: -767.23, y: -479.38}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1899353255
 MonoBehaviour:
@@ -12584,8 +12584,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 74.06366, y: -25}
-  m_SizeDelta: {x: 292.1273, y: 50}
+  m_AnchoredPosition: {x: 123.6, y: -5.6}
+  m_SizeDelta: {x: 292.1273, y: 41.1772}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2057322776
 MonoBehaviour:
@@ -12635,8 +12635,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 14
+  m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -12673,7 +12673,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -43.915466, y: 0.08355713, z: -47.84015, w: -39.742065}
+  m_margin: {x: -43.404037, y: 1.6177864, z: 97.60767, w: -39.742065}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -12721,7 +12721,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 80.5, y: -16.6}
+  m_AnchoredPosition: {x: 128.1, y: 3.1}
   m_SizeDelta: {x: 292.1273, y: 84.1902}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2088586422
@@ -12744,7 +12744,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "I\u2019m gonna be the best.\nI\u2019m gonna crush them all!."
+  m_text: "I\u2019m gonna be the best.\nI\u2019m gonna crush them all!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 783f7c4038ed6094fa03e3a542b8544f, type: 2}
   m_sharedMaterial: {fileID: 7568704545940115270, guid: 783f7c4038ed6094fa03e3a542b8544f, type: 2}
@@ -12771,8 +12771,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 18
+  m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -12809,7 +12809,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -52.644897, y: 0.08355713, z: -82.03052, w: -52.836205}
+  m_margin: {x: -52.644897, y: 0.08355713, z: 91.84621, w: -52.836205}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

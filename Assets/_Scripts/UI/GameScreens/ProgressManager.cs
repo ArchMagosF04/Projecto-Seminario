@@ -24,13 +24,11 @@ public class ProgressManager : MonoBehaviour
         if (PlayerPrefs.GetInt("AccordeonUnlocked") == 1 && levelSelectorController.GetSelectedLevelIdex()!=0)
         {
             accordeonLock.SetActive(false);
-            brazilSprite.SetActive(true);
         }
 
         if (PlayerPrefs.GetInt("SaxofonUnlocked") == 1 && levelSelectorController.GetSelectedLevelIdex() != 0)
         {
             saxofonLock.SetActive(false);
-            brazilSprite.SetActive(true);
         }
 
         if (levelSelectorController.GetSelectedLevelIdex() == 0)
@@ -46,6 +44,13 @@ public class ProgressManager : MonoBehaviour
         else
         {
             argentinaSprite.SetActive(false);
+        }
+
+        switch (PlayerPrefs.GetInt("CompletedLevels"))
+        {
+            case 2:
+                brazilSprite.SetActive(true);
+                break;
         }
     }
 }

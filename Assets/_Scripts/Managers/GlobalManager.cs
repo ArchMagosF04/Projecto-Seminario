@@ -71,6 +71,7 @@ public class GlobalManager : MonoBehaviour
     {
         currentLevel = newScene;
         currentLevelIndex = sceneIndex;
+        //print(currentLevelIndex);
     }
 
     public string GetCurrentLevel()
@@ -87,10 +88,25 @@ public class GlobalManager : MonoBehaviour
     {
         PlayerPrefs.SetInt("CompletedLevels", level);
         PlayerPrefs.Save();
-        if (level == 1)
+
+        switch (level)
         {
-            PlayerPrefs.SetInt("AccordeonUnlocked", 1);
+            case 1:
+                PlayerPrefs.SetInt("AccordeonUnlocked", 1);
+                break;
+
+            case 2:
+                PlayerPrefs.SetInt("SaxofonUnlocked", 1);
+                break;
+
+            default:
+                break;
         }
+
+        //if (level == 1)
+        //{
+        //    PlayerPrefs.SetInt("AccordeonUnlocked", 1);
+        //}
     }
 
     public void RecordTutorialComplete()

@@ -43,7 +43,7 @@ public class PauseManager : MonoBehaviour
         ResetScreens();
 
         Time.timeScale = 1.0f;
-        Debug.Log(Time.timeScale);
+        //Debug.Log(Time.timeScale);
     }
 
     private void OnDisable()

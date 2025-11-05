@@ -74,6 +74,8 @@ public class CombatTutorial : MonoBehaviour
     {
         if (index == 1)
         {
+            enemyHud.SetActive(true);
+
             if(currentTimer < timer)
             {
                 currentTimer += Time.deltaTime;

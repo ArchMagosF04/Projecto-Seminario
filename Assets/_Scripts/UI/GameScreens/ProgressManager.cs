@@ -7,21 +7,16 @@ public class ProgressManager : MonoBehaviour
     [SerializeField] GameObject accordeonLock;
     [SerializeField] GameObject saxofonLock;
 
-    [SerializeField] LevelSelectorController levelSelectorController; 
+    [SerializeField] LevelSelectorController levelSelectorController;
 
     void Start()
     {
         RefreshProgress();
     }
 
-    private void FixedUpdate()
-    {
-        RefreshProgress();
-    }
-
     public void RefreshProgress()
     {
-        if (PlayerPrefs.GetInt("AccordeonUnlocked") == 1 && levelSelectorController.GetSelectedLevelIdex()!=0)
+        if (PlayerPrefs.GetInt("AccordeonUnlocked") == 1 && levelSelectorController.GetSelectedLevelIdex() != 0)
         {
             accordeonLock.SetActive(false);
         }
@@ -36,7 +31,6 @@ public class ProgressManager : MonoBehaviour
             accordeonLock.SetActive(true);
         }
 
-
         if (PlayerPrefs.GetInt("CompletedTutorial") == 1)
         {
             argentinaSprite.SetActive(true);
@@ -48,8 +42,12 @@ public class ProgressManager : MonoBehaviour
 
         switch (PlayerPrefs.GetInt("CompletedLevels"))
         {
+            case 1:
             case 2:
                 brazilSprite.SetActive(true);
+                break;
+            default:
+                brazilSprite.SetActive(false);
                 break;
         }
     }

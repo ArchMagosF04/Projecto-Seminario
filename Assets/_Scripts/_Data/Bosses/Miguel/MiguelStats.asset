@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3db341f7d5a15645a85f3e5127d5c97, type: 3}
+  m_Name: MiguelStats
+  m_EditorClassIdentifier: 
+  <HorizontalSpeed>k__BackingField: 2
+  <VerticalSpeed>k__BackingField: 1
+  <OscillationAmplitude>k__BackingField: 0.3
+  <BeatsSpentOnIdle>k__BackingField: 4
+  <NormalAttackChance>k__BackingField: 0.5
+  <FlameAttackChance>k__BackingField: 1
+  <SerpentAttackChance>k__BackingField: 0.33
+  <BeatsBeforeNormalAttack>k__BackingField: 2
+  <BeatsBeforeFlameAttack>k__BackingField: 2

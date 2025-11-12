@@ -466,8 +466,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <isPlatformActive>k__BackingField: 1
   <wasPlatformModified>k__BackingField: 0
+  projectileLaunchAngle: {x: 0.6, y: 3.8}
   platformPhysics: {fileID: 4870683694148746966}
   damagePlatform: {fileID: 8860872392146464037}
+  platDebris: {fileID: 4872257040722742495, guid: c3ee7f2de7137a24d98cb1b3a791a43c, type: 3}
 --- !u!1 &8310386081656810513
 GameObject:
   m_ObjectHideFlags: 0

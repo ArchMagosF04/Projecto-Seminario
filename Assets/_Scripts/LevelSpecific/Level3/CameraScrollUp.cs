@@ -6,7 +6,16 @@ public class CameraScrollUp : MonoBehaviour
 {
     [SerializeField] private float speed;
 
+    [SerializeField] private float startScrollTime = 1f;
+
     public bool ShouldMove;
+
+    private float startMoveBuffer;
+
+    private void Start()
+    {
+        startMoveBuffer = startScrollTime;
+    }
 
     private void Update()
     {
@@ -14,5 +23,17 @@ public class CameraScrollUp : MonoBehaviour
         {
             transform.position += new Vector3(0, speed * Time.deltaTime, 0);
         }
+        else
+        {
+            startMoveBuffer -= Time.deltaTime;
+
+            if (startMoveBuffer <= 0)
+            {
+                ShouldMove = true;
+                startMoveBuffer = startScrollTime;
+            }
+        }
     }
+
+    public void ToggleMovent(bool value) { ShouldMove = value; }
 }

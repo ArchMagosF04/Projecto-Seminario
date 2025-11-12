@@ -1,0 +1,196 @@
+using Cinemachine;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Phase1MiguelController : MonoBehaviour
+{
+    #region State Machine
+
+    public StateMachine StateMachine { get; private set; }
+    public P1MiguelST_Idle IdleState { get; private set; }
+    public P1MiguelST_FlameAttack FlameAttack { get; private set; }
+
+    #endregion
+
+    #region Components
+
+    public Core Core { get; private set; }
+
+    private Core_Movement movement;
+    private Animator anim;
+    private CharacterAnimatorEvent animatorEvent;
+    private CinemachineImpulseSource impulseSource;
+
+    [Header("Scriptable Objects")]
+    [SerializeField] private P1MiguelStats miguelStats;
+    [SerializeField] private SoundLibraryObject soundLibrary;
+
+    [Header("Waypoints")]
+    [SerializeField] private Transform rightWaypoint;
+    [SerializeField] private Transform leftWaypoint;
+    private bool goingLeft = true;
+    private bool goingUp = true;
+
+    [Header("Platforms")]
+    [SerializeField] public Lv3FloorsManager FloorsManager;
+
+    #endregion
+
+    #region Other Variables
+
+    public enum ActionType { None, Normal, Special }
+    public ActionType DesiredAction = ActionType.None;
+
+    private bool speaking;
+
+    public bool Speaking { get { return speaking; } }
+
+    private Transform player;
+
+    #endregion
+
+    #region Unity Methods
+
+    private void Awake()
+    {
+        Core = GetComponentInChildren<Core>();
+
+        Core.SetSoundLibrary(soundLibrary);
+
+        movement = Core.GetCoreComponent<Core_Movement>();
+        impulseSource = GetComponent<CinemachineImpulseSource>();
+
+        anim = GetComponentInChildren<Animator>();
+        anim.SetFloat("BeatSpeedMult", BeatManager.Instance.BeatSpeedMultiplier);
+        soundLibrary.Initialize();
+
+        animatorEvent = GetComponentInChildren<CharacterAnimatorEvent>();
+
+        StateMachine = new StateMachine();
+        IdleState = new P1MiguelST_Idle(this, StateMachine, miguelStats, anim, "Idle");
+        FlameAttack = new P1MiguelST_FlameAttack(this, StateMachine, miguelStats, anim, "FlameWindUp");
+    }
+
+    private void Start()
+    {
+        StateMachine.Initialize(IdleState);
+        player = GameManager.Instance.PlayerInstance.transform;
+    }
+
+    private void OnEnable()
+    {
+        animatorEvent.OnAnimationFinishedTrigger += AnimationFinishedTrigger;
+    }
+
+    private void OnDisable()
+    {
+        IdleState.UnsubscribeToEvents();
+
+        animatorEvent.OnAnimationFinishedTrigger -= AnimationFinishedTrigger;
+    }
+
+    private void Update()
+    {
+        StateMachine.CurrentState.OnUpdate();
+    }
+
+    private void FixedUpdate()
+    {
+        StateMachine.CurrentState.OnFixedUpdate();
+
+        HorizontalMovement();
+        VerticalMovement();
+
+        CheckFlip(player);
+    }
+
+    #endregion
+
+    public void HorizontalMovement()
+    {
+        if (goingLeft)
+        {
+            if (transform.position.x <= leftWaypoint.position.x)
+            {
+                goingLeft = false;
+                return;
+            }
+
+            movement.SetVelocityX(-miguelStats.HorizontalSpeed);
+        }
+        else
+        {
+            if (transform.position.x >= rightWaypoint.position.x)
+            {
+                goingLeft = true;
+                return;
+            }
+
+            movement.SetVelocityX(miguelStats.HorizontalSpeed);
+        }
+    }
+
+    public void VerticalMovement()
+    {
+        if (goingUp)
+        {
+            if (transform.position.y >= leftWaypoint.position.y + miguelStats.OscillationAmplitude)
+            {
+                goingUp = false;
+                return;
+            }
+
+            movement.SetVelocityY(miguelStats.VerticalSpeed);
+        }
+        else
+        {
+            if (transform.position.y <= rightWaypoint.position.y - miguelStats.OscillationAmplitude)
+            {
+                goingUp = true;
+                return;
+            }
+
+            movement.SetVelocityY(-miguelStats.VerticalSpeed);
+        }
+    }
+
+    #region Other Functions
+
+    public void PlaySound(string name)
+    {
+        SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound(name)).Play();
+    }
+
+    public void AnimationTrigger()
+    {
+        StateMachine.CurrentState.AnimationTrigger();
+    }
+
+    public void AnimationFinishedTrigger()
+    {
+        StateMachine.CurrentState.AnimationFinishedTrigger();
+    }
+
+    public void CheckFlip(Transform target)
+    {
+        int direction = 0;
+
+        if (target.position.x > transform.position.x) direction = 1;
+        else direction = -1;
+
+        movement.FlipCheck(direction);
+    }
+
+    public void StartSpeaking()
+    {
+        speaking = true;
+    }
+
+    public void StopSpeaking()
+    {
+        speaking = false;
+    }
+
+    #endregion
+}

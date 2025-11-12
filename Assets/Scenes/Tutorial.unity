@@ -3978,8 +3978,8 @@ MonoBehaviour:
   panel: {fileID: 0}
   IntroDialogue:
   - {fileID: 1042804546}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1976865314}
+  - {fileID: 202985930}
   waitTime: 1
   skipText: {fileID: 890304228}
   skipText2: {fileID: 0}

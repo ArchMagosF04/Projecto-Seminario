@@ -14,8 +14,10 @@ public class ProgressManager : MonoBehaviour
         RefreshProgress();
     }
 
+
+
     public void RefreshProgress()
-    {
+    {  
         if (PlayerPrefs.GetInt("AccordeonUnlocked") == 1 && levelSelectorController.GetSelectedLevelIdex() != 0)
         {
             accordeonLock.SetActive(false);

@@ -30,6 +30,7 @@ public class LevelSelectorController : MonoBehaviour
 
     private void Awake()
     {
+        SetStartingIndex(PlayerPrefs.GetInt("CompletedLevels"));
         weaponPanel.SetActive(false);
         lockedMessage.SetActive(false);
         comingSoonMessage.SetActive(false);
@@ -96,6 +97,11 @@ public class LevelSelectorController : MonoBehaviour
         isWeaponMenuOpen = true;
         weaponPanel.SetActive(true);
         EventSystem.current.SetSelectedGameObject(weaponPanelFirstSelected);
+    }
+
+    public void SetStartingIndex(int value)
+    {
+        startingIndex = value;
     }
 
     public void CancelWeaponSelection()

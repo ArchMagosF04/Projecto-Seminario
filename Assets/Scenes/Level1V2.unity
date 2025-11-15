@@ -2348,7 +2348,7 @@ BoxCollider2D:
   m_UsedByEffector: 1
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.51486856}
+  m_Offset: {x: 0.014859438, y: -0.51486856}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2358,7 +2358,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 4.4464664, y: 1.0630451}
+  m_Size: {x: 3.8108916, y: 1.0630451}
   m_EdgeRadius: 0
 --- !u!114 &565382673
 MonoBehaviour:
@@ -8495,6 +8495,14 @@ PrefabInstance:
     - target: {fileID: 4443566200693669215, guid: ff21afca9590b414c90ea5676e654b3f, type: 3}
       propertyPath: m_Name
       value: LeftPlatform
+      objectReference: {fileID: 0}
+    - target: {fileID: 8086183969877627878, guid: ff21afca9590b414c90ea5676e654b3f, type: 3}
+      propertyPath: m_Size.x
+      value: 3.6027837
+      objectReference: {fileID: 0}
+    - target: {fileID: 8086183969877627878, guid: ff21afca9590b414c90ea5676e654b3f, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.023015738
       objectReference: {fileID: 0}
     - target: {fileID: 8652306191231878270, guid: ff21afca9590b414c90ea5676e654b3f, type: 3}
       propertyPath: m_LocalPosition.x

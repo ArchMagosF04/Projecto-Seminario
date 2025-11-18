@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class LevelCheat : MonoBehaviour
 {
+    [SerializeField] ProgressManager progressManager;
     public string code;
+    
 
     void Update()
     {
@@ -13,16 +15,15 @@ public class LevelCheat : MonoBehaviour
 
         if (code == "star")
         {
-            PlayerPrefs.SetInt("CompletedLevels", 2);
+            PlayerPrefs.SetInt("CompletedLevels", 3);
             PlayerPrefs.SetInt("CompletedTutorial", 1);
-            PlayerPrefs.SetInt("AccordeonUnlocked", 1);
-            PlayerPrefs.SetInt("SaxofonUnlocked", 1);
+            //PlayerPrefs.SetInt("AccordeonUnlocked", 1);
+            //PlayerPrefs.SetInt("SaxofonUnlocked", 1);
             PlayerPrefs.Save();
 
-            ProgressManager pm = FindObjectOfType<ProgressManager>();
-            if (pm != null)
+            if (progressManager != null)
             {
-                pm.RefreshProgress();
+                progressManager.UnlockAll();
             }
 
             Destroy(gameObject);

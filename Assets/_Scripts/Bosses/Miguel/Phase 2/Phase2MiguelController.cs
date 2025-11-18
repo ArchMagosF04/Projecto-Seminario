@@ -30,7 +30,7 @@ public class Phase2MiguelController : MonoBehaviour
     [SerializeField] private SoundLibraryObject soundLibrary;
 
     [Header("Attack References")]
-    [SerializeField] private BeamWeapon[] beamPoints;
+    public BeamWeapon[] beamPoints;
 
     [field: Header("Waypoints")]
     [field: SerializeField] public Transform RightWaypoint;
@@ -43,7 +43,7 @@ public class Phase2MiguelController : MonoBehaviour
     public enum ActionType { None, Normal, Jump, Special }
     public ActionType DesiredAction = ActionType.None;
 
-    private bool speaking;
+    private bool speaking = false;
 
     public bool Speaking { get { return speaking; } }
 

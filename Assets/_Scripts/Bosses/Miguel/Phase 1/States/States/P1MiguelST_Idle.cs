@@ -19,8 +19,6 @@ public class P1MiguelST_Idle : P1MiguelState
     {
         base.OnEnter();
 
-        Debug.Log("IdleState");
-
         snakeAttacked = false;
 
         beatTimer = 0;

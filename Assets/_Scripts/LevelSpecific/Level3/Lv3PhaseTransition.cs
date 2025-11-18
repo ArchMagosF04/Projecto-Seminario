@@ -21,6 +21,11 @@ public class Lv3PhaseTransition : MonoBehaviour
     [Header("Prefabs")]
     [SerializeField] private GameObject phase2Boss;
 
+    private void Awake()
+    {
+        phase2Boss.SetActive(false);
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Destroy(phase1MiguelController.gameObject);
@@ -49,7 +54,8 @@ public class Lv3PhaseTransition : MonoBehaviour
     private void ConfigureBoss()
     {
         bossHealthBar.SetActive(true);
-        
+
         //Instantiate new Boss
+        phase2Boss.SetActive(true);
     }
 }

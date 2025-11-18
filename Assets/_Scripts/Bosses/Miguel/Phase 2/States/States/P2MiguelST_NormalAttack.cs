@@ -4,7 +4,61 @@ using UnityEngine;
 
 public class P2MiguelST_NormalAttack : P2MiguelState
 {
+    private int beatTimer;
+
+    private bool attackPerformed;
+
+    private Transform targetPlayer;
+
     public P2MiguelST_NormalAttack(Phase2MiguelController controller, StateMachine stateMachine, P2MiguelStats stats, Animator anim, string animBoolName) : base(controller, stateMachine, stats, anim, animBoolName)
     {
+        targetPlayer = GameManager.Instance.PlayerInstance.transform;
+    }
+
+    public override void OnEnter()
+    {
+        base.OnEnter();
+
+        beatTimer = 0;
+        attackPerformed = false;
+
+        BeatManager.Instance.intervals[0].OnBeatEvent += PerformAttack;
+    }
+
+    public override void UnsubscribeToEvents()
+    {
+        base.UnsubscribeToEvents();
+
+        BeatManager.Instance.intervals[0].OnBeatEvent -= PerformAttack;
+    }
+
+    public override void OnExit()
+    {
+        base.OnExit();
+        BeatManager.Instance.intervals[0].OnBeatEvent -= PerformAttack;
+        controller.DesiredAction = Phase2MiguelController.ActionType.None;
+    }
+
+    public void PerformAttack()
+    {
+        if (attackPerformed) stateMachine.ChangeState(controller.IdleState);
+
+        if (beatTimer >= controller.beamPoints.Length)
+        {
+            foreach (BeamWeapon beam in controller.beamPoints)
+            {
+                beam.FireBeam();
+            }
+
+            attackPerformed = true;
+
+            return;
+        }
+
+        BeamWeapon selectedBeam = controller.beamPoints[beatTimer];
+        selectedBeam.transform.position = new Vector2(targetPlayer.position.x, selectedBeam.transform.position.y);
+        selectedBeam.SetAim();
+
+        beatTimer++;
     }
 }

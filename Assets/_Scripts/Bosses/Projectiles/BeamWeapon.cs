@@ -97,8 +97,6 @@ public class BeamWeapon : MonoBehaviour
 
         if (hit)
         {
-            Debug.Log(hit.collider.gameObject.name);
-
             if (hit.collider.TryGetComponent<IDamageable>(out IDamageable health))
             {
                 health.TakeDamage(damage, beamDirection);

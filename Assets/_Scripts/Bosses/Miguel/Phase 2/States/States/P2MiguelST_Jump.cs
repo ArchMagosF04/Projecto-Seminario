@@ -21,7 +21,7 @@ public class P2MiguelST_Jump : P2MiguelState
         if (controller.DesiredAction == Phase2MiguelController.ActionType.Jump) 
             controller.DesiredAction = Phase2MiguelController.ActionType.None;
 
-        controller.PlaySound("Jump");
+        //controller.PlaySound("Jump");
         PerformJump();
     }
 

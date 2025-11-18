@@ -3,15 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Phase1MiguelController : MonoBehaviour
+public class Phase2MiguelController : MonoBehaviour
 {
     #region State Machine
 
     public StateMachine StateMachine { get; private set; }
-    public P1MiguelST_Idle IdleState { get; private set; }
-    public P1MiguelST_FlameAttack FlameAttack { get; private set; }
-
-    public P1MiguelST_NormalAttack NormalAttack { get; private set; }
+    public P2MiguelST_Idle IdleState { get; private set; }
+    public P2MiguelST_Jump JumpState { get; private set; }
+    public P2MiguelST_Airborne AirborneState { get; private set; }
+    public P2MiguelST_NormalAttack NormalAttack { get; private set; }
+    public P2MiguelST_SpecialAttack SpecialAttack { get; private set; }
 
     #endregion
 
@@ -23,26 +24,23 @@ public class Phase1MiguelController : MonoBehaviour
     private Animator anim;
     private CharacterAnimatorEvent animatorEvent;
     private CinemachineImpulseSource impulseSource;
-    public BeamWeapon beamWeapon {  get; private set; }
 
     [Header("Scriptable Objects")]
-    [SerializeField] private P1MiguelStats miguelStats;
+    [SerializeField] private P2MiguelStats miguelStats;
     [SerializeField] private SoundLibraryObject soundLibrary;
 
-    [Header("Waypoints")]
-    [SerializeField] private Transform rightWaypoint;
-    [SerializeField] private Transform leftWaypoint;
-    private bool goingLeft = true;
-    private bool goingUp = true;
+    [Header("Attack References")]
+    [SerializeField] private BeamWeapon[] beamPoints;
 
-    [Header("Platforms")]
-    [SerializeField] public Lv3FloorsManager FloorsManager;
+    [field: Header("Waypoints")]
+    [field: SerializeField] public Transform RightWaypoint;
+    [field: SerializeField] public Transform LeftWaypoint;
 
     #endregion
 
     #region Other Variables
 
-    public enum ActionType { None, Normal, Special }
+    public enum ActionType { None, Normal, Jump, Special }
     public ActionType DesiredAction = ActionType.None;
 
     private bool speaking;
@@ -69,12 +67,13 @@ public class Phase1MiguelController : MonoBehaviour
         soundLibrary.Initialize();
 
         animatorEvent = GetComponentInChildren<CharacterAnimatorEvent>();
-        beamWeapon = GetComponentInChildren<BeamWeapon>();
 
         StateMachine = new StateMachine();
-        IdleState = new P1MiguelST_Idle(this, StateMachine, miguelStats, anim, "Idle");
-        FlameAttack = new P1MiguelST_FlameAttack(this, StateMachine, miguelStats, anim, "FlameWindUp");
-        NormalAttack = new P1MiguelST_NormalAttack(this, StateMachine, miguelStats, anim, "NormalWindUp");
+        IdleState = new P2MiguelST_Idle(this, StateMachine, miguelStats, anim, "Idle");
+        JumpState = new P2MiguelST_Jump(this, StateMachine, miguelStats, anim, "FlameWindUp");
+        NormalAttack = new P2MiguelST_NormalAttack(this, StateMachine, miguelStats, anim, "NormalWindUp");
+        AirborneState = new P2MiguelST_Airborne(this, StateMachine, miguelStats, anim, "InAir");
+        SpecialAttack = new P2MiguelST_SpecialAttack(this, StateMachine, miguelStats, anim, "SpecialWindUp");
     }
 
     private void Start()
@@ -91,8 +90,6 @@ public class Phase1MiguelController : MonoBehaviour
     private void OnDisable()
     {
         IdleState.UnsubscribeToEvents();
-        FlameAttack.UnsubscribeToEvents();
-        NormalAttack.UnsubscribeToEvents();
 
         animatorEvent.OnAnimationFinishedTrigger -= AnimationFinishedTrigger;
     }
@@ -105,62 +102,9 @@ public class Phase1MiguelController : MonoBehaviour
     private void FixedUpdate()
     {
         StateMachine.CurrentState.OnFixedUpdate();
-
-        HorizontalMovement();
-        VerticalMovement();
-
-        CheckFlip(player);
     }
 
     #endregion
-
-    public void HorizontalMovement()
-    {
-        if (goingLeft)
-        {
-            if (transform.position.x <= leftWaypoint.position.x)
-            {
-                goingLeft = false;
-                return;
-            }
-
-            movement.SetVelocityX(-miguelStats.HorizontalSpeed);
-        }
-        else
-        {
-            if (transform.position.x >= rightWaypoint.position.x)
-            {
-                goingLeft = true;
-                return;
-            }
-
-            movement.SetVelocityX(miguelStats.HorizontalSpeed);
-        }
-    }
-
-    public void VerticalMovement()
-    {
-        if (goingUp)
-        {
-            if (transform.position.y >= leftWaypoint.position.y + miguelStats.OscillationAmplitude)
-            {
-                goingUp = false;
-                return;
-            }
-
-            movement.SetVelocityY(miguelStats.VerticalSpeed);
-        }
-        else
-        {
-            if (transform.position.y <= rightWaypoint.position.y - miguelStats.OscillationAmplitude)
-            {
-                goingUp = true;
-                return;
-            }
-
-            movement.SetVelocityY(-miguelStats.VerticalSpeed);
-        }
-    }
 
     #region Other Functions
 

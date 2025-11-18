@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "newMiguelData", menuName = "Data/Bosses Data/Miguel/Miguel Stats")]
+[CreateAssetMenu(fileName = "newMiguelData", menuName = "Data/Bosses Data/Miguel/P1 Miguel Stats")]
 public class P1MiguelStats : ScriptableObject
 {
     [field: Header("Movement Stats")]

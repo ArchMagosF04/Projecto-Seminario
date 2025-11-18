@@ -30,7 +30,8 @@ public class Phase2MiguelController : MonoBehaviour
     [SerializeField] private SoundLibraryObject soundLibrary;
 
     [Header("Attack References")]
-    public BeamWeapon[] beamPoints;
+    public BeamWeapon[] skyBeams;
+    public BeamWeapon[] bodyBeams;
 
     [field: Header("Waypoints")]
     [field: SerializeField] public Transform RightWaypoint;

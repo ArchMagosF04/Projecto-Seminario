@@ -48,7 +48,11 @@ public class P1MiguelST_NormalAttack : P1MiguelState
 
     private void BeatTimer()
     {
-        if (attackPerformed) stateMachine.ChangeState(controller.IdleState);
+        if (attackPerformed)
+        {
+            stateMachine.ChangeState(controller.IdleState);
+            return;
+        }
 
         beatTimer++;
 

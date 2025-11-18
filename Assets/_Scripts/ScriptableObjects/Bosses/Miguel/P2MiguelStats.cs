@@ -16,7 +16,7 @@ public class P2MiguelStats : ScriptableObject
 
 
 
-    [field: Header("Normal Attack State")]
-    [field: SerializeField] public int BeatsBeforeNormalAttack { get; private set; } = 2;
+    [field: Header("Special Attack State")]
+    [field: SerializeField] public int BeatsBeforeNormalAttack { get; private set; } = 1;
 
 }

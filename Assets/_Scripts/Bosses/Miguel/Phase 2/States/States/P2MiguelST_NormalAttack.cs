@@ -41,11 +41,15 @@ public class P2MiguelST_NormalAttack : P2MiguelState
 
     public void PerformAttack()
     {
-        if (attackPerformed) stateMachine.ChangeState(controller.IdleState);
-
-        if (beatTimer >= controller.beamPoints.Length)
+        if (attackPerformed)
         {
-            foreach (BeamWeapon beam in controller.beamPoints)
+            stateMachine.ChangeState(controller.IdleState);
+            return;
+        }
+
+        if (beatTimer >= controller.skyBeams.Length)
+        {
+            foreach (BeamWeapon beam in controller.skyBeams)
             {
                 beam.FireBeam();
             }
@@ -55,8 +59,8 @@ public class P2MiguelST_NormalAttack : P2MiguelState
             return;
         }
 
-        BeamWeapon selectedBeam = controller.beamPoints[beatTimer];
-        selectedBeam.transform.position = new Vector2(targetPlayer.position.x, selectedBeam.transform.position.y);
+        BeamWeapon selectedBeam = controller.skyBeams[beatTimer];
+        selectedBeam.transform.position = new Vector2(targetPlayer.position.x + Random.Range(-1f, 1f), selectedBeam.transform.position.y);
         selectedBeam.SetAim();
 
         beatTimer++;

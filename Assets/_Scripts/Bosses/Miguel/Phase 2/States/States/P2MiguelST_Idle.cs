@@ -45,7 +45,6 @@ public class P2MiguelST_Idle : P2MiguelState
     private void BeatTimer()
     {
         beatTimer++;
-        Debug.Log(beatTimer);
 
         anim.SetTrigger("OnBeat");
         //controller.PlaySound("FingerSnap");

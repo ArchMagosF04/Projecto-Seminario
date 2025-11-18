@@ -91,21 +91,29 @@ public class BeamWeapon : MonoBehaviour
         beamState = BeamState.Fire;
         SetBeamAttackLook();
 
-        //Collider2D[] colliders = Physics2D.BoxCastAll(transform.position, newf_size, )
-
         RaycastHit2D hit = Physics2D.Raycast(transform.position, beamDirection.normalized, 40, targetMask);
+
+        List<Collider2D> checkedColliders = new List<Collider2D>();
 
         if (hit)
         {
+            if (checkedColliders.Contains(hit.collider)) return;
+
+            bool addToList = false;
+
             if (hit.collider.TryGetComponent<IDamageable>(out IDamageable health))
             {
                 health.TakeDamage(damage, beamDirection);
+                addToList = true;
             }
 
             if (hit.collider.TryGetComponent<Core_Knockback>(out Core_Knockback knockback))
             {
                 knockback.Knockback(transform, knockBack);
+                addToList = true;
             }
+
+            if (addToList) checkedColliders.Add(hit.collider);
         }
 
         startFireTime = Time.time;
@@ -126,6 +134,6 @@ public class BeamWeapon : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.cyan;
-        Gizmos.DrawLine(transform.position, beamDirection * 40);
+        Gizmos.DrawLine(transform.position, transform.position - (-beamDirection.normalized * 20));
     }
 }

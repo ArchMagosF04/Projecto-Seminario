@@ -32,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.89, y: 1.74, z: 0}
-  m_LocalScale: {x: -0.19, y: 3, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7500902600073922638}
@@ -152,6 +152,8 @@ MonoBehaviour:
   damage: 10
   knockbackForce: 20
   shakeProfile: {fileID: 11400000, guid: b675b848239243b4093389d46b17b861, type: 2}
+  pushInSetDirection: 0
+  setPushDirection: {x: 0, y: 0}
 --- !u!95 &573860757294288660
 Animator:
   serializedVersion: 7
@@ -434,6 +436,8 @@ MonoBehaviour:
   damage: 5
   knockbackForce: 20
   shakeProfile: {fileID: 11400000, guid: a40a765b02bb8494d89d8ead763975b9, type: 2}
+  pushInSetDirection: 0
+  setPushDirection: {x: 0, y: 0}
 --- !u!114 &6612189401342526279
 MonoBehaviour:
   m_ObjectHideFlags: 0

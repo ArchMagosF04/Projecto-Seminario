@@ -24,6 +24,15 @@ public class SerpentController : MonoBehaviour
 
     private bool skipNextBeat = false;
 
+    private Animator animator;
+
+    private void Awake()
+    {
+        animator = GetComponentInChildren<Animator>();
+
+        animator.SetFloat("BeatSpeedMult", BeatManager.Instance.BeatSpeedMultiplier);
+    }
+
     private void OnDisable()
     {
         BeatManager.Instance.intervals[0].OnBeatEvent -= BeatTimer;
@@ -68,6 +77,8 @@ public class SerpentController : MonoBehaviour
             skipNextBeat = false;
             return;
         }
+
+        animator.SetTrigger("Attack");
 
         if (CurrentState == SerpentState.LargeAttack)
         {

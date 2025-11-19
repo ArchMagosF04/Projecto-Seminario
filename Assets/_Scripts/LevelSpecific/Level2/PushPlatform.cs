@@ -23,6 +23,7 @@ public class PushPlatform : MonoBehaviour
     [SerializeField] private int beatTimer;
 
     private int beatsUntilActivation;
+    public event System.Action OnPushPlayer = delegate { };
 
     private void Start()
     {
@@ -45,6 +46,7 @@ public class PushPlatform : MonoBehaviour
         if (beatTimer == 0)
         {
             PushPlayer();
+            OnPushPlayer.Invoke();
         }
     }
 

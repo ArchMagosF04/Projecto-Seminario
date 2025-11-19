@@ -41,6 +41,8 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log(collision.gameObject.name);
+
         if (collision.TryGetComponent(out Core_Knockback component))
         {
             component.Knockback(transform, knockback);
@@ -53,10 +55,7 @@ public class Projectile : MonoBehaviour
             OnHit();
         }    
 
-        if(collision.gameObject.layer != 14 && collision.gameObject.layer != 13)
-        {
-            if (destroy) Destroy(gameObject);
-        }        
+        Destroy(gameObject);      
     }
 
     public void SetDamage(float amount)

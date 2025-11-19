@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: MiguelStats
   m_EditorClassIdentifier: 
   <HorizontalSpeed>k__BackingField: 2
-  <VerticalSpeed>k__BackingField: 1
+  <VerticalSpeed>k__BackingField: 2
   <OscillationAmplitude>k__BackingField: 0.3
   <BeatsSpentOnIdle>k__BackingField: 4
   <NormalAttackChance>k__BackingField: 0.5
-  <FlameAttackChance>k__BackingField: 1
+  <FlameAttackChance>k__BackingField: 0.5
   <SerpentAttackChance>k__BackingField: 0.33
-  <BeatsBeforeNormalAttack>k__BackingField: 2
+  <BeatsBeforeNormalAttack>k__BackingField: 0
   <BeatsBeforeFlameAttack>k__BackingField: 2

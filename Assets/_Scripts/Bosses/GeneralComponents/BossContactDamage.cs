@@ -13,6 +13,9 @@ public class BossContactDamage : MonoBehaviour
 
     private CinemachineImpulseSource impulseSource;
 
+    [SerializeField] private bool pushInSetDirection = false;
+    [SerializeField] private Vector2 setPushDirection;
+
     private void Awake()
     {
         impulseSource = GetComponent<CinemachineImpulseSource>();
@@ -22,7 +25,15 @@ public class BossContactDamage : MonoBehaviour
     {
         if (collision.TryGetComponent(out Core_Knockback component))
         {
-            component.Knockback(transform, knockbackForce);
+            if (!pushInSetDirection)
+            {
+                component.Knockback(transform, knockbackForce);
+            }
+            else
+            {
+                component.Knockback(setPushDirection, knockbackForce, 1);
+            }
+            
             CameraShakeManager.Instance.ScreenShakeFromProfile(shakeProfile, impulseSource);
         }
 

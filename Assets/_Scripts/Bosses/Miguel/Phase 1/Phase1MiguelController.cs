@@ -11,6 +11,8 @@ public class Phase1MiguelController : MonoBehaviour
     public P1MiguelST_Idle IdleState { get; private set; }
     public P1MiguelST_FlameAttack FlameAttack { get; private set; }
 
+    public P1MiguelST_NormalAttack NormalAttack { get; private set; }
+
     #endregion
 
     #region Components
@@ -21,6 +23,7 @@ public class Phase1MiguelController : MonoBehaviour
     private Animator anim;
     private CharacterAnimatorEvent animatorEvent;
     private CinemachineImpulseSource impulseSource;
+    public BeamWeapon beamWeapon {  get; private set; }
 
     [Header("Scriptable Objects")]
     [SerializeField] private P1MiguelStats miguelStats;
@@ -66,10 +69,12 @@ public class Phase1MiguelController : MonoBehaviour
         soundLibrary.Initialize();
 
         animatorEvent = GetComponentInChildren<CharacterAnimatorEvent>();
+        beamWeapon = GetComponentInChildren<BeamWeapon>();
 
         StateMachine = new StateMachine();
         IdleState = new P1MiguelST_Idle(this, StateMachine, miguelStats, anim, "Idle");
         FlameAttack = new P1MiguelST_FlameAttack(this, StateMachine, miguelStats, anim, "FlameWindUp");
+        NormalAttack = new P1MiguelST_NormalAttack(this, StateMachine, miguelStats, anim, "NormalWindUp");
     }
 
     private void Start()
@@ -86,6 +91,8 @@ public class Phase1MiguelController : MonoBehaviour
     private void OnDisable()
     {
         IdleState.UnsubscribeToEvents();
+        FlameAttack.UnsubscribeToEvents();
+        NormalAttack.UnsubscribeToEvents();
 
         animatorEvent.OnAnimationFinishedTrigger -= AnimationFinishedTrigger;
     }

@@ -19,8 +19,6 @@ public class P1MiguelST_Idle : P1MiguelState
     {
         base.OnEnter();
 
-        Debug.Log("IdleState");
-
         snakeAttacked = false;
 
         beatTimer = 0;
@@ -74,5 +72,7 @@ public class P1MiguelST_Idle : P1MiguelState
         }
 
         //Change to normal Attack State
+        stateMachine.ChangeState(controller.NormalAttack);
+        BeatManager.Instance.intervals[0].OnBeatEvent -= BeatTimer;
     }
 }

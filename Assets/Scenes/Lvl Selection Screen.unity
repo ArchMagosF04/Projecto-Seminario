@@ -558,6 +558,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   argentinaSprite: {fileID: 1871389102}
   brazilSprite: {fileID: 1999835121}
+  mexicoSprite: {fileID: 1117382391}
   accordeonLock: {fileID: 120848292}
   saxofonLock: {fileID: 175564647}
   levelSelectorController: {fileID: 457387602}
@@ -3720,6 +3721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4524393906497b4890dcafc6d97c207, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  progressManager: {fileID: 90720526}
   code: 
 --- !u!4 &1098154216
 Transform:

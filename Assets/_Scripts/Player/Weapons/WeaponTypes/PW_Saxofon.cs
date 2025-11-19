@@ -163,8 +163,5 @@ public class PW_Saxofon : PlayerWeapon
             projectile.GetComponent<SaxofonSpecialProjectile>().LaunchProjectile(transform.right);
             return;
         }
-
-        
-
     }
 }

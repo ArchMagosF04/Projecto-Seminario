@@ -40,6 +40,7 @@ public class P2MiguelST_NormalAttack : P2MiguelState
         base.OnExit();
         BeatManager.Instance.intervals[0].OnBeatEvent -= PerformAttack;
         controller.DesiredAction = Phase2MiguelController.ActionType.None;
+        anim.ResetTrigger("AttackBeat");
     }
 
     public void PerformAttack()
@@ -56,6 +57,8 @@ public class P2MiguelST_NormalAttack : P2MiguelState
 
         if (beamIndex >= controller.skyBeams.Length)
         {
+            anim.SetTrigger("AttackBeat");
+
             foreach (BeamWeapon beam in controller.skyBeams)
             {
                 beam.FireBeam();

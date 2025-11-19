@@ -65,21 +65,22 @@ public class Phase2MiguelController : MonoBehaviour
         impulseSource = GetComponent<CinemachineImpulseSource>();
 
         anim = GetComponentInChildren<Animator>();
-        anim.SetFloat("BeatSpeedMult", BeatManager.Instance.BeatSpeedMultiplier);
+        
         soundLibrary.Initialize();
 
         animatorEvent = GetComponentInChildren<CharacterAnimatorEvent>();
 
         StateMachine = new StateMachine();
         IdleState = new P2MiguelST_Idle(this, StateMachine, miguelStats, anim, "Idle");
-        JumpState = new P2MiguelST_Jump(this, StateMachine, miguelStats, anim, "FlameWindUp");
-        NormalAttack = new P2MiguelST_NormalAttack(this, StateMachine, miguelStats, anim, "NormalWindUp");
+        JumpState = new P2MiguelST_Jump(this, StateMachine, miguelStats, anim, "Jump");
+        NormalAttack = new P2MiguelST_NormalAttack(this, StateMachine, miguelStats, anim, "Attack");
         AirborneState = new P2MiguelST_Airborne(this, StateMachine, miguelStats, anim, "InAir");
-        SpecialAttack = new P2MiguelST_SpecialAttack(this, StateMachine, miguelStats, anim, "SpecialWindUp");
+        SpecialAttack = new P2MiguelST_SpecialAttack(this, StateMachine, miguelStats, anim, "Attack");
     }
 
     private void Start()
     {
+        anim.SetFloat("BeatSpeedMult", BeatManager.Instance.BeatSpeedMultiplier);
         StateMachine.Initialize(IdleState);
         player = GameManager.Instance.PlayerInstance.transform;
     }
@@ -92,6 +93,10 @@ public class Phase2MiguelController : MonoBehaviour
     private void OnDisable()
     {
         IdleState.UnsubscribeToEvents();
+        JumpState.UnsubscribeToEvents();
+        NormalAttack.UnsubscribeToEvents();
+        AirborneState.UnsubscribeToEvents();
+        SpecialAttack.UnsubscribeToEvents();
 
         animatorEvent.OnAnimationFinishedTrigger -= AnimationFinishedTrigger;
     }

@@ -14,6 +14,19 @@ public class P2MiguelST_Airborne : P2MiguelState
         collisionSenses = core.GetCoreComponent<Core_CollisionSenses>();
     }
 
+    public override void OnEnter()
+    {
+        DoChecks();
+        startTime = Time.time;
+        isAnimationFinished = false;
+        isExitingState = false;
+    }
+
+    public override void OnExit()
+    {
+        isExitingState = true;
+    }
+
     public override void OnUpdate()
     {
         base.OnUpdate();
@@ -25,7 +38,7 @@ public class P2MiguelST_Airborne : P2MiguelState
         }
         else
         {
-            anim.SetFloat("yVelocity", movement.CurrentVelocity.y);
+            //anim.SetFloat("yVelocity", movement.CurrentVelocity.y);
         }
     }
 }

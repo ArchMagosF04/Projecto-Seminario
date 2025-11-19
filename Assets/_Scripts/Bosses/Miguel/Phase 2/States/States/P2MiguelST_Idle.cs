@@ -46,7 +46,8 @@ public class P2MiguelST_Idle : P2MiguelState
     {
         beatTimer++;
 
-        anim.SetTrigger("OnBeat");
+        //anim.ResetTrigger("IdleBeat");
+        anim.SetTrigger("IdleBeat");
         //controller.PlaySound("FingerSnap");
 
         if (beatTimer >= stats.BeatsSpentOnIdle && !controller.Speaking)

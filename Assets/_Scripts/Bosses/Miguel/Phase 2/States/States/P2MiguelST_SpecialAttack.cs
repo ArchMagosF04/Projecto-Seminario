@@ -34,6 +34,7 @@ public class P2MiguelST_SpecialAttack : P2MiguelState
         base.OnExit();
         BeatManager.Instance.intervals[0].OnBeatEvent -= PerformAttack;
         controller.DesiredAction = Phase2MiguelController.ActionType.None;
+        anim.ResetTrigger("AttackBeat");
     }
 
     public void PerformAttack()
@@ -56,6 +57,8 @@ public class P2MiguelST_SpecialAttack : P2MiguelState
 
         if (beatTimer >= 2 + stats.BeatsBeforeSpecialAttack)
         {
+            anim.SetTrigger("AttackBeat");
+
             foreach (BeamWeapon beam in controller.bodyBeams)
             {
                 beam.FireBeam();

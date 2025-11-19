@@ -5,31 +5,37 @@ using UnityEngine;
 
 public class SaxofonProjectile : MonoBehaviour
 {
-    [SerializeField] private float damage;
-    [SerializeField] private float knockback;
-    [SerializeField] private float speed;   
-
     private Vector2 moveDirection;
 
     [SerializeField] private float lifeTime = 5f;
 
-    [SerializeField] private ScreenShakeProfile shakeProfile;
+    [SerializeField] private int maxBounces = 2;
 
-    private Rigidbody2D rb;
-    private CinemachineImpulseSource impulseSource;
+    [SerializeField] private ScreenShakeProfile shakeProfile;
     public bool destroy = false;
 
-    public event System.Action OnHit = delegate { };
+    [SerializeField] private float lifetime = 5f;
+
+    private bool isOnBeat;
+
+    private float damage;
+    private float speed;
+    private float manaOnHit;
+
+    private Rigidbody2D rb;
+    private Animator anim;
+    private CharacterAnimatorEvent animatorEvent;
+    private Core_Mana manaComponent;
+    private SpriteRenderer spriteRenderer;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        impulseSource = GetComponent<CinemachineImpulseSource>();
-    }
-
-    private void Start()
-    {
-        Destroy(gameObject, lifeTime);
+        rb = GetComponent<Rigidbody2D>();
+        anim = GetComponentInChildren<Animator>();
+        animatorEvent = GetComponentInChildren<CharacterAnimatorEvent>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        Destroy(gameObject, lifetime);
     }
 
     public void LaunchProjectile(Vector2 direction)
@@ -38,38 +44,50 @@ public class SaxofonProjectile : MonoBehaviour
         rb.velocity = direction * speed;
     }
 
+    public void InitializeProjectile(bool isOnBeat, Core_Mana mana, float manaOnHit, float damage, float speed, Vector2 direction)
+    {
+        this.isOnBeat = isOnBeat;
+        manaComponent = mana;
+        this.manaOnHit = manaOnHit;
+        this.damage = damage;
+        this.speed = speed;
+
+        moveDirection = direction;
+        rb.velocity = direction * this.speed;
+
+        if (!isOnBeat) spriteRenderer.color = Color.red;
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == 3 || collision.gameObject.layer == 6)
-        {
-            //Vector2 inDirection = rb.velocity.normalized;
-            //Vector2 normal = collision.contacts[0].normal;
-            //Vector2 reflectDir = Vector2.Reflect(inDirection, normal);
+        if (maxBounces <= 0) Destroy(gameObject);
 
-            //print(collision.contacts[0].normal);
-            LaunchProjectile(moveDirection + collision.contacts[0].normal*2);
+        if ((collision.gameObject.layer == 3 || collision.gameObject.layer == 19))
+        {
+            LaunchProjectile(new Vector2 (moveDirection.x, moveDirection.y * -1));
+
+            maxBounces--;
+        }
+        else if ((collision.gameObject.layer == 6))
+        {
+            LaunchProjectile(new Vector2(moveDirection.x * -1, moveDirection.y));
+
+            maxBounces--;
         }
     }
 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.TryGetComponent(out Core_Knockback component))
-        {
-            component.Knockback(transform, knockback);
-            CameraShakeManager.Instance.ScreenShakeFromProfile(shakeProfile, impulseSource);
-        }
-
         if (collision.TryGetComponent(out IDamageable health))
         {
             health.TakeDamage(damage, transform.right);
-            OnHit();
+            if (isOnBeat) manaComponent.IncreaseMana(manaOnHit);
         }
 
-        if(collision.gameObject.layer == 7 || collision.gameObject.layer == 8) Destroy(gameObject);
+        if (collision.gameObject.layer == 8) Destroy(gameObject);
 
         if (destroy) Destroy(gameObject);
-
     }
 
     public void SetDamage(float amount)
@@ -90,10 +108,5 @@ public class SaxofonProjectile : MonoBehaviour
     public Vector2 GetDirection()
     {
         return moveDirection;
-    }
-
-    private void OnDestroy()
-    {
-        OnHit = null;
     }
 }

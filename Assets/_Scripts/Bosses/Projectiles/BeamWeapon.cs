@@ -27,9 +27,13 @@ public class BeamWeapon : MonoBehaviour
 
     [Header("AimMode Look")]
     [SerializeField] private float a_size = 0.1f;
+    [SerializeField] private float a_startSize = 0.02f;
+
 
     [Header("FireMode Look")]
     [SerializeField] private float f_size = 0.35f;
+    [SerializeField] private float f_startSize = 0.15f;
+
 
     private float startFireTime;
 
@@ -121,13 +125,13 @@ public class BeamWeapon : MonoBehaviour
 
     private void SetBeamAttackLook()
     {
-        lineRenderer.startWidth = f_size;
+        lineRenderer.startWidth = f_startSize;
         lineRenderer.endWidth = f_size;
     }
 
     private void SetBeamAimLook()
     {
-        lineRenderer.startWidth = a_size;
+        lineRenderer.startWidth = a_startSize;
         lineRenderer.endWidth = a_size;
     }
 

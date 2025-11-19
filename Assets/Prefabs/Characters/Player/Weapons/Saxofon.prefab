@@ -131,7 +131,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1525198269342911876}
-  - component: {fileID: -5154830600600030853}
+  - component: {fileID: 2617018485782282652}
   m_Layer: 0
   m_Name: Saxofon
   m_TagString: Untagged
@@ -155,7 +155,7 @@ Transform:
   - {fileID: 4893182401013780609}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-5154830600600030853
+--- !u!114 &2617018485782282652
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -164,14 +164,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 9010585096820931969}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9eacff54a61b51f4db522c62b49e2ed6, type: 3}
+  m_Script: {fileID: 11500000, guid: d8f6ea15ba79ba740887992eee0cfe8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   <UseWeaponOnReleaseInput>k__BackingField: 0
-  basicAttackDamage: 3
+  damageMultOnMiss: 0.25
+  speedMultOnMiss: 0.8
+  bulletAngle: 0.5
   statusDuration: 10
-  manaOnBeatHit: 100
+  manaOnHit: 3
+  damage: 2.5
+  speed: 15
+  normalProjectile: {fileID: 720204606514470914, guid: 045612d6e8819194b97a65fbcfb80b18, type: 3}
+  specialProjectile: {fileID: 5792874112058154336, guid: 0842479055063294a9cdd71611f6b2ff, type: 3}
   soundLibrary: {fileID: 11400000, guid: 5f5e27b0771f1e6419086f8afc665f57, type: 2}
-  projectiles:
-  - {fileID: 3848427730215156677, guid: 045612d6e8819194b97a65fbcfb80b18, type: 3}
-  - {fileID: 3848427730215156677, guid: 0842479055063294a9cdd71611f6b2ff, type: 3}

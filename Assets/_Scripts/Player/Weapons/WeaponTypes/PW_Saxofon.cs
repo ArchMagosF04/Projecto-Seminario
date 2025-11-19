@@ -119,7 +119,7 @@ public class PW_Saxofon : PlayerWeapon
             projectile.GetComponent<SaxofonProjectile>().SetDamage(damage * mod);
             projectile2.GetComponent<SaxofonProjectile>().SetDamage(damage * mod);
 
-            if (onBeat) projectile.GetComponent<SaxofonProjectile>().OnHit += RecoverMana;
+            //if (onBeat) projectile.GetComponent<SaxofonProjectile>().OnHit += RecoverMana;
 
             if (onBeat)
             {

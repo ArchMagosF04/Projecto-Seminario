@@ -1755,6 +1755,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9217721817967994644, guid: 1e0a4559a14644644a784982c21b852b, type: 3}
+      propertyPath: m_Layer
+      value: 19
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 9002573596159828385, guid: 1e0a4559a14644644a784982c21b852b, type: 3}
@@ -2080,7 +2084,9 @@ MonoBehaviour:
   damage: 10
   knockBack: 10
   a_size: 0.05
+  a_startSize: 0.02
   f_size: 0.5
+  f_startSize: 0.15
 --- !u!120 &412117961
 LineRenderer:
   serializedVersion: 2
@@ -3034,7 +3040,9 @@ MonoBehaviour:
   damage: 10
   knockBack: 10
   a_size: 0.05
+  a_startSize: 0.02
   f_size: 0.4
+  f_startSize: 0.15
 --- !u!120 &627315506
 LineRenderer:
   serializedVersion: 2
@@ -3080,8 +3088,8 @@ LineRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 2
   m_Positions:
-  - {x: 0, y: 1.13, z: 0}
-  - {x: 6, y: 1.11, z: 1}
+  - {x: 0, y: -3.23, z: 0}
+  - {x: 6, y: -3.22, z: 1}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -3097,6 +3105,15 @@ LineRenderer:
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.9727273
+        value: 0.37777779
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -4316,7 +4333,9 @@ MonoBehaviour:
   damage: 10
   knockBack: 10
   a_size: 0.05
+  a_startSize: 0.02
   f_size: 0.5
+  f_startSize: 0.15
 --- !u!120 &1155895323
 LineRenderer:
   serializedVersion: 2
@@ -5874,7 +5893,9 @@ MonoBehaviour:
   damage: 10
   knockBack: 10
   a_size: 0.05
+  a_startSize: 0.02
   f_size: 0.5
+  f_startSize: 0.15
 --- !u!120 &1808718572
 LineRenderer:
   serializedVersion: 2

@@ -76,7 +76,7 @@ public class PlayerWeapon : MonoBehaviour
         //    healthComponent.TakeDamage(5, Vector2.zero);
         //}
 
-            OnBasicEnter?.Invoke();
+        OnBasicEnter?.Invoke();
 
         anim.SetBool("Active", true);
     }

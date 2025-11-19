@@ -16,7 +16,10 @@ public class P2MiguelST_Jump : P2MiguelState
 
     public override void OnEnter()
     {
-        base.OnEnter();
+        DoChecks();
+        startTime = Time.time;
+        isAnimationFinished = false;
+        isExitingState = false;
 
         if (controller.DesiredAction == Phase2MiguelController.ActionType.Jump) 
             controller.DesiredAction = Phase2MiguelController.ActionType.None;
@@ -27,6 +30,11 @@ public class P2MiguelST_Jump : P2MiguelState
 
         //controller.PlaySound("Jump");
         PerformJump();
+    }
+
+    public override void OnExit()
+    {
+        isExitingState = true;
     }
 
     public override void DoChecks()

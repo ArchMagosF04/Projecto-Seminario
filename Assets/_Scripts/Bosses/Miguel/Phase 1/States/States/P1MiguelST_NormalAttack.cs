@@ -65,6 +65,7 @@ public class P1MiguelST_NormalAttack : P1MiguelState
             }
             else if (!attackPerformed)
             {
+                anim.SetTrigger("AttackBeat");
                 FireBeam();
                 attackPerformed = true;
             }
@@ -82,5 +83,7 @@ public class P1MiguelST_NormalAttack : P1MiguelState
         base.OnExit();
         BeatManager.Instance.intervals[0].OnBeatEvent -= BeatTimer;
         movement.CanSetVelocity = true;
+
+        anim.ResetTrigger("AttackBeat");
     }
 }

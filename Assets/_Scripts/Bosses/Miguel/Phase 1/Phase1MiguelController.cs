@@ -73,8 +73,8 @@ public class Phase1MiguelController : MonoBehaviour
 
         StateMachine = new StateMachine();
         IdleState = new P1MiguelST_Idle(this, StateMachine, miguelStats, anim, "Idle");
-        FlameAttack = new P1MiguelST_FlameAttack(this, StateMachine, miguelStats, anim, "FlameWindUp");
-        NormalAttack = new P1MiguelST_NormalAttack(this, StateMachine, miguelStats, anim, "NormalWindUp");
+        FlameAttack = new P1MiguelST_FlameAttack(this, StateMachine, miguelStats, anim, "Attack");
+        NormalAttack = new P1MiguelST_NormalAttack(this, StateMachine, miguelStats, anim, "Attack");
     }
 
     private void Start()

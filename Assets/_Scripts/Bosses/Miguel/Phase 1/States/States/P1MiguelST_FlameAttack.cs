@@ -16,8 +16,6 @@ public class P1MiguelST_FlameAttack : P1MiguelState
 
         attackPerformed = false;
 
-        Debug.Log("FlameState");
-
         BeatManager.Instance.intervals[0].OnBeatEvent += PerformAttack;
     }
 
@@ -32,6 +30,7 @@ public class P1MiguelST_FlameAttack : P1MiguelState
     {
         base.OnExit();
         BeatManager.Instance.intervals[0].OnBeatEvent -= PerformAttack;
+        anim.ResetTrigger("AttackBeat");
     }
 
     public void PerformAttack()
@@ -40,7 +39,7 @@ public class P1MiguelST_FlameAttack : P1MiguelState
 
         if (controller.Speaking) return;
 
-        anim.SetTrigger("NormalAttackBeat");
+        anim.SetTrigger("AttackBeat");
 
         controller.FloorsManager.FlameAttack();
 

@@ -10169,11 +10169,11 @@ PrefabInstance:
     - target: {fileID: 5537254259798757842, guid: 4d40a187711fb064f9755077f23dee53, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 8300000, guid: 06b1bdf1d4e958a4ab1a21b5b316fc93, type: 3}
+      objectReference: {fileID: 8300000, guid: c2c711a91cf77154eaf9542d4000460b, type: 3}
     - target: {fileID: 5537254259798757842, guid: 4d40a187711fb064f9755077f23dee53, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 06b1bdf1d4e958a4ab1a21b5b316fc93, type: 3}
+      objectReference: {fileID: 8300000, guid: c2c711a91cf77154eaf9542d4000460b, type: 3}
     - target: {fileID: 6085017546313492723, guid: 4d40a187711fb064f9755077f23dee53, type: 3}
       propertyPath: m_Name
       value: BeatManager
@@ -10802,7 +10802,7 @@ PrefabInstance:
     - target: {fileID: 2542090506015007666, guid: 0008666ab4d4e424a865852fd8ca60f7, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: f997c0989e430ea438887a014044e571, type: 3}
+      objectReference: {fileID: -9201241512177023075, guid: 53d2c68bb56a7284c8a24b99bcc5e032, type: 3}
     - target: {fileID: 7795981718543596149, guid: 0008666ab4d4e424a865852fd8ca60f7, type: 3}
       propertyPath: m_Pivot.x
       value: 0

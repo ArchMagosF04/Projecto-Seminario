@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(CinemachineImpulseSource))]
-public class BossContactDamage : MonoBehaviour
+public class FiniteDamager : MonoBehaviour
 {
     [SerializeField] private float damage;
     [SerializeField] private float knockbackForce;
@@ -33,7 +33,7 @@ public class BossContactDamage : MonoBehaviour
             {
                 component.Knockback(setPushDirection, knockbackForce, 1);
             }
-            
+
             CameraShakeManager.Instance.ScreenShakeFromProfile(shakeProfile, impulseSource);
         }
 
@@ -41,5 +41,7 @@ public class BossContactDamage : MonoBehaviour
         {
             health.TakeDamage(damage, transform.right);
         }
+
+        Destroy(gameObject);
     }
 }

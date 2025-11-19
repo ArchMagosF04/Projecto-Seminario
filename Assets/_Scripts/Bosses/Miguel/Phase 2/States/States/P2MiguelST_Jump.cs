@@ -21,6 +21,10 @@ public class P2MiguelST_Jump : P2MiguelState
         if (controller.DesiredAction == Phase2MiguelController.ActionType.Jump) 
             controller.DesiredAction = Phase2MiguelController.ActionType.None;
 
+        if (Random.value > 0.5) controller.serpentController.LargeTornadoAttack(Random.Range(1, 4));
+        else controller.serpentController.SmallTornadoAttack(Random.Range(1, 4));
+        
+
         //controller.PlaySound("Jump");
         PerformJump();
     }

@@ -179,10 +179,10 @@ MonoBehaviour:
   manaOnHit_1st: 2
   damage_1st: 3
   speed_1st: 80
-  manaOnHit_2nd: 4
+  manaOnHit_2nd: 5
   damage_2nd: 4
   speed_2nd: 75
-  manaOnHit_3rd: 9
+  manaOnHit_3rd: 11
   damage_3rd: 10
   speed_3rd: 70
   chargeLv1Prefab: {fileID: 7139770639813743709, guid: d5578d0fe7db14943b905cebd027a934, type: 3}

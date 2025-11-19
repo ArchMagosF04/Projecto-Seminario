@@ -32,6 +32,7 @@ public class Phase2MiguelController : MonoBehaviour
     [Header("Attack References")]
     public BeamWeapon[] skyBeams;
     public BeamWeapon[] bodyBeams;
+    [field: SerializeField] public SerpentController serpentController {  get; private set; }
 
     [field: Header("Waypoints")]
     [field: SerializeField] public Transform RightWaypoint;

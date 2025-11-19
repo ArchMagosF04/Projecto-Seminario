@@ -46,7 +46,7 @@ public class P2MiguelST_SpecialAttack : P2MiguelState
 
         beatTimer++;
 
-        if (beatTimer == 1)
+        if (beatTimer == (1 + stats.BeatsBeforeSpecialAttack))
         {
             foreach(BeamWeapon beam in controller.bodyBeams)
             {
@@ -54,7 +54,7 @@ public class P2MiguelST_SpecialAttack : P2MiguelState
             }
         }
 
-        if (beatTimer >= 2)
+        if (beatTimer >= 2 + stats.BeatsBeforeSpecialAttack)
         {
             foreach (BeamWeapon beam in controller.bodyBeams)
             {

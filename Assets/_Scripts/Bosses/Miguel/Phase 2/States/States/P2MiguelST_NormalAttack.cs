@@ -10,6 +10,8 @@ public class P2MiguelST_NormalAttack : P2MiguelState
 
     private Transform targetPlayer;
 
+    private int beamIndex;
+
     public P2MiguelST_NormalAttack(Phase2MiguelController controller, StateMachine stateMachine, P2MiguelStats stats, Animator anim, string animBoolName) : base(controller, stateMachine, stats, anim, animBoolName)
     {
         targetPlayer = GameManager.Instance.PlayerInstance.transform;
@@ -20,6 +22,7 @@ public class P2MiguelST_NormalAttack : P2MiguelState
         base.OnEnter();
 
         beatTimer = 0;
+        beamIndex = 0;
         attackPerformed = false;
 
         BeatManager.Instance.intervals[0].OnBeatEvent += PerformAttack;
@@ -41,13 +44,17 @@ public class P2MiguelST_NormalAttack : P2MiguelState
 
     public void PerformAttack()
     {
+        beatTimer++;
+
+        if (beatTimer <= stats.BeatsBeforeNormalAttack) return;
+
         if (attackPerformed)
         {
             stateMachine.ChangeState(controller.IdleState);
             return;
         }
 
-        if (beatTimer >= controller.skyBeams.Length)
+        if (beamIndex >= controller.skyBeams.Length)
         {
             foreach (BeamWeapon beam in controller.skyBeams)
             {
@@ -59,10 +66,9 @@ public class P2MiguelST_NormalAttack : P2MiguelState
             return;
         }
 
-        BeamWeapon selectedBeam = controller.skyBeams[beatTimer];
+        BeamWeapon selectedBeam = controller.skyBeams[beamIndex];
         selectedBeam.transform.position = new Vector2(targetPlayer.position.x + Random.Range(-1f, 1f), selectedBeam.transform.position.y);
         selectedBeam.SetAim();
-
-        beatTimer++;
+        beamIndex++;
     }
 }

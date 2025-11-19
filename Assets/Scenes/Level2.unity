@@ -2575,7 +2575,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.00000047683716, y: 0.019684764, z: -10}
+  m_LocalPosition: {x: -0.00055933, y: 0.019685002, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10853,6 +10853,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Neighbor03
       objectReference: {fileID: 0}
+    - target: {fileID: 1326024032128221259, guid: 8169dc9050a16bf46a30f2c6a8c2be7d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2347727738113090267, guid: 8169dc9050a16bf46a30f2c6a8c2be7d, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -11768,6 +11772,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Neighbor01
       objectReference: {fileID: 0}
+    - target: {fileID: 4467550591350007012, guid: 585327fe89712434bba589a4bb7c6202, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4607340858095563975, guid: 585327fe89712434bba589a4bb7c6202, type: 3}
       propertyPath: pushPlatform
       value: 
@@ -11874,6 +11882,10 @@ PrefabInstance:
     - target: {fileID: 2586498077634720699, guid: f03aa6665a089a447b1adde3fc3f822e, type: 3}
       propertyPath: m_Name
       value: Neighbor02
+      objectReference: {fileID: 0}
+    - target: {fileID: 2586498077634720699, guid: f03aa6665a089a447b1adde3fc3f822e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

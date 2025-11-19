@@ -1087,7 +1087,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 391517641870360372, guid: 75da7327820141c4781458b9a2f6adfa, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 571411160704451285, guid: 75da7327820141c4781458b9a2f6adfa, type: 3}
       propertyPath: m_SizeDelta.x
@@ -7866,7 +7866,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3392897585196418049, guid: 4d40a187711fb064f9755077f23dee53, type: 3}
       propertyPath: <BPM>k__BackingField
-      value: 130
+      value: 140
       objectReference: {fileID: 0}
     - target: {fileID: 5537254259798757842, guid: 4d40a187711fb064f9755077f23dee53, type: 3}
       propertyPath: m_Volume

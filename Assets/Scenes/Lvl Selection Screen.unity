@@ -2371,7 +2371,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 7986272451909595751, guid: a66c1f4fe419edd448d5593a6777a747, type: 3}
+  m_Sprite: {fileID: -2262020800815126935, guid: 449a3ec63809efd4f95932d929a9b369, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4122,7 +4122,7 @@ MonoBehaviour:
   m_text: Button
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 783f7c4038ed6094fa03e3a542b8544f, type: 2}
-  m_sharedMaterial: {fileID: 1095243426707246435, guid: e37b860afdea35848b123ec2aee04bd5, type: 2}
+  m_sharedMaterial: {fileID: 7568704545940115270, guid: 783f7c4038ed6094fa03e3a542b8544f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6219,7 +6219,7 @@ MonoBehaviour:
   m_text: Button
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 783f7c4038ed6094fa03e3a542b8544f, type: 2}
-  m_sharedMaterial: {fileID: 1095243426707246435, guid: e37b860afdea35848b123ec2aee04bd5, type: 2}
+  m_sharedMaterial: {fileID: 7568704545940115270, guid: 783f7c4038ed6094fa03e3a542b8544f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6391,7 +6391,7 @@ MonoBehaviour:
   m_text: Button
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 783f7c4038ed6094fa03e3a542b8544f, type: 2}
-  m_sharedMaterial: {fileID: 1095243426707246435, guid: e37b860afdea35848b123ec2aee04bd5, type: 2}
+  m_sharedMaterial: {fileID: 7568704545940115270, guid: 783f7c4038ed6094fa03e3a542b8544f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

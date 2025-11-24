@@ -74,6 +74,7 @@ MonoBehaviour:
     unityTrigger:
       m_PersistentCalls:
         m_Calls: []
+  soundLibrary: {fileID: 11400000, guid: dbb20768e4d4a4948a716bb3e12dba7c, type: 2}
 --- !u!82 &5537254259798757842
 AudioSource:
   m_ObjectHideFlags: 0

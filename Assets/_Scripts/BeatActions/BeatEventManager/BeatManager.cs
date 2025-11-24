@@ -17,6 +17,8 @@ public class BeatManager : MonoBehaviour
 
     [field: SerializeField] public Interval[] intervals { get; private set; }
 
+    [SerializeField] private SoundLibraryObject soundLibrary;
+
     public float BeatSpeedMultiplier { get; private set; }
 
     private float normalMusicVolume;
@@ -34,8 +36,14 @@ public class BeatManager : MonoBehaviour
         }
 
         CalculateAnimationSpeedMultiplier();
+        soundLibrary.Initialize();
         
         normalMusicVolume = AudioSource.volume;
+    }
+
+    public void PlaySound(string name)
+    {
+        SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound(name)).Play();
     }
 
     public void ToggleMusic(bool input)

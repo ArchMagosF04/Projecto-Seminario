@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour, ISpeaker
     public Animator Anim { get; private set; }
     public SpriteRenderer playerSprite { get; private set; }
     public BeatComboCounter BeatCombo { get; private set; }
+    public AfterImage AfterImageController { get; private set; }
     [field: SerializeField] public BoxCollider2D[] PlayerCollider { get; private set; }
 
     [SerializeField] private PlayerStats playerData;
@@ -70,6 +71,7 @@ public class PlayerController : MonoBehaviour, ISpeaker
         playerSprite = GetComponentInChildren<SpriteRenderer>();
         collisionSenses = Core.GetCoreComponent<Core_CollisionSenses>();
         animatorEvent = GetComponentInChildren<CharacterAnimatorEvent>();
+        AfterImageController = GetComponentInChildren<AfterImage>();
         soundLibrary.Initialize();
 
         if (PlayerCollider.Length != 2) Debug.LogError("Player got the wrong colliders.");

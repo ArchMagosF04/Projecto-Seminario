@@ -23,6 +23,8 @@ public class FiniteDamager : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        bool hadEffect = false;
+
         if (collision.TryGetComponent(out Core_Knockback component))
         {
             if (!pushInSetDirection)
@@ -34,14 +36,19 @@ public class FiniteDamager : MonoBehaviour
                 component.Knockback(setPushDirection, knockbackForce, 1);
             }
 
-            CameraShakeManager.Instance.ScreenShakeFromProfile(shakeProfile, impulseSource);
+            if (!component.HyperArmor)
+            {
+                hadEffect = true;
+                CameraShakeManager.Instance.ScreenShakeFromProfile(shakeProfile, impulseSource);
+            }
         }
 
-        if (collision.TryGetComponent(out IDamageable health))
+        if (collision.TryGetComponent(out Core_Health health))
         {
             health.TakeDamage(damage, transform.right);
+            if (!health.Invincible) hadEffect = true;
         }
 
-        Destroy(gameObject);
+        if (hadEffect) Destroy(gameObject);
     }
 }

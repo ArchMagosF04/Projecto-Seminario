@@ -209,7 +209,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4485169087555865174}
@@ -227,6 +227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 861e6bd58ae6093429a4a3a86f0c5e6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <UseWeaponOnReleaseInput>k__BackingField: 0
   basicAttackDamage: 5
   specialAttackDamage: 4
   damgePenalty: 3

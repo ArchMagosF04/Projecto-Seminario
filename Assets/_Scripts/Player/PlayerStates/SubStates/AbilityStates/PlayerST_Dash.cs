@@ -15,12 +15,14 @@ public class PlayerST_Dash : PlayerST_Ability
 
     private Vector2 dashDirection;
 
-    //private DamageReceiver damageReceiver;
-    //private KnockBackReceiver knockBackReceiver;
+    private Core_Health healthComponent;
+    private Core_Knockback knockbackComponent;
 
     public PlayerST_Dash(PlayerController controller, PlayerStats stats, StateMachine stateMachine, Animator anim, string animBoolName) : base(controller, stats, stateMachine, anim, animBoolName)
     {
         dashCooldown = (60f / BeatManager.Instance.BPM) - stats.DashCooldownReduction;
+        healthComponent = core.GetCoreComponent<Core_Health>();
+        knockbackComponent = core.GetCoreComponent<Core_Knockback>();
     }
 
     public override void SubscribeToEvents()
@@ -53,7 +55,7 @@ public class PlayerST_Dash : PlayerST_Ability
             manaComponent.IncreaseMana(1);
         }
 
-        //CheckInvincibleDash();
+        CheckInvincibleDash();
 
         dashDirection = Vector2.right * Movement.FacingDirection;
     }
@@ -62,7 +64,7 @@ public class PlayerST_Dash : PlayerST_Ability
     {
         base.OnExit();
 
-        //ResetInvincibleDash();
+        ResetInvincibleDash();
 
         if (Movement.CurrentVelocity.y > 0)
         {
@@ -100,12 +102,10 @@ public class PlayerST_Dash : PlayerST_Ability
         {
             if (canInvincibleDash)
             {
-                //damageReceiver.ToggleInvincibility(true);
-                //knockBackReceiver.ToggleHyperArmor(true);
-                //spriteColor.a = 0.5f;
-                //controller.playerSprite.color = spriteColor;
-                //isInvincible = true;
-                //SoundManager.Instance.CreateSound().WithSoundData(controller.playerLibrary.soundData[0]).WithRandomPitch().Play();
+                healthComponent.ToggleInvincibility(true);
+                knockbackComponent.ToggleHyperArmor(true);
+                isInvincible = true;
+                controller.AfterImageController.Activate(true);
             }
         }
     }
@@ -115,12 +115,9 @@ public class PlayerST_Dash : PlayerST_Ability
         if (isInvincible)
         {
             isInvincible = false;
-            //damageReceiver.ToggleInvincibility(false);
-            //knockBackReceiver.ToggleHyperArmor(false);
-            //spriteColor.a = 1f;
-            //controller.playerSprite.color = spriteColor;
-            //canInvincibleDash = false;
-            //BeatManager.Instance.OneBeat.OnBeatEvent += InvincibleDashCooldown;
+            healthComponent.ToggleInvincibility(false);
+            knockbackComponent.ToggleHyperArmor(false);
+            controller.AfterImageController.Activate(false);
         }
     }
 

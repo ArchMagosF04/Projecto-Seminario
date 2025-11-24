@@ -76,7 +76,7 @@ public class PlayerST_Airborne : PlayerState
         {
             stateMachine.ChangeState(controller.LandState);
         }
-        else if (jumpInput && controller.JumpState.CanJump())
+        else if (jumpInput && controller.JumpState.CanJump() && BeatManager.Instance.BeatGracePeriod)
         {
             stateMachine.ChangeState(controller.JumpState);
         }

@@ -41,21 +41,27 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.gameObject.name);
+        bool hadEffect = false;
 
         if (collision.TryGetComponent(out Core_Knockback component))
         {
             component.Knockback(transform, knockback);
-            CameraShakeManager.Instance.ScreenShakeFromProfile(shakeProfile, impulseSource);
+            
+            if (!component.HyperArmor)
+            {
+                hadEffect = true;
+                CameraShakeManager.Instance.ScreenShakeFromProfile(shakeProfile, impulseSource);
+            }
         }
 
-        if (collision.TryGetComponent(out IDamageable health))
+        if (collision.TryGetComponent(out Core_Health health))
         {
             health.TakeDamage(damage, transform.right);
+            if (!health.Invincible) hadEffect = true;
             OnHit();
-        }    
+        }
 
-        Destroy(gameObject);      
+        if (hadEffect) Destroy(gameObject);      
     }
 
     public void SetDamage(float amount)

@@ -69,20 +69,29 @@ public class WaveProjectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        bool hadEffect = false;
+
         if (collision.TryGetComponent(out Core_Knockback component))
         {
             component.Knockback(transform, knockback);
-            CameraShakeManager.Instance.ScreenShakeFromProfile(shakeProfile, impulseSource);
+            
+            if (!component.HyperArmor)
+            {
+                hadEffect = true;
+                CameraShakeManager.Instance.ScreenShakeFromProfile(shakeProfile, impulseSource);
+            }
         }
 
-        if (collision.TryGetComponent(out IDamageable health))
+        if (collision.TryGetComponent(out Core_Health health))
         {
             health.TakeDamage(damage, transform.right);
-            if (shouldStun) GameManager.Instance.PlayerInstance.StunPlayer(stunDuration);
+            if (!health.Invincible)
+            {
+                hadEffect = true;
+                if (shouldStun) GameManager.Instance.PlayerInstance.StunPlayer(stunDuration);
+            }
         }
 
-        Debug.Log(collision.name);
-
-        Destroy(gameObject);
+        if (hadEffect) Destroy(gameObject);
     }
 }

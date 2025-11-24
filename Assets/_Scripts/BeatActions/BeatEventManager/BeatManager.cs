@@ -46,6 +46,11 @@ public class BeatManager : MonoBehaviour
         SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound(name)).Play();
     }
 
+    public void DebugTest(string message)
+    {
+        Debug.Log(message);
+    }
+
     public void ToggleMusic(bool input)
     {
         if (input) AudioSource.Play();

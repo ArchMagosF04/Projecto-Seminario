@@ -1048,10 +1048,10 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 1168175936}
-    m_SelectOnDown: {fileID: 1960186890}
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 1168175936}
     m_SelectOnLeft: {fileID: 1452159448}
-    m_SelectOnRight: {fileID: 1485380162}
+    m_SelectOnRight: {fileID: 517181500}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -1229,10 +1229,10 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 1168175936}
-    m_SelectOnDown: {fileID: 1452159448}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnUp: {fileID: 1452159448}
+    m_SelectOnDown: {fileID: 1168175936}
+    m_SelectOnLeft: {fileID: 1452159448}
+    m_SelectOnRight: {fileID: 1452159448}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -2286,10 +2286,10 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 1168175936}
-    m_SelectOnDown: {fileID: 1960186890}
-    m_SelectOnLeft: {fileID: 1452159448}
-    m_SelectOnRight: {fileID: 1485380162}
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 1168175936}
+    m_SelectOnLeft: {fileID: 305926607}
+    m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -3906,9 +3906,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 1187342942}
     m_Modifications:
     - target: {fileID: 3514024861203718901, guid: 595ad19f04e438a409fa5e6195fc52b1, type: 3}
-      propertyPath: m_Navigation.m_SelectOnDown
+      propertyPath: m_Navigation.m_SelectOnUp
       value: 
       objectReference: {fileID: 1452159448}
+    - target: {fileID: 3514024861203718901, guid: 595ad19f04e438a409fa5e6195fc52b1, type: 3}
+      propertyPath: m_Navigation.m_SelectOnDown
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3514024861203718901, guid: 595ad19f04e438a409fa5e6195fc52b1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -5202,10 +5206,10 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 1168175936}
-    m_SelectOnDown: {fileID: 0}
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 1168175936}
     m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnRight: {fileID: 305926607}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -7014,7 +7018,7 @@ MonoBehaviour:
     m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 305926607}
-    m_SelectOnDown: {fileID: 0}
+    m_SelectOnDown: {fileID: 1168175936}
     m_SelectOnLeft: {fileID: 415152711}
     m_SelectOnRight: {fileID: 1431765533}
   m_Transition: 1

@@ -52,7 +52,6 @@ public class PlayerST_Dash : PlayerST_Ability
         if (BeatManager.Instance.BeatGracePeriod)
         {
             controller.BeatCombo.ResetDecayTimer();
-            manaComponent.IncreaseMana(2);
         }
 
         CheckInvincibleDash();

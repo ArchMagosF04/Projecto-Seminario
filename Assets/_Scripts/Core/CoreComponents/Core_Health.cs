@@ -28,8 +28,10 @@ public class Core_Health : CoreComponent, IDamageable
     [Header("Events")]
     public Action OnDeath;
     public Action OnDamageReceived;
+    public Action OnInvincibleHit;
     public UnityEvent OnDeathUN;
     public UnityEvent OnDamageReceivedUN;
+    public UnityEvent OnInvincibleHitUN;
 
     public bool Invincible { get; private set; }
     public bool doubleDamage;
@@ -52,7 +54,12 @@ public class Core_Health : CoreComponent, IDamageable
 
     public void TakeDamage(float amount, Vector2 attackDirection)
     {
-        if (Invincible) return;
+        if (Invincible)
+        {
+            OnInvincibleHit?.Invoke();
+            OnInvincibleHitUN?.Invoke();
+            return;
+        }
 
         if (doubleDamage) amount = amount * 2;
 

@@ -7,8 +7,6 @@ public class SaxofonProjectile : MonoBehaviour
 {
     private Vector2 moveDirection;
 
-    [SerializeField] private float lifeTime = 5f;
-
     [SerializeField] private int maxBounces = 2;
 
     [SerializeField] private ScreenShakeProfile shakeProfile;

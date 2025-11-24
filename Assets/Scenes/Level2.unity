@@ -807,6 +807,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VerticalMetronome
       objectReference: {fileID: 0}
+    - target: {fileID: 8980650278776499613, guid: d61569667e17bec4d8e7c5b042055c8f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4720,7 +4724,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8980650278776499613, guid: b5744908c404a5e4aad8da16c4397641, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10398,6 +10402,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7071860409988344374, guid: 3183d21e511f0754ea7668c3703fd19e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7626522105702157219, guid: 3183d21e511f0754ea7668c3703fd19e, type: 3}
+      propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7777964886976272405, guid: 3183d21e511f0754ea7668c3703fd19e, type: 3}

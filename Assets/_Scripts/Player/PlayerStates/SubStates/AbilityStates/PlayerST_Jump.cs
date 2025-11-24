@@ -22,6 +22,8 @@ public class PlayerST_Jump : PlayerST_Ability
         isAbilityDone = true;
         DecreaseAmountOfJumpsLeft();
         controller.AirborneState.SetIsJumping();
+
+        if (amountOfJumpsLeft <= 0) controller.ActivateDoubleJumpParticle();
     }
 
     public override void OnExit()

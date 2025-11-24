@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.IO.LowLevel.Unsafe;
 using UnityEngine;
 using UnityEngine.InputSystem.LowLevel;
+using UnityEngine.InputSystem.XR;
 
 public class PlayerController : MonoBehaviour, ISpeaker
 {
@@ -35,6 +36,7 @@ public class PlayerController : MonoBehaviour, ISpeaker
     [SerializeField] private PlayerStats playerData;
     [SerializeField] public PlayerWeapon weapon;
     [SerializeField] private SoundLibraryObject soundLibrary;
+    [field: SerializeField] public ParticleSystem DoubleJumpParticles { get; private set; }
 
     private Core_CollisionSenses collisionSenses;
     private CharacterAnimatorEvent animatorEvent;
@@ -92,7 +94,7 @@ public class PlayerController : MonoBehaviour, ISpeaker
     private void Start()
     {
         weapon.InitializeWeapon(Core);
-
+        DoubleJumpParticles.transform.SetParent(null);
         StateMachine.Initialize(IdleState);
         Core_Mana.ManaIsFull += EnergyFullAnimation;
         animatorEvent.OnAnimationFinishedTrigger += AnimationFinishedTrigger;
@@ -209,6 +211,12 @@ public class PlayerController : MonoBehaviour, ISpeaker
 
         if (InputManager.Instance.PrimaryAttackInputStop == 2) return true;
         else return false;
+    }
+
+    public void ActivateDoubleJumpParticle()
+    {
+        DoubleJumpParticles.transform.position = new Vector3(transform.position.x, transform.position.y - 1.1f, transform.position.z);
+        DoubleJumpParticles.Play();
     }
 
     #endregion

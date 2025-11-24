@@ -623,6 +623,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7777964886976272405}
+  - {fileID: 7626522105702157219}
   - {fileID: 8048148596580502713}
   - {fileID: 7162365709204892373}
   m_Father: {fileID: 0}
@@ -718,6 +719,7 @@ MonoBehaviour:
   playerData: {fileID: 11400000, guid: 0ddf61c787af8df4c9074f1bc3df8248, type: 2}
   weapon: {fileID: 0}
   soundLibrary: {fileID: 11400000, guid: 6f37861273ea0874383c0c3cff641457, type: 2}
+  <DoubleJumpParticles>k__BackingField: {fileID: 62433800308285665}
   canAtack: 0
 --- !u!114 &6811924436956391939
 MonoBehaviour:
@@ -764,3 +766,66 @@ MonoBehaviour:
     rankDamageMultiplier: 1.6
     beatsForRankDecay: 3.2
     rankColor: {r: 1, g: 0, b: 0.6683483, a: 1}
+--- !u!1001 &2355145203348887898
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7071860409988344374}
+    m_Modifications:
+    - target: {fileID: 5294528262408098553, guid: fbe638276538b874bb746f8f1386b637, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294528262408098553, guid: fbe638276538b874bb746f8f1386b637, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294528262408098553, guid: fbe638276538b874bb746f8f1386b637, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.64278764
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294528262408098553, guid: fbe638276538b874bb746f8f1386b637, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7660445
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294528262408098553, guid: fbe638276538b874bb746f8f1386b637, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294528262408098553, guid: fbe638276538b874bb746f8f1386b637, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294528262408098553, guid: fbe638276538b874bb746f8f1386b637, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294528262408098553, guid: fbe638276538b874bb746f8f1386b637, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294528262408098553, guid: fbe638276538b874bb746f8f1386b637, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579125632719099941, guid: fbe638276538b874bb746f8f1386b637, type: 3}
+      propertyPath: m_Name
+      value: PlayerDoubleJumpPartlicle
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fbe638276538b874bb746f8f1386b637, type: 3}
+--- !u!198 &62433800308285665 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2338185283084302779, guid: fbe638276538b874bb746f8f1386b637, type: 3}
+  m_PrefabInstance: {fileID: 2355145203348887898}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7626522105702157219 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5294528262408098553, guid: fbe638276538b874bb746f8f1386b637, type: 3}
+  m_PrefabInstance: {fileID: 2355145203348887898}
+  m_PrefabAsset: {fileID: 0}

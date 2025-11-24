@@ -41,6 +41,13 @@ public class PW_Microphone : PlayerWeapon
         OnExit -= UnsubFromBeat;
     }
 
+    public override void ExecuteBasicAttack()
+    {
+        anim.SetInteger("YInput", InputManager.Instance.NormInputY);
+
+        base.ExecuteBasicAttack();
+    }
+
     private void BasicAttackDamage()
     {
         int randomSound = Random.Range(0, 3);

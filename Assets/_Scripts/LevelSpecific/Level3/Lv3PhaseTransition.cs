@@ -24,6 +24,7 @@ public class Lv3PhaseTransition : MonoBehaviour
     private void Awake()
     {
         phase2Boss.SetActive(false);
+        bossHealthBar.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -19,6 +19,8 @@ public class SideBeatMetronome : MonoBehaviour
 
     private Animator anim;
 
+    [SerializeField] private Color colorOnBeatGrace;
+
     private void Awake()
     {
         anim = GetComponentInChildren<Animator>();
@@ -78,7 +80,7 @@ public class SideBeatMetronome : MonoBehaviour
     {
         BeatManager.Instance.ToggleGracePeriod(true);
 
-        if (collision.TryGetComponent<MetronomeMarker>(out MetronomeMarker marker)) marker.ChangeMarkerColor(Color.green);
+        if (collision.TryGetComponent<MetronomeMarker>(out MetronomeMarker marker)) marker.ChangeMarkerColor(colorOnBeatGrace);
     }
 
     private void OnTriggerExit2D(Collider2D collision)

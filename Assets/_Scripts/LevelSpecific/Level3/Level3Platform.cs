@@ -24,6 +24,8 @@ public class Level3Platform : MonoBehaviour
         serpentAnim = GetComponentInChildren<Animator>();
         animatorEvent = GetComponentInChildren<CharacterAnimatorEvent>();
 
+        serpentAnim.SetFloat("BeatSpeedMult", BeatManager.Instance.BeatSpeedMultiplier);
+
         damagePlatform.SetActive(false);
         TogglePlatform(isPlatformActive);
     }
@@ -46,6 +48,13 @@ public class Level3Platform : MonoBehaviour
     {
         wasPlatformModified = true;
         spriteRenderer.color = Color.red;
+        StartCoroutine(WaitToSetOnFire());
+    }
+
+    private IEnumerator WaitToSetOnFire()
+    {
+        yield return new WaitForSeconds(60f/BeatManager.Instance.BPM);
+
         damagePlatform.SetActive(true);
     }
 

@@ -240,6 +240,7 @@ MonoBehaviour:
   - {fileID: 5558003918129530639}
   - {fileID: 657513381382460382}
   reserveMarkers: []
+  colorOnBeatGrace: {r: 1, g: 0, b: 0.7764706, a: 1}
 --- !u!1 &7614706968839451106
 GameObject:
   m_ObjectHideFlags: 0

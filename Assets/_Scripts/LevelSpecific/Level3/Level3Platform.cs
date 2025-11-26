@@ -14,17 +14,17 @@ public class Level3Platform : MonoBehaviour
     [SerializeField] private GameObject damagePlatform;
     [SerializeField] private Projectile platDebris;
     
-    private Animator serpentAnim;
+    [SerializeField] private Animator serpentAnim;
+    [SerializeField] private Animator mainPlatformAnim;
     private CharacterAnimatorEvent animatorEvent;
-    private SpriteRenderer spriteRenderer;
+    
 
     private void Awake()
     {
-        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-        serpentAnim = GetComponentInChildren<Animator>();
         animatorEvent = GetComponentInChildren<CharacterAnimatorEvent>();
 
         serpentAnim.SetFloat("BeatSpeedMult", BeatManager.Instance.BeatSpeedMultiplier);
+        mainPlatformAnim.SetFloat("BeatSpeedMult", BeatManager.Instance.BeatSpeedMultiplier);
 
         damagePlatform.SetActive(false);
         TogglePlatform(isPlatformActive);
@@ -40,14 +40,14 @@ public class Level3Platform : MonoBehaviour
         isPlatformActive = input;
 
         platformPhysics.SetActive(isPlatformActive);
-        spriteRenderer.enabled = isPlatformActive;
+        //spriteRenderer.enabled = isPlatformActive;
     }
 
     [ContextMenu("Set Platform on Fire")]
     public void SetPlatformAflame()
     {
         wasPlatformModified = true;
-        spriteRenderer.color = Color.red;
+        mainPlatformAnim.SetBool("Ignite", true);
         StartCoroutine(WaitToSetOnFire());
     }
 
@@ -78,7 +78,10 @@ public class Level3Platform : MonoBehaviour
         SpawnDebris(projectileLaunchAngle);
         SpawnDebris(new Vector2(-projectileLaunchAngle.x, projectileLaunchAngle.y));
 
-        Destroy(gameObject);
+        platformPhysics.SetActive(false);
+        mainPlatformAnim.SetBool("Break", true);
+        //spriteRenderer.sprite = brokenPlatformSprite;
+        //Destroy(gameObject);
     }
 
     [ContextMenu("Activate Platform")]

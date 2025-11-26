@@ -384,7 +384,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.47930276}
   m_AnchorMax: {x: 0, y: 0.47930276}
-  m_AnchoredPosition: {x: 118.77, y: 56.74}
+  m_AnchoredPosition: {x: 25, y: 262}
   m_SizeDelta: {x: 883.29, y: 507.82}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &57835410
@@ -2148,7 +2148,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.47930276}
   m_AnchorMax: {x: 0, y: 0.47930276}
-  m_AnchoredPosition: {x: 47.87301, y: 134}
+  m_AnchoredPosition: {x: 25, y: 262}
   m_SizeDelta: {x: 817.5, y: 453.23}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &306127449
@@ -3090,7 +3090,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.47930276}
   m_AnchorMax: {x: 0, y: 0.47930276}
-  m_AnchoredPosition: {x: 119.07, y: 58.93}
+  m_AnchoredPosition: {x: 25, y: 262}
   m_SizeDelta: {x: 817.49, y: 453.22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &481961937
@@ -3938,8 +3938,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 11
+  m_fontSizeBase: 11
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5051,7 +5051,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lejandaro Seniot.
+  m_text: Lejandaro Seniot
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 783f7c4038ed6094fa03e3a542b8544f, type: 2}
   m_sharedMaterial: {fileID: 7568704545940115270, guid: 783f7c4038ed6094fa03e3a542b8544f, type: 2}
@@ -5078,8 +5078,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 11
+  m_fontSizeBase: 11
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5440,7 +5440,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.47930276}
   m_AnchorMax: {x: 0, y: 0.47930276}
-  m_AnchoredPosition: {x: 111.95, y: 60.660004}
+  m_AnchoredPosition: {x: 25, y: 262}
   m_SizeDelta: {x: 869.65, y: 499.98}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &877305090
@@ -5858,7 +5858,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lejandaro Seniot.
+  m_text: Lejandaro Seniot
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 783f7c4038ed6094fa03e3a542b8544f, type: 2}
   m_sharedMaterial: {fileID: 7568704545940115270, guid: 783f7c4038ed6094fa03e3a542b8544f, type: 2}
@@ -5885,8 +5885,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 11
+  m_fontSizeBase: 11
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -7017,7 +7017,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.47930276}
   m_AnchorMax: {x: 0, y: 0.47930276}
-  m_AnchoredPosition: {x: 87.794, y: 76.27}
+  m_AnchoredPosition: {x: 25, y: 262}
   m_SizeDelta: {x: 754.93, y: 418.54}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1146908132
@@ -7096,7 +7096,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.47930276}
   m_AnchorMax: {x: 0, y: 0.47930276}
-  m_AnchoredPosition: {x: 123.3, y: 56.59}
+  m_AnchoredPosition: {x: 25, y: 262}
   m_SizeDelta: {x: 825.94, y: 457.91}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1148446303
@@ -7630,7 +7630,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.47930276}
   m_AnchorMax: {x: 0, y: 0.47930276}
-  m_AnchoredPosition: {x: 47.873016, y: 162.41003}
+  m_AnchoredPosition: {x: 25, y: 262}
   m_SizeDelta: {x: 757.56, y: 420}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1245891234
@@ -11760,7 +11760,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.47930276}
   m_AnchorMax: {x: 0, y: 0.47930276}
-  m_AnchoredPosition: {x: 25, y: 134}
+  m_AnchoredPosition: {x: 25, y: 262}
   m_SizeDelta: {x: 788.79, y: 437.31}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1899072343
@@ -11916,7 +11916,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.47930276}
   m_AnchorMax: {x: 0, y: 0.47930276}
-  m_AnchoredPosition: {x: 146.89, y: 43.51}
+  m_AnchoredPosition: {x: 25, y: 262}
   m_SizeDelta: {x: 873.12, y: 484.07}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1906840484
@@ -12923,7 +12923,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.47930276}
   m_AnchorMax: {x: 0, y: 0.47930276}
-  m_AnchoredPosition: {x: 47.873, y: 143.88}
+  m_AnchoredPosition: {x: 25, y: 262}
   m_SizeDelta: {x: 824.41, y: 457.06}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2003943525

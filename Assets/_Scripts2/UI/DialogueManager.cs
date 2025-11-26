@@ -174,7 +174,7 @@ public class DialogueManager : MonoBehaviour
             yield return new WaitForSeconds(screenTime);
 
             MidCombatDialogue[index].gameObject.SetActive(false);
-            Destroy(MidCombatDialogue[index]);
+            //Destroy(MidCombatDialogue[index]);
         }
         else
         {

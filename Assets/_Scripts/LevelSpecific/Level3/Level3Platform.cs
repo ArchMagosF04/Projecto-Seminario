@@ -53,8 +53,9 @@ public class Level3Platform : MonoBehaviour
 
     private IEnumerator WaitToSetOnFire()
     {
-        yield return new WaitForSeconds(60f/BeatManager.Instance.BPM);
+        yield return new WaitForSeconds((60f/BeatManager.Instance.BPM)*2);
 
+        mainPlatformAnim.SetBool("Ignite", false);
         damagePlatform.SetActive(true);
     }
 

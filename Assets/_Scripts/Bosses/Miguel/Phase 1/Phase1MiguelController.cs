@@ -107,11 +107,11 @@ public class Phase1MiguelController : MonoBehaviour, ISpeaker
     private void FixedUpdate()
     {
         StateMachine.CurrentState.OnFixedUpdate();
+        
+        CheckFlip(player);
 
         HorizontalMovement();
         VerticalMovement();
-
-        CheckFlip(player);
     }
 
     #endregion
@@ -119,6 +119,7 @@ public class Phase1MiguelController : MonoBehaviour, ISpeaker
     public void HorizontalMovement()
     {   
         if(Speaking) return;
+
         if (goingLeft)
         {
             if (transform.position.x <= leftWaypoint.position.x)

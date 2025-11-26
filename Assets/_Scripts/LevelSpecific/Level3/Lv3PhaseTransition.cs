@@ -60,6 +60,7 @@ public class Lv3PhaseTransition : MonoBehaviour
         bossHUDP1.SetActive(false);
 
         //Instantiate new Boss
+        GameObject.Find("DialogueManager").GetComponent<DialogueManager>().ChageEnemy(phase2Boss);
         phase2Boss.SetActive(true);
     }
 }

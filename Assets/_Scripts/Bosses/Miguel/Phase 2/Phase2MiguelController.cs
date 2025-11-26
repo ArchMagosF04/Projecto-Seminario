@@ -76,8 +76,6 @@ public class Phase2MiguelController : MonoBehaviour, ISpeaker
         NormalAttack = new P2MiguelST_NormalAttack(this, StateMachine, miguelStats, anim, "Attack");
         AirborneState = new P2MiguelST_Airborne(this, StateMachine, miguelStats, anim, "InAir");
         SpecialAttack = new P2MiguelST_SpecialAttack(this, StateMachine, miguelStats, anim, "Attack");
-
-        GameObject.Find("DialogueManager").GetComponent<DialogueManager>().ChageEnemy(this.gameObject);
     }
 
     private void Start()

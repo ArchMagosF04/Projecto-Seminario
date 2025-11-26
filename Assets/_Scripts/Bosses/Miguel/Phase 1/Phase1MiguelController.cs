@@ -2,8 +2,10 @@ using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
 
-public class Phase1MiguelController : MonoBehaviour
+public class Phase1MiguelController : MonoBehaviour, ISpeaker
 {
     #region State Machine
 
@@ -115,7 +117,8 @@ public class Phase1MiguelController : MonoBehaviour
     #endregion
 
     public void HorizontalMovement()
-    {
+    {   
+        if(Speaking) return;
         if (goingLeft)
         {
             if (transform.position.x <= leftWaypoint.position.x)
@@ -197,6 +200,11 @@ public class Phase1MiguelController : MonoBehaviour
     public void StopSpeaking()
     {
         speaking = false;
+    }
+
+    public float GetHealth()
+    {
+        return 100;
     }
 
     #endregion

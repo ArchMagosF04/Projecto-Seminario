@@ -11,6 +11,7 @@ public class Lv3FloorsManager : MonoBehaviour
     [SerializeField] private Vector3 boxDetectionSize;
     [SerializeField] private Vector3 boxDetectionOffset;
     [SerializeField] private bool drawBox;
+    [SerializeField] PlayerController player;
 
     //Variables
     public List<Level3FloorGroup> AvailableFloors = new List<Level3FloorGroup>();

@@ -17,6 +17,7 @@ public class P1MiguelST_Idle : P1MiguelState
 
     public override void OnEnter()
     {
+        if (controller.Speaking) OnExit();
         base.OnEnter();
 
         snakeAttacked = false;
@@ -41,6 +42,7 @@ public class P1MiguelST_Idle : P1MiguelState
 
     private void BeatTimer()
     {
+        if (controller.Speaking) return;
         beatTimer++;
 
         anim.SetTrigger("IdleBeat");
@@ -60,6 +62,7 @@ public class P1MiguelST_Idle : P1MiguelState
 
     private void DecideAction()
     {
+        if (controller.Speaking) return ;
         if (controller.FloorsManager.AvailableFloors.Count > 0)
         {
             if (Random.value < stats.FlameAttackChance)

@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Phase2MiguelController : MonoBehaviour
+public class Phase2MiguelController : MonoBehaviour, ISpeaker
 {
     #region State Machine
 
@@ -76,6 +76,8 @@ public class Phase2MiguelController : MonoBehaviour
         NormalAttack = new P2MiguelST_NormalAttack(this, StateMachine, miguelStats, anim, "Attack");
         AirborneState = new P2MiguelST_Airborne(this, StateMachine, miguelStats, anim, "InAir");
         SpecialAttack = new P2MiguelST_SpecialAttack(this, StateMachine, miguelStats, anim, "Attack");
+
+        GameObject.Find("DialogueManager").GetComponent<DialogueManager>().ChageEnemy(this.gameObject);
     }
 
     private void Start()
@@ -148,6 +150,11 @@ public class Phase2MiguelController : MonoBehaviour
     public void StopSpeaking()
     {
         speaking = false;
+    }
+
+    public float GetHealth()
+    {
+       return Core.GetCoreComponent<Core_Health>().CurrentHealth;
     }
 
     #endregion

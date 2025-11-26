@@ -45,6 +45,7 @@ public class DialogueManager : MonoBehaviour
             player.GetComponent<ISpeaker>().StartSpeaking();
             if (enemy != null) enemy.GetComponent<ISpeaker>().StartSpeaking();
             if (skipText != null) skipText.SetActive(true);
+            if (panel != null) panel.SetActive(true);
         }
     }
 
@@ -218,13 +219,21 @@ public class DialogueManager : MonoBehaviour
         IntroDialogue[mainIndex].gameObject.SetActive(false);
         IntroDialogue[mainIndex+1].gameObject.SetActive(false);
         skipText.SetActive(false);
-        player.GetComponent<ISpeaker>().StopSpeaking();       
+        player.GetComponent<ISpeaker>().StopSpeaking();
+        if (panel != null)
+        {
+            panel.SetActive(false);
+        }
         this.gameObject.SetActive(false);
     }
 
     public void Unpause()
     {
         paused = false;
+        if (panel != null)
+        {
+            panel.SetActive(true);
+        }
         IntroDialogue[mainIndex].gameObject.SetActive(true);       
         player.GetComponent<ISpeaker>().StartSpeaking();
         this.gameObject.SetActive(true);
@@ -235,5 +244,9 @@ public class DialogueManager : MonoBehaviour
         IntroDialogue.Add(message);
     }  
 
+    public void ChageEnemy(GameObject newTarget)
+    {
+        enemy = newTarget;
+    }
 
 }

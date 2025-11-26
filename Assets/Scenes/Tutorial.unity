@@ -5440,7 +5440,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.47930276}
   m_AnchorMax: {x: 0, y: 0.47930276}
-  m_AnchoredPosition: {x: 111.95, y: 60.66}
+  m_AnchoredPosition: {x: 111.95, y: 60.660004}
   m_SizeDelta: {x: 869.65, y: 499.98}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &877305090
@@ -14051,11 +14051,11 @@ PrefabInstance:
     - target: {fileID: 5537254259798757842, guid: 4d40a187711fb064f9755077f23dee53, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 8300000, guid: abaf09dfa371ae040a5606953cefd403, type: 3}
+      objectReference: {fileID: 8300000, guid: aa9f79012c30b4d4f9955fca063e3c1c, type: 3}
     - target: {fileID: 5537254259798757842, guid: 4d40a187711fb064f9755077f23dee53, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: abaf09dfa371ae040a5606953cefd403, type: 3}
+      objectReference: {fileID: 8300000, guid: aa9f79012c30b4d4f9955fca063e3c1c, type: 3}
     - target: {fileID: 6085017546313492723, guid: 4d40a187711fb064f9755077f23dee53, type: 3}
       propertyPath: m_Name
       value: BeatManager

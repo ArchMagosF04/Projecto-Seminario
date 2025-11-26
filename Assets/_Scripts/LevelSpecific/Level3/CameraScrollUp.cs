@@ -12,6 +12,8 @@ public class CameraScrollUp : MonoBehaviour
 
     private float startMoveBuffer;
 
+    [SerializeField] private DialogueManager dialogueManager;
+
     private void Start()
     {
         startMoveBuffer = startScrollTime;
@@ -19,6 +21,8 @@ public class CameraScrollUp : MonoBehaviour
 
     private void Update()
     {
+        if (!dialogueManager.introEnded) return;
+
         if (ShouldMove)
         {
             transform.position += new Vector3(0, speed * Time.deltaTime, 0);

@@ -25,7 +25,7 @@ public class DialogueManager : MonoBehaviour
     private float messageInterval = 5f;
     private float currentMessageTimer = 0;
 
-    private bool introEnded = false;
+    public bool introEnded = false;
     private bool paused = false;
     //private bool messageOnScreen = false;
 

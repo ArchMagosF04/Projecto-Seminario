@@ -154,7 +154,7 @@ public class GardelController : MonoBehaviour, ISpeaker
     {
         GameObject shout = Instantiate(gardelStats.ShoutAOEPrefab, transform.position, Quaternion.identity);
 
-        Destroy(shout, 60/BeatManager.Instance.BPM);
+        //Destroy(shout, 60/BeatManager.Instance.BPM);
     }
 
     public void StunningShout()

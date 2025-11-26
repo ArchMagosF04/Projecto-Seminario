@@ -754,32 +754,32 @@ MonoBehaviour:
   - rankName: NoRank
     rankThreshold: 0
     rankDamageMultiplier: 1
-    beatsForRankDecay: 9
+    beatsForRankDecay: 10
     rankColor: {r: 1, g: 1, b: 1, a: 1}
   - rankName: Decent
     rankThreshold: 4
     rankDamageMultiplier: 1.12
-    beatsForRankDecay: 7.2
+    beatsForRankDecay: 9.2
     rankColor: {r: 0, g: 0.3395729, b: 1, a: 1}
   - rankName: Cool
     rankThreshold: 8
     rankDamageMultiplier: 1.24
-    beatsForRankDecay: 6.6
+    beatsForRankDecay: 8.6
     rankColor: {r: 0.1115191, g: 1, b: 0, a: 1}
   - rankName: Bravo
     rankThreshold: 12
     rankDamageMultiplier: 1.36
-    beatsForRankDecay: 5.2
+    beatsForRankDecay: 7.2
     rankColor: {r: 1, g: 0.8768307, b: 0, a: 1}
   - rankName: Amazing
     rankThreshold: 16
     rankDamageMultiplier: 1.48
-    beatsForRankDecay: 4.6
+    beatsForRankDecay: 6.6
     rankColor: {r: 1, g: 0, b: 0, a: 1}
   - rankName: Star
     rankThreshold: 20
     rankDamageMultiplier: 1.6
-    beatsForRankDecay: 3.2
+    beatsForRankDecay: 5.2
     rankColor: {r: 1, g: 0, b: 0.6683483, a: 1}
 --- !u!1001 &2355145203348887898
 PrefabInstance:

@@ -6,7 +6,8 @@ public class Lv3PhaseTransition : MonoBehaviour
 {
     [Header("Component References")]
     [SerializeField] private GameObject cameraObject;
-    [SerializeField] protected GameObject bossHealthBar;
+    [SerializeField] protected GameObject bossHUDP1;
+    [SerializeField] private GameObject bossHUDP2;
 
     [Header("Phase 1 elements")]
     [SerializeField] private CameraScrollUp cameraMovement;
@@ -24,7 +25,8 @@ public class Lv3PhaseTransition : MonoBehaviour
     private void Awake()
     {
         phase2Boss.SetActive(false);
-        bossHealthBar.SetActive(false);
+        bossHUDP2.SetActive(false);
+        bossHUDP1.SetActive(true);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -54,7 +56,8 @@ public class Lv3PhaseTransition : MonoBehaviour
 
     private void ConfigureBoss()
     {
-        bossHealthBar.SetActive(true);
+        bossHUDP2.SetActive(true);
+        bossHUDP1.SetActive(false);
 
         //Instantiate new Boss
         phase2Boss.SetActive(true);

@@ -541,7 +541,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
   popupPrefab: {fileID: 3009466947853114038, guid: 2baa4dee2cd411c438c0a9c01772876e, type: 3}
-  maxHealth: 150
+  maxHealth: 175
+  hasIFrames: 0
+  iFramesDuration: 0
   damageParticles: {fileID: 7233778717429442434, guid: b862ed757906f6f4bb83bb89c09b1105, type: 3}
   OnDeathUN:
     m_PersistentCalls:
@@ -573,6 +575,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnInvincibleHitUN:
+    m_PersistentCalls:
+      m_Calls: []
+  doubleDamage: 0
 --- !u!61 &7796868098233881800
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -634,6 +640,8 @@ MonoBehaviour:
   damage: 5
   knockbackForce: 15
   shakeProfile: {fileID: 11400000, guid: a40a765b02bb8494d89d8ead763975b9, type: 2}
+  pushInSetDirection: 0
+  setPushDirection: {x: 0, y: 0}
 --- !u!114 &5120317986441159209
 MonoBehaviour:
   m_ObjectHideFlags: 0

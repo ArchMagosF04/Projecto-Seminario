@@ -334,7 +334,9 @@ MonoBehaviour:
   damage: 10
   knockBack: 10
   a_size: 0.05
+  a_startSize: 0.02
   f_size: 0.4
+  f_startSize: 0.15
 --- !u!1 &6451479694434578203
 GameObject:
   m_ObjectHideFlags: 0
@@ -384,7 +386,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
   popupPrefab: {fileID: 3009466947853114038, guid: 9b5d507f92069004a9092ebee74da66b, type: 3}
-  maxHealth: 120
+  maxHealth: 150
   hasIFrames: 0
   iFramesDuration: 0
   damageParticles: {fileID: 7233778717429442434, guid: b862ed757906f6f4bb83bb89c09b1105, type: 3}
@@ -418,6 +420,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnInvincibleHitUN:
+    m_PersistentCalls:
+      m_Calls: []
   doubleDamage: 0
 --- !u!61 &6377654451103173939
 BoxCollider2D:
@@ -728,7 +733,9 @@ MonoBehaviour:
   damage: 10
   knockBack: 10
   a_size: 0.05
+  a_startSize: 0.02
   f_size: 0.4
+  f_startSize: 0.15
 --- !u!1 &7897526612396476215
 GameObject:
   m_ObjectHideFlags: 0
@@ -889,7 +896,9 @@ MonoBehaviour:
   damage: 10
   knockBack: 10
   a_size: 0.05
+  a_startSize: 0.02
   f_size: 0.4
+  f_startSize: 0.15
 --- !u!1 &8295193011503865119
 GameObject:
   m_ObjectHideFlags: 0
@@ -1038,6 +1047,8 @@ MonoBehaviour:
   damage: 5
   knockbackForce: 10
   shakeProfile: {fileID: 11400000, guid: a40a765b02bb8494d89d8ead763975b9, type: 2}
+  pushInSetDirection: 0
+  setPushDirection: {x: 0, y: 0}
 --- !u!1 &8492405067709636203
 GameObject:
   m_ObjectHideFlags: 0
@@ -1320,7 +1331,9 @@ MonoBehaviour:
   damage: 10
   knockBack: 10
   a_size: 0.05
+  a_startSize: 0.02
   f_size: 0.4
+  f_startSize: 0.15
 --- !u!1 &8832656403266291431
 GameObject:
   m_ObjectHideFlags: 0
@@ -1511,6 +1524,7 @@ MonoBehaviour:
   - {fileID: 1726717112074569384}
   - {fileID: 4156701481437011938}
   - {fileID: 7433667058696081121}
+  <serpentController>k__BackingField: {fileID: 0}
   RightWaypoint: {fileID: 0}
   LeftWaypoint: {fileID: 0}
   DesiredAction: 0

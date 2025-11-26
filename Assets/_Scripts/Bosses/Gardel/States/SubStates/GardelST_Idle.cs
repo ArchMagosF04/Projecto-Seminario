@@ -60,7 +60,7 @@ public class GardelST_Idle : GardelState
     {
         if (controller.DesiredAction == GardelController.ActionType.None)
         {
-            if (controller.LastAttackWasSpecial || Random.value < 0.66f)
+            if (controller.LastAttackWasSpecial || Random.value < 0.16f)
             {
                 controller.DesiredAction = GardelController.ActionType.Normal;
 

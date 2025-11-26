@@ -5,6 +5,7 @@ using UnityEngine;
 public class GardelST_SpecialAttack : GardelState
 {
     private int beatTimer;
+    private bool attackPerformed;
 
     public GardelST_SpecialAttack(GardelController controller, StateMachine stateMachine, GardelStats stats, Animator anim, string animBoolName) : base(controller, stateMachine, stats, anim, animBoolName)
     {
@@ -14,6 +15,7 @@ public class GardelST_SpecialAttack : GardelState
     {
         base.OnEnter();
 
+        attackPerformed = false;
         controller.PlaySound("SpecialPrepare");
 
         beatTimer = 0;
@@ -37,12 +39,16 @@ public class GardelST_SpecialAttack : GardelState
     {
         beatTimer++;
 
+        if (!attackPerformed && beatTimer + 1 >= stats.SpecialBeatsToWait)
+        {
+            attackPerformed = true;
+            controller.SpawnShout();
+        }
         if (beatTimer > stats.SpecialBeatsToWait)
         {
             anim.SetTrigger("SpecialAttackBeat");
             int randomSound = Random.Range(1, 5);
             controller.PlaySound("Shout-"+randomSound.ToString());
-            controller.SpawnShout();
             BeatManager.Instance.intervals[0].OnBeatEvent -= BeatTimer;
         }
     }

@@ -25,6 +25,7 @@ public class SaxofonProjectile : MonoBehaviour
     private CharacterAnimatorEvent animatorEvent;
     private Core_Mana manaComponent;
     private SpriteRenderer spriteRenderer;
+    private BeatComboCounter beatCombo;
 
     private void Awake()
     {
@@ -42,13 +43,14 @@ public class SaxofonProjectile : MonoBehaviour
         rb.velocity = direction * speed;
     }
 
-    public void InitializeProjectile(bool isOnBeat, Core_Mana mana, float manaOnHit, float damage, float speed, Vector2 direction)
+    public void InitializeProjectile(bool isOnBeat, Core_Mana mana, float manaOnHit, float damage, float speed, Vector2 direction, BeatComboCounter beatCombo)
     {
         this.isOnBeat = isOnBeat;
         manaComponent = mana;
         this.manaOnHit = manaOnHit;
         this.damage = damage;
         this.speed = speed;
+        this.beatCombo = beatCombo;
 
         moveDirection = direction;
         rb.velocity = direction * this.speed;
@@ -80,7 +82,11 @@ public class SaxofonProjectile : MonoBehaviour
         if (collision.TryGetComponent(out IDamageable health))
         {
             health.TakeDamage(damage, transform.right);
-            if (isOnBeat) manaComponent.IncreaseMana(manaOnHit);
+            if (isOnBeat)
+            {
+                manaComponent.IncreaseMana(manaOnHit);
+                beatCombo.IncreaseComboCounter();
+            }
         }
 
         if (collision.gameObject.layer == 8) Destroy(gameObject);

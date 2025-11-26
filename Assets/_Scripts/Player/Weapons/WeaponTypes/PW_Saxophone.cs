@@ -69,7 +69,7 @@ public class PW_Saxophone : PlayerWeapon
         float finalSpeed = speed * speedMult;
 
         SaxofonProjectile new1LvBullet = Instantiate(normalProjectile, transform.position, Quaternion.identity);
-        new1LvBullet.InitializeProjectile(isOnBeat, manaComponent, manaOnHit, finalDamage, finalSpeed, new Vector2(transform.right.x, angle));
+        new1LvBullet.InitializeProjectile(isOnBeat, manaComponent, manaOnHit, finalDamage, finalSpeed, new Vector2(transform.right.x, angle), beatCombo);
 
         string soundFxName = isOnBeat ? "OnBeatHit-" + 0.ToString() : "OnMissHit-" + 0.ToString();
         SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound(soundFxName)).Play();

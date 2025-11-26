@@ -18,6 +18,7 @@ public class PlayerProjectile : MonoBehaviour
     private CharacterAnimatorEvent animatorEvent;
     private Core_Mana manaComponent;
     private SpriteRenderer spriteRenderer;
+    private BeatComboCounter beatCombo;
 
     private void Awake()
     {
@@ -38,13 +39,14 @@ public class PlayerProjectile : MonoBehaviour
         animatorEvent.OnAnimationFinishedTrigger -= DestroyProjectile;
     }
 
-    public void InitializeProjectile(bool isOnBeat, Core_Mana mana, float manaOnHit, float damage, float speed ,Vector2 direction)
+    public void InitializeProjectile(bool isOnBeat, Core_Mana mana, float manaOnHit, float damage, float speed ,Vector2 direction, BeatComboCounter beatCombo)
     {
         this.isOnBeat = isOnBeat;
         manaComponent = mana;
         this.manaOnHit = manaOnHit;
         this.damage = damage;
         this.speed = speed;
+        this.beatCombo = beatCombo;
 
         rb.velocity = direction * this.speed;
 
@@ -60,7 +62,11 @@ public class PlayerProjectile : MonoBehaviour
         {
             health.TakeDamage(damage, transform.right);
 
-            if (isOnBeat) manaComponent.IncreaseMana(manaOnHit);
+            if (isOnBeat)
+            {
+                manaComponent.IncreaseMana(manaOnHit);
+                beatCombo.IncreaseComboCounter();
+            }
         }
     }
 

@@ -197,7 +197,7 @@ public class PW_Accordion : PlayerWeapon
         float finalSpeed = speed_1st * speedMult;
 
         PlayerProjectile new1LvBullet = Instantiate(chargeLv1Prefab, transform.position, Quaternion.identity);
-        new1LvBullet.InitializeProjectile(isOnBeat, manaComponent, manaOnHit_1st, finalDamage, finalSpeed, transform.right);
+        new1LvBullet.InitializeProjectile(isOnBeat, manaComponent, manaOnHit_1st, finalDamage, finalSpeed, transform.right, beatCombo);
 
         string soundFxName = isOnBeat ? "OnBeatHit-" + 0.ToString() : "OnMissHit-" + 0.ToString();
         SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound(soundFxName)).Play();
@@ -219,7 +219,7 @@ public class PW_Accordion : PlayerWeapon
 
 
         PlayerProjectile new2LvBullet = Instantiate(chargeLv2Prefab, transform.position, Quaternion.identity);
-        new2LvBullet.InitializeProjectile(isOnBeat, manaComponent, manaOnHit_2nd, finalDamage, finalSpeed, transform.right);
+        new2LvBullet.InitializeProjectile(isOnBeat, manaComponent, manaOnHit_2nd, finalDamage, finalSpeed, transform.right, beatCombo);
 
         string soundFxName = isOnBeat ? "OnBeatHit-" + 1.ToString() : "OnMissHit-" + 1.ToString();
         SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound(soundFxName)).Play();
@@ -242,7 +242,7 @@ public class PW_Accordion : PlayerWeapon
         float finalManaOnHit = isSpecialBuffActive ? manaOnHit_1st : manaOnHit_3rd;
 
         PlayerProjectile new3LvBullet = Instantiate(chargeLv3Prefab, transform.position, Quaternion.identity);
-        new3LvBullet.InitializeProjectile(isOnBeat, manaComponent, finalManaOnHit, finalDamage, finalSpeed, transform.right);
+        new3LvBullet.InitializeProjectile(isOnBeat, manaComponent, finalManaOnHit, finalDamage, finalSpeed, transform.right, beatCombo);
 
         string soundFxName = isOnBeat ? "OnBeatHit-" + 2.ToString() : "OnMissHit-" + 2.ToString();
         SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound(soundFxName)).Play();

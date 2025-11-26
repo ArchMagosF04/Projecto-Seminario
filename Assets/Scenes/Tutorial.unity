@@ -14015,11 +14015,11 @@ PrefabInstance:
     - target: {fileID: 5537254259798757842, guid: 4d40a187711fb064f9755077f23dee53, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 8300000, guid: 0c0d1b4c267e71d488afc55cb5e5ccc6, type: 3}
+      objectReference: {fileID: 8300000, guid: abaf09dfa371ae040a5606953cefd403, type: 3}
     - target: {fileID: 5537254259798757842, guid: 4d40a187711fb064f9755077f23dee53, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 0c0d1b4c267e71d488afc55cb5e5ccc6, type: 3}
+      objectReference: {fileID: 8300000, guid: abaf09dfa371ae040a5606953cefd403, type: 3}
     - target: {fileID: 6085017546313492723, guid: 4d40a187711fb064f9755077f23dee53, type: 3}
       propertyPath: m_Name
       value: BeatManager

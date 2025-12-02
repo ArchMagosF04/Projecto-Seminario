@@ -9,7 +9,7 @@ public class CalculateStars : MonoBehaviour
     [SerializeField] private BeatComboCounter comboManager;
     [SerializeField] private Core_Health playerHealth;
     private bool countTime;
-    [SerializeField] GameManager gameManager;
+    //[SerializeField] GameManager gameManager;
 
     [Tooltip ("Cual es la cantidad maxima de tiempo que el jugador puede tardar")]
     [SerializeField] private float TargetTime;

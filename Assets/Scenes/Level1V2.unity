@@ -124,6 +124,56 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5007130753673859007, guid: 816ef714dad25f244b1ceb51df62e648, type: 3}
   m_PrefabInstance: {fileID: 2812437318283988522}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &10818987
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 10818989}
+  - component: {fileID: 10818988}
+  m_Layer: 0
+  m_Name: StarsCalculator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &10818988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 10818987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2ded924e1b30804cb0282587acc2c82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  comboManager: {fileID: 1489505093148253599}
+  playerHealth: {fileID: 1489505093148253598}
+  gameManager: {fileID: 1111672173}
+  TargetTime: 10
+  TargetHealth: 1
+  ComboTarget: 1
+--- !u!4 &10818989
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 10818987}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.809406, y: 4.4130087, z: -0.09515829}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &11015733 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4329549649288359077, guid: 75da7327820141c4781458b9a2f6adfa, type: 3}
@@ -7776,6 +7826,28 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4686884552793293406, guid: 3183d21e511f0754ea7668c3703fd19e, type: 3}
   m_PrefabInstance: {fileID: 1489505093148253596}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1489505093148253598 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6973123241411622913, guid: 3183d21e511f0754ea7668c3703fd19e, type: 3}
+  m_PrefabInstance: {fileID: 1489505093148253596}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2e9dd78d61d2f74abcd29d75d00a12f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1489505093148253599 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6811924436956391939, guid: 3183d21e511f0754ea7668c3703fd19e, type: 3}
+  m_PrefabInstance: {fileID: 1489505093148253596}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489505093148253597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e89e201bb426b994a84cc4e7c556ee1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2731992114909720405
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8916,9 +8988,45 @@ PrefabInstance:
       value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 4720750532754480863, guid: 167bd3e95d15e7f4bb3d5df603406eef, type: 3}
+      propertyPath: OnDeathUN.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4720750532754480863, guid: 167bd3e95d15e7f4bb3d5df603406eef, type: 3}
+      propertyPath: OnDeathUN.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4720750532754480863, guid: 167bd3e95d15e7f4bb3d5df603406eef, type: 3}
       propertyPath: OnDeathUN.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 10818988}
+    - target: {fileID: 4720750532754480863, guid: 167bd3e95d15e7f4bb3d5df603406eef, type: 3}
+      propertyPath: OnDeathUN.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
       objectReference: {fileID: 1111672173}
+    - target: {fileID: 4720750532754480863, guid: 167bd3e95d15e7f4bb3d5df603406eef, type: 3}
+      propertyPath: OnDeathUN.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4720750532754480863, guid: 167bd3e95d15e7f4bb3d5df603406eef, type: 3}
+      propertyPath: OnDeathUN.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GetResults
+      objectReference: {fileID: 0}
+    - target: {fileID: 4720750532754480863, guid: 167bd3e95d15e7f4bb3d5df603406eef, type: 3}
+      propertyPath: OnDeathUN.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: OnWinGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 4720750532754480863, guid: 167bd3e95d15e7f4bb3d5df603406eef, type: 3}
+      propertyPath: OnDeathUN.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CalculateStars, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4720750532754480863, guid: 167bd3e95d15e7f4bb3d5df603406eef, type: 3}
+      propertyPath: OnDeathUN.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4720750532754480863, guid: 167bd3e95d15e7f4bb3d5df603406eef, type: 3}
+      propertyPath: OnDeathUN.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7309964777318614142, guid: 167bd3e95d15e7f4bb3d5df603406eef, type: 3}
       propertyPath: <stageCenter>k__BackingField
       value: 
@@ -9178,3 +9286,4 @@ SceneRoots:
   - {fileID: 1721031513}
   - {fileID: 1901382572}
   - {fileID: 8001450953748018327}
+  - {fileID: 10818989}

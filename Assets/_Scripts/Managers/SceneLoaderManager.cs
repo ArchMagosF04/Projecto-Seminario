@@ -39,4 +39,16 @@ public class SceneLoaderManager : MonoBehaviour
     {
         return SceneManager.GetActiveScene().buildIndex;
     }
+
+    public void WinScreenSceneTransition()
+    {
+        if (GlobalManager.Instance == null || GlobalManager.Instance.GetCurrentLevel() != "Level3")
+        {
+            LoadSceneByIndex(2);
+        }
+        else
+        {
+            LoadSceneByName("EndCutscene");
+        }
+    }
 }

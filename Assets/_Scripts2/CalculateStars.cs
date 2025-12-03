@@ -29,12 +29,11 @@ public class CalculateStars : MonoBehaviour
     void Start()
     {
         DontDestroyOnLoad(this.gameObject);
-
     }
 
     private void Update()
     {
-        if (countTime) { elapsedTime = +Time.deltaTime; }
+        if (countTime) { elapsedTime += Time.deltaTime; }
     }
 
     public void GetResults()
@@ -113,9 +112,4 @@ public class CalculateStars : MonoBehaviour
 
         }        
     }
-
-
-
-
-
 }

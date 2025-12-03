@@ -155,9 +155,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   comboManager: {fileID: 1489505093148253599}
   playerHealth: {fileID: 1489505093148253598}
-  TargetTime: 100
-  TargetHealth: 75
-  ComboTarget: 1
+  starsUI: {fileID: 0}
+  TargetTime: 45
+  TargetHealth: 90
+  ComboTarget: 14
 --- !u!4 &10818989
 Transform:
   m_ObjectHideFlags: 0

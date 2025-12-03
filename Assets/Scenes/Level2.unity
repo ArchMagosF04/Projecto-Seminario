@@ -2703,7 +2703,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.00000047683716, y: 0.019684764, z: -10}
+  m_LocalPosition: {x: -0.0019478798, y: 0.019685002, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7092,9 +7092,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   comboManager: {fileID: 1489505093148253599}
   playerHealth: {fileID: 1489505093148253598}
-  TargetTime: 1
+  starsUI: {fileID: 0}
+  TargetTime: 85
   TargetHealth: 75
-  ComboTarget: 5
+  ComboTarget: 10
 --- !u!4 &1407992688
 Transform:
   m_ObjectHideFlags: 0

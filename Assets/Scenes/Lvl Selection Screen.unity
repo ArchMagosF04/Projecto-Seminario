@@ -2607,13 +2607,11 @@ MonoBehaviour:
   - {fileID: 2145054086}
   - {fileID: 653950630}
   - {fileID: 1576558327}
-  - {fileID: 1349024670}
   levelNames:
   - Tutorial
   - Level1V2
   - Level2
   - Level3
-  - null
   weaponPanel: {fileID: 1187342941}
   lockedMessage: {fileID: 960042387}
   comingSoonMessage: {fileID: 175795466}

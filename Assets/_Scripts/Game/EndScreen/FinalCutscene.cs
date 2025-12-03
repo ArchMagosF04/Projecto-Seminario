@@ -7,6 +7,9 @@ public class FinalCutscene : MonoBehaviour
     [Header("Cutscene Slides")]
     [SerializeField] private SlideSceneSettings[] cutSceneSlides;
 
+    [Header("Cutscene Settings")]
+    [SerializeField] private float startDelay = 2.5f;
+
     private float timeSinceSlideAppeared;
     private int currentCanvasSlide;
 
@@ -28,7 +31,7 @@ public class FinalCutscene : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(FadeCanvasSlide(cutSceneSlides[0].sceneSlide, 0, 1, cutSceneSlides[0].fadeInDuration));
+        StartCoroutine(FadeCanvasSlide(startDelay, cutSceneSlides[0].sceneSlide, 0, 1, cutSceneSlides[0].fadeInDuration));
     }
 
     private void Update()
@@ -45,18 +48,20 @@ public class FinalCutscene : MonoBehaviour
             {
                 currentCanvasSlide++;
                 slideInFullDisplay = false;
-                StartCoroutine(FadeCanvasSlide(cutSceneSlides[currentCanvasSlide].sceneSlide, 0, 1, cutSceneSlides[currentCanvasSlide].fadeInDuration));
+                StartCoroutine(FadeCanvasSlide(0, cutSceneSlides[currentCanvasSlide].sceneSlide, 0, 1, cutSceneSlides[currentCanvasSlide].fadeInDuration));
             }
             else
             {
                 cutsceneEnded = true;
-                StartCoroutine(FadeCanvasSlide(cutSceneSlides[currentCanvasSlide].sceneSlide, 1, 0, cutSceneSlides[currentCanvasSlide].fadeInDuration));
+                StartCoroutine(FadeCanvasSlide(0, cutSceneSlides[currentCanvasSlide].sceneSlide, 1, 0, cutSceneSlides[currentCanvasSlide].fadeInDuration));
             }
         }
     }
 
-    private IEnumerator FadeCanvasSlide(CanvasGroup canvas, float start, float end, float duration)
+    private IEnumerator FadeCanvasSlide(float initialDelay, CanvasGroup canvas, float start, float end, float duration)
     {
+        yield return new WaitForSeconds(initialDelay);
+
         float elapsedTime = 0f;
 
         while (elapsedTime < duration)

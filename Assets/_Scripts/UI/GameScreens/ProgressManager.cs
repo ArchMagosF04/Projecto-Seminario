@@ -56,7 +56,9 @@ public class ProgressManager : MonoBehaviour
         if (PlayerPrefs.GetInt("CompletedTutorial") == 1)
         {
             argentinaSprite.SetActive(true);
-            AddStars(0, 1);
+            bool[] temp = new bool[1];
+            temp[0] = true;
+            AddStars(0, temp);
             showEmptyStars(1);
         }
         else
@@ -103,9 +105,9 @@ public class ProgressManager : MonoBehaviour
         PlayerPrefs.SetInt("SaxofonUnlocked", 1);
     }
 
-    private void AddStars(int level, int amount)
+    private void AddStars(int level, bool[] flags)
     {
-        starTrackerList[level].AddStars(amount);
+        starTrackerList[level].AddStars(flags);
     }
 
     private void showEmptyStars(int level)
@@ -113,7 +115,7 @@ public class ProgressManager : MonoBehaviour
         starTrackerList[level].showEmptyStars = true;
     }
 
-    private int GetStarAmount(string value)
+    private bool[] GetStarAmount(string value)
     {
        bool[] temp = StarsStringDecoder.DecodeString(value);
        int result = 0;
@@ -123,7 +125,7 @@ public class ProgressManager : MonoBehaviour
          if (flag) result++;
        }
 
-       return result;
+       return temp;
 
     }
 }

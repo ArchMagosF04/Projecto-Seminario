@@ -10,7 +10,7 @@ public class StarTracker : MonoBehaviour
     [SerializeField] GameObject[] starsImages;
     // Start is called before the first frame update
 
-    private void Start()
+    protected void Start()
     {
         if (showEmptyStars)
         {
@@ -21,13 +21,13 @@ public class StarTracker : MonoBehaviour
         }
     }
 
-    public void AddStars(int amount)
+    public void AddStars(bool[] flags)
     {
-        if (starsImages != null && amount>0 && amount <=3)
+        if (starsImages != null && flags.Length>0 && flags.Length <=3)
         {
-            for(int i = 0; amount > i; i++)
+            for(int i = 0; i< flags.Length; i++)
             {
-                starsImages[i].SetActive(true);
+                starsImages[i].SetActive(flags[i]);
             }
         }
         else return;

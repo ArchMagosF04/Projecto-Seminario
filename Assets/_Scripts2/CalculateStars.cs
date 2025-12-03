@@ -9,7 +9,10 @@ public class CalculateStars : MonoBehaviour
     [SerializeField] private BeatComboCounter comboManager;
     [SerializeField] private Core_Health playerHealth;
     private bool countTime;
+    [SerializeField] private StarTracker starsUI;
     //[SerializeField] GameManager gameManager;
+
+    public event System.Action<bool[]> OnResultsCalculated = delegate { };
 
     [Tooltip ("Cual es la cantidad maxima de tiempo que el jugador puede tardar")]
     [SerializeField] private float TargetTime;
@@ -85,7 +88,7 @@ public class CalculateStars : MonoBehaviour
                 {
                     newResult[i] = true;
                 }
-            }
+            }            
 
             result = "";
 
@@ -96,14 +99,22 @@ public class CalculateStars : MonoBehaviour
             }
 
             PlayerPrefs.SetString(variableName, result);
+
+            OnResultsCalculated(newResult);
+
+            Destroy(gameObject);
         }
         else
         {
             PlayerPrefs.SetString(variableName, result);
-        }
+            bool[] newResult = StarsStringDecoder.DecodeString(result);
+            OnResultsCalculated(newResult);
+            Destroy(gameObject);
 
-        Destroy(gameObject);
+        }        
     }
+
+
 
 
 

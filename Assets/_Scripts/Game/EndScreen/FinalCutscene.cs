@@ -9,6 +9,7 @@ public class FinalCutscene : MonoBehaviour
 
     [Header("Cutscene Settings")]
     [SerializeField] private float startDelay = 2.5f;
+    [SerializeField] private float finalDelay = 2.5f;
 
     private float timeSinceSlideAppeared;
     private int currentCanvasSlide;
@@ -17,8 +18,13 @@ public class FinalCutscene : MonoBehaviour
 
     private bool cutsceneEnded;
 
+    private AudioSource endMusicSource;
+
     private void Awake()
     {
+        endMusicSource = GetComponent<AudioSource>();
+
+        endMusicSource.volume = 0f;
         cutsceneEnded = false;
         currentCanvasSlide = 0;
         slideInFullDisplay = false;
@@ -31,7 +37,10 @@ public class FinalCutscene : MonoBehaviour
 
     private void Start()
     {
+        endMusicSource.Play();
+
         StartCoroutine(FadeCanvasSlide(startDelay, cutSceneSlides[0].sceneSlide, 0, 1, cutSceneSlides[0].fadeInDuration));
+        StartCoroutine(MusicFade(startDelay, 0, 1, cutSceneSlides[0].fadeInDuration));
     }
 
     private void Update()
@@ -53,7 +62,8 @@ public class FinalCutscene : MonoBehaviour
             else
             {
                 cutsceneEnded = true;
-                StartCoroutine(FadeCanvasSlide(0, cutSceneSlides[currentCanvasSlide].sceneSlide, 1, 0, cutSceneSlides[currentCanvasSlide].fadeInDuration));
+                StartCoroutine(MusicFade(startDelay, 1, 0, cutSceneSlides[currentCanvasSlide].fadeInDuration));
+                StartCoroutine(FadeCanvasSlide(cutSceneSlides[currentCanvasSlide].fadeInDuration / 2, cutSceneSlides[currentCanvasSlide].sceneSlide, 1, 0, cutSceneSlides[currentCanvasSlide].fadeInDuration));
             }
         }
     }
@@ -76,6 +86,28 @@ public class FinalCutscene : MonoBehaviour
         slideInFullDisplay = true;
         timeSinceSlideAppeared = Time.time;
 
-        if (cutsceneEnded) SceneLoaderManager.Instance.LoadSceneByIndex(0);
+        if (cutsceneEnded)
+        {
+            yield return new WaitForSeconds(finalDelay);
+            SceneLoaderManager.Instance.LoadSceneByIndex(0);
+        }
+    }
+
+    private IEnumerator MusicFade(float initialDelay, float start, float end, float duration)
+    {
+        yield return new WaitForSeconds(initialDelay);
+
+        float elapsedTime = 0f;
+
+        while (elapsedTime < duration)
+        {
+            elapsedTime += Time.deltaTime;
+            endMusicSource.volume = Mathf.Lerp(start, end, elapsedTime / duration);
+
+            yield return null;
+        }
+
+        endMusicSource.volume = end;
+        slideInFullDisplay = true;
     }
 }

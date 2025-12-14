@@ -182,4 +182,14 @@ public class DataPersistanceManager : MonoBehaviour
     {
         return dataHandler.LoadAllProfiles();
     }
+
+    public int GetSelectedWeapon()
+    {
+        return gameData.weaponSelected;
+    }
+
+    public void ChangeSelectedWeapon(int weaponIndex)
+    {
+        gameData.weaponSelected = weaponIndex;
+    }
 }

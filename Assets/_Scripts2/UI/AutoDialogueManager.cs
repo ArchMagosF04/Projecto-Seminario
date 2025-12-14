@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 public class AutoDialogueManager : MonoBehaviour
 {    
     [SerializeField] private GameObject player;
-    [SerializeField] private WeaponHolster holster;
+    private DataPersistanceManager persistanceManager;
     [SerializeField] TMPro.TMP_Text dialogue;
     private PlayerWeapon weaponScript;
     private int selectedWeapon;
@@ -23,11 +23,21 @@ public class AutoDialogueManager : MonoBehaviour
     private int mainIndex = -1;
     private int subIndex = 0;
 
+
+    public bool manualWeaponOverride;
+    public int manualOverrideWeaponIndex;
+
+
     // Start is called before the first frame update
     private void Awake()
-    {
-        holster.OnWeaponLoaded += GetSelectedWeapon;
-        
+    {        
+        //holster.OnWeaponLoaded += GetSelectedWeapon;
+        persistanceManager = GameObject.Find("DataPersistanceManager").GetComponent<DataPersistanceManager>();
+        if (manualWeaponOverride)
+        {
+            persistanceManager.ChangeSelectedWeapon(manualOverrideWeaponIndex);
+        }
+        selectedWeapon = persistanceManager.GetSelectedWeapon();
     }
 
     void Start()
@@ -58,17 +68,20 @@ public class AutoDialogueManager : MonoBehaviour
         //    }      
     }
 
+    [ContextMenu("AdvanceIndex")]
     public void AdvanceIndex()
     {
-        if (mainIndex < IntroDialogue.Count - 1)
+        if (TextSelector(selectedWeapon,mainIndex+1) != "" || mainIndex == -1)
         {
             mainIndex++;
-            dialogue.text = TextSelector(selectedWeapon, mainIndex);            
+            dialogue.text = TextSelector(selectedWeapon, mainIndex); 
+            Debug.Log(mainIndex);
             //if (!paused) IntroDialogue[mainIndex].gameObject.SetActive(true);
         }
         else
         {
             mainIndex = 0;
+            dialogue.text = TextSelector(selectedWeapon, mainIndex);
         }
 
     }    

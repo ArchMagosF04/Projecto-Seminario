@@ -4561,8 +4561,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 110, y: 0}
-  m_SizeDelta: {x: 200, y: 200}
+  m_AnchoredPosition: {x: 110, y: 3}
+  m_SizeDelta: {x: 135, y: 135}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1242889305
 MonoBehaviour:
@@ -4765,7 +4765,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1193115378519849999, guid: 7c993d026a6f6364b8c757d676259ec0, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -25
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 1193115378519849999, guid: 7c993d026a6f6364b8c757d676259ec0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4947,18 +4947,18 @@ MonoBehaviour:
   weapons:
   - weaponName: Microphone
     weaponImage: {fileID: 21300000, guid: 999deb1a2ecfc134f81a14385091a846, type: 3}
-    weaponDescription: "Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla \nBla Bla Bla Bla
-      Bla Bla Bla Bla Bla Bla \nBla Bla Bla Bla Bla Bla Bla Bla Bla Bla "
+    weaponDescription: "Basic Atack: Melee Attack that can be aimed up or dow.\n\r\nSpecial:
+      Strong Melee Attack.\r"
     weaponTrainingRoomName: 
   - weaponName: Accordion
     weaponImage: {fileID: 21300000, guid: 53229c1b334a31f43b1752d2a7cdc35b, type: 3}
-    weaponDescription: "Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla \nBla Bla Bla Bla
-      Bla Bla Bla Bla Bla Bla \nBla Bla Bla Bla Bla Bla Bla Bla Bla Bla "
+    weaponDescription: "Basic Atk: Weak Ranged Atack.\n\nCharged ranged Atack: Hold
+      and Release RMB.\n\r\nSpecial Atk: Special Mode (faster charged atack)\r"
     weaponTrainingRoomName: 
   - weaponName: Saxophone
     weaponImage: {fileID: 21300000, guid: 52ebf9b1dd670ac4eab0ca95b9aca709, type: 3}
-    weaponDescription: "Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla \nBla Bla Bla Bla
-      Bla Bla Bla Bla Bla Bla \nBla Bla Bla Bla Bla Bla Bla Bla Bla Bla "
+    weaponDescription: "Basic Atk: Shoots Two Bouncing Projectiles.\r\n\r\nSpecial
+      Atk: Apply Defence Debuff on Enemy.\r"
     weaponTrainingRoomName: 
   weaponImage: {fileID: 1242889305}
   weaponName: {fileID: 558231537}
@@ -5886,7 +5886,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 100, y: 0}
+  m_AnchoredPosition: {x: 110, y: 0}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1782793810

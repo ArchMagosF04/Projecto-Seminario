@@ -12,7 +12,19 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelSelect.unity
     guid: 5ce72998c32c02c44a7659adcae4fae5
   - enabled: 1
-    path: Assets/Scenes/Levels/TestGrounds.unity
-    guid: 53c390f5ab712c245a4163c7183a09e5
+    path: Assets/Scenes/Levels/Tutorial.unity
+    guid: fc4047b845449c2408fea37a2835389c
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level1V2.unity
+    guid: 0cf879204747e69478c37fc58653ed14
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level2.unity
+    guid: de39886a459bded42a22bf09b5613c54
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level3.unity
+    guid: dbfe3cc8e02eaaa4bb768582a8fff558
+  - enabled: 1
+    path: Assets/Scenes/EndCutscene.unity
+    guid: 66c6881741f6df34cb2a340649242b36
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

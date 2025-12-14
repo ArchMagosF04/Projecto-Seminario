@@ -33,6 +33,11 @@ public class AsyncSceneLoader : MonoBehaviour
         loadingBar.fillAmount = 0;
     }
 
+    private void Start()
+    {
+        playerInput = FindFirstObjectByType<PlayerInput>();
+    }
+
     public void LoadLevel(string sceneName)
     {
         //DisableMenus

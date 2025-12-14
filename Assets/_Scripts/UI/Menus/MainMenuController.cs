@@ -20,6 +20,15 @@ public class MainMenuController : MonoBehaviour
         if (startOpen) startingPage.OpenMenu();
     }
 
+    private void Update()
+    {
+        if (UIInputManager.Instance.CancelMenuInput)
+        {
+            UIInputManager.Instance.UseCancelMenuInput();
+            GoToPreviousMenu();
+        }
+    }
+
     public void GoToPreviousMenu()
     {
         MenuPage menu = currentPage.GoToPreviousPage();

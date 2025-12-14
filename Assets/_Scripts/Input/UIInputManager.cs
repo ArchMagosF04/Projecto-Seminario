@@ -17,6 +17,10 @@ public class UIInputManager : MonoBehaviour
     [SerializeField] private UnityEvent OnCancel;
     [SerializeField] private UnityEvent OnResume;
 
+    //Game Inputs
+    public bool CancelMenuInput { get; private set; }
+    public bool ResumeInput { get; private set; }
+
     private void Awake()
     {
         if (Instance == null)
@@ -53,7 +57,9 @@ public class UIInputManager : MonoBehaviour
         if (context.started && !blockGoToPreviousMenu)
         {
             OnCancel?.Invoke();
+            CancelMenuInput = true;
         }
+        if (context.canceled) CancelMenuInput = false;
     }
 
     public void OnResumeInput(InputAction.CallbackContext context)
@@ -61,6 +67,11 @@ public class UIInputManager : MonoBehaviour
         if (context.started && !blockResumeGame)
         {
             OnResume?.Invoke();
+            ResumeInput = true;
         }
+        if (context.canceled) ResumeInput = false;
     }
+
+    public void UseCancelMenuInput() => CancelMenuInput = false;
+    public void UseResumeInput() => ResumeInput = false;
 }

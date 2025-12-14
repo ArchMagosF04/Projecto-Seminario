@@ -16,6 +16,15 @@ public class WeaponMenuController : MonoBehaviour, IDataPersistance
 
     private int currentSelectedWeapon;
 
+    private void Start()
+    {
+        WeaponInfo weapon = weapons[currentSelectedWeapon];
+
+        weaponImage.sprite = weapon.weaponImage;
+        weaponName.text = weapon.weaponName;
+        weaponDescription.text = weapon.weaponDescription;
+    }
+
     public void LoadData(GameData gameData)
     {
         currentSelectedWeapon = gameData.weaponSelected;

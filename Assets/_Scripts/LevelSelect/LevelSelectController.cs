@@ -30,6 +30,10 @@ public class LevelSelectController : MonoBehaviour, IDataPersistance
     private bool isPopUpOpen;
     private bool isAnyMenuOpen;
 
+    private bool lv1Unlocked;
+    private bool lv2Unlocked;
+    private bool lv3Unlocked;
+
     private void Awake()
     {
         eventSystem = FindFirstObjectByType<EventSystem>();
@@ -39,6 +43,10 @@ public class LevelSelectController : MonoBehaviour, IDataPersistance
     private void Start()
     {
         SelectButtonMarker();
+
+        if (!lv1Unlocked) levelMarkers[1].interactable = false;
+        if (!lv2Unlocked) levelMarkers[2].interactable = false;
+        if (!lv3Unlocked) levelMarkers[3].interactable = false;
     }
 
     public void OnReturnToMainMenuInput()
@@ -120,6 +128,9 @@ public class LevelSelectController : MonoBehaviour, IDataPersistance
     public void LoadData(GameData gameData)
     {
         currentSelectedLevel = gameData.lastLevelSelected;
+        lv1Unlocked = gameData.unlocked1stLevel;
+        lv2Unlocked = gameData.unlocked2ndLevel;
+        lv3Unlocked = gameData.unlocked3rdLevel;
     }
 
     public void SaveData(GameData gameData)

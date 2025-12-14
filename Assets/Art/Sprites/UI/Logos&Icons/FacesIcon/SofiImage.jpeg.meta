@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SofiImage_0: -1030323863818859271
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,0 +1,439 @@
+fileFormatVersion: 2
+guid: 0d1b621a0ad4ddf4db52e2d8b7c99d28
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -224081954502335672
+    second: Corazones_spritesheet_0
+  - first:
+      213: -3416843910169371781
+    second: Corazones_spritesheet_1
+  - first:
+      213: -5580384387428068223
+    second: Corazones_spritesheet_2
+  - first:
+      213: -4657804472313393789
+    second: Corazones_spritesheet_3
+  - first:
+      213: -2146914100674042272
+    second: Corazones_spritesheet_4
+  - first:
+      213: -1297566935026437582
+    second: Corazones_spritesheet_5
+  - first:
+      213: -1855018341230983195
+    second: Corazones_spritesheet_6
+  - first:
+      213: -7190323805526253191
+    second: Corazones_spritesheet_7
+  - first:
+      213: -411061271879735791
+    second: Corazones_spritesheet_8
+  - first:
+      213: 5498695617847039636
+    second: Corazones_spritesheet_9
+  - first:
+      213: -5646852963622870408
+    second: Corazones_spritesheet_10
+  - first:
+      213: -8683807121124046331
+    second: Corazones_spritesheet_11
+  - first:
+      213: -8716137165365069979
+    second: Corazones_spritesheet_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Corazones_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 57
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 843205d46a6e3ecf0800000000000000
+      internalID: -224081954502335672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corazones_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 71
+        width: 25
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7bd561219ee490d0800000000000000
+      internalID: -3416843910169371781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corazones_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 40
+        width: 61
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 184d63d37fd7e82b0800000000000000
+      internalID: -5580384387428068223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corazones_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 72
+        width: 29
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38dc882b2872c5fb0800000000000000
+      internalID: -4657804472313393789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corazones_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 64
+        width: 33
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 066eb021001a432e0800000000000000
+      internalID: -2146914100674042272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corazones_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 21
+        width: 85
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 232f4755fbd1efde0800000000000000
+      internalID: -1297566935026437582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corazones_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 23
+        width: 82
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e7c71f95a6a146e0800000000000000
+      internalID: -1855018341230983195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corazones_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 24
+        width: 76
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 971a2974896d63c90800000000000000
+      internalID: -7190323805526253191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corazones_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 77
+        width: 22
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11620bc73fd9b4af0800000000000000
+      internalID: -411061271879735791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corazones_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 73
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49615c5f78a4f4c40800000000000000
+      internalID: 5498695617847039636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corazones_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 11
+        width: 102
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 872a56cd52952a1b0800000000000000
+      internalID: -5646852963622870408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corazones_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 61
+        width: 39
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50ac46f9e6bec7780800000000000000
+      internalID: -8683807121124046331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corazones_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 47
+        width: 62
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 567b5dc9d6f0a0780800000000000000
+      internalID: -8716137165365069979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Corazones_spritesheet_0: -224081954502335672
+      Corazones_spritesheet_1: -3416843910169371781
+      Corazones_spritesheet_10: -5646852963622870408
+      Corazones_spritesheet_11: -8683807121124046331
+      Corazones_spritesheet_12: -8716137165365069979
+      Corazones_spritesheet_2: -5580384387428068223
+      Corazones_spritesheet_3: -4657804472313393789
+      Corazones_spritesheet_4: -2146914100674042272
+      Corazones_spritesheet_5: -1297566935026437582
+      Corazones_spritesheet_6: -1855018341230983195
+      Corazones_spritesheet_7: -7190323805526253191
+      Corazones_spritesheet_8: -411061271879735791
+      Corazones_spritesheet_9: 5498695617847039636
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

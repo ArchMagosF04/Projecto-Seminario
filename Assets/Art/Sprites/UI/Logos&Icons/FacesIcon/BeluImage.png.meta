@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BeluImage_0: -5245174742638681081
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

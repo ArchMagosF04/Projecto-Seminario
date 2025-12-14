@@ -1,0 +1,331 @@
+fileFormatVersion: 2
+guid: 3205918d5509a7c4c8f8ba8db543090d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8518740446136924251
+    second: Circulos_spritesheet_0
+  - first:
+      213: 6252540366726914550
+    second: Circulos_spritesheet_1
+  - first:
+      213: -3216287461366475363
+    second: Circulos_spritesheet_2
+  - first:
+      213: -1871653605034300963
+    second: Circulos_spritesheet_3
+  - first:
+      213: 8618006862995872764
+    second: Circulos_spritesheet_4
+  - first:
+      213: -4425060485181063673
+    second: Circulos_spritesheet_5
+  - first:
+      213: -9104063841464106430
+    second: Circulos_spritesheet_6
+  - first:
+      213: 3858946043263074164
+    second: Circulos_spritesheet_7
+  - first:
+      213: 3189589263718730171
+    second: Circulos_spritesheet_8
+  - first:
+      213: -1731503179010597832
+    second: Circulos_spritesheet_9
+  - first:
+      213: 1388958478021773342
+    second: Circulos_spritesheet_10
+  - first:
+      213: -7963289694562042308
+    second: Circulos_spritesheet_11
+  - first:
+      213: 4745221651683348054
+    second: Circulos_spritesheet_12
+  - first:
+      213: -5180889207870429790
+    second: Circulos_spritesheet_13
+  - first:
+      213: 4771488065304387005
+    second: Circulos_spritesheet_14
+  - first:
+      213: 875193237771498533
+    second: Circulos_spritesheet_15
+  - first:
+      213: -8700305925873580116
+    second: Circulos_spritesheet_16
+  - first:
+      213: -4290181774565947980
+    second: Circulos_spritesheet_17
+  - first:
+      213: 4976275769929148732
+    second: Circulos_spritesheet_18
+  - first:
+      213: -5198529227956588229
+    second: Circulos_spritesheet_19
+  - first:
+      213: -3066030156658911590
+    second: Circulos_spritesheet_20
+  - first:
+      213: 4408481612611893576
+    second: Circulos_spritesheet_21
+  - first:
+      213: -1396973037980025111
+    second: Circulos_spritesheet_22
+  - first:
+      213: -453227268953281868
+    second: Circulos_spritesheet_23
+  - first:
+      213: -4786253998157117405
+    second: Circulos_spritesheet_24
+  - first:
+      213: 2315107720619478544
+    second: Circulos_spritesheet_25
+  - first:
+      213: -5788397106333917582
+    second: Circulos_spritesheet_26
+  - first:
+      213: 6129957921567983879
+    second: Circulos_spritesheet_27
+  - first:
+      213: -533477015280698728
+    second: Circulos_spritesheet_28
+  - first:
+      213: 1245290400046637327
+    second: Circulos_spritesheet_29
+  - first:
+      213: 6837706413175536195
+    second: Circulos_spritesheet_30
+  - first:
+      213: -7049135022400629000
+    second: Circulos_spritesheet_31
+  - first:
+      213: 7270533858113368268
+    second: Circulos_spritesheet_32
+  - first:
+      213: -974543407001603058
+    second: Circulos_spritesheet_33
+  - first:
+      213: -781704054566879831
+    second: Circulos_spritesheet_34
+  - first:
+      213: -269865802104929178
+    second: Circulos_spritesheet_35
+  - first:
+      213: -1233755266025494300
+    second: Circulos_spritesheet_36
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Circulos_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 14
+        width: 75
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f16c8e065c75c650800000000000000
+      internalID: 6252540366726914550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circulos_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 55
+        width: 38
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 242cd0deb2ed7a180800000000000000
+      internalID: -9104063841464106430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circulos_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 28
+        width: 66
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3eb910d636bc7190800000000000000
+      internalID: -7963289694562042308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circulos_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 11
+        width: 82
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65e041173f96ad140800000000000000
+      internalID: 4745221651683348054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circulos_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 5
+        width: 81
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 524b13fdc9f452c00800000000000000
+      internalID: 875193237771498533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 55491642d2bc52443ad5d781b7098861
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Circulos_spritesheet_0: -2105905193
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

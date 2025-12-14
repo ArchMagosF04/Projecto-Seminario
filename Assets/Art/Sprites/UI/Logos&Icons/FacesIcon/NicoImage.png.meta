@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      NicoImage_0: 5229806685710580424
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

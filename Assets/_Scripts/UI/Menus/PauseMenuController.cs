@@ -7,6 +7,7 @@ public class PauseMenuController : MonoBehaviour
 {
     [SerializeField] private MenuPage startingPage;
     [SerializeField] private ConfirmationPopUpMenu popUpMenu;
+    [SerializeField] private Canvas backgroundCanvas;
 
     private MenuPage currentPage;
 
@@ -18,6 +19,8 @@ public class PauseMenuController : MonoBehaviour
     {
         if (startingPage == null) Debug.LogError("Starting page Not Selected", this);
         currentPage = startingPage;
+
+        backgroundCanvas.enabled = false;
     }
 
     private void Start()
@@ -84,6 +87,7 @@ public class PauseMenuController : MonoBehaviour
         PauseTimeScale();
         currentPage = startingPage;
         currentPage.OpenMenu();
+        backgroundCanvas.enabled = true;
     }
 
     public void ClosePauseMenu()
@@ -93,6 +97,7 @@ public class PauseMenuController : MonoBehaviour
         currentPage.CloseMenu();
         IsGameInPause = false;
         playerInput.SwitchCurrentActionMap("Player");
+        backgroundCanvas.enabled = false;
     }
 
     public void PauseTimeScale() => Time.timeScale = 0f;

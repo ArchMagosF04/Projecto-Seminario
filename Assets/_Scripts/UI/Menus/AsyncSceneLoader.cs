@@ -35,7 +35,7 @@ public class AsyncSceneLoader : MonoBehaviour
 
     private void Start()
     {
-        playerInput = UIInputManager.Instance.gameObject.GetComponent<PlayerInput>();
+        playerInput = FindFirstObjectByType<PlayerInput>();
     }
 
     public void LoadLevel(string sceneName)

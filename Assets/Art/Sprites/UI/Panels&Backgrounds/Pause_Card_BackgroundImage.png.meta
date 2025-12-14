@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Pause_Card_BackgroundImage_0: -4754891891359781995
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

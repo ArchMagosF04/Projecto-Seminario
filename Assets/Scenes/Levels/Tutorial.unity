@@ -1657,6 +1657,7 @@ GameObject:
   - component: {fileID: 836957142}
   - component: {fileID: 836957141}
   - component: {fileID: 836957144}
+  - component: {fileID: 836957145}
   m_Layer: 0
   m_Name: PauseMenuScreen
   m_TagString: Untagged
@@ -1766,10 +1767,88 @@ MonoBehaviour:
   IsMenuOpen: 0
   OnPageOpen:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 836957145}
+        m_TargetAssemblyTypeName: AiryUI.AnimatedElement, Assembly-CSharp-firstpass
+        m_MethodName: ShowElement
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnPageClose:
     m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 836957145}
+        m_TargetAssemblyTypeName: AiryUI.AnimatedElement, Assembly-CSharp-firstpass
+        m_MethodName: HideElement
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &836957145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836957139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a8dff8c7bdaea24098c5c167c761c64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isControlledByGroup: 0
+  group: {fileID: 0}
+  OnShow:
+    m_PersistentCalls:
       m_Calls: []
+  OnHide:
+    m_PersistentCalls:
+      m_Calls: []
+  OnShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHideComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  disableShowAnimation: 0
+  disableHideAnimation: 0
+  containerCanvas: {fileID: 836957143}
+  animateOnEnable: 0
+  showTimeMode: 1
+  hideTimeMode: 0
+  showAnimationType: 0
+  hideAnimationType: 0
+  animationMoveFrom: 0
+  animationMoveTo: 0
+  addBounciness: 0
+  bouncinessPower: 0.1
+  bouncinessDuration: 0.1
+  fadeChildren: 0
+  animationShowDuration: 0.5
+  animationHideDuration: 0.5
+  delayEnabled: 0
+  showDelay: 0
+  hideDelay: 0
+  rotateFrom: {x: 0, y: 0, z: 0}
+  rotateTo: {x: 0, y: 0, z: 0}
+  worldPosition_initial: {x: 0, y: 0, z: 0}
+  localPosition_initial: {x: 0, y: 0, z: 0}
+  anchoredPosition_initial: {x: 0, y: 0, z: 0}
+  childrenColors_initial: []
+  scale_initial: {x: 0, y: 0, z: 0}
+  rotation_initial: {x: 0, y: 0, z: 0, w: 0}
+  pivot_initial: {x: 0, y: 0}
 --- !u!1 &874728288
 GameObject:
   m_ObjectHideFlags: 0

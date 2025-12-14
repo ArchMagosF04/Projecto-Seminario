@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 66be063e223dc7142912b48ec5766313
+guid: 6fb76a07b6ebd70439bf0ff513d39756
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9211482022116378012
-    second: Partida_guardada_On_0
+      213: -2806250159205235417
+    second: Pause_CardPanel_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -52,7 +52,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 48, y: 43, z: 50, w: 42}
+  spriteBorder: {x: 125, y: 85, z: 125, w: 85}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Partida_guardada_On_0
+      name: Pause_CardPanel_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 8
-        width: 431
-        height: 187
+        x: 0
+        y: 0
+        width: 536
+        height: 598
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 46a3bd8c7ed3a2080800000000000000
-      internalID: -9211482022116378012
+      spriteID: 72540bd29523e09d0800000000000000
+      internalID: -2806250159205235417
       vertices: []
       indices: 
       edges: []
@@ -131,7 +131,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Partida_guardada_On_0: -9211482022116378012
+      Pause_CardPanel_0: -2806250159205235417
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

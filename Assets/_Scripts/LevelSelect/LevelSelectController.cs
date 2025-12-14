@@ -103,6 +103,7 @@ public class LevelSelectController : MonoBehaviour, IDataPersistance
     public void CloseMenu()
     {
         isAnyMenuOpen = false;
+        isPopUpOpen = false;
         weaponSelectorCanvas.CloseMenu();
         confirmationPopUpMenu.DeactivateMenu();
         SelectButtonMarker();

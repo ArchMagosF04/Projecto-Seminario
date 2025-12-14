@@ -14,11 +14,21 @@ public class WeaponMenuController : MonoBehaviour, IDataPersistance
     [SerializeField] private TMP_Text weaponName;
     [SerializeField] private TMP_Text weaponDescription;
 
+    [Header("Weapon Selected Highlights")]
+    [SerializeField] private List<GameObject> highlights;
+
     private int currentSelectedWeapon;
+
+    private void Awake()
+    {
+        foreach (var img in highlights) img.SetActive(false);
+    }
 
     private void Start()
     {
         WeaponInfo weapon = weapons[currentSelectedWeapon];
+
+        highlights[currentSelectedWeapon].SetActive(true);
 
         weaponImage.sprite = weapon.weaponImage;
         weaponName.text = weapon.weaponName;
@@ -40,6 +50,9 @@ public class WeaponMenuController : MonoBehaviour, IDataPersistance
         currentSelectedWeapon = index;
 
         WeaponInfo weapon = weapons[currentSelectedWeapon];
+
+        foreach (var img in highlights) img.SetActive(false);
+        highlights[currentSelectedWeapon].SetActive(true);
 
         weaponImage.sprite = weapon.weaponImage;
         weaponName.text = weapon.weaponName;

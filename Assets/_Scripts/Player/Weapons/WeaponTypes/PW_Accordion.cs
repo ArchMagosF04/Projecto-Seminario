@@ -1,4 +1,5 @@
 using Ami.BroAudio;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -64,6 +65,8 @@ public class PW_Accordion : PlayerWeapon
 
     private bool isCharging;
     private bool isSpecialBuffActive;
+
+    public static event Action OnspecialEnded = delegate { };
 
     protected override void Awake()
     {
@@ -183,6 +186,7 @@ public class PW_Accordion : PlayerWeapon
                 anim.SetBool("Special", false);
                 chargeFlashAnim.SetBool("Active", false);
                 chargeFlashSprite.color = chargeLv1Color;
+                OnspecialEnded();
             }
         }
     }

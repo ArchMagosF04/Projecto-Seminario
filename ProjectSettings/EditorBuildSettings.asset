@@ -11,5 +11,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LevelSelect.unity
     guid: 5ce72998c32c02c44a7659adcae4fae5
+  - enabled: 1
+    path: Assets/Scenes/Levels/TestGrounds.unity
+    guid: 53c390f5ab712c245a4163c7183a09e5
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

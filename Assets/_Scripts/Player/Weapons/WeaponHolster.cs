@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,12 +6,26 @@ using UnityEngine;
 public class WeaponHolster : MonoBehaviour, IDataPersistance
 {
     [SerializeField] WeaponList weaponList;
+    public event Action<int> OnWeaponLoaded = delegate { };
 
     private int selectedWeapon;
 
+    [SerializeField]private bool manualOverride;
+    [SerializeField] private int manualWeaponOverrideIndex;
+
     public void LoadData(GameData gameData)
     {
-        selectedWeapon = gameData.weaponSelected;
+        if (!manualOverride)
+        {
+            selectedWeapon = gameData.weaponSelected;
+            OnWeaponLoaded(selectedWeapon);
+        }
+        else
+        {
+            selectedWeapon = manualWeaponOverrideIndex;
+            OnWeaponLoaded(selectedWeapon);
+        }
+       
     }
 
     public void SaveData(GameData gameData)

@@ -13,6 +13,9 @@ public class LevelSelectController : MonoBehaviour, IDataPersistance
     [Header("Marker Settings")]
     [SerializeField] private Selectable[] levelMarkers;
 
+    [Header("Level Names")]
+    [SerializeField] private string[] levelNames;
+
     [Header("Menus")]
     [SerializeField] private MenuPage weaponSelectorCanvas;
 
@@ -107,6 +110,11 @@ public class LevelSelectController : MonoBehaviour, IDataPersistance
         weaponSelectorCanvas.CloseMenu();
         confirmationPopUpMenu.DeactivateMenu();
         SelectButtonMarker();
+    }
+
+    public void PlaySelectedLevel()
+    {
+        AsyncSceneLoader.Instance.LoadLevel(levelNames[currentSelectedLevel]);
     }
 
     public void LoadData(GameData gameData)

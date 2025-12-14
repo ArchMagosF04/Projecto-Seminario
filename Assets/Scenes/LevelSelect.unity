@@ -464,7 +464,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 85695056}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 152482580}
+        m_TargetAssemblyTypeName: LevelSelectController, Assembly-CSharp
+        m_MethodName: PlaySelectedLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &85695056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1094,6 +1106,11 @@ MonoBehaviour:
   - {fileID: 1066321913}
   - {fileID: 950005758}
   - {fileID: 224257963}
+  levelNames:
+  - Tutorial
+  - Level1V2
+  - Level2
+  - Level3
   weaponSelectorCanvas: {fileID: 1491715450}
   confirmationPopUpMenu: {fileID: 2131394434}
   eventSystem: {fileID: 0}
@@ -1269,7 +1286,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 224257964}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 152482580}
+        m_TargetAssemblyTypeName: LevelSelectController, Assembly-CSharp
+        m_MethodName: PlaySelectedLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &224257964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3818,7 +3847,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 950005759}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 152482580}
+        m_TargetAssemblyTypeName: LevelSelectController, Assembly-CSharp
+        m_MethodName: PlaySelectedLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &950005759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4088,7 +4129,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1066321914}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 152482580}
+        m_TargetAssemblyTypeName: LevelSelectController, Assembly-CSharp
+        m_MethodName: PlaySelectedLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1066321914
 MonoBehaviour:
   m_ObjectHideFlags: 0

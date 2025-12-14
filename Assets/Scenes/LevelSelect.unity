@@ -4421,6 +4421,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1979494389}
     m_Modifications:
+    - target: {fileID: 2870602614090739, guid: df9c39a2ed3f10b488f575d72fec5042, type: 3}
+      propertyPath: OnAnimationFinished.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2870602614090739, guid: df9c39a2ed3f10b488f575d72fec5042, type: 3}
+      propertyPath: OnAnimationFinished.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2870602614090739, guid: df9c39a2ed3f10b488f575d72fec5042, type: 3}
+      propertyPath: OnAnimationFinished.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3254069506012481820, guid: df9c39a2ed3f10b488f575d72fec5042, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4504,6 +4516,34 @@ PrefabInstance:
     - target: {fileID: 4688696123044331089, guid: df9c39a2ed3f10b488f575d72fec5042, type: 3}
       propertyPath: m_Name
       value: GoToMainMenuButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 4701152522659887857, guid: df9c39a2ed3f10b488f575d72fec5042, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4701152522659887857, guid: df9c39a2ed3f10b488f575d72fec5042, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4701152522659887857, guid: df9c39a2ed3f10b488f575d72fec5042, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 152482580}
+    - target: {fileID: 4701152522659887857, guid: df9c39a2ed3f10b488f575d72fec5042, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4701152522659887857, guid: df9c39a2ed3f10b488f575d72fec5042, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: OnReturnToMainMenuInput
+      objectReference: {fileID: 0}
+    - target: {fileID: 4701152522659887857, guid: df9c39a2ed3f10b488f575d72fec5042, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: LevelSelectController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4701152522659887857, guid: df9c39a2ed3f10b488f575d72fec5042, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8775768164383919928, guid: df9c39a2ed3f10b488f575d72fec5042, type: 3}
       propertyPath: m_text

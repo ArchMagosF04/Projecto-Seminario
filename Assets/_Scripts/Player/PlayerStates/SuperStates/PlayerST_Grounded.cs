@@ -63,14 +63,14 @@ public class PlayerST_Grounded : PlayerState
     {
         base.OnUpdate();
 
-        xInput = InputManager.Instance.NormInputX;
-        yInput = InputManager.Instance.NormInputY;
-        jumpInput = InputManager.Instance.JumpInput;
-        dashInput = InputManager.Instance.DashInput;
-        crouchInput = InputManager.Instance.CrouchInput;
-        crouchInputStop = InputManager.Instance.CrouchInputStop;
-        primaryAttack = InputManager.Instance.PrimaryAttackInput;
-        secondaryAttack = InputManager.Instance.SecondaryAttackInput;
+        xInput = GameInputManager.Instance.NormInputX;
+        yInput = GameInputManager.Instance.NormInputY;
+        jumpInput = GameInputManager.Instance.JumpInput;
+        dashInput = GameInputManager.Instance.DashInput;
+        crouchInput = GameInputManager.Instance.CrouchInput;
+        crouchInputStop = GameInputManager.Instance.CrouchInputStop;
+        primaryAttack = GameInputManager.Instance.PrimaryAttackInput;
+        secondaryAttack = GameInputManager.Instance.SecondaryAttackInput;
 
         if ((primaryAttack || controller.ReleaseChargeAttack()) && controller.PrimaryAttackState.CanPerformAttack())
         {

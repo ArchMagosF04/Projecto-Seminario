@@ -37,7 +37,7 @@ public class AnittaST_NormalAttack : AnittaState
     {
         if (attackPerformed) return;
 
-        if (controller.Speaking) return;
+        if (!GameManager.Instance.IsGameActive) return;
 
         controller.CheckFlip(GameManager.Instance.PlayerInstance.transform);
 

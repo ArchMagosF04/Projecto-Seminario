@@ -6,7 +6,6 @@ public class PlayerST_SecAttack : PlayerST_Ability
 {
     private PlayerWeapon weapon;
     
-
     public PlayerST_SecAttack(PlayerController controller, PlayerStats stats, StateMachine stateMachine, Animator anim, string animBoolName, PlayerWeapon weapon) : base(controller, stats, stateMachine, anim, animBoolName)
     {
         this.weapon = weapon;
@@ -24,7 +23,7 @@ public class PlayerST_SecAttack : PlayerST_Ability
     {
         base.OnEnter();
 
-        InputManager.Instance.UseSecondaryAttackInput();
+        GameInputManager.Instance.UseSecondaryAttackInput();
         BeatManager.Instance.OnPlayerRhythmicAction();
 
         manaComponent.UseMana();
@@ -39,11 +38,9 @@ public class PlayerST_SecAttack : PlayerST_Ability
 
     public bool CanPerformSpecialAttack()
     {
-        if (manaComponent.isManaFull) return true;
+        if (manaComponent.isManaFull && GameManager.Instance.IsGameActive) return true;
 
-        if(controller.Speaking && controller.canAtack==false) return false;
-
-        InputManager.Instance.UseSecondaryAttackInput();
+        GameInputManager.Instance.UseSecondaryAttackInput();
 
         return false;
     }

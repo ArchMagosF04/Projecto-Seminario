@@ -37,7 +37,7 @@ public class P1MiguelST_FlameAttack : P1MiguelState
     {
         if (attackPerformed) return;
 
-        if (controller.Speaking) return;
+        if (!GameManager.Instance.IsGameActive) return;
 
         anim.SetTrigger("AttackBeat");
 

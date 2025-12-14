@@ -16,10 +16,6 @@ public class PlayerST_Move : PlayerST_Grounded
     public override void OnEnter()
     {
         base.OnEnter();
-        if (controller.Speaking)
-        {
-            OnExit();
-        }
     }
 
     public override void OnExit()

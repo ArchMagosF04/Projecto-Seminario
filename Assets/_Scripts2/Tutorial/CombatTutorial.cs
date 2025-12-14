@@ -72,49 +72,49 @@ public class CombatTutorial : MonoBehaviour
 
     private void Update()
     {
-        if (index == 1)
-        {
-            enemyHud.SetActive(true);
+        //if (index == 1)
+        //{
+        //    enemyHud.SetActive(true);
 
-            if(currentTimer < timer)
-            {
-                currentTimer += Time.deltaTime;
-            }
-            else if (Input.anyKey)
-            {
-                player.GetComponent<PlayerController>().canAtack = true;
-                AdvanceIndex();
-                currentTimer = 0;
-            }                
-        }
+        //    if(currentTimer < timer)
+        //    {
+        //        currentTimer += Time.deltaTime;
+        //    }
+        //    else if (Input.anyKey)
+        //    {
+        //        player.GetComponent<PlayerController>().canAtack = true;
+        //        AdvanceIndex();
+        //        currentTimer = 0;
+        //    }                
+        //}
 
-        if (index == 2 && Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            if(count < 3)
-            {
-                count++;
-            }
-            else
-            {
-                AdvanceIndex();
-                count = 0;
-                player.GetComponent<PlayerController>().canAtack = false;
-            }                
-        }
+        //if (index == 2 && Input.GetKeyDown(KeyCode.Mouse0))
+        //{
+        //    if(count < 3)
+        //    {
+        //        count++;
+        //    }
+        //    else
+        //    {
+        //        AdvanceIndex();
+        //        count = 0;
+        //        player.GetComponent<PlayerController>().canAtack = false;
+        //    }                
+        //}
 
-        if(index == 3)
-        {
-            if (currentTimer < timer)
-            {
-                currentTimer += Time.deltaTime;
-            }
-            else if (Input.anyKey)
-            {
-                currentTimer = 0;
-                player.GetComponent<PlayerController>().canAtack = true;
-                AdvanceIndex();             
-            }
-        }    
+        //if(index == 3)
+        //{
+        //    if (currentTimer < timer)
+        //    {
+        //        currentTimer += Time.deltaTime;
+        //    }
+        //    else if (Input.anyKey)
+        //    {
+        //        currentTimer = 0;
+        //        player.GetComponent<PlayerController>().canAtack = true;
+        //        AdvanceIndex();             
+        //    }
+        //}    
         
         if (index == 4)
         {

@@ -55,12 +55,12 @@ public class PlayerST_Airborne : PlayerState
 
         CheckCoyoteTime();
 
-        xInput = InputManager.Instance.NormInputX;
-        jumpInput = InputManager.Instance.JumpInput;
-        jumpInputStop = InputManager.Instance.JumpInputStop;
-        dashInput = InputManager.Instance.DashInput;
-        primaryAttackInput = InputManager.Instance.PrimaryAttackInput;
-        secondaryAttackInput = InputManager.Instance.SecondaryAttackInput;
+        xInput = GameInputManager.Instance.NormInputX;
+        jumpInput = GameInputManager.Instance.JumpInput;
+        jumpInputStop = GameInputManager.Instance.JumpInputStop;
+        dashInput = GameInputManager.Instance.DashInput;
+        primaryAttackInput = GameInputManager.Instance.PrimaryAttackInput;
+        secondaryAttackInput = GameInputManager.Instance.SecondaryAttackInput;
 
         CheckJumpMultipler();
 

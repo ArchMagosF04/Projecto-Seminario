@@ -105,7 +105,7 @@ public class BeamWeapon : MonoBehaviour
 
             bool addToList = false;
 
-            if (hit.collider.TryGetComponent<IDamageable>(out IDamageable health))
+            if (hit.collider.TryGetComponent<Core_Health>(out Core_Health health))
             {
                 health.TakeDamage(damage, beamDirection);
                 addToList = true;

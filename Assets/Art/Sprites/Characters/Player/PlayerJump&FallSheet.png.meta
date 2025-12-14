@@ -1,0 +1,889 @@
+fileFormatVersion: 2
+guid: 1965a9879040b6b45aa88c100ac62d83
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 502190924028702089
+    second: PlayerJump&FallSheet_0
+  - first:
+      213: -3807293280065544729
+    second: PlayerJump&FallSheet_1
+  - first:
+      213: 6878500863387506905
+    second: PlayerJump&FallSheet_2
+  - first:
+      213: -2357319757267830406
+    second: PlayerJump&FallSheet_3
+  - first:
+      213: 4083214583545498965
+    second: PlayerJump&FallSheet_4
+  - first:
+      213: -2400366109745445741
+    second: PlayerJump&FallSheet_5
+  - first:
+      213: -6899557596177255416
+    second: PlayerJump&FallSheet_6
+  - first:
+      213: 7631001676921963329
+    second: PlayerJump&FallSheet_7
+  - first:
+      213: 8406764005408383227
+    second: PlayerJump&FallSheet_8
+  - first:
+      213: -2695143980012140350
+    second: PlayerJump&FallSheet_9
+  - first:
+      213: -2594413583874816235
+    second: PlayerJump&FallSheet_10
+  - first:
+      213: -2314569693623729381
+    second: PlayerJump&FallSheet_11
+  - first:
+      213: 1959341305568735092
+    second: PlayerJump&FallSheet_12
+  - first:
+      213: -1296602048658020550
+    second: PlayerJump&FallSheet_13
+  - first:
+      213: 359028740079364634
+    second: PlayerJump&FallSheet_14
+  - first:
+      213: 3197262286975281240
+    second: PlayerJump&FallSheet_15
+  - first:
+      213: 7810957236723958491
+    second: PlayerJump&FallSheet_16
+  - first:
+      213: 4013953755845604674
+    second: PlayerJump&FallSheet_17
+  - first:
+      213: 6217247017794799069
+    second: PlayerJump&FallSheet_18
+  - first:
+      213: 3781656319589407667
+    second: PlayerJump&FallSheet_19
+  - first:
+      213: 971394874145980313
+    second: PlayerJump&FallSheet_20
+  - first:
+      213: -2973022212483056877
+    second: PlayerJump&FallSheet_21
+  - first:
+      213: -1149342806877407765
+    second: PlayerJump&FallSheet_22
+  - first:
+      213: -2748921739184984980
+    second: PlayerJump&FallSheet_23
+  - first:
+      213: -4737463398664182153
+    second: PlayerJump&FallSheet_24
+  - first:
+      213: -3944421755831495859
+    second: PlayerJump&FallSheet_25
+  - first:
+      213: 3484759492920042403
+    second: PlayerJump&FallSheet_26
+  - first:
+      213: 5582634180114229113
+    second: PlayerJump&FallSheet_27
+  - first:
+      213: 827316234558561146
+    second: PlayerJump&FallSheet_28
+  - first:
+      213: -4577190390436329530
+    second: PlayerJump&FallSheet_29
+  - first:
+      213: 8438883803779419237
+    second: PlayerJump&FallSheet_30
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PlayerJump&FallSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3429
+        width: 657
+        height: 1143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07e02ab1eab51bb4e89d3128e6f74143
+      internalID: -732913658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerJump&FallSheet_1
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 3429
+        width: 657
+        height: 1143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 077ee9c7480f11148b8ee23836350592
+      internalID: -1686808561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerJump&FallSheet_2
+      rect:
+        serializedVersion: 2
+        x: 1314
+        y: 3429
+        width: 657
+        height: 1143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00b653f132ead114d83e2dd0d64ad766
+      internalID: -428393169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerJump&FallSheet_3
+      rect:
+        serializedVersion: 2
+        x: 1971
+        y: 3429
+        width: 657
+        height: 1143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de23137fcbccfdb459f93f4df07b66c5
+      internalID: 652991835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerJump&FallSheet_4
+      rect:
+        serializedVersion: 2
+        x: 2628
+        y: 3429
+        width: 657
+        height: 1143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 499c1857c10635c418fd383065f33765
+      internalID: -1142911693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerJump&FallSheet_5
+      rect:
+        serializedVersion: 2
+        x: 3285
+        y: 3429
+        width: 657
+        height: 1143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb8a39f1e20bbfd4098e217e350c9b2a
+      internalID: 895243910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerJump&FallSheet_6
+      rect:
+        serializedVersion: 2
+        x: 3942
+        y: 3429
+        width: 657
+        height: 1143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8378cb15e52f164fac527c2e80870fe
+      internalID: -1969187879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerJump&FallSheet_7
+      rect:
+        serializedVersion: 2
+        x: 4599
+        y: 3429
+        width: 657
+        height: 1143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa0dddac7c8d1f24aa10196df3af8c3d
+      internalID: 2094218201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerJump&FallSheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2286
+        width: 657
+        height: 1143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 102403f8f570ef540a81ccb82f61dbd2
+      internalID: -1170902416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerJump&FallSheet_9
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 2286
+        width: 657
+        height: 1143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0a7dafa0a83b614480598a65af10ee0
+      internalID: -819760226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerJump&FallSheet_10
+      rect:
+        serializedVersion: 2
+        x: 1314
+        y: 2286
+        width: 657
+        height: 1143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98449248c5213954da3fdb5d6a3807cd
+      internalID: -338193538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerJump&FallSheet_11
+      rect:
+        serializedVersion: 2
+        x: 1971
+        y: 2286
+        width: 657
+        height: 1143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce61fbf416107bf489d8964661079195
+      internalID: 1078199547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerJump&FallSheet_12
+      rect:
+        serializedVersion: 2
+        x: 2628
+        y: 2286
+        width: 657
+        height: 1143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16901b947f738964fba9a40757ee0dbc
+      internalID: 799663996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerJump&FallSheet_13
+      rect:
+        serializedVersion: 2
+        x: 3285
+        y: 2286
+        width: 657
+        height: 1143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f45e10221d0407f4981e6e528f96f1e1
+      internalID: 1342768703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerJump&FallSheet_14
+      rect:
+        serializedVersion: 2
+        x: 3942
+        y: 2286
+        width: 657
+        height: 1143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0721f7f2fa8193408f5a251722d57d9
+      internalID: 411098179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerJump&FallSheet_15
+      rect:
+        serializedVersion: 2
+        x: 4599
+        y: 2286
+        width: 657
+        height: 1143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05fec2885f893f147a7fb51254a370bc
+      internalID: -1865138549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerJump&FallSheet_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1143
+        width: 657
+        height: 1143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41d3bf1e257f52541bb4cc5959c22531
+      internalID: -1708231370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerJump&FallSheet_17
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 1143
+        width: 657
+        height: 1143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec67d20a24b52834ba22682a2e061209
+      internalID: -1294687327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerJump&FallSheet_18
+      rect:
+        serializedVersion: 2
+        x: 1314
+        y: 1143
+        width: 657
+        height: 1143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bba719d03fb71346b2257d361ab67c4
+      internalID: 1446377157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerJump&FallSheet_19
+      rect:
+        serializedVersion: 2
+        x: 1971
+        y: 1143
+        width: 657
+        height: 1143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc69c51c452cc76458216748a2ea6277
+      internalID: -651485764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerJump&FallSheet_20
+      rect:
+        serializedVersion: 2
+        x: 2628
+        y: 1143
+        width: 657
+        height: 1143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4e634b821356064f98067ce91a20165
+      internalID: 672944247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerJump&FallSheet_21
+      rect:
+        serializedVersion: 2
+        x: 3285
+        y: 1143
+        width: 657
+        height: 1143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd2e93dd6a3a2ff428e85bf61d7f949d
+      internalID: 134656490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerJump&FallSheet_22
+      rect:
+        serializedVersion: 2
+        x: 3942
+        y: 1143
+        width: 657
+        height: 1143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc3deb5d7719eea4da7b1df8ecd5e86b
+      internalID: -1487253548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerJump&FallSheet_23
+      rect:
+        serializedVersion: 2
+        x: 4599
+        y: 1143
+        width: 657
+        height: 1143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 421ed6e461cc2594a819bc414b9ed8ee
+      internalID: 582349988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerJump&FallSheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 657
+        height: 1143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b64c4001a3731e344999315ab1da810d
+      internalID: 924826522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerJump&FallSheet_25
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 0
+        width: 657
+        height: 1143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92032f246580c7046907b0b99cec5af2
+      internalID: 1417917556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerJump&FallSheet_26
+      rect:
+        serializedVersion: 2
+        x: 1314
+        y: 0
+        width: 657
+        height: 1143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7594f35b896f8424e8542c7ae444e76c
+      internalID: -1657842997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerJump&FallSheet_27
+      rect:
+        serializedVersion: 2
+        x: 1971
+        y: 0
+        width: 657
+        height: 1143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0b5149b31f7cc0418a96cbb0d03f1cd
+      internalID: 881271641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerJump&FallSheet_28
+      rect:
+        serializedVersion: 2
+        x: 2628
+        y: 0
+        width: 657
+        height: 1143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bf9316f41645924fa08ef621a97a6d6
+      internalID: 192295688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerJump&FallSheet_29
+      rect:
+        serializedVersion: 2
+        x: 3285
+        y: 0
+        width: 657
+        height: 1143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05b93c82b22a62a4bbd157a7a19ac4fa
+      internalID: -1945730578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerJump&FallSheet_30
+      rect:
+        serializedVersion: 2
+        x: 3942
+        y: 0
+        width: 657
+        height: 1143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccbd9a6586adc954eb8a4b5638b769f6
+      internalID: -1126833455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 525310f66058b804588d9a31af2e2e3e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      PlayerJump&FallSheet_0: -732913658
+      PlayerJump&FallSheet_1: -1686808561
+      PlayerJump&FallSheet_10: -338193538
+      PlayerJump&FallSheet_11: 1078199547
+      PlayerJump&FallSheet_12: 799663996
+      PlayerJump&FallSheet_13: 1342768703
+      PlayerJump&FallSheet_14: 411098179
+      PlayerJump&FallSheet_15: -1865138549
+      PlayerJump&FallSheet_16: -1708231370
+      PlayerJump&FallSheet_17: -1294687327
+      PlayerJump&FallSheet_18: 1446377157
+      PlayerJump&FallSheet_19: -651485764
+      PlayerJump&FallSheet_2: -428393169
+      PlayerJump&FallSheet_20: 672944247
+      PlayerJump&FallSheet_21: 134656490
+      PlayerJump&FallSheet_22: -1487253548
+      PlayerJump&FallSheet_23: 582349988
+      PlayerJump&FallSheet_24: 924826522
+      PlayerJump&FallSheet_25: 1417917556
+      PlayerJump&FallSheet_26: -1657842997
+      PlayerJump&FallSheet_27: 881271641
+      PlayerJump&FallSheet_28: 192295688
+      PlayerJump&FallSheet_29: -1945730578
+      PlayerJump&FallSheet_3: 652991835
+      PlayerJump&FallSheet_30: -1126833455
+      PlayerJump&FallSheet_4: -1142911693
+      PlayerJump&FallSheet_5: 895243910
+      PlayerJump&FallSheet_6: -1969187879
+      PlayerJump&FallSheet_7: 2094218201
+      PlayerJump&FallSheet_8: -1170902416
+      PlayerJump&FallSheet_9: -819760226
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

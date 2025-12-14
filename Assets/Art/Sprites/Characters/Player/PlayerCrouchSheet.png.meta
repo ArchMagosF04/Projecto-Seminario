@@ -1,0 +1,1489 @@
+fileFormatVersion: 2
+guid: 6786629255b5a234fbabb8b4ecdbc9ae
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1035709471776278561
+    second: PlayerCrouchSheet_0
+  - first:
+      213: 5575493378797859849
+    second: PlayerCrouchSheet_1
+  - first:
+      213: 4376615217983789330
+    second: PlayerCrouchSheet_2
+  - first:
+      213: -3875790812560262364
+    second: PlayerCrouchSheet_3
+  - first:
+      213: -7201463926975952347
+    second: PlayerCrouchSheet_4
+  - first:
+      213: -1232634794961029349
+    second: PlayerCrouchSheet_5
+  - first:
+      213: 854471999677245531
+    second: PlayerCrouchSheet_6
+  - first:
+      213: 4165804633586794129
+    second: PlayerCrouchSheet_7
+  - first:
+      213: 7228393902119080282
+    second: PlayerCrouchSheet_8
+  - first:
+      213: -2664663913648735897
+    second: PlayerCrouchSheet_9
+  - first:
+      213: -1557600804085158704
+    second: PlayerCrouchSheet_10
+  - first:
+      213: 7480592561557780845
+    second: PlayerCrouchSheet_11
+  - first:
+      213: 3445779515791834104
+    second: PlayerCrouchSheet_12
+  - first:
+      213: 6208284231697620704
+    second: PlayerCrouchSheet_13
+  - first:
+      213: -3028806097724978100
+    second: PlayerCrouchSheet_14
+  - first:
+      213: 2488465496425889459
+    second: PlayerCrouchSheet_15
+  - first:
+      213: -3768944328948112266
+    second: PlayerCrouchSheet_16
+  - first:
+      213: 8848453444211354141
+    second: PlayerCrouchSheet_17
+  - first:
+      213: 1700799599842055588
+    second: PlayerCrouchSheet_18
+  - first:
+      213: 996902442269699598
+    second: PlayerCrouchSheet_19
+  - first:
+      213: -4980617538237607693
+    second: PlayerCrouchSheet_20
+  - first:
+      213: 4514187151150575374
+    second: PlayerCrouchSheet_21
+  - first:
+      213: -3472652902932989013
+    second: PlayerCrouchSheet_22
+  - first:
+      213: 2643087787291445478
+    second: PlayerCrouchSheet_23
+  - first:
+      213: -7222431689657509948
+    second: PlayerCrouchSheet_24
+  - first:
+      213: 6200792388866070407
+    second: PlayerCrouchSheet_25
+  - first:
+      213: -3054914430772569802
+    second: PlayerCrouchSheet_26
+  - first:
+      213: -8342624569104853141
+    second: PlayerCrouchSheet_27
+  - first:
+      213: 4829124094430554861
+    second: PlayerCrouchSheet_28
+  - first:
+      213: 2058913138179349814
+    second: PlayerCrouchSheet_29
+  - first:
+      213: 7072445816494181611
+    second: PlayerCrouchSheet_30
+  - first:
+      213: -3438166159897351521
+    second: PlayerCrouchSheet_31
+  - first:
+      213: 6344527777718567381
+    second: PlayerCrouchSheet_32
+  - first:
+      213: 3290682796765891787
+    second: PlayerCrouchSheet_33
+  - first:
+      213: -4970951442307789756
+    second: PlayerCrouchSheet_34
+  - first:
+      213: 4032668858368321272
+    second: PlayerCrouchSheet_35
+  - first:
+      213: -6372936257292360772
+    second: PlayerCrouchSheet_36
+  - first:
+      213: -2585968929837999705
+    second: PlayerCrouchSheet_37
+  - first:
+      213: 3648215191194136000
+    second: PlayerCrouchSheet_38
+  - first:
+      213: 2205665866727645907
+    second: PlayerCrouchSheet_39
+  - first:
+      213: 1360685032000382185
+    second: PlayerCrouchSheet_40
+  - first:
+      213: -8885177097275408660
+    second: PlayerCrouchSheet_41
+  - first:
+      213: 1742114946907310243
+    second: PlayerCrouchSheet_42
+  - first:
+      213: 20810568482477793
+    second: PlayerCrouchSheet_43
+  - first:
+      213: -7195296062543318335
+    second: PlayerCrouchSheet_44
+  - first:
+      213: -1678302133070220002
+    second: PlayerCrouchSheet_45
+  - first:
+      213: -7886117598097436851
+    second: PlayerCrouchSheet_46
+  - first:
+      213: 8822618881666973088
+    second: PlayerCrouchSheet_47
+  - first:
+      213: 3382080985678113149
+    second: PlayerCrouchSheet_48
+  - first:
+      213: 9179690782633117167
+    second: PlayerCrouchSheet_49
+  - first:
+      213: -3244830823336262103
+    second: PlayerCrouchSheet_50
+  - first:
+      213: 3314942038016330976
+    second: PlayerCrouchSheet_51
+  - first:
+      213: -5731710597800667506
+    second: PlayerCrouchSheet_52
+  - first:
+      213: 6943438778830569818
+    second: PlayerCrouchSheet_53
+  - first:
+      213: -5661969918999485917
+    second: PlayerCrouchSheet_54
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4340
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 975ac7ff00468734ea9a804655d271b5
+      internalID: 1883147734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_1
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 4340
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7d78cca433ab1f43ba88ba8264e23a1
+      internalID: -550788825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_2
+      rect:
+        serializedVersion: 2
+        x: 1268
+        y: 4340
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aff00ecf7bd1324c890fe22cc097a3d
+      internalID: 2073433364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_3
+      rect:
+        serializedVersion: 2
+        x: 1902
+        y: 4340
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a6586f933c8cbf4aad7404a6da35117
+      internalID: -1056868788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_4
+      rect:
+        serializedVersion: 2
+        x: 2536
+        y: 4340
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 828dc4b41ec72a14391550ad88c4a05e
+      internalID: -1162860154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_5
+      rect:
+        serializedVersion: 2
+        x: 3170
+        y: 4340
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a492220c0a706fe41ad005a6651ce0be
+      internalID: -1203397047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_6
+      rect:
+        serializedVersion: 2
+        x: 3804
+        y: 4340
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57cf92346fbc6714781b7d7f9fd2d055
+      internalID: 1818043093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_7
+      rect:
+        serializedVersion: 2
+        x: 4438
+        y: 4340
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6731d3ce915a2f4785a6ea73f4c27b5
+      internalID: -339516337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_8
+      rect:
+        serializedVersion: 2
+        x: 5072
+        y: 4340
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f25b9f46d9d2a645895b5a434ec47c9
+      internalID: -1817391232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_9
+      rect:
+        serializedVersion: 2
+        x: 5706
+        y: 4340
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f33dab5369b67b45a230334da459375
+      internalID: -160024629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_10
+      rect:
+        serializedVersion: 2
+        x: 6340
+        y: 4340
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 232f6bbc86ec6de4ebc7a11e7356195c
+      internalID: -1979177021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3255
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b9f135af75c5fc4a84ae7e9e9e51d02
+      internalID: 20681412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_12
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 3255
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c996688c18eb4d546aaac145fb3d65c8
+      internalID: -1219023396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_13
+      rect:
+        serializedVersion: 2
+        x: 1268
+        y: 3255
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c05b1901fafd2b0469b5a784bc4ee7be
+      internalID: 236375238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_14
+      rect:
+        serializedVersion: 2
+        x: 1902
+        y: 3255
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0829a2a411e6c4546b2ffc35272a4d74
+      internalID: 1379814301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_15
+      rect:
+        serializedVersion: 2
+        x: 2536
+        y: 3255
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fc66f8107c3e324985455d9ff86627c
+      internalID: 850634887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_16
+      rect:
+        serializedVersion: 2
+        x: 3170
+        y: 3255
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6030167f8835ab1418cae4e2e086f8a6
+      internalID: -1530915891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_17
+      rect:
+        serializedVersion: 2
+        x: 3804
+        y: 3255
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66f93e7bd6f58fa4d959302a34e6de29
+      internalID: -619943055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_18
+      rect:
+        serializedVersion: 2
+        x: 4438
+        y: 3255
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80730da0a6afe6e46bee7d7f021d4c8f
+      internalID: -954428004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_19
+      rect:
+        serializedVersion: 2
+        x: 5072
+        y: 3255
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e744c8f41e2f8945926dd5383a1be22
+      internalID: -1530165696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_20
+      rect:
+        serializedVersion: 2
+        x: 5706
+        y: 3255
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a88e24ef2b126534887de63c24829973
+      internalID: -1244391846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_21
+      rect:
+        serializedVersion: 2
+        x: 6340
+        y: 3255
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9e9e130452220443a24a831bad4dc9e
+      internalID: 410267614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2170
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b56bcbe33c12154f8caf0e66748362d
+      internalID: 1179143192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_23
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 2170
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65a29a7017a04f544ad0d3cb68e0af11
+      internalID: -1437903715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_24
+      rect:
+        serializedVersion: 2
+        x: 1268
+        y: 2170
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbca438c3ac0ca24c87c69e9be13da7e
+      internalID: 1075064333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_25
+      rect:
+        serializedVersion: 2
+        x: 1902
+        y: 2170
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48aa64c022da2354097ed618f2b8b7d4
+      internalID: 1231099545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_26
+      rect:
+        serializedVersion: 2
+        x: 2536
+        y: 2170
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 937d42c132ee5f548be16f24aa01e7b4
+      internalID: -1116663276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_27
+      rect:
+        serializedVersion: 2
+        x: 3170
+        y: 2170
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49336caf5f107304e81287ba9b0106e9
+      internalID: 861387310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_28
+      rect:
+        serializedVersion: 2
+        x: 3804
+        y: 2170
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e65b4cbf30d45f4096f147c088ecd3c
+      internalID: 151827658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_29
+      rect:
+        serializedVersion: 2
+        x: 4438
+        y: 2170
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e4b2063743ea5a4f9d69d66883fc358
+      internalID: -649096932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_30
+      rect:
+        serializedVersion: 2
+        x: 5072
+        y: 2170
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d845510d1a93264ea20e2bf49d297e3
+      internalID: 839834933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_31
+      rect:
+        serializedVersion: 2
+        x: 5706
+        y: 2170
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 151539ac5185b7d438a4802623157784
+      internalID: -1806138659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_32
+      rect:
+        serializedVersion: 2
+        x: 6340
+        y: 2170
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 486de6b9be810904595966c930862374
+      internalID: -2024279283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1085
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d057b74d25a145642b186f056796a68c
+      internalID: 1455803743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_34
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 1085
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a427e21fbf69a349882b12a94e77111
+      internalID: 1833443220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_35
+      rect:
+        serializedVersion: 2
+        x: 1268
+        y: 1085
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbd170ec2f9dc924dbc8f9a2a5c4a02e
+      internalID: 316315888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_36
+      rect:
+        serializedVersion: 2
+        x: 1902
+        y: 1085
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d266b3401ab5684d8602a1d9fef8d66
+      internalID: -705904199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_37
+      rect:
+        serializedVersion: 2
+        x: 2536
+        y: 1085
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aec7cd412b97e2b45b8a0ff8b5e4d54f
+      internalID: -744807238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_38
+      rect:
+        serializedVersion: 2
+        x: 3170
+        y: 1085
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d81cd71a76299e047b37775febf4087b
+      internalID: 222698995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_39
+      rect:
+        serializedVersion: 2
+        x: 3804
+        y: 1085
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7fd254133c9e5c478d8a1e58885b6af
+      internalID: -833255670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_40
+      rect:
+        serializedVersion: 2
+        x: 4438
+        y: 1085
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e114ac897dee25a4e93d970fb10b8491
+      internalID: -462811716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_41
+      rect:
+        serializedVersion: 2
+        x: 5072
+        y: 1085
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 832d11d5bb9c14d4d8d463c27ac55a65
+      internalID: 1646127653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_42
+      rect:
+        serializedVersion: 2
+        x: 5706
+        y: 1085
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd5d461e1ba38bb41b9a0c4a9ac07257
+      internalID: -463062911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_43
+      rect:
+        serializedVersion: 2
+        x: 6340
+        y: 1085
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1d47290e8b99044bb2a7d991a1bbb4c
+      internalID: -852541829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2928431dad86e1b42beb0e704763d4fb
+      internalID: -13287890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_45
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 0
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfdd0fbd680767340bc4111af77ed37c
+      internalID: -1285459275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_46
+      rect:
+        serializedVersion: 2
+        x: 1268
+        y: 0
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5b875fe8a5b7bc47afe819502f036a0
+      internalID: 1289388253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_47
+      rect:
+        serializedVersion: 2
+        x: 1902
+        y: 0
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f70cef2d88dbc647bf0aef3efd6f4bb
+      internalID: -841986483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_48
+      rect:
+        serializedVersion: 2
+        x: 2536
+        y: 0
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df1286d2c56dc854f9a1e9f37677c914
+      internalID: -1907531103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_49
+      rect:
+        serializedVersion: 2
+        x: 3170
+        y: 0
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e4c7d9ac4c01fc4a90f4d644e7d0cf9
+      internalID: 930180115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_50
+      rect:
+        serializedVersion: 2
+        x: 3804
+        y: 0
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d839da4f327df824fafe0bcfb776a0ed
+      internalID: 1335213106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_51
+      rect:
+        serializedVersion: 2
+        x: 4438
+        y: 0
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e622524a81aa90646865e20fac1d4178
+      internalID: -1049324230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_52
+      rect:
+        serializedVersion: 2
+        x: 5072
+        y: 0
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cedd883aa48a4c4faaf0f31d5227fec
+      internalID: 1837273964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_53
+      rect:
+        serializedVersion: 2
+        x: 5706
+        y: 0
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8596912a48f02b34090a944c330be1dc
+      internalID: -1230573921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCrouchSheet_54
+      rect:
+        serializedVersion: 2
+        x: 6340
+        y: 0
+        width: 634
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d13491c3d4aa7f4b9af5ed7bd543963
+      internalID: -149900335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: d935f4a01dca1384596c5dbc63724462
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      PlayerCrouchSheet_0: 1883147734
+      PlayerCrouchSheet_1: -550788825
+      PlayerCrouchSheet_10: -1979177021
+      PlayerCrouchSheet_11: 20681412
+      PlayerCrouchSheet_12: -1219023396
+      PlayerCrouchSheet_13: 236375238
+      PlayerCrouchSheet_14: 1379814301
+      PlayerCrouchSheet_15: 850634887
+      PlayerCrouchSheet_16: -1530915891
+      PlayerCrouchSheet_17: -619943055
+      PlayerCrouchSheet_18: -954428004
+      PlayerCrouchSheet_19: -1530165696
+      PlayerCrouchSheet_2: 2073433364
+      PlayerCrouchSheet_20: -1244391846
+      PlayerCrouchSheet_21: 410267614
+      PlayerCrouchSheet_22: 1179143192
+      PlayerCrouchSheet_23: -1437903715
+      PlayerCrouchSheet_24: 1075064333
+      PlayerCrouchSheet_25: 1231099545
+      PlayerCrouchSheet_26: -1116663276
+      PlayerCrouchSheet_27: 861387310
+      PlayerCrouchSheet_28: 151827658
+      PlayerCrouchSheet_29: -649096932
+      PlayerCrouchSheet_3: -1056868788
+      PlayerCrouchSheet_30: 839834933
+      PlayerCrouchSheet_31: -1806138659
+      PlayerCrouchSheet_32: -2024279283
+      PlayerCrouchSheet_33: 1455803743
+      PlayerCrouchSheet_34: 1833443220
+      PlayerCrouchSheet_35: 316315888
+      PlayerCrouchSheet_36: -705904199
+      PlayerCrouchSheet_37: -744807238
+      PlayerCrouchSheet_38: 222698995
+      PlayerCrouchSheet_39: -833255670
+      PlayerCrouchSheet_4: -1162860154
+      PlayerCrouchSheet_40: -462811716
+      PlayerCrouchSheet_41: 1646127653
+      PlayerCrouchSheet_42: -463062911
+      PlayerCrouchSheet_43: -852541829
+      PlayerCrouchSheet_44: -13287890
+      PlayerCrouchSheet_45: -1285459275
+      PlayerCrouchSheet_46: 1289388253
+      PlayerCrouchSheet_47: -841986483
+      PlayerCrouchSheet_48: -1907531103
+      PlayerCrouchSheet_49: 930180115
+      PlayerCrouchSheet_5: -1203397047
+      PlayerCrouchSheet_50: 1335213106
+      PlayerCrouchSheet_51: -1049324230
+      PlayerCrouchSheet_52: 1837273964
+      PlayerCrouchSheet_53: -1230573921
+      PlayerCrouchSheet_54: -149900335
+      PlayerCrouchSheet_6: 1818043093
+      PlayerCrouchSheet_7: -339516337
+      PlayerCrouchSheet_8: -1817391232
+      PlayerCrouchSheet_9: -160024629
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

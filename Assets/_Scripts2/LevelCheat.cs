@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class LevelCheat : MonoBehaviour
 {
-    [SerializeField] ProgressManager progressManager;
+    //[SerializeField] ProgressManager progressManager;
     public string code;
     
 
@@ -21,10 +21,10 @@ public class LevelCheat : MonoBehaviour
             //PlayerPrefs.SetInt("SaxofonUnlocked", 1);
             PlayerPrefs.Save();
 
-            if (progressManager != null)
-            {
-                progressManager.UnlockAll();
-            }
+            //if (progressManager != null)
+            //{
+            //    progressManager.UnlockAll();
+            //}
 
             Destroy(gameObject);
         }

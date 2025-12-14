@@ -1,3 +1,4 @@
+using Ami.BroAudio;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting.Antlr3.Runtime.Misc;
@@ -20,11 +21,11 @@ public class PlayerST_Stun : PlayerState
     {
         base.OnEnter();
 
-        controller.PlaySound("Stun");
+        if (controller.StunSound.IsValid()) BroAudio.Play(controller.StunSound);
 
         beatTimer = 0;
         movement.SetVelocityZero();
-        //Debug.Log("Player Stun");
+
         BeatManager.Instance.intervals[0].OnBeatEvent += BeatTimer;
         health.OnDamageReceived += ForceExit;
     }

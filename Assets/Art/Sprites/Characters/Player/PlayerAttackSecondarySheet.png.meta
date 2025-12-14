@@ -1,0 +1,1614 @@
+fileFormatVersion: 2
+guid: 6c5780f07dd3232428c8fe2bd6603738
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2942216037003011043
+    second: PlayerAttackSecondarySheet_0
+  - first:
+      213: 2661170486249658141
+    second: PlayerAttackSecondarySheet_1
+  - first:
+      213: -5781059238061541656
+    second: PlayerAttackSecondarySheet_2
+  - first:
+      213: -1162656849619380648
+    second: PlayerAttackSecondarySheet_3
+  - first:
+      213: 6446538838310988346
+    second: PlayerAttackSecondarySheet_4
+  - first:
+      213: -5263700371945538521
+    second: PlayerAttackSecondarySheet_5
+  - first:
+      213: -820443109390068533
+    second: PlayerAttackSecondarySheet_6
+  - first:
+      213: 3809788904099819199
+    second: PlayerAttackSecondarySheet_7
+  - first:
+      213: 1298945944389318964
+    second: PlayerAttackSecondarySheet_8
+  - first:
+      213: 3046589547902705166
+    second: PlayerAttackSecondarySheet_9
+  - first:
+      213: -1138495418036560293
+    second: PlayerAttackSecondarySheet_10
+  - first:
+      213: -6712012156815248278
+    second: PlayerAttackSecondarySheet_11
+  - first:
+      213: -778705097826493812
+    second: PlayerAttackSecondarySheet_12
+  - first:
+      213: 849982389480648216
+    second: PlayerAttackSecondarySheet_13
+  - first:
+      213: 4004043768775424795
+    second: PlayerAttackSecondarySheet_14
+  - first:
+      213: 602610178034428639
+    second: PlayerAttackSecondarySheet_15
+  - first:
+      213: 4621036616432464447
+    second: PlayerAttackSecondarySheet_16
+  - first:
+      213: -1542214960453300260
+    second: PlayerAttackSecondarySheet_17
+  - first:
+      213: -8559499014110012702
+    second: PlayerAttackSecondarySheet_18
+  - first:
+      213: -2141177004736462229
+    second: PlayerAttackSecondarySheet_19
+  - first:
+      213: -2519346361474596489
+    second: PlayerAttackSecondarySheet_20
+  - first:
+      213: 8260905668332298740
+    second: PlayerAttackSecondarySheet_21
+  - first:
+      213: -8529940477807108677
+    second: PlayerAttackSecondarySheet_22
+  - first:
+      213: 5764972060356179023
+    second: PlayerAttackSecondarySheet_23
+  - first:
+      213: 3059535289934301800
+    second: PlayerAttackSecondarySheet_24
+  - first:
+      213: -6027162667777817561
+    second: PlayerAttackSecondarySheet_25
+  - first:
+      213: 2837258981560897254
+    second: PlayerAttackSecondarySheet_26
+  - first:
+      213: 525699095992903850
+    second: PlayerAttackSecondarySheet_27
+  - first:
+      213: -151872737755168747
+    second: PlayerAttackSecondarySheet_28
+  - first:
+      213: -7291315773915636989
+    second: PlayerAttackSecondarySheet_29
+  - first:
+      213: 267749870682536998
+    second: PlayerAttackSecondarySheet_30
+  - first:
+      213: 5958046898876513204
+    second: PlayerAttackSecondarySheet_31
+  - first:
+      213: -3169303449545145509
+    second: PlayerAttackSecondarySheet_32
+  - first:
+      213: 5542518745552635586
+    second: PlayerAttackSecondarySheet_33
+  - first:
+      213: 4576494375902545944
+    second: PlayerAttackSecondarySheet_34
+  - first:
+      213: -1123992352396486682
+    second: PlayerAttackSecondarySheet_35
+  - first:
+      213: -580483822557306797
+    second: PlayerAttackSecondarySheet_36
+  - first:
+      213: 343319208398868560
+    second: PlayerAttackSecondarySheet_37
+  - first:
+      213: -5693952122977875144
+    second: PlayerAttackSecondarySheet_38
+  - first:
+      213: 3040053294398640994
+    second: PlayerAttackSecondarySheet_39
+  - first:
+      213: -4138292557931536753
+    second: PlayerAttackSecondarySheet_40
+  - first:
+      213: -3034892625294615885
+    second: PlayerAttackSecondarySheet_41
+  - first:
+      213: 1239584614324515587
+    second: PlayerAttackSecondarySheet_42
+  - first:
+      213: 9048163785022606996
+    second: PlayerAttackSecondarySheet_43
+  - first:
+      213: 8745868646870550715
+    second: PlayerAttackSecondarySheet_44
+  - first:
+      213: -5127608246070462762
+    second: PlayerAttackSecondarySheet_45
+  - first:
+      213: -6529582733305286902
+    second: PlayerAttackSecondarySheet_46
+  - first:
+      213: -6940507214075510591
+    second: PlayerAttackSecondarySheet_47
+  - first:
+      213: -8433410515737976618
+    second: PlayerAttackSecondarySheet_48
+  - first:
+      213: -8165196833112569208
+    second: PlayerAttackSecondarySheet_49
+  - first:
+      213: -8964123930405847158
+    second: PlayerAttackSecondarySheet_50
+  - first:
+      213: 4116625645242959307
+    second: PlayerAttackSecondarySheet_51
+  - first:
+      213: 1719907796826749892
+    second: PlayerAttackSecondarySheet_52
+  - first:
+      213: 457148001968495573
+    second: PlayerAttackSecondarySheet_53
+  - first:
+      213: -7443695225374781895
+    second: PlayerAttackSecondarySheet_54
+  - first:
+      213: 6324393218296160261
+    second: PlayerAttackSecondarySheet_55
+  - first:
+      213: -5723326986696196364
+    second: PlayerAttackSecondarySheet_56
+  - first:
+      213: -8244861723759633739
+    second: PlayerAttackSecondarySheet_57
+  - first:
+      213: -6902690495565212781
+    second: PlayerAttackSecondarySheet_58
+  - first:
+      213: 4403354983296781163
+    second: PlayerAttackSecondarySheet_59
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6800
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5e0e909b72aa6b4aaadc60d0c18ccb8
+      internalID: 1879560550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_1
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 6800
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb50c979daeb1fa4dbfe7209663be19e
+      internalID: -852512202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_2
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 6800
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe0cbaf661b736042855a5459235d089
+      internalID: -1815882690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_3
+      rect:
+        serializedVersion: 2
+        x: 2565
+        y: 6800
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5df9dd893ae3207468e8f88998d2e1a7
+      internalID: -1105772075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_4
+      rect:
+        serializedVersion: 2
+        x: 3420
+        y: 6800
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f192591d557265843bef8ee8658c24a3
+      internalID: -1948557617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_5
+      rect:
+        serializedVersion: 2
+        x: 4275
+        y: 6800
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d38e49633011bc8448aa4614ba63a54e
+      internalID: 1523534581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_6
+      rect:
+        serializedVersion: 2
+        x: 5130
+        y: 6800
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc1a23e9f1245a44294e960e5ffe7edd
+      internalID: -169635708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_7
+      rect:
+        serializedVersion: 2
+        x: 5985
+        y: 6800
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac29891ea17c71649b5729e9e9f1b2b0
+      internalID: -1881104429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_8
+      rect:
+        serializedVersion: 2
+        x: 6840
+        y: 6800
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2452468cc69fef74dab1a24ca8e0d504
+      internalID: -1072948739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_9
+      rect:
+        serializedVersion: 2
+        x: 7695
+        y: 6800
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c2b651952b3dbd4aa2db7331104eb83
+      internalID: 1474627361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5440
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb24e1cf3bf01214f89e5b5ffd6ddeaf
+      internalID: 1959159385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_11
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 5440
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d24d18dc9c3bc4c499c060d5ce2dd84b
+      internalID: 1780842921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_12
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 5440
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a305ace38f252c4eb50859d05face1b
+      internalID: 1531585520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_13
+      rect:
+        serializedVersion: 2
+        x: 2565
+        y: 5440
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6ee03942c17c284fa0f220ad4093fb0
+      internalID: -1441314888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_14
+      rect:
+        serializedVersion: 2
+        x: 3420
+        y: 5440
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b120c7e29c5e52e468961bdbb0badb19
+      internalID: -158286925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_15
+      rect:
+        serializedVersion: 2
+        x: 4275
+        y: 5440
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4ad183c47cf08d4b87fe56c8c10da17
+      internalID: 1543612783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_16
+      rect:
+        serializedVersion: 2
+        x: 5130
+        y: 5440
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff86baabe26f1f64eb05e04a71332789
+      internalID: 2081901900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_17
+      rect:
+        serializedVersion: 2
+        x: 5985
+        y: 5440
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 061dec23cdb63be4187ca689d3892681
+      internalID: 2108488340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_18
+      rect:
+        serializedVersion: 2
+        x: 6840
+        y: 5440
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f046fe9176aa8842bf9cfe01d7ee182
+      internalID: 2097760967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_19
+      rect:
+        serializedVersion: 2
+        x: 7695
+        y: 5440
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2fcbd673ae14bc41ac67909a15e18bf
+      internalID: -1183933040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4080
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 242d453c502d3484c8209f975f9813b2
+      internalID: 314438950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_21
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 4080
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12be37806a92c184d9ed31a90ab42f9f
+      internalID: 1418147914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_22
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 4080
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3de7492665ce83d4c95fd53e4d000e5b
+      internalID: -1049488535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_23
+      rect:
+        serializedVersion: 2
+        x: 2565
+        y: 4080
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0342af7a1520e88418f20c35dc5e5dc0
+      internalID: 38870897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_24
+      rect:
+        serializedVersion: 2
+        x: 3420
+        y: 4080
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a409b94fb8a0d594999d328b47b295e6
+      internalID: -181182008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_25
+      rect:
+        serializedVersion: 2
+        x: 4275
+        y: 4080
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab1313a87f8923d4db879dc7bb926ac8
+      internalID: -716818313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_26
+      rect:
+        serializedVersion: 2
+        x: 5130
+        y: 4080
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5603ee00e92436c438745aa1dfe62385
+      internalID: 2045080717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_27
+      rect:
+        serializedVersion: 2
+        x: 5985
+        y: 4080
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc566c8b6b6eae4488c6f0f41c40c59d
+      internalID: 1757550856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_28
+      rect:
+        serializedVersion: 2
+        x: 6840
+        y: 4080
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8917f3644f846c8438612a87b0e183d0
+      internalID: -468425640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_29
+      rect:
+        serializedVersion: 2
+        x: 7695
+        y: 4080
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de752d2461c19284792a39b6d83578e6
+      internalID: -242571335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2720
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75bc867443dded144b840a0787accafc
+      internalID: 452681411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_31
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 2720
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62fd06ea6683ce7408b655cefbe44115
+      internalID: 396470263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_32
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 2720
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bf370c511320be4da008abb4f5ef528
+      internalID: -335532994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_33
+      rect:
+        serializedVersion: 2
+        x: 2565
+        y: 2720
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91f619de2791c4f499a490b117f011c6
+      internalID: -1733237925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_34
+      rect:
+        serializedVersion: 2
+        x: 3420
+        y: 2720
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8391e3d2c52315488c3fe8dca292867
+      internalID: 1702818640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_35
+      rect:
+        serializedVersion: 2
+        x: 4275
+        y: 2720
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e2468c3202b143448176fa87e0398e9
+      internalID: 474176129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_36
+      rect:
+        serializedVersion: 2
+        x: 5130
+        y: 2720
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 199a3632082148b43a11a77786d98f33
+      internalID: 1903730106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_37
+      rect:
+        serializedVersion: 2
+        x: 5985
+        y: 2720
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e217ed5bb0a816245a8d761c8e0e2c33
+      internalID: 1233917700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_38
+      rect:
+        serializedVersion: 2
+        x: 6840
+        y: 2720
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbdb557d29456354a8b4fffe11f4d224
+      internalID: -1930125616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_39
+      rect:
+        serializedVersion: 2
+        x: 7695
+        y: 2720
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18bfb85761e692143af884e770fb855a
+      internalID: -368754101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1360
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70e1d4ce8e90c61489189c5a195d7377
+      internalID: 1668660050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_41
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 1360
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b065f8592ddc6984abbbf4add88657c0
+      internalID: 1176427306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_42
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 1360
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 981ad3d419dea0444879b217d4a7094a
+      internalID: -284122979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_43
+      rect:
+        serializedVersion: 2
+        x: 2565
+        y: 1360
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ff08daa8d4170a47945b386e15a0881
+      internalID: -1815783064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_44
+      rect:
+        serializedVersion: 2
+        x: 3420
+        y: 1360
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6afd86e71d6e42749b48693e6f3a0358
+      internalID: 1130772468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_45
+      rect:
+        serializedVersion: 2
+        x: 4275
+        y: 1360
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14d973b4ca0f7734b87adb359ca79a54
+      internalID: 1428588135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_46
+      rect:
+        serializedVersion: 2
+        x: 5130
+        y: 1360
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d400094eea8c43d41afe5f4175c08a19
+      internalID: -2058138203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_47
+      rect:
+        serializedVersion: 2
+        x: 5985
+        y: 1360
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2032f374c4b537b4bba1f8b9e82638fd
+      internalID: 176921007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_48
+      rect:
+        serializedVersion: 2
+        x: 6840
+        y: 1360
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d90912c35c69e442a920ce169986ef0
+      internalID: -1944322854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_49
+      rect:
+        serializedVersion: 2
+        x: 7695
+        y: 1360
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 025e80f92dc395f4e9eeba8e6ead2e26
+      internalID: -548810590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0679805310b3bd74abf13ff2ef8b3258
+      internalID: 1730441493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_51
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 0
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 598a4a068c90cb74396b58d673512d27
+      internalID: 417685289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_52
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 0
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19e81228031c09f4db78771dcb6b81a1
+      internalID: -647807208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_53
+      rect:
+        serializedVersion: 2
+        x: 2565
+        y: 0
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f13b9fe2072ba4242acc4626b9ed3873
+      internalID: 281975290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_54
+      rect:
+        serializedVersion: 2
+        x: 3420
+        y: 0
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 271e9929016398f4fb781d24015c197d
+      internalID: -1966891175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_55
+      rect:
+        serializedVersion: 2
+        x: 4275
+        y: 0
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e74876de9db9e0c4e98c6a4a563682c3
+      internalID: -203003092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_56
+      rect:
+        serializedVersion: 2
+        x: 5130
+        y: 0
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac54d5092830ea3408337bb0d4356273
+      internalID: -1495388403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_57
+      rect:
+        serializedVersion: 2
+        x: 5985
+        y: 0
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad26cb970ae6f6149bad44436f35087e
+      internalID: 1278691937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_58
+      rect:
+        serializedVersion: 2
+        x: 6840
+        y: 0
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 480cbd25856ff6849af0af9f279251a7
+      internalID: -878118237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackSecondarySheet_59
+      rect:
+        serializedVersion: 2
+        x: 7695
+        y: 0
+        width: 855
+        height: 1360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 055c89391a478a84195089793180e618
+      internalID: -2133651473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: f0f653228d2c1f74a9bd4d187303da1f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      PlayerAttackSecondarySheet_0: 1879560550
+      PlayerAttackSecondarySheet_1: -852512202
+      PlayerAttackSecondarySheet_10: 1959159385
+      PlayerAttackSecondarySheet_11: 1780842921
+      PlayerAttackSecondarySheet_12: 1531585520
+      PlayerAttackSecondarySheet_13: -1441314888
+      PlayerAttackSecondarySheet_14: -158286925
+      PlayerAttackSecondarySheet_15: 1543612783
+      PlayerAttackSecondarySheet_16: 2081901900
+      PlayerAttackSecondarySheet_17: 2108488340
+      PlayerAttackSecondarySheet_18: 2097760967
+      PlayerAttackSecondarySheet_19: -1183933040
+      PlayerAttackSecondarySheet_2: -1815882690
+      PlayerAttackSecondarySheet_20: 314438950
+      PlayerAttackSecondarySheet_21: 1418147914
+      PlayerAttackSecondarySheet_22: -1049488535
+      PlayerAttackSecondarySheet_23: 38870897
+      PlayerAttackSecondarySheet_24: -181182008
+      PlayerAttackSecondarySheet_25: -716818313
+      PlayerAttackSecondarySheet_26: 2045080717
+      PlayerAttackSecondarySheet_27: 1757550856
+      PlayerAttackSecondarySheet_28: -468425640
+      PlayerAttackSecondarySheet_29: -242571335
+      PlayerAttackSecondarySheet_3: -1105772075
+      PlayerAttackSecondarySheet_30: 452681411
+      PlayerAttackSecondarySheet_31: 396470263
+      PlayerAttackSecondarySheet_32: -335532994
+      PlayerAttackSecondarySheet_33: -1733237925
+      PlayerAttackSecondarySheet_34: 1702818640
+      PlayerAttackSecondarySheet_35: 474176129
+      PlayerAttackSecondarySheet_36: 1903730106
+      PlayerAttackSecondarySheet_37: 1233917700
+      PlayerAttackSecondarySheet_38: -1930125616
+      PlayerAttackSecondarySheet_39: -368754101
+      PlayerAttackSecondarySheet_4: -1948557617
+      PlayerAttackSecondarySheet_40: 1668660050
+      PlayerAttackSecondarySheet_41: 1176427306
+      PlayerAttackSecondarySheet_42: -284122979
+      PlayerAttackSecondarySheet_43: -1815783064
+      PlayerAttackSecondarySheet_44: 1130772468
+      PlayerAttackSecondarySheet_45: 1428588135
+      PlayerAttackSecondarySheet_46: -2058138203
+      PlayerAttackSecondarySheet_47: 176921007
+      PlayerAttackSecondarySheet_48: -1944322854
+      PlayerAttackSecondarySheet_49: -548810590
+      PlayerAttackSecondarySheet_5: 1523534581
+      PlayerAttackSecondarySheet_50: 1730441493
+      PlayerAttackSecondarySheet_51: 417685289
+      PlayerAttackSecondarySheet_52: -647807208
+      PlayerAttackSecondarySheet_53: 281975290
+      PlayerAttackSecondarySheet_54: -1966891175
+      PlayerAttackSecondarySheet_55: -203003092
+      PlayerAttackSecondarySheet_56: -1495388403
+      PlayerAttackSecondarySheet_57: 1278691937
+      PlayerAttackSecondarySheet_58: -878118237
+      PlayerAttackSecondarySheet_59: -2133651473
+      PlayerAttackSecondarySheet_6: -169635708
+      PlayerAttackSecondarySheet_7: -1881104429
+      PlayerAttackSecondarySheet_8: -1072948739
+      PlayerAttackSecondarySheet_9: 1474627361
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

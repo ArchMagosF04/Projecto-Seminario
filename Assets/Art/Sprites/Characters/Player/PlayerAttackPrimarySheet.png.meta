@@ -1,0 +1,1364 @@
+fileFormatVersion: 2
+guid: c0ea65569a075b04fa743734e08908e6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1219917421465080938
+    second: PlayerAttackPrimarySheet_0
+  - first:
+      213: -4422405535121567476
+    second: PlayerAttackPrimarySheet_1
+  - first:
+      213: -5349065357338075246
+    second: PlayerAttackPrimarySheet_2
+  - first:
+      213: -6114441025801810612
+    second: PlayerAttackPrimarySheet_3
+  - first:
+      213: -6162756744137837629
+    second: PlayerAttackPrimarySheet_4
+  - first:
+      213: 3779580538358225983
+    second: PlayerAttackPrimarySheet_5
+  - first:
+      213: -6567780974079053419
+    second: PlayerAttackPrimarySheet_6
+  - first:
+      213: 6053283768119665345
+    second: PlayerAttackPrimarySheet_7
+  - first:
+      213: -1882757369205507548
+    second: PlayerAttackPrimarySheet_8
+  - first:
+      213: 2270232980906459976
+    second: PlayerAttackPrimarySheet_9
+  - first:
+      213: 5040045302417020821
+    second: PlayerAttackPrimarySheet_10
+  - first:
+      213: -9203844737550510876
+    second: PlayerAttackPrimarySheet_11
+  - first:
+      213: -2914574761539299911
+    second: PlayerAttackPrimarySheet_12
+  - first:
+      213: -3593277273939192641
+    second: PlayerAttackPrimarySheet_13
+  - first:
+      213: 4530361004765180999
+    second: PlayerAttackPrimarySheet_14
+  - first:
+      213: -2554859064129960818
+    second: PlayerAttackPrimarySheet_15
+  - first:
+      213: -4665751158883386898
+    second: PlayerAttackPrimarySheet_16
+  - first:
+      213: -2878494871900746305
+    second: PlayerAttackPrimarySheet_17
+  - first:
+      213: -8125777486511956685
+    second: PlayerAttackPrimarySheet_18
+  - first:
+      213: -1782368330110768364
+    second: PlayerAttackPrimarySheet_19
+  - first:
+      213: -2810459336917439142
+    second: PlayerAttackPrimarySheet_20
+  - first:
+      213: 2790038809944783694
+    second: PlayerAttackPrimarySheet_21
+  - first:
+      213: -6618677794698700284
+    second: PlayerAttackPrimarySheet_22
+  - first:
+      213: 7270674849774151992
+    second: PlayerAttackPrimarySheet_23
+  - first:
+      213: -8337924893409811944
+    second: PlayerAttackPrimarySheet_24
+  - first:
+      213: -6311224934332079905
+    second: PlayerAttackPrimarySheet_25
+  - first:
+      213: 6368554219835336143
+    second: PlayerAttackPrimarySheet_26
+  - first:
+      213: 9046670917340946622
+    second: PlayerAttackPrimarySheet_27
+  - first:
+      213: 6654665557778069229
+    second: PlayerAttackPrimarySheet_28
+  - first:
+      213: -1890990625852814665
+    second: PlayerAttackPrimarySheet_29
+  - first:
+      213: 335869870593869386
+    second: PlayerAttackPrimarySheet_30
+  - first:
+      213: 2580249288228327682
+    second: PlayerAttackPrimarySheet_31
+  - first:
+      213: -929364892779300512
+    second: PlayerAttackPrimarySheet_32
+  - first:
+      213: -5415205340622715847
+    second: PlayerAttackPrimarySheet_33
+  - first:
+      213: 2746634117236351393
+    second: PlayerAttackPrimarySheet_34
+  - first:
+      213: 3452103126155439446
+    second: PlayerAttackPrimarySheet_35
+  - first:
+      213: 1657329581130365478
+    second: PlayerAttackPrimarySheet_36
+  - first:
+      213: -1341834420236974830
+    second: PlayerAttackPrimarySheet_37
+  - first:
+      213: 4583401589498466382
+    second: PlayerAttackPrimarySheet_38
+  - first:
+      213: 7193812844074023348
+    second: PlayerAttackPrimarySheet_39
+  - first:
+      213: -8125537931972203105
+    second: PlayerAttackPrimarySheet_40
+  - first:
+      213: 829595847781512151
+    second: PlayerAttackPrimarySheet_41
+  - first:
+      213: -1854639677988396624
+    second: PlayerAttackPrimarySheet_42
+  - first:
+      213: 1159518016235770028
+    second: PlayerAttackPrimarySheet_43
+  - first:
+      213: 7571749677879384452
+    second: PlayerAttackPrimarySheet_44
+  - first:
+      213: 1505681011206537919
+    second: PlayerAttackPrimarySheet_45
+  - first:
+      213: 1426512670393294809
+    second: PlayerAttackPrimarySheet_46
+  - first:
+      213: -8877584166369865858
+    second: PlayerAttackPrimarySheet_47
+  - first:
+      213: -7712548835199482599
+    second: PlayerAttackPrimarySheet_48
+  - first:
+      213: 2238974552298062614
+    second: PlayerAttackPrimarySheet_49
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4444
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7399e1695d06799408c8adefe98db0c0
+      internalID: -1911118256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_1
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 4444
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6fa77c39f01afe47bdc78114b7543ff
+      internalID: 783252016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_2
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 4444
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb81767faa087f24cb86caceece59ecf
+      internalID: -776601746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_3
+      rect:
+        serializedVersion: 2
+        x: 2130
+        y: 4444
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc508d55b4a00d6499af73f986b3d92c
+      internalID: 1968254869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_4
+      rect:
+        serializedVersion: 2
+        x: 2840
+        y: 4444
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f6f05fa26e42104f9c855676ef431c1
+      internalID: 890727460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_5
+      rect:
+        serializedVersion: 2
+        x: 3550
+        y: 4444
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67e9745bc085fd840be65760124f713c
+      internalID: -117256045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_6
+      rect:
+        serializedVersion: 2
+        x: 4260
+        y: 4444
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b72256add9e4f4b4f919e582c9e3614d
+      internalID: -172884227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_7
+      rect:
+        serializedVersion: 2
+        x: 4970
+        y: 4444
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 855b88376261fad43a49a9dc7bbfe278
+      internalID: 196216598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_8
+      rect:
+        serializedVersion: 2
+        x: 5680
+        y: 4444
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 182cba70f7adcf74495c570eb8b79721
+      internalID: -1425096371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_9
+      rect:
+        serializedVersion: 2
+        x: 6390
+        y: 4444
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b9200ba2525c554fbb6ec376a97ff3c
+      internalID: 1923618411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3333
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4c0d917c018e7b49ab347b0dfa77910
+      internalID: -1660566482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_11
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 3333
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23caaf131698a754c880f3c5550c9863
+      internalID: 873608274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_12
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 3333
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6be690286ec9cfa43b32a5a6568d5dc5
+      internalID: 1491095850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_13
+      rect:
+        serializedVersion: 2
+        x: 2130
+        y: 3333
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39e8d713fa906a94498472e93b717e26
+      internalID: -982046129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_14
+      rect:
+        serializedVersion: 2
+        x: 2840
+        y: 3333
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 863daca13baa5e141b2178cfd038da4a
+      internalID: -1425304005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_15
+      rect:
+        serializedVersion: 2
+        x: 3550
+        y: 3333
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f943dcefb8ff122449605dcdd44596ab
+      internalID: 2036965105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_16
+      rect:
+        serializedVersion: 2
+        x: 4260
+        y: 3333
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0321f31d356321247a9a169eb24b8b2c
+      internalID: 629421131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_17
+      rect:
+        serializedVersion: 2
+        x: 4970
+        y: 3333
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2383ec5fb2d8e214c8086a08e370dd8d
+      internalID: 1434371859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_18
+      rect:
+        serializedVersion: 2
+        x: 5680
+        y: 3333
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8255f8f4a64d37d4eaa8155a9f861f19
+      internalID: -1631033667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_19
+      rect:
+        serializedVersion: 2
+        x: 6390
+        y: 3333
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40dc56b3a9c62dc4991000599645c251
+      internalID: -893976598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2222
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7fca40e91a4aa54aa7b8872613f2f5f
+      internalID: 1162948798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_21
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 2222
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2768eb33d21ce9d44b1cfc8646dc705c
+      internalID: 245930151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_22
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 2222
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ba55120a68f38f43b5b64da8a0de251
+      internalID: 176476621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_23
+      rect:
+        serializedVersion: 2
+        x: 2130
+        y: 2222
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53b45e67a7f8a164a96130540200f1d7
+      internalID: 106198641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_24
+      rect:
+        serializedVersion: 2
+        x: 2840
+        y: 2222
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73648e5ff9a030243b1e959fa306cea7
+      internalID: -1336843087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_25
+      rect:
+        serializedVersion: 2
+        x: 3550
+        y: 2222
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ebf3904cd21e16449d165e8d53fcb1a
+      internalID: 347868498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_26
+      rect:
+        serializedVersion: 2
+        x: 4260
+        y: 2222
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d6115b9741d5314dbf4a1c08c29c9ea
+      internalID: 1338580502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_27
+      rect:
+        serializedVersion: 2
+        x: 4970
+        y: 2222
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1091b23621c35942863a74a3369df0e
+      internalID: -669565788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_28
+      rect:
+        serializedVersion: 2
+        x: 5680
+        y: 2222
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 450497eb65122344e81e4fa575ac0ebe
+      internalID: -1837250493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_29
+      rect:
+        serializedVersion: 2
+        x: 6390
+        y: 2222
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17d7c7fda4db7284196625e9bec0b55f
+      internalID: -2758727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1111
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cb042acb28e06048b7305db4afdce3f
+      internalID: 261273957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_31
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 1111
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c820e5912751b1d47b56442adea6c933
+      internalID: 456238784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_32
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 1111
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aab5a7a40b11ffb40bf97b51db50b901
+      internalID: -1339116241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_33
+      rect:
+        serializedVersion: 2
+        x: 2130
+        y: 1111
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21c166ceae9df4943a2b73dd70479e78
+      internalID: 663065792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_34
+      rect:
+        serializedVersion: 2
+        x: 2840
+        y: 1111
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d979d85a5520854ea9d56a56980ef04
+      internalID: 114054509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_35
+      rect:
+        serializedVersion: 2
+        x: 3550
+        y: 1111
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9564ca70cf4f8ff4ba55a54e11af90fa
+      internalID: 1562931495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_36
+      rect:
+        serializedVersion: 2
+        x: 4260
+        y: 1111
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1f3882f19e25b14b85980c555653097
+      internalID: 701865717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_37
+      rect:
+        serializedVersion: 2
+        x: 4970
+        y: 1111
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4010dd3abd7021844a8865f89f5372f2
+      internalID: 1941718306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_38
+      rect:
+        serializedVersion: 2
+        x: 5680
+        y: 1111
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: affd436307ac05644addf76eeb7a46d3
+      internalID: 983819224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_39
+      rect:
+        serializedVersion: 2
+        x: 6390
+        y: 1111
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c38f84552988444e9ba0ddbd566b619
+      internalID: -426577239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1128dfaef3a69ab48afa18d1dbb9aa3a
+      internalID: -1669999977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_41
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 0
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05341535f4f01c246bdf60e1621cafcf
+      internalID: 766536711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_42
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 0
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85ce444b80e2d6c44a2597eb0c5ebb40
+      internalID: 1720516036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_43
+      rect:
+        serializedVersion: 2
+        x: 2130
+        y: 0
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb8b1eee396bc2e419ecd167f29638fb
+      internalID: -1155441227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_44
+      rect:
+        serializedVersion: 2
+        x: 2840
+        y: 0
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6850813b33050bb4b8df59e2a8aab2b3
+      internalID: 765746208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_45
+      rect:
+        serializedVersion: 2
+        x: 3550
+        y: 0
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0bb5a05484b9a74faedec12217c2935
+      internalID: -877426762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_46
+      rect:
+        serializedVersion: 2
+        x: 4260
+        y: 0
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20eb336081746194fae47d4ca4be3e58
+      internalID: -344921861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_47
+      rect:
+        serializedVersion: 2
+        x: 4970
+        y: 0
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0896f684b980924092eea9c0aa1c56d
+      internalID: 970718626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_48
+      rect:
+        serializedVersion: 2
+        x: 5680
+        y: 0
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55df961415cfe7b4787d32bbabd3a198
+      internalID: 180271713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAttackPrimarySheet_49
+      rect:
+        serializedVersion: 2
+        x: 6390
+        y: 0
+        width: 710
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 071a355eae3305e47ab052352137d6b3
+      internalID: -1606798813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 2ad3a6800f891ad4bb4e0f94bcb36b7b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      PlayerAttackPrimarySheet_0: -1911118256
+      PlayerAttackPrimarySheet_1: 783252016
+      PlayerAttackPrimarySheet_10: -1660566482
+      PlayerAttackPrimarySheet_11: 873608274
+      PlayerAttackPrimarySheet_12: 1491095850
+      PlayerAttackPrimarySheet_13: -982046129
+      PlayerAttackPrimarySheet_14: -1425304005
+      PlayerAttackPrimarySheet_15: 2036965105
+      PlayerAttackPrimarySheet_16: 629421131
+      PlayerAttackPrimarySheet_17: 1434371859
+      PlayerAttackPrimarySheet_18: -1631033667
+      PlayerAttackPrimarySheet_19: -893976598
+      PlayerAttackPrimarySheet_2: -776601746
+      PlayerAttackPrimarySheet_20: 1162948798
+      PlayerAttackPrimarySheet_21: 245930151
+      PlayerAttackPrimarySheet_22: 176476621
+      PlayerAttackPrimarySheet_23: 106198641
+      PlayerAttackPrimarySheet_24: -1336843087
+      PlayerAttackPrimarySheet_25: 347868498
+      PlayerAttackPrimarySheet_26: 1338580502
+      PlayerAttackPrimarySheet_27: -669565788
+      PlayerAttackPrimarySheet_28: -1837250493
+      PlayerAttackPrimarySheet_29: -2758727
+      PlayerAttackPrimarySheet_3: 1968254869
+      PlayerAttackPrimarySheet_30: 261273957
+      PlayerAttackPrimarySheet_31: 456238784
+      PlayerAttackPrimarySheet_32: -1339116241
+      PlayerAttackPrimarySheet_33: 663065792
+      PlayerAttackPrimarySheet_34: 114054509
+      PlayerAttackPrimarySheet_35: 1562931495
+      PlayerAttackPrimarySheet_36: 701865717
+      PlayerAttackPrimarySheet_37: 1941718306
+      PlayerAttackPrimarySheet_38: 983819224
+      PlayerAttackPrimarySheet_39: -426577239
+      PlayerAttackPrimarySheet_4: 890727460
+      PlayerAttackPrimarySheet_40: -1669999977
+      PlayerAttackPrimarySheet_41: 766536711
+      PlayerAttackPrimarySheet_42: 1720516036
+      PlayerAttackPrimarySheet_43: -1155441227
+      PlayerAttackPrimarySheet_44: 765746208
+      PlayerAttackPrimarySheet_45: -877426762
+      PlayerAttackPrimarySheet_46: -344921861
+      PlayerAttackPrimarySheet_47: 970718626
+      PlayerAttackPrimarySheet_48: 180271713
+      PlayerAttackPrimarySheet_49: -1606798813
+      PlayerAttackPrimarySheet_5: -117256045
+      PlayerAttackPrimarySheet_6: -172884227
+      PlayerAttackPrimarySheet_7: 196216598
+      PlayerAttackPrimarySheet_8: -1425096371
+      PlayerAttackPrimarySheet_9: 1923618411
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

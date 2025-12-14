@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3731537484111931112
+--- !u!1 &501951628699219333
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2760264537405560925}
-  - component: {fileID: 2140446290338217335}
-  - component: {fileID: 2998832954937406385}
+  - component: {fileID: 7633558075801809478}
+  - component: {fileID: 1468763482514206735}
+  - component: {fileID: 1580414088196275140}
   m_Layer: 0
   m_Name: InputManager
   m_TagString: Untagged
@@ -18,13 +18,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2760264537405560925
+--- !u!4 &7633558075801809478
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3731537484111931112}
+  m_GameObject: {fileID: 501951628699219333}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -33,32 +33,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2140446290338217335
+--- !u!114 &1468763482514206735
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3731537484111931112}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfda3211493b30c408fd583950fa72c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inputHoldTime: 0.2
---- !u!114 &2998832954937406385
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3731537484111931112}
+  m_GameObject: {fileID: 501951628699219333}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 0e3097924e99a5f41abc3b4d231c076f, type: 3}
+  m_Actions: {fileID: -944628639613478452, guid: 8a5c0c38f9bf1a64ab9c60c58c90d55a, type: 3}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -73,8 +60,8 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2140446290338217335}
-        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+      - m_Target: {fileID: 1580414088196275140}
+        m_TargetAssemblyTypeName: GameInputManager, Assembly-CSharp
         m_MethodName: OnMoveInput
         m_Mode: 0
         m_Arguments:
@@ -85,12 +72,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 8900c0cc-156e-4540-a34f-66abbc1bddfc
-    m_ActionName: 'Gameplay/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
+    m_ActionId: 16b60d0a-03a9-442e-9efb-93d96849c34f
+    m_ActionName: 'Player/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2140446290338217335}
-        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+      - m_Target: {fileID: 1580414088196275140}
+        m_TargetAssemblyTypeName: GameInputManager, Assembly-CSharp
         m_MethodName: OnJumpInput
         m_Mode: 0
         m_Arguments:
@@ -101,12 +88,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 04065fd3-4906-4f08-8e56-1af6f06813f8
-    m_ActionName: 'Gameplay/Jump[/Keyboard/space]'
+    m_ActionId: 0339e970-212c-4470-bd8b-1507d81e95b2
+    m_ActionName: 'Player/Jump[/Keyboard/space]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2140446290338217335}
-        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+      - m_Target: {fileID: 1580414088196275140}
+        m_TargetAssemblyTypeName: GameInputManager, Assembly-CSharp
         m_MethodName: OnDashInput
         m_Mode: 0
         m_Arguments:
@@ -117,12 +104,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: bbed5a9e-7e84-4d74-af1c-ea3094ff01af
-    m_ActionName: 'Gameplay/Dash[/Keyboard/leftShift]'
+    m_ActionId: 631039f1-351f-48de-a364-44c311ca3f4e
+    m_ActionName: 'Player/Dash[/Keyboard/leftShift]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2140446290338217335}
-        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+      - m_Target: {fileID: 1580414088196275140}
+        m_TargetAssemblyTypeName: GameInputManager, Assembly-CSharp
         m_MethodName: OnPrimaryAttackInput
         m_Mode: 0
         m_Arguments:
@@ -133,12 +120,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: edeab2f7-6877-471b-aec2-d3ed8b5962f9
-    m_ActionName: 'Gameplay/PrimaryAttack[/Mouse/leftButton]'
+    m_ActionId: b485fd9f-67f1-4613-af0c-9e7b2b6ad59d
+    m_ActionName: 'Player/PrimaryAttack[/Mouse/leftButton]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2140446290338217335}
-        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+      - m_Target: {fileID: 1580414088196275140}
+        m_TargetAssemblyTypeName: GameInputManager, Assembly-CSharp
         m_MethodName: OnSecondaryAttackInput
         m_Mode: 0
         m_Arguments:
@@ -149,12 +136,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 3884d34d-9ef4-4c91-b3fe-54917b7941a9
-    m_ActionName: 'Gameplay/SecondaryAttack[/Mouse/rightButton]'
+    m_ActionId: bde0d6ef-73d7-42e5-b9c9-5c736a78c448
+    m_ActionName: 'Player/SecondaryAttack[/Mouse/rightButton]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2140446290338217335}
-        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+      - m_Target: {fileID: 1580414088196275140}
+        m_TargetAssemblyTypeName: GameInputManager, Assembly-CSharp
         m_MethodName: OnCrouchInput
         m_Mode: 0
         m_Arguments:
@@ -165,12 +152,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 5111827d-4133-4e81-b6f1-821f01f957db
-    m_ActionName: 'Gameplay/Crouch[/Keyboard/leftCtrl]'
+    m_ActionId: bfc6b8d5-1a6b-4f96-8c26-e3c61fd80da0
+    m_ActionName: 'Player/Crouch[/Keyboard/leftCtrl]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2140446290338217335}
-        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+      - m_Target: {fileID: 1580414088196275140}
+        m_TargetAssemblyTypeName: GameInputManager, Assembly-CSharp
         m_MethodName: OnPauseInput
         m_Mode: 0
         m_Arguments:
@@ -181,42 +168,96 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 3fe8ece5-7051-478a-8645-b2dcf78ae2bb
-    m_ActionName: 'Gameplay/Pause[/Keyboard/escape]'
+    m_ActionId: 7bcf6af8-4ba6-44e9-9ee5-fbb3acf65108
+    m_ActionName: 'Player/Pause[/Keyboard/escape]'
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2140446290338217335}
-        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
-        m_MethodName: OnResetInput
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 7e8b31db-fe27-481c-9083-9e9c1d0aa89a
-    m_ActionName: 'Gameplay/Reset[/Keyboard/backspace]'
+      m_Calls: []
+    m_ActionId: e45505eb-3939-4f5b-a956-1b17e7159338
+    m_ActionName: 'Dialogue/Continue[/Keyboard/space,/Mouse/leftButton]'
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2140446290338217335}
-        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
-        m_MethodName: OnUnpauseInput
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 4968db7a-5f1d-432f-8d34-7c517684c46c
-    m_ActionName: 'UI/Unpause[/Keyboard/escape]'
+      m_Calls: []
+    m_ActionId: 1ab58af4-32e2-4b9e-a320-ed6dc319798f
+    m_ActionName: 'Dialogue/Skip[/Keyboard/enter,/Keyboard/escape]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c95b2375-e6d9-4b88-9c4c-c5e76515df4b
+    m_ActionName: 'UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7607c7b6-cd76-4816-beef-bd0341cfe950
+    m_ActionName: 'UI/Submit[/Keyboard/space,/Keyboard/enter]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 15cef263-9014-4fd5-94d9-4e4a6234a6ef
+    m_ActionName: 'UI/Cancel[/Mouse/rightButton,/Keyboard/tab]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 32b35790-4ed0-4e9a-aa41-69ac6d629449
+    m_ActionName: 'UI/Point[/Mouse/position]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3c7022bf-7922-4f7c-a998-c437916075ad
+    m_ActionName: 'UI/Click[/Mouse/leftButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0489e84a-4833-4c40-bfae-cea84b696689
+    m_ActionName: 'UI/ScrollWheel[/Mouse/scroll]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: dad70c86-b58c-4b17-88ad-f5e53adf419e
+    m_ActionName: 'UI/MiddleClick[/Mouse/middleButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 44b200b1-1557-4083-816c-b22cbdf77ddf
+    m_ActionName: 'UI/RightClick[/Mouse/rightButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 24908448-c609-4bc3-a128-ea258674378a
+    m_ActionName: UI/TrackedDevicePosition
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
+    m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ec2554b3-9745-4a8e-8250-cb19913958f4
+    m_ActionName: 'UI/ResumeGame[/Keyboard/escape]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7d013a34-1129-43a8-b3eb-4efc88029d6e
+    m_ActionName: 'LevelSelect/NextLevel[/Keyboard/w,/Keyboard/upArrow]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 93daa9b7-b124-470b-bea1-e26e04f770db
+    m_ActionName: 'LevelSelect/PreviousLevel[/Keyboard/s,/Keyboard/downArrow]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 033e07cc-f96f-442d-a2f9-601ad25a36f0
+    m_ActionName: 'LevelSelect/OpenWeaponsMenu[/Keyboard/q]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fce42c58-9b7d-4bf4-9782-fd34ce5985da
+    m_ActionName: 'LevelSelect/CloseMenu[/Keyboard/tab]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5266cf20-19fb-4777-8900-929ab225ce63
+    m_ActionName: 'LevelSelect/MainMenu[/Keyboard/escape]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: Gameplay
+  m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &1580414088196275140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501951628699219333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72631dfb95c2693429bf921a552d15ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputHoldTime: 0.2
+  inputReleaseTime: 0.1

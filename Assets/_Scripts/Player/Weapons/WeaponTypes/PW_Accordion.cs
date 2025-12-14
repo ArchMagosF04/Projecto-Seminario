@@ -1,3 +1,4 @@
+using Ami.BroAudio;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -44,8 +45,13 @@ public class PW_Accordion : PlayerWeapon
     [SerializeField] private Color chargeLv3Color;
     [SerializeField] private Color specialModeColor;
 
-    [Header("Additional Components")]
-    [SerializeField] private SoundLibraryObject soundLibrary;
+    [Header("Sounds")]
+    [SerializeField] private SoundID onBeatLv1;
+    [SerializeField] private SoundID onBeatLv2;
+    [SerializeField] private SoundID onBeatLv3;
+    [SerializeField] private SoundID missBeatLv1;
+    [SerializeField] private SoundID missBeatLv2;
+    [SerializeField] private SoundID missBeatLv3;
 
     //Components
     private float currentCharge;
@@ -62,7 +68,6 @@ public class PW_Accordion : PlayerWeapon
     protected override void Awake()
     {
         base.Awake();
-        soundLibrary.Initialize();
         chargeFlashAnim.SetFloat("BeatSpeedMult", BeatManager.Instance.BeatSpeedMultiplier);
     }
 
@@ -145,7 +150,7 @@ public class PW_Accordion : PlayerWeapon
 
     private void Update()
     {
-        int isButtonHeld = InputManager.Instance.PrimaryAttackInputStop;
+        int isButtonHeld = GameInputManager.Instance.PrimaryAttackInputStop;
 
         if (isButtonHeld == 1 && isCharging && currentCharge <= timeFor3rdCharge)
         {
@@ -199,8 +204,7 @@ public class PW_Accordion : PlayerWeapon
         PlayerProjectile new1LvBullet = Instantiate(chargeLv1Prefab, transform.position, Quaternion.identity);
         new1LvBullet.InitializeProjectile(isOnBeat, manaComponent, manaOnHit_1st, finalDamage, finalSpeed, transform.right, beatCombo);
 
-        string soundFxName = isOnBeat ? "OnBeatHit-" + 0.ToString() : "OnMissHit-" + 0.ToString();
-        SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound(soundFxName)).Play();
+        BroAudio.Play(isOnBeat ? onBeatLv1 : missBeatLv1);
     }
 
     private void Spawn2ndChargeBullet()
@@ -221,8 +225,7 @@ public class PW_Accordion : PlayerWeapon
         PlayerProjectile new2LvBullet = Instantiate(chargeLv2Prefab, transform.position, Quaternion.identity);
         new2LvBullet.InitializeProjectile(isOnBeat, manaComponent, manaOnHit_2nd, finalDamage, finalSpeed, transform.right, beatCombo);
 
-        string soundFxName = isOnBeat ? "OnBeatHit-" + 1.ToString() : "OnMissHit-" + 1.ToString();
-        SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound(soundFxName)).Play();
+        BroAudio.Play(isOnBeat ? onBeatLv2 : missBeatLv2);
     }
 
     private void Spawn3rdChargeBullet() 
@@ -244,8 +247,7 @@ public class PW_Accordion : PlayerWeapon
         PlayerProjectile new3LvBullet = Instantiate(chargeLv3Prefab, transform.position, Quaternion.identity);
         new3LvBullet.InitializeProjectile(isOnBeat, manaComponent, finalManaOnHit, finalDamage, finalSpeed, transform.right, beatCombo);
 
-        string soundFxName = isOnBeat ? "OnBeatHit-" + 2.ToString() : "OnMissHit-" + 2.ToString();
-        SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound(soundFxName)).Play();
+        BroAudio.Play(isOnBeat ? onBeatLv3 : missBeatLv3);
     }
 
     private void ResetCharge()

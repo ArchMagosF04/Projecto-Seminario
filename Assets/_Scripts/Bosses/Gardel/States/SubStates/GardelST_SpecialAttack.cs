@@ -16,7 +16,7 @@ public class GardelST_SpecialAttack : GardelState
         base.OnEnter();
 
         attackPerformed = false;
-        controller.PlaySound("SpecialPrepare");
+        //controller.PlaySound("SpecialPrepare");
 
         beatTimer = 0;
 
@@ -48,7 +48,7 @@ public class GardelST_SpecialAttack : GardelState
         {
             anim.SetTrigger("SpecialAttackBeat");
             int randomSound = Random.Range(1, 5);
-            controller.PlaySound("Shout-"+randomSound.ToString());
+            //controller.PlaySound("Shout-"+randomSound.ToString());
             BeatManager.Instance.intervals[0].OnBeatEvent -= BeatTimer;
         }
     }

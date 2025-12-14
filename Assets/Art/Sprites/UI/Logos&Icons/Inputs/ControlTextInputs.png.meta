@@ -1,0 +1,831 @@
+fileFormatVersion: 2
+guid: 8fcc6dc9441654942a4d4c675dc676c3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1450357532625186324
+    second: ControlInputsSpriteSheet_0
+  - first:
+      213: -2247733086452573548
+    second: ControlInputsSpriteSheet_1
+  - first:
+      213: 6604734060117409534
+    second: ControlInputsSpriteSheet_2
+  - first:
+      213: 3921457651738171063
+    second: ControlInputsSpriteSheet_3
+  - first:
+      213: 3324906215091730775
+    second: ControlInputsSpriteSheet_4
+  - first:
+      213: -6636318951062607397
+    second: ControlInputsSpriteSheet_5
+  - first:
+      213: 5119740379996409886
+    second: ControlInputsSpriteSheet_6
+  - first:
+      213: 8513532755136901341
+    second: ControlInputsSpriteSheet_7
+  - first:
+      213: 3876070068744463293
+    second: ControlInputsSpriteSheet_8
+  - first:
+      213: 7406901854354286980
+    second: ControlInputsSpriteSheet_9
+  - first:
+      213: 7632966222881936520
+    second: ControlInputsSpriteSheet_10
+  - first:
+      213: 7270844576803537209
+    second: ControlInputsSpriteSheet_11
+  - first:
+      213: -637708115840521818
+    second: ControlInputsSpriteSheet_12
+  - first:
+      213: -3653071693219109040
+    second: ControlInputsSpriteSheet_13
+  - first:
+      213: 4084830700162581059
+    second: ControlInputsSpriteSheet_14
+  - first:
+      213: -3993169212208973958
+    second: ControlInputsSpriteSheet_15
+  - first:
+      213: -6682848593274263869
+    second: ControlInputsSpriteSheet_16
+  - first:
+      213: -6754479745019497073
+    second: ControlInputsSpriteSheet_17
+  - first:
+      213: 4223977462197087978
+    second: ControlInputsSpriteSheet_18
+  - first:
+      213: -7950174104042713609
+    second: ControlInputsSpriteSheet_19
+  - first:
+      213: -5696166637404151177
+    second: ControlInputsSpriteSheet_20
+  - first:
+      213: -5152987517002986675
+    second: ControlInputsSpriteSheet_21
+  - first:
+      213: 6403761876817719883
+    second: ControlInputsSpriteSheet_22
+  - first:
+      213: -2033385686081855098
+    second: ControlInputsSpriteSheet_23
+  - first:
+      213: 640271975714239739
+    second: ControlInputsSpriteSheet_24
+  - first:
+      213: -3474961743508120475
+    second: ControlInputsSpriteSheet_25
+  - first:
+      213: 2811046164229225230
+    second: ControlInputsSpriteSheet_26
+  - first:
+      213: -1204539587966219348
+    second: ControlInputsSpriteSheet_27
+  - first:
+      213: 9076219483847079922
+    second: ControlInputsSpriteSheet_28
+  - first:
+      213: -3483448874177429795
+    second: ControlInputsSpriteSheet_29
+  - first:
+      213: -8057973767556693809
+    second: ControlInputsSpriteSheet_30
+  - first:
+      213: 2590930556468574704
+    second: ControlInputsSpriteSheet_31
+  - first:
+      213: 739584409723259763
+    second: ControlInputsSpriteSheet_32
+  - first:
+      213: 6512970563715117829
+    second: ControlInputsSpriteSheet_33
+  - first:
+      213: 5946798124377660588
+    second: ControlInputsSpriteSheet_34
+  - first:
+      213: -5351972564805539368
+    second: ControlInputsSpriteSheet_35
+  - first:
+      213: -2300204638561020399
+    second: ControlInputsSpriteSheet_36
+  - first:
+      213: 4345449536292870672
+    second: ControlInputsSpriteSheet_37
+  - first:
+      213: 4342907571308055313
+    second: ControlInputsSpriteSheet_38
+  - first:
+      213: -3045647204794938097
+    second: ControlInputsSpriteSheet_39
+  - first:
+      213: -2481560630517050566
+    second: ControlInputsSpriteSheet_40
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ControlInputsSpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 200
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fd4d49469d50d04caca94d2bc3a9784
+      internalID: -235535541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlInputsSpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 200
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fa9e23da3d4fc04e8b60b78487335da
+      internalID: -1744578772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlInputsSpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 200
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dde00257d7ad6424a84af5a2d8fbd036
+      internalID: -1092982805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlInputsSpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 200
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f26df89fc2996b240b3d17d049fe8355
+      internalID: -640680189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlInputsSpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 200
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27bc08b8956207c41abb9549f4a8b416
+      internalID: -1530218991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlInputsSpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 200
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f202d37a817ce354591765ccd87a8584
+      internalID: -353932497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlInputsSpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 200
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62f865dc729d7df42948f9da5b42fbd4
+      internalID: -2101290034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlInputsSpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 200
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da22733e5405c3a4b8befc817a2acae3
+      internalID: -1977556980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlInputsSpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 200
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17941c26910c2d841a3b50852b5973b9
+      internalID: 1085053123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlInputsSpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 100
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86ff2a9cfe509d84e9f0a6b07507f62a
+      internalID: -1918903050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlInputsSpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 100
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b75fe7173326e104dafaa8bbb7410502
+      internalID: -42332410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlInputsSpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 100
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bd8186fa48cfb146af124d378324817
+      internalID: -1020129239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlInputsSpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 100
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e32b17071727aeb428c8681aaa777758
+      internalID: 788487039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlInputsSpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 100
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d01257d19ccf94418f1083ee067ab80
+      internalID: 1502016537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlInputsSpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 100
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fa1a96da7737444281d94bd221a1a1d
+      internalID: -1188287221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlInputsSpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 100
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 243d1255a03015b46ae530dd9b840d40
+      internalID: 183963271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlInputsSpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 100
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 607798f4472893b43aa50f2f2dbfbcff
+      internalID: -1611678385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlInputsSpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 100
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aff420a26954d241a6c3fa68252ac80
+      internalID: -363425585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlInputsSpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cbb47a7bb83b5d4d9695edb0e8406ca
+      internalID: -1784619069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlInputsSpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a79aa00ec348b94287be89803c40dec
+      internalID: -384894176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlInputsSpriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b25b7ca7284add4ca97f8832a56a9ae
+      internalID: -1093816519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlInputsSpriteSheet_21
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5e6a8bcc30e09144af01d8d142909e8
+      internalID: 1075319691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlInputsSpriteSheet_22
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f6446676a6106b4dbfd6e16f868ede1
+      internalID: -1783144433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlInputsSpriteSheet_23
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 0
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86ae2c252580d384fae6394d6110b091
+      internalID: -1634399153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlInputsSpriteSheet_24
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6303cfed0054aca40a6345157f92ac8a
+      internalID: 1518258873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlInputsSpriteSheet_25
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 0
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fed5c88e64e98144aa7d842ac35eeb53
+      internalID: 469392307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlInputsSpriteSheet_26
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 0
+        width: 100
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e7ef2881beb9e84092cd32e4f3a5e56
+      internalID: -385883852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 60c72e9e9e7799f46a4b24a7075fc79f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ControlInputsSpriteSheet_0: -235535541
+      ControlInputsSpriteSheet_1: -1744578772
+      ControlInputsSpriteSheet_10: -42332410
+      ControlInputsSpriteSheet_11: -1020129239
+      ControlInputsSpriteSheet_12: 788487039
+      ControlInputsSpriteSheet_13: 1502016537
+      ControlInputsSpriteSheet_14: -1188287221
+      ControlInputsSpriteSheet_15: 183963271
+      ControlInputsSpriteSheet_16: -1611678385
+      ControlInputsSpriteSheet_17: -363425585
+      ControlInputsSpriteSheet_18: -1784619069
+      ControlInputsSpriteSheet_19: -384894176
+      ControlInputsSpriteSheet_2: -1092982805
+      ControlInputsSpriteSheet_20: -1093816519
+      ControlInputsSpriteSheet_21: 1075319691
+      ControlInputsSpriteSheet_22: -1783144433
+      ControlInputsSpriteSheet_23: -1634399153
+      ControlInputsSpriteSheet_24: 1518258873
+      ControlInputsSpriteSheet_25: 469392307
+      ControlInputsSpriteSheet_26: -385883852
+      ControlInputsSpriteSheet_3: -640680189
+      ControlInputsSpriteSheet_4: -1530218991
+      ControlInputsSpriteSheet_5: -353932497
+      ControlInputsSpriteSheet_6: -2101290034
+      ControlInputsSpriteSheet_7: -1977556980
+      ControlInputsSpriteSheet_8: 1085053123
+      ControlInputsSpriteSheet_9: -1918903050
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

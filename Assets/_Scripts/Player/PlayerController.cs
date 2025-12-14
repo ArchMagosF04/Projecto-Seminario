@@ -1,3 +1,4 @@
+using Ami.BroAudio;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -6,7 +7,7 @@ using UnityEngine;
 using UnityEngine.InputSystem.LowLevel;
 using UnityEngine.InputSystem.XR;
 
-public class PlayerController : MonoBehaviour, ISpeaker
+public class PlayerController : MonoBehaviour
 {
     #region State Machine Variables
     public StateMachine StateMachine { get; private set; }
@@ -31,15 +32,27 @@ public class PlayerController : MonoBehaviour, ISpeaker
     public SpriteRenderer playerSprite { get; private set; }
     public BeatComboCounter BeatCombo { get; private set; }
     public AfterImage AfterImageController { get; private set; }
-    [field: SerializeField] public BoxCollider2D[] PlayerCollider { get; private set; }
 
+    [field: Header("Colliders")]
+    [field: SerializeField] public BoxCollider2D PlayerPhysicsCollider { get; private set; }
+    [field: SerializeField] public BoxCollider2D PlayerDamageCollider { get; private set; }
+
+    [field: Header("Components")]
     [SerializeField] private PlayerStats playerData;
     [SerializeField] public PlayerWeapon weapon;
-    [SerializeField] private SoundLibraryObject soundLibrary;
     [field: SerializeField] public ParticleSystem DoubleJumpParticles { get; private set; }
 
     private Core_CollisionSenses collisionSenses;
     private CharacterAnimatorEvent animatorEvent;
+
+    [field: Header("Sounds")]
+    [field: SerializeField] public SoundID JumpSound { get; private set; }
+    [field: SerializeField] public SoundID DobleJumpSound { get; private set; }
+    [field: SerializeField] public SoundID DashSound { get; private set; }
+    [field: SerializeField] public SoundID BeatDashSound { get; private set; }
+    [field: SerializeField] public SoundID StunSound { get; private set; }
+    [field: SerializeField] public SoundID DeathSound { get; private set; }
+
 
     #endregion
 
@@ -51,11 +64,6 @@ public class PlayerController : MonoBehaviour, ISpeaker
 
     private Vector2 workSpace;
 
-    private bool speaking;
-
-    public bool Speaking { get { return speaking; } }
-
-    public bool canAtack = false;
 
     #endregion
 
@@ -63,8 +71,6 @@ public class PlayerController : MonoBehaviour, ISpeaker
     private void Awake()
     {
         Core = GetComponentInChildren<Core>();
-
-        Core.SetSoundLibrary(soundLibrary);
 
         BeatCombo = GetComponent<BeatComboCounter>();
 
@@ -74,9 +80,6 @@ public class PlayerController : MonoBehaviour, ISpeaker
         collisionSenses = Core.GetCoreComponent<Core_CollisionSenses>();
         animatorEvent = GetComponentInChildren<CharacterAnimatorEvent>();
         AfterImageController = GetComponentInChildren<AfterImage>();
-        soundLibrary.Initialize();
-
-        if (PlayerCollider.Length != 2) Debug.LogError("Player got the wrong colliders.");
 
         StateMachine = new StateMachine();
         IdleState = new PlayerST_Idle(this, playerData, StateMachine, Anim, "Idle");
@@ -100,24 +103,20 @@ public class PlayerController : MonoBehaviour, ISpeaker
         animatorEvent.OnAnimationFinishedTrigger += AnimationFinishedTrigger;
         PrimaryAttackState = new PlayerST_PrimeAttack(this, playerData, StateMachine, Anim, "PrimeAttack", weapon);
         SecondaryAttackState = new PlayerST_SecAttack(this, playerData, StateMachine, Anim, "SecAttack", weapon);
-
-        canAtack = false;
     }
 
     private void Update()
     {
+        if (!GameManager.Instance.IsGameActive) return;
+
         Core.LogicUpdate();
         StateMachine.CurrentState.OnUpdate();
-
-        if (speaking)
-        {
-            GetComponent<Rigidbody2D>().velocityX = 0;
-            GetComponent<Rigidbody2D>().velocityY = 0;            
-        }
     }
 
     private void FixedUpdate()
     {
+        if (!GameManager.Instance.IsGameActive) return;
+
         StateMachine.CurrentState.OnFixedUpdate();
     }
 
@@ -141,23 +140,15 @@ public class PlayerController : MonoBehaviour, ISpeaker
 
     #region Other Functions
 
-    public void PlaySound(string name)
+    public void SetColliderHeight(float height, BoxCollider2D collider)
     {
-        SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound(name)).Play();
-    }
+        Vector2 center = collider.offset;
+        workSpace.Set(collider.size.x, height);
 
-    public void SetColliderHeight(float height)
-    {
-        foreach (BoxCollider2D collider in PlayerCollider)
-        {
-            Vector2 center = collider.offset;
-            workSpace.Set(collider.size.x, height);
+        center.y += (height - collider.size.y) / 2;
 
-            center.y += (height - collider.size.y) / 2;
-
-            collider.size = workSpace;
-            collider.offset = center;
-        }
+        collider.size = workSpace;
+        collider.offset = center;
     }
 
     public void TryToStunPlayerIfGrounded(int value) 
@@ -184,17 +175,6 @@ public class PlayerController : MonoBehaviour, ISpeaker
         StateMachine.CurrentState.AnimationFinishedTrigger();
     }
 
-    public void StartSpeaking()
-    {
-        speaking = true;
-    }
-
-    public void StopSpeaking()
-    {
-        speaking = false;
-        canAtack = true;
-    }
-
     public float GetHealth()
     {
         throw new NotImplementedException();
@@ -209,7 +189,7 @@ public class PlayerController : MonoBehaviour, ISpeaker
     {
         if (!weapon.UseWeaponOnReleaseInput) return false;
 
-        if (InputManager.Instance.PrimaryAttackInputStop == 2) return true;
+        if (GameInputManager.Instance.PrimaryAttackInputStop == 2) return true;
         else return false;
     }
 

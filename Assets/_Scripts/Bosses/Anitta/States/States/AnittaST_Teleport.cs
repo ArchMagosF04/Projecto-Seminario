@@ -15,7 +15,6 @@ public class AnittaST_Teleport : AnittaState
 
     public override void OnEnter()
     {
-        if (controller.Speaking) OnExit();
         base.OnEnter();        
         hasTeleportedOut = false;
         beatTimer = 0;

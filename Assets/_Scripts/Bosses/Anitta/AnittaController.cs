@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AnittaController : MonoBehaviour, ISpeaker
+public class AnittaController : MonoBehaviour
 {
     #region State Machine Varibles
     public StateMachine StateMachine { get; private set; }
@@ -28,7 +28,6 @@ public class AnittaController : MonoBehaviour, ISpeaker
 
     [Header("Scriptable Objects")]
     [SerializeField] private AnittaStats anittaStats;
-    [SerializeField] private SoundLibraryObject soundLibrary;
 
     [field: Header("Boss Waypoints")]
     [field: SerializeField] public Transform[] PlatformsTransforms {  get; private set; }
@@ -46,11 +45,6 @@ public class AnittaController : MonoBehaviour, ISpeaker
     public enum ActionType { None, Normal, Special }
     public ActionType DesiredAction = ActionType.None;
 
-    private bool speaking;
-
-    public bool Speaking { get { return speaking; } }
-
-
     #endregion
 
     #region Unity Functions
@@ -58,15 +52,12 @@ public class AnittaController : MonoBehaviour, ISpeaker
     {
         Core = GetComponentInChildren<Core>();
 
-        Core.SetSoundLibrary(soundLibrary);
-
         health = Core.GetCoreComponent<Core_Health>();
         movement = Core.GetCoreComponent<Core_Movement>();
         impulseSource = GetComponent<CinemachineImpulseSource>();
 
         anim = GetComponentInChildren<Animator>();
         anim.SetFloat("BeatSpeedMult", BeatManager.Instance.BeatSpeedMultiplier);
-        soundLibrary.Initialize();
 
         animatorEvent = GetComponentInChildren<CharacterAnimatorEvent>();
 
@@ -140,11 +131,6 @@ public class AnittaController : MonoBehaviour, ISpeaker
 
     #region Other Functions
 
-    public void PlaySound(string name)
-    {
-        SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound(name)).Play();
-    }
-
     public void AnimationTrigger()
     {
         StateMachine.CurrentState.AnimationTrigger();
@@ -179,16 +165,6 @@ public class AnittaController : MonoBehaviour, ISpeaker
         else direction = -1;
 
         movement.FlipCheck(direction);
-    }
-
-    public void StartSpeaking()
-    {
-        speaking = true;
-    }
-
-    public void StopSpeaking()
-    {
-        speaking = false;
     }
 
     public float GetHealth()

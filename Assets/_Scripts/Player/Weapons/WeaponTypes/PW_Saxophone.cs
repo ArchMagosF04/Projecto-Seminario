@@ -1,3 +1,4 @@
+using Ami.BroAudio;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,8 +10,8 @@ public class PW_Saxophone : PlayerWeapon
     [SerializeField, Range(0f, 1f)] private float speedMultOnMiss = 0.50f;
     [SerializeField] private float bulletAngle = 50;
 
-    [Header("Special Buff Stats")]
-    [SerializeField] private float statusDuration = 3;
+    //[Header("Special Buff Stats")]
+    //[SerializeField] private float statusDuration = 3;
 
     [Header("Normal Shot Stats")]
     [SerializeField] private float manaOnHit;
@@ -21,13 +22,13 @@ public class PW_Saxophone : PlayerWeapon
     [SerializeField] private SaxofonProjectile normalProjectile;
     [SerializeField] private SaxofonSpecialProjectile specialProjectile;
 
-    [Header("Additional Components")]
-    [SerializeField] private SoundLibraryObject soundLibrary;
+    [Header("Sounds")]
+    [SerializeField] private SoundID onBeatSound;
+    [SerializeField] private SoundID missBeatSound;
 
     protected override void Awake()
     {
         base.Awake();
-        soundLibrary.Initialize();
     }
 
     protected override void OnEnable()
@@ -71,8 +72,7 @@ public class PW_Saxophone : PlayerWeapon
         SaxofonProjectile new1LvBullet = Instantiate(normalProjectile, transform.position, Quaternion.identity);
         new1LvBullet.InitializeProjectile(isOnBeat, manaComponent, manaOnHit, finalDamage, finalSpeed, new Vector2(transform.right.x, angle), beatCombo);
 
-        string soundFxName = isOnBeat ? "OnBeatHit-" + 0.ToString() : "OnMissHit-" + 0.ToString();
-        SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound(soundFxName)).Play();
+        BroAudio.Play(isOnBeat ? onBeatSound : missBeatSound);
     }
 
     private void ShootSpecialProjectile()
@@ -88,20 +88,10 @@ public class PW_Saxophone : PlayerWeapon
 
         SaxofonSpecialProjectile newSpecial = Instantiate(specialProjectile, transform.position, Quaternion.identity);
 
-        newSpecial.SetDamage(finalDamage);
+        //newSpecial.SetDamage(finalDamage);
 
-        if (isOnBeat)
-        {
-            SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound("OnBeatHit-" + 2.ToString())).Play();
-            Debug.Log("OnBeatHit-" + 2);
-        }
-        else
-        {
-            //projectile.GetComponentInChildren<SpriteRenderer>().color = Color.red;
-            SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound("OnMissHit-" + 2.ToString())).Play();
-            Debug.Log("OnMissHit-" + 2);
-        }
+        BroAudio.Play(isOnBeat ? onBeatSound : missBeatSound);
 
-        newSpecial.GetComponent<SaxofonSpecialProjectile>().LaunchProjectile(transform.right);
+        //newSpecial.GetComponent<SaxofonSpecialProjectile>().LaunchProjectile(transform.right);
     }
 }

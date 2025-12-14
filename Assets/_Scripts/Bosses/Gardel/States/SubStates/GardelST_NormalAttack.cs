@@ -48,7 +48,7 @@ public class GardelST_NormalAttack : GardelState
 
         int randomSound = Random.Range(1, 5);
 
-        controller.PlaySound("MusicNote-"+randomSound.ToString());
+        //controller.PlaySound("MusicNote-"+randomSound.ToString());
 
         controller.FireProjectile();
 

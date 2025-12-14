@@ -41,7 +41,7 @@ public class AnittaST_SpecialAttack : AnittaState
     {
         beatTimer++;
         if (attackPerformed || beatTimer <= stats.SpecialBeatsToWait) return;
-        if(controller.Speaking) return;
+        if (!GameManager.Instance.IsGameActive) return;
 
         controller.CheckFlip(GameManager.Instance.PlayerInstance.transform);
 

@@ -1,3 +1,4 @@
+using Ami.BroAudio;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -40,19 +41,20 @@ public class PlayerST_Dash : PlayerST_Ability
     {
         base.OnEnter();
 
-        Movement.FlipCheck(InputManager.Instance.NormInputX);
-
-        controller.PlaySound("Dash");
+        Movement.FlipCheck(GameInputManager.Instance.NormInputX);
 
         CanDash = false;
-        InputManager.Instance.UseDashInput();
+        GameInputManager.Instance.UseDashInput();
 
         BeatManager.Instance.OnPlayerRhythmicAction();
 
         if (BeatManager.Instance.BeatGracePeriod)
         {
+            manaComponent.IncreaseMana(playerStats.ManaGainOnBeatDash);
             controller.BeatCombo.ResetDecayTimer();
+            if (controller.BeatDashSound.IsValid()) BroAudio.Play(controller.BeatDashSound);
         }
+        else if (controller.DashSound.IsValid()) BroAudio.Play(controller.DashSound);
 
         CheckInvincibleDash();
 

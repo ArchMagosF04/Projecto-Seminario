@@ -8,34 +8,34 @@ public class InhibitPlayerMovement : MonoBehaviour
     [SerializeField] CombatTutorial tutorialScript;
     public bool activate = false;
 
-    private void Update()
-    {
-        if (activate)
-        {
-            player.GetComponent<Rigidbody2D>().velocityX = 0; 
-            player.GetComponent<Rigidbody2D>().velocityY = 0;
-        }
-        if(CombatTutorial.Index == 9)
-        {
-            player.gameObject.GetComponent<ISpeaker>().StopSpeaking();
-            DestroyTrigger();
-        }
-    }
+    //private void Update()
+    //{
+    //    if (activate)
+    //    {
+    //        player.GetComponent<Rigidbody2D>().velocityX = 0; 
+    //        player.GetComponent<Rigidbody2D>().velocityY = 0;
+    //    }
+    //    if(CombatTutorial.Index == 9)
+    //    {
+    //        player.gameObject.GetComponent<ISpeaker>().StopSpeaking();
+    //        DestroyTrigger();
+    //    }
+    //}
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        collision.gameObject.TryGetComponent<Rigidbody2D>(out Rigidbody2D rigidbody);
-        //rigidbody.bodyType = RigidbodyType2D.Static;
-        player = rigidbody.gameObject;
-        player.gameObject.GetComponent<ISpeaker>().StartSpeaking();
-        tutorialScript.AdvanceIndex();
-        player.gameObject.GetComponent<PlayerController>().canAtack = false;
-        activate = true;
-    }
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    collision.gameObject.TryGetComponent<Rigidbody2D>(out Rigidbody2D rigidbody);
+    //    //rigidbody.bodyType = RigidbodyType2D.Static;
+    //    player = rigidbody.gameObject;
+    //    player.gameObject.GetComponent<ISpeaker>().StartSpeaking();
+    //    tutorialScript.AdvanceIndex();
+    //    player.gameObject.GetComponent<PlayerController>().canAtack = false;
+    //    activate = true;
+    //}
 
-    public void DestroyTrigger()
-    {
-        player.gameObject.GetComponent<ISpeaker>().StopSpeaking();
-        Destroy(this.gameObject);
-    }
+    //public void DestroyTrigger()
+    //{
+    //    player.gameObject.GetComponent<ISpeaker>().StopSpeaking();
+    //    Destroy(this.gameObject);
+    //}
 }

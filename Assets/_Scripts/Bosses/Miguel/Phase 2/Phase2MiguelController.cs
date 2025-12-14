@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Phase2MiguelController : MonoBehaviour, ISpeaker
+public class Phase2MiguelController : MonoBehaviour
 {
     #region State Machine
 
@@ -27,7 +27,6 @@ public class Phase2MiguelController : MonoBehaviour, ISpeaker
 
     [Header("Scriptable Objects")]
     [SerializeField] private P2MiguelStats miguelStats;
-    [SerializeField] private SoundLibraryObject soundLibrary;
 
     [Header("Attack References")]
     public BeamWeapon[] skyBeams;
@@ -45,10 +44,6 @@ public class Phase2MiguelController : MonoBehaviour, ISpeaker
     public enum ActionType { None, Normal, Jump, Special }
     public ActionType DesiredAction = ActionType.None;
 
-    private bool speaking = false;
-
-    public bool Speaking { get { return speaking; } }
-
     private Transform player;
 
     #endregion
@@ -59,14 +54,10 @@ public class Phase2MiguelController : MonoBehaviour, ISpeaker
     {
         Core = GetComponentInChildren<Core>();
 
-        Core.SetSoundLibrary(soundLibrary);
-
         movement = Core.GetCoreComponent<Core_Movement>();
         impulseSource = GetComponent<CinemachineImpulseSource>();
 
         anim = GetComponentInChildren<Animator>();
-        
-        soundLibrary.Initialize();
 
         animatorEvent = GetComponentInChildren<CharacterAnimatorEvent>();
 
@@ -115,11 +106,6 @@ public class Phase2MiguelController : MonoBehaviour, ISpeaker
 
     #region Other Functions
 
-    public void PlaySound(string name)
-    {
-        SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound(name)).Play();
-    }
-
     public void AnimationTrigger()
     {
         StateMachine.CurrentState.AnimationTrigger();
@@ -138,16 +124,6 @@ public class Phase2MiguelController : MonoBehaviour, ISpeaker
         else direction = -1;
 
         movement.FlipCheck(direction);
-    }
-
-    public void StartSpeaking()
-    {
-        speaking = true;
-    }
-
-    public void StopSpeaking()
-    {
-        speaking = false;
     }
 
     public float GetHealth()

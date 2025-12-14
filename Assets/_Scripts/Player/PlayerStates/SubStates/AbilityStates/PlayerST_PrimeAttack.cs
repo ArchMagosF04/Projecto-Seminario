@@ -26,7 +26,7 @@ public class PlayerST_PrimeAttack : PlayerST_Ability
 
         Movement.SetVelocityX(0f);
 
-        InputManager.Instance.UsePrimaryAttackInput();
+        GameInputManager.Instance.UsePrimaryAttackInput();
         BeatManager.Instance.OnPlayerRhythmicAction();
 
         weapon.ExecuteBasicAttack();
@@ -36,7 +36,7 @@ public class PlayerST_PrimeAttack : PlayerST_Ability
     {
         base.OnUpdate();
 
-        int xInput = InputManager.Instance.NormInputX;
+        int xInput = GameInputManager.Instance.NormInputX;
 
         Movement.FlipCheck(xInput);
 
@@ -45,16 +45,9 @@ public class PlayerST_PrimeAttack : PlayerST_Ability
 
     public bool CanPerformAttack()
     {
-        //TO DO
-        if(controller.Speaking == true && controller.canAtack == false)
-        {
-            return false;
-        }
-        else
-        {
-            return true;
-        }
-        
+        if (GameManager.Instance.IsGameActive) return true;
+
+        return false;
     }
 
     private void ExitHandler()

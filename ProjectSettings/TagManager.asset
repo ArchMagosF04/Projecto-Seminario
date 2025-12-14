@@ -3,8 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - MetronomeBar
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -39,27 +38,27 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Background
-    uniqueID: 4054858477
+  - name: 0-Background
+    uniqueID: 2692377049
     locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Enemy
-    uniqueID: 421754133
+  - name: 2-Enemy
+    uniqueID: 4116142521
     locked: 0
-  - name: Player
-    uniqueID: 1300096155
+  - name: 3-Player
+    uniqueID: 95427245
     locked: 0
-  - name: Effects
-    uniqueID: 560529137
+  - name: 4-Effects
+    uniqueID: 10275729
     locked: 0
-  - name: Foreground
-    uniqueID: 3468129703
+  - name: 5-Foreground
+    uniqueID: 4021583461
     locked: 0
-  - name: Popup
-    uniqueID: 4290284105
+  - name: 6-PopUp
+    uniqueID: 3057249111
     locked: 0
-  - name: UI
-    uniqueID: 945808007
+  - name: 7-UI
+    uniqueID: 4187986335
     locked: 0

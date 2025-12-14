@@ -246,7 +246,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1861574991}
   - {fileID: 402838013}
   - {fileID: 135840912}
   - {fileID: 867198759}
@@ -851,7 +850,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -2411039567873315589, guid: 20d587f63ee10e746b23a5f4c255fffd, type: 2}
-  m_audioClip: {fileID: 8300000, guid: a0a0c4c5dd089b64c8e156cb76c613d1, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: a0a0c4c5dd089b64c8e156cb76c613d1, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -1914,8 +1913,8 @@ MonoBehaviour:
     I will be their reminder. I will be the light that guides them to a much more
     colorful reality.\u201D"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 783f7c4038ed6094fa03e3a542b8544f, type: 2}
-  m_sharedMaterial: {fileID: 7568704545940115270, guid: 783f7c4038ed6094fa03e3a542b8544f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2295,68 +2294,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1861574990
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 30937196}
-    m_Modifications:
-    - target: {fileID: 2760264537405560925, guid: f7a370405eb23f24ab83c089171369f0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2760264537405560925, guid: f7a370405eb23f24ab83c089171369f0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2760264537405560925, guid: f7a370405eb23f24ab83c089171369f0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2760264537405560925, guid: f7a370405eb23f24ab83c089171369f0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2760264537405560925, guid: f7a370405eb23f24ab83c089171369f0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2760264537405560925, guid: f7a370405eb23f24ab83c089171369f0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2760264537405560925, guid: f7a370405eb23f24ab83c089171369f0, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2760264537405560925, guid: f7a370405eb23f24ab83c089171369f0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2760264537405560925, guid: f7a370405eb23f24ab83c089171369f0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2760264537405560925, guid: f7a370405eb23f24ab83c089171369f0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3731537484111931112, guid: f7a370405eb23f24ab83c089171369f0, type: 3}
-      propertyPath: m_Name
-      value: InputManager
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f7a370405eb23f24ab83c089171369f0, type: 3}
---- !u!4 &1861574991 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2760264537405560925, guid: f7a370405eb23f24ab83c089171369f0, type: 3}
-  m_PrefabInstance: {fileID: 1861574990}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1872149421
 GameObject:
   m_ObjectHideFlags: 0

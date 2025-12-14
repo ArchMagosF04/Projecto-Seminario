@@ -1,3 +1,4 @@
+using Ami.BroAudio;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,16 +15,22 @@ public class PlayerST_Jump : PlayerST_Ability
     public override void OnEnter()
     {
         base.OnEnter();
-        
-        controller.PlaySound("Jump");
 
-        InputManager.Instance.UseJumpInput();
+        if (amountOfJumpsLeft > 0 && controller.DobleJumpSound.IsValid()) BroAudio.Play(controller.DobleJumpSound);
+        else if(controller.JumpSound.IsValid()) BroAudio.Play(controller.JumpSound);
+
+        GameInputManager.Instance.UseJumpInput();
         Movement?.SetVelocityY(playerStats.JumpVelocity);
         isAbilityDone = true;
         DecreaseAmountOfJumpsLeft();
         controller.AirborneState.SetIsJumping();
 
-        if (amountOfJumpsLeft <= 0) controller.ActivateDoubleJumpParticle();
+        if (amountOfJumpsLeft <= 0)
+        {
+            controller.BeatCombo.ResetDecayTimer();
+            controller.ActivateDoubleJumpParticle();
+            manaComponent.IncreaseMana(playerStats.ManaGainOnDoubleJump);
+        }
     }
 
     public override void OnExit()

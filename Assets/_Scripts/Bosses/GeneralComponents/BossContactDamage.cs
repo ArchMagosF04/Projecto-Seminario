@@ -37,7 +37,7 @@ public class BossContactDamage : MonoBehaviour
             CameraShakeManager.Instance.ScreenShakeFromProfile(shakeProfile, impulseSource);
         }
 
-        if (collision.TryGetComponent(out IDamageable health))
+        if (collision.TryGetComponent(out Core_Health health))
         {
             health.TakeDamage(damage, transform.right);
         }

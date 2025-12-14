@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerProjectile : MonoBehaviour
 {
     [SerializeField] private float lifetime = 5f;
+    [SerializeField] private int comboGain = 1;
 
     private bool isOnBeat;
 
@@ -58,14 +59,14 @@ public class PlayerProjectile : MonoBehaviour
         anim.SetBool("OnHit", true);
         rb.velocity = Vector2.zero;
 
-        if (collision.TryGetComponent(out IDamageable health))
+        if (collision.TryGetComponent(out Core_Health health))
         {
             health.TakeDamage(damage, transform.right);
 
             if (isOnBeat)
             {
                 manaComponent.IncreaseMana(manaOnHit);
-                beatCombo.IncreaseComboCounter();
+                beatCombo.IncreaseComboCounter(comboGain);
             }
         }
     }

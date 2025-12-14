@@ -8,6 +8,7 @@ public class SaxofonProjectile : MonoBehaviour
     private Vector2 moveDirection;
 
     [SerializeField] private int maxBounces = 2;
+    [SerializeField] private int comboGain = 1;
 
     [SerializeField] private ScreenShakeProfile shakeProfile;
     public bool destroy = false;
@@ -79,13 +80,13 @@ public class SaxofonProjectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.TryGetComponent(out IDamageable health))
+        if (collision.TryGetComponent(out Core_Health health))
         {
             health.TakeDamage(damage, transform.right);
             if (isOnBeat)
             {
                 manaComponent.IncreaseMana(manaOnHit);
-                beatCombo.IncreaseComboCounter();
+                beatCombo.IncreaseComboCounter(comboGain);
             }
         }
 

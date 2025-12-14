@@ -25,6 +25,8 @@ public class CameraShakeManager : MonoBehaviour
         }
     }
 
+    public void SetCameraListener(CinemachineImpulseListener listener) => impulseListener = listener;
+
     public void CameraShake(CinemachineImpulseSource impulseSource)
     {
         impulseSource.GenerateImpulseWithForce(globalShakeForce);

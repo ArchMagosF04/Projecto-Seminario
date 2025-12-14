@@ -1,3 +1,5 @@
+using Ami.BroAudio;
+using Ami.BroAudio.Runtime;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -10,18 +12,20 @@ public class BeatManager : MonoBehaviour
     public Action OnCorrectBeat;
     public Action OnWrongBeat;
 
+    [field: Header("Music Settings")]
     [field: SerializeField] public float BPM { get; private set; }
     [field: SerializeField] public AudioSource AudioSource { get; private set; }
+    [field: SerializeField] private SoundID musicID;
 
+    [field: Header("Beat Checks")]
     [field: SerializeField] public bool BeatGracePeriod { get; private set; }
+    [field: SerializeField] public float sampledTime { get; private set; }
 
     [field: SerializeField] public Interval[] intervals { get; private set; }
 
-    [SerializeField] private SoundLibraryObject soundLibrary;
+    [SerializeField] private SoundID testBeatSound;
 
     public float BeatSpeedMultiplier { get; private set; }
-
-    private float normalMusicVolume;
 
     private void Awake()
     {
@@ -35,15 +39,27 @@ public class BeatManager : MonoBehaviour
             return;
         }
 
-        CalculateAnimationSpeedMultiplier();
-        soundLibrary.Initialize();
-        
-        normalMusicVolume = AudioSource.volume;
+        BeatSpeedMultiplier = CalculateAnimationSpeedMultiplier();
+        BroAudio.Play(musicID);
     }
 
-    public void PlaySound(string name)
+    [ContextMenu("Find the Music Source")]
+    private void FindTheAudioSource()
     {
-        SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound(name)).Play();
+        AudioPlayer[] audioPlayers = FindObjectsByType<AudioPlayer>(FindObjectsSortMode.None);
+
+        foreach (AudioPlayer audioPlayer in audioPlayers)
+        {
+            if (audioPlayer.ID == musicID)
+            {
+                AudioSource = audioPlayer.GetCurrentAudioSource();
+            }
+        }
+    }
+
+    public void PlaySound()
+    {
+        BroAudio.Play(testBeatSound);
     }
 
     public void DebugTest(string message)
@@ -57,29 +73,16 @@ public class BeatManager : MonoBehaviour
         else AudioSource.Pause();
     }
 
-    public void IncreaseMusicVolume(float volume)
-    {
-        AudioSource.volume = volume;
-    }
-
-    public void DecreaseMusicVolume(float volume)
-    {
-        AudioSource.volume = volume;
-    }
-
-    public void NormalizeMusicVolume()
-    {
-
-    }
-
     private void Update()
     {
-        if (!AudioSource.isPlaying) return;
-
-        foreach (Interval interval in intervals)
+        if (AudioSource == null) FindTheAudioSource();
+        else if (AudioSource.isPlaying)
         {
-            float sampledTime = (AudioSource.timeSamples / (AudioSource.clip.frequency * interval.GetIntervalLength(BPM)));
-            interval.CheckForNewInterval(sampledTime);
+            foreach (Interval interval in intervals)
+            {
+                sampledTime = (AudioSource.timeSamples / (AudioSource.clip.frequency * interval.GetIntervalLength(BPM)));
+                interval.CheckForNewInterval(sampledTime);
+            }
         }
     }
 
@@ -95,12 +98,12 @@ public class BeatManager : MonoBehaviour
         BeatGracePeriod = value;
     }
 
-    protected void CalculateAnimationSpeedMultiplier()
+    public float CalculateAnimationSpeedMultiplier()
     {
         float secondsPerBeat = 60f / BPM;
 
         float difference = secondsPerBeat / 0.5f;
 
-        BeatSpeedMultiplier = 1 / difference;
+        return 1 / difference;
     }
 }

@@ -17,7 +17,7 @@ public class AnittaST_Jump : AnittaState
     {
         base.OnEnter();
 
-        controller.PlaySound("Jump");
+        //controller.PlaySound("Jump");
         PerformJump();
     }
 

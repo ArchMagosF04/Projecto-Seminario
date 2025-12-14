@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
     [field: SerializeField] public PlayerController PlayerInstance {  get; private set; }
+
+    [field: SerializeField] public bool IsGameActive { get; private set; }
 
     private void Awake()
     {
@@ -22,13 +23,5 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void OnWinGame()
-    {
-        SceneManager.LoadScene("WinScreen");
-    }
-
-    public void OnLoseGame()
-    {
-        SceneManager.LoadScene("LoseScreen");
-    }  
+    public void ToggleGameActiveState(bool state) => IsGameActive = state;
 }

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class GardelController : MonoBehaviour, ISpeaker
+public class GardelController : MonoBehaviour
 {
     #region State Machine Varibles
     public StateMachine StateMachine {  get; private set; }
@@ -27,7 +27,6 @@ public class GardelController : MonoBehaviour, ISpeaker
 
     [Header("Scriptable Objects")]
     [SerializeField] private GardelStats gardelStats;
-    [SerializeField] private SoundLibraryObject soundLibrary;
 
     [field: Header("Boss Waypoints")]
     [field: SerializeField] public Transform rightPlatform { get; private set; }
@@ -44,11 +43,6 @@ public class GardelController : MonoBehaviour, ISpeaker
     public enum ActionType { None, Normal, Special }
     public ActionType DesiredAction = ActionType.None;
 
-    private bool speaking;
-
-    public bool Speaking { get { return speaking; } }
-
-
     #endregion
 
     #region Unity Functions
@@ -56,15 +50,12 @@ public class GardelController : MonoBehaviour, ISpeaker
     {
         Core = GetComponentInChildren<Core>();
 
-        Core.SetSoundLibrary(soundLibrary);
-
         health = Core.GetCoreComponent<Core_Health>();
         movement = Core.GetCoreComponent<Core_Movement>();
         impulseSource = GetComponent<CinemachineImpulseSource>();
 
         anim = GetComponentInChildren<Animator>();
         anim.SetFloat("BeatSpeedMult", BeatManager.Instance.BeatSpeedMultiplier);
-        soundLibrary.Initialize();
 
         animatorEvent = GetComponentInChildren<CharacterAnimatorEvent>();
 
@@ -109,11 +100,6 @@ public class GardelController : MonoBehaviour, ISpeaker
     #endregion
 
     #region Other Functions
-
-    public void PlaySound(string name)
-    {
-        SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound(name)).Play();
-    }
 
     public void AnimationTrigger()
     {
@@ -161,16 +147,6 @@ public class GardelController : MonoBehaviour, ISpeaker
     {
         GameManager.Instance.PlayerInstance.TryToStunPlayerIfGrounded(gardelStats.StunEffectBeatDuration);
         CameraShakeManager.Instance.ScreenShakeFromProfile(gardelStats.StunShakeProfile, impulseSource);
-    }
-
-    public void StartSpeaking()
-    {
-        speaking = true;
-    }
-
-    public void StopSpeaking()
-    {
-        speaking=false;        
     }
 
     public float GetHealth()

@@ -42,7 +42,7 @@ public class P1MiguelST_Idle : P1MiguelState
 
     private void BeatTimer()
     {
-        if (controller.Speaking) return;
+        if (!GameManager.Instance.IsGameActive) return;
         beatTimer++;
 
         anim.SetTrigger("IdleBeat");
@@ -54,7 +54,7 @@ public class P1MiguelST_Idle : P1MiguelState
             snakeAttacked = true;
         }
 
-        if (beatTimer >= stats.BeatsSpentOnIdle && !controller.Speaking)
+        if (beatTimer >= stats.BeatsSpentOnIdle && GameManager.Instance.IsGameActive)
         {
             DecideAction();
         }
@@ -62,7 +62,7 @@ public class P1MiguelST_Idle : P1MiguelState
 
     private void DecideAction()
     {
-        if (controller.Speaking) return;
+        if (!GameManager.Instance.IsGameActive) return;
         if (controller.FloorsManager.AvailableFloors.Count > 0)
         {
             if (Random.value < stats.FlameAttackChance)

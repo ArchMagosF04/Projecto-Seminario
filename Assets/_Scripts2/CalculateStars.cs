@@ -41,7 +41,7 @@ public class CalculateStars : MonoBehaviour
         string result;
         countTime = false;
         remainingHealth = playerHealth.CurrentHealth;
-        maxCombo = comboManager.maxCombo;
+        maxCombo = comboManager.MaxCombo;
 
         //gameManager.OnWinGame();
 
@@ -71,8 +71,8 @@ public class CalculateStars : MonoBehaviour
             result = result + "0";
         }
 
-        string lvlName = GlobalManager.Instance.GetCurrentLevel();
-        string variableName = lvlName + "Stars";
+        //string lvlName = GlobalManager.Instance.GetCurrentLevel();
+        //string variableName = lvlName + "Stars";
 
 
 
@@ -97,7 +97,7 @@ public class CalculateStars : MonoBehaviour
                 else result += "0";
             }
 
-            PlayerPrefs.SetString(variableName, result);
+            //PlayerPrefs.SetString(variableName, result);
 
             OnResultsCalculated(newResult);
 
@@ -105,7 +105,7 @@ public class CalculateStars : MonoBehaviour
         }
         else
         {
-            PlayerPrefs.SetString(variableName, result);
+            //PlayerPrefs.SetString(variableName, result);
             bool[] newResult = StarsStringDecoder.DecodeString(result);
             OnResultsCalculated(newResult);
             Destroy(gameObject);

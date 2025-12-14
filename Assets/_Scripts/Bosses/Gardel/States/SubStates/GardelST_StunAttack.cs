@@ -14,7 +14,7 @@ public class GardelST_StunAttack : GardelState
     {
         base.OnEnter();
 
-        controller.PlaySound("StunPrepare");
+        //controller.PlaySound("StunPrepare");
 
         beatTimer = 0;
 
@@ -41,7 +41,7 @@ public class GardelST_StunAttack : GardelState
         {
             anim.SetTrigger("StunAttackBeat");
 
-            controller.PlaySound("Stomp");
+            //controller.PlaySound("Stomp");
             controller.StunningShout();
 
             BeatManager.Instance.intervals[0].OnBeatEvent -= BeatTimer;

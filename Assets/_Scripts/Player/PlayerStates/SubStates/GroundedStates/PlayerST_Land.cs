@@ -11,8 +11,6 @@ public class PlayerST_Land : PlayerST_Grounded
     public override void OnEnter()
     {
         base.OnEnter();
-
-        controller.PlaySound("Landing");
     }
 
     public override void OnUpdate()

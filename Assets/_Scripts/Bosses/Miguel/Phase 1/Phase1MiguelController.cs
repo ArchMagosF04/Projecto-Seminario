@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 
-public class Phase1MiguelController : MonoBehaviour, ISpeaker
+public class Phase1MiguelController : MonoBehaviour
 {
     #region State Machine
 
@@ -29,7 +29,6 @@ public class Phase1MiguelController : MonoBehaviour, ISpeaker
 
     [Header("Scriptable Objects")]
     [SerializeField] private P1MiguelStats miguelStats;
-    [SerializeField] private SoundLibraryObject soundLibrary;
 
     [Header("Waypoints")]
     [SerializeField] private Transform rightWaypoint;
@@ -47,10 +46,6 @@ public class Phase1MiguelController : MonoBehaviour, ISpeaker
     public enum ActionType { None, Normal, Special }
     public ActionType DesiredAction = ActionType.None;
 
-    private bool speaking;
-
-    public bool Speaking { get { return speaking; } }
-
     private Transform player;
 
     #endregion
@@ -61,14 +56,11 @@ public class Phase1MiguelController : MonoBehaviour, ISpeaker
     {
         Core = GetComponentInChildren<Core>();
 
-        Core.SetSoundLibrary(soundLibrary);
-
         movement = Core.GetCoreComponent<Core_Movement>();
         impulseSource = GetComponent<CinemachineImpulseSource>();
 
         anim = GetComponentInChildren<Animator>();
         anim.SetFloat("BeatSpeedMult", BeatManager.Instance.BeatSpeedMultiplier);
-        soundLibrary.Initialize();
 
         animatorEvent = GetComponentInChildren<CharacterAnimatorEvent>();
         beamWeapon = GetComponentInChildren<BeamWeapon>();
@@ -101,11 +93,15 @@ public class Phase1MiguelController : MonoBehaviour, ISpeaker
 
     private void Update()
     {
+        if (!GameManager.Instance.IsGameActive) return;
+
         StateMachine.CurrentState.OnUpdate();
     }
 
     private void FixedUpdate()
     {
+        if (!GameManager.Instance.IsGameActive) return;
+
         StateMachine.CurrentState.OnFixedUpdate();
         
         CheckFlip(player);
@@ -118,8 +114,6 @@ public class Phase1MiguelController : MonoBehaviour, ISpeaker
 
     public void HorizontalMovement()
     {   
-        if(Speaking) return;
-
         if (goingLeft)
         {
             if (transform.position.x <= leftWaypoint.position.x)
@@ -168,11 +162,6 @@ public class Phase1MiguelController : MonoBehaviour, ISpeaker
 
     #region Other Functions
 
-    public void PlaySound(string name)
-    {
-        SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound(name)).Play();
-    }
-
     public void AnimationTrigger()
     {
         StateMachine.CurrentState.AnimationTrigger();
@@ -191,16 +180,6 @@ public class Phase1MiguelController : MonoBehaviour, ISpeaker
         else direction = -1;
 
         movement.FlipCheck(direction);
-    }
-
-    public void StartSpeaking()
-    {
-        speaking = true;
-    }
-
-    public void StopSpeaking()
-    {
-        speaking = false;
     }
 
     public float GetHealth()

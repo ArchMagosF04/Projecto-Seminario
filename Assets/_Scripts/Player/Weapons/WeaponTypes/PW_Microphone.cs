@@ -1,3 +1,4 @@
+using Ami.BroAudio;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -5,24 +6,26 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-using ParryMethods;
-
 public class PW_Microphone : PlayerWeapon
 {
     [Header("Weapon Stats")]
     [SerializeField] protected float basicAttackDamage = 3f;
     [SerializeField] protected float specialAttackDamage = 1f;
-    [SerializeField] private float damgePenalty = 3;
+    [SerializeField, Range(0f, 1f)] private float damgePenalty = 0.1f;
     [SerializeField] protected float manaOnBeatHit;
-    [SerializeField] protected SoundLibraryObject soundLibrary;
+    [SerializeField] private int comboGain = 1;
+
+    [Header("Sounds")]
+    [SerializeField] private SoundID missBeatSound;
+    [SerializeField] private SoundID beatHitSound;
+    [SerializeField] private SoundID specialHitSound;
 
     private MeleeWeaponHitbox hitbox;
 
     protected override void Awake()
     {
         base.Awake();
-        hitbox = GetComponentInChildren<MeleeWeaponHitbox>();
-        soundLibrary.Initialize();        
+        hitbox = GetComponentInChildren<MeleeWeaponHitbox>();      
     }
 
     protected override void OnEnable()
@@ -43,7 +46,7 @@ public class PW_Microphone : PlayerWeapon
 
     public override void ExecuteBasicAttack()
     {
-        anim.SetInteger("YInput", InputManager.Instance.NormInputY);
+        anim.SetInteger("YInput", GameInputManager.Instance.NormInputY);
 
         base.ExecuteBasicAttack();
     }
@@ -53,33 +56,26 @@ public class PW_Microphone : PlayerWeapon
         int randomSound = Random.Range(0, 3);
         if (isOnBeat)
         {
-            SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound("OnBeatHit-" + randomSound.ToString())).Play();
-            StartCoroutine(BumpUpMusic());
+            if (beatHitSound.IsValid()) BroAudio.Play(beatHitSound);
         }
         else
         {
-            SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound("OnMissHit-" + randomSound.ToString())).Play();
+            if (missBeatSound.IsValid()) BroAudio.Play(missBeatSound);
         }
         foreach (var item in hitbox.collider2Ds.ToList())
         {
-            if (item.TryGetComponent(out IDamageable damageable))
+            if (item.TryGetComponent(out Core_Health damageable))
             {
-                float multiplier = 0.8f;
+                float multiplier = damgePenalty;
                 if (isOnBeat)
                 {
                     multiplier = beatCombo.currentRank.rankDamageMultiplier;
 
-                    damageable.TakeDamage(basicAttackDamage * multiplier, movementComponent.FacingDirection * Vector2.right);
-
-                    beatCombo.IncreaseComboCounter();
+                    beatCombo.IncreaseComboCounter(comboGain);
                     manaComponent.IncreaseMana(manaOnBeatHit);
                 }
-                else 
-                { 
-                    damageable.TakeDamage(basicAttackDamage / damgePenalty, movementComponent.FacingDirection * Vector2.right);
-                    //healthComponent.TakeDamage(5, Vector2.zero);
-                }
-                        
+
+                damageable.TakeDamage(basicAttackDamage * multiplier, movementComponent.FacingDirection * Vector2.right);
             }
         }
     }
@@ -87,33 +83,23 @@ public class PW_Microphone : PlayerWeapon
     private void SpecialAttackDamage()
     {
         BeatManager.Instance.intervals[2].OnBeatEvent += SpecialHitOnBeat;
-        SoundManager.Instance.CreateSound().WithSoundData(soundLibrary.GetSound("Special")).Play();
         OnExit += UnsubFromBeat;
-    }
-
-    IEnumerator BumpUpMusic()
-    {
-        BeatManager.Instance.IncreaseMusicVolume(1);
-
-        yield return new WaitForSecondsRealtime(1);
-
-        BeatManager.Instance.DecreaseMusicVolume(0.7f); 
-
-        yield break;
     }
 
     protected void SpecialHitOnBeat()
     {
         foreach (var item in hitbox.collider2Ds.ToList())
         {
-            if (item.TryGetComponent(out IDamageable damageable))
+            if (item.TryGetComponent(out Core_Health damageable))
             {
-                float multiplier = 0.8f;
+                float multiplier = 0.1f;
                 if (isOnBeat) multiplier = beatCombo.currentRank.rankDamageMultiplier;
+
+                if (specialHitSound.IsValid()) BroAudio.Play(specialHitSound);
 
                 damageable.TakeDamage(specialAttackDamage * multiplier, movementComponent.FacingDirection * Vector2.right);
 
-                beatCombo.IncreaseComboCounter();
+                beatCombo.IncreaseComboCounter(comboGain);
             }
         }
 
@@ -129,10 +115,10 @@ public class PW_Microphone : PlayerWeapon
     {
         foreach (var item in hitbox.collider2Ds.ToList())
         {
-            if (item.TryGetComponent(out IDamageable damageable))
+            if (item.TryGetComponent(out Core_Health damageable))
             {
                 damageable.TakeDamage(damage * beatCombo.currentRank.rankDamageMultiplier, movementComponent.FacingDirection * Vector2.right);
-                beatCombo.IncreaseComboCounter();
+                beatCombo.IncreaseComboCounter(comboGain);
             }
         }
     }

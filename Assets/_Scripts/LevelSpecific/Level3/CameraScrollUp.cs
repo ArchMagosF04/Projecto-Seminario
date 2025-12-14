@@ -12,8 +12,6 @@ public class CameraScrollUp : MonoBehaviour
 
     private float startMoveBuffer;
 
-    [SerializeField] private DialogueManager dialogueManager;
-
     private void Start()
     {
         startMoveBuffer = startScrollTime;
@@ -21,7 +19,7 @@ public class CameraScrollUp : MonoBehaviour
 
     private void Update()
     {
-        if (!dialogueManager.introEnded) return;
+        if (!GameManager.Instance.IsGameActive) return;
 
         if (ShouldMove)
         {

@@ -64,7 +64,7 @@ public class AnittaST_Idle : AnittaState
         anim.SetTrigger("IdleBeat");
         //controller.PlaySound("FingerSnap");
 
-        if (beatTimer >= stats.BeatsSpentOnIdle && !controller.Speaking)
+        if (beatTimer >= stats.BeatsSpentOnIdle && GameManager.Instance.IsGameActive)
         {
             DecideAction();
             BeatManager.Instance.intervals[0].OnBeatEvent -= BeatTimer;

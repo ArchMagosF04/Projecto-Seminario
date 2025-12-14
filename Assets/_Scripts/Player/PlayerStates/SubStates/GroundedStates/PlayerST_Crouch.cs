@@ -13,16 +13,18 @@ public class PlayerST_Crouch : PlayerST_Grounded
     {
         base.OnEnter();
 
-        InputManager.Instance.UseCrouchInput();
+        GameInputManager.Instance.UseCrouchInput();
 
         movement.SetVelocityZero();
-        controller.SetColliderHeight(playerStats.CrouchColliderHeight);
+        controller.SetColliderHeight(playerStats.CrouchPhysicsColliderHeight, controller.PlayerPhysicsCollider);
+        controller.SetColliderHeight(playerStats.CrouchDamageColliderHeight, controller.PlayerDamageCollider);
     }
 
     public override void OnExit()
     {
         base.OnExit();
-        controller.SetColliderHeight(playerStats.StandColliderHeight);
+        controller.SetColliderHeight(playerStats.StandPhysicsColliderHeight, controller.PlayerPhysicsCollider);
+        controller.SetColliderHeight(playerStats.StandDamageColliderHeight, controller.PlayerDamageCollider);
     }
 
     public override void OnUpdate()

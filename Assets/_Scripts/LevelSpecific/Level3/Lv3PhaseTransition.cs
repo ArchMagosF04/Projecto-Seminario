@@ -12,7 +12,7 @@ public class Lv3PhaseTransition : MonoBehaviour
     [Header("Phase 1 elements")]
     [SerializeField] private CameraScrollUp cameraMovement;
     [SerializeField] private Lv3FloorsManager floorsManager;
-    [SerializeField] private Phase1MiguelController phase1MiguelController;
+    //[SerializeField] private Phase1MiguelController phase1MiguelController;
 
     [Header("Transform Objects")]
     [SerializeField] private Transform playerSpawn;
@@ -31,7 +31,7 @@ public class Lv3PhaseTransition : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(phase1MiguelController.gameObject);
+        //Destroy(phase1MiguelController.gameObject);
         Destroy(floorsManager.gameObject);
 
         ConfigureCamera();
@@ -60,7 +60,7 @@ public class Lv3PhaseTransition : MonoBehaviour
         bossHUDP1.SetActive(false);
 
         //Instantiate new Boss
-        GameObject.Find("DialogueManager").GetComponent<DialogueManager>().ChageEnemy(phase2Boss);
+       // GameObject.Find("DialogueManager").GetComponent<DialogueManager>().ChageEnemy(phase2Boss);
         phase2Boss.SetActive(true);
     }
 }

@@ -14,7 +14,7 @@ public class BeatComboCounter : MonoBehaviour
 
     private int beatComboCounter;
     private int currentRankIndex = 0;
-    public int maxCombo { get; private set; }
+    public int MaxCombo { get; private set; }
     private Core core;
     private Core_Health health;
 
@@ -41,6 +41,7 @@ public class BeatComboCounter : MonoBehaviour
 
     private void Start()
     {
+        MaxCombo = 0;
         beatComboCounter = 0;
         currentRankIndex = 0;
         currentRank = styleRanks[0];
@@ -62,10 +63,10 @@ public class BeatComboCounter : MonoBehaviour
     }
 
     [ContextMenu("Test Combo Increase")]
-    public void IncreaseComboCounter()
+    public void IncreaseComboCounter(int amount)
     {
-        beatComboCounter++;
-        if(maxCombo < beatComboCounter) { maxCombo = beatComboCounter; }
+        beatComboCounter += amount;
+        if(MaxCombo < beatComboCounter) { MaxCombo = beatComboCounter; }
         if (counterTextBox != null) counterTextBox.text = beatComboCounter.ToString();
 
         if (currentRankIndex < styleRanks.Length - 1 && beatComboCounter >= styleRanks[currentRankIndex+1].rankThreshold)

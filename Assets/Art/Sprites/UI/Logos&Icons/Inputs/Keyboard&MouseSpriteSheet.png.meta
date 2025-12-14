@@ -1,0 +1,2489 @@
+fileFormatVersion: 2
+guid: ff508b4ecef77e942a4382db7172459f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2919841684612481432
+    second: Keyboard&MouseSpriteSheet_0
+  - first:
+      213: -3716426667175647105
+    second: Keyboard&MouseSpriteSheet_1
+  - first:
+      213: -8785011831246010037
+    second: Keyboard&MouseSpriteSheet_2
+  - first:
+      213: -5446199372848002149
+    second: Keyboard&MouseSpriteSheet_3
+  - first:
+      213: -4093064900611423170
+    second: Keyboard&MouseSpriteSheet_4
+  - first:
+      213: -665006012489516677
+    second: Keyboard&MouseSpriteSheet_5
+  - first:
+      213: -3825865044181622111
+    second: Keyboard&MouseSpriteSheet_6
+  - first:
+      213: 8492547825780390192
+    second: Keyboard&MouseSpriteSheet_7
+  - first:
+      213: 3425284149749047666
+    second: Keyboard&MouseSpriteSheet_8
+  - first:
+      213: -2140105917786879776
+    second: Keyboard&MouseSpriteSheet_9
+  - first:
+      213: -7717910276782556677
+    second: Keyboard&MouseSpriteSheet_10
+  - first:
+      213: -3135189111703082054
+    second: Keyboard&MouseSpriteSheet_11
+  - first:
+      213: -4502515321604645684
+    second: Keyboard&MouseSpriteSheet_12
+  - first:
+      213: -1474641569334141545
+    second: Keyboard&MouseSpriteSheet_13
+  - first:
+      213: -5994508029789272946
+    second: Keyboard&MouseSpriteSheet_14
+  - first:
+      213: 1931719388255951651
+    second: Keyboard&MouseSpriteSheet_15
+  - first:
+      213: 4571374069760440691
+    second: Keyboard&MouseSpriteSheet_16
+  - first:
+      213: 8544999890906960260
+    second: Keyboard&MouseSpriteSheet_17
+  - first:
+      213: 1301219254921233344
+    second: Keyboard&MouseSpriteSheet_18
+  - first:
+      213: 2630786880254769416
+    second: Keyboard&MouseSpriteSheet_19
+  - first:
+      213: 3008410406511043478
+    second: Keyboard&MouseSpriteSheet_20
+  - first:
+      213: -987787044594766383
+    second: Keyboard&MouseSpriteSheet_21
+  - first:
+      213: 2606780406903404537
+    second: Keyboard&MouseSpriteSheet_22
+  - first:
+      213: 2657081129483322164
+    second: Keyboard&MouseSpriteSheet_23
+  - first:
+      213: -1975442677544904560
+    second: Keyboard&MouseSpriteSheet_24
+  - first:
+      213: -5123026311103301233
+    second: Keyboard&MouseSpriteSheet_25
+  - first:
+      213: 1991785899426001925
+    second: Keyboard&MouseSpriteSheet_26
+  - first:
+      213: 7480818544552072821
+    second: Keyboard&MouseSpriteSheet_27
+  - first:
+      213: 2175670935624434957
+    second: Keyboard&MouseSpriteSheet_28
+  - first:
+      213: -5548587437999804233
+    second: Keyboard&MouseSpriteSheet_29
+  - first:
+      213: -8751224600946565518
+    second: Keyboard&MouseSpriteSheet_30
+  - first:
+      213: -2527950500156981012
+    second: Keyboard&MouseSpriteSheet_31
+  - first:
+      213: 2873551510903351181
+    second: Keyboard&MouseSpriteSheet_32
+  - first:
+      213: 6311710725101273667
+    second: Keyboard&MouseSpriteSheet_33
+  - first:
+      213: 7396179439837448614
+    second: Keyboard&MouseSpriteSheet_34
+  - first:
+      213: -3603439214743283462
+    second: Keyboard&MouseSpriteSheet_35
+  - first:
+      213: 2061565251117682346
+    second: Keyboard&MouseSpriteSheet_36
+  - first:
+      213: -8872273037802904264
+    second: Keyboard&MouseSpriteSheet_37
+  - first:
+      213: 673570608227047458
+    second: Keyboard&MouseSpriteSheet_38
+  - first:
+      213: -7737077025349500191
+    second: Keyboard&MouseSpriteSheet_39
+  - first:
+      213: -409008356595809436
+    second: Keyboard&MouseSpriteSheet_40
+  - first:
+      213: -4873749648348989286
+    second: Keyboard&MouseSpriteSheet_41
+  - first:
+      213: 6200859288824251411
+    second: Keyboard&MouseSpriteSheet_42
+  - first:
+      213: 2230986332124455383
+    second: Keyboard&MouseSpriteSheet_43
+  - first:
+      213: 6555267914772031778
+    second: Keyboard&MouseSpriteSheet_44
+  - first:
+      213: -1465208068573579178
+    second: Keyboard&MouseSpriteSheet_45
+  - first:
+      213: -6133859478632241744
+    second: Keyboard&MouseSpriteSheet_46
+  - first:
+      213: 3896284586728878148
+    second: Keyboard&MouseSpriteSheet_47
+  - first:
+      213: 4267195325474386130
+    second: Keyboard&MouseSpriteSheet_48
+  - first:
+      213: -360041640228796287
+    second: Keyboard&MouseSpriteSheet_49
+  - first:
+      213: 1126315880573565317
+    second: Keyboard&MouseSpriteSheet_50
+  - first:
+      213: -161032769386885390
+    second: Keyboard&MouseSpriteSheet_51
+  - first:
+      213: 4001016695970479312
+    second: Keyboard&MouseSpriteSheet_52
+  - first:
+      213: -7979563667711565904
+    second: Keyboard&MouseSpriteSheet_53
+  - first:
+      213: 3557728582329781938
+    second: Keyboard&MouseSpriteSheet_54
+  - first:
+      213: 1837682079454363813
+    second: Keyboard&MouseSpriteSheet_55
+  - first:
+      213: -5104530406945486155
+    second: Keyboard&MouseSpriteSheet_56
+  - first:
+      213: -5978610582752757305
+    second: Keyboard&MouseSpriteSheet_57
+  - first:
+      213: -1398037760548458688
+    second: Keyboard&MouseSpriteSheet_58
+  - first:
+      213: -3496442596902695265
+    second: Keyboard&MouseSpriteSheet_59
+  - first:
+      213: -8871932109821061210
+    second: Keyboard&MouseSpriteSheet_60
+  - first:
+      213: -3643253190887833779
+    second: Keyboard&MouseSpriteSheet_61
+  - first:
+      213: 8797958433252080051
+    second: Keyboard&MouseSpriteSheet_62
+  - first:
+      213: -2288346810593940413
+    second: Keyboard&MouseSpriteSheet_63
+  - first:
+      213: 5640669102732100152
+    second: Keyboard&MouseSpriteSheet_64
+  - first:
+      213: 5845659151676894061
+    second: Keyboard&MouseSpriteSheet_65
+  - first:
+      213: -8510330973928420614
+    second: Keyboard&MouseSpriteSheet_66
+  - first:
+      213: -7625827328059461993
+    second: Keyboard&MouseSpriteSheet_67
+  - first:
+      213: 214330684520835072
+    second: Keyboard&MouseSpriteSheet_68
+  - first:
+      213: -6157691643233035550
+    second: Keyboard&MouseSpriteSheet_69
+  - first:
+      213: 5598071666984142500
+    second: Keyboard&MouseSpriteSheet_70
+  - first:
+      213: 6368517646792571129
+    second: Keyboard&MouseSpriteSheet_71
+  - first:
+      213: 1470322129954697918
+    second: Keyboard&MouseSpriteSheet_72
+  - first:
+      213: -2696773985405265479
+    second: Keyboard&MouseSpriteSheet_73
+  - first:
+      213: -7050407702898187217
+    second: Keyboard&MouseSpriteSheet_74
+  - first:
+      213: -1539889372836278158
+    second: Keyboard&MouseSpriteSheet_75
+  - first:
+      213: 3548730772402970034
+    second: Keyboard&MouseSpriteSheet_76
+  - first:
+      213: 9221330351090089956
+    second: Keyboard&MouseSpriteSheet_77
+  - first:
+      213: 7180461749588522145
+    second: Keyboard&MouseSpriteSheet_78
+  - first:
+      213: -9038433639910704663
+    second: Keyboard&MouseSpriteSheet_79
+  - first:
+      213: 1852880005319418632
+    second: Keyboard&MouseSpriteSheet_80
+  - first:
+      213: -7559970403628303368
+    second: Keyboard&MouseSpriteSheet_81
+  - first:
+      213: 8553589364708807450
+    second: Keyboard&MouseSpriteSheet_82
+  - first:
+      213: -2703665993196388268
+    second: Keyboard&MouseSpriteSheet_83
+  - first:
+      213: -7188305767149930538
+    second: Keyboard&MouseSpriteSheet_84
+  - first:
+      213: -8165742398934706710
+    second: Keyboard&MouseSpriteSheet_85
+  - first:
+      213: -3818268206515182994
+    second: Keyboard&MouseSpriteSheet_86
+  - first:
+      213: 7944559493978345016
+    second: Keyboard&MouseSpriteSheet_87
+  - first:
+      213: 5663713453985937887
+    second: Keyboard&MouseSpriteSheet_88
+  - first:
+      213: -7841788059692649271
+    second: Keyboard&MouseSpriteSheet_89
+  - first:
+      213: 2163158348479997469
+    second: Keyboard&MouseSpriteSheet_90
+  - first:
+      213: 4612516374713733385
+    second: Keyboard&MouseSpriteSheet_91
+  - first:
+      213: -8202109939903980235
+    second: Keyboard&MouseSpriteSheet_92
+  - first:
+      213: 6974042055070769554
+    second: Keyboard&MouseSpriteSheet_93
+  - first:
+      213: -2943300273490038135
+    second: Keyboard&MouseSpriteSheet_94
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e57bdf8aa04be8478e80ff48f10c832
+      internalID: -911737970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12c29a869fd0dc44c907a932bc3d7190
+      internalID: 700367283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ade33238e237ce499700897856faf30
+      internalID: 987777316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31c90c9cb8360344890ccdcbba869093
+      internalID: 1212998383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8356fe1bb3ad594e9678a2aeeca6616
+      internalID: 687870799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3e7d16466dd4e648b9898e1f0613741
+      internalID: -1567073897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2267e9b56d423e94eaf3e722e827d480
+      internalID: -1167096540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 029b0e3d1f8cb364a812f534c36c3ea7
+      internalID: 129391511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ec206500e6077b4da389d0570cf844b
+      internalID: 1855134158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5bcabf3190b3a84ca63920dfa4c9acb
+      internalID: 1349241524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5fe467a89bba3b4681450c75d7bffaf
+      internalID: -922739601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac7de3f9be270204cadf6e0ac294c518
+      internalID: 326740681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f65c966dc9953134cbf8364ff06b40dc
+      internalID: -941968692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91d0cb0a73a196945be469bb10b6b235
+      internalID: -991055246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f32827f67020b614c95a330cc423794f
+      internalID: 23154708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa32327b32b44384a91325a710b98034
+      internalID: -421603030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9102aa11e55c674408935ee73f850f0d
+      internalID: 575043360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86379ba4f84f0c14d9252273904d1d71
+      internalID: 623146823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a76bb4429cc5ec46881ec6b0de13f39
+      internalID: 1235460577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30a27e144b08c97469ea7ca72453dde7
+      internalID: -1921677137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fbaaee75fb2c3f47b665aff76de1973
+      internalID: -1989850943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_21
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f366930191b9bb40888349115c0317f
+      internalID: -1137494779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_22
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b0138ae04169cb4fbab82e24d5f98fa
+      internalID: -1477420014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_23
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f42c409662bec734bb2ea3330eee9641
+      internalID: 1678964082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 504c771538a64ce41b11cc7714911751
+      internalID: 1920896814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_25
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a512c03df662a449abb1691385d22ff
+      internalID: 346042780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_26
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3df1973057f6cb4890e2fd5e0eb8dc5
+      internalID: 153255857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_27
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 686c97fd3ba27e544954ff0d2ee3f683
+      internalID: -1747791221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_28
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 698e7440c4c3f4e45bcb7c4c3098cb4b
+      internalID: 632250384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_29
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60b3ff49d110d734597022dac24fccf8
+      internalID: 1247840918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_30
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d5649133fec6af458cb7fba793e96df
+      internalID: 2125709226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_31
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09de5f458fbf9e843b386372f6924533
+      internalID: -1808246256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_32
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b2cc2f55c761e84fbb6465e48205358
+      internalID: 1573796234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_33
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f3fcd75194154c4690c4e7d155b65b0
+      internalID: -1761244970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_34
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3285820518c8364b84877eeb93994b5
+      internalID: -436684425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_35
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b6dbda94592fbd4ab1daf109af1ba49
+      internalID: 1638085878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3862798432b56e148aeb253a7d11f019
+      internalID: -2089679301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_37
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a93000b7d0bbf244b0a2562659c0a65
+      internalID: -1281879084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_38
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdc88c272ad83764c8e584abfefe8ead
+      internalID: 1609433470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_39
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5ac0f34c3b0f1b4cb62da795c8e833d
+      internalID: -66860550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_40
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1c4e8c72ac220b45b981d984e304718
+      internalID: 1179634758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_41
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3ca7d8675f7fcd41b64a64cd441190c
+      internalID: 1515960022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_42
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0536e5246ac06ef419918605f320b03d
+      internalID: 967541084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_43
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8149d1a1c6d3cb941bd2ddec073f4a86
+      internalID: 2121914753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_44
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4752d8ee64218bb4fafca03e3e43fe17
+      internalID: 737706482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_45
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa0cea491ee26ac428747b4a4509be99
+      internalID: 1250839541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_46
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b49a4a30d8dc3f4d9826c9b869e93fb
+      internalID: 1134603239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_47
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ad5ba21e5644ef4c97c3905c7700371
+      internalID: -1260359431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69f41cd0410e5c944abd2b03e202a0fb
+      internalID: -2085320896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_49
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a691906df305f8a408234f85b4b12a3b
+      internalID: 378970798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_50
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 164a0756182077847bb9068a8ca67d98
+      internalID: 412295303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_51
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a94e66ab7d1a0f4094283df694fc71b
+      internalID: 659579352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_52
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2041bd11ef2745a48bddb5d2593d9822
+      internalID: -1124641623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_53
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4919d96dbe7adb84892611d95400f08b
+      internalID: -1594882886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_54
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ceb5efdb8d68654d9f676b94999f4bf
+      internalID: -364246275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_55
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65c795302e739df4cbea74b7fb3c70a8
+      internalID: -1268449585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_56
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7d118a20caa8404999b7bf1b5e968a8
+      internalID: 1187006009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_57
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9612e54458efbd54fb3936a21847934b
+      internalID: 1161135586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_58
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5607f3a6a777074083cf1a48def637a
+      internalID: 2047059468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_59
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 371b572b81618b247980351c5e915fb7
+      internalID: 1869452257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaeaa362bdcc63341b67ce0dfaedeaa4
+      internalID: -217831913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_61
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b833d10e98219a141a10bb288e5b4f06
+      internalID: 1871086411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_62
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed477b14f235fcf43aaf67afc08ef611
+      internalID: 268993010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_63
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cc4d782fd8456147a16f866b9193d94
+      internalID: 807664886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_64
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5409dcd3b3619f940b94503d64c79c83
+      internalID: -1396594404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_65
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e278ae2f95bb7e84ab5438b6833ba20c
+      internalID: -1704365027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_66
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75f8d60a6898db64f93a534da145d0cf
+      internalID: -928874876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_67
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75a11528c384724428423c715e444df3
+      internalID: 1152453296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_68
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75fae8aa0c274d048b7814cff65cb555
+      internalID: 1946997956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_69
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5a2b40d59ab8cb4b8a5c923ba375adf
+      internalID: -1975223830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_70
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1575498639b736745a1fd970362ca2aa
+      internalID: 343094292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_71
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 753056b0fa38e2544b06a2b0237f9df9
+      internalID: 1343851506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 349e6c293c7500744bf4f51107cbd0d4
+      internalID: -1510189680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_73
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b143a649e30016f4481b346995cbd92c
+      internalID: -1506690420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_74
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8172a906c52dfa3458286037efc8d670
+      internalID: 766678819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_75
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06189bb9535a0fc47b8d515d6895c4ed
+      internalID: 1503628072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_76
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54e76f687c159124a8472ea5dbe79c59
+      internalID: 1831278857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_77
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fd08cd1f64c63f48bb64093484f88dc
+      internalID: -402283867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_78
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f825800ba0728a240b2ff3cf33801d1b
+      internalID: -646749966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_79
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96656cb2ce108754a85bb72327f3521e
+      internalID: -2089894447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_80
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c596364972b8a8344924945522041239
+      internalID: 1954718461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_81
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6982a54381a548d41b2e6fa60938148e
+      internalID: 605501539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_82
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4642668276bf7a44bbcb50d7d5a667e
+      internalID: -2119747550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_83
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51e391fdbe7a0bf4ea8d4c291d39f1b0
+      internalID: 474753085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98998b2f69e05e44cb8e7df051986e6a
+      internalID: 17211882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_85
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c717e415fd5de70499c386207bc6d8e3
+      internalID: -1905100511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_86
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dcd90af77a66d64cb81e4474ac0a4e8
+      internalID: -315884952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_87
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 927b516572ce46144bbb5fe466aa0cd1
+      internalID: -845192768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_88
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c81f7e61af834414383a8a38a311a898
+      internalID: -956326925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_89
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db50b25a8b88484438535fd985868ef4
+      internalID: -830222066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_90
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1daa1b2eeef2a0443b47f613c5a0252d
+      internalID: -858543544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_91
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f5cf2e183dd55849b4c4bdf11e44398
+      internalID: 1368161421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_92
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70a7f19308ab0424c8acd8cc91ba5b38
+      internalID: -341873682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_93
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7745cdb60777b794ebe01b88192895d6
+      internalID: -774793060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Keyboard&MouseSpriteSheet_94
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 696224b77607aa44298d4f9e5165e724
+      internalID: 292713950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 394d2994dbc5fe84c800349b0c2ee0bf
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Keyboard&MouseSpriteSheet_0: -911737970
+      Keyboard&MouseSpriteSheet_1: 700367283
+      Keyboard&MouseSpriteSheet_10: -922739601
+      Keyboard&MouseSpriteSheet_11: 326740681
+      Keyboard&MouseSpriteSheet_12: -941968692
+      Keyboard&MouseSpriteSheet_13: -991055246
+      Keyboard&MouseSpriteSheet_14: 23154708
+      Keyboard&MouseSpriteSheet_15: -421603030
+      Keyboard&MouseSpriteSheet_16: 575043360
+      Keyboard&MouseSpriteSheet_17: 623146823
+      Keyboard&MouseSpriteSheet_18: 1235460577
+      Keyboard&MouseSpriteSheet_19: -1921677137
+      Keyboard&MouseSpriteSheet_2: 987777316
+      Keyboard&MouseSpriteSheet_20: -1989850943
+      Keyboard&MouseSpriteSheet_21: -1137494779
+      Keyboard&MouseSpriteSheet_22: -1477420014
+      Keyboard&MouseSpriteSheet_23: 1678964082
+      Keyboard&MouseSpriteSheet_24: 1920896814
+      Keyboard&MouseSpriteSheet_25: 346042780
+      Keyboard&MouseSpriteSheet_26: 153255857
+      Keyboard&MouseSpriteSheet_27: -1747791221
+      Keyboard&MouseSpriteSheet_28: 632250384
+      Keyboard&MouseSpriteSheet_29: 1247840918
+      Keyboard&MouseSpriteSheet_3: 1212998383
+      Keyboard&MouseSpriteSheet_30: 2125709226
+      Keyboard&MouseSpriteSheet_31: -1808246256
+      Keyboard&MouseSpriteSheet_32: 1573796234
+      Keyboard&MouseSpriteSheet_33: -1761244970
+      Keyboard&MouseSpriteSheet_34: -436684425
+      Keyboard&MouseSpriteSheet_35: 1638085878
+      Keyboard&MouseSpriteSheet_36: -2089679301
+      Keyboard&MouseSpriteSheet_37: -1281879084
+      Keyboard&MouseSpriteSheet_38: 1609433470
+      Keyboard&MouseSpriteSheet_39: -66860550
+      Keyboard&MouseSpriteSheet_4: 687870799
+      Keyboard&MouseSpriteSheet_40: 1179634758
+      Keyboard&MouseSpriteSheet_41: 1515960022
+      Keyboard&MouseSpriteSheet_42: 967541084
+      Keyboard&MouseSpriteSheet_43: 2121914753
+      Keyboard&MouseSpriteSheet_44: 737706482
+      Keyboard&MouseSpriteSheet_45: 1250839541
+      Keyboard&MouseSpriteSheet_46: 1134603239
+      Keyboard&MouseSpriteSheet_47: -1260359431
+      Keyboard&MouseSpriteSheet_48: -2085320896
+      Keyboard&MouseSpriteSheet_49: 378970798
+      Keyboard&MouseSpriteSheet_5: -1567073897
+      Keyboard&MouseSpriteSheet_50: 412295303
+      Keyboard&MouseSpriteSheet_51: 659579352
+      Keyboard&MouseSpriteSheet_52: -1124641623
+      Keyboard&MouseSpriteSheet_53: -1594882886
+      Keyboard&MouseSpriteSheet_54: -364246275
+      Keyboard&MouseSpriteSheet_55: -1268449585
+      Keyboard&MouseSpriteSheet_56: 1187006009
+      Keyboard&MouseSpriteSheet_57: 1161135586
+      Keyboard&MouseSpriteSheet_58: 2047059468
+      Keyboard&MouseSpriteSheet_59: 1869452257
+      Keyboard&MouseSpriteSheet_6: -1167096540
+      Keyboard&MouseSpriteSheet_60: -217831913
+      Keyboard&MouseSpriteSheet_61: 1871086411
+      Keyboard&MouseSpriteSheet_62: 268993010
+      Keyboard&MouseSpriteSheet_63: 807664886
+      Keyboard&MouseSpriteSheet_64: -1396594404
+      Keyboard&MouseSpriteSheet_65: -1704365027
+      Keyboard&MouseSpriteSheet_66: -928874876
+      Keyboard&MouseSpriteSheet_67: 1152453296
+      Keyboard&MouseSpriteSheet_68: 1946997956
+      Keyboard&MouseSpriteSheet_69: -1975223830
+      Keyboard&MouseSpriteSheet_7: 129391511
+      Keyboard&MouseSpriteSheet_70: 343094292
+      Keyboard&MouseSpriteSheet_71: 1343851506
+      Keyboard&MouseSpriteSheet_72: -1510189680
+      Keyboard&MouseSpriteSheet_73: -1506690420
+      Keyboard&MouseSpriteSheet_74: 766678819
+      Keyboard&MouseSpriteSheet_75: 1503628072
+      Keyboard&MouseSpriteSheet_76: 1831278857
+      Keyboard&MouseSpriteSheet_77: -402283867
+      Keyboard&MouseSpriteSheet_78: -646749966
+      Keyboard&MouseSpriteSheet_79: -2089894447
+      Keyboard&MouseSpriteSheet_8: 1855134158
+      Keyboard&MouseSpriteSheet_80: 1954718461
+      Keyboard&MouseSpriteSheet_81: 605501539
+      Keyboard&MouseSpriteSheet_82: -2119747550
+      Keyboard&MouseSpriteSheet_83: 474753085
+      Keyboard&MouseSpriteSheet_84: 17211882
+      Keyboard&MouseSpriteSheet_85: -1905100511
+      Keyboard&MouseSpriteSheet_86: -315884952
+      Keyboard&MouseSpriteSheet_87: -845192768
+      Keyboard&MouseSpriteSheet_88: -956326925
+      Keyboard&MouseSpriteSheet_89: -830222066
+      Keyboard&MouseSpriteSheet_9: 1349241524
+      Keyboard&MouseSpriteSheet_90: -858543544
+      Keyboard&MouseSpriteSheet_91: 1368161421
+      Keyboard&MouseSpriteSheet_92: -341873682
+      Keyboard&MouseSpriteSheet_93: -774793060
+      Keyboard&MouseSpriteSheet_94: 292713950
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

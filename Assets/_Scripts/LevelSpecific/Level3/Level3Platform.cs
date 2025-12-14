@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Level3Platform : MonoBehaviour
+public class Level3Platform : MonoBehaviour //FIX PROJECTILE!!!!
 {
     [field: SerializeField] public bool isPlatformActive {  get; private set; } = true;
     [field: SerializeField] public bool wasPlatformModified { get; private set; } = false;
@@ -12,7 +12,7 @@ public class Level3Platform : MonoBehaviour
     [Header("Components")]
     [SerializeField] private GameObject platformPhysics;
     [SerializeField] private GameObject damagePlatform;
-    [SerializeField] private Projectile platDebris;
+    //[SerializeField] private Projectile platDebris;
     
     [SerializeField] private Animator serpentAnim;
     [SerializeField] private Animator mainPlatformAnim;
@@ -69,9 +69,9 @@ public class Level3Platform : MonoBehaviour
 
     private void SpawnDebris(Vector2 direction)
     {
-        Projectile newProjectile = Instantiate(platDebris, transform.position, Quaternion.identity);
+        //Projectile newProjectile = Instantiate(platDebris, transform.position, Quaternion.identity);
 
-        newProjectile.LaunchProjectile(direction);
+        //newProjectile.LaunchProjectile(direction);
     }
 
     private void DestroyPlatform()

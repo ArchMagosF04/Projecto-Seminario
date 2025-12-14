@@ -297,6 +297,8 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
             m_RebindOperation = action.PerformInteractiveRebinding(bindingIndex)
                 .WithCancelingThrough("<Keyboard>/backspace")
                 .WithCancelingThrough("<Gamepad>/select")
+                .WithCancelingThrough("<Keyboard>/escape")
+                .WithCancelingThrough("<Gamepad>/start")
                 .OnCancel(
                     operation =>
                     {
@@ -496,6 +498,8 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
         private InputActionRebindingExtensions.RebindingOperation m_RebindOperation;
 
         private static List<RebindActionUI> s_RebindActionUIs;
+
+        
 
         // We want the label for the action name to update in edit mode, too, so
         // we kick that off from here.

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f7dc10ca862cbd74081cf76d79671559
+guid: ff58e82717c2cbb4da0337b30e2d8da8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3737897332693287829
-    second: Bar_0
+      213: 5745580020996786010
+    second: Argentina-BackGround_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bar_0
+      name: Argentina-BackGround_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 419
-        height: 17
+        width: 3600
+        height: 2025
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5934012e1ddafd330800000000000000
-      internalID: 3737897332693287829
+      spriteID: a57481476966cbf40800000000000000
+      internalID: 5745580020996786010
       vertices: []
       indices: 
       edges: []
@@ -130,8 +130,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Bar_0: 3737897332693287829
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

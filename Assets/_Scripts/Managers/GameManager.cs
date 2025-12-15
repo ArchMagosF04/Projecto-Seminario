@@ -10,6 +10,10 @@ public class GameManager : MonoBehaviour
 
     [field: SerializeField] public bool IsGameActive { get; private set; }
 
+    [Header("Game End Screens")]
+    [SerializeField] private MenuPage winScreen;
+    [SerializeField] private MenuPage loseScreen;
+
     private void Awake()
     {
         if (Instance == null)
@@ -28,10 +32,12 @@ public class GameManager : MonoBehaviour
     public void OnGameWon()
     {
         Debug.Log("GAME WON");
+        winScreen.OpenMenu();
     }
 
     public void OnGameLost()
     {
         Debug.Log("GAME LOST");
+        loseScreen.OpenMenu();
     }
 }

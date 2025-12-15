@@ -74,6 +74,12 @@ public class AsyncSceneLoader : MonoBehaviour
         StartCoroutine(LoadLevelAsync(sceneIndex));
     }
 
+    public void ReloadCurrentLevel()
+    {
+        int index = SceneManager.GetActiveScene().buildIndex;
+        LoadLevel(index);
+    }
+
     private IEnumerator LoadLevelAsync(string sceneName)
     {
         loadingBar.fillAmount = 0;

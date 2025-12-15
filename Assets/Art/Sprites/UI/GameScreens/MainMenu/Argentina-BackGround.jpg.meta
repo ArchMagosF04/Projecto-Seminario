@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Argentina-BackGround_0: 5745580020996786010
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

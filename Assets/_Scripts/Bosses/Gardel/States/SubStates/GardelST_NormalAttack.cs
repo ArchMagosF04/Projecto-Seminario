@@ -34,6 +34,8 @@ public class GardelST_NormalAttack : GardelState
 
     public void PerformAttack()
     {
+        if (!GameManager.Instance.IsGameActive) return;
+
         if (stats.NumberOfAttacks == attackCount)
         {
             controller.LastAttackWasSpecial = false;

@@ -129,7 +129,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 58
+        width: 64
         height: 176
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -169,9 +169,9 @@ TextureImporter:
       name: electric_anim_sheet_2
       rect:
         serializedVersion: 2
-        x: 134
+        x: 128
         y: 0
-        width: 50
+        width: 64
         height: 176
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -190,9 +190,9 @@ TextureImporter:
       name: electric_anim_sheet_3
       rect:
         serializedVersion: 2
-        x: 194
+        x: 192
         y: 0
-        width: 60
+        width: 64
         height: 176
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -211,10 +211,10 @@ TextureImporter:
       name: electric_anim_sheet_4
       rect:
         serializedVersion: 2
-        x: 258
-        y: 126
-        width: 13
-        height: 20
+        x: 256
+        y: 0
+        width: 64
+        height: 176
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -232,9 +232,9 @@ TextureImporter:
       name: electric_anim_sheet_5
       rect:
         serializedVersion: 2
-        x: 265
+        x: 320
         y: 0
-        width: 118
+        width: 64
         height: 176
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -253,9 +253,9 @@ TextureImporter:
       name: electric_anim_sheet_6
       rect:
         serializedVersion: 2
-        x: 378
+        x: 384
         y: 0
-        width: 75
+        width: 64
         height: 176
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -274,9 +274,9 @@ TextureImporter:
       name: electric_anim_sheet_7
       rect:
         serializedVersion: 2
-        x: 450
+        x: 448
         y: 0
-        width: 62
+        width: 64
         height: 176
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -291,31 +291,10 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: electric_anim_sheet_8
-      rect:
-        serializedVersion: 2
-        x: 261
-        y: 13
-        width: 10
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 693ab2f6601f820a0800000000000000
-      internalID: -6906005018635426922
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 388a22031a1feba4b849d515079190c2
     internalID: 0
     vertices: []
     indices: 
@@ -331,7 +310,6 @@ TextureImporter:
       electric_anim_sheet_5: 2995794564103936752
       electric_anim_sheet_6: -8718605911549882116
       electric_anim_sheet_7: 5566235943518659897
-      electric_anim_sheet_8: -6906005018635426922
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

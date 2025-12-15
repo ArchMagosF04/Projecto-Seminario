@@ -92,11 +92,19 @@ public class AnittaController : MonoBehaviour
 
     private void Update()
     {
+        if (!GameManager.Instance.IsGameActive) return;
+
         StateMachine.CurrentState.OnUpdate();
     }
 
     private void FixedUpdate()
     {
+        if (!GameManager.Instance.IsGameActive)
+        {
+            movement.SetVelocityX(0);
+            return;
+        }
+
         StateMachine.CurrentState.OnFixedUpdate();
     }
 

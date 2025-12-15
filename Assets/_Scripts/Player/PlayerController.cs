@@ -44,6 +44,7 @@ public class PlayerController : MonoBehaviour
 
     private Core_CollisionSenses collisionSenses;
     private CharacterAnimatorEvent animatorEvent;
+    private Core_Movement movement;
 
     [field: Header("Sounds")]
     [field: SerializeField] public SoundID JumpSound { get; private set; }
@@ -78,6 +79,7 @@ public class PlayerController : MonoBehaviour
         Anim = GetComponentInChildren<Animator>();
         playerSprite = GetComponentInChildren<SpriteRenderer>();
         collisionSenses = Core.GetCoreComponent<Core_CollisionSenses>();
+        movement = Core.GetCoreComponent<Core_Movement>();
         animatorEvent = GetComponentInChildren<CharacterAnimatorEvent>();
         AfterImageController = GetComponentInChildren<AfterImage>();
 
@@ -115,7 +117,11 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!GameManager.Instance.IsGameActive) return;
+        if (!GameManager.Instance.IsGameActive)
+        {
+            movement.SetVelocityX(0);
+            return;
+        }
 
         StateMachine.CurrentState.OnFixedUpdate();
     }

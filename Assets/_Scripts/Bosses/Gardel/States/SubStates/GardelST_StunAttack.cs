@@ -35,6 +35,8 @@ public class GardelST_StunAttack : GardelState
 
     private void BeatTimer()
     {
+        if (!GameManager.Instance.IsGameActive) return;
+
         beatTimer++;
 
         if (beatTimer > stats.StunBeatsToWait)

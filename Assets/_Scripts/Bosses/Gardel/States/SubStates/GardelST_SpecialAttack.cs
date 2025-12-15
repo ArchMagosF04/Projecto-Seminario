@@ -37,6 +37,8 @@ public class GardelST_SpecialAttack : GardelState
 
     private void BeatTimer()
     {
+        if (!GameManager.Instance.IsGameActive) return;
+
         beatTimer++;
 
         if (!attackPerformed && beatTimer + 1 >= stats.SpecialBeatsToWait)

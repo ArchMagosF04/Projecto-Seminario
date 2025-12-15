@@ -23,6 +23,8 @@ public class CameraShakeManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+
+        if (impulseListener == null) impulseListener = FindFirstObjectByType<CinemachineImpulseListener>();
     }
 
     public void SetCameraListener(CinemachineImpulseListener listener) => impulseListener = listener;

@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Brasil-BackGround_0: 1973604056640625995
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

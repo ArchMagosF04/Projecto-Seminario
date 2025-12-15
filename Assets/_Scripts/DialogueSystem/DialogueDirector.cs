@@ -37,6 +37,7 @@ public class DialogueDirector : MonoBehaviour
     #endregion
 
     private PlayerInput playerInput;
+    private Canvas dialogueCanvas;
 
     private int currentDialogueIndex;
     private bool isTyping;
@@ -47,10 +48,12 @@ public class DialogueDirector : MonoBehaviour
 
     private void Awake()
     {
+        dialogueCanvas = GetComponent<Canvas>();
         playerInput = FindFirstObjectByType<PlayerInput>();
 
         leftDialogueBox.SetActive(false);
         rightDialogueBox.SetActive(false);
+        dialogueCanvas.enabled = false;
     }
 
     private void Update()
@@ -81,6 +84,7 @@ public class DialogueDirector : MonoBehaviour
     {
         if (dialogueScene == null || isDialogueActive) return;
 
+        dialogueCanvas.enabled = true;
         isDialogueActive = true;
         GameManager.Instance.ToggleGameActiveState(false);
         playerInput.SwitchCurrentActionMap("Dialogue");
@@ -100,6 +104,7 @@ public class DialogueDirector : MonoBehaviour
         isDialogueActive = false;
         playerInput.SwitchCurrentActionMap("Player");
         GameManager.Instance.ToggleGameActiveState(true);
+        dialogueCanvas.enabled = false;
     }
 
     public void NextLine()

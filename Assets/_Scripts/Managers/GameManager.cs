@@ -24,4 +24,14 @@ public class GameManager : MonoBehaviour
     }
 
     public void ToggleGameActiveState(bool state) => IsGameActive = state;
+
+    public void OnGameWon()
+    {
+        Debug.Log("GAME WON");
+    }
+
+    public void OnGameLost()
+    {
+        Debug.Log("GAME LOST");
+    }
 }

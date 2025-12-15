@@ -69,8 +69,8 @@ public class BeatManager : MonoBehaviour
 
     public void ToggleMusic(bool input)
     {
-        if (input) AudioSource.Play();
-        else AudioSource.Pause();
+        if (input) BroAudio.Play(musicID);
+        else BroAudio.Pause(musicID);
     }
 
     private void Update()
@@ -105,5 +105,10 @@ public class BeatManager : MonoBehaviour
         float difference = secondsPerBeat / 0.5f;
 
         return 1 / difference;
+    }
+
+    public void ActivateSquashAndStretch()
+    {
+        SquashAndStretch.SquashAndStretchAllObjcetsLikeThis();
     }
 }

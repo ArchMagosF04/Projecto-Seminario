@@ -123,7 +123,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gardelStats: {fileID: 11400000, guid: 4d6125dc252b125438bf1e9e7a7d3fda, type: 2}
-  soundLibrary: {fileID: 11400000, guid: d40eed17ddcd037439beb5fc67a6990b, type: 2}
   <rightPlatform>k__BackingField: {fileID: 0}
   <leftPlatform>k__BackingField: {fileID: 0}
   <stageCenter>k__BackingField: {fileID: 0}
@@ -292,7 +291,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fb079225720700d4fb44c338299ee991, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e0d92688ee968cd4c8073caa123ec678, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -540,11 +539,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
-  popupPrefab: {fileID: 3009466947853114038, guid: 2baa4dee2cd411c438c0a9c01772876e, type: 3}
   maxHealth: 175
   hasIFrames: 0
   iFramesDuration: 0
   damageParticles: {fileID: 7233778717429442434, guid: b862ed757906f6f4bb83bb89c09b1105, type: 3}
+  damageSound:
+    ID: 0
+    _sourceAsset: {fileID: 0}
+    <DebugObject>k__BackingField: {fileID: 8934420475173891800}
   OnDeathUN:
     m_PersistentCalls:
       m_Calls:

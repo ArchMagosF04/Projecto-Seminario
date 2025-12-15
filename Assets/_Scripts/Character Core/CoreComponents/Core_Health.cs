@@ -133,4 +133,9 @@ public class Core_Health : CoreComponent
         yield return new WaitForSeconds(iFramesDuration);
         ToggleInvincibility(false);
     }
+
+    public float GetCurrentHealthPercentage()
+    {
+        return CurrentHealth / maxHealth;
+    }
 }

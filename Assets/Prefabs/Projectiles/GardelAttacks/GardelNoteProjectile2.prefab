@@ -75,12 +75,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2474203662705644756, guid: af4681f81e91e064b992b2c1c23c6ea4, type: 3}
+  m_Sprite: {fileID: 2474203662705644756, guid: 6ff59dd5374724746b4b92e21da1a44a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.32, y: 2.4}
+  m_Size: {x: 1.43, y: 2.4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -137,7 +137,6 @@ MonoBehaviour:
   damage: 10
   knockback: 5
   speed: 10
-  AffectedByParry: 1
   lifeTime: 5
   shakeProfile: {fileID: 11400000, guid: f7e8943dd2992dc4bbb53e2785068844, type: 2}
   destroy: 1

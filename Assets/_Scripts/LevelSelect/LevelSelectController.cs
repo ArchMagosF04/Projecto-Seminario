@@ -15,6 +15,7 @@ public class LevelSelectController : MonoBehaviour, IDataPersistance
 
     [Header("Level Names")]
     [SerializeField] private string[] levelNames;
+    [SerializeField] private GameObject[] levelSprites;
 
     [Header("Menus")]
     [SerializeField] private MenuPage weaponSelectorCanvas;
@@ -38,6 +39,7 @@ public class LevelSelectController : MonoBehaviour, IDataPersistance
     {
         eventSystem = FindFirstObjectByType<EventSystem>();
         isAnyMenuOpen = false;
+        foreach (GameObject sprite in levelSprites) sprite.SetActive(false);
     }
 
     private void Start()
@@ -45,8 +47,11 @@ public class LevelSelectController : MonoBehaviour, IDataPersistance
         SelectButtonMarker();
 
         if (!lv1Unlocked) levelMarkers[1].interactable = false;
+        else levelSprites[0].SetActive(true);
         if (!lv2Unlocked) levelMarkers[2].interactable = false;
+        else levelSprites[1].SetActive(true);
         if (!lv3Unlocked) levelMarkers[3].interactable = false;
+        else levelSprites[2].SetActive(true);
     }
 
     public void OnReturnToMainMenuInput()

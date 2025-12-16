@@ -52,7 +52,7 @@ public class Core_Mana : CoreComponent
         {
             if (manaFullSound.IsValid()) BroAudio.Play(manaFullSound);
             isManaFull = true;
-            FullAnimation();
+            //FullAnimation();
             ManaIsFull();
         }
 

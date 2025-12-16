@@ -108,7 +108,7 @@ public class LevelStarsTracker : MonoBehaviour, IDataPersistance
     public void CalculateResults()
     {
         achievedTextA.text = playerComboCounter.MaxCombo.ToString();
-        achievedTextB.text = (playerHealth.GetCurrentHealthPercentage() * 100).ToString();
+        achievedTextB.text = (playerHealth.GetCurrentHealthPercentage() * 100).ToString() + "%";
         achievedTextC.text = timerText.text;
 
         if (playerComboCounter.MaxCombo >= maxComboRequired) passedComboRequirements = true;
@@ -186,6 +186,28 @@ public class LevelStarsTracker : MonoBehaviour, IDataPersistance
                 gameData.starsGained[starC] = true;
             }
             else Debug.LogError("Wrong Level Key");
+        }
+
+        switch (levelID)
+        {
+            case "1":
+
+                gameData.unlocked2ndLevel = true;
+                gameData.unlockedweapon2 = true;
+                break;
+            case "2":
+
+                gameData.unlocked3rdLevel = true;
+                gameData.unlockedweapon3 = true;
+                break;
+            case "3":
+
+                gameData.unlockedweapon4 = true;
+                break;
+            default:
+
+                Debug.LogError("Wrong Level ID", this);
+                break;
         }
     }
 }

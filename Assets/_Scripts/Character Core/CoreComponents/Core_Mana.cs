@@ -1,4 +1,5 @@
 using Ami.BroAudio;
+using Microlight.MicroBar;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ public class Core_Mana : CoreComponent
 {
     [Header("UI")]
     [SerializeField] private Image manaBar;
+    [SerializeField] private MicroBar microBar;
 
     [Header("Stats")]
     [SerializeField] private float maxMana;
@@ -25,6 +27,7 @@ public class Core_Mana : CoreComponent
     protected override void Awake()
     {
         base.Awake();
+        if (microBar != null) microBar.Initialize(maxMana);
     }
 
     private void Start()
@@ -41,17 +44,20 @@ public class Core_Mana : CoreComponent
             manaBar.fillAmount = 0f;
             manaBar.GetComponent<Animator>().SetLayerWeight(1, 0);
         }
+        if (microBar != null) microBar.UpdateBar(currentMana, UpdateAnim.Damage);
     }
 
     public void IncreaseMana(float amount)
     {
         currentMana = Mathf.Clamp(currentMana + amount, 0, maxMana);
         if (manaBar != null) manaBar.fillAmount = currentMana / maxMana;
+        if (microBar != null) microBar.UpdateBar(currentMana, UpdateAnim.Heal);
 
         if (currentMana == maxMana && !isManaFull)
         {
             if (manaFullSound.IsValid()) BroAudio.Play(manaFullSound);
             isManaFull = true;
+            if (microBar != null) microBar.UpdateBar(currentMana, UpdateAnim.MaxHP);
             //FullAnimation();
             ManaIsFull();
         }

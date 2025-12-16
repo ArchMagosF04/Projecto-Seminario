@@ -91,3 +91,16 @@ MonoBehaviour:
       <DebugObject>k__BackingField: {fileID: 0}
     autoProgressDialogue: 1
     autoProgressDelay: 1.5
+  - speakerName: Lejandaro
+    speakerTextBoxSprite: {fileID: -1728115917479248544, guid: 6f8a009d17092204c8a2a092e972d6b2, type: 3}
+    dialogueLines: 'Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla
+      Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla
+      Bla Bla Bla Bla Bla '
+    displaySide: 0
+    typingSpeed: 0.05
+    voiceSound:
+      ID: 1073741832
+      _sourceAsset: {fileID: 11400000, guid: 5802d47db847d6b4d991b27d079f0e00, type: 2}
+      <DebugObject>k__BackingField: {fileID: 0}
+    autoProgressDialogue: 1
+    autoProgressDelay: 1.5

@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 642baa1501059594ab31776074d4c61e
+guid: 84a1d985961ef124a8b8ed4bbd0db03d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6682738439518977790
-    second: Ground_0
+      213: 5813279663609927737
+    second: new_Healt_Anim_GreyScale_0
+  - first:
+      213: 6608220658202678339
+    second: new_Healt_Anim_GreyScale_1
+  - first:
+      213: 8965777528541887410
+    second: new_Healt_Anim_GreyScale_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -40,9 +46,9 @@ TextureImporter:
     filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
-    wrapW: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -100,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ground_0
+      name: new_Healt_Anim_GreyScale_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 6033
-        height: 411
+        x: 12
+        y: 37
+        width: 443
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +120,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: efe706e343bddbc50800000000000000
-      internalID: 6682738439518977790
+      spriteID: 938d871dd0beca050800000000000000
+      internalID: 5813279663609927737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_Healt_Anim_GreyScale_1
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 27
+        width: 443
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34491914dad15bb50800000000000000
+      internalID: 6608220658202678339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_Healt_Anim_GreyScale_2
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 11
+        width: 453
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bb3be3d827dc6c70800000000000000
+      internalID: 8965777528541887410
       vertices: []
       indices: 
       edges: []
@@ -123,7 +171,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -131,7 +179,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Ground_0: 6682738439518977790
+      new_Healt_Anim_GreyScale_0: 5813279663609927737
+      new_Healt_Anim_GreyScale_1: 6608220658202678339
+      new_Healt_Anim_GreyScale_2: 8965777528541887410
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

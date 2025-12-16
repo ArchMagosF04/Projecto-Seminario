@@ -1360,7 +1360,7 @@ MonoBehaviour:
   rightDialogueSpeakerNameText: {fileID: 8026359686281181388}
   leftDialogueText: {fileID: 3695431393210627903}
   rightDialogueText: {fileID: 6086832150879173450}
-  dialogueScene: {fileID: 0}
+  dialogueScene: {fileID: 11400000, guid: b6deb23e4a5039b459045ba9831680e5, type: 2}
 --- !u!1 &6980156743117905133
 GameObject:
   m_ObjectHideFlags: 0

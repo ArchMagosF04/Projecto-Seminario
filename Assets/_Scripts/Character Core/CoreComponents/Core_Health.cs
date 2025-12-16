@@ -1,4 +1,5 @@
 using Ami.BroAudio;
+using Microlight.MicroBar;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -11,6 +12,7 @@ public class Core_Health : CoreComponent
 {
     [Header("UI References")]
     [SerializeField] private Image healthBar;
+    [SerializeField] private MicroBar microBar;
     //[SerializeField] private TextMeshProUGUI healthNumber;
     //[SerializeField] private DamagePopup popupPrefab;
 
@@ -51,6 +53,7 @@ public class Core_Health : CoreComponent
         Invincible = false;
 
         if (healthBar != null) healthBar.fillAmount = CurrentHealth / maxHealth;
+        if (microBar != null) microBar.Initialize(maxHealth);
         //if (healthNumber != null) healthNumber.text = $"{currentHealth} / {maxHealth}";
     }
 
@@ -95,6 +98,7 @@ public class Core_Health : CoreComponent
         }
 
         if (healthBar != null) healthBar.fillAmount = CurrentHealth / maxHealth;
+        if (microBar != null) microBar.UpdateBar(CurrentHealth);
 
         if (hasIFrames)
         {
@@ -113,6 +117,7 @@ public class Core_Health : CoreComponent
         if (CurrentHealth > maxHealth) CurrentHealth = maxHealth;
 
         if (healthBar != null) healthBar.fillAmount = CurrentHealth / maxHealth;
+        if (microBar != null) microBar.UpdateBar(CurrentHealth);
         //if (healthNumber != null) healthNumber.text = $"{currentHealth} / {maxHealth}";
     }
 

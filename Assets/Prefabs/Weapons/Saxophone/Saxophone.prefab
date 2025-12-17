@@ -173,8 +173,8 @@ MonoBehaviour:
   manaOnHit: 6
   bulletSpeed: 60
   shootingAngle: {x: 0.5, y: 0.4}
-  specialBeatDamage: 0
-  specialMissDamage: 0
+  specialBeatDamage: 10
+  specialMissDamage: 3
   bulletPrefab: {fileID: 7922215213335808624, guid: 72ffd1aa0ddfdb741b20a8c61c076ef9, type: 3}
   onBeatExplosion: {fileID: 3683523877307424702, guid: 7446d05f85e67fa4d9cc84cc913eae2c, type: 3}
   onMissExplosion: {fileID: 1299956898822333465, guid: 580756590f4d0a94c96013ad438efb91, type: 3}

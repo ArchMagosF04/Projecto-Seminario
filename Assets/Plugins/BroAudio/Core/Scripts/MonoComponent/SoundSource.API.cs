@@ -45,6 +45,11 @@ namespace Ami.BroAudio
             Stop();
             CurrentPlayer = BroAudio.Play(_sound, positon, _overrideGroup);
         }
+
+        public SoundID GetSoundID()
+        {
+            return _sound;
+        }
         #endregion
 
         #region Stop and Pause

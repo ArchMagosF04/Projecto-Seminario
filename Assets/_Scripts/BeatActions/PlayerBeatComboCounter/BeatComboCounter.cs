@@ -29,10 +29,10 @@ public class BeatComboCounter : MonoBehaviour
         core = GetComponentInChildren<Core>();
         health = core.GetCoreComponent<Core_Health>();
 
-        foreach (StyleRank rank in styleRanks)
-        {
-            Debug.Log(rank.rankDamageMultiplier);
-        }
+        //foreach (StyleRank rank in styleRanks)
+        //{
+        //    Debug.Log(rank.rankDamageMultiplier);
+        //}
     }
 
     private void OnEnable()

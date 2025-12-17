@@ -51,7 +51,7 @@ public class WeaponMenuController : MonoBehaviour, IDataPersistance
         else
         {
             weapon2Button.interactable = true;
-            weapon2Lock.SetActive(true);
+            weapon2Lock.SetActive(false);
         }
 
         if (!weapon3Unlocked)
@@ -62,7 +62,7 @@ public class WeaponMenuController : MonoBehaviour, IDataPersistance
         else
         {
             weapon3Button.interactable = true;
-            weapon3Lock.SetActive(true);
+            weapon3Lock.SetActive(false);
         }
     }
 

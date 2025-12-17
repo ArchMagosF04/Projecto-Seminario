@@ -1,3 +1,4 @@
+using Ami.BroAudio;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,6 +18,8 @@ public class GardelST_NormalAttack : GardelState
         attackCount = 0;
 
         BeatManager.Instance.intervals[0].OnBeatEvent += PerformAttack;
+
+        controller.ToggleBossAttackIndicator(true);
     }
 
     public override void UnsubscribeToEvents()
@@ -28,6 +31,7 @@ public class GardelST_NormalAttack : GardelState
 
     public override void OnExit()
     {
+        controller.ToggleBossAttackIndicator(false);
         base.OnExit();
         BeatManager.Instance.intervals[0].OnBeatEvent -= PerformAttack;
     }
@@ -50,7 +54,7 @@ public class GardelST_NormalAttack : GardelState
 
         int randomSound = Random.Range(1, 5);
 
-        //controller.PlaySound("MusicNote-"+randomSound.ToString());
+        if (controller.NormalAttackSound.IsValid()) BroAudio.Play(controller.NormalAttackSound);
 
         controller.FireProjectile();
 

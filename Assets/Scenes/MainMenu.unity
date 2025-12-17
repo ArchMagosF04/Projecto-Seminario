@@ -9203,11 +9203,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 914642190259080334, guid: ddeb496be39be6a40aa2ffafae74c100, type: 3}
       propertyPath: <BPM>k__BackingField
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 914642190259080334, guid: ddeb496be39be6a40aa2ffafae74c100, type: 3}
+      propertyPath: <intervals>k__BackingField.Array.data[0].unityTrigger.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1967151457963190803, guid: ddeb496be39be6a40aa2ffafae74c100, type: 3}
       propertyPath: m_Name
       value: BeatManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867459933963513385, guid: ddeb496be39be6a40aa2ffafae74c100, type: 3}
+      propertyPath: _sound.ID
+      value: 268435458
       objectReference: {fileID: 0}
     - target: {fileID: 3621172991738373037, guid: ddeb496be39be6a40aa2ffafae74c100, type: 3}
       propertyPath: m_LocalPosition.x

@@ -78,13 +78,13 @@ public class BeatManager : MonoBehaviour
         if (AudioSource == null) FindTheAudioSource();
         else if (AudioSource.isPlaying)
         {
-            BeatGracePeriod = intervals[0].BeatGrace;
+            //BeatGracePeriod = intervals[0].BeatGrace;
             foreach (Interval interval in intervals)
             {
                 sampledTime = (AudioSource.timeSamples / (AudioSource.clip.frequency * interval.GetIntervalLength(BPM)));
                 interval.CheckForNewInterval(sampledTime);
             }
-            BeatGracePeriod = intervals[0].BeatGrace;
+            //BeatGracePeriod = intervals[0].BeatGrace;
         }
     }
 

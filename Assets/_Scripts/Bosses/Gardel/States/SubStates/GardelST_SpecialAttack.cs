@@ -1,3 +1,4 @@
+using Ami.BroAudio;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -31,6 +32,7 @@ public class GardelST_SpecialAttack : GardelState
 
     public override void OnExit()
     {
+        controller.ToggleBossAttackIndicator(false);
         base.OnExit();
         BeatManager.Instance.intervals[0].OnBeatEvent -= BeatTimer;
     }
@@ -43,6 +45,7 @@ public class GardelST_SpecialAttack : GardelState
 
         if (!attackPerformed && beatTimer + 1 >= stats.SpecialBeatsToWait)
         {
+            controller.ToggleBossAttackIndicator(true);
             attackPerformed = true;
             controller.SpawnShout();
         }
@@ -50,7 +53,7 @@ public class GardelST_SpecialAttack : GardelState
         {
             anim.SetTrigger("SpecialAttackBeat");
             int randomSound = Random.Range(1, 5);
-            //controller.PlaySound("Shout-"+randomSound.ToString());
+            if (controller.SpecialAttackSound.IsValid()) BroAudio.Play(controller.SpecialAttackSound);
             BeatManager.Instance.intervals[0].OnBeatEvent -= BeatTimer;
         }
     }

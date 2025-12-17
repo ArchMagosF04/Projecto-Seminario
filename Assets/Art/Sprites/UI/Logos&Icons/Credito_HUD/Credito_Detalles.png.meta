@@ -1,0 +1,639 @@
+fileFormatVersion: 2
+guid: 9d996a7a3ed10004b9598274ebdc7a7d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8801330368199900441
+    second: Credito_Detalles_0
+  - first:
+      213: -486477798494095807
+    second: Credito_Detalles_1
+  - first:
+      213: -7941527641130625925
+    second: Credito_Detalles_2
+  - first:
+      213: 1112353718883468097
+    second: Credito_Detalles_3
+  - first:
+      213: -305847770165507464
+    second: Credito_Detalles_4
+  - first:
+      213: -322736758839458037
+    second: Credito_Detalles_5
+  - first:
+      213: -5502431119665502126
+    second: Credito_Detalles_6
+  - first:
+      213: -7801694174254218087
+    second: Credito_Detalles_7
+  - first:
+      213: 8522736774931555058
+    second: Credito_Detalles_8
+  - first:
+      213: 1477174763601775176
+    second: Credito_Detalles_9
+  - first:
+      213: 4593331172859567057
+    second: Credito_Detalles_10
+  - first:
+      213: -112604802985248572
+    second: Credito_Detalles_11
+  - first:
+      213: -2567912689582871408
+    second: Credito_Detalles_12
+  - first:
+      213: 6585237889396054899
+    second: Credito_Detalles_13
+  - first:
+      213: -2029992229616319466
+    second: Credito_Detalles_14
+  - first:
+      213: -6964023136901202332
+    second: Credito_Detalles_15
+  - first:
+      213: 8240127484492444643
+    second: Credito_Detalles_16
+  - first:
+      213: -1327304147301723401
+    second: Credito_Detalles_17
+  - first:
+      213: -1232255483285334499
+    second: Credito_Detalles_18
+  - first:
+      213: -8963435894901632817
+    second: Credito_Detalles_19
+  - first:
+      213: 3500829873704609756
+    second: Credito_Detalles_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Credito_Detalles_0
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 19
+        width: 640
+        height: 632
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e2469c59a46bd580800000000000000
+      internalID: -8801330368199900441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credito_Detalles_1
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 639
+        width: 32
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14635ad050faf39f0800000000000000
+      internalID: -486477798494095807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credito_Detalles_2
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 636
+        width: 22
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b749678bfa60ac190800000000000000
+      internalID: -7941527641130625925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credito_Detalles_3
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 646
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14342a650dfdf6f00800000000000000
+      internalID: 1112353718883468097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credito_Detalles_4
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 647
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87a80ffc21961cbf0800000000000000
+      internalID: -305847770165507464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credito_Detalles_5
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 570
+        width: 25
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b07c965b0a8658bf0800000000000000
+      internalID: -322736758839458037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credito_Detalles_6
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 553
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 258684fbc0073a3b0800000000000000
+      internalID: -5502431119665502126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credito_Detalles_7
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 545
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 994c751db70dab390800000000000000
+      internalID: -7801694174254218087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credito_Detalles_8
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 519
+        width: 25
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f224fff0f7d64670800000000000000
+      internalID: 8522736774931555058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credito_Detalles_9
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 467
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84ac7affe9aff7410800000000000000
+      internalID: 1477174763601775176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credito_Detalles_10
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 459
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dbd50e7d5acebf30800000000000000
+      internalID: 4593331172859567057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credito_Detalles_11
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 437
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c8bf0e3782ff6ef0800000000000000
+      internalID: -112604802985248572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credito_Detalles_12
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 408
+        width: 24
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09ce133a301fc5cd0800000000000000
+      internalID: -2567912689582871408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credito_Detalles_13
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 44
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37b15e668f6736b50800000000000000
+      internalID: 6585237889396054899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credito_Detalles_14
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 41
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6148ae092d404d3e0800000000000000
+      internalID: -2029992229616319466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credito_Detalles_15
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 41
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46ef66d9ad1da5f90800000000000000
+      internalID: -6964023136901202332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credito_Detalles_16
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 44
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e3fa110a40da5270800000000000000
+      internalID: 8240127484492444643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credito_Detalles_17
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 40
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f29d2f09e7749de0800000000000000
+      internalID: -1327304147301723401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credito_Detalles_18
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 48
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d16104eaa2626eee0800000000000000
+      internalID: -1232255483285334499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credito_Detalles_19
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 37
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc0176d3b8a7b9380800000000000000
+      internalID: -8963435894901632817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credito_Detalles_20
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 28
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd72d31d832759030800000000000000
+      internalID: 3500829873704609756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Credito_Detalles_0: -8801330368199900441
+      Credito_Detalles_1: -486477798494095807
+      Credito_Detalles_10: 4593331172859567057
+      Credito_Detalles_11: -112604802985248572
+      Credito_Detalles_12: -2567912689582871408
+      Credito_Detalles_13: 6585237889396054899
+      Credito_Detalles_14: -2029992229616319466
+      Credito_Detalles_15: -6964023136901202332
+      Credito_Detalles_16: 8240127484492444643
+      Credito_Detalles_17: -1327304147301723401
+      Credito_Detalles_18: -1232255483285334499
+      Credito_Detalles_19: -8963435894901632817
+      Credito_Detalles_2: -7941527641130625925
+      Credito_Detalles_20: 3500829873704609756
+      Credito_Detalles_3: 1112353718883468097
+      Credito_Detalles_4: -305847770165507464
+      Credito_Detalles_5: -322736758839458037
+      Credito_Detalles_6: -5502431119665502126
+      Credito_Detalles_7: -7801694174254218087
+      Credito_Detalles_8: 8522736774931555058
+      Credito_Detalles_9: 1477174763601775176
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

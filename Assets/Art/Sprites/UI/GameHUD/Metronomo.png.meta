@@ -1,0 +1,364 @@
+fileFormatVersion: 2
+guid: 0d87fcfcf7a8f384b836ba46e74038de
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6671892291804837073
+    second: Metronomo_0
+  - first:
+      213: -4089259726469210329
+    second: Metronomo_1
+  - first:
+      213: 2856166458679613208
+    second: Metronomo_2
+  - first:
+      213: 4267850627093435615
+    second: Metronomo_3
+  - first:
+      213: 9074572896816883219
+    second: Metronomo_4
+  - first:
+      213: -7535723510615476869
+    second: Metronomo_5
+  - first:
+      213: 7068541950812992487
+    second: Metronomo_6
+  - first:
+      213: 8880396863982236893
+    second: Metronomo_7
+  - first:
+      213: 6158611052554369296
+    second: Metronomo_8
+  - first:
+      213: 3540681979650601121
+    second: Metronomo_9
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Metronomo_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 233
+        width: 59
+        height: 57
+      alignment: 9
+      pivot: {x: 0.49325457, y: 0.50349134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2b4e4f4f4da863a0800000000000000
+      internalID: -6671892291804837073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metronomo_1
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 204
+        width: 74
+        height: 86
+      alignment: 9
+      pivot: {x: 0.49731106, y: 0.49305832}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72fdd71d1f70047c0800000000000000
+      internalID: -4089259726469210329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metronomo_2
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 167
+        width: 114
+        height: 123
+      alignment: 9
+      pivot: {x: 0.5069825, y: 0.50323576}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 817dbf4f24423a720800000000000000
+      internalID: 2856166458679613208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metronomo_3
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 136
+        width: 141
+        height: 154
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5155063}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd4155688837a3b30800000000000000
+      internalID: 4267850627093435615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metronomo_4
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 61
+        width: 177
+        height: 230
+      alignment: 9
+      pivot: {x: 0.48313603, y: 0.4939436}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 316682378fb5fed70800000000000000
+      internalID: 9074572896816883219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metronomo_5
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 136
+        width: 141
+        height: 154
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5152132}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b757430a46bbb6790800000000000000
+      internalID: -7535723510615476869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metronomo_6
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 167
+        width: 114
+        height: 123
+      alignment: 9
+      pivot: {x: 0.51077485, y: 0.50499296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e3b72a1471881260800000000000000
+      internalID: 7068541950812992487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metronomo_7
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 204
+        width: 74
+        height: 86
+      alignment: 9
+      pivot: {x: 0.49585292, y: 0.48928905}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd4772eb5e18d3b70800000000000000
+      internalID: 8880396863982236893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metronomo_8
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 215
+        width: 74
+        height: 76
+      alignment: 9
+      pivot: {x: 0.49839163, y: 0.5000002}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0193c416f18c77550800000000000000
+      internalID: 6158611052554369296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metronomo_9
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 233
+        width: 59
+        height: 57
+      alignment: 9
+      pivot: {x: 0.49289715, y: 0.5110292}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a073bb4087032130800000000000000
+      internalID: 3540681979650601121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 12f78e2269ae9c44fa2616401ae765f2
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Metronomo_0: -6671892291804837073
+      Metronomo_1: -4089259726469210329
+      Metronomo_2: 2856166458679613208
+      Metronomo_3: 4267850627093435615
+      Metronomo_4: 9074572896816883219
+      Metronomo_5: -7535723510615476869
+      Metronomo_6: 7068541950812992487
+      Metronomo_7: 8880396863982236893
+      Metronomo_8: 6158611052554369296
+      Metronomo_9: 3540681979650601121
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

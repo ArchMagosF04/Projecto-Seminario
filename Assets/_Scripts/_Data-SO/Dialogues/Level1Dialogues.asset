@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9a33899322c46a4e8424c7c7259df48, type: 3}
+  m_Name: Level1Dialogues
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - speakerName: Lejandaro
+    speakerTextBoxSprite: {fileID: -1728115917479248544, guid: 6f8a009d17092204c8a2a092e972d6b2, type: 3}
+    dialogueLines: "My, my, look what we have here. One of the biggest names in Tango.
+      Don\u2019t you dare think I didn\u2019t come prepared, illusion. Let\u2019s
+      dance!."
+    displaySide: 0
+    typingSpeed: 0
+    voiceSound:
+      ID: 1073741841
+      _sourceAsset: {fileID: 11400000, guid: 5802d47db847d6b4d991b27d079f0e00, type: 2}
+      <DebugObject>k__BackingField: {fileID: 0}
+    autoProgressDialogue: 0
+    autoProgressDelay: 0
+  - speakerName: Delgar
+    speakerTextBoxSprite: {fileID: -7398361656275568863, guid: 08d64f4697f3e2043af8ef45dbf81072, type: 3}
+    dialogueLines: "Illusion? Don\u2019t forget, sister. You know, you shouldn\u2019t
+      play around. A shadow you will soon be."
+    displaySide: 1
+    typingSpeed: 0
+    voiceSound:
+      ID: 1073741842
+      _sourceAsset: {fileID: 11400000, guid: 5802d47db847d6b4d991b27d079f0e00, type: 2}
+      <DebugObject>k__BackingField: {fileID: 0}
+    autoProgressDialogue: 0
+    autoProgressDelay: 0

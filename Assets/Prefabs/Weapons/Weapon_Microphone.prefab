@@ -230,7 +230,7 @@ MonoBehaviour:
   <UseWeaponOnReleaseInput>k__BackingField: 0
   basicAttackDamage: 5
   specialAttackDamage: 2
-  damgePenalty: 0.1
+  damgePenalty: 0.25
   manaOnBeatHit: 10
   comboGain: 1
   missBeatSound:

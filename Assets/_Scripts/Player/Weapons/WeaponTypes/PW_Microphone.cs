@@ -53,7 +53,6 @@ public class PW_Microphone : PlayerWeapon
 
     private void BasicAttackDamage()
     {
-        int randomSound = Random.Range(0, 3);
         if (isOnBeat)
         {
             if (beatHitSound.IsValid()) BroAudio.Play(beatHitSound);
@@ -69,7 +68,7 @@ public class PW_Microphone : PlayerWeapon
                 float multiplier = damgePenalty;
                 if (isOnBeat)
                 {
-                    multiplier = beatCombo.currentRank.rankDamageMultiplier;
+                    multiplier = beatCombo.GetDamageMultiplier();
 
                     beatCombo.IncreaseComboCounter(comboGain);
                     manaComponent.IncreaseMana(manaOnBeatHit);
@@ -93,7 +92,7 @@ public class PW_Microphone : PlayerWeapon
             if (item.TryGetComponent(out Core_Health damageable))
             {
                 float multiplier = 0.1f;
-                if (isOnBeat) multiplier = beatCombo.currentRank.rankDamageMultiplier;
+                if (isOnBeat) multiplier = beatCombo.GetDamageMultiplier();
 
                 if (specialHitSound.IsValid()) BroAudio.Play(specialHitSound);
 

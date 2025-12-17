@@ -32,12 +32,20 @@ public class GameManager : MonoBehaviour
     public void OnGameWon()
     {
         Debug.Log("GAME WON");
+        GameEnd();
         winScreen.OpenMenu();
     }
 
     public void OnGameLost()
     {
         Debug.Log("GAME LOST");
+        GameEnd();
         loseScreen.OpenMenu();
+    }
+
+    private void GameEnd()
+    {
+        IsGameActive = false;
+        BeatManager.Instance.ToggleMusic(false);
     }
 }

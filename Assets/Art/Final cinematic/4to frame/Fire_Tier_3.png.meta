@@ -1,0 +1,1414 @@
+fileFormatVersion: 2
+guid: ffe11547b9506af4db60bd5edee0151f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4237371697930644477
+    second: Fire_Tier_3_0
+  - first:
+      213: -7014293166746720963
+    second: Fire_Tier_3_1
+  - first:
+      213: 7582141432887510374
+    second: Fire_Tier_3_2
+  - first:
+      213: -6134067206315359905
+    second: Fire_Tier_3_3
+  - first:
+      213: 1916704657997981300
+    second: Fire_Tier_3_4
+  - first:
+      213: 9135299801778374851
+    second: Fire_Tier_3_5
+  - first:
+      213: -3315794382808818554
+    second: Fire_Tier_3_6
+  - first:
+      213: -4842471451857351309
+    second: Fire_Tier_3_7
+  - first:
+      213: 7328410848194030297
+    second: Fire_Tier_3_8
+  - first:
+      213: -7878747618857526837
+    second: Fire_Tier_3_9
+  - first:
+      213: 962180820491414028
+    second: Fire_Tier_3_10
+  - first:
+      213: -4019446294867288218
+    second: Fire_Tier_3_11
+  - first:
+      213: -3067126063636474163
+    second: Fire_Tier_3_12
+  - first:
+      213: -3996085066788993218
+    second: Fire_Tier_3_13
+  - first:
+      213: -697088554449857174
+    second: Fire_Tier_3_14
+  - first:
+      213: 3198533867929935678
+    second: Fire_Tier_3_15
+  - first:
+      213: -5339919346146453818
+    second: Fire_Tier_3_16
+  - first:
+      213: -6917686337078070856
+    second: Fire_Tier_3_17
+  - first:
+      213: -4864618345040226186
+    second: Fire_Tier_3_18
+  - first:
+      213: -8876544199882611759
+    second: Fire_Tier_3_19
+  - first:
+      213: -5841265365722252001
+    second: Fire_Tier_3_20
+  - first:
+      213: -5720041685402912514
+    second: Fire_Tier_3_21
+  - first:
+      213: -3650918029974559255
+    second: Fire_Tier_3_22
+  - first:
+      213: 2325964968545300473
+    second: Fire_Tier_3_23
+  - first:
+      213: 7050521601429357307
+    second: Fire_Tier_3_24
+  - first:
+      213: 5644856934901569778
+    second: Fire_Tier_3_25
+  - first:
+      213: -4670839410707017965
+    second: Fire_Tier_3_26
+  - first:
+      213: 5064087779399462355
+    second: Fire_Tier_3_27
+  - first:
+      213: -931590666904527079
+    second: Fire_Tier_3_28
+  - first:
+      213: -2089712283592588579
+    second: Fire_Tier_3_29
+  - first:
+      213: -4406471840069241199
+    second: Fire_Tier_3_30
+  - first:
+      213: -3712602793120980217
+    second: Fire_Tier_3_31
+  - first:
+      213: -4343923512454644548
+    second: Fire_Tier_3_32
+  - first:
+      213: -4325202963349716906
+    second: Fire_Tier_3_33
+  - first:
+      213: -71951634222294052
+    second: Fire_Tier_3_34
+  - first:
+      213: -3826545883640976656
+    second: Fire_Tier_3_35
+  - first:
+      213: 5565272930249362734
+    second: Fire_Tier_3_36
+  - first:
+      213: 7570101067837483449
+    second: Fire_Tier_3_37
+  - first:
+      213: -2184832867396273322
+    second: Fire_Tier_3_38
+  - first:
+      213: -2181793525883170190
+    second: Fire_Tier_3_39
+  - first:
+      213: 5599500675431403145
+    second: Fire_Tier_3_40
+  - first:
+      213: 2558649461159969595
+    second: Fire_Tier_3_41
+  - first:
+      213: -1494825654098059160
+    second: Fire_Tier_3_42
+  - first:
+      213: 6755440621760284677
+    second: Fire_Tier_3_43
+  - first:
+      213: 7843576103967944263
+    second: Fire_Tier_3_44
+  - first:
+      213: -1082612884921204255
+    second: Fire_Tier_3_45
+  - first:
+      213: -5752072800306299314
+    second: Fire_Tier_3_46
+  - first:
+      213: -4984467328751177798
+    second: Fire_Tier_3_47
+  - first:
+      213: 7357595438818912938
+    second: Fire_Tier_3_48
+  - first:
+      213: -6386184877335441735
+    second: Fire_Tier_3_49
+  - first:
+      213: 645652763617572178
+    second: Fire_Tier_3_50
+  - first:
+      213: 8755810153627480780
+    second: Fire_Tier_3_51
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Fire_Tier_3_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 686
+        width: 380
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 304dc8b24e4d135c0800000000000000
+      internalID: -4237371697930644477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 19
+        width: 1920
+        height: 671
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d35ac95378938ae90800000000000000
+      internalID: -7014293166746720963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_2
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 711
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6650808167d293960800000000000000
+      internalID: 7582141432887510374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_3
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 699
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f514333206a6fdaa0800000000000000
+      internalID: -6134067206315359905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_4
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 742
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4766e473bb0899a10800000000000000
+      internalID: 1916704657997981300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_5
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 759
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c842b1d4ca17ce70800000000000000
+      internalID: 9135299801778374851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_6
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 686
+        width: 634
+        height: 394
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68cd170a39eebf1d0800000000000000
+      internalID: -3315794382808818554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_7
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 685
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37d821dfed51cccb0800000000000000
+      internalID: -4842471451857351309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_8
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 767
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9da69beb6deb3b560800000000000000
+      internalID: 7328410848194030297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_9
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 808
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc9da07b8c019a290800000000000000
+      internalID: -7878747618857526837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_10
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 697
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0aa51fbb5a5a5d00800000000000000
+      internalID: 962180820491414028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_11
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 717
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66fdca804ee0838c0800000000000000
+      internalID: -4019446294867288218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_12
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 706
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc61b9f68116f65d0800000000000000
+      internalID: -3067126063636474163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_13
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 680
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e378ccdcdcd0b88c0800000000000000
+      internalID: -3996085066788993218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_14
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 715
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a65960f27a17356f0800000000000000
+      internalID: -697088554449857174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_15
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 706
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3f15083b99736c20800000000000000
+      internalID: 3198533867929935678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_16
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 675
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c654b395abc4e5b0800000000000000
+      internalID: -5339919346146453818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_17
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 709
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b173ea8de07fff90800000000000000
+      internalID: -6917686337078070856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_18
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 691
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 678570893676d7cb0800000000000000
+      internalID: -4864618345040226186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_19
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 719
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d361f4841e20d480800000000000000
+      internalID: -8876544199882611759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_20
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 723
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1d35552918afeea0800000000000000
+      internalID: -5841265365722252001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_21
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 739
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef8f129a4645e90b0800000000000000
+      internalID: -5720041685402912514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_22
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 678
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e52c472565555dc0800000000000000
+      internalID: -3650918029974559255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_23
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 702
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ff252eb0dc774020800000000000000
+      internalID: 2325964968545300473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_24
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 693
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf24a6e8a0c78d160800000000000000
+      internalID: 7050521601429357307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_25
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 699
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f855bc797f865e40800000000000000
+      internalID: 5644856934901569778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_26
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 686
+        width: 912
+        height: 394
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31fc9e99d48dd2fb0800000000000000
+      internalID: -4670839410707017965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_27
+      rect:
+        serializedVersion: 2
+        x: 1033
+        y: 756
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dd60823101474640800000000000000
+      internalID: 5064087779399462355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_28
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 733
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91f161769335213f0800000000000000
+      internalID: -931590666904527079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_29
+      rect:
+        serializedVersion: 2
+        x: 1229
+        y: 747
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd281b5ffb9dff2e0800000000000000
+      internalID: -2089712283592588579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_30
+      rect:
+        serializedVersion: 2
+        x: 1316
+        y: 802
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19639eb353119d2c0800000000000000
+      internalID: -4406471840069241199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_31
+      rect:
+        serializedVersion: 2
+        x: 1369
+        y: 803
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 703a6eb0e6f2a7cc0800000000000000
+      internalID: -3712602793120980217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_32
+      rect:
+        serializedVersion: 2
+        x: 1397
+        y: 747
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbc7cac949847b3c0800000000000000
+      internalID: -4343923512454644548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_33
+      rect:
+        serializedVersion: 2
+        x: 1429
+        y: 690
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 650c21c12dac9f3c0800000000000000
+      internalID: -4325202963349716906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_34
+      rect:
+        serializedVersion: 2
+        x: 1642
+        y: 770
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdbdb21be50600ff0800000000000000
+      internalID: -71951634222294052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_35
+      rect:
+        serializedVersion: 2
+        x: 1724
+        y: 686
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0faa8d0fac065eac0800000000000000
+      internalID: -3826545883640976656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_36
+      rect:
+        serializedVersion: 2
+        x: 1739
+        y: 678
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2d4c957e32db3d40800000000000000
+      internalID: 5565272930249362734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_37
+      rect:
+        serializedVersion: 2
+        x: 1746
+        y: 705
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b9224620d66e0960800000000000000
+      internalID: 7570101067837483449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_38
+      rect:
+        serializedVersion: 2
+        x: 1748
+        y: 694
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65b3f35351aeda1e0800000000000000
+      internalID: -2184832867396273322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_39
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 745
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2729c7c0956b8b1e0800000000000000
+      internalID: -2181793525883170190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_40
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 703
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98e06a6623c65bd40800000000000000
+      internalID: 5599500675431403145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_41
+      rect:
+        serializedVersion: 2
+        x: 1768
+        y: 700
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b334f2de026228320800000000000000
+      internalID: 2558649461159969595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_42
+      rect:
+        serializedVersion: 2
+        x: 1769
+        y: 678
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 860285eccff414be0800000000000000
+      internalID: -1494825654098059160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_43
+      rect:
+        serializedVersion: 2
+        x: 1777
+        y: 680
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5080441247520cd50800000000000000
+      internalID: 6755440621760284677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_44
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 721
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74e60c5d8eaf9dc60800000000000000
+      internalID: 7843576103967944263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_45
+      rect:
+        serializedVersion: 2
+        x: 1785
+        y: 813
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e1c20d2159c9f0f0800000000000000
+      internalID: -1082612884921204255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_46
+      rect:
+        serializedVersion: 2
+        x: 1789
+        y: 698
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4e7e8f83488c20b0800000000000000
+      internalID: -5752072800306299314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_47
+      rect:
+        serializedVersion: 2
+        x: 1794
+        y: 687
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abfee339f5d93dab0800000000000000
+      internalID: -4984467328751177798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_48
+      rect:
+        serializedVersion: 2
+        x: 1795
+        y: 712
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaae5d3c11e6b1660800000000000000
+      internalID: 7357595438818912938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_49
+      rect:
+        serializedVersion: 2
+        x: 1813
+        y: 697
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9be037480b6bf57a0800000000000000
+      internalID: -6386184877335441735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_50
+      rect:
+        serializedVersion: 2
+        x: 1830
+        y: 683
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 255bca784c1d5f800800000000000000
+      internalID: 645652763617572178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Tier_3_51
+      rect:
+        serializedVersion: 2
+        x: 1741
+        y: 95
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc279b7c1f2e28970800000000000000
+      internalID: 8755810153627480780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Fire_Tier_3_0: -4237371697930644477
+      Fire_Tier_3_1: -7014293166746720963
+      Fire_Tier_3_10: 962180820491414028
+      Fire_Tier_3_11: -4019446294867288218
+      Fire_Tier_3_12: -3067126063636474163
+      Fire_Tier_3_13: -3996085066788993218
+      Fire_Tier_3_14: -697088554449857174
+      Fire_Tier_3_15: 3198533867929935678
+      Fire_Tier_3_16: -5339919346146453818
+      Fire_Tier_3_17: -6917686337078070856
+      Fire_Tier_3_18: -4864618345040226186
+      Fire_Tier_3_19: -8876544199882611759
+      Fire_Tier_3_2: 7582141432887510374
+      Fire_Tier_3_20: -5841265365722252001
+      Fire_Tier_3_21: -5720041685402912514
+      Fire_Tier_3_22: -3650918029974559255
+      Fire_Tier_3_23: 2325964968545300473
+      Fire_Tier_3_24: 7050521601429357307
+      Fire_Tier_3_25: 5644856934901569778
+      Fire_Tier_3_26: -4670839410707017965
+      Fire_Tier_3_27: 5064087779399462355
+      Fire_Tier_3_28: -931590666904527079
+      Fire_Tier_3_29: -2089712283592588579
+      Fire_Tier_3_3: -6134067206315359905
+      Fire_Tier_3_30: -4406471840069241199
+      Fire_Tier_3_31: -3712602793120980217
+      Fire_Tier_3_32: -4343923512454644548
+      Fire_Tier_3_33: -4325202963349716906
+      Fire_Tier_3_34: -71951634222294052
+      Fire_Tier_3_35: -3826545883640976656
+      Fire_Tier_3_36: 5565272930249362734
+      Fire_Tier_3_37: 7570101067837483449
+      Fire_Tier_3_38: -2184832867396273322
+      Fire_Tier_3_39: -2181793525883170190
+      Fire_Tier_3_4: 1916704657997981300
+      Fire_Tier_3_40: 5599500675431403145
+      Fire_Tier_3_41: 2558649461159969595
+      Fire_Tier_3_42: -1494825654098059160
+      Fire_Tier_3_43: 6755440621760284677
+      Fire_Tier_3_44: 7843576103967944263
+      Fire_Tier_3_45: -1082612884921204255
+      Fire_Tier_3_46: -5752072800306299314
+      Fire_Tier_3_47: -4984467328751177798
+      Fire_Tier_3_48: 7357595438818912938
+      Fire_Tier_3_49: -6386184877335441735
+      Fire_Tier_3_5: 9135299801778374851
+      Fire_Tier_3_50: 645652763617572178
+      Fire_Tier_3_51: 8755810153627480780
+      Fire_Tier_3_6: -3315794382808818554
+      Fire_Tier_3_7: -4842471451857351309
+      Fire_Tier_3_8: 7328410848194030297
+      Fire_Tier_3_9: -7878747618857526837
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

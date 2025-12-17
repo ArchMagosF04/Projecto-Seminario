@@ -15,7 +15,7 @@ public class BeatManager : MonoBehaviour
     [field: Header("Music Settings")]
     [field: SerializeField] public float BPM { get; private set; }
     [field: SerializeField] public AudioSource AudioSource { get; private set; }
-    [field: SerializeField] private SoundID musicID;
+    //[field: SerializeField] private SoundID musicID;
 
     [field: Header("Beat Checks")]
     [field: SerializeField] public bool BeatGracePeriod { get; private set; }
@@ -26,6 +26,8 @@ public class BeatManager : MonoBehaviour
     [SerializeField] private SoundID testBeatSound;
 
     public float BeatSpeedMultiplier { get; private set; }
+
+    [SerializeField] private SoundSource musicSource;
 
     private void Awake()
     {
@@ -40,7 +42,10 @@ public class BeatManager : MonoBehaviour
         }
 
         BeatSpeedMultiplier = CalculateAnimationSpeedMultiplier();
-        BroAudio.Play(musicID);
+        musicSource = GetComponent<SoundSource>();
+        //BroAudio.Play(musicID);
+
+        musicSource.Play();
     }
 
     [ContextMenu("Find the Music Source")]
@@ -50,7 +55,7 @@ public class BeatManager : MonoBehaviour
 
         foreach (AudioPlayer audioPlayer in audioPlayers)
         {
-            if (audioPlayer.ID == musicID)
+            if (audioPlayer.ID == musicSource.GetSoundID())
             {
                 AudioSource = audioPlayer.GetCurrentAudioSource();
             }
@@ -69,20 +74,25 @@ public class BeatManager : MonoBehaviour
 
     public void ToggleMusic(bool input)
     {
-        if (input) BroAudio.Play(musicID);
-        else BroAudio.Pause(musicID);
+        //if (input) BroAudio.UnPause(musicID);
+        //else BroAudio.Pause(musicID);
+
+        if (input) musicSource.UnPause();
+        else musicSource.Pause();
     }
 
     private void Update()
     {
-        if (AudioSource == null) FindTheAudioSource();
+        if (AudioSource == null || (!AudioSource.isPlaying && Time.timeScale == 1)) FindTheAudioSource();
         else if (AudioSource.isPlaying)
         {
+            //BeatGracePeriod = intervals[0].BeatGrace;
             foreach (Interval interval in intervals)
             {
                 sampledTime = (AudioSource.timeSamples / (AudioSource.clip.frequency * interval.GetIntervalLength(BPM)));
                 interval.CheckForNewInterval(sampledTime);
             }
+            //BeatGracePeriod = intervals[0].BeatGrace;
         }
     }
 

@@ -1,8 +1,10 @@
+using Ami.BroAudio;
 using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GardelController : MonoBehaviour
 {
@@ -14,6 +16,7 @@ public class GardelController : MonoBehaviour
     public GardelST_NormalAttack NormalAttackState { get; private set; }
     public GardelST_SpecialAttack SpecialAttackState { get; private set; }
     public GardelST_StunAttack StunAttackState { get; private set; }
+    public GardelST_Death DeathState { get; private set; }
     #endregion
 
     #region Component References
@@ -21,6 +24,7 @@ public class GardelController : MonoBehaviour
     
     private Core_Health health;
     private Core_Movement movement;
+    public Core_Movement Movement => movement;
     private Animator anim;
     private CharacterAnimatorEvent animatorEvent;
     private CinemachineImpulseSource impulseSource;
@@ -32,6 +36,20 @@ public class GardelController : MonoBehaviour
     [field: SerializeField] public Transform rightPlatform { get; private set; }
     [field: SerializeField] public Transform leftPlatform { get; private set; }
     [field: SerializeField] public Transform stageCenter { get; private set; }
+
+    [Header("Particles")]
+    [SerializeField] private ParticleSystem deathParticles;
+
+    [field: Header("Sounds")]
+    [field: SerializeField] public SoundID DeathSound { get; private set; }
+    [field: SerializeField] public SoundID NormalAttackSound { get; private set; }
+    [field: SerializeField] public SoundID SpecialAttackSound { get; private set; }
+    [field: SerializeField] public SoundID JumpSound { get; private set; }
+    [field: SerializeField] public SoundID StunAttackSound { get; private set; }
+    [field: SerializeField] public SoundID PrepStunAttackSound { get; private set; }
+
+    [Header("Other Components")]
+    [SerializeField] private Image bossAttackIndicator;
 
     #endregion
 
@@ -58,6 +76,7 @@ public class GardelController : MonoBehaviour
         anim.SetFloat("BeatSpeedMult", BeatManager.Instance.BeatSpeedMultiplier);
 
         animatorEvent = GetComponentInChildren<CharacterAnimatorEvent>();
+        ToggleBossAttackIndicator(false);
 
         StateMachine = new StateMachine();
         IdleState = new GardelST_Idle(this, StateMachine, gardelStats, anim, "Idle");
@@ -66,6 +85,7 @@ public class GardelController : MonoBehaviour
         NormalAttackState = new GardelST_NormalAttack(this, StateMachine, gardelStats, anim, "NormalAttack");
         SpecialAttackState = new GardelST_SpecialAttack(this, StateMachine, gardelStats, anim, "SpecialAttack");
         StunAttackState = new GardelST_StunAttack(this, StateMachine, gardelStats, anim, "StunAttack");
+        DeathState = new GardelST_Death(this, StateMachine, gardelStats, anim, "Death");
 
         StateMachine.Initialize(IdleState);
     }
@@ -73,6 +93,7 @@ public class GardelController : MonoBehaviour
     private void OnEnable()
     {
         animatorEvent.OnAnimationFinishedTrigger += AnimationFinishedTrigger;
+        health.OnDeath += BossDeath;
     }
 
     private void OnDisable()
@@ -85,6 +106,7 @@ public class GardelController : MonoBehaviour
         StunAttackState.UnsubscribeToEvents();
 
         animatorEvent.OnAnimationFinishedTrigger -= AnimationFinishedTrigger;
+        health.OnDeath -= BossDeath;
     }
 
     private void Update()
@@ -163,6 +185,22 @@ public class GardelController : MonoBehaviour
     public float GetHealth()
     {
         return health.CurrentHealth;
+    }
+
+    private void BossDeath()
+    {
+        health.ToggleInvincibility(true);
+        StateMachine.ChangeState(DeathState);
+    }
+
+    public void SpawnDeathParticle()
+    {
+        ParticleSystem system = Instantiate(deathParticles, transform.position, Quaternion.identity);
+    }
+
+    public void ToggleBossAttackIndicator(bool input)
+    {
+        bossAttackIndicator.gameObject.SetActive(input);
     }
 
     #endregion

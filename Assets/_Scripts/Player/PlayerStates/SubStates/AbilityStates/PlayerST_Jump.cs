@@ -27,6 +27,7 @@ public class PlayerST_Jump : PlayerST_Ability
 
         if (amountOfJumpsLeft <= 0)
         {
+            BeatManager.Instance.OnPlayerRhythmicAction();
             controller.BeatCombo.ResetDecayTimer();
             controller.ActivateDoubleJumpParticle();
             manaComponent.IncreaseMana(playerStats.ManaGainOnDoubleJump);

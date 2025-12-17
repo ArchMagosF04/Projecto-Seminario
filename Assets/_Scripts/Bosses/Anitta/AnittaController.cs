@@ -88,6 +88,7 @@ public class AnittaController : MonoBehaviour
     private void OnEnable()
     {
         animatorEvent.OnAnimationFinishedTrigger += AnimationFinishedTrigger;
+        health.OnDeath += BossDeath;
     }
 
     private void OnDisable()
@@ -98,6 +99,7 @@ public class AnittaController : MonoBehaviour
         SpecialAttackState.UnsubscribeToEvents();
 
         animatorEvent.OnAnimationFinishedTrigger -= AnimationFinishedTrigger;
+        health.OnDeath -= BossDeath;
     }
 
     private void Update()
@@ -188,6 +190,12 @@ public class AnittaController : MonoBehaviour
     public float GetHealth()
     {
         return health.CurrentHealth;
+    }
+
+    private void BossDeath()
+    {
+        health.ToggleInvincibility(true);
+        StateMachine.ChangeState(DeathState);
     }
 
     #endregion

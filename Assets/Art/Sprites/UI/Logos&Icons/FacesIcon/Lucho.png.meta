@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 17c05df53b927dc4b9a89551178aa866
+guid: e8edae02cb0394d409f951af0f1c23f0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3819549711857252852
-    second: MatiImage_0
+      213: -820402194484492264
+    second: Lucho_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MatiImage_0
+      name: Lucho_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 221
-        height: 325
+        width: 284
+        height: 282
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c068dce16cb3efac0800000000000000
-      internalID: -3819549711857252852
+      spriteID: 8180dc00d885d94f0800000000000000
+      internalID: -820402194484492264
       vertices: []
       indices: 
       edges: []
@@ -130,8 +130,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      MatiImage_0: -3819549711857252852
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e9cbb00fc7c7daa4bbfa719004d63e90
+guid: 8f14662b5545ba143ae06670d0bf09da
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6964963508645021828
-    second: LuchoImage_0
+      213: 4292453892379168098
+    second: Fran_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LuchoImage_0
+      name: Fran_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 391
-        height: 340
+        x: 4
+        y: 3
+        width: 284
+        height: 284
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 488485eb86588a060800000000000000
-      internalID: 6964963508645021828
+      spriteID: 26dc00e921cd19b30800000000000000
+      internalID: 4292453892379168098
       vertices: []
       indices: 
       edges: []
@@ -130,8 +130,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      LuchoImage_0: 6964963508645021828
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

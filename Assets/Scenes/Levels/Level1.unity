@@ -6611,7 +6611,7 @@ PrefabInstance:
     - target: {fileID: 1685975306538887525, guid: bafb29fbee4c2a947ae07b0e5c0713dc, type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 11400000, guid: 224f678ede0fb5641b11d573d12eed36, type: 2}
+      objectReference: {fileID: 11400000, guid: a97458e626b12ca4ebe2f9aa426aaf6b, type: 2}
     - target: {fileID: 7517232045323999752, guid: bafb29fbee4c2a947ae07b0e5c0713dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

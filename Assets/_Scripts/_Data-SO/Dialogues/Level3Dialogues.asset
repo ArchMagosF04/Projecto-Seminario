@@ -20,8 +20,8 @@ MonoBehaviour:
     displaySide: 0
     typingSpeed: 0
     voiceSound:
-      ID: 0
-      _sourceAsset: {fileID: 0}
+      ID: 1073741841
+      _sourceAsset: {fileID: 11400000, guid: 5802d47db847d6b4d991b27d079f0e00, type: 2}
       <DebugObject>k__BackingField: {fileID: 0}
     autoProgressDialogue: 0
     autoProgressDelay: 0
@@ -32,8 +32,8 @@ MonoBehaviour:
     displaySide: 1
     typingSpeed: 0
     voiceSound:
-      ID: 0
-      _sourceAsset: {fileID: 0}
+      ID: 1073741844
+      _sourceAsset: {fileID: 11400000, guid: 5802d47db847d6b4d991b27d079f0e00, type: 2}
       <DebugObject>k__BackingField: {fileID: 0}
     autoProgressDialogue: 0
     autoProgressDelay: 0

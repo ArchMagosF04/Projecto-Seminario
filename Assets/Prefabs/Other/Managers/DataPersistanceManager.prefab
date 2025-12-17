@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disableDataPersistance: 0
   initializeDataIfNull: 1
-  overrideSelectedProfileId: 1
+  overrideSelectedProfileId: 0
   testSelectedProfileId: test
   fileName: neon_save.game
   useEncryption: 0

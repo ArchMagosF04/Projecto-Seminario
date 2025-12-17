@@ -83,7 +83,7 @@ public class BeatManager : MonoBehaviour
 
     private void Update()
     {
-        if (AudioSource == null || (!AudioSource.isPlaying && GameManager.Instance.IsGameActive)) FindTheAudioSource();
+        if (AudioSource == null || (!AudioSource.isPlaying && Time.timeScale == 1)) FindTheAudioSource();
         else if (AudioSource.isPlaying)
         {
             //BeatGracePeriod = intervals[0].BeatGrace;

@@ -10,21 +10,21 @@ public class WeaponHolster : MonoBehaviour, IDataPersistance
 
     private int selectedWeapon;
 
-    [SerializeField]private bool manualOverride;
-    [SerializeField] private int manualWeaponOverrideIndex;
+    //[SerializeField]private bool manualOverride;
+    //[SerializeField] private int manualWeaponOverrideIndex;
 
     public void LoadData(GameData gameData)
     {
-        if (!manualOverride)
-        {
+        //if (!manualOverride)
+        //{
             selectedWeapon = gameData.weaponSelected;
             OnWeaponLoaded(selectedWeapon);
-        }
-        else
-        {
-            selectedWeapon = manualWeaponOverrideIndex;
-            OnWeaponLoaded(selectedWeapon);
-        }
+        //}
+        //else
+        //{
+        //    selectedWeapon = manualWeaponOverrideIndex;
+        //    OnWeaponLoaded(selectedWeapon);
+        //}
        
     }
 

@@ -3234,45 +3234,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3843017530550968870, guid: aafb101d79c40594ba109612116af1b1, type: 3}
-      propertyPath: m_Size.y
-      value: 10.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3843017530550968870, guid: aafb101d79c40594ba109612116af1b1, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 8a337797f18e83449b640945058b2874, type: 3}
-    - target: {fileID: 3843017530550968870, guid: aafb101d79c40594ba109612116af1b1, type: 3}
-      propertyPath: m_SortingLayer
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3843017530550968870, guid: aafb101d79c40594ba109612116af1b1, type: 3}
-      propertyPath: m_SortingLayerID
-      value: -273383835
-      objectReference: {fileID: 0}
-    - target: {fileID: 3843017530550968870, guid: aafb101d79c40594ba109612116af1b1, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5464796038168594457, guid: aafb101d79c40594ba109612116af1b1, type: 3}
       propertyPath: m_Name
       value: Public
-      objectReference: {fileID: 0}
-    - target: {fileID: 5681811116601054717, guid: aafb101d79c40594ba109612116af1b1, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: d70ad1a0c45482543995384d41c83e92, type: 3}
-    - target: {fileID: 5681811116601054717, guid: aafb101d79c40594ba109612116af1b1, type: 3}
-      propertyPath: m_SortingLayer
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5681811116601054717, guid: aafb101d79c40594ba109612116af1b1, type: 3}
-      propertyPath: m_SortingLayerID
-      value: -273383835
-      objectReference: {fileID: 0}
-    - target: {fileID: 5681811116601054717, guid: aafb101d79c40594ba109612116af1b1, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6401,6 +6365,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5754732943847674404, guid: ba6ba94e26adb404daa8f9f93f7adbbb, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754732943847674404, guid: ba6ba94e26adb404daa8f9f93f7adbbb, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754732943847674404, guid: ba6ba94e26adb404daa8f9f93f7adbbb, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754732943847674404, guid: ba6ba94e26adb404daa8f9f93f7adbbb, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6243738131758482815, guid: ba6ba94e26adb404daa8f9f93f7adbbb, type: 3}
       propertyPath: OnAnimationFinished.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -6408,6 +6388,38 @@ PrefabInstance:
     - target: {fileID: 6857914956509050112, guid: ba6ba94e26adb404daa8f9f93f7adbbb, type: 3}
       propertyPath: m_Name
       value: WinScreenCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469480196958441576, guid: ba6ba94e26adb404daa8f9f93f7adbbb, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469480196958441576, guid: ba6ba94e26adb404daa8f9f93f7adbbb, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469480196958441576, guid: ba6ba94e26adb404daa8f9f93f7adbbb, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469480196958441576, guid: ba6ba94e26adb404daa8f9f93f7adbbb, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8107836122352986172, guid: ba6ba94e26adb404daa8f9f93f7adbbb, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8107836122352986172, guid: ba6ba94e26adb404daa8f9f93f7adbbb, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8107836122352986172, guid: ba6ba94e26adb404daa8f9f93f7adbbb, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8107836122352986172, guid: ba6ba94e26adb404daa8f9f93f7adbbb, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8286591552104473963, guid: ba6ba94e26adb404daa8f9f93f7adbbb, type: 3}
       propertyPath: timerText

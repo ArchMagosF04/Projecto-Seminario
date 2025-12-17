@@ -1,0 +1,1364 @@
+fileFormatVersion: 2
+guid: 1855c10dab30b3c49a4ab538cbf4f758
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1934816860879082755
+    second: AnittaDeathSheet_0
+  - first:
+      213: -8115545249513888373
+    second: AnittaDeathSheet_1
+  - first:
+      213: 2786779125308408255
+    second: AnittaDeathSheet_2
+  - first:
+      213: -3242286395230795469
+    second: AnittaDeathSheet_3
+  - first:
+      213: 8323310516069564461
+    second: AnittaDeathSheet_4
+  - first:
+      213: 2615784292006167315
+    second: AnittaDeathSheet_5
+  - first:
+      213: -1144440477071040399
+    second: AnittaDeathSheet_6
+  - first:
+      213: -8109543417288557553
+    second: AnittaDeathSheet_7
+  - first:
+      213: -8362770911883815431
+    second: AnittaDeathSheet_8
+  - first:
+      213: -4682217840244551424
+    second: AnittaDeathSheet_9
+  - first:
+      213: -4030342461799609287
+    second: AnittaDeathSheet_10
+  - first:
+      213: 1659265959161289503
+    second: AnittaDeathSheet_11
+  - first:
+      213: -2551988491173215775
+    second: AnittaDeathSheet_12
+  - first:
+      213: -4463844475001089104
+    second: AnittaDeathSheet_13
+  - first:
+      213: 7203993134875643309
+    second: AnittaDeathSheet_14
+  - first:
+      213: 1551566512524947235
+    second: AnittaDeathSheet_15
+  - first:
+      213: 3037274698510476037
+    second: AnittaDeathSheet_16
+  - first:
+      213: -1304274178473702293
+    second: AnittaDeathSheet_17
+  - first:
+      213: 8499718005854091319
+    second: AnittaDeathSheet_18
+  - first:
+      213: 312151066503082360
+    second: AnittaDeathSheet_19
+  - first:
+      213: 2437498528491707901
+    second: AnittaDeathSheet_20
+  - first:
+      213: -7749068666271217353
+    second: AnittaDeathSheet_21
+  - first:
+      213: -3988821760787284485
+    second: AnittaDeathSheet_22
+  - first:
+      213: 3039954219616839484
+    second: AnittaDeathSheet_23
+  - first:
+      213: -2008218141427422897
+    second: AnittaDeathSheet_24
+  - first:
+      213: 3372376961166106863
+    second: AnittaDeathSheet_25
+  - first:
+      213: 7237364032876633159
+    second: AnittaDeathSheet_26
+  - first:
+      213: -2335835719868917320
+    second: AnittaDeathSheet_27
+  - first:
+      213: 2506020609697565285
+    second: AnittaDeathSheet_28
+  - first:
+      213: -543794880140434700
+    second: AnittaDeathSheet_29
+  - first:
+      213: -2458813932680107984
+    second: AnittaDeathSheet_30
+  - first:
+      213: 6470861883335891819
+    second: AnittaDeathSheet_31
+  - first:
+      213: 2373131719312091869
+    second: AnittaDeathSheet_32
+  - first:
+      213: -4429848463557979888
+    second: AnittaDeathSheet_33
+  - first:
+      213: -8621011153480782003
+    second: AnittaDeathSheet_34
+  - first:
+      213: -382363575096172342
+    second: AnittaDeathSheet_35
+  - first:
+      213: 7371453572869713347
+    second: AnittaDeathSheet_36
+  - first:
+      213: 6461871112665228299
+    second: AnittaDeathSheet_37
+  - first:
+      213: -786210970069433046
+    second: AnittaDeathSheet_38
+  - first:
+      213: 2941908984362360640
+    second: AnittaDeathSheet_39
+  - first:
+      213: 4496536951023965831
+    second: AnittaDeathSheet_40
+  - first:
+      213: -1429409012088775109
+    second: AnittaDeathSheet_41
+  - first:
+      213: -756153322347289654
+    second: AnittaDeathSheet_42
+  - first:
+      213: -8652527066902642141
+    second: AnittaDeathSheet_43
+  - first:
+      213: 2155660320870872187
+    second: AnittaDeathSheet_44
+  - first:
+      213: -1797417136601939291
+    second: AnittaDeathSheet_45
+  - first:
+      213: 674996814434606774
+    second: AnittaDeathSheet_46
+  - first:
+      213: -7386495412381161466
+    second: AnittaDeathSheet_47
+  - first:
+      213: 1969760408905956499
+    second: AnittaDeathSheet_48
+  - first:
+      213: 8787270559247554213
+    second: AnittaDeathSheet_49
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: AnittaDeathSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2012
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2d3c08b3b5d5624782ce2c86b5193e3
+      internalID: -1482199772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnittaDeathSheet_1
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 2012
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a33e10849f73cec4386359c47f96efda
+      internalID: 821457643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnittaDeathSheet_2
+      rect:
+        serializedVersion: 2
+        x: 1018
+        y: 2012
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe5b08d0135fa974fb14b9cc7ceee86e
+      internalID: -1464157802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnittaDeathSheet_3
+      rect:
+        serializedVersion: 2
+        x: 1527
+        y: 2012
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69d738d3217e7cd4a8229deaa4eb6b2b
+      internalID: -1984251948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnittaDeathSheet_4
+      rect:
+        serializedVersion: 2
+        x: 2036
+        y: 2012
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e9246c5662441c49be56fdfa2b374a7
+      internalID: 1176456874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnittaDeathSheet_5
+      rect:
+        serializedVersion: 2
+        x: 2545
+        y: 2012
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5d75a2e54e57124b8d1093500cd7dd5
+      internalID: -1308292932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnittaDeathSheet_6
+      rect:
+        serializedVersion: 2
+        x: 3054
+        y: 2012
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 103bb0a2dc8740b469e1a43304ebc753
+      internalID: 78232222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnittaDeathSheet_7
+      rect:
+        serializedVersion: 2
+        x: 3563
+        y: 2012
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7540995bd1076de498dab380442f885f
+      internalID: 445487951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnittaDeathSheet_8
+      rect:
+        serializedVersion: 2
+        x: 4072
+        y: 2012
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faaa824d257e2c84db09ecf454cb10cd
+      internalID: -1287359483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnittaDeathSheet_9
+      rect:
+        serializedVersion: 2
+        x: 4581
+        y: 2012
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4759b001c81d3a47b42bed7481d911c
+      internalID: 1865976178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnittaDeathSheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1509
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41083815de35c7048aa27e640d8a453d
+      internalID: -1768324215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnittaDeathSheet_11
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 1509
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dc4c8168a6ee1f41af1a91a5115bd5b
+      internalID: 507477994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnittaDeathSheet_12
+      rect:
+        serializedVersion: 2
+        x: 1018
+        y: 1509
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c67d1ddba954a494fa486250ec69a8a2
+      internalID: -1363458493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnittaDeathSheet_13
+      rect:
+        serializedVersion: 2
+        x: 1527
+        y: 1509
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5b0271c193b8d04b9c548a545fa20b9
+      internalID: 661726755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnittaDeathSheet_14
+      rect:
+        serializedVersion: 2
+        x: 2036
+        y: 1509
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a8a127e60eb4cd4b8792c8727204d15
+      internalID: -872882069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnittaDeathSheet_15
+      rect:
+        serializedVersion: 2
+        x: 2545
+        y: 1509
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04d35d7063020ae408d19f3e49aa3c32
+      internalID: 138058994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnittaDeathSheet_16
+      rect:
+        serializedVersion: 2
+        x: 3054
+        y: 1509
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2da84c863b41ca04b99addb5e8364fe9
+      internalID: 848696904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnittaDeathSheet_17
+      rect:
+        serializedVersion: 2
+        x: 3563
+        y: 1509
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8de2aa05c3b6f984ea9c4cf15d3c9130
+      internalID: -620164793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnittaDeathSheet_18
+      rect:
+        serializedVersion: 2
+        x: 4072
+        y: 1509
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f91348a0494cd94cab59bae2b0fc870
+      internalID: -1843748694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnittaDeathSheet_19
+      rect:
+        serializedVersion: 2
+        x: 4581
+        y: 1509
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae5239908ca719b4aaae7b4f263bccb9
+      internalID: 1644733834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnittaDeathSheet_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1006
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 181a1718c69d8184a84dc7a7ce5f57ef
+      internalID: -582041129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnittaDeathSheet_21
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 1006
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c53c95c41e2e0dc47b7a7470eaa6e126
+      internalID: 1918235624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnittaDeathSheet_22
+      rect:
+        serializedVersion: 2
+        x: 1018
+        y: 1006
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e96b45ff84d07f74393ba468f487fac1
+      internalID: -902881810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnittaDeathSheet_23
+      rect:
+        serializedVersion: 2
+        x: 1527
+        y: 1006
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f78863c0a2426846993d8d0ee07c0a6
+      internalID: 1699989886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnittaDeathSheet_24
+      rect:
+        serializedVersion: 2
+        x: 2036
+        y: 1006
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a1914a2150b1144ea74e96f444a5e41
+      internalID: 184494771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnittaDeathSheet_25
+      rect:
+        serializedVersion: 2
+        x: 2545
+        y: 1006
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 079f834585b20054a9a43e1629083d8f
+      internalID: 761400760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnittaDeathSheet_26
+      rect:
+        serializedVersion: 2
+        x: 3054
+        y: 1006
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53b006b34e3d42a428a1a6a70626a0d0
+      internalID: 941383511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnittaDeathSheet_27
+      rect:
+        serializedVersion: 2
+        x: 3563
+        y: 1006
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af7e859aaf9f949478594e07ec84d9c5
+      internalID: 1734677293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnittaDeathSheet_28
+      rect:
+        serializedVersion: 2
+        x: 4072
+        y: 1006
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39e09f1a31fdac943b027b5ee1ae197a
+      internalID: 1714148709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnittaDeathSheet_29
+      rect:
+        serializedVersion: 2
+        x: 4581
+        y: 1006
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa97a40b73ab1e948b435d89b6875b4d
+      internalID: -849249410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnittaDeathSheet_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 503
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2f781f437e3ab844b90c86e33495217
+      internalID: 2077108646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnittaDeathSheet_31
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 503
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71e28accf68f1f84ab369d9e5ea59cc5
+      internalID: 1033408787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnittaDeathSheet_32
+      rect:
+        serializedVersion: 2
+        x: 1018
+        y: 503
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2232b904051592c44b52ac7f51e8dfac
+      internalID: 1975981131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnittaDeathSheet_33
+      rect:
+        serializedVersion: 2
+        x: 1527
+        y: 503
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46b657cfcb05c8a4a9a0cc3c6595f910
+      internalID: -737222980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnittaDeathSheet_34
+      rect:
+        serializedVersion: 2
+        x: 2036
+        y: 503
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c27009be057b1e94c899caa6d945107b
+      internalID: 1169942189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnittaDeathSheet_35
+      rect:
+        serializedVersion: 2
+        x: 2545
+        y: 503
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a832a37b10210004791795800f7a075f
+      internalID: -1321881728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnittaDeathSheet_36
+      rect:
+        serializedVersion: 2
+        x: 3054
+        y: 503
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fbf4080c7af7de469cfb826b025d08d
+      internalID: 1377721784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnittaDeathSheet_37
+      rect:
+        serializedVersion: 2
+        x: 3563
+        y: 503
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 522683a01d016dd408596fabf3e700b4
+      internalID: 2145712527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnittaDeathSheet_38
+      rect:
+        serializedVersion: 2
+        x: 4072
+        y: 503
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3abde709880f3a468a4475ecfd73735
+      internalID: -1792622568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnittaDeathSheet_39
+      rect:
+        serializedVersion: 2
+        x: 4581
+        y: 503
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b75df2a4bab9d342b2f643eecfa8c0a
+      internalID: 142969024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnittaDeathSheet_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 059cf2ea86aef0445bfd305718e9924a
+      internalID: -20560696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnittaDeathSheet_41
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 0
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27012c37bb039094998b0363bb70824e
+      internalID: 1295810287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnittaDeathSheet_42
+      rect:
+        serializedVersion: 2
+        x: 1018
+        y: 0
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08fecf6353a9ba54485b2c24af2c36b8
+      internalID: -295885109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnittaDeathSheet_43
+      rect:
+        serializedVersion: 2
+        x: 1527
+        y: 0
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d24b4bebfa9adb408fefe47b0f6de98
+      internalID: -748042640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnittaDeathSheet_44
+      rect:
+        serializedVersion: 2
+        x: 2036
+        y: 0
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0be3ce188065eab448c2ca69aca21476
+      internalID: 2038574502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnittaDeathSheet_45
+      rect:
+        serializedVersion: 2
+        x: 2545
+        y: 0
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fad1c5fcc68345b498d27d6fbf431851
+      internalID: -1435308103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnittaDeathSheet_46
+      rect:
+        serializedVersion: 2
+        x: 3054
+        y: 0
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55c7b2399dc25c14d888eb900379075b
+      internalID: -1005759215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnittaDeathSheet_47
+      rect:
+        serializedVersion: 2
+        x: 3563
+        y: 0
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 348fb6c5aa8bcad4a8733441212c01dc
+      internalID: -997227755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnittaDeathSheet_48
+      rect:
+        serializedVersion: 2
+        x: 4072
+        y: 0
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfd1d0828dfcdcc4b95c594ae271a2b1
+      internalID: 1664069808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnittaDeathSheet_49
+      rect:
+        serializedVersion: 2
+        x: 4581
+        y: 0
+        width: 509
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cd5f668fba1e974faad3bd38f33cd43
+      internalID: -383335097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: be3c3b531f9942e4e8acfd320a3221fa
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      AnittaDeathSheet_0: -1482199772
+      AnittaDeathSheet_1: 821457643
+      AnittaDeathSheet_10: -1768324215
+      AnittaDeathSheet_11: 507477994
+      AnittaDeathSheet_12: -1363458493
+      AnittaDeathSheet_13: 661726755
+      AnittaDeathSheet_14: -872882069
+      AnittaDeathSheet_15: 138058994
+      AnittaDeathSheet_16: 848696904
+      AnittaDeathSheet_17: -620164793
+      AnittaDeathSheet_18: -1843748694
+      AnittaDeathSheet_19: 1644733834
+      AnittaDeathSheet_2: -1464157802
+      AnittaDeathSheet_20: -582041129
+      AnittaDeathSheet_21: 1918235624
+      AnittaDeathSheet_22: -902881810
+      AnittaDeathSheet_23: 1699989886
+      AnittaDeathSheet_24: 184494771
+      AnittaDeathSheet_25: 761400760
+      AnittaDeathSheet_26: 941383511
+      AnittaDeathSheet_27: 1734677293
+      AnittaDeathSheet_28: 1714148709
+      AnittaDeathSheet_29: -849249410
+      AnittaDeathSheet_3: -1984251948
+      AnittaDeathSheet_30: 2077108646
+      AnittaDeathSheet_31: 1033408787
+      AnittaDeathSheet_32: 1975981131
+      AnittaDeathSheet_33: -737222980
+      AnittaDeathSheet_34: 1169942189
+      AnittaDeathSheet_35: -1321881728
+      AnittaDeathSheet_36: 1377721784
+      AnittaDeathSheet_37: 2145712527
+      AnittaDeathSheet_38: -1792622568
+      AnittaDeathSheet_39: 142969024
+      AnittaDeathSheet_4: 1176456874
+      AnittaDeathSheet_40: -20560696
+      AnittaDeathSheet_41: 1295810287
+      AnittaDeathSheet_42: -295885109
+      AnittaDeathSheet_43: -748042640
+      AnittaDeathSheet_44: 2038574502
+      AnittaDeathSheet_45: -1435308103
+      AnittaDeathSheet_46: -1005759215
+      AnittaDeathSheet_47: -997227755
+      AnittaDeathSheet_48: 1664069808
+      AnittaDeathSheet_49: -383335097
+      AnittaDeathSheet_5: -1308292932
+      AnittaDeathSheet_6: 78232222
+      AnittaDeathSheet_7: 445487951
+      AnittaDeathSheet_8: -1287359483
+      AnittaDeathSheet_9: 1865976178
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -6543,6 +6543,10 @@ PrefabInstance:
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 362252189}
+    - target: {fileID: 1685975306538887525, guid: bafb29fbee4c2a947ae07b0e5c0713dc, type: 3}
+      propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 11400000, guid: 74729dc2eaefb2f45a4f482654f122db, type: 2}
     - target: {fileID: 7517232045323999752, guid: bafb29fbee4c2a947ae07b0e5c0713dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

@@ -25,6 +25,11 @@ public class BeatComboCounter : MonoBehaviour
     {
         core = GetComponentInChildren<Core>();
         health = core.GetCoreComponent<Core_Health>();
+
+        foreach (StyleRank rank in styleRanks)
+        {
+            Debug.Log(rank.rankDamageMultiplier);
+        }
     }
 
     private void OnEnable()
@@ -122,5 +127,10 @@ public class BeatComboCounter : MonoBehaviour
         timeUntilDecay -= Time.deltaTime;
 
         if (timeUntilDecay <= 0) OnTimerDecay();
+    }
+
+    public float GetDamageMultiplier()
+    {
+        return currentRank.rankDamageMultiplier;
     }
 }

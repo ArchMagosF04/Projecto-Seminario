@@ -93,6 +93,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manaBar: {fileID: 0}
+  microBar: {fileID: 0}
   maxMana: 100
   manaGainSound:
     ID: 0
@@ -843,7 +844,7 @@ MonoBehaviour:
   styleRanks:
   - rankName: No Rank
     rankThreshold: 0
-    rankDamageMultiplier: 0
+    rankDamageMultiplier: 1.01
     beatsForRankDecay: 30
     rankColor: {r: 1, g: 1, b: 1, a: 0}
   - rankName: Decent

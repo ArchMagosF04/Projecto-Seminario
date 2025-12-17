@@ -70,6 +70,8 @@ public class PlayerWeapon : MonoBehaviour
         OnBasicEnter?.Invoke();
 
         anim.SetBool("Active", true);
+
+        Debug.Log("Beat Combo Multiplier: " + beatCombo.GetDamageMultiplier());
     }
 
     public virtual void ExecuteSpecialAttack()

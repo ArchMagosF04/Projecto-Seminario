@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <UseWeaponOnReleaseInput>k__BackingField: 1
-  damageMultOnMiss: 0.2
+  damageMultOnMiss: 0.25
   speedMultOnMiss: 0.5
   beatsFor2ndCharge: 2
   beatsFor3rdCharge: 5

@@ -72,6 +72,8 @@ public class Core_Health : CoreComponent
 
         CurrentHealth = MathF.Round(CurrentHealth - amount);
 
+        Debug.Log(CurrentHealth, this);
+
         OnDamageReceived?.Invoke();
         OnDamageReceivedUN?.Invoke();
 

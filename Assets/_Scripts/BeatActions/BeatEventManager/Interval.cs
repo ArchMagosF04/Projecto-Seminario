@@ -37,8 +37,12 @@ public class Interval
         if (Mathf.FloorToInt(interval) != lastInterval)
         {
             lastInterval = Mathf.FloorToInt(interval);
-            OnBeatEvent?.Invoke();
-            unityTrigger?.Invoke();
+
+            if (Time.timeScale == 1)
+            {
+                OnBeatEvent?.Invoke();
+                unityTrigger?.Invoke();
+            }
         }
 
         if (BeatGrace && interval - lastInterval > 0f + (gracePeriod * steps) / 2)

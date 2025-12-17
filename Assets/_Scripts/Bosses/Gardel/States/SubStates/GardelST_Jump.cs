@@ -1,3 +1,4 @@
+using Ami.BroAudio;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,7 +19,7 @@ public class GardelST_Jump : GardelState
     {
         base.OnEnter();
 
-        //controller.PlaySound("Jump");
+        if (controller.JumpSound.IsValid()) BroAudio.Play(controller.JumpSound);
         PerformJump();
     }
 

@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GardelController : MonoBehaviour
 {
@@ -44,6 +45,11 @@ public class GardelController : MonoBehaviour
     [field: SerializeField] public SoundID NormalAttackSound { get; private set; }
     [field: SerializeField] public SoundID SpecialAttackSound { get; private set; }
     [field: SerializeField] public SoundID JumpSound { get; private set; }
+    [field: SerializeField] public SoundID StunAttackSound { get; private set; }
+    [field: SerializeField] public SoundID PrepStunAttackSound { get; private set; }
+
+    [Header("Other Components")]
+    [SerializeField] private Image bossAttackIndicator;
 
     #endregion
 
@@ -70,6 +76,7 @@ public class GardelController : MonoBehaviour
         anim.SetFloat("BeatSpeedMult", BeatManager.Instance.BeatSpeedMultiplier);
 
         animatorEvent = GetComponentInChildren<CharacterAnimatorEvent>();
+        ToggleBossAttackIndicator(false);
 
         StateMachine = new StateMachine();
         IdleState = new GardelST_Idle(this, StateMachine, gardelStats, anim, "Idle");
@@ -189,6 +196,11 @@ public class GardelController : MonoBehaviour
     public void SpawnDeathParticle()
     {
         ParticleSystem system = Instantiate(deathParticles, transform.position, Quaternion.identity);
+    }
+
+    public void ToggleBossAttackIndicator(bool input)
+    {
+        bossAttackIndicator.gameObject.SetActive(input);
     }
 
     #endregion

@@ -1,3 +1,4 @@
+using Ami.BroAudio;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,9 +15,11 @@ public class GardelST_StunAttack : GardelState
     {
         base.OnEnter();
 
-        //controller.PlaySound("StunPrepare");
+        if (controller.PrepStunAttackSound.IsValid()) BroAudio.Play(controller.PrepStunAttackSound);
 
         beatTimer = 0;
+
+        controller.ToggleBossAttackIndicator(true);
 
         BeatManager.Instance.intervals[0].OnBeatEvent += BeatTimer;
     }
@@ -43,7 +46,8 @@ public class GardelST_StunAttack : GardelState
         {
             anim.SetTrigger("StunAttackBeat");
 
-            //controller.PlaySound("Stomp");
+            controller.ToggleBossAttackIndicator(false);
+            if (controller.StunAttackSound.IsValid()) BroAudio.Play(controller.StunAttackSound);
             controller.StunningShout();
 
             BeatManager.Instance.intervals[0].OnBeatEvent -= BeatTimer;

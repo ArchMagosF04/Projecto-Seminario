@@ -1,3 +1,4 @@
+using Ami.BroAudio;
 using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
@@ -11,6 +12,7 @@ public class AnittaController : MonoBehaviour
     public AnittaST_Teleport TeleportState { get; private set; }
     public AnittaST_NormalAttack NormalAttackState { get; private set; }
     public AnittaST_SpecialAttack SpecialAttackState { get; private set; }
+    public AnittaST_Death DeathState { get; private set; }
     #endregion
 
     #region Component References
@@ -18,6 +20,7 @@ public class AnittaController : MonoBehaviour
 
     private Core_Health health;
     private Core_Movement movement;
+    public Core_Movement Movement { get; private set; }
     private Animator anim;
     private CharacterAnimatorEvent animatorEvent;
     private CinemachineImpulseSource impulseSource;
@@ -33,6 +36,12 @@ public class AnittaController : MonoBehaviour
     [field: SerializeField] public Transform[] PlatformsTransforms {  get; private set; }
     [field: SerializeField] public PushPlatform[] PushPlatforms { get; private set; }
     [field: SerializeField] private GameObject Cars;
+
+    [field: Header("Sounds")]
+    [field: SerializeField] public SoundID DeathSound { get; private set; }
+    [field: SerializeField] public SoundID NormalAttackSound { get; private set; }
+    [field: SerializeField] public SoundID SpecialAttackSound { get; private set; }
+    [field: SerializeField] public SoundID TeleportSound { get; private set; }
 
     #endregion
 
@@ -66,6 +75,7 @@ public class AnittaController : MonoBehaviour
         TeleportState = new AnittaST_Teleport(this, StateMachine, anittaStats, anim, "Teleport");
         NormalAttackState = new AnittaST_NormalAttack(this, StateMachine, anittaStats, anim, "NormalAttack");
         SpecialAttackState = new AnittaST_SpecialAttack(this, StateMachine, anittaStats, anim, "SpecialAttack");
+        DeathState = new AnittaST_Death(this, StateMachine, anittaStats, anim, "Death");
     }
 
     private void Start()

@@ -5,6 +5,8 @@ using UnityEngine;
 public class SaxophoneExplosion : MonoBehaviour
 {
     [SerializeField] private int comboGainOnExplosion = 2;
+    [SerializeField] private float explosionRadius;
+    [SerializeField] private LayerMask enemyMask;
 
     private float explosionDamage;
     private float manaOnHit;
@@ -38,23 +40,38 @@ public class SaxophoneExplosion : MonoBehaviour
         this.manaOnHit = manaOnHit;
         this.explosionDamage = explosionDamage;
         this.beatCombo = beatCombo;
+
+        ExplosionCollision();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+
+    private void ExplosionCollision()
     {
-        if (collision.TryGetComponent(out Core_Health damageable))
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius, enemyMask);
+
+        foreach (Collider2D col in colliders)
         {
-            beatCombo.IncreaseComboCounter(comboGainOnExplosion);
-            manaComponent.IncreaseMana(manaOnHit);
+            if (col.TryGetComponent(out Core_Health damageable))
+            {
+                beatCombo.IncreaseComboCounter(comboGainOnExplosion);
+                manaComponent.IncreaseMana(manaOnHit);
 
-            Vector3 attackDirection = collision.transform.position.x >= transform.position.x ? Vector3.right : Vector3.left;
+                Vector3 attackDirection = col.transform.position.x >= transform.position.x ? Vector3.right : Vector3.left;
 
-            damageable.TakeDamage(explosionDamage * beatCombo.GetDamageMultiplier(), attackDirection);
+                damageable.TakeDamage(explosionDamage * beatCombo.GetDamageMultiplier(), attackDirection);
+            }
         }
     }
 
     public void DestroyProjectile()
     {
         Destroy(gameObject);
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.cyan;
+
+        Gizmos.DrawWireSphere(transform.position, explosionRadius);
     }
 }

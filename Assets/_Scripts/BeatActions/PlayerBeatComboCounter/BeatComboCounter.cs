@@ -7,7 +7,8 @@ using UnityEngine.UI;
 public class BeatComboCounter : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI counterTextBox;
-    [SerializeField] private Image timerImage;
+    [SerializeField] private Image rankIndicatorImage;
+    [SerializeField] private SquashAndStretch comboIncreaseImage;
     [SerializeField] private StyleRank[] styleRanks;
 
     public StyleRank currentRank { get; private set; }
@@ -20,6 +21,8 @@ public class BeatComboCounter : MonoBehaviour
 
     private float timeUntilDecay;
     private float rankDuration;
+
+    private Color workColor;
 
     private void Awake()
     {
@@ -51,10 +54,11 @@ public class BeatComboCounter : MonoBehaviour
         currentRankIndex = 0;
         currentRank = styleRanks[0];
 
-        if (timerImage != null)
+        if (rankIndicatorImage != null)
         {
-            timerImage.fillAmount = 1f;
-            timerImage.color = currentRank.rankColor;
+            workColor = currentRank.rankColor;
+            workColor.a = 1;
+            rankIndicatorImage.color = workColor;
         }
         if (counterTextBox != null) counterTextBox.text = beatComboCounter.ToString();
 
@@ -64,13 +68,19 @@ public class BeatComboCounter : MonoBehaviour
     private void Update()
     {
         ProgressTimer();
-        if (timerImage != null) timerImage.fillAmount = Mathf.Clamp01( timeUntilDecay / rankDuration);
+        if (rankIndicatorImage != null)
+        {
+            workColor = rankIndicatorImage.color;
+            workColor.a = timeUntilDecay / rankDuration;
+            rankIndicatorImage.color = workColor;
+        }
     }
 
     [ContextMenu("Test Combo Increase")]
     public void IncreaseComboCounter(int amount)
     {
         beatComboCounter += amount;
+        comboIncreaseImage.PlaySquashAndStretch();
         if(MaxCombo < beatComboCounter) { MaxCombo = beatComboCounter; }
         if (counterTextBox != null) counterTextBox.text = beatComboCounter.ToString();
 
@@ -88,10 +98,11 @@ public class BeatComboCounter : MonoBehaviour
     public void ResetDecayTimer()
     {
         timeUntilDecay = GetRankDuration(currentRank);
-        if (timerImage != null)
+        if (rankIndicatorImage != null)
         {
-            timerImage.fillAmount = 1f;
-            timerImage.color = currentRank.rankColor;
+            workColor = currentRank.rankColor;
+            workColor.a = 1;
+            rankIndicatorImage.color = workColor;
         }
     }
 

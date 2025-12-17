@@ -49,6 +49,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   comboGainOnExplosion: 0
+  explosionRadius: 4.7
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!58 &2955522121771223657
 CircleCollider2D:
   m_ObjectHideFlags: 0

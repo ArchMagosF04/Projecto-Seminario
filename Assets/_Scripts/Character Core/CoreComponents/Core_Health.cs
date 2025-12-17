@@ -100,7 +100,7 @@ public class Core_Health : CoreComponent
         }
 
         if (healthBar != null) healthBar.fillAmount = CurrentHealth / maxHealth;
-        if (microBar != null) microBar.UpdateBar(CurrentHealth);
+        if (microBar != null) microBar.UpdateBar(CurrentHealth, UpdateAnim.Damage);
 
         if (hasIFrames)
         {
@@ -119,7 +119,7 @@ public class Core_Health : CoreComponent
         if (CurrentHealth > maxHealth) CurrentHealth = maxHealth;
 
         if (healthBar != null) healthBar.fillAmount = CurrentHealth / maxHealth;
-        if (microBar != null) microBar.UpdateBar(CurrentHealth);
+        if (microBar != null) microBar.UpdateBar(CurrentHealth, UpdateAnim.Heal);
         //if (healthNumber != null) healthNumber.text = $"{currentHealth} / {maxHealth}";
     }
 

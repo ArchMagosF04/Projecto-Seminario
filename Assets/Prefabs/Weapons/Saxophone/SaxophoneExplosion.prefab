@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1894512460707833543}
   - component: {fileID: 1299956898822333465}
-  - component: {fileID: 3950317476756651091}
   - component: {fileID: 12673720562144734}
   - component: {fileID: 2352578112389878647}
   - component: {fileID: 5704927425555688794}
@@ -49,42 +48,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   comboGainOnExplosion: 2
---- !u!58 &3950317476756651091
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1951541415280879398}
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
+  explosionRadius: 2.1
+  enemyMask:
     serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 5.98
+    m_Bits: 256
 --- !u!212 &12673720562144734
 SpriteRenderer:
   m_ObjectHideFlags: 0

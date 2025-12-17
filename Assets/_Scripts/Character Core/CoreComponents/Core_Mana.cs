@@ -32,6 +32,7 @@ public class Core_Mana : CoreComponent
 
     private void Start()
     {
+        if (microBar != null) microBar.UpdateBar(0);
         UseMana();
     }
 

@@ -1236,9 +1236,17 @@ PrefabInstance:
       propertyPath: <intervals>k__BackingField.Array.data[5].gracePeriod
       value: 0.8
       objectReference: {fileID: 0}
+    - target: {fileID: 914642190259080334, guid: ddeb496be39be6a40aa2ffafae74c100, type: 3}
+      propertyPath: <intervals>k__BackingField.Array.data[0].unityTrigger.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1967151457963190803, guid: ddeb496be39be6a40aa2ffafae74c100, type: 3}
       propertyPath: m_Name
       value: BeatManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867459933963513385, guid: ddeb496be39be6a40aa2ffafae74c100, type: 3}
+      propertyPath: _sound.ID
+      value: 268435465
       objectReference: {fileID: 0}
     - target: {fileID: 3621172991738373037, guid: ddeb496be39be6a40aa2ffafae74c100, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6218,6 +6226,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1467089592}
   - component: {fileID: 1467089593}
+  - component: {fileID: 1467089594}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -6262,7 +6271,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 2c010103f5a6afc4fb221fb21353de45, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6294,6 +6303,47 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1467089594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467089591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfa51207376062c4d9d722ae4dbd8c77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashColor:
+  - {r: 1, g: 1, b: 1, a: 1}
+  flashTime: 0.25
+  flashSpeedCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: -4
+      outSlope: -4
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.25
+      value: 0
+      inSlope: -4
+      outSlope: -4
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spriteRenderers:
+  - {fileID: 1467089593}
 --- !u!1 &1469530113
 GameObject:
   m_ObjectHideFlags: 0
@@ -8249,7 +8299,7 @@ MonoBehaviour:
   maxHealth: 9999999
   hasIFrames: 0
   iFramesDuration: 0
-  damageParticles: {fileID: 0}
+  damageParticles: {fileID: 7233778717429442434, guid: b862ed757906f6f4bb83bb89c09b1105, type: 3}
   damageSound:
     ID: 0
     _sourceAsset: {fileID: 0}
@@ -8259,7 +8309,19 @@ MonoBehaviour:
       m_Calls: []
   OnDamageReceivedUN:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1467089594}
+        m_TargetAssemblyTypeName: SpriteFlash, Assembly-CSharp
+        m_MethodName: CallSpriteFlash
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnInvincibleHitUN:
     m_PersistentCalls:
       m_Calls: []
@@ -9010,7 +9072,31 @@ MonoBehaviour:
   IsMenuOpen: 0
   OnPageOpen:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8561588152016319786}
+        m_TargetAssemblyTypeName: TutorialStars, Assembly-CSharp
+        m_MethodName: CalculateResults
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8561588152016319786}
+        m_TargetAssemblyTypeName: TutorialStars, Assembly-CSharp
+        m_MethodName: ShowStars
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnPageClose:
     m_PersistentCalls:
       m_Calls: []
@@ -9077,6 +9163,7 @@ GameObject:
   - component: {fileID: 678606058343295747}
   - component: {fileID: 8561588152016319785}
   - component: {fileID: 1633372594854747213}
+  - component: {fileID: 8561588152016319786}
   m_Layer: 0
   m_Name: WinScreenCanvas
   m_TagString: Untagged
@@ -9859,7 +9946,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1687909699320083565, guid: 8e1027bb0e43ba8488f684c185934af9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.31
+      value: -4.608
       objectReference: {fileID: 0}
     - target: {fileID: 1687909699320083565, guid: 8e1027bb0e43ba8488f684c185934af9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10669,6 +10756,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &8561588152016319786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2395347439391437041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f17ecef64177294f8f0b52878882a2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unlockedStar: {fileID: 6749254682318237826}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

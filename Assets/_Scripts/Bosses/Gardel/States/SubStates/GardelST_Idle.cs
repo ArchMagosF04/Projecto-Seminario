@@ -44,6 +44,8 @@ public class GardelST_Idle : GardelState
 
     private void BeatTimer()
     {
+        if (!GameManager.Instance.IsGameActive) return;
+
         beatTimer++;
 
         anim.SetTrigger("OnBeat");

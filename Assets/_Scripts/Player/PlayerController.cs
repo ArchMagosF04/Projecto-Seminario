@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     public PlayerST_PrimeAttack PrimaryAttackState { get; private set; }
     public PlayerST_SecAttack SecondaryAttackState { get; private set; }
     public PlayerST_Stun StunState { get; private set; }
+    public PlayerST_Death DeathState { get; private set; }
 
     #endregion
 
@@ -44,6 +45,8 @@ public class PlayerController : MonoBehaviour
 
     private Core_CollisionSenses collisionSenses;
     private CharacterAnimatorEvent animatorEvent;
+    private Core_Movement movement;
+    private Core_Health health;
 
     [field: Header("Sounds")]
     [field: SerializeField] public SoundID JumpSound { get; private set; }
@@ -78,6 +81,8 @@ public class PlayerController : MonoBehaviour
         Anim = GetComponentInChildren<Animator>();
         playerSprite = GetComponentInChildren<SpriteRenderer>();
         collisionSenses = Core.GetCoreComponent<Core_CollisionSenses>();
+        movement = Core.GetCoreComponent<Core_Movement>();
+        health = Core.GetCoreComponent<Core_Health>();
         animatorEvent = GetComponentInChildren<CharacterAnimatorEvent>();
         AfterImageController = GetComponentInChildren<AfterImage>();
 
@@ -92,6 +97,7 @@ public class PlayerController : MonoBehaviour
         //PrimaryAttackState = new PlayerST_PrimeAttack(this, playerData, StateMachine, Anim, "PrimeAttack", weapon);
         //SecondaryAttackState = new PlayerST_SecAttack(this, playerData, StateMachine, Anim, "SecAttack", weapon);
         StunState = new PlayerST_Stun(this, playerData, StateMachine, Anim, "Stun");
+        DeathState = new PlayerST_Death(this, playerData, StateMachine, Anim, "Death");
     }
 
     private void Start()
@@ -103,6 +109,7 @@ public class PlayerController : MonoBehaviour
         animatorEvent.OnAnimationFinishedTrigger += AnimationFinishedTrigger;
         PrimaryAttackState = new PlayerST_PrimeAttack(this, playerData, StateMachine, Anim, "PrimeAttack", weapon);
         SecondaryAttackState = new PlayerST_SecAttack(this, playerData, StateMachine, Anim, "SecAttack", weapon);
+        health.OnDeath += ChangeToDeathState;
     }
 
     private void Update()
@@ -115,7 +122,11 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!GameManager.Instance.IsGameActive) return;
+        if (!GameManager.Instance.IsGameActive)
+        {
+            movement.SetVelocityX(0);
+            return;
+        }
 
         StateMachine.CurrentState.OnFixedUpdate();
     }
@@ -132,8 +143,10 @@ public class PlayerController : MonoBehaviour
         PrimaryAttackState.UnsubscribeToEvents();
         SecondaryAttackState.UnsubscribeToEvents();
         StunState.UnsubscribeToEvents();
+        DeathState.UnsubscribeToEvents();
         Core_Mana.ManaIsFull -= EnergyFullAnimation;
         animatorEvent.OnAnimationFinishedTrigger -= AnimationFinishedTrigger;
+        health.OnDeath -= ChangeToDeathState;
     }
 
     #endregion
@@ -197,6 +210,11 @@ public class PlayerController : MonoBehaviour
     {
         DoubleJumpParticles.transform.position = new Vector3(transform.position.x, transform.position.y - 1.1f, transform.position.z);
         DoubleJumpParticles.Play();
+    }
+
+    private void ChangeToDeathState()
+    {
+        StateMachine.ChangeState(DeathState);
     }
 
     #endregion

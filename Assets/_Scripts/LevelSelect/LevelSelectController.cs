@@ -13,6 +13,10 @@ public class LevelSelectController : MonoBehaviour, IDataPersistance
     [Header("Marker Settings")]
     [SerializeField] private Selectable[] levelMarkers;
 
+    [Header("Level Names")]
+    [SerializeField] private string[] levelNames;
+    [SerializeField] private GameObject[] levelSprites;
+
     [Header("Menus")]
     [SerializeField] private MenuPage weaponSelectorCanvas;
 
@@ -27,15 +31,27 @@ public class LevelSelectController : MonoBehaviour, IDataPersistance
     private bool isPopUpOpen;
     private bool isAnyMenuOpen;
 
+    private bool lv1Unlocked;
+    private bool lv2Unlocked;
+    private bool lv3Unlocked;
+
     private void Awake()
     {
         eventSystem = FindFirstObjectByType<EventSystem>();
         isAnyMenuOpen = false;
+        foreach (GameObject sprite in levelSprites) sprite.SetActive(false);
     }
 
     private void Start()
     {
         SelectButtonMarker();
+
+        if (!lv1Unlocked) levelMarkers[1].interactable = false;
+        else levelSprites[0].SetActive(true);
+        if (!lv2Unlocked) levelMarkers[2].interactable = false;
+        else levelSprites[1].SetActive(true);
+        if (!lv3Unlocked) levelMarkers[3].interactable = false;
+        else levelSprites[2].SetActive(true);
     }
 
     public void OnReturnToMainMenuInput()
@@ -109,9 +125,17 @@ public class LevelSelectController : MonoBehaviour, IDataPersistance
         SelectButtonMarker();
     }
 
+    public void PlaySelectedLevel()
+    {
+        AsyncSceneLoader.Instance.LoadLevel(levelNames[currentSelectedLevel]);
+    }
+
     public void LoadData(GameData gameData)
     {
         currentSelectedLevel = gameData.lastLevelSelected;
+        lv1Unlocked = gameData.unlocked1stLevel;
+        lv2Unlocked = gameData.unlocked2ndLevel;
+        lv3Unlocked = gameData.unlocked3rdLevel;
     }
 
     public void SaveData(GameData gameData)

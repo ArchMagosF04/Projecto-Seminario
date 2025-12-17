@@ -198,7 +198,7 @@ public class PW_Accordion : PlayerWeapon
 
         if (isOnBeat)
         {
-            dmgMultiplier = beatCombo.currentRank.rankDamageMultiplier;
+            dmgMultiplier = beatCombo.GetDamageMultiplier();
             speedMult = 1;
         }
 
@@ -218,7 +218,7 @@ public class PW_Accordion : PlayerWeapon
 
         if (isOnBeat)
         {
-            dmgMultiplier = beatCombo.currentRank.rankDamageMultiplier;
+            dmgMultiplier = beatCombo.GetDamageMultiplier();
             speedMult = 1;
         }
 
@@ -239,7 +239,7 @@ public class PW_Accordion : PlayerWeapon
 
         if (isOnBeat)
         {
-            dmgMultiplier = beatCombo.currentRank.rankDamageMultiplier;
+            dmgMultiplier = beatCombo.GetDamageMultiplier();
             speedMult = 1;
         }
 

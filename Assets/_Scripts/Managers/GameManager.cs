@@ -10,6 +10,10 @@ public class GameManager : MonoBehaviour
 
     [field: SerializeField] public bool IsGameActive { get; private set; }
 
+    [Header("Game End Screens")]
+    [SerializeField] private MenuPage winScreen;
+    [SerializeField] private MenuPage loseScreen;
+
     private void Awake()
     {
         if (Instance == null)
@@ -24,4 +28,24 @@ public class GameManager : MonoBehaviour
     }
 
     public void ToggleGameActiveState(bool state) => IsGameActive = state;
+
+    public void OnGameWon()
+    {
+        Debug.Log("GAME WON");
+        GameEnd();
+        winScreen.OpenMenu();
+    }
+
+    public void OnGameLost()
+    {
+        Debug.Log("GAME LOST");
+        GameEnd();
+        loseScreen.OpenMenu();
+    }
+
+    private void GameEnd()
+    {
+        IsGameActive = false;
+        BeatManager.Instance.ToggleMusic(false);
+    }
 }

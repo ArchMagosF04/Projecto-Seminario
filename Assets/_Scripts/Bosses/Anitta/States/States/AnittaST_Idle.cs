@@ -59,6 +59,8 @@ public class AnittaST_Idle : AnittaState
 
     private void BeatTimer()
     {
+        if (!GameManager.Instance.IsGameActive) return;
+
         beatTimer++;
 
         anim.SetTrigger("IdleBeat");

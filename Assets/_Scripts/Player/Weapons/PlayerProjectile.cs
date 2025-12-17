@@ -1,4 +1,5 @@
 using Cinemachine;
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -61,7 +62,9 @@ public class PlayerProjectile : MonoBehaviour
 
         if (collision.TryGetComponent(out Core_Health health))
         {
-            health.TakeDamage(damage, transform.right);
+            Vector3 attackDirection = collision.transform.position.x >= transform.position.x ? Vector3.right : Vector3.left;
+
+            health.TakeDamage(damage, attackDirection);
 
             if (isOnBeat)
             {

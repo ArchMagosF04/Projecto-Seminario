@@ -362,17 +362,6 @@
                 },
                 {
                     "name": "",
-                    "id": "e28ee877-599d-49e8-9439-a3b1b16f8e05",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "Continue",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "0dead2eb-cd50-43a4-8768-6f0a63c857a3",
                     "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
@@ -395,22 +384,22 @@
                 },
                 {
                     "name": "",
-                    "id": "fc130f9f-7397-48d2-a26b-5e2e5da53b2a",
-                    "path": "<Keyboard>/escape",
+                    "id": "867ffe69-9412-4c2a-9f9d-e3d7ff3d37c8",
+                    "path": "<Gamepad>/start",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard&Mouse",
+                    "groups": "Gamepad",
                     "action": "Skip",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "867ffe69-9412-4c2a-9f9d-e3d7ff3d37c8",
-                    "path": "<Gamepad>/start",
+                    "id": "fc130f9f-7397-48d2-a26b-5e2e5da53b2a",
+                    "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Gamepad",
+                    "groups": "Keyboard&Mouse",
                     "action": "Skip",
                     "isComposite": false,
                     "isPartOfComposite": false

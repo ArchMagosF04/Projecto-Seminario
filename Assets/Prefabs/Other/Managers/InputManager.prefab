@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1468763482514206735}
   - component: {fileID: 1580414088196275140}
   - component: {fileID: 8281930797510207628}
+  - component: {fileID: 5392762783648515520}
   m_Layer: 0
   m_Name: InputManager
   m_TagString: Untagged
@@ -172,11 +173,35 @@ MonoBehaviour:
     m_ActionId: 7bcf6af8-4ba6-44e9-9ee5-fbb3acf65108
     m_ActionName: 'Player/Pause[/Keyboard/escape]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5392762783648515520}
+        m_TargetAssemblyTypeName: DialogueInputManager, Assembly-CSharp
+        m_MethodName: OnNextDialogueInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: e45505eb-3939-4f5b-a956-1b17e7159338
     m_ActionName: 'Dialogue/Continue[/Keyboard/space,/Mouse/leftButton]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5392762783648515520}
+        m_TargetAssemblyTypeName: DialogueInputManager, Assembly-CSharp
+        m_MethodName: OnSkipDialogueInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 1ab58af4-32e2-4b9e-a320-ed6dc319798f
     m_ActionName: 'Dialogue/Skip[/Keyboard/enter,/Keyboard/escape]'
   - m_PersistentCalls:
@@ -300,31 +325,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnCancel:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PauseMenuController, Assembly-CSharp
-        m_MethodName: GoToPreviousMenu
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   OnResume:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PauseMenuController, Assembly-CSharp
-        m_MethodName: ClosePauseMenu
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &5392762783648515520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501951628699219333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 863488ab4a7d94d4d83d36c493f12b22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

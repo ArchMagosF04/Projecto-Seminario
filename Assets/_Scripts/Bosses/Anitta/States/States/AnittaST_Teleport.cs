@@ -34,6 +34,8 @@ public class AnittaST_Teleport : AnittaState
 
     private void BeatCounter()
     {
+        if (!GameManager.Instance.IsGameActive) return;
+
         beatTimer++;
 
         if (beatTimer >= stats.BeatsBeforeReappearance)

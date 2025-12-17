@@ -62,6 +62,6 @@ Material:
     - _PannerSpeed: 0.2
     m_Colors:
     - _FlashColor: {r: 2, g: 2, b: 2, a: 0}
-    - _HologramColor: {r: 0.89002126, g: 3.0840285, b: 3.9533496, a: 0}
+    - _HologramColor: {r: 0.67450994, g: 2.3372564, b: 2.9960785, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

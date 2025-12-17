@@ -1,0 +1,266 @@
+fileFormatVersion: 2
+guid: ddd4ea25dee26bf4baf7dd3be966014a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3576639647983932396
+    second: Card_Grilled_Details_1_0
+  - first:
+      213: 1192191337197998735
+    second: Card_Grilled_Details_1_1
+  - first:
+      213: -7420503730543667608
+    second: Card_Grilled_Details_1_2
+  - first:
+      213: -4800635795853946325
+    second: Card_Grilled_Details_1_3
+  - first:
+      213: -7061025349246381304
+    second: Card_Grilled_Details_1_4
+  - first:
+      213: -2247511598610537700
+    second: Card_Grilled_Details_1_5
+  - first:
+      213: 3098339552718299030
+    second: Card_Grilled_Details_1_6
+  - first:
+      213: 2999452285835552374
+    second: Card_Grilled_Details_1_7
+  - first:
+      213: 5711613571672206130
+    second: Card_Grilled_Details_1_8
+  - first:
+      213: 1744179134612311497
+    second: Card_Grilled_Details_1_9
+  - first:
+      213: 5544845703146475446
+    second: Card_Grilled_Details_1_10
+  - first:
+      213: 8761892584029899919
+    second: Card_Grilled_Details_1_11
+  - first:
+      213: -4411739343286939400
+    second: Card_Grilled_Details_1_12
+  - first:
+      213: 3234003793684573959
+    second: Card_Grilled_Details_1_13
+  - first:
+      213: 2633950264519357162
+    second: Card_Grilled_Details_1_14
+  - first:
+      213: 1884282227162140696
+    second: Card_Grilled_Details_1_15
+  - first:
+      213: -8180157402113616762
+    second: Card_Grilled_Details_1_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Card_Grilled_Details_1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 431
+        width: 335
+        height: 298
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41ce654a0393d5ec0800000000000000
+      internalID: -3576639647983932396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Card_Grilled_Details_1_3
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 531
+        width: 106
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b22d914bd27b06db0800000000000000
+      internalID: -4800635795853946325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Card_Grilled_Details_1_6
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 0
+        width: 303
+        height: 264
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69f115158638ffa20800000000000000
+      internalID: 3098339552718299030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Card_Grilled_Details_1_7
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 30
+        width: 121
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67626f156f130a920800000000000000
+      internalID: 2999452285835552374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Card_Grilled_Details_1_0: -3576639647983932396
+      Card_Grilled_Details_1_1: 1192191337197998735
+      Card_Grilled_Details_1_10: 5544845703146475446
+      Card_Grilled_Details_1_11: 8761892584029899919
+      Card_Grilled_Details_1_12: -4411739343286939400
+      Card_Grilled_Details_1_13: 3234003793684573959
+      Card_Grilled_Details_1_14: 2633950264519357162
+      Card_Grilled_Details_1_15: 1884282227162140696
+      Card_Grilled_Details_1_16: -8180157402113616762
+      Card_Grilled_Details_1_2: -7420503730543667608
+      Card_Grilled_Details_1_3: -4800635795853946325
+      Card_Grilled_Details_1_4: -7061025349246381304
+      Card_Grilled_Details_1_5: -2247511598610537700
+      Card_Grilled_Details_1_6: 3098339552718299030
+      Card_Grilled_Details_1_7: 2999452285835552374
+      Card_Grilled_Details_1_8: 5711613571672206130
+      Card_Grilled_Details_1_9: 1744179134612311497
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

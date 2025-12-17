@@ -3,11 +3,11 @@ guid: 52ebf9b1dd670ac4eab0ca95b9aca709
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7552143862244720682
-    second: saxofon_UI_0
+      213: 8475887505789014124
+    second: Saxofon_UI_0
   - first:
-      213: -5774329509012669636
-    second: saxofon_UI_1
+      213: 1187500211240851614
+    second: Saxofon_UI_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,7 +49,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -103,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: saxofon_UI_0
+      name: Saxofon_UI_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1
-        width: 198
-        height: 276
+        x: 340
+        y: 137
+        width: 1075
+        height: 1492
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -117,20 +117,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6dfb1469b25613790800000000000000
-      internalID: -7552143862244720682
+      spriteID: c60d9b287c660a570800000000000000
+      internalID: 8475887505789014124
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: saxofon_UI_1
+      name: Saxofon_UI_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 12
-        height: 37
+        x: 341
+        y: 127
+        width: 61
+        height: 196
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -138,8 +138,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c3b7e3fb7e57ddfa0800000000000000
-      internalID: -5774329509012669636
+      spriteID: e9856b58629da7010800000000000000
+      internalID: 1187500211240851614
       vertices: []
       indices: 
       edges: []
@@ -147,7 +147,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -155,8 +155,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      saxofon_UI_0: -7552143862244720682
-      saxofon_UI_1: -5774329509012669636
+      Saxofon_UI_0: 8475887505789014124
+      Saxofon_UI_1: 1187500211240851614
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

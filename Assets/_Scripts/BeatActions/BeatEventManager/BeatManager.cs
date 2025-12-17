@@ -69,8 +69,8 @@ public class BeatManager : MonoBehaviour
 
     public void ToggleMusic(bool input)
     {
-        if (input) AudioSource.Play();
-        else AudioSource.Pause();
+        if (input) BroAudio.Play(musicID);
+        else BroAudio.Pause(musicID);
     }
 
     private void Update()
@@ -78,11 +78,13 @@ public class BeatManager : MonoBehaviour
         if (AudioSource == null) FindTheAudioSource();
         else if (AudioSource.isPlaying)
         {
+            //BeatGracePeriod = intervals[0].BeatGrace;
             foreach (Interval interval in intervals)
             {
                 sampledTime = (AudioSource.timeSamples / (AudioSource.clip.frequency * interval.GetIntervalLength(BPM)));
                 interval.CheckForNewInterval(sampledTime);
             }
+            //BeatGracePeriod = intervals[0].BeatGrace;
         }
     }
 
@@ -105,5 +107,10 @@ public class BeatManager : MonoBehaviour
         float difference = secondsPerBeat / 0.5f;
 
         return 1 / difference;
+    }
+
+    public void ActivateSquashAndStretch()
+    {
+        SquashAndStretch.SquashAndStretchAllObjcetsLikeThis();
     }
 }

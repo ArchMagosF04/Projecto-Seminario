@@ -12,6 +12,7 @@ public class AutoDialogueManager : MonoBehaviour
     [SerializeField] TMPro.TMP_Text dialogue;
     private PlayerWeapon weaponScript;
     private int selectedWeapon;
+    public int SelectedWeapon {  get { return selectedWeapon; }}
 
 
     [SerializeField] private List<string> IntroDialogue;
@@ -124,8 +125,8 @@ public class AutoDialogueManager : MonoBehaviour
                 {
                     case 0:
                         dialogue.color = Color.white;
-                        dialogue.fontSize = 20;
-                        return "Press the Atack Button to throw you Mic foward";
+                        dialogue.fontSize = 18;
+                        return "Press the Atack Button to throw you Mic foward\n Press W + Atack Button or S + Atack Button to launch your Mic up or down";
 
                     case 1:
                         dialogue.color = Color.cyan;
@@ -138,8 +139,8 @@ public class AutoDialogueManager : MonoBehaviour
                 {
                     case 0:
                         dialogue.color = Color.white;
-                        dialogue.fontSize = 20;
-                        return "HOLD the Atack Button to charge up your attack and increase it's damage and speed";
+                        dialogue.fontSize = 15;
+                        return "HOLD the Atack Button to charge up your attack and increase it's damage and speed\n\n The weapon has 2 charge levels (first green then red when fully charged)";
 
                     case 1:
                         dialogue.color = Color.cyan;

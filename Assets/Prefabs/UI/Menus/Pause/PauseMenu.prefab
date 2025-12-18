@@ -9613,7 +9613,7 @@ PrefabInstance:
     - target: {fileID: 4701152522659887857, guid: 6b4705f13b2f06d438cc8e4318483119, type: 3}
       propertyPath: m_Navigation.m_SelectOnUp
       value: 
-      objectReference: {fileID: 3881555284489557840}
+      objectReference: {fileID: 4063149056941276348}
     - target: {fileID: 4701152522659887857, guid: 6b4705f13b2f06d438cc8e4318483119, type: 3}
       propertyPath: m_Navigation.m_SelectOnDown
       value: 
@@ -10367,7 +10367,7 @@ PrefabInstance:
     - target: {fileID: 4701152522659887857, guid: 6b4705f13b2f06d438cc8e4318483119, type: 3}
       propertyPath: m_Navigation.m_SelectOnDown
       value: 
-      objectReference: {fileID: 2363541182001555740}
+      objectReference: {fileID: 4063149056941276348}
     - target: {fileID: 8775768164383919928, guid: 6b4705f13b2f06d438cc8e4318483119, type: 3}
       propertyPath: m_text
       value: Options
@@ -10784,7 +10784,7 @@ PrefabInstance:
     - target: {fileID: 4701152522659887857, guid: 6b4705f13b2f06d438cc8e4318483119, type: 3}
       propertyPath: m_Navigation.m_SelectOnDown
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2363541182001555740}
     - target: {fileID: 8775768164383919928, guid: 6b4705f13b2f06d438cc8e4318483119, type: 3}
       propertyPath: m_text
       value: Exit Level
@@ -10826,6 +10826,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b4705f13b2f06d438cc8e4318483119, type: 3}
+--- !u!114 &4063149056941276348 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4701152522659887857, guid: 6b4705f13b2f06d438cc8e4318483119, type: 3}
+  m_PrefabInstance: {fileID: 8745688960864372301}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &6086099484749483857 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3254069506012481820, guid: 6b4705f13b2f06d438cc8e4318483119, type: 3}

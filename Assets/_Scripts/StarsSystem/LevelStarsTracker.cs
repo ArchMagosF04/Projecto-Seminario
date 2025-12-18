@@ -55,6 +55,8 @@ public class LevelStarsTracker : MonoBehaviour, IDataPersistance
     private bool passedDamageRequirements;
     private bool passedTimeRequirements;
 
+    private bool completedLevel;
+
     private void Awake()
     {
         if (Instance == null)
@@ -72,6 +74,7 @@ public class LevelStarsTracker : MonoBehaviour, IDataPersistance
     {
         playerComboCounter = GameManager.Instance.PlayerInstance.gameObject.GetComponent<BeatComboCounter>();
         playerHealth = GameManager.Instance.PlayerInstance.gameObject.GetComponentInChildren<Core_Health>();
+        completedLevel = false;
 
         SetUpStars();
     }
@@ -120,6 +123,8 @@ public class LevelStarsTracker : MonoBehaviour, IDataPersistance
 
     public void ShowStars()
     {
+        completedLevel = true;
+
         if (passedComboRequirements) unlockedStarA.SetActive(true);
         else if (hasPreviouslyAchievedComboRequirements) previousStarA.SetActive(true);
 
@@ -189,6 +194,8 @@ public class LevelStarsTracker : MonoBehaviour, IDataPersistance
             }
             else Debug.LogError("Wrong Level Key");
         }
+
+        if (!completedLevel) return;
 
         switch (levelID)
         {

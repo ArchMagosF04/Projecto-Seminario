@@ -26,5 +26,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EndCutscene.unity
     guid: 66c6881741f6df34cb2a340649242b36
+  - enabled: 1
+    path: Assets/Scenes/Levels/TestGrounds.unity
+    guid: 53c390f5ab712c245a4163c7183a09e5
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

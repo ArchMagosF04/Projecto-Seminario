@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
 
     public int StunBeatDuration { get; private set; }
 
-    public Action OnStunEvent;
+    public Action OnStunEvent;    
 
     private Vector2 workSpace;
 

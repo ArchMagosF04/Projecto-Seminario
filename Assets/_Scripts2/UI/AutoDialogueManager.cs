@@ -124,12 +124,12 @@ public class AutoDialogueManager : MonoBehaviour
                 switch (index)
                 {
                     case 0:
-                        dialogue.color = Color.white;
+                        dialogue.color = Color.black;
                         dialogue.fontSize = 18;
                         return "Press the Atack Button to throw you Mic foward\n Press W + Atack Button or S + Atack Button to launch your Mic up or down";
 
                     case 1:
-                        dialogue.color = Color.cyan;
+                        dialogue.color = Color.red;
                         return "Press the special attack button to swing your Microphone at the enemy 3 times";
                 }
                 break;
@@ -138,16 +138,16 @@ public class AutoDialogueManager : MonoBehaviour
                 switch (index)
                 {
                     case 0:
-                        dialogue.color = Color.white;
+                        dialogue.color = Color.black;
                         dialogue.fontSize = 15;
                         return "HOLD the Atack Button to charge up your attack and increase it's damage and speed\n\n The weapon has 2 charge levels (first green then red when fully charged)";
 
                     case 1:
-                        dialogue.color = Color.cyan;
+                        dialogue.color = Color.red;
                         return "Press the special attack button to enter the special mode";
 
                     case 2:
-                        dialogue.color = Color.yellow;
+                        dialogue.color = Color.blue;
                         dialogue.fontSize = 18;
                         return "While the special mode is active, normal atacks become Fully Charged atacks and you don't need to charge them!";                        
                 }
@@ -157,12 +157,12 @@ public class AutoDialogueManager : MonoBehaviour
                 switch (index)
                 {
                     case 0:
-                        dialogue.color = Color.white;
+                        dialogue.color = Color.black;
                         dialogue.fontSize = 17;
                         return "Press the Atack Button to fire a note in an arc. \n\nIf you fired the note at the right time, it will stick to the enemy and expode after some time";
 
                     case 1:
-                        dialogue.color = Color.yellow;
+                        dialogue.color = Color.red;
                         dialogue.fontSize = 20;
                         return "Press the special attack button to cause a damage explotion around you";
 

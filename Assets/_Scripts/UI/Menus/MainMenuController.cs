@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class MainMenuController : MonoBehaviour
 {
     [SerializeField] private MenuPage startingPage;
     [SerializeField] private bool startOpen = true;
+    [SerializeField] private ConfirmationPopUpMenu popUpMenu;
 
     private MenuPage currentPage;
 
@@ -44,7 +46,18 @@ public class MainMenuController : MonoBehaviour
 
     public void QuitApplication()
     {
-        Debug.Log("Exiting Application");
-        Application.Quit();
+
+        popUpMenu.ActivateMenu("Are you sure you want to Quit?",
+            () =>
+            {
+                currentPage.ChangeObjectSelected();
+                Debug.Log("Exiting Application");
+                Application.Quit();
+            },
+            () =>
+            {
+                currentPage.ChangeObjectSelected();
+            }
+        );
     }
 }

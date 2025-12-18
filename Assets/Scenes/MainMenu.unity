@@ -6638,6 +6638,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingPage: {fileID: 712634546}
   startOpen: 1
+  popUpMenu: {fileID: 1280863823}
 --- !u!1 &1219359427
 GameObject:
   m_ObjectHideFlags: 0

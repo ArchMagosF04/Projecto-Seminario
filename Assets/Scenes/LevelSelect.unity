@@ -5910,18 +5910,20 @@ MonoBehaviour:
   weapons:
   - weaponName: Microphone
     weaponImage: {fileID: 21300000, guid: 999deb1a2ecfc134f81a14385091a846, type: 3}
-    weaponDescription: "Basic Atack: Melee Attack that can be aimed up or dow.\n\r\nSpecial:
-      Strong Melee Attack.\r"
+    weaponDescription: "Basic Atack: Melee Attack that can be aimed up or down\n\r\nSpecial:
+      Strong Melee Attack\r"
     weaponTrainingRoomName: 
   - weaponName: Accordion
     weaponImage: {fileID: 21300000, guid: 53229c1b334a31f43b1752d2a7cdc35b, type: 3}
-    weaponDescription: "Basic Atk: Weak Ranged Atack.\n\nCharged ranged Atack: Hold
-      and Release RMB.\n\r\nSpecial Atk: Special Mode (faster charged atack)\r"
+    weaponDescription: "Basic Atk: Launches a projectile that can be charged by holding
+      the attack button.\n\nSpecial Atk: Special Mode (while active you can launch
+      fully charged shots without charging)\r"
     weaponTrainingRoomName: 
   - weaponName: Saxophone
     weaponImage: {fileID: 21300000, guid: 52ebf9b1dd670ac4eab0ca95b9aca709, type: 3}
-    weaponDescription: "Basic Atk: Shoots Two Bouncing Projectiles.\r\n\r\nSpecial
-      Atk: Apply Defence Debuff on Enemy.\r"
+    weaponDescription: "Basic Atk: Shoots an arcing projectile that sticks to its
+      target and explodes on the next beat\r\n\nSpecial Atk: Create an explosion
+      around yourself\r"
     weaponTrainingRoomName: 
   weaponImage: {fileID: 1242889305}
   weaponName: {fileID: 558231537}

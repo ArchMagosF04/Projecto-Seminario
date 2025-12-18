@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class GameManager : MonoBehaviour
     [field: SerializeField] public PlayerController PlayerInstance {  get; private set; }
 
     [field: SerializeField] public bool IsGameActive { get; private set; }
+
+    [SerializeField] private PlayerInput playerInput;
 
     [Header("Game End Screens")]
     [SerializeField] private MenuPage winScreen;
@@ -25,6 +28,8 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+
+        playerInput = GameInputManager.Instance.gameObject.GetComponent<PlayerInput>();
     }
 
     public void ToggleGameActiveState(bool state) => IsGameActive = state;
@@ -47,5 +52,13 @@ public class GameManager : MonoBehaviour
     {
         IsGameActive = false;
         BeatManager.Instance.ToggleMusic(false);
+
+        Time.timeScale = 1;
     }
+
+    public void MakePlayerInvincible()
+    {
+        PlayerInstance.Health.ToggleInvincibility(true);
+        playerInput.SwitchCurrentActionMap("UI");
+    }    
 }

@@ -71,7 +71,7 @@ public class PlayerWeapon : MonoBehaviour
 
         anim.SetBool("Active", true);
 
-        Debug.Log("Beat Combo Multiplier: " + beatCombo.GetDamageMultiplier());
+       //Debug.Log("Beat Combo Multiplier: " + beatCombo.GetDamageMultiplier());
     }
 
     public virtual void ExecuteSpecialAttack()

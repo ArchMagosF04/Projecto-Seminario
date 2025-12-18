@@ -15,6 +15,7 @@ public class PlayerST_Death : PlayerState
     public override void OnEnter()
     {
         base.OnEnter();
+        GameManager.Instance.MakePlayerInvincible();
         movement.SetVelocityZero();
         if (controller.DeathSound.IsValid()) BroAudio.Play(controller.DeathSound);
         stateMachine.ToggleLockState(true);

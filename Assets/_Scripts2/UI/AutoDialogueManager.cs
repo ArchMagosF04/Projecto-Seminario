@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 public class AutoDialogueManager : MonoBehaviour
 {    
@@ -74,7 +75,7 @@ public class AutoDialogueManager : MonoBehaviour
         if (TextSelector(selectedWeapon,mainIndex+1) != "" || mainIndex == -1)
         {
             mainIndex++;
-            dialogue.text = TextSelector(selectedWeapon, mainIndex); 
+            dialogue.text = TextSelector(selectedWeapon, mainIndex);
             Debug.Log(mainIndex);
             //if (!paused) IntroDialogue[mainIndex].gameObject.SetActive(true);
         }
@@ -123,11 +124,19 @@ public class AutoDialogueManager : MonoBehaviour
             case 1:
                 switch (index)
                 {
-                    case 0: return "HOLD the Atack Button to charge up your attack and increase it's damage and speed";
+                    case 0:
+                        dialogue.color = Color.white;
+                        dialogue.fontSize = 20;
+                        return "HOLD the Atack Button to charge up your attack and increase it's damage and speed";
 
-                    case 1: return "Press the special attack button to enter the special mode";
+                    case 1:
+                        dialogue.color = Color.cyan;
+                        return "Press the special attack button to enter the special mode";
 
-                    case 2: return "While the special mode is active, normal atacks become Fully Charged atacks and you don't need to charge them!";                        
+                    case 2:
+                        dialogue.color = Color.yellow;
+                        dialogue.fontSize = 18;
+                        return "While the special mode is active, normal atacks become Fully Charged atacks and you don't need to charge them!";                        
                 }
             break;
 

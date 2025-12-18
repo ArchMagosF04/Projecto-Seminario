@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
     private Core_CollisionSenses collisionSenses;
     private CharacterAnimatorEvent animatorEvent;
     private Core_Movement movement;
-    private Core_Health health;
+    public Core_Health Health { get; private set; }
 
     [field: Header("Sounds")]
     [field: SerializeField] public SoundID JumpSound { get; private set; }
@@ -82,7 +82,7 @@ public class PlayerController : MonoBehaviour
         playerSprite = GetComponentInChildren<SpriteRenderer>();
         collisionSenses = Core.GetCoreComponent<Core_CollisionSenses>();
         movement = Core.GetCoreComponent<Core_Movement>();
-        health = Core.GetCoreComponent<Core_Health>();
+        Health = Core.GetCoreComponent<Core_Health>();
         animatorEvent = GetComponentInChildren<CharacterAnimatorEvent>();
         AfterImageController = GetComponentInChildren<AfterImage>();
 
@@ -109,7 +109,7 @@ public class PlayerController : MonoBehaviour
         animatorEvent.OnAnimationFinishedTrigger += AnimationFinishedTrigger;
         PrimaryAttackState = new PlayerST_PrimeAttack(this, playerData, StateMachine, Anim, "PrimeAttack", weapon);
         SecondaryAttackState = new PlayerST_SecAttack(this, playerData, StateMachine, Anim, "SecAttack", weapon);
-        health.OnDeath += ChangeToDeathState;
+        Health.OnDeath += ChangeToDeathState;
     }
 
     private void Update()
@@ -146,7 +146,7 @@ public class PlayerController : MonoBehaviour
         DeathState.UnsubscribeToEvents();
         Core_Mana.ManaIsFull -= EnergyFullAnimation;
         animatorEvent.OnAnimationFinishedTrigger -= AnimationFinishedTrigger;
-        health.OnDeath -= ChangeToDeathState;
+        Health.OnDeath -= ChangeToDeathState;
     }
 
     #endregion

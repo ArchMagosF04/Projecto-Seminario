@@ -13,8 +13,9 @@ public class AnittaST_Death : AnittaState
     public override void OnEnter()
     {
         base.OnEnter();
+        GameManager.Instance.MakePlayerInvincible();
         stateMachine.ToggleLockState(true);
-        controller.Movement.SetVelocityZero();
+        //controller.Movement.SetVelocityZero();
         if (controller.DeathSound.IsValid()) BroAudio.Play(controller.DeathSound);
     }
 

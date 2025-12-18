@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: LuisData
   m_EditorClassIdentifier: 
   <JumpForce>k__BackingField: 36
-  <BeatsSpentOnIdle>k__BackingField: 4
-  <NormalAttackChance>k__BackingField: 0
-  <SpecialAttackChance>k__BackingField: 1
-  <BeatsBeforeNormalAttack>k__BackingField: 1
-  <BeatsBeforeSpecialAttack>k__BackingField: 2
+  <BeatsSpentOnIdle>k__BackingField: 5
+  <NormalAttackChance>k__BackingField: 0.45
+  <SpecialAttackChance>k__BackingField: 0.45
+  <BeatsBeforeNormalAttack>k__BackingField: 2
+  <BeatsBeforeSpecialAttack>k__BackingField: 3

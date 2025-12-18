@@ -1,3 +1,4 @@
+using Ami.BroAudio;
 using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
@@ -17,6 +18,8 @@ public class WaveProjectile : MonoBehaviour
     [SerializeField] private float sizeIncrement;
     [SerializeField] private bool shouldStun;
     [SerializeField] private int stunDuration = 2;
+
+    [SerializeField] private SoundID waveSound;
 
     private Rigidbody2D rb;
     private CinemachineImpulseSource impulseSource;
@@ -56,6 +59,8 @@ public class WaveProjectile : MonoBehaviour
 
         speed += speedIncrement;
         LaunchProjectile();
+
+        if (waveSound.IsValid()) BroAudio.Play(waveSound);
 
         transform.localScale += new Vector3(0, sizeIncrement, 0);
     }

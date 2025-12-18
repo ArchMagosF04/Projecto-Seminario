@@ -77,15 +77,15 @@ MonoBehaviour:
     - AudioClip: {fileID: 8300000, guid: 4b5bad6fa7152ce4ca7da4811e75cfc0, type: 3}
       Volume: 1.1883515
       Delay: 0
-      StartPosition: 8.341
-      EndPosition: 10.927
+      StartPosition: 8.506
+      EndPosition: 11.117
       FadeIn: 0
       FadeOut: 0
       Weight: 0
     - AudioClip: {fileID: 8300000, guid: 4b5bad6fa7152ce4ca7da4811e75cfc0, type: 3}
       Volume: 1.2127237
       Delay: 0
-      StartPosition: 10.965
+      StartPosition: 11.219
       EndPosition: 8.303
       FadeIn: 0
       FadeOut: 0
@@ -93,12 +93,12 @@ MonoBehaviour:
     - AudioClip: {fileID: 8300000, guid: 4b5bad6fa7152ce4ca7da4811e75cfc0, type: 3}
       Volume: 1.1883515
       Delay: 0
-      StartPosition: 13.412
+      StartPosition: 13.589
       EndPosition: 5.818
       FadeIn: 0
       FadeOut: 0
       Weight: 0
-    <MasterVolume>k__BackingField: 1
+    <MasterVolume>k__BackingField: 4.507915
     <Loop>k__BackingField: 0
     <SeamlessLoop>k__BackingField: 0
     <TransitionTime>k__BackingField: 0

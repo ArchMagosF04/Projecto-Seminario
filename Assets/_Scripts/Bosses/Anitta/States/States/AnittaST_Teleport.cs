@@ -1,3 +1,4 @@
+using Ami.BroAudio;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,7 +16,8 @@ public class AnittaST_Teleport : AnittaState
 
     public override void OnEnter()
     {
-        base.OnEnter();        
+        base.OnEnter();
+        if (controller.TeleportSound.IsValid()) BroAudio.Play(controller.TeleportSound);
         hasTeleportedOut = false;
         beatTimer = 0;
     }
@@ -42,6 +44,7 @@ public class AnittaST_Teleport : AnittaState
         {
             controller.CheckFlip(GameManager.Instance.PlayerInstance.transform);
             anim.SetTrigger("TPBeat");
+            if (controller.TeleportSound.IsValid()) BroAudio.Play(controller.TeleportSound);
             controller.TargetIndicator.enabled = false;
             BeatManager.Instance.intervals[0].OnBeatEvent -= BeatCounter;
         }

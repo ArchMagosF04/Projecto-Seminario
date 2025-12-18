@@ -3,6 +3,7 @@ using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AnittaController : MonoBehaviour
 {
@@ -39,9 +40,10 @@ public class AnittaController : MonoBehaviour
 
     [field: Header("Sounds")]
     [field: SerializeField] public SoundID DeathSound { get; private set; }
-    [field: SerializeField] public SoundID NormalAttackSound { get; private set; }
-    [field: SerializeField] public SoundID SpecialAttackSound { get; private set; }
     [field: SerializeField] public SoundID TeleportSound { get; private set; }
+
+    [Header("Other Components")]
+    [SerializeField] private Image bossAttackIndicator;
 
     #endregion
 
@@ -69,6 +71,8 @@ public class AnittaController : MonoBehaviour
         anim.SetFloat("BeatSpeedMult", BeatManager.Instance.BeatSpeedMultiplier);
 
         animatorEvent = GetComponentInChildren<CharacterAnimatorEvent>();
+
+        ToggleBossAttackIndicator(false);
 
         StateMachine = new StateMachine();
         IdleState = new AnittaST_Idle(this, StateMachine, anittaStats, anim, "Idle");
@@ -181,8 +185,8 @@ public class AnittaController : MonoBehaviour
     {
         int direction = 0;
 
-        if (target.position.x > transform.position.x) direction = 1;
-        else direction = -1;
+        if (target.position.x > transform.position.x) direction = -1;
+        else direction = 1;
 
         movement.FlipCheck(direction);
     }
@@ -196,6 +200,11 @@ public class AnittaController : MonoBehaviour
     {
         health.ToggleInvincibility(true);
         StateMachine.ChangeState(DeathState);
+    }
+
+    public void ToggleBossAttackIndicator(bool input)
+    {
+        bossAttackIndicator.gameObject.SetActive(input);
     }
 
     #endregion

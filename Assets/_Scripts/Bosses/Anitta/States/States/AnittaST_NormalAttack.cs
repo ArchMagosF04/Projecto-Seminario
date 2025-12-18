@@ -15,6 +15,8 @@ public class AnittaST_NormalAttack : AnittaState
     {
         base.OnEnter();
 
+        controller.ToggleBossAttackIndicator(true);
+
         attackPerformed = false;
 
         BeatManager.Instance.intervals[0].OnBeatEvent += PerformAttack;
@@ -51,6 +53,8 @@ public class AnittaST_NormalAttack : AnittaState
         else controller.FireProjectile();
 
         attackPerformed = true;
+
+        controller.ToggleBossAttackIndicator(false);
     }
 
     public override void AnimationFinishedTrigger()

@@ -154,8 +154,8 @@ public class GardelController : MonoBehaviour
     {
         int direction = 0;
 
-        if (target.position.x > transform.position.x) direction = 1;
-        else direction = -1;
+        if (target.position.x > transform.position.x) direction = -1;
+        else direction = 1;
 
         movement.FlipCheck(direction);
     }

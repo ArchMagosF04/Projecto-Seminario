@@ -18,6 +18,8 @@ public class AnittaST_SpecialAttack : AnittaState
     {
         base.OnEnter();
 
+        controller.ToggleBossAttackIndicator(true);
+
         beatTimer = 0;
         attackPerformed = false;
 
@@ -54,6 +56,8 @@ public class AnittaST_SpecialAttack : AnittaState
         controller.FireWave();
 
         attackPerformed = true;
+
+        controller.ToggleBossAttackIndicator(false);
     }
 
     public override void AnimationFinishedTrigger()

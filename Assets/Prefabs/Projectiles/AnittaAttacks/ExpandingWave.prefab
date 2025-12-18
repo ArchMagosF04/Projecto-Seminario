@@ -129,6 +129,10 @@ MonoBehaviour:
   sizeIncrement: 0.25
   shouldStun: 0
   stunDuration: 2
+  waveSound:
+    ID: 1073741864
+    _sourceAsset: {fileID: 11400000, guid: 8240a242daa5bc14b9ec47c0050ebb44, type: 2}
+    <DebugObject>k__BackingField: {fileID: 3369356030413207588}
 --- !u!114 &5782376416835580596
 MonoBehaviour:
   m_ObjectHideFlags: 0

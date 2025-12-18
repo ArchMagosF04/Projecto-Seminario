@@ -118,6 +118,10 @@ MonoBehaviour:
   stopIntervalLength: 0.5
   worksOnTheHalfBeat: 1
   shakeProfile: {fileID: 11400000, guid: f7e8943dd2992dc4bbb53e2785068844, type: 2}
+  discoSound:
+    ID: 1073741863
+    _sourceAsset: {fileID: 11400000, guid: 8240a242daa5bc14b9ec47c0050ebb44, type: 2}
+    <DebugObject>k__BackingField: {fileID: 6371046825345793962}
 --- !u!114 &4203200895046537278
 MonoBehaviour:
   m_ObjectHideFlags: 0

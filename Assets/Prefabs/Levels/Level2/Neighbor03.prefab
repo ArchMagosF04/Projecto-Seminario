@@ -48,6 +48,10 @@ MonoBehaviour:
   sprite: {fileID: 2347727738113090267}
   pushPlatform: {fileID: 0}
   showTime: 2
+  neighbourSound:
+    ID: 1073741865
+    _sourceAsset: {fileID: 11400000, guid: 8240a242daa5bc14b9ec47c0050ebb44, type: 2}
+    <DebugObject>k__BackingField: {fileID: 1326024032128221259}
 --- !u!1 &2347727738113090267
 GameObject:
   m_ObjectHideFlags: 0
@@ -121,8 +125,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -240108819
-  m_SortingLayer: -1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: -1
   m_Sprite: {fileID: 253135684762420972, guid: 1dbfeead0bad3dd40aaa5142406bc5aa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

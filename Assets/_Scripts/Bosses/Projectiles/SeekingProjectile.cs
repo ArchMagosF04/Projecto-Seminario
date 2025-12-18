@@ -1,3 +1,4 @@
+using Ami.BroAudio;
 using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
@@ -17,6 +18,7 @@ public class SeekingProjectile : MonoBehaviour
 
     [Header("Other")]
     [SerializeField] private ScreenShakeProfile shakeProfile;
+    [SerializeField] private SoundID discoSound;
 
     private Rigidbody2D rb;
     private CinemachineImpulseSource impulseSource;
@@ -91,6 +93,7 @@ public class SeekingProjectile : MonoBehaviour
         if (!isMoving)
         {
             LaunchProjectile(GetPlayerDirection());
+            if (discoSound.IsValid()) BroAudio.Play(discoSound);
             isMoving = true;
 
             stopIntervalStart = Time.time;

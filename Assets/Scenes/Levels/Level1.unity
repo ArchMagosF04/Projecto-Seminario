@@ -6129,6 +6129,10 @@ PrefabInstance:
       propertyPath: OnAnimationFinished.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 66195223}
+    - target: {fileID: 2059588315178037582, guid: ba6ba94e26adb404daa8f9f93f7adbbb, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3853668409160834816, guid: ba6ba94e26adb404daa8f9f93f7adbbb, type: 3}
       propertyPath: m_Pivot.x
       value: 0

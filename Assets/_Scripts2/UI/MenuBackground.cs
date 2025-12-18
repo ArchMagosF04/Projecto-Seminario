@@ -13,7 +13,7 @@ public class MenuBackground : MonoBehaviour
     {
         currentImage = GetComponent<Image>();
         backgroundIndex = PlayerPrefs.GetInt("background");
-        SetBackground(backgroundImages[backgroundIndex]);
+        if(backgroundIndex>0)SetBackground(backgroundImages[backgroundIndex]);
     }
 
     // Update is called once per frame
@@ -29,6 +29,7 @@ public class MenuBackground : MonoBehaviour
         {
             backgroundIndex++;
             SetBackground(backgroundImages[backgroundIndex]);
+            currentImage.enabled = true;
             Debug.Log(backgroundIndex);
         }
     }
@@ -37,7 +38,18 @@ public class MenuBackground : MonoBehaviour
     {
         if(image != null)
         {
+            currentImage.enabled = true;
             currentImage.sprite = image;
         }
+    }
+
+    public void HideBackground()
+    {
+        currentImage.enabled=false;
+    }
+
+    public void ShowBackground()
+    {
+        if(backgroundIndex!=0) currentImage.enabled = true;
     }
 }

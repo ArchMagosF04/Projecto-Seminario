@@ -53,7 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 0}
   valueText: {fileID: 1072572153152326732}
-  showSliderValue: 1
+  showSliderValue: 0
   decimalPointsToShow: 0
   multiplyValueShown: 100
 --- !u!1 &141300881329929407

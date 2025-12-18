@@ -1240,6 +1240,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 32069241}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &580946625 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2291639096840245981, guid: fcba1b3eee7ab2644b602a664c668c80, type: 3}
+  m_PrefabInstance: {fileID: 427099715}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &770273335
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3016,6 +3027,10 @@ PrefabInstance:
       propertyPath: microBar
       value: 
       objectReference: {fileID: 1809493273}
+    - target: {fileID: 2536858461151655436, guid: 8e1027bb0e43ba8488f684c185934af9, type: 3}
+      propertyPath: fullManaBar
+      value: 
+      objectReference: {fileID: 580946625}
     - target: {fileID: 5909819851222814441, guid: 8e1027bb0e43ba8488f684c185934af9, type: 3}
       propertyPath: counterTextBox
       value: 

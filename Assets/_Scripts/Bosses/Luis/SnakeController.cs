@@ -31,6 +31,8 @@ public class SnakeController : MonoBehaviour
 
     public void ShootHighProjectile()
     {
+        animator.SetTrigger("Attack");
+
         Projectile newBullet = Instantiate(highProjectile, highSpawnPoint.position, Quaternion.identity);
 
         if (attackSound.IsValid()) BroAudio.Play(attackSound);
@@ -39,6 +41,8 @@ public class SnakeController : MonoBehaviour
 
     public void ShootLowProjectile()
     {
+        animator.SetTrigger("Attack");
+
         Projectile newBullet = Instantiate(lowProjectile, lowSpawnPoint.position, Quaternion.identity);
 
         if (attackSound.IsValid()) BroAudio.Play(attackSound);

@@ -23,6 +23,11 @@ public class SliderInteraction : MonoBehaviour
     private void Start()
     {
         slider.onValueChanged.AddListener(HandleSliderValueChange);
+
+        //if (showSliderValue)
+        //{
+        //    valueText.SetText(slider.value.ToString("F" + decimalPointsToShow));
+        //}
     }
 
     private void OnDestroy()

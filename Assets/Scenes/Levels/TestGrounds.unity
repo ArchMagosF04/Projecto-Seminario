@@ -1560,8 +1560,8 @@ MonoBehaviour:
   dialogue: {fileID: 382119900}
   IntroDialogue: []
   waitTime: 0.3
-  manualWeaponOverride: 0
-  manualOverrideWeaponIndex: 1
+  manualWeaponOverride: 1
+  manualOverrideWeaponIndex: 2
 --- !u!4 &1333115351
 Transform:
   m_ObjectHideFlags: 0
@@ -2083,11 +2083,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2338753116506909999, guid: 8e1027bb0e43ba8488f684c185934af9, type: 3}
       propertyPath: manualOverride
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2338753116506909999, guid: 8e1027bb0e43ba8488f684c185934af9, type: 3}
       propertyPath: manualWeaponOverrideIndex
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5909819851222814441, guid: 8e1027bb0e43ba8488f684c185934af9, type: 3}
       propertyPath: counterTextBox

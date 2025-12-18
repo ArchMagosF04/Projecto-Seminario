@@ -140,6 +140,22 @@ public class AutoDialogueManager : MonoBehaviour
                 }
             break;
 
+            case 2:
+                switch (index)
+                {
+                    case 0:
+                        dialogue.color = Color.white;
+                        dialogue.fontSize = 17;
+                        return "Press the Atack Button to fire a note in an arc. \n\nIf you fired the note at the right time, it will stick to the enemy and expode after some time";
+
+                    case 1:
+                        dialogue.color = Color.yellow;
+                        dialogue.fontSize = 20;
+                        return "Press the special attack button to cause a damage explotion around you";
+
+                }
+                break;
+
             default: return "";
         }
         return "";
@@ -155,6 +171,11 @@ public class AutoDialogueManager : MonoBehaviour
                 Core_Mana.ManaIsFull += AdvanceIndex;
                 weaponScript.OnSpecialEnter += AdvanceIndex;
                 PW_Accordion.OnspecialEnded += AdvanceIndex;
+                break;
+
+            case 2:
+                Core_Mana.ManaIsFull += AdvanceIndex;
+                weaponScript.OnSpecialEnter += AdvanceIndex;
                 break;
         }
     }

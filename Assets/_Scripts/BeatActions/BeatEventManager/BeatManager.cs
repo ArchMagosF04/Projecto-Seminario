@@ -121,4 +121,9 @@ public class BeatManager : MonoBehaviour
     {
         SquashAndStretch.SquashAndStretchAllObjcetsLikeThis();
     }
+
+    private void OnDisable()
+    {
+        musicSource.Stop();
+    }
 }

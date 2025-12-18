@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Fade_Player_HUD_1_0: -2816363935503483902
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

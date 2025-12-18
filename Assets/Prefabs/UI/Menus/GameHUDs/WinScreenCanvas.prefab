@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 1938090742003331912}
   - component: {fileID: 5286915634250753786}
   - component: {fileID: 2447689683303745801}
+  - component: {fileID: 195872721503442401}
   m_Layer: 0
   m_Name: UnlockedStar
   m_TagString: Untagged
@@ -173,7 +174,19 @@ MonoBehaviour:
       m_Calls: []
   OnShowComplete:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 195872721503442401}
+        m_TargetAssemblyTypeName: Ami.BroAudio.SoundSource, BroAudio
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnHideComplete:
     m_PersistentCalls:
       m_Calls: []
@@ -205,6 +218,29 @@ MonoBehaviour:
   scale_initial: {x: 0, y: 0, z: 0}
   rotation_initial: {x: 0, y: 0, z: 0, w: 0}
   pivot_initial: {x: 0, y: 0}
+--- !u!114 &195872721503442401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753972919525892957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385ffc06106304cc3824d5bcf25a7037, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onlyPlayOnce: 0
+  _playOnEnable: 0
+  _stopOnDisable: 0
+  _overrideFadeOut: -1
+  _sound:
+    ID: 1073741867
+    _sourceAsset: {fileID: 11400000, guid: 8e0cf3a7aab947c489cfa4bfde381f66, type: 2}
+    <DebugObject>k__BackingField: {fileID: 753972919525892957}
+  _overrideGroup: {fileID: 0}
+  _positionMode: 0
+  _delay: 0
 --- !u!1 &842155195188484551
 GameObject:
   m_ObjectHideFlags: 0
@@ -563,6 +599,7 @@ GameObject:
   - component: {fileID: 8423148230038087341}
   - component: {fileID: 1098470707632110852}
   - component: {fileID: 4064975067082882279}
+  - component: {fileID: 3323905600216732539}
   m_Layer: 0
   m_Name: UnlockedStar
   m_TagString: Untagged
@@ -649,7 +686,19 @@ MonoBehaviour:
       m_Calls: []
   OnShowComplete:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 195872721503442401}
+        m_TargetAssemblyTypeName: Ami.BroAudio.SoundSource, BroAudio
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnHideComplete:
     m_PersistentCalls:
       m_Calls: []
@@ -681,6 +730,29 @@ MonoBehaviour:
   scale_initial: {x: 0, y: 0, z: 0}
   rotation_initial: {x: 0, y: 0, z: 0, w: 0}
   pivot_initial: {x: 0, y: 0}
+--- !u!114 &3323905600216732539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2574904227891934579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385ffc06106304cc3824d5bcf25a7037, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onlyPlayOnce: 0
+  _playOnEnable: 0
+  _stopOnDisable: 0
+  _overrideFadeOut: -1
+  _sound:
+    ID: 1073741867
+    _sourceAsset: {fileID: 11400000, guid: 8e0cf3a7aab947c489cfa4bfde381f66, type: 2}
+    <DebugObject>k__BackingField: {fileID: 753972919525892957}
+  _overrideGroup: {fileID: 0}
+  _positionMode: 0
+  _delay: 0
 --- !u!1 &3042975958035788620
 GameObject:
   m_ObjectHideFlags: 0
@@ -1526,6 +1598,7 @@ GameObject:
   - component: {fileID: 630804729865056472}
   - component: {fileID: 7546670852133280188}
   - component: {fileID: 8286591552104473963}
+  - component: {fileID: 2859485937889265997}
   m_Layer: 0
   m_Name: WinScreenCanvas
   m_TagString: Untagged
@@ -1664,9 +1737,33 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2859485937889265997}
+        m_TargetAssemblyTypeName: Ami.BroAudio.SoundSource, BroAudio
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnPageClose:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2859485937889265997}
+        m_TargetAssemblyTypeName: Ami.BroAudio.SoundSource, BroAudio
+        m_MethodName: Stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8286591552104473963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1698,6 +1795,29 @@ MonoBehaviour:
   unlockedStarC: {fileID: 6977810423382094959}
   starCText: {fileID: 836176302481336956}
   achievedTextC: {fileID: 2236666248959190733}
+--- !u!114 &2859485937889265997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6857914956509050112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385ffc06106304cc3824d5bcf25a7037, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onlyPlayOnce: 0
+  _playOnEnable: 0
+  _stopOnDisable: 0
+  _overrideFadeOut: -1
+  _sound:
+    ID: 268435476
+    _sourceAsset: {fileID: 11400000, guid: 8e0cf3a7aab947c489cfa4bfde381f66, type: 2}
+    <DebugObject>k__BackingField: {fileID: 6857914956509050112}
+  _overrideGroup: {fileID: 0}
+  _positionMode: 0
+  _delay: 0
 --- !u!1 &6977810423382094959
 GameObject:
   m_ObjectHideFlags: 0
@@ -1710,6 +1830,7 @@ GameObject:
   - component: {fileID: 1188143292620569131}
   - component: {fileID: 5529268121849054501}
   - component: {fileID: 5125138082743531267}
+  - component: {fileID: 8897803926777253848}
   m_Layer: 0
   m_Name: UnlockedStar
   m_TagString: Untagged
@@ -1796,7 +1917,19 @@ MonoBehaviour:
       m_Calls: []
   OnShowComplete:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 195872721503442401}
+        m_TargetAssemblyTypeName: Ami.BroAudio.SoundSource, BroAudio
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnHideComplete:
     m_PersistentCalls:
       m_Calls: []
@@ -1828,6 +1961,29 @@ MonoBehaviour:
   scale_initial: {x: 0, y: 0, z: 0}
   rotation_initial: {x: 0, y: 0, z: 0, w: 0}
   pivot_initial: {x: 0, y: 0}
+--- !u!114 &8897803926777253848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6977810423382094959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385ffc06106304cc3824d5bcf25a7037, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onlyPlayOnce: 0
+  _playOnEnable: 0
+  _stopOnDisable: 0
+  _overrideFadeOut: -1
+  _sound:
+    ID: 1073741867
+    _sourceAsset: {fileID: 11400000, guid: 8e0cf3a7aab947c489cfa4bfde381f66, type: 2}
+    <DebugObject>k__BackingField: {fileID: 753972919525892957}
+  _overrideGroup: {fileID: 0}
+  _positionMode: 0
+  _delay: 0
 --- !u!1 &7172218216674235895
 GameObject:
   m_ObjectHideFlags: 0

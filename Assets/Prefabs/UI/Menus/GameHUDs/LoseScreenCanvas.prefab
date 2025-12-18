@@ -303,6 +303,7 @@ GameObject:
   - component: {fileID: 7691861357504556434}
   - component: {fileID: 477219902026396905}
   - component: {fileID: 7637267708390245972}
+  - component: {fileID: 8465506128909321303}
   m_Layer: 0
   m_Name: LoseScreenCanvas
   m_TagString: Untagged
@@ -417,10 +418,57 @@ MonoBehaviour:
   IsMenuOpen: 0
   OnPageOpen:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8465506128909321303}
+        m_TargetAssemblyTypeName: Ami.BroAudio.SoundSource, BroAudio
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnPageClose:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8465506128909321303}
+        m_TargetAssemblyTypeName: Ami.BroAudio.SoundSource, BroAudio
+        m_MethodName: Stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8465506128909321303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5464003164134375776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385ffc06106304cc3824d5bcf25a7037, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onlyPlayOnce: 0
+  _playOnEnable: 0
+  _stopOnDisable: 1
+  _overrideFadeOut: -1
+  _sound:
+    ID: 268435477
+    _sourceAsset: {fileID: 11400000, guid: 8e0cf3a7aab947c489cfa4bfde381f66, type: 2}
+    <DebugObject>k__BackingField: {fileID: 5464003164134375776}
+  _overrideGroup: {fileID: 0}
+  _positionMode: 0
+  _delay: 0
 --- !u!1 &7868575738476878178
 GameObject:
   m_ObjectHideFlags: 0

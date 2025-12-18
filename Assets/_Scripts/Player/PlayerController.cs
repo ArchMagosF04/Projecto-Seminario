@@ -42,6 +42,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private PlayerStats playerData;
     [SerializeField] public PlayerWeapon weapon;
     [field: SerializeField] public ParticleSystem DoubleJumpParticles { get; private set; }
+    [field: SerializeField] public ParticleSystem OnBeatParticles { get; private set; }
 
     private Core_CollisionSenses collisionSenses;
     private CharacterAnimatorEvent animatorEvent;
@@ -210,6 +211,11 @@ public class PlayerController : MonoBehaviour
     {
         DoubleJumpParticles.transform.position = new Vector3(transform.position.x, transform.position.y - 1.1f, transform.position.z);
         DoubleJumpParticles.Play();
+    }
+
+    public void PlayOnBeatParticle()
+    {
+        OnBeatParticles.Play();
     }
 
     private void ChangeToDeathState()

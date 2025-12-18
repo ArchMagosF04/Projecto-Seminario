@@ -50,6 +50,7 @@ public class PlayerST_Dash : PlayerST_Ability
 
         if (BeatManager.Instance.BeatGracePeriod)
         {
+            controller.PlayOnBeatParticle();
             manaComponent.IncreaseMana(playerStats.ManaGainOnBeatDash);
             controller.BeatCombo.ResetDecayTimer();
             if (controller.BeatDashSound.IsValid()) BroAudio.Play(controller.BeatDashSound);

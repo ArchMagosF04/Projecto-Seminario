@@ -16,7 +16,7 @@ public class PlayerST_Jump : PlayerST_Ability
     {
         base.OnEnter();
 
-        if (amountOfJumpsLeft > 0 && controller.DobleJumpSound.IsValid()) BroAudio.Play(controller.DobleJumpSound);
+        if (amountOfJumpsLeft <= 1 && controller.DobleJumpSound.IsValid()) BroAudio.Play(controller.DobleJumpSound);
         else if(controller.JumpSound.IsValid()) BroAudio.Play(controller.JumpSound);
 
         GameInputManager.Instance.UseJumpInput();
@@ -27,6 +27,7 @@ public class PlayerST_Jump : PlayerST_Ability
 
         if (amountOfJumpsLeft <= 0)
         {
+            controller.PlayOnBeatParticle();
             BeatManager.Instance.OnPlayerRhythmicAction();
             controller.BeatCombo.ResetDecayTimer();
             controller.ActivateDoubleJumpParticle();

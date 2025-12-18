@@ -30,6 +30,7 @@ public class PlayerST_PrimeAttack : PlayerST_Ability
         BeatManager.Instance.OnPlayerRhythmicAction();
 
         weapon.ExecuteBasicAttack();
+        if (BeatManager.Instance.BeatGracePeriod) controller.PlayOnBeatParticle();
     }
 
     public override void OnUpdate()

@@ -29,6 +29,7 @@ public class PlayerST_SecAttack : PlayerST_Ability
         manaComponent.UseMana();
 
         weapon.ExecuteSpecialAttack();
+        if (BeatManager.Instance.BeatGracePeriod) controller.PlayOnBeatParticle();
     }
 
     public override void OnUpdate()

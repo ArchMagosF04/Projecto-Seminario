@@ -12,6 +12,7 @@ public class Core_Mana : CoreComponent
     [Header("UI")]
     [SerializeField] private Image manaBar;
     [SerializeField] private MicroBar microBar;
+    [SerializeField] private ParticleSystem manaParticles;
 
     [Header("Stats")]
     [SerializeField] private float maxMana;
@@ -65,6 +66,7 @@ public class Core_Mana : CoreComponent
 
         if (!isManaFull)
         {
+            manaParticles.Play();
             if (manaGainSound.IsValid()) BroAudio.Play(manaGainSound);
         }
     }

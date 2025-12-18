@@ -126,6 +126,32 @@ MonoBehaviour:
   <rightPlatform>k__BackingField: {fileID: 0}
   <leftPlatform>k__BackingField: {fileID: 0}
   <stageCenter>k__BackingField: {fileID: 0}
+  deathParticles: {fileID: 198856239026640498, guid: 9bba9cf244c53c5439505dfc96fdd11c, type: 3}
+  <DeathSound>k__BackingField:
+    ID: 1073741848
+    _sourceAsset: {fileID: 11400000, guid: e30506ec2328d6342b02cd9706fdf713, type: 2}
+    <DebugObject>k__BackingField: {fileID: 763008524621281506}
+  <NormalAttackSound>k__BackingField:
+    ID: 1073741849
+    _sourceAsset: {fileID: 11400000, guid: e30506ec2328d6342b02cd9706fdf713, type: 2}
+    <DebugObject>k__BackingField: {fileID: 763008524621281506}
+  <SpecialAttackSound>k__BackingField:
+    ID: 1073741850
+    _sourceAsset: {fileID: 11400000, guid: e30506ec2328d6342b02cd9706fdf713, type: 2}
+    <DebugObject>k__BackingField: {fileID: 763008524621281506}
+  <JumpSound>k__BackingField:
+    ID: 1073741851
+    _sourceAsset: {fileID: 11400000, guid: e30506ec2328d6342b02cd9706fdf713, type: 2}
+    <DebugObject>k__BackingField: {fileID: 763008524621281506}
+  <StunAttackSound>k__BackingField:
+    ID: 1073741852
+    _sourceAsset: {fileID: 11400000, guid: e30506ec2328d6342b02cd9706fdf713, type: 2}
+    <DebugObject>k__BackingField: {fileID: 763008524621281506}
+  <PrepStunAttackSound>k__BackingField:
+    ID: 1073741853
+    _sourceAsset: {fileID: 11400000, guid: e30506ec2328d6342b02cd9706fdf713, type: 2}
+    <DebugObject>k__BackingField: {fileID: 763008524621281506}
+  bossAttackIndicator: {fileID: 0}
   LastAttackWasSpecial: 0
   DesiredJumpTarget: {fileID: 0}
   DesiredAction: 0

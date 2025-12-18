@@ -1,0 +1,297 @@
+fileFormatVersion: 2
+guid: 6ce7613a7612a4045b51234e605f1759
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2391942176477230308
+    second: Credit_HUD_Effects_0
+  - first:
+      213: 3870276311134156036
+    second: Credit_HUD_Effects_1
+  - first:
+      213: -2121752145156839411
+    second: Credit_HUD_Effects_2
+  - first:
+      213: -9004606516355426977
+    second: Credit_HUD_Effects_3
+  - first:
+      213: 2531622408089283788
+    second: Credit_HUD_Effects_4
+  - first:
+      213: -7958730035564578279
+    second: Credit_HUD_Effects_5
+  - first:
+      213: -1893998233374312720
+    second: Credit_HUD_Effects_6
+  - first:
+      213: -4566581314391441813
+    second: Credit_HUD_Effects_7
+  - first:
+      213: 1103672906337296036
+    second: Credit_HUD_Effects_8
+  - first:
+      213: -3734352166130232244
+    second: Credit_HUD_Effects_9
+  - first:
+      213: 8043388326058016414
+    second: Credit_HUD_Effects_10
+  - first:
+      213: -8585741252416550094
+    second: Credit_HUD_Effects_11
+  - first:
+      213: -2965514973027057703
+    second: Credit_HUD_Effects_12
+  - first:
+      213: 1120875705315574418
+    second: Credit_HUD_Effects_13
+  - first:
+      213: -2989743134257198643
+    second: Credit_HUD_Effects_14
+  - first:
+      213: -5669280524900017985
+    second: Credit_HUD_Effects_15
+  - first:
+      213: 5869007256489627078
+    second: Credit_HUD_Effects_16
+  - first:
+      213: 8554599576342479187
+    second: Credit_HUD_Effects_17
+  - first:
+      213: 8473333985587723113
+    second: Credit_HUD_Effects_18
+  - first:
+      213: 7929129220104619961
+    second: Credit_HUD_Effects_19
+  - first:
+      213: 8067379614046212034
+    second: Credit_HUD_Effects_20
+  - first:
+      213: -6284906527973951900
+    second: Credit_HUD_Effects_21
+  - first:
+      213: 8017908629291980132
+    second: Credit_HUD_Effects_22
+  - first:
+      213: -7669422556283526523
+    second: Credit_HUD_Effects_23
+  - first:
+      213: 2882568019137787894
+    second: Credit_HUD_Effects_24
+  - first:
+      213: -2458806672163102558
+    second: Credit_HUD_Effects_25
+  - first:
+      213: 3212588413942834381
+    second: Credit_HUD_Effects_26
+  - first:
+      213: -691705320628981435
+    second: Credit_HUD_Effects_27
+  - first:
+      213: -3440215948029478028
+    second: Credit_HUD_Effects_28
+  - first:
+      213: -1660433671852354557
+    second: Credit_HUD_Effects_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Credit_HUD_Effects_2
+      rect:
+        serializedVersion: 2
+        x: 1481
+        y: 815
+        width: 420
+        height: 242
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d08e08e5aa50e82e0800000000000000
+      internalID: -2121752145156839411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit_HUD_Effects_7
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 698
+        width: 281
+        height: 319
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6ef2c54d7e30a0c0800000000000000
+      internalID: -4566581314391441813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Credit_HUD_Effects_13
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 16
+        width: 657
+        height: 397
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29243bce3862e8f00800000000000000
+      internalID: 1120875705315574418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: b4ca08811e90b26498c58c4b49fc99e5
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Credit_HUD_Effects_0: -2391942176477230308
+      Credit_HUD_Effects_1: 3870276311134156036
+      Credit_HUD_Effects_10: 8043388326058016414
+      Credit_HUD_Effects_11: -8585741252416550094
+      Credit_HUD_Effects_12: -2965514973027057703
+      Credit_HUD_Effects_13: 1120875705315574418
+      Credit_HUD_Effects_14: -2989743134257198643
+      Credit_HUD_Effects_15: -5669280524900017985
+      Credit_HUD_Effects_16: 5869007256489627078
+      Credit_HUD_Effects_17: 8554599576342479187
+      Credit_HUD_Effects_18: 8473333985587723113
+      Credit_HUD_Effects_19: 7929129220104619961
+      Credit_HUD_Effects_2: -2121752145156839411
+      Credit_HUD_Effects_20: 8067379614046212034
+      Credit_HUD_Effects_21: -6284906527973951900
+      Credit_HUD_Effects_22: 8017908629291980132
+      Credit_HUD_Effects_23: -7669422556283526523
+      Credit_HUD_Effects_24: 2882568019137787894
+      Credit_HUD_Effects_25: -2458806672163102558
+      Credit_HUD_Effects_26: 3212588413942834381
+      Credit_HUD_Effects_27: -691705320628981435
+      Credit_HUD_Effects_28: -3440215948029478028
+      Credit_HUD_Effects_29: -1660433671852354557
+      Credit_HUD_Effects_3: -9004606516355426977
+      Credit_HUD_Effects_4: 2531622408089283788
+      Credit_HUD_Effects_5: -7958730035564578279
+      Credit_HUD_Effects_6: -1893998233374312720
+      Credit_HUD_Effects_7: -4566581314391441813
+      Credit_HUD_Effects_8: 1103672906337296036
+      Credit_HUD_Effects_9: -3734352166130232244
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

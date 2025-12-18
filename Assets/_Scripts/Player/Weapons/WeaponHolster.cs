@@ -33,7 +33,7 @@ public class WeaponHolster : MonoBehaviour, IDataPersistance
         
     }
 
-    private void Awake()
+    private void Start()
     {
         GameObject temp = null;
         temp = Instantiate(weaponList.GetWeapon(selectedWeapon), this.transform.parent);

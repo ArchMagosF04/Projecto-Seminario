@@ -119,8 +119,20 @@ public class AutoDialogueManager : MonoBehaviour
     {
         switch (weapon)
         {
-            case 0: return "";
-                
+            case 0:
+                switch (index)
+                {
+                    case 0:
+                        dialogue.color = Color.white;
+                        dialogue.fontSize = 20;
+                        return "Press the Atack Button to throw you Mic foward";
+
+                    case 1:
+                        dialogue.color = Color.cyan;
+                        return "Press the special attack button to swing your Microphone at the enemy 3 times";
+                }
+                break;
+
             case 1:
                 switch (index)
                 {
@@ -166,6 +178,8 @@ public class AutoDialogueManager : MonoBehaviour
         switch (weapon)
         {
             case 0:
+                Core_Mana.ManaIsFull += AdvanceIndex;
+                weaponScript.OnSpecialEnter += AdvanceIndex;
                 break;
             case 1:
                 Core_Mana.ManaIsFull += AdvanceIndex;

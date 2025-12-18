@@ -51,13 +51,14 @@ public class GameManager : MonoBehaviour
     private void GameEnd()
     {
         IsGameActive = false;
-        BeatManager.Instance.ToggleMusic(false);
+        
 
         Time.timeScale = 1;
     }
 
     public void MakePlayerInvincible()
     {
+        BeatManager.Instance.ToggleMusic(false);
         PlayerInstance.Health.ToggleInvincibility(true);
         playerInput.SwitchCurrentActionMap("UI");
     }    

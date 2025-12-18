@@ -207,7 +207,7 @@ MonoBehaviour:
   animationShowDuration: 1
   animationHideDuration: 0.5
   delayEnabled: 1
-  showDelay: 0.25
+  showDelay: 1
   hideDelay: 0
   rotateFrom: {x: 0, y: 0, z: 0}
   rotateTo: {x: 0, y: 0, z: 0}
@@ -718,8 +718,8 @@ MonoBehaviour:
   fadeChildren: 0
   animationShowDuration: 1
   animationHideDuration: 0.5
-  delayEnabled: 0
-  showDelay: 0
+  delayEnabled: 1
+  showDelay: 0.5
   hideDelay: 0
   rotateFrom: {x: 0, y: 0, z: 0}
   rotateTo: {x: 0, y: 0, z: 0}
@@ -749,7 +749,7 @@ MonoBehaviour:
   _sound:
     ID: 1073741867
     _sourceAsset: {fileID: 11400000, guid: 8e0cf3a7aab947c489cfa4bfde381f66, type: 2}
-    <DebugObject>k__BackingField: {fileID: 753972919525892957}
+    <DebugObject>k__BackingField: {fileID: 2574904227891934579}
   _overrideGroup: {fileID: 0}
   _positionMode: 0
   _delay: 0
@@ -1809,8 +1809,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _onlyPlayOnce: 0
   _playOnEnable: 0
-  _stopOnDisable: 0
-  _overrideFadeOut: -1
+  _stopOnDisable: 1
+  _overrideFadeOut: 0
   _sound:
     ID: 268435476
     _sourceAsset: {fileID: 11400000, guid: 8e0cf3a7aab947c489cfa4bfde381f66, type: 2}
@@ -1950,7 +1950,7 @@ MonoBehaviour:
   animationShowDuration: 1
   animationHideDuration: 0.5
   delayEnabled: 1
-  showDelay: 0.5
+  showDelay: 1.5
   hideDelay: 0
   rotateFrom: {x: 0, y: 0, z: 0}
   rotateTo: {x: 0, y: 0, z: 0}
@@ -1980,7 +1980,7 @@ MonoBehaviour:
   _sound:
     ID: 1073741867
     _sourceAsset: {fileID: 11400000, guid: 8e0cf3a7aab947c489cfa4bfde381f66, type: 2}
-    <DebugObject>k__BackingField: {fileID: 753972919525892957}
+    <DebugObject>k__BackingField: {fileID: 6977810423382094959}
   _overrideGroup: {fileID: 0}
   _positionMode: 0
   _delay: 0

@@ -23,7 +23,7 @@ MonoBehaviour:
       Delay: 0
       StartPosition: 0
       EndPosition: 0
-      FadeIn: 1.65
+      FadeIn: 0
       FadeOut: 0
       Weight: 0
     <MasterVolume>k__BackingField: 1
@@ -51,7 +51,7 @@ MonoBehaviour:
       Delay: 0
       StartPosition: 0
       EndPosition: 0
-      FadeIn: 1.683
+      FadeIn: 0
       FadeOut: 0
       Weight: 0
     <MasterVolume>k__BackingField: 1

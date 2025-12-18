@@ -461,7 +461,7 @@ MonoBehaviour:
   _onlyPlayOnce: 0
   _playOnEnable: 0
   _stopOnDisable: 1
-  _overrideFadeOut: -1
+  _overrideFadeOut: 0
   _sound:
     ID: 268435477
     _sourceAsset: {fileID: 11400000, guid: 8e0cf3a7aab947c489cfa4bfde381f66, type: 2}

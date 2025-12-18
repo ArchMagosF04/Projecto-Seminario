@@ -10,7 +10,7 @@ using UnityEngine.UI;
 public class Core_Mana : CoreComponent
 {
     [Header("UI")]
-    [SerializeField] private Image manaBar;
+    [SerializeField] private Image fullManaBar;
     [SerializeField] private MicroBar microBar;
     [SerializeField] private ParticleSystem manaParticles;
 
@@ -29,6 +29,7 @@ public class Core_Mana : CoreComponent
     {
         base.Awake();
         if (microBar != null) microBar.Initialize(maxMana);
+        if (fullManaBar != null) fullManaBar.enabled = false;
     }
 
     private void Start()
@@ -41,24 +42,20 @@ public class Core_Mana : CoreComponent
     {
         currentMana = 0f;
         isManaFull = false;
-        if (manaBar != null)
-        {
-            manaBar.fillAmount = 0f;
-            manaBar.GetComponent<Animator>().SetLayerWeight(1, 0);
-        }
+        if (fullManaBar != null) fullManaBar.enabled = false;
         if (microBar != null) microBar.UpdateBar(currentMana, UpdateAnim.Damage);
     }
 
     public void IncreaseMana(float amount)
     {
         currentMana = Mathf.Clamp(currentMana + amount, 0, maxMana);
-        if (manaBar != null) manaBar.fillAmount = currentMana / maxMana;
         if (microBar != null) microBar.UpdateBar(currentMana, UpdateAnim.Heal);
 
         if (currentMana == maxMana && !isManaFull)
         {
             if (manaFullSound.IsValid()) BroAudio.Play(manaFullSound);
             isManaFull = true;
+            if (fullManaBar != null) fullManaBar.enabled = true;
             if (microBar != null) microBar.UpdateBar(currentMana, UpdateAnim.MaxHP);
             //FullAnimation();
             ManaIsFull();
@@ -73,16 +70,4 @@ public class Core_Mana : CoreComponent
 
     [ContextMenu("FillManaBar")]
     private void TestManaIncrease() => IncreaseMana(100f);
-
-    private void FullAnimation()
-    {
-        manaBar.GetComponent<Animator>().SetLayerWeight(1,1);
-    }
-
-    private void AdvanceAnimation(bool result)
-    {
-        manaBar.GetComponent<Animator>().SetTrigger("onBeat");
-    }
-
-
 }

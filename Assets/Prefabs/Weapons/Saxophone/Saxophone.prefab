@@ -179,18 +179,18 @@ MonoBehaviour:
   onBeatExplosion: {fileID: 3683523877307424702, guid: 7446d05f85e67fa4d9cc84cc913eae2c, type: 3}
   onMissExplosion: {fileID: 1299956898822333465, guid: 580756590f4d0a94c96013ad438efb91, type: 3}
   OnBeatSound:
-    ID: 1073741846
+    ID: 1073741845
     _sourceAsset: {fileID: 11400000, guid: cbc8df1abb012b347a883e90ebfca574, type: 2}
     <DebugObject>k__BackingField: {fileID: 8247627667327183946}
   OnMissSound:
-    ID: 1073741845
-    _sourceAsset: {fileID: 11400000, guid: cbc8df1abb012b347a883e90ebfca574, type: 2}
-    <DebugObject>k__BackingField: {fileID: 8247627667327183946}
-  OnBeatSpecial:
     ID: 1073741846
     _sourceAsset: {fileID: 11400000, guid: cbc8df1abb012b347a883e90ebfca574, type: 2}
     <DebugObject>k__BackingField: {fileID: 8247627667327183946}
+  OnBeatSpecial:
+    ID: 1073741847
+    _sourceAsset: {fileID: 11400000, guid: cbc8df1abb012b347a883e90ebfca574, type: 2}
+    <DebugObject>k__BackingField: {fileID: 8247627667327183946}
   OnMissSpecial:
-    ID: 1073741845
+    ID: 1073741866
     _sourceAsset: {fileID: 11400000, guid: cbc8df1abb012b347a883e90ebfca574, type: 2}
     <DebugObject>k__BackingField: {fileID: 8247627667327183946}

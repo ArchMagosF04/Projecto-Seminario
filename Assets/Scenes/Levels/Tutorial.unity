@@ -3261,6 +3261,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &492692722 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2291639096840245981, guid: fcba1b3eee7ab2644b602a664c668c80, type: 3}
+  m_PrefabInstance: {fileID: 5669978487863697727}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &552177813
 GameObject:
   m_ObjectHideFlags: 0
@@ -8767,6 +8778,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <PlayerInstance>k__BackingField: {fileID: 691852730}
   <IsGameActive>k__BackingField: 1
+  playerInput: {fileID: 0}
   winScreen: {fileID: 1633372594854747213}
   loseScreen: {fileID: 0}
 --- !u!1 &2105499836
@@ -10324,6 +10336,10 @@ PrefabInstance:
       propertyPath: microBar
       value: 
       objectReference: {fileID: 339602439}
+    - target: {fileID: 2536858461151655436, guid: 8e1027bb0e43ba8488f684c185934af9, type: 3}
+      propertyPath: fullManaBar
+      value: 
+      objectReference: {fileID: 492692722}
     - target: {fileID: 5909819851222814441, guid: 8e1027bb0e43ba8488f684c185934af9, type: 3}
       propertyPath: counterTextBox
       value: 
@@ -10881,6 +10897,22 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5834716956870820971, guid: dbb370a9bfec31c4ea210caaba07ea88, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6086099484749483857, guid: dbb370a9bfec31c4ea210caaba07ea88, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6086099484749483857, guid: dbb370a9bfec31c4ea210caaba07ea88, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6086099484749483857, guid: dbb370a9bfec31c4ea210caaba07ea88, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6086099484749483857, guid: dbb370a9bfec31c4ea210caaba07ea88, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}

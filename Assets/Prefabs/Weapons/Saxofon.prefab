@@ -75,7 +75,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1300096155
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: ce6d1105a7089f84db049a8695eb4730, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -171,10 +171,16 @@ MonoBehaviour:
   damageMultOnMiss: 0.25
   speedMultOnMiss: 0.8
   bulletAngle: 0.5
-  statusDuration: 10
   manaOnHit: 3
   damage: 2.5
   speed: 15
-  normalProjectile: {fileID: 720204606514470914, guid: 045612d6e8819194b97a65fbcfb80b18, type: 3}
-  specialProjectile: {fileID: 5792874112058154336, guid: 0842479055063294a9cdd71611f6b2ff, type: 3}
-  soundLibrary: {fileID: 11400000, guid: 5f5e27b0771f1e6419086f8afc665f57, type: 2}
+  normalProjectile: {fileID: 0}
+  specialProjectile: {fileID: 0}
+  onBeatSound:
+    ID: 1073741845
+    _sourceAsset: {fileID: 11400000, guid: cbc8df1abb012b347a883e90ebfca574, type: 2}
+    <DebugObject>k__BackingField: {fileID: 9010585096820931969}
+  missBeatSound:
+    ID: 1073741846
+    _sourceAsset: {fileID: 11400000, guid: cbc8df1abb012b347a883e90ebfca574, type: 2}
+    <DebugObject>k__BackingField: {fileID: 9010585096820931969}

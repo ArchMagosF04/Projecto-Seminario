@@ -234,7 +234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1619,50 +1619,6 @@ MonoBehaviour:
       duration: 0.5
       delay: 0.5
       valueMode: 4
-      floatValue: 5
-      intValue: 0
-      boolValue: 0
-      vector2Value: {x: 0, y: 0}
-      vector3Value: {x: 0, y: 0, z: 0}
-      colorValue: {r: 1, g: 1, b: 1, a: 1}
-      percentValue: 1
-      frequency: 10
-      ease: 1
-      animAxis: 0
-      transformProperty: 0
-  - animationType: 0
-    renderType: 0
-    targetImage: {fileID: 2291639096840245981}
-    targetSprite: {fileID: 0}
-    notBar: 0
-    commands:
-    - execution: 0
-      effect: 1
-      duration: 0
-      delay: 0
-      valueMode: 0
-      floatValue: 5
-      intValue: 0
-      boolValue: 0
-      vector2Value: {x: 0, y: 0}
-      vector3Value: {x: 0, y: 0, z: 0}
-      colorValue: {r: 1, g: 1, b: 1, a: 1}
-      percentValue: 0
-      frequency: 10
-      ease: 1
-      animAxis: 0
-      transformProperty: 0
-  - animationType: 7
-    renderType: 0
-    targetImage: {fileID: 2291639096840245981}
-    targetSprite: {fileID: 0}
-    notBar: 0
-    commands:
-    - execution: 0
-      effect: 1
-      duration: 0.1
-      delay: 0
-      valueMode: 0
       floatValue: 5
       intValue: 0
       boolValue: 0

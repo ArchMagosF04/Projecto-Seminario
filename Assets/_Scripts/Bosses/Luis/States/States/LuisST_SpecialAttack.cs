@@ -35,6 +35,7 @@ public class LuisST_SpecialAttack : LuisState
 
         ChooseBeamsToSkip();
         BeatManager.Instance.intervals[2].OnBeatEvent += PerformAttack;
+        controller.ToggleBossAttackIndicator(true);
     }
 
     public override void UnsubscribeToEvents()
@@ -73,7 +74,11 @@ public class LuisST_SpecialAttack : LuisState
                 beam.FireBeam();
             }
 
+            controller.SnakeController.ShootLowProjectile();
+
             attackPerformed = true;
+
+            controller.ToggleBossAttackIndicator(false);
 
             return;
         }

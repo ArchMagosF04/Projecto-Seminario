@@ -2616,6 +2616,37 @@ Transform:
   - {fileID: 1632780159}
   m_Father: {fileID: 1621675082}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &789717096
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 789717097}
+  m_Layer: 0
+  m_Name: HighAttackSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &789717097
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789717096}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.04, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1576424961}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &792422576
 GameObject:
   m_ObjectHideFlags: 0
@@ -3497,7 +3528,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
   microBar: {fileID: 60556770}
-  maxHealth: 225
+  maxHealth: 275
   hasIFrames: 0
   iFramesDuration: 0
   damageParticles: {fileID: 7233778717429442434, guid: b862ed757906f6f4bb83bb89c09b1105, type: 3}
@@ -4586,11 +4617,15 @@ PrefabInstance:
       objectReference: {fileID: 956656903}
     - target: {fileID: 8286591552104473963, guid: ba6ba94e26adb404daa8f9f93f7adbbb, type: 3}
       propertyPath: timeRequired
-      value: 75
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 8286591552104473963, guid: ba6ba94e26adb404daa8f9f93f7adbbb, type: 3}
+      propertyPath: maxComboRequired
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 8286591552104473963, guid: ba6ba94e26adb404daa8f9f93f7adbbb, type: 3}
       propertyPath: healthPercentageRequired
-      value: 0.85
+      value: 0.9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4983,6 +5018,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1359861628}
+  - {fileID: 789717097}
+  - {fileID: 1873868835}
   m_Father: {fileID: 1609982763}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1576424962
@@ -4997,6 +5034,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 407b44848fbae774eaa9ce6ff1517a63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  highSpawnPoint: {fileID: 789717097}
+  lowSpawnPoint: {fileID: 1873868835}
+  highProjectile: {fileID: 8513061752876924882, guid: a6bc2ea11fed6b1429ca099149c82f3e, type: 3}
+  lowProjectile: {fileID: 937713942130927353, guid: cefd84b1ed7c3c54b91604892c08af04, type: 3}
+  attackSound:
+    ID: 1073741870
+    _sourceAsset: {fileID: 11400000, guid: 8c6c9ff06ba03f3458e2d299c9ef485a, type: 2}
+    <DebugObject>k__BackingField: {fileID: 1576424960}
+  CurrentState: 0
 --- !u!1 &1609982762
 GameObject:
   m_ObjectHideFlags: 0
@@ -5774,6 +5820,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1621675082}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1873868834
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1873868835}
+  m_Layer: 0
+  m_Name: LowAttackSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1873868835
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1873868834}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.61, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1576424961}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1968507355
 GameObject:
   m_ObjectHideFlags: 0
@@ -5965,6 +6042,7 @@ MonoBehaviour:
   rightBeam: {fileID: 1464383425}
   jumpArrows: {fileID: 4894520489039413896, guid: 80e32c47deac56e48bd8b380f29200ee, type: 3}
   jumpArrowsDiagonal: {x: 0.5, y: -1}
+  <SnakeController>k__BackingField: {fileID: 1576424962}
   RightWaypoint: {fileID: 1343837374}
   LeftWaypoint: {fileID: 1866791466}
   <DeathSound>k__BackingField:

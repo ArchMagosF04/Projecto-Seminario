@@ -13,6 +13,7 @@ public class LuisST_Death : LuisState
     public override void OnEnter()
     {
         base.OnEnter();
+        controller.SnakeController.KillSnake();
         GameManager.Instance.MakePlayerInvincible();
         stateMachine.ToggleLockState(true);
         controller.Movement.SetVelocityZero();

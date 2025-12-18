@@ -40,7 +40,7 @@ public class LuisController : MonoBehaviour
     public BeamWeapon rightBeam;
     [SerializeField] private Projectile jumpArrows;
     [SerializeField] private Vector2 jumpArrowsDiagonal;
-    //[field: SerializeField] public SerpentController serpentController { get; private set; }
+    [field: SerializeField] public SnakeController SnakeController { get; private set; }
 
     [field: Header("Waypoints")]
     [field: SerializeField] public Transform RightWaypoint;

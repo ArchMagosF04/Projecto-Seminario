@@ -33,6 +33,7 @@ public class LuisST_NormalAttack : LuisState
     public override void OnExit()
     {
         base.OnExit();
+        controller.ToggleBossAttackIndicator(false);
         BeatManager.Instance.intervals[0].OnBeatEvent -= PerformAttack;
         controller.DesiredAction = LuisController.ActionType.None;
         anim.ResetTrigger("AttackBeat");
@@ -50,13 +51,16 @@ public class LuisST_NormalAttack : LuisState
 
         if (beatTimer == (1 + stats.BeatsBeforeNormalAttack))
         {
+            controller.ToggleBossAttackIndicator(true);
+
             controller.upBeam.SetAim();
 
             if (controller.transform.position.x > 0) controller.leftBeam.SetAim();
             else controller.rightBeam.SetAim();
+
         }
 
-        if (beatTimer >= 2 + stats.BeatsBeforeNormalAttack)
+        if (beatTimer >= (3 + stats.BeatsBeforeNormalAttack))
         {
             anim.SetTrigger("AttackBeat");
 
@@ -64,6 +68,8 @@ public class LuisST_NormalAttack : LuisState
 
             if (controller.transform.position.x > 0) controller.leftBeam.FireBeam();
             else controller.rightBeam.FireBeam();
+
+            controller.SnakeController.ShootHighProjectile();
 
             attackPerformed = true;
         }

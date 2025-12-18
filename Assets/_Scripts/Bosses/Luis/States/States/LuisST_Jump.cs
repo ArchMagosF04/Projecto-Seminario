@@ -24,7 +24,8 @@ public class LuisST_Jump : LuisState
         if (controller.DesiredAction == LuisController.ActionType.Jump)
             controller.DesiredAction = LuisController.ActionType.None;
 
-
+        //if (Random.value > 0.5) controller.SnakeController.ShootHighProjectile();
+        //else controller.SnakeController.ShootLowProjectile();
 
         if (controller.JumpSound.IsValid()) BroAudio.Play(controller.JumpSound);
         

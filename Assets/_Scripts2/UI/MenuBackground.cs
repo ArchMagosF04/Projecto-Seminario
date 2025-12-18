@@ -9,7 +9,7 @@ public class MenuBackground : MonoBehaviour
     [SerializeField] Sprite[] backgroundImages;
     private Image currentImage;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         currentImage = GetComponent<Image>();
         backgroundIndex = PlayerPrefs.GetInt("background");
@@ -45,11 +45,11 @@ public class MenuBackground : MonoBehaviour
 
     public void HideBackground()
     {
-        currentImage.enabled=false;
+        if(currentImage != null) currentImage.enabled = false;
     }
 
     public void ShowBackground()
     {
-        if(backgroundIndex!=0) currentImage.enabled = true;
+        if(backgroundIndex != 0 && currentImage != null) currentImage.enabled = true;
     }
 }

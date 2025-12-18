@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 35d628de44556f248a7eece673e6e0b6
+guid: 0126088744aa7d84fa74e87558896151
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5229806685710580424
-    second: NicoImage_0
+      213: -645692447420315348
+    second: Nico_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: NicoImage_0
+      name: Nico_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 0
-        width: 268
-        height: 398
+        width: 288
+        height: 287
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8cafdb1d871049840800000000000000
-      internalID: 5229806685710580424
+      spriteID: c290c5dd32a0a07f0800000000000000
+      internalID: -645692447420315348
       vertices: []
       indices: 
       edges: []
@@ -131,7 +131,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      NicoImage_0: 5229806685710580424
+      Nico_0: -645692447420315348
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

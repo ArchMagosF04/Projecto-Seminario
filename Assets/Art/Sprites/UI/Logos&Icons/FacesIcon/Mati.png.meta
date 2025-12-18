@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 895466eec0f2d674780547df70fb7f88
+guid: b9f49e17909b8824aaf74ca6c54a06e0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5245174742638681081
-    second: BeluImage_0
+      213: -2920446647526451519
+    second: Mati_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BeluImage_0
+      name: Mati_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 261
-        height: 383
+        width: 279
+        height: 283
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 704ab289c556537b0800000000000000
-      internalID: -5245174742638681081
+      spriteID: 1c694bc4f3d7877d0800000000000000
+      internalID: -2920446647526451519
       vertices: []
       indices: 
       edges: []
@@ -131,7 +131,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BeluImage_0: -5245174742638681081
+      Mati_0: -2920446647526451519
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

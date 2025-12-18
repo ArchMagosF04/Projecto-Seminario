@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9b39919ac31157a4bbbf318a449548c4
+guid: 2cb613a018a43084aa2b54595f0e4227
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3299010394279619229
-    second: EliImage_0
+      213: 8081921474822370226
+    second: Mauri_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EliImage_0
+      name: Mauri_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 267
-        height: 328
+        width: 284
+        height: 282
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 36554aa768f8732d0800000000000000
-      internalID: -3299010394279619229
+      spriteID: 2b37361f2c0c82070800000000000000
+      internalID: 8081921474822370226
       vertices: []
       indices: 
       edges: []
@@ -131,7 +131,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      EliImage_0: -3299010394279619229
+      Mauri_0: 8081921474822370226
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

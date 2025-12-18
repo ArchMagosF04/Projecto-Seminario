@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 10f87f918f4d8ef4d82feafa39a3b5c5
+guid: 4e9542a6fcdf2a74da8ef54fb5ddf64a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4045247818358143705
-    second: Screenshot 2025-09-28 224102_0
+      213: -2187333891596834109
+    second: Belu_0
+  - first:
+      213: 5234282085844209642
+    second: Belu_1
+  - first:
+      213: -208810320621626994
+    second: Belu_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,22 +106,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Screenshot 2025-09-28 224102_0
+      name: Belu_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1
-        width: 281
-        height: 168
+        x: 0
+        y: 0
+        width: 282
+        height: 283
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 1, w: 0}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9da39a9457b932830800000000000000
-      internalID: 4045247818358143705
+      spriteID: 3caa2322a6705a1e0800000000000000
+      internalID: -2187333891596834109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Belu_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 276
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aef4fec13d7e3a840800000000000000
+      internalID: 5234282085844209642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Belu_2
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 229
+        width: 51
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8999e5ae182a1df0800000000000000
+      internalID: -208810320621626994
       vertices: []
       indices: 
       edges: []
@@ -123,7 +171,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 9c6be9c2095e17a4aa070aa18a11a267
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -131,7 +179,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Screenshot 2025-09-28 224102_0: 4045247818358143705
+      Belu_0: -2187333891596834109
+      Belu_1: 5234282085844209642
+      Belu_2: -208810320621626994
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

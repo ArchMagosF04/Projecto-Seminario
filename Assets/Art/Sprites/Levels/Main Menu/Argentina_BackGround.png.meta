@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e9cbb00fc7c7daa4bbfa719004d63e90
+guid: a4ae3d5b9673dc040922b1f792a44919
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6964963508645021828
-    second: LuchoImage_0
+      213: -7759325490624239761
+    second: Argentina_BackGround_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LuchoImage_0
+      name: Argentina_BackGround_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 391
-        height: 340
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 488485eb86588a060800000000000000
-      internalID: 6964963508645021828
+      spriteID: f6765b2b396515490800000000000000
+      internalID: -7759325490624239761
       vertices: []
       indices: 
       edges: []
@@ -123,7 +123,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -131,7 +131,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      LuchoImage_0: 6964963508645021828
+      Argentina_BackGround_0: -7759325490624239761
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

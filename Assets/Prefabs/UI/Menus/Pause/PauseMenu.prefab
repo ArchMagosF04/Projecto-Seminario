@@ -2215,7 +2215,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: -50
+  m_SortingOrder: -1
   m_TargetDisplay: 0
 --- !u!114 &9142761409410520698
 MonoBehaviour:
@@ -5108,7 +5108,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7965862127890843194, guid: f25dcd618d3acd64795bf8bb32edb6c9, type: 3}
       propertyPath: m_text
-      value: Barra Espaciadora
+      value: Space
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9329,7 +9329,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7965862127890843194, guid: f25dcd618d3acd64795bf8bb32edb6c9, type: 3}
       propertyPath: m_text
-      value: Mayusculas
+      value: Shift
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

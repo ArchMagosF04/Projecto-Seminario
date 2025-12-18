@@ -97,7 +97,7 @@ public class LevelStarsTracker : MonoBehaviour, IDataPersistance
         unlockedStarC.SetActive(false);
 
         starAText.text = "Reach a Combo score of " + maxComboRequired;
-        starBText.text = "Beat the boss with over " + healthPercentageRequired * 100f + " health";
+        starBText.text = "Beat the boss with over " + healthPercentageRequired * 100f + "% health";
 
         int minutes = Mathf.FloorToInt(timeRequired / 60);
         int seconds = Mathf.FloorToInt(timeRequired % 60);

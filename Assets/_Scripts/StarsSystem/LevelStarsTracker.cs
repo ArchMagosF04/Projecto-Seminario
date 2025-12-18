@@ -153,6 +153,8 @@ public class LevelStarsTracker : MonoBehaviour, IDataPersistance
             hasPreviouslyAchievedTimeRequirements = gameData.starsGained[starC];
         }
         else Debug.LogError("Wrong Level Key");
+
+        MenuBackground.backgroundIndex = PlayerPrefs.GetInt("background");
     }
 
     public void SaveData(GameData gameData)
@@ -194,11 +196,16 @@ public class LevelStarsTracker : MonoBehaviour, IDataPersistance
 
                 gameData.unlocked2ndLevel = true;
                 gameData.unlockedweapon2 = true;
+                MenuBackground.backgroundIndex = 2;
+                PlayerPrefs.SetInt("background", 2);
+
                 break;
             case "2":
 
                 gameData.unlocked3rdLevel = true;
                 gameData.unlockedweapon3 = true;
+                MenuBackground.backgroundIndex = 3;
+                PlayerPrefs.SetInt("background", 3);
                 break;
             case "3":
 

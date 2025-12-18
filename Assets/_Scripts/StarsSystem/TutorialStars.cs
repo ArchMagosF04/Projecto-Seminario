@@ -37,6 +37,11 @@ public class TutorialStars : MonoBehaviour, IDataPersistance
             gameData.starsGained["Star-Tutorial"] = true;
         }
 
-        if (hasCompletedTheLevel) gameData.unlocked1stLevel = true;
+        if (hasCompletedTheLevel)
+        {
+            gameData.unlocked1stLevel = true;
+            MenuBackground.backgroundIndex = 1;
+            PlayerPrefs.SetInt("background", 1);
+        }
     }
 }

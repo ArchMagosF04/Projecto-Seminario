@@ -12,6 +12,7 @@ public class MenuBackground : MonoBehaviour
     void Start()
     {
         currentImage = GetComponent<Image>();
+        backgroundIndex = PlayerPrefs.GetInt("background");
         SetBackground(backgroundImages[backgroundIndex]);
     }
 

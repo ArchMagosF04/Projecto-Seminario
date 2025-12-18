@@ -296,7 +296,7 @@ Transform:
   m_GameObject: {fileID: 380776355}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.02, y: 2.61, z: 0}
+  m_LocalPosition: {x: 0.02, y: 2.13, z: 0}
   m_LocalScale: {x: 0.79686004, y: 0.70832, z: 0.70832}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -435,8 +435,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.53, y: 1.1}
-  m_SizeDelta: {x: 237.22, y: 157}
+  m_AnchoredPosition: {x: 11.07, y: -3.23}
+  m_SizeDelta: {x: 199.89, y: 136.45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &408666380
 GameObject:
@@ -982,7 +982,7 @@ Transform:
   m_GameObject: {fileID: 924875805}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.7, y: -8.92, z: 0.15360036}
+  m_LocalPosition: {x: -5.7, y: -9.29, z: 0.15360036}
   m_LocalScale: {x: 26.538, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1041,7 +1041,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 924875805}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -1603,7 +1603,7 @@ Transform:
   m_GameObject: {fileID: 1433782189}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 4.31, y: -3.281, z: 0}
+  m_LocalPosition: {x: 4.31, y: -3.671, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1826,8 +1826,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -400.47, y: -203.59}
-  m_SizeDelta: {x: -543.5498, y: -231.4431}
+  m_AnchoredPosition: {x: -400.5061, y: -203.64099}
+  m_SizeDelta: {x: -485.0328, y: -191.4294}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1541651569
 MonoBehaviour:
@@ -1842,15 +1842,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.3443396, b: 0.7323061, a: 0.392}
+  m_Color: {r: 0.8679245, g: 0.19241722, b: 0.5928677, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 6646051478107266786, guid: 2b4b1b766e500d84baaa92398f003591, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1912,7 +1912,7 @@ GameObject:
   - component: {fileID: 1578964655}
   - component: {fileID: 1578964654}
   m_Layer: 19
-  m_Name: Floor (01)
+  m_Name: roof
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1986,7 +1986,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1578964652}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -2047,7 +2047,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1687909699320083565, guid: 8e1027bb0e43ba8488f684c185934af9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.1
+      value: -3.49
       objectReference: {fileID: 0}
     - target: {fileID: 1687909699320083565, guid: 8e1027bb0e43ba8488f684c185934af9, type: 3}
       propertyPath: m_LocalPosition.z

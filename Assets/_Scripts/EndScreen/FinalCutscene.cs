@@ -1,3 +1,4 @@
+using Ami.BroAudio;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,7 +9,7 @@ public class FinalCutscene : MonoBehaviour
     [SerializeField] private SlideSceneSettings[] cutSceneSlides;
 
     [Header("Cutscene Settings")]
-    [SerializeField] private float startDelay = 2.5f;
+    [SerializeField] private float startDelay = 5f;
     [SerializeField] private float finalDelay = 2.5f;
 
     private float timeSinceSlideAppeared;
@@ -18,13 +19,12 @@ public class FinalCutscene : MonoBehaviour
 
     private bool cutsceneEnded;
 
-    private AudioSource endMusicSource;
+    private SoundSource endMusicSource;
 
     private void Awake()
     {
-        endMusicSource = GetComponent<AudioSource>();
+        endMusicSource = GetComponent<SoundSource>();
 
-        endMusicSource.volume = 0f;
         cutsceneEnded = false;
         currentCanvasSlide = 0;
         slideInFullDisplay = false;
@@ -40,7 +40,6 @@ public class FinalCutscene : MonoBehaviour
         endMusicSource.Play();
 
         StartCoroutine(FadeCanvasSlide(startDelay, cutSceneSlides[0].sceneSlide, 0, 1, cutSceneSlides[0].fadeInDuration));
-        StartCoroutine(MusicFade(startDelay, 0, 1, cutSceneSlides[0].fadeInDuration));
     }
 
     private void Update()
@@ -62,7 +61,7 @@ public class FinalCutscene : MonoBehaviour
             else
             {
                 cutsceneEnded = true;
-                StartCoroutine(MusicFade(startDelay, 1, 0, cutSceneSlides[currentCanvasSlide].fadeInDuration));
+                endMusicSource.Stop();
                 StartCoroutine(FadeCanvasSlide(cutSceneSlides[currentCanvasSlide].fadeInDuration / 2, cutSceneSlides[currentCanvasSlide].sceneSlide, 1, 0, cutSceneSlides[currentCanvasSlide].fadeInDuration));
             }
         }
@@ -91,23 +90,5 @@ public class FinalCutscene : MonoBehaviour
             yield return new WaitForSeconds(finalDelay);
             AsyncSceneLoader.Instance.LoadLevel(0);
         }
-    }
-
-    private IEnumerator MusicFade(float initialDelay, float start, float end, float duration)
-    {
-        yield return new WaitForSeconds(initialDelay);
-
-        float elapsedTime = 0f;
-
-        while (elapsedTime < duration)
-        {
-            elapsedTime += Time.deltaTime;
-            endMusicSource.volume = Mathf.Lerp(start, end, elapsedTime / duration);
-
-            yield return null;
-        }
-
-        endMusicSource.volume = end;
-        slideInFullDisplay = true;
     }
 }

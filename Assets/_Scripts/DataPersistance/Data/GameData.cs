@@ -65,6 +65,18 @@ public class GameData
         return percentageCompleted;
     }
 
+    public int GetAmountOfUnlockedStars()
+    {
+        int amount = 0;
+
+        foreach(bool starUnlocked in starsGained.Values)
+        {
+            if (starUnlocked) amount++;
+        }
+
+        return amount;
+    }
+
     private void InitializeDictionary()
     {
         starsGained.Add("Star-Tutorial", false);

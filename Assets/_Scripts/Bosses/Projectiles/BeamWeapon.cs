@@ -1,3 +1,4 @@
+using Ami.BroAudio;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -33,6 +34,10 @@ public class BeamWeapon : MonoBehaviour
     [Header("FireMode Look")]
     [SerializeField] private float f_size = 0.35f;
     [SerializeField] private float f_startSize = 0.15f;
+
+    [Header("Sounds")]
+    [SerializeField] private SoundID aimSound;
+    [SerializeField] private SoundID shootSound;
 
 
     private float startFireTime;
@@ -82,6 +87,7 @@ public class BeamWeapon : MonoBehaviour
         lineRenderer.enabled = true;
         beamState = BeamState.Aiming;
         SetBeamAimLook();
+        if (aimSound.IsValid()) BroAudio.Play(aimSound);
     }
 
     private void Draw2DRay(Vector2 startPos, Vector2 endPos)
@@ -94,6 +100,8 @@ public class BeamWeapon : MonoBehaviour
     {
         beamState = BeamState.Fire;
         SetBeamAttackLook();
+
+        if (shootSound.IsValid()) BroAudio.Play(shootSound);
 
         RaycastHit2D hit = Physics2D.Raycast(transform.position, beamDirection.normalized, 40, targetMask);
 

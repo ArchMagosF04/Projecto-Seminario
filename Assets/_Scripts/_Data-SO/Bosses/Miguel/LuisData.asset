@@ -15,6 +15,6 @@ MonoBehaviour:
   <JumpForce>k__BackingField: 36
   <BeatsSpentOnIdle>k__BackingField: 4
   <NormalAttackChance>k__BackingField: 0
-  <SpecialAttackChance>k__BackingField: 0
+  <SpecialAttackChance>k__BackingField: 1
   <BeatsBeforeNormalAttack>k__BackingField: 1
   <BeatsBeforeSpecialAttack>k__BackingField: 2

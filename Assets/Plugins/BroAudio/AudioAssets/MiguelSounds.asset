@@ -99,27 +99,91 @@ MonoBehaviour:
     SnapToFullVolume: 0
   - <Name>k__BackingField: ChargeLaser
     <ID>k__BackingField: 1073741871
-    MulticlipsPlayMode: 0
+    MulticlipsPlayMode: 1
     _group: {fileID: 0}
     Clips:
-    - AudioClip: {fileID: 8300000, guid: 528fc19a2fc827d44b4d050ddb850bfb, type: 3}
+    - AudioClip: {fileID: 8300000, guid: 13e956084a960e74d8d8d57144ed8a3a, type: 3}
       Volume: 1
       Delay: 0
-      StartPosition: 0.048
-      EndPosition: 1.058
-      FadeIn: 0.018
-      FadeOut: 0.275
+      StartPosition: 0
+      EndPosition: 35.731
+      FadeIn: 0
+      FadeOut: 0
       Weight: 0
-    <MasterVolume>k__BackingField: 1
+    - AudioClip: {fileID: 8300000, guid: 13e956084a960e74d8d8d57144ed8a3a, type: 3}
+      Volume: 1
+      Delay: 0
+      StartPosition: 0.249
+      EndPosition: 35.505
+      FadeIn: 0
+      FadeOut: 0
+      Weight: 0
+    - AudioClip: {fileID: 8300000, guid: 13e956084a960e74d8d8d57144ed8a3a, type: 3}
+      Volume: 1
+      Delay: 0
+      StartPosition: 1.087
+      EndPosition: 34.667
+      FadeIn: 0
+      FadeOut: 0
+      Weight: 0
+    - AudioClip: {fileID: 8300000, guid: 13e956084a960e74d8d8d57144ed8a3a, type: 3}
+      Volume: 1
+      Delay: 0
+      StartPosition: 1.359
+      EndPosition: 34.304
+      FadeIn: 0
+      FadeOut: 0
+      Weight: 0
+    - AudioClip: {fileID: 8300000, guid: 13e956084a960e74d8d8d57144ed8a3a, type: 3}
+      Volume: 1
+      Delay: 0
+      StartPosition: 1.744
+      EndPosition: 33.942
+      FadeIn: 0
+      FadeOut: 0
+      Weight: 0
+    - AudioClip: {fileID: 8300000, guid: 13e956084a960e74d8d8d57144ed8a3a, type: 3}
+      Volume: 1
+      Delay: 0
+      StartPosition: 2.128
+      EndPosition: 33.63
+      FadeIn: 0
+      FadeOut: 0
+      Weight: 0
+    - AudioClip: {fileID: 8300000, guid: 13e956084a960e74d8d8d57144ed8a3a, type: 3}
+      Volume: 1
+      Delay: 0
+      StartPosition: 2.801
+      EndPosition: 33.063
+      FadeIn: 0
+      FadeOut: 0
+      Weight: 0
+    - AudioClip: {fileID: 8300000, guid: 13e956084a960e74d8d8d57144ed8a3a, type: 3}
+      Volume: 1
+      Delay: 0
+      StartPosition: 3.178
+      EndPosition: 32.58
+      FadeIn: 0
+      FadeOut: 0
+      Weight: 0
+    - AudioClip: {fileID: 8300000, guid: 13e956084a960e74d8d8d57144ed8a3a, type: 3}
+      Volume: 1
+      Delay: 0
+      StartPosition: 6.872
+      EndPosition: 28.04
+      FadeIn: 0
+      FadeOut: 0.546
+      Weight: 0
+    <MasterVolume>k__BackingField: 0.3319737
     <Loop>k__BackingField: 0
     <SeamlessLoop>k__BackingField: 0
     <TransitionTime>k__BackingField: 0
     <SpatialSetting>k__BackingField: {fileID: 0}
     <Priority>k__BackingField: 128
-    <Pitch>k__BackingField: 0.9742
+    <Pitch>k__BackingField: 1
     <PitchRandomRange>k__BackingField: 0.11859995
     <VolumeRandomRange>k__BackingField: 0
-    <RandomFlags>k__BackingField: 1
+    <RandomFlags>k__BackingField: 0
     SeamlessTransitionType: 0
     TransitionTempo:
       BPM: 0
@@ -146,6 +210,34 @@ MonoBehaviour:
     <Priority>k__BackingField: 128
     <Pitch>k__BackingField: 1.02215
     <PitchRandomRange>k__BackingField: 0.12769997
+    <VolumeRandomRange>k__BackingField: 0
+    <RandomFlags>k__BackingField: 1
+    SeamlessTransitionType: 0
+    TransitionTempo:
+      BPM: 0
+      Beats: 0
+    SnapToFullVolume: 0
+  - <Name>k__BackingField: AltCharge
+    <ID>k__BackingField: 1073741873
+    MulticlipsPlayMode: 0
+    _group: {fileID: 0}
+    Clips:
+    - AudioClip: {fileID: 8300000, guid: 811e40c547d257443b4fb7c14de5ddf3, type: 3}
+      Volume: 0.6811625
+      Delay: 0
+      StartPosition: 0.052
+      EndPosition: 0.052
+      FadeIn: 0
+      FadeOut: 0.052
+      Weight: 0
+    <MasterVolume>k__BackingField: 1
+    <Loop>k__BackingField: 0
+    <SeamlessLoop>k__BackingField: 0
+    <TransitionTime>k__BackingField: 0
+    <SpatialSetting>k__BackingField: {fileID: 0}
+    <Priority>k__BackingField: 128
+    <Pitch>k__BackingField: 0.89435
+    <PitchRandomRange>k__BackingField: 0.034700036
     <VolumeRandomRange>k__BackingField: 0
     <RandomFlags>k__BackingField: 1
     SeamlessTransitionType: 0

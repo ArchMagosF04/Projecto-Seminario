@@ -35,7 +35,9 @@ public class LuisController : MonoBehaviour
 
     [Header("Attack References")]
     public BeamWeapon[] skyBeams;
-    public BeamWeapon[] bodyBeams;
+    public BeamWeapon upBeam;
+    public BeamWeapon leftBeam;
+    public BeamWeapon rightBeam;
     [SerializeField] private Projectile jumpArrows;
     [SerializeField] private Vector2 jumpArrowsDiagonal;
     //[field: SerializeField] public SerpentController serpentController { get; private set; }
@@ -159,6 +161,7 @@ public class LuisController : MonoBehaviour
         newNote3.transform.right = direction3;
 
 
+        if (ShootSound.IsValid()) BroAudio.Play(ShootSound);
         newNote1.LaunchProjectile(direction1.normalized);
         newNote2.LaunchProjectile(direction2.normalized);
         newNote3.LaunchProjectile(direction3.normalized);

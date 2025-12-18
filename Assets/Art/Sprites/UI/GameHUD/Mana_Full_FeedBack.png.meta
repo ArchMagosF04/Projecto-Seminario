@@ -1,0 +1,340 @@
+fileFormatVersion: 2
+guid: 3f2d6a1e525dafb40907672dad28983d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6500695531201075842
+    second: Mana_Full_FeedBack_0
+  - first:
+      213: -1695342771457557012
+    second: Mana_Full_FeedBack_1
+  - first:
+      213: 1103823895159420532
+    second: Mana_Full_FeedBack_2
+  - first:
+      213: 8959236628858962677
+    second: Mana_Full_FeedBack_3
+  - first:
+      213: 4888339054547261657
+    second: Mana_Full_FeedBack_4
+  - first:
+      213: -267749477170840721
+    second: Mana_Full_FeedBack_5
+  - first:
+      213: -7513932414283200353
+    second: Mana_Full_FeedBack_6
+  - first:
+      213: 4612641777167031381
+    second: Mana_Full_FeedBack_7
+  - first:
+      213: 3195202397554906187
+    second: Mana_Full_FeedBack_8
+  - first:
+      213: 8982935994856167584
+    second: Mana_Full_FeedBack_9
+  - first:
+      213: 4700090761757055775
+    second: Mana_Full_FeedBack_10
+  - first:
+      213: -6081101619431262204
+    second: Mana_Full_FeedBack_11
+  - first:
+      213: -2396738226238774913
+    second: Mana_Full_FeedBack_12
+  - first:
+      213: -1313915735540519200
+    second: Mana_Full_FeedBack_13
+  - first:
+      213: -7147850376310576078
+    second: Mana_Full_FeedBack_14
+  - first:
+      213: -5545331440528998939
+    second: Mana_Full_FeedBack_15
+  - first:
+      213: 1877250767736333655
+    second: Mana_Full_FeedBack_16
+  - first:
+      213: -5457391347674578540
+    second: Mana_Full_FeedBack_17
+  - first:
+      213: 1892509536820417729
+    second: Mana_Full_FeedBack_18
+  - first:
+      213: 8032951810508855892
+    second: Mana_Full_FeedBack_19
+  - first:
+      213: -6156394557823862304
+    second: Mana_Full_FeedBack_20
+  - first:
+      213: -3030369520912436539
+    second: Mana_Full_FeedBack_21
+  - first:
+      213: -6208561333238769905
+    second: Mana_Full_FeedBack_22
+  - first:
+      213: -1754458557699341969
+    second: Mana_Full_FeedBack_23
+  - first:
+      213: 8205043071702553862
+    second: Mana_Full_FeedBack_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Mana_Full_FeedBack_0
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 19
+        width: 319
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28a953ab42c173a50800000000000000
+      internalID: 6500695531201075842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mana_Full_FeedBack_3
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 19
+        width: 318
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f28ec1fe3a955c70800000000000000
+      internalID: 8959236628858962677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mana_Full_FeedBack_5
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 23
+        width: 312
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6b7f64e443c84cf0800000000000000
+      internalID: -267749477170840721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mana_Full_FeedBack_7
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 24
+        width: 298
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55cda2ce145630040800000000000000
+      internalID: 4612641777167031381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mana_Full_FeedBack_9
+      rect:
+        serializedVersion: 2
+        x: 1375
+        y: 19
+        width: 318
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a8d87591bcc9ac70800000000000000
+      internalID: 8982935994856167584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mana_Full_FeedBack_11
+      rect:
+        serializedVersion: 2
+        x: 1721
+        y: 25
+        width: 298
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4083fb2db469b9ba0800000000000000
+      internalID: -6081101619431262204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 67949ff89ffdf6e4b9762e75ddac12b0
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Mana_Full_FeedBack_0: 6500695531201075842
+      Mana_Full_FeedBack_1: -1695342771457557012
+      Mana_Full_FeedBack_10: 4700090761757055775
+      Mana_Full_FeedBack_11: -6081101619431262204
+      Mana_Full_FeedBack_12: -2396738226238774913
+      Mana_Full_FeedBack_13: -1313915735540519200
+      Mana_Full_FeedBack_14: -7147850376310576078
+      Mana_Full_FeedBack_15: -5545331440528998939
+      Mana_Full_FeedBack_16: 1877250767736333655
+      Mana_Full_FeedBack_17: -5457391347674578540
+      Mana_Full_FeedBack_18: 1892509536820417729
+      Mana_Full_FeedBack_19: 8032951810508855892
+      Mana_Full_FeedBack_2: 1103823895159420532
+      Mana_Full_FeedBack_20: -6156394557823862304
+      Mana_Full_FeedBack_21: -3030369520912436539
+      Mana_Full_FeedBack_22: -6208561333238769905
+      Mana_Full_FeedBack_23: -1754458557699341969
+      Mana_Full_FeedBack_24: 8205043071702553862
+      Mana_Full_FeedBack_3: 8959236628858962677
+      Mana_Full_FeedBack_4: 4888339054547261657
+      Mana_Full_FeedBack_5: -267749477170840721
+      Mana_Full_FeedBack_6: -7513932414283200353
+      Mana_Full_FeedBack_7: 4612641777167031381
+      Mana_Full_FeedBack_8: 3195202397554906187
+      Mana_Full_FeedBack_9: 8982935994856167584
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

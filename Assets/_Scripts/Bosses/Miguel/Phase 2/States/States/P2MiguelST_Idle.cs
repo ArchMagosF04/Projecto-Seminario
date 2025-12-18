@@ -8,7 +8,7 @@ public class P2MiguelST_Idle : P2MiguelState
 
     private Core_Movement movement;
 
-    public P2MiguelST_Idle(Phase2MiguelController controller, StateMachine stateMachine, P2MiguelStats stats, Animator anim, string animBoolName) : base(controller, stateMachine, stats, anim, animBoolName)
+    public P2MiguelST_Idle(Phase2MiguelController controller, StateMachine stateMachine, LuisStats stats, Animator anim, string animBoolName) : base(controller, stateMachine, stats, anim, animBoolName)
     {
         movement = core.GetCoreComponent<Core_Movement>();
     }

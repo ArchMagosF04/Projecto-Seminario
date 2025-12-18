@@ -6,9 +6,9 @@ public class P2MiguelState : BaseState
 {
     protected Phase2MiguelController controller;
     protected Core core;
-    protected P2MiguelStats stats;
+    protected LuisStats stats;
 
-    public P2MiguelState(Phase2MiguelController controller, StateMachine stateMachine, P2MiguelStats stats, Animator anim, string animBoolName) : base(stateMachine, anim, animBoolName)
+    public P2MiguelState(Phase2MiguelController controller, StateMachine stateMachine, LuisStats stats, Animator anim, string animBoolName) : base(stateMachine, anim, animBoolName)
     {
         this.controller = controller;
         core = controller.Core;

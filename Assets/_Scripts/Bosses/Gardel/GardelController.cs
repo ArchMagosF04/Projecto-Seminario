@@ -123,7 +123,7 @@ public class GardelController : MonoBehaviour
     {
         if (!GameManager.Instance.IsGameActive)
         {
-            movement.SetVelocityX(0);
+            //movement.SetVelocityX(0);
             return;
         }
 

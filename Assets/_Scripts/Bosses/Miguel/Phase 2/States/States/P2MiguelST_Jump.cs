@@ -8,7 +8,7 @@ public class P2MiguelST_Jump : P2MiguelState
     private Core_Movement movement;
     private Core_CollisionSenses collisionSenses;
 
-    public P2MiguelST_Jump(Phase2MiguelController controller, StateMachine stateMachine, P2MiguelStats stats, Animator anim, string animBoolName) : base(controller, stateMachine, stats, anim, animBoolName)
+    public P2MiguelST_Jump(Phase2MiguelController controller, StateMachine stateMachine, LuisStats stats, Animator anim, string animBoolName) : base(controller, stateMachine, stats, anim, animBoolName)
     {
         movement = core.GetCoreComponent<Core_Movement>();
         collisionSenses = core.GetCoreComponent<Core_CollisionSenses>();

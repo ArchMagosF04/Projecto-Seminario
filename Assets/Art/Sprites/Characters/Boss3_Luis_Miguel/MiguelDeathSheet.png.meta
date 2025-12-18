@@ -1,0 +1,1139 @@
+fileFormatVersion: 2
+guid: 3233eea90d0386d4dac041a9b5b18d2e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5983097552699001390
+    second: MiguelDeathSheet_0
+  - first:
+      213: -6786531190527211325
+    second: MiguelDeathSheet_1
+  - first:
+      213: -5187028620090593884
+    second: MiguelDeathSheet_2
+  - first:
+      213: 5018108119130686393
+    second: MiguelDeathSheet_3
+  - first:
+      213: -4500922034857883421
+    second: MiguelDeathSheet_4
+  - first:
+      213: -6577827659410620078
+    second: MiguelDeathSheet_5
+  - first:
+      213: -4799651666923658334
+    second: MiguelDeathSheet_6
+  - first:
+      213: -4089994006685617597
+    second: MiguelDeathSheet_7
+  - first:
+      213: -2272421962413194903
+    second: MiguelDeathSheet_8
+  - first:
+      213: -3236309306903024161
+    second: MiguelDeathSheet_9
+  - first:
+      213: -8851183178088733818
+    second: MiguelDeathSheet_10
+  - first:
+      213: -773618925205784877
+    second: MiguelDeathSheet_11
+  - first:
+      213: -5568406900346403717
+    second: MiguelDeathSheet_12
+  - first:
+      213: 2747232345614458997
+    second: MiguelDeathSheet_13
+  - first:
+      213: 5621000248417174676
+    second: MiguelDeathSheet_14
+  - first:
+      213: -2228417333293885274
+    second: MiguelDeathSheet_15
+  - first:
+      213: 6730413187670756028
+    second: MiguelDeathSheet_16
+  - first:
+      213: -5733161833166123211
+    second: MiguelDeathSheet_17
+  - first:
+      213: 4892585019698591207
+    second: MiguelDeathSheet_18
+  - first:
+      213: 619367407863432165
+    second: MiguelDeathSheet_19
+  - first:
+      213: 5890471727915517654
+    second: MiguelDeathSheet_20
+  - first:
+      213: -1425643922421194563
+    second: MiguelDeathSheet_21
+  - first:
+      213: 7870241531245329830
+    second: MiguelDeathSheet_22
+  - first:
+      213: -5821555981627742301
+    second: MiguelDeathSheet_23
+  - first:
+      213: -45321049863189449
+    second: MiguelDeathSheet_24
+  - first:
+      213: 3660646504039928369
+    second: MiguelDeathSheet_25
+  - first:
+      213: 6393741326069895330
+    second: MiguelDeathSheet_26
+  - first:
+      213: -4349578771232288240
+    second: MiguelDeathSheet_27
+  - first:
+      213: 3019054705850445098
+    second: MiguelDeathSheet_28
+  - first:
+      213: -4338396525893556910
+    second: MiguelDeathSheet_29
+  - first:
+      213: -867373392191688825
+    second: MiguelDeathSheet_30
+  - first:
+      213: -1105300927733202991
+    second: MiguelDeathSheet_31
+  - first:
+      213: -1109866446206266578
+    second: MiguelDeathSheet_32
+  - first:
+      213: -2907432351842766046
+    second: MiguelDeathSheet_33
+  - first:
+      213: -5952308089826195385
+    second: MiguelDeathSheet_34
+  - first:
+      213: -4156367011952007177
+    second: MiguelDeathSheet_35
+  - first:
+      213: -3339496736045772803
+    second: MiguelDeathSheet_36
+  - first:
+      213: -6439507817110179427
+    second: MiguelDeathSheet_37
+  - first:
+      213: -3357950512969987626
+    second: MiguelDeathSheet_38
+  - first:
+      213: -6129495472269214947
+    second: MiguelDeathSheet_39
+  - first:
+      213: 7598543852646135635
+    second: MiguelDeathSheet_40
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MiguelDeathSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2810
+        width: 562
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 240eb2f5816a79946b6392e5797bbfd7
+      internalID: 751938155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiguelDeathSheet_1
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 2810
+        width: 562
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63d6ecd8d6001674ba4c3dcb0d3511b4
+      internalID: -682266820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiguelDeathSheet_2
+      rect:
+        serializedVersion: 2
+        x: 1124
+        y: 2810
+        width: 562
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0a17316bc7b71e478bbd96039ba5935
+      internalID: -2071272502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiguelDeathSheet_3
+      rect:
+        serializedVersion: 2
+        x: 1686
+        y: 2810
+        width: 562
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66c02276f05e3194d866faecf8498bdc
+      internalID: -1050653521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiguelDeathSheet_4
+      rect:
+        serializedVersion: 2
+        x: 2248
+        y: 2810
+        width: 562
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ebe9ab14506f4e4193f6fdf19ef6c15
+      internalID: -989203329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiguelDeathSheet_5
+      rect:
+        serializedVersion: 2
+        x: 2810
+        y: 2810
+        width: 562
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4549a6545e4f6c244ac8188917e8f11f
+      internalID: 1849400964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiguelDeathSheet_6
+      rect:
+        serializedVersion: 2
+        x: 3372
+        y: 2810
+        width: 562
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d4bb846352a124449a5282655d9fc73
+      internalID: 1530418327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiguelDeathSheet_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2248
+        width: 562
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8af985fc7be83c42900cfdea27ca3f0
+      internalID: -536849440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiguelDeathSheet_8
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 2248
+        width: 562
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 263cf62a145a0844eae44f878d30e425
+      internalID: -1205391291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiguelDeathSheet_9
+      rect:
+        serializedVersion: 2
+        x: 1124
+        y: 2248
+        width: 562
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28b7991eb178923458b14b7ab855e21b
+      internalID: -1530595485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiguelDeathSheet_10
+      rect:
+        serializedVersion: 2
+        x: 1686
+        y: 2248
+        width: 562
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d25674f134ba36a47a742015c1186727
+      internalID: -409495811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiguelDeathSheet_11
+      rect:
+        serializedVersion: 2
+        x: 2248
+        y: 2248
+        width: 562
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4723e9eb38f2c304589ee39005329a2d
+      internalID: 328098678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiguelDeathSheet_12
+      rect:
+        serializedVersion: 2
+        x: 2810
+        y: 2248
+        width: 562
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a82f6fbb50bcec04bbaec6b9d2994422
+      internalID: -2102914355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiguelDeathSheet_13
+      rect:
+        serializedVersion: 2
+        x: 3372
+        y: 2248
+        width: 562
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b806158ad7154d469f813c392e5d638
+      internalID: -2050103224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiguelDeathSheet_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1686
+        width: 562
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf5039ea10a0c704f90caad6c8247ca8
+      internalID: 888383090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiguelDeathSheet_15
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 1686
+        width: 562
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33cfcca69c383b14e8336de645129137
+      internalID: -1912644484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiguelDeathSheet_16
+      rect:
+        serializedVersion: 2
+        x: 1124
+        y: 1686
+        width: 562
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee0edf66f5fb168488552ee4bd33f3a6
+      internalID: 1326873794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiguelDeathSheet_17
+      rect:
+        serializedVersion: 2
+        x: 1686
+        y: 1686
+        width: 562
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6476cc3b89bddd042a58d09da10628de
+      internalID: -1664126314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiguelDeathSheet_18
+      rect:
+        serializedVersion: 2
+        x: 2248
+        y: 1686
+        width: 562
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0800662a2a4c0d4dbe1bbbdf5ed7884
+      internalID: 259565422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiguelDeathSheet_19
+      rect:
+        serializedVersion: 2
+        x: 2810
+        y: 1686
+        width: 562
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e55329aad717ff849bacc5ca6840308b
+      internalID: -94555640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiguelDeathSheet_20
+      rect:
+        serializedVersion: 2
+        x: 3372
+        y: 1686
+        width: 562
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5386b24a3a1de9d44aceec0a2d8358d5
+      internalID: -1438793564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiguelDeathSheet_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1124
+        width: 562
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 950d180b031cbf84bbf9a035ee3f36fe
+      internalID: -1192189972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiguelDeathSheet_22
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 1124
+        width: 562
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d7c6e6b0a5be204fa06c8ea88330b1b
+      internalID: 1650965053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiguelDeathSheet_23
+      rect:
+        serializedVersion: 2
+        x: 1124
+        y: 1124
+        width: 562
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fb38bdb2543e5f4bb1ac366f15ee38e
+      internalID: 1071642919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiguelDeathSheet_24
+      rect:
+        serializedVersion: 2
+        x: 1686
+        y: 1124
+        width: 562
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca7b946150fa8eb47b8c8cc3b17cb6a2
+      internalID: 1789980721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiguelDeathSheet_25
+      rect:
+        serializedVersion: 2
+        x: 2248
+        y: 1124
+        width: 562
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1671b9beabe24394ea0e97057dfc5b32
+      internalID: 1205358166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiguelDeathSheet_26
+      rect:
+        serializedVersion: 2
+        x: 2810
+        y: 1124
+        width: 562
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d0bdd3754f8c95499b57690c3e0256b
+      internalID: -282518727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiguelDeathSheet_27
+      rect:
+        serializedVersion: 2
+        x: 3372
+        y: 1124
+        width: 562
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b83a6167b53a3f4d87d841de843a1bd
+      internalID: -400014404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiguelDeathSheet_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 562
+        width: 562
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ee449a4e54a3854aa1b4aa98e02964b
+      internalID: 836596455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiguelDeathSheet_29
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 562
+        width: 562
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c529986e6f84edc46a1d8071968bd563
+      internalID: -698332467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiguelDeathSheet_30
+      rect:
+        serializedVersion: 2
+        x: 1124
+        y: 562
+        width: 562
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3cd61a7d52327c47b4ca13175deaefc
+      internalID: 304378997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiguelDeathSheet_31
+      rect:
+        serializedVersion: 2
+        x: 1686
+        y: 562
+        width: 562
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1843c6ab12d5764aba8073ddf078123
+      internalID: -2131663043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiguelDeathSheet_32
+      rect:
+        serializedVersion: 2
+        x: 2248
+        y: 562
+        width: 562
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6f1386545312c0479b0ddb061ddcffe
+      internalID: -1741180027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiguelDeathSheet_33
+      rect:
+        serializedVersion: 2
+        x: 2810
+        y: 562
+        width: 562
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a15c3aea328635a45a4e7add332a8a96
+      internalID: -1680375413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiguelDeathSheet_34
+      rect:
+        serializedVersion: 2
+        x: 3372
+        y: 562
+        width: 562
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18f1adf4219e6c245b2bad0c61b4f0d3
+      internalID: 379789944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiguelDeathSheet_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 562
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 436eba4b72426df4d9ebd6b430820cbd
+      internalID: 285249393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiguelDeathSheet_36
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 0
+        width: 562
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2238ad33af05c394ca0d8de6735c19aa
+      internalID: 259744459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiguelDeathSheet_37
+      rect:
+        serializedVersion: 2
+        x: 1124
+        y: 0
+        width: 562
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a50cb91c714c5044996a9d727c097631
+      internalID: 1643776319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiguelDeathSheet_38
+      rect:
+        serializedVersion: 2
+        x: 1686
+        y: 0
+        width: 562
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b815d77574721c64e826a9904c88ccbd
+      internalID: -1210889046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiguelDeathSheet_39
+      rect:
+        serializedVersion: 2
+        x: 2248
+        y: 0
+        width: 562
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 585e2023232a98341b740e1954e9afb0
+      internalID: -1402564885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiguelDeathSheet_40
+      rect:
+        serializedVersion: 2
+        x: 2810
+        y: 0
+        width: 562
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55ee899fb4887014ab473bd2da187494
+      internalID: 763090405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: e239609648e73f2489b9ba8fed8dcee7
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      MiguelDeathSheet_0: 751938155
+      MiguelDeathSheet_1: -682266820
+      MiguelDeathSheet_10: -409495811
+      MiguelDeathSheet_11: 328098678
+      MiguelDeathSheet_12: -2102914355
+      MiguelDeathSheet_13: -2050103224
+      MiguelDeathSheet_14: 888383090
+      MiguelDeathSheet_15: -1912644484
+      MiguelDeathSheet_16: 1326873794
+      MiguelDeathSheet_17: -1664126314
+      MiguelDeathSheet_18: 259565422
+      MiguelDeathSheet_19: -94555640
+      MiguelDeathSheet_2: -2071272502
+      MiguelDeathSheet_20: -1438793564
+      MiguelDeathSheet_21: -1192189972
+      MiguelDeathSheet_22: 1650965053
+      MiguelDeathSheet_23: 1071642919
+      MiguelDeathSheet_24: 1789980721
+      MiguelDeathSheet_25: 1205358166
+      MiguelDeathSheet_26: -282518727
+      MiguelDeathSheet_27: -400014404
+      MiguelDeathSheet_28: 836596455
+      MiguelDeathSheet_29: -698332467
+      MiguelDeathSheet_3: -1050653521
+      MiguelDeathSheet_30: 304378997
+      MiguelDeathSheet_31: -2131663043
+      MiguelDeathSheet_32: -1741180027
+      MiguelDeathSheet_33: -1680375413
+      MiguelDeathSheet_34: 379789944
+      MiguelDeathSheet_35: 285249393
+      MiguelDeathSheet_36: 259744459
+      MiguelDeathSheet_37: 1643776319
+      MiguelDeathSheet_38: -1210889046
+      MiguelDeathSheet_39: -1402564885
+      MiguelDeathSheet_4: -989203329
+      MiguelDeathSheet_40: 763090405
+      MiguelDeathSheet_5: 1849400964
+      MiguelDeathSheet_6: 1530418327
+      MiguelDeathSheet_7: -536849440
+      MiguelDeathSheet_8: -1205391291
+      MiguelDeathSheet_9: -1530595485
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

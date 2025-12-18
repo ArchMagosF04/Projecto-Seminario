@@ -1,0 +1,514 @@
+fileFormatVersion: 2
+guid: 9db44f4c5670ac14b8e0782aca82ccd8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3305322318477341273
+    second: SnakeDeathSheet1_0
+  - first:
+      213: 1352046123461505658
+    second: SnakeDeathSheet1_1
+  - first:
+      213: 8357236117945114911
+    second: SnakeDeathSheet1_2
+  - first:
+      213: -6614080798845363883
+    second: SnakeDeathSheet1_3
+  - first:
+      213: -1999518953673431736
+    second: SnakeDeathSheet1_4
+  - first:
+      213: -6975702686034981019
+    second: SnakeDeathSheet1_5
+  - first:
+      213: 6916649315761903160
+    second: SnakeDeathSheet1_6
+  - first:
+      213: -8656463270785066085
+    second: SnakeDeathSheet1_7
+  - first:
+      213: 6407901380315002064
+    second: SnakeDeathSheet1_8
+  - first:
+      213: 8464819159130835689
+    second: SnakeDeathSheet1_9
+  - first:
+      213: 9038986890913977165
+    second: SnakeDeathSheet1_10
+  - first:
+      213: 1912143810697434389
+    second: SnakeDeathSheet1_11
+  - first:
+      213: -6037572310589917200
+    second: SnakeDeathSheet1_12
+  - first:
+      213: 1766990439445552919
+    second: SnakeDeathSheet1_13
+  - first:
+      213: -733971757651374236
+    second: SnakeDeathSheet1_14
+  - first:
+      213: -6217509409826547723
+    second: SnakeDeathSheet1_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SnakeDeathSheet1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9732
+        width: 4067
+        height: 3244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e50f9eb773a873342b719093514d5f23
+      internalID: -477849002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeDeathSheet1_1
+      rect:
+        serializedVersion: 2
+        x: 4067
+        y: 9732
+        width: 4067
+        height: 3244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c15dc1b34be7ed42929115154556768
+      internalID: 659355793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeDeathSheet1_2
+      rect:
+        serializedVersion: 2
+        x: 8134
+        y: 9732
+        width: 4067
+        height: 3244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a9ca34dae214bc47b41a0403ea50d10
+      internalID: 1298758239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeDeathSheet1_3
+      rect:
+        serializedVersion: 2
+        x: 12201
+        y: 9732
+        width: 4067
+        height: 3244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4351eeea7091cca478af28eb88537616
+      internalID: -2109682488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeDeathSheet1_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6488
+        width: 4067
+        height: 3244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6828020b477f240478e059c8a5105590
+      internalID: -1015315797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeDeathSheet1_5
+      rect:
+        serializedVersion: 2
+        x: 4067
+        y: 6488
+        width: 4067
+        height: 3244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f8564c86b180b744986f2064fa5ce15
+      internalID: -426937507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeDeathSheet1_6
+      rect:
+        serializedVersion: 2
+        x: 8134
+        y: 6488
+        width: 4067
+        height: 3244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a7dbbfb7947bb641b27df8757eb6a2b
+      internalID: 1664060141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeDeathSheet1_7
+      rect:
+        serializedVersion: 2
+        x: 12201
+        y: 6488
+        width: 4067
+        height: 3244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0eae6e4fb9977e4db1e5aad7442508f
+      internalID: -335472006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeDeathSheet1_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3244
+        width: 4067
+        height: 3244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea7e1fd2c76f24f438e36a3453b14b3e
+      internalID: -988860136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeDeathSheet1_9
+      rect:
+        serializedVersion: 2
+        x: 4067
+        y: 3244
+        width: 4067
+        height: 3244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ab7f996d483d044cb89a6945eee68c8
+      internalID: 1402983113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeDeathSheet1_10
+      rect:
+        serializedVersion: 2
+        x: 8134
+        y: 3244
+        width: 4067
+        height: 3244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1183614678443114f8e078d34324b3ba
+      internalID: 933870413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeDeathSheet1_11
+      rect:
+        serializedVersion: 2
+        x: 12201
+        y: 3244
+        width: 4067
+        height: 3244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fba955c5e4b7fc409fbb8f37d3f6559
+      internalID: 1527730463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeDeathSheet1_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 4067
+        height: 3244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7547ea51ae58a5d4d986065e07e866bf
+      internalID: 1397815968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeDeathSheet1_13
+      rect:
+        serializedVersion: 2
+        x: 4067
+        y: 0
+        width: 4067
+        height: 3244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce563e6825762c946a0a5e21f7ab52aa
+      internalID: -45892145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeDeathSheet1_14
+      rect:
+        serializedVersion: 2
+        x: 8134
+        y: 0
+        width: 4067
+        height: 3244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d57a5bf2e6938a47a48796a6fd8eef3
+      internalID: -540323450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeDeathSheet1_15
+      rect:
+        serializedVersion: 2
+        x: 12201
+        y: 0
+        width: 4067
+        height: 3244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ebd7e27a73af544aa79a870fdc3af73
+      internalID: 1215256712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: fc137cb14802d984f84472f148b5efdc
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      SnakeDeathSheet1_0: -477849002
+      SnakeDeathSheet1_1: 659355793
+      SnakeDeathSheet1_10: 933870413
+      SnakeDeathSheet1_11: 1527730463
+      SnakeDeathSheet1_12: 1397815968
+      SnakeDeathSheet1_13: -45892145
+      SnakeDeathSheet1_14: -540323450
+      SnakeDeathSheet1_15: 1215256712
+      SnakeDeathSheet1_2: 1298758239
+      SnakeDeathSheet1_3: -2109682488
+      SnakeDeathSheet1_4: -1015315797
+      SnakeDeathSheet1_5: -426937507
+      SnakeDeathSheet1_6: 1664060141
+      SnakeDeathSheet1_7: -335472006
+      SnakeDeathSheet1_8: -988860136
+      SnakeDeathSheet1_9: 1402983113
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

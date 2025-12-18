@@ -12,7 +12,7 @@ public class P2MiguelST_NormalAttack : P2MiguelState
 
     private int beamIndex;
 
-    public P2MiguelST_NormalAttack(Phase2MiguelController controller, StateMachine stateMachine, P2MiguelStats stats, Animator anim, string animBoolName) : base(controller, stateMachine, stats, anim, animBoolName)
+    public P2MiguelST_NormalAttack(Phase2MiguelController controller, StateMachine stateMachine, LuisStats stats, Animator anim, string animBoolName) : base(controller, stateMachine, stats, anim, animBoolName)
     {
         targetPlayer = GameManager.Instance.PlayerInstance.transform;
     }

@@ -8,7 +8,7 @@ public class P2MiguelST_Airborne : P2MiguelState
 
     protected Core_CollisionSenses collisionSenses;
 
-    public P2MiguelST_Airborne(Phase2MiguelController controller, StateMachine stateMachine, P2MiguelStats stats, Animator anim, string animBoolName) : base(controller, stateMachine, stats, anim, animBoolName)
+    public P2MiguelST_Airborne(Phase2MiguelController controller, StateMachine stateMachine, LuisStats stats, Animator anim, string animBoolName) : base(controller, stateMachine, stats, anim, animBoolName)
     {
         movement = core.GetCoreComponent<Core_Movement>();
         collisionSenses = core.GetCoreComponent<Core_CollisionSenses>();

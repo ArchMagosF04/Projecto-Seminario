@@ -12,15 +12,15 @@ public class FadeAnimation : MonoBehaviour
         bManager = BeatManager.Instance;
     }
     
-    void Update()
-    {
-        if (bManager.BeatGracePeriod)
-        {
-            animator.SetBool("Fade", false);
-        }
-        else
-        {
-            animator.SetBool("Fade", true);
-        }
-    }
+    //void Update()
+    //{
+    //    if (bManager.BeatGracePeriod)
+    //    {
+    //        animator.SetBool("Fade", false);
+    //    }
+    //    else
+    //    {
+    //        animator.SetBool("Fade", true);
+    //    }
+    //}
 }

@@ -26,7 +26,7 @@ public class Phase2MiguelController : MonoBehaviour
     private CinemachineImpulseSource impulseSource;
 
     [Header("Scriptable Objects")]
-    [SerializeField] private P2MiguelStats miguelStats;
+    [SerializeField] private LuisStats miguelStats;
 
     [Header("Attack References")]
     public BeamWeapon[] skyBeams;

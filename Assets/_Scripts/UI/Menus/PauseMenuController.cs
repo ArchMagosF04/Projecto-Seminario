@@ -120,4 +120,22 @@ public class PauseMenuController : MonoBehaviour
             }
         );
     }
+
+    public void ExitLevel()
+    {
+        MenuPage page = currentPage;
+        currentPage = null;
+
+        popUpMenu.ActivateMenu("Are you sure you want to exit the Level?",
+            () =>
+            {
+                AsyncSceneLoader.Instance.LoadLevel(1);
+            },
+            () =>
+            {
+                currentPage = page;
+                currentPage.ChangeObjectSelected();
+            }
+        );
+    }
 }

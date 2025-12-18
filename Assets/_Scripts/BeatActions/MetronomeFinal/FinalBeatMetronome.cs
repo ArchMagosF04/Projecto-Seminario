@@ -16,23 +16,24 @@ public class FinalBeatMetronome : MonoBehaviour
     [SerializeField] private List<MetronomeBarMarker> activeMarkers = new List<MetronomeBarMarker>();
     [SerializeField] private List<MetronomeBarMarker> reserveMarkers = new List<MetronomeBarMarker>();
 
-    private Animator anim;
+    [SerializeField] private Animator coreAnim;
+    [SerializeField] private Animator backgroundAnim;
 
     private void Awake()
     {
-        anim = GetComponentInChildren<Animator>();
         OnBeatIndicator.SetActive(false);
     }
 
     private void Start()
     {
-        anim.SetFloat("BeatSpeedMult", BeatManager.Instance.BeatSpeedMultiplier);
+        coreAnim.SetFloat("BeatSpeedMult", BeatManager.Instance.BeatSpeedMultiplier);
         foreach (var marker in activeMarkers) marker.ToggleMovility(true);
     }
 
     private void MetronomeFullBeat()
     {
-        anim.SetTrigger("Beat");
+        coreAnim.SetTrigger("Beat");
+        backgroundAnim.SetTrigger("Beat");
 
         MetronomeBarMarker newMarker = GetMarker();
         newMarker.gameObject.SetActive(true);

@@ -19,8 +19,6 @@ public class SaveVolumeSettings : MonoBehaviour
 
     private void Awake()
     {
-        SoundManager.Init();
-
         savedUIVolume = PlayerPrefs.GetFloat("SavedUIVolume", 1);
         SetUIVolume(0);
         masterSlider.onValueChanged.AddListener(SetMasterVolume);

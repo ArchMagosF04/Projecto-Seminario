@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Fade_Boss_Bar_1_0: -6962955958666920199
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 51caf1ee343532245be6d080788cf676
+guid: 4e9542a6fcdf2a74da8ef54fb5ddf64a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1030323863818859271
-    second: SofiImage_0
+      213: -2187333891596834109
+    second: Belu_0
+  - first:
+      213: 5234282085844209642
+    second: Belu_1
+  - first:
+      213: -208810320621626994
+    second: Belu_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SofiImage_0
+      name: Belu_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 439
-        height: 657
+        width: 282
+        height: 283
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +120,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9fc087d97ed83b1f0800000000000000
-      internalID: -1030323863818859271
+      spriteID: 3caa2322a6705a1e0800000000000000
+      internalID: -2187333891596834109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Belu_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 276
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aef4fec13d7e3a840800000000000000
+      internalID: 5234282085844209642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Belu_2
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 229
+        width: 51
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8999e5ae182a1df0800000000000000
+      internalID: -208810320621626994
       vertices: []
       indices: 
       edges: []
@@ -130,8 +178,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      SofiImage_0: -1030323863818859271
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

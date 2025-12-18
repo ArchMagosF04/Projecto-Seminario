@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 421f6ca409a907f4c93ac8313afd667d
+guid: a8aa15b6d9d704e45bd2550095027521
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7953513284046610036
-    second: FranImage_0
+      213: -1340936329344346979
+    second: Elian_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FranImage_0
+      name: Elian_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 10
         y: 0
-        width: 287
-        height: 325
+        width: 291
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c812d04cec17f9190800000000000000
-      internalID: -7953513284046610036
+      spriteID: d9493075389046de0800000000000000
+      internalID: -1340936329344346979
       vertices: []
       indices: 
       edges: []
@@ -130,8 +130,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      FranImage_0: -7953513284046610036
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

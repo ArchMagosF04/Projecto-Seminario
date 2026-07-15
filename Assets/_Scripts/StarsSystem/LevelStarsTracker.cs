@@ -47,6 +47,26 @@ public class LevelStarsTracker : MonoBehaviour, IDataPersistance
 
     private float elapseTime;
 
+    public float ElapsedTime => elapseTime;
+
+    public int TotalAttacks { get; private set; }
+    public int GoodHits { get; private set; }
+    public int PerfectHits { get; private set; }
+    public int MissedHits { get; private set; }
+
+    public int MaxCombo =>
+        playerComboCounter != null ? playerComboCounter.MaxCombo : 0;
+
+    public int HealthRemaining =>
+        playerHealth != null
+            ? Mathf.RoundToInt(playerHealth.CurrentHealth)
+            : 0;
+
+    public int DamageReceived =>
+        playerHealth != null
+            ? Mathf.RoundToInt(playerHealth.TotalDamageReceived)
+            : 0;
+
     private bool hasPreviouslyAchievedComboRequirements;
     private bool hasPreviouslyAchievedDamageRequirements;
     private bool hasPreviouslyAchievedTimeRequirements;
@@ -222,6 +242,25 @@ public class LevelStarsTracker : MonoBehaviour, IDataPersistance
 
                 Debug.LogError("Wrong Level ID", this);
                 break;
+        }
+    }
+    public void RegisterAttack(bool correctBeat, bool perfectBeat)
+    {
+        TotalAttacks++;
+
+        if (!correctBeat)
+        {
+            MissedHits++;
+            return;
+        }
+
+        if (perfectBeat)
+        {
+            PerfectHits++;
+        }
+        else
+        {
+            GoodHits++;
         }
     }
 }

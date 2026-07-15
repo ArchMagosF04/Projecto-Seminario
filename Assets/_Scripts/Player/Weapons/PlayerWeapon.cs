@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerWeapon : MonoBehaviour
 {
+
     #region Events
 
     public event Action OnSpecialEnter;
@@ -65,6 +66,7 @@ public class PlayerWeapon : MonoBehaviour
 
     public virtual void ExecuteBasicAttack()
     {
+        RegisterAnalyticsAttack();
         if (BeatManager.Instance.BeatGracePeriod) isOnBeat = true;
 
         OnBasicEnter?.Invoke();
@@ -76,6 +78,7 @@ public class PlayerWeapon : MonoBehaviour
 
     public virtual void ExecuteSpecialAttack()
     {
+        RegisterAnalyticsAttack();
         if (BeatManager.Instance.BeatGracePeriod) isOnBeat = true;
 
         OnSpecialEnter?.Invoke();
@@ -97,5 +100,26 @@ public class PlayerWeapon : MonoBehaviour
     protected virtual void HandleStopMovement()
     {
         movementComponent.SetVelocityZero();
+    }
+
+    private void RegisterAnalyticsAttack()
+    {
+        if (LevelStarsTracker.Instance == null ||
+            BeatManager.Instance == null)
+        {
+            return;
+        }
+
+        bool correctBeat =
+            BeatManager.Instance.BeatGracePeriod;
+
+        bool perfectBeat =
+            correctBeat &&
+            BeatManager.Instance.IsPerfectBeat();
+
+        LevelStarsTracker.Instance.RegisterAttack(
+            correctBeat,
+            perfectBeat
+        );
     }
 }

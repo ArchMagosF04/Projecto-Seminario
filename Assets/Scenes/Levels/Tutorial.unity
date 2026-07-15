@@ -8781,6 +8781,60 @@ MonoBehaviour:
   playerInput: {fileID: 0}
   winScreen: {fileID: 1633372594854747213}
   loseScreen: {fileID: 0}
+  analyticsLevelId: 1
+  analyticsLevelName: argentina
+  analyticsAttemptNumber: 1
+  analyticsWeaponIds:
+  - microphone
+  - accordion
+  - saxophone
+--- !u!1 &2014150026
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2014150028}
+  - component: {fileID: 2014150027}
+  m_Layer: 0
+  m_Name: LevelAttemptTracker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2014150027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014150026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aae0e32a6ae234d4788063ced151e81d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  analyticsLevelId: 0
+  analyticsLevelName: tutorial
+  isTutorial: 1
+--- !u!4 &2014150028
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014150026}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -51.406433, y: 23.513803, z: -0.5936123}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2105499836
 GameObject:
   m_ObjectHideFlags: 0
@@ -11187,3 +11241,4 @@ SceneRoots:
   - {fileID: 1645433192}
   - {fileID: 429928305}
   - {fileID: 1320198316}
+  - {fileID: 2014150028}

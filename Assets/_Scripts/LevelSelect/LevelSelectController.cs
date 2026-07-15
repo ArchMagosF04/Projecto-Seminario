@@ -127,7 +127,16 @@ public class LevelSelectController : MonoBehaviour, IDataPersistance
 
     public void PlaySelectedLevel()
     {
-        AsyncSceneLoader.Instance.LoadLevel(levelNames[currentSelectedLevel]);
+        string selectedSceneName =
+            levelNames[currentSelectedLevel];
+
+        LevelAttemptTracker.ResetAttemptsForScene(
+            selectedSceneName
+        );
+
+        AsyncSceneLoader.Instance.LoadLevel(
+            selectedSceneName
+        );
     }
 
     public void LoadData(GameData gameData)

@@ -20,7 +20,6 @@ public class GameManager : MonoBehaviour
     [Header("Analytics")]
     [SerializeField] private int analyticsLevelId = 1;
     [SerializeField] private string analyticsLevelName = "argentina";
-    [SerializeField] private int analyticsAttemptNumber = 1;
 
     private void Awake()
     {
@@ -42,41 +41,40 @@ public class GameManager : MonoBehaviour
     public void OnGameWon()
     {
         Debug.Log("GAME WON");
-        string selectedWeaponId = GetSelectedWeaponAnalyticsId();
-        BeatComboCounter comboCounter =
-    PlayerInstance.GetComponentInChildren<BeatComboCounter>();
 
-        int maxCombo = comboCounter != null
-            ? comboCounter.MaxCombo
-            : 0;
+        int currentAttempt =
+    LevelAttemptTracker.Instance != null
+        ? LevelAttemptTracker.Instance.CurrentAttempt
+        : 1;
 
-        int damageReceived =
-            Mathf.RoundToInt(PlayerInstance.Health.TotalDamageReceived);
+        string selectedWeaponId =
+            GetSelectedWeaponAnalyticsId();
 
-        int healthRemaining =
-            Mathf.RoundToInt(PlayerInstance.Health.CurrentHealth);
+        LevelStarsTracker tracker =
+            LevelStarsTracker.Instance;
 
-        if (AnalyticsManager.Instance != null)
+        if (AnalyticsManager.Instance != null &&
+            tracker != null)
         {
             AnalyticsManager.Instance.SendLevelCompleteEvent(
                 analyticsLevelId,
                 analyticsLevelName,
                 selectedWeaponId,
-                analyticsAttemptNumber,
-                Time.timeSinceLevelLoad,
-                20, // total_attacks - temporal
-                10, // good_hits - temporal
-                5,  // perfect_hits - temporal
-                5,  // missed_hits - temporal
-                maxCombo,
-                damageReceived,
-                healthRemaining
+                currentAttempt,
+                tracker.ElapsedTime,
+                tracker.TotalAttacks,
+                tracker.GoodHits,
+                tracker.PerfectHits,
+                tracker.MissedHits,
+                tracker.MaxCombo,
+                tracker.DamageReceived,
+                tracker.HealthRemaining
             );
         }
         else
         {
             Debug.LogWarning(
-                "No se encontró AnalyticsManager al completar el nivel."
+                "No se encontró AnalyticsManager o LevelStarsTracker."
             );
         }
 

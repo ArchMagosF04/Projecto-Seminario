@@ -12,6 +12,10 @@ public class BeatManager : MonoBehaviour
     public Action OnCorrectBeat;
     public Action OnWrongBeat;
 
+    [Header("Analytics Timing")]
+    [SerializeField, Range(0.01f, 0.25f)]
+    private float perfectWindowNormalized = 0.10f;
+
     [field: Header("Music Settings")]
     [field: SerializeField] public float BPM { get; private set; }
     [field: SerializeField] public AudioSource AudioSource { get; private set; }
@@ -125,5 +129,23 @@ public class BeatManager : MonoBehaviour
     private void OnDisable()
     {
         musicSource.Stop();
+    }
+
+    public bool IsPerfectBeat()
+    {
+        if (!BeatGracePeriod ||
+            intervals == null ||
+            intervals.Length == 0)
+        {
+            return false;
+        }
+
+        float progress =
+            Mathf.Repeat(intervals[0].BeatProgress, 1f);
+
+        float distanceToBeat =
+            Mathf.Min(progress, 1f - progress);
+
+        return distanceToBeat <= perfectWindowNormalized;
     }
 }

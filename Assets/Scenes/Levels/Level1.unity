@@ -645,55 +645,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 185dbb8b897d53446a97668d90810291, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &417151086
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 417151088}
-  - component: {fileID: 417151087}
-  m_Layer: 0
-  m_Name: LevelStartAnalyticsTest
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &417151087
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 417151086}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 887f2340f311ed240a98922a7e99fdcf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelId: 1
-  levelName: argentina
-  weaponId: microphone
-  attemptNumber: 1
-  isTutorial: 0
---- !u!4 &417151088
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 417151086}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -51.406433, y: 23.513803, z: -0.5936123}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &521851042 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3454217650015930306, guid: fcba1b3eee7ab2644b602a664c668c80, type: 3}
@@ -1795,6 +1746,53 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1107965164
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1107965166}
+  - component: {fileID: 1107965165}
+  m_Layer: 0
+  m_Name: LevelAttemptTracker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1107965165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107965164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aae0e32a6ae234d4788063ced151e81d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  analyticsLevelId: 1
+  analyticsLevelName: argentina
+  isTutorial: 0
+--- !u!4 &1107965166
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107965164}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -51.406433, y: 23.513803, z: -0.5936123}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1120933269
 GameObject:
   m_ObjectHideFlags: 0
@@ -5868,4 +5866,4 @@ SceneRoots:
   - {fileID: 832347414}
   - {fileID: 2081686075}
   - {fileID: 1923694232}
-  - {fileID: 417151088}
+  - {fileID: 1107965166}

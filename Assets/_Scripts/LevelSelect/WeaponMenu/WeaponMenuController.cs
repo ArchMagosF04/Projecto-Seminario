@@ -84,12 +84,27 @@ public class WeaponMenuController : MonoBehaviour, IDataPersistance
 
         WeaponInfo weapon = weapons[currentSelectedWeapon];
 
-        foreach (var img in highlights) img.SetActive(false);
+        foreach (var img in highlights)
+        {
+            img.SetActive(false);
+        }
+
         highlights[currentSelectedWeapon].SetActive(true);
 
         weaponImage.sprite = weapon.weaponImage;
         weaponName.text = weapon.weaponName;
         weaponDescription.text = weapon.weaponDescription;
+
+        if (DataPersistanceManager.Instance != null &&
+            DataPersistanceManager.Instance.HasGameData())
+        {
+            DataPersistanceManager.Instance.ChangeSelectedWeapon(index);
+            DataPersistanceManager.Instance.SaveGame();
+        }
+
+        Debug.Log(
+            $"ARMA SELECCIONADA | Índice: {index} | Nombre: {weapon.weaponName}"
+        );
     }
 
     public void GoToTrainingRoom()

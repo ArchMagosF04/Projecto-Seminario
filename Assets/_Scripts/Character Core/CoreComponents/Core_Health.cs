@@ -19,6 +19,7 @@ public class Core_Health : CoreComponent
     [Header("Stats")]
     [SerializeField] private float maxHealth;
     public float CurrentHealth {  get; private set; }
+    public float TotalDamageReceived { get; private set; }
     public float MaxHealth => maxHealth;
 
     [Header("Invincibility Frames")]
@@ -45,6 +46,8 @@ public class Core_Health : CoreComponent
     protected override void Awake()
     {
         CurrentHealth = maxHealth;
+        TotalDamageReceived = 0f;
+
         base.Awake();
     }
 
@@ -68,7 +71,13 @@ public class Core_Health : CoreComponent
             return;
         }
 
-        if (doubleDamage) amount = amount * 2;
+        if (doubleDamage)
+        {
+            amount *= 2;
+        }
+
+        float actualDamage = Mathf.Min(amount, CurrentHealth);
+        TotalDamageReceived += actualDamage;
 
         CurrentHealth = MathF.Round(CurrentHealth - amount);
 

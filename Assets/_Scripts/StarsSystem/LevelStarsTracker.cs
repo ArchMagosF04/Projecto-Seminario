@@ -46,6 +46,7 @@ public class LevelStarsTracker : MonoBehaviour, IDataPersistance
     [Space(3)]
 
     private float elapseTime;
+    public int ComboTarget => maxComboRequired;
 
     public float ElapsedTime => elapseTime;
 

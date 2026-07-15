@@ -108,9 +108,17 @@ public class PauseMenuController : MonoBehaviour
         MenuPage page = currentPage;
         currentPage = null;
 
-        popUpMenu.ActivateMenu("Are you sure you want to return to the Main Manu?",
+        popUpMenu.ActivateMenu(
+            "Are you sure you want to return to the Main Menu?",
             () =>
             {
+                if (GameManager.Instance != null)
+                {
+                    GameManager.Instance.OnLevelAbandoned(
+                        "return_to_main_menu"
+                    );
+                }
+
                 AsyncSceneLoader.Instance.LoadLevel(0);
             },
             () =>
@@ -126,9 +134,17 @@ public class PauseMenuController : MonoBehaviour
         MenuPage page = currentPage;
         currentPage = null;
 
-        popUpMenu.ActivateMenu("Are you sure you want to exit the Level?",
+        popUpMenu.ActivateMenu(
+            "Are you sure you want to exit the Level?",
             () =>
             {
+                if (GameManager.Instance != null)
+                {
+                    GameManager.Instance.OnLevelAbandoned(
+                        "return_to_level_select"
+                    );
+                }
+
                 AsyncSceneLoader.Instance.LoadLevel(1);
             },
             () =>

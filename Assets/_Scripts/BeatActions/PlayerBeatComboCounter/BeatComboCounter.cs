@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,8 +12,10 @@ public class BeatComboCounter : MonoBehaviour
     public StyleRank currentRank { get; private set; }
 
     private int beatComboCounter;
-    private int currentRankIndex = 0;
+    private int currentRankIndex;
+
     public int MaxCombo { get; private set; }
+
     private Core core;
     private Core_Health health;
 
@@ -24,27 +24,36 @@ public class BeatComboCounter : MonoBehaviour
 
     private Color workColor;
 
+    [Header("Analytics")]
+    [SerializeField, Min(1)]
+    private int fallbackAnalyticsComboThreshold = 5;
+
+    private bool analyticsComboActive;
+    private int analyticsComboLength;
+
     private void Awake()
     {
         core = GetComponentInChildren<Core>();
         health = core.GetCoreComponent<Core_Health>();
-
-        //foreach (StyleRank rank in styleRanks)
-        //{
-        //    Debug.Log(rank.rankDamageMultiplier);
-        //}
     }
 
     private void OnEnable()
     {
-        health.OnDamageReceived += OnTimerDecay;
-        BeatManager.Instance.OnWrongBeat += OnTimerDecay;
+        health.OnDamageReceived += HandleDamageReceived;
+        BeatManager.Instance.OnWrongBeat += HandleWrongBeat;
     }
 
     private void OnDisable()
     {
-        health.OnDamageReceived -= OnTimerDecay;
-        BeatManager.Instance.OnWrongBeat -= OnTimerDecay;
+        if (health != null)
+        {
+            health.OnDamageReceived -= HandleDamageReceived;
+        }
+
+        if (BeatManager.Instance != null)
+        {
+            BeatManager.Instance.OnWrongBeat -= HandleWrongBeat;
+        }
     }
 
     private void Start()
@@ -54,13 +63,20 @@ public class BeatComboCounter : MonoBehaviour
         currentRankIndex = 0;
         currentRank = styleRanks[0];
 
+        analyticsComboActive = false;
+        analyticsComboLength = 0;
+
         if (rankIndicatorImage != null)
         {
             workColor = currentRank.rankColor;
             workColor.a = 1;
             rankIndicatorImage.color = workColor;
         }
-        if (counterTextBox != null) counterTextBox.text = beatComboCounter.ToString();
+
+        if (counterTextBox != null)
+        {
+            counterTextBox.text = beatComboCounter.ToString();
+        }
 
         ResetDecayTimer();
     }
@@ -68,6 +84,7 @@ public class BeatComboCounter : MonoBehaviour
     private void Update()
     {
         ProgressTimer();
+
         if (rankIndicatorImage != null)
         {
             workColor = rankIndicatorImage.color;
@@ -79,17 +96,34 @@ public class BeatComboCounter : MonoBehaviour
     [ContextMenu("Test Combo Increase")]
     public void IncreaseComboCounter(int amount)
     {
-        beatComboCounter += amount;
-        comboIncreaseImage.PlaySquashAndStretch();
-        if(MaxCombo < beatComboCounter) { MaxCombo = beatComboCounter; }
-        if (counterTextBox != null) counterTextBox.text = beatComboCounter.ToString();
+        if (amount > 0)
+        {
+            RegisterAnalyticsComboProgress(amount);
+        }
 
-        if (currentRankIndex < styleRanks.Length - 1 && beatComboCounter >= styleRanks[currentRankIndex+1].rankThreshold)
+        beatComboCounter += amount;
+
+        if (comboIncreaseImage != null)
+        {
+            comboIncreaseImage.PlaySquashAndStretch();
+        }
+
+        if (MaxCombo < beatComboCounter)
+        {
+            MaxCombo = beatComboCounter;
+        }
+
+        if (counterTextBox != null)
+        {
+            counterTextBox.text = beatComboCounter.ToString();
+        }
+
+        if (currentRankIndex < styleRanks.Length - 1 &&
+            beatComboCounter >=
+            styleRanks[currentRankIndex + 1].rankThreshold)
         {
             currentRankIndex++;
             currentRank = styleRanks[currentRankIndex];
-
-            //Debug.Log(currentRank.rankName);
         }
 
         ResetDecayTimer();
@@ -98,6 +132,7 @@ public class BeatComboCounter : MonoBehaviour
     public void ResetDecayTimer()
     {
         timeUntilDecay = GetRankDuration(currentRank);
+
         if (rankIndicatorImage != null)
         {
             workColor = currentRank.rankColor;
@@ -108,16 +143,40 @@ public class BeatComboCounter : MonoBehaviour
 
     public float GetRankDuration(StyleRank rank)
     {
-        float durationinBeats = rank.beatsForRankDecay;
+        float durationInBeats = rank.beatsForRankDecay;
         float beatDuration = 60f / BeatManager.Instance.BPM;
 
-        rankDuration = durationinBeats * beatDuration;
+        rankDuration = durationInBeats * beatDuration;
 
         return rankDuration;
     }
 
     [ContextMenu("Test Timer Decay")]
     public void OnTimerDecay()
+    {
+        EndAnalyticsCombo("manual_decay");
+        ApplyComboDecay();
+    }
+
+    private void HandleDamageReceived()
+    {
+        EndAnalyticsCombo("damage_received");
+        ApplyComboDecay();
+    }
+
+    private void HandleWrongBeat()
+    {
+        EndAnalyticsCombo("wrong_beat");
+        ApplyComboDecay();
+    }
+
+    private void HandleComboTimeout()
+    {
+        EndAnalyticsCombo("combo_timeout");
+        ApplyComboDecay();
+    }
+
+    private void ApplyComboDecay()
     {
         if (currentRankIndex > 0)
         {
@@ -126,9 +185,11 @@ public class BeatComboCounter : MonoBehaviour
         }
 
         beatComboCounter = currentRank.rankThreshold;
-        if (counterTextBox != null) counterTextBox.text = beatComboCounter.ToString();
 
-        //Debug.Log(currentRank.rankName);
+        if (counterTextBox != null)
+        {
+            counterTextBox.text = beatComboCounter.ToString();
+        }
 
         ResetDecayTimer();
     }
@@ -137,11 +198,124 @@ public class BeatComboCounter : MonoBehaviour
     {
         timeUntilDecay -= Time.deltaTime;
 
-        if (timeUntilDecay <= 0) OnTimerDecay();
+        if (timeUntilDecay <= 0)
+        {
+            HandleComboTimeout();
+        }
     }
 
     public float GetDamageMultiplier()
     {
         return currentRank.rankDamageMultiplier;
+    }
+
+    public void FinalizeAnalyticsCombo(string reason)
+    {
+        EndAnalyticsCombo(reason);
+    }
+
+    private void RegisterAnalyticsComboProgress(int amount)
+    {
+        if (!analyticsComboActive)
+        {
+            analyticsComboActive = true;
+            analyticsComboLength = 0;
+        }
+
+        analyticsComboLength += amount;
+    }
+
+    private void EndAnalyticsCombo(string breakReason)
+    {
+        if (!analyticsComboActive || analyticsComboLength <= 0)
+        {
+            return;
+        }
+
+        int comboThreshold = fallbackAnalyticsComboThreshold;
+
+        if (LevelStarsTracker.Instance != null)
+        {
+            comboThreshold = Mathf.Max(
+                1,
+                LevelStarsTracker.Instance.ComboTarget
+            );
+        }
+
+        string comboOutcome =
+            analyticsComboLength >= comboThreshold
+                ? "completed"
+                : "broken";
+
+        int levelId = -1;
+        string levelName = "unknown";
+        int attemptNumber = 1;
+
+        if (LevelAttemptTracker.Instance != null)
+        {
+            levelId =
+                LevelAttemptTracker.Instance.AnalyticsLevelId;
+
+            levelName =
+                LevelAttemptTracker.Instance.AnalyticsLevelName;
+
+            attemptNumber =
+                LevelAttemptTracker.Instance.CurrentAttempt;
+        }
+
+        string weaponId = GetSelectedWeaponAnalyticsId();
+
+        if (AnalyticsManager.Instance != null)
+        {
+            AnalyticsManager.Instance.SendComboResultEvent(
+                levelId,
+                levelName,
+                weaponId,
+                attemptNumber,
+                comboOutcome,
+                analyticsComboLength,
+                comboThreshold,
+                breakReason
+            );
+        }
+        else
+        {
+            Debug.LogWarning(
+                "No se encontró AnalyticsManager al finalizar el combo."
+            );
+        }
+
+        analyticsComboActive = false;
+        analyticsComboLength = 0;
+    }
+
+    private string GetSelectedWeaponAnalyticsId()
+    {
+        if (DataPersistanceManager.Instance == null ||
+            !DataPersistanceManager.Instance.HasGameData())
+        {
+            return "unknown";
+        }
+
+        int weaponIndex =
+            DataPersistanceManager.Instance.GetSelectedWeapon();
+
+        switch (weaponIndex)
+        {
+            case 0:
+                return "microphone";
+
+            case 1:
+                return "accordion";
+
+            case 2:
+                return "saxophone";
+
+            case 3:
+                return "weapon_4";
+
+            default:
+                return "unknown";
+        }
     }
 }

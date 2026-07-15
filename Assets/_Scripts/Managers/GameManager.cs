@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+    private bool levelEnded;
 
     [field: SerializeField] public PlayerController PlayerInstance {  get; private set; }
 
@@ -34,12 +35,16 @@ public class GameManager : MonoBehaviour
         }
 
         playerInput = GameInputManager.Instance.gameObject.GetComponent<PlayerInput>();
+        levelEnded = false;
     }
 
     public void ToggleGameActiveState(bool state) => IsGameActive = state;
 
     public void OnGameWon()
     {
+        if (levelEnded) return;
+        levelEnded = true;
+        FinalizeCurrentCombo("level_completed");
         Debug.Log("GAME WON");
 
         int currentAttempt =
@@ -84,7 +89,45 @@ public class GameManager : MonoBehaviour
 
     public void OnGameLost()
     {
+        if (levelEnded) return;
+        levelEnded = true;
         Debug.Log("GAME LOST");
+
+        string selectedWeaponId =
+            GetSelectedWeaponAnalyticsId();
+
+        LevelStarsTracker tracker =
+            LevelStarsTracker.Instance;
+
+        int currentAttempt =
+            LevelAttemptTracker.Instance != null
+                ? LevelAttemptTracker.Instance.CurrentAttempt
+                : 1;
+
+        if (AnalyticsManager.Instance != null &&
+            tracker != null)
+        {
+            AnalyticsManager.Instance.SendLevelFailedEvent(
+                analyticsLevelId,
+                analyticsLevelName,
+                selectedWeaponId,
+                currentAttempt,
+                tracker.ElapsedTime,
+                tracker.TotalAttacks,
+                tracker.GoodHits,
+                tracker.PerfectHits,
+                tracker.MissedHits,
+                tracker.MaxCombo,
+                tracker.DamageReceived
+            );
+        }
+        else
+        {
+            Debug.LogWarning(
+                "No se encontró AnalyticsManager o LevelStarsTracker."
+            );
+        }
+
         GameEnd();
         loseScreen.OpenMenu();
     }
@@ -129,5 +172,71 @@ public class GameManager : MonoBehaviour
         }
 
         return analyticsWeaponIds[weaponIndex];
+    }
+
+    public void OnLevelAbandoned(string abandonReason)
+    {
+        if (levelEnded)
+        {
+            return;
+        }
+
+        levelEnded = true;
+        FinalizeCurrentCombo("level_abandoned");
+
+        string selectedWeaponId =
+            GetSelectedWeaponAnalyticsId();
+
+        LevelStarsTracker tracker =
+            LevelStarsTracker.Instance;
+
+        int currentAttempt =
+            LevelAttemptTracker.Instance != null
+                ? LevelAttemptTracker.Instance.CurrentAttempt
+                : 1;
+
+        if (AnalyticsManager.Instance != null &&
+            tracker != null)
+        {
+            AnalyticsManager.Instance.SendLevelAbandonedEvent(
+                analyticsLevelId,
+                analyticsLevelName,
+                selectedWeaponId,
+                currentAttempt,
+                tracker.ElapsedTime,
+                abandonReason,
+                tracker.TotalAttacks,
+                tracker.GoodHits,
+                tracker.PerfectHits,
+                tracker.MissedHits,
+                tracker.MaxCombo,
+                tracker.DamageReceived,
+                tracker.HealthRemaining
+            );
+        }
+        else
+        {
+            Debug.LogWarning(
+                "No se encontró AnalyticsManager o LevelStarsTracker."
+            );
+        }
+
+        GameEnd();
+    }
+
+    private void FinalizeCurrentCombo(string reason)
+    {
+        if (PlayerInstance == null)
+        {
+            return;
+        }
+
+        BeatComboCounter comboCounter =
+            PlayerInstance.GetComponent<BeatComboCounter>();
+
+        if (comboCounter != null)
+        {
+            comboCounter.FinalizeAnalyticsCombo(reason);
+        }
     }
 }

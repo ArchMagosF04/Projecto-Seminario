@@ -80,7 +80,15 @@ public class WeaponMenuController : MonoBehaviour, IDataPersistance
 
     public void SetEquippedWeapon(int index)
     {
+        int previousIndex = currentSelectedWeapon;
+
+        string previousWeaponId =
+            GetWeaponAnalyticsId(previousIndex);
+
         currentSelectedWeapon = index;
+
+        string selectedWeaponId =
+            GetWeaponAnalyticsId(currentSelectedWeapon);
 
         WeaponInfo weapon = weapons[currentSelectedWeapon];
 
@@ -102,6 +110,16 @@ public class WeaponMenuController : MonoBehaviour, IDataPersistance
             DataPersistanceManager.Instance.SaveGame();
         }
 
+        if (AnalyticsManager.Instance != null)
+        {
+            AnalyticsManager.Instance.SendWeaponSelectedEvent(
+                selectedWeaponId,
+                currentSelectedWeapon,
+                previousWeaponId,
+                previousIndex != currentSelectedWeapon
+            );
+        }
+
         Debug.Log(
             $"ARMA SELECCIONADA | Índice: {index} | Nombre: {weapon.weaponName}"
         );
@@ -110,5 +128,26 @@ public class WeaponMenuController : MonoBehaviour, IDataPersistance
     public void GoToTrainingRoom()
     {
         AsyncSceneLoader.Instance.LoadLevel(weapons[currentSelectedWeapon].weaponTrainingRoomName);
+    }
+
+    private string GetWeaponAnalyticsId(int index)
+    {
+        switch (index)
+        {
+            case 0:
+                return "microphone";
+
+            case 1:
+                return "accordion";
+
+            case 2:
+                return "saxophone";
+
+            case 3:
+                return "weapon_4";
+
+            default:
+                return "unknown";
+        }
     }
 }

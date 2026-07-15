@@ -16,6 +16,9 @@ public class LevelAttemptTracker : MonoBehaviour
     [SerializeField] private bool isTutorial = false;
 
     public int CurrentAttempt { get; private set; }
+    public int AnalyticsLevelId => analyticsLevelId;
+    public string AnalyticsLevelName => analyticsLevelName;
+    public bool IsTutorial => isTutorial;
 
     private string currentSceneName;
 

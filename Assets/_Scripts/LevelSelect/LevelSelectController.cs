@@ -75,7 +75,10 @@ public class LevelSelectController : MonoBehaviour, IDataPersistance
 
     public void OpenWeaponsMenu()
     {
-        if (isPopUpOpen) return;
+        if (isPopUpOpen)
+        {
+            return;
+        }
 
         if (weaponSelectorCanvas.IsMenuOpen)
         {
@@ -87,6 +90,15 @@ public class LevelSelectController : MonoBehaviour, IDataPersistance
         {
             isAnyMenuOpen = true;
             weaponSelectorCanvas.OpenMenu();
+
+            if (AnalyticsManager.Instance != null)
+            {
+                AnalyticsManager.Instance.SendWeaponSelectorOpenedEvent(
+                    currentSelectedLevel,
+                    GetAnalyticsLevelName(currentSelectedLevel),
+                    GetSelectedWeaponAnalyticsId()
+                );
+            }
         }
     }
 
@@ -150,5 +162,56 @@ public class LevelSelectController : MonoBehaviour, IDataPersistance
     public void SaveData(GameData gameData)
     {
         gameData.lastLevelSelected = currentSelectedLevel;
+    }
+
+    private string GetAnalyticsLevelName(int levelIndex)
+    {
+        switch (levelIndex)
+        {
+            case 0:
+                return "tutorial";
+
+            case 1:
+                return "argentina";
+
+            case 2:
+                return "brazil";
+
+            case 3:
+                return "mexico";
+
+            default:
+                return "unknown";
+        }
+    }
+
+    private string GetSelectedWeaponAnalyticsId()
+    {
+        if (DataPersistanceManager.Instance == null ||
+            !DataPersistanceManager.Instance.HasGameData())
+        {
+            return "unknown";
+        }
+
+        int weaponIndex =
+            DataPersistanceManager.Instance.GetSelectedWeapon();
+
+        switch (weaponIndex)
+        {
+            case 0:
+                return "microphone";
+
+            case 1:
+                return "accordion";
+
+            case 2:
+                return "saxophone";
+
+            case 3:
+                return "weapon_4";
+
+            default:
+                return "unknown";
+        }
     }
 }
